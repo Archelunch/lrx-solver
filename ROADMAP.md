@@ -5,6 +5,29 @@ finite evidence suggests, or an engineering task that would make the search or
 the checks stronger. Evidence for each item is in `research/claims.md` and
 `autoresearch/`.
 
+## Immediate priority: exact mixtures after projection
+
+The supplied nine-gap m=8 theorem has independently checked certificate
+premises for all 40,320 label orders and arbitrary positive block lengths.
+The full m=8 case and the general conjecture remain open. Projection coverage
+and its union with earlier results are not yet independently reconstructed.
+
+1. Establish a provenance-backed baseline for retained gap sets with 4–8 blocks.
+   Separate verified coverage from manuscript-reported totals.
+2. Reweight existing projected word/cut profiles using deterministic search.
+   Accept only exact rational certificates: weights sum to one, weighted base
+   <31+6k, and every retained slope <=6. Search failure is not infeasibility.
+3. Connect a data-only mixture adapter to the existing engines. Use EvoX and
+   sequential as a small matched pilot; retain complementary profiles for
+   GEPA and structural islands for AdaEvolve in later measured experiments.
+4. Seek new words only after measuring the limits of the existing catalog.
+   Reward newly certified infinite families, preserve an untouched structural
+   confirmation set, and extract mathematical reasons for successful mixtures.
+
+This supersedes the pre-PDF proposal to immediately expand routing-priority
+search. See [the bounded next-iteration protocol](autoresearch/next-iteration.md)
+and [the source review](autoresearch/loop-260923-2107/paper-review.md).
+
 ## Mathematics (needs a human proof or review)
 
 1. **Review the potential arguments.** The descent proofs for
@@ -33,9 +56,13 @@ the checks stronger. Evidence for each item is in `research/claims.md` and
 5. **Tighter potentials.** Add a third amortisation level (a count of blocks
    or runs), or find a smaller invariant e. The 80-node DSL limit is binding;
    raising it is a trusted-core change that needs human review.
-6. **Engine comparisons at equal budget and several seeds.** So far one seed
-   per arm: sequential refinement won most rounds, GEPA with a focus graph won
-   once, AdaEvolve's exploration did not pay at 12 proposals.
+6. **Engine comparisons at matched budgets and several seeds.** Session 04
+   ran two seeds per main arm; its training gains did not separate finalists
+   on fresh confirmation. Session 07 ran one 12-proposal lifting arm each for
+   sequential and EvoX: 22/28 versus 24/28 development coverage, both 120/120
+   on random confirmation. EvoX's strategy rewrites brought no new best.
+   No robust ranking follows. Use harder structural confirmation and report
+   proposal count, reflection count, actual cost and evaluation work separately.
 
 ## Exact checks (Route B)
 

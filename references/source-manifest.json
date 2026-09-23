@@ -1,23 +1,38 @@
 {
- "sources": [
-  {
-   "id": "manuscript",
-   "title": "Добавление нуля: точная редукция и неограниченный перерасход проекции",
-   "language": "ru",
-   "document_date": "2026-09-21",
-   "distributed_here": false,
-   "file": "lrx_multiset_marked_zero_reduction.tex",
-   "sha256": "e4aa3df0a1063f5d2780749f4cf20f342b4616774a40268a1fc0cf2c354b130a"
-  },
-  {
-   "id": "progress-notes",
-   "title": "LRX with repeated entries: the conjecture, corrected, reparametrised, and reduced to the pure Cayley graph",
-   "language": "en",
-   "document_date": "2026-09-18",
-   "distributed_here": false,
-   "file": "LRX_multiset_progress.md",
-   "sha256": "f085e3095317418c39ba88685e0b0e9dd02894761e833079e5dedc2ff9ca8678"
-  }
- ],
- "original_audits_reproduced": false
+  "sources": [
+    {
+      "id": "manuscript",
+      "title": "\u0414\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043d\u0443\u043b\u044f: \u0442\u043e\u0447\u043d\u0430\u044f \u0440\u0435\u0434\u0443\u043a\u0446\u0438\u044f \u0438 \u043d\u0435\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u043d\u044b\u0439 \u043f\u0435\u0440\u0435\u0440\u0430\u0441\u0445\u043e\u0434 \u043f\u0440\u043e\u0435\u043a\u0446\u0438\u0438",
+      "language": "ru",
+      "document_date": "2026-09-21",
+      "distributed_here": false,
+      "file": "lrx_multiset_marked_zero_reduction.tex",
+      "sha256": "e4aa3df0a1063f5d2780749f4cf20f342b4616774a40268a1fc0cf2c354b130a"
+    },
+    {
+      "id": "progress-notes",
+      "title": "LRX with repeated entries: the conjecture, corrected, reparametrised, and reduced to the pure Cayley graph",
+      "language": "en",
+      "document_date": "2026-09-18",
+      "distributed_here": false,
+      "file": "LRX_multiset_progress.md",
+      "sha256": "f085e3095317418c39ba88685e0b0e9dd02894761e833079e5dedc2ff9ca8678"
+    },
+    {
+      "id": "nine-gap-m8",
+      "title": "LRX coverage: all orders of eight labels with nine zero blocks",
+      "language": "ru",
+      "document_date": "2026-09-24",
+      "file": "lrx_multiset_nine_gap_m8.pdf",
+      "sha256": "1c6a5b9f70cf4cb2da089382a70b2bd266ed114ddfe8491b449489d6da59d3d5",
+      "distributed_here": false,
+      "distributed_theorem_text": "autoresearch/loop-260923-2107/incoming/theorem.md",
+      "theorem_sha256": "b01f35ac152055ceee2475e95c7d8ee8426838d25585d36bb9bea212cde8a618",
+      "distributed_verification_archive": "autoresearch/loop-260923-2107/incoming/verification.zip",
+      "archive_sha256": "7469f605282a2c7099857a9d1da1a124f742ea47ff15abfd846f1cfeb3d53f50",
+      "independent_audit": "autoresearch/loop-260923-2107/incoming/independent-audit-expanded.json",
+      "scope": "Nine-gap certificate premises independently checked; projected union coverage and prior <=3-block dependency not fully rechecked."
+    }
+  ],
+  "original_audits_reproduced": false
 }

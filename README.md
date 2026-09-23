@@ -25,19 +25,19 @@ E_r(n) <= T_m(n) = m(m+1)/2 + (r-1)(m-2)
 
 This repository does **not** prove it. It provides:
 
-1. **Exact ground truth**: complete BFS distance tables for every graph with
-   n <= 12, and an exact dynamic program for the manuscript's lifting
-   approach.
+1. **Exact ground truth**: complete BFS distance tables for registered finite
+   graphs, and an exact dynamic program for the manuscript's lifting approach.
 2. **A verifier-first search loop**: an LLM proposes JSON candidates (sorting
-   controllers, potential functions, bounds). A deterministic checker replays
-   or certifies every one of them against the exact tables. No LLM judges
-   anything.
+   controllers, potential functions, bounds, and lifting policies). A
+   deterministic checker replays or certifies them using exact tables and
+   explicit word checks. No LLM judges anything.
 3. **A claim register** (`research/claims.md`) that separates proven,
    attributed, finite and open statements.
 
 ## Results so far
 
-All results are finite unless stated otherwise. Details and evidence:
+The general conjecture and full m = 8 case remain open. All results below
+are finite unless explicitly stated otherwise. Details and evidence:
 `research/claims.md`.
 
 | | finding |
@@ -47,31 +47,91 @@ All results are finite unless stated otherwise. Details and evidence:
 | Controllers (Route A) | The best LLM-found sorting controller stays within 1.5625 x T on the m >= 8 training probes (the bubble-sort baseline is about 3 x T). Every word is replayed. These are upper bounds on the probed states only. |
 | Potentials (Route C) | Two potential functions with short descent arguments that hold for **all m, r**. They give cubic bounds, far weaker than T, but they are the first certificates of this kind here. They were exhaustively certified on 11 complete tables. |
 
-Open problems and next steps: [ROADMAP.md](ROADMAP.md).
+### Recent results and their limits
+
+- **Nine-gap theorem at m = 8 (supplied manuscript).** For every order of the
+  eight labels and arbitrary positive zero-block lengths in all nine linear
+  gaps, including both endpoints, `d(v) <= 6n - 18`. We independently checked
+  its 40,320 rational mixture certificates, 4,670 reference words, 152,937
+  mixture rows and 42,030 literal stretching checks. The manuscript's
+  comparison and stretching lemmas turn these certificates into a result for
+  **all positive lengths**, not just sampled states. This is not full m = 8
+  or a proof of the general conjecture.
+- **Coverage accounting remains partly attributed.** The manuscript reports
+  12,680,558 families covered by projection and 16,107,991 after union with
+  earlier results, leaving 4,495,529 families with 4–8 blocks. We have not
+  independently reconstructed those totals. The union uses a previous
+  <=3-block theorem whose large data are not included in the supplied archive.
+- **Engine-driven lifting pilot.** On 28 hard development vectors, the fixed
+  geodesic baseline certifies 20 within the target, sequential certifies 22,
+  and EvoX certifies 24. All three pass 120 fresh random confirmation vectors;
+  that set does not distinguish them. Each paid arm used 12 proposals; total
+  reported cost was **$0.782758**. EvoX applied two strategy rewrites, but its
+  best policy preceded them. This is not evidence of an engine ranking.
+- **A concrete construction improvement.** Both finalists certify
+  `A_58(v) <= 66` for the documented (9,4) band-edge vector. Compared with the
+  six-geodesic baseline, two extra projected steps save four repair moves.
+  The hard (8,3) obstruction remains a portfolio miss, not a counterexample.
+
+Evidence: [session 07 report](autoresearch/loop-260923-2107/report.md),
+[nine-gap audit and scope](autoresearch/loop-260923-2107/paper-review.md), and
+[source archive](autoresearch/loop-260923-2107/incoming/verification.zip).
+
+### Current priority: new mixtures after projection
+
+A single fixed stretching word can have a block-length coefficient above the
+required value 6. A portfolio can compensate: choose nonnegative rational
+weights summing to one such that, for k retained blocks,
+
+```
+weighted base cost < 31 + 6k
+weighted coefficient of every retained block <= 6
+```
+
+Then at least one word meets the target for every positive choice of block
+lengths. The next experiment will first seek **new weights for existing
+projected words**, then seek new words only where that fails. An old mixture
+failing after deletion does not show that every new mixture fails.
+
+The primary outcome is newly certified infinite families. GEPA can preserve
+complementary cost profiles, AdaEvolve can allocate search across structural
+families, and EvoX can adapt the proposal strategy. A mixture-search adapter
+is **planned, not yet implemented**. The completed adapter searches finite
+lifting constructions. See the [next-iteration protocol](autoresearch/next-iteration.md)
+and [ROADMAP.md](ROADMAP.md). The current handoff is [HANDOFF.md](HANDOFF.md).
 
 ## How the search works
 
 ```mermaid
 flowchart LR
-    P[LLM proposer] -->|JSON candidate| C[Interpreter + checker]
+    E[Search engine] -->|parents, history, focus, strategy| P[LLM proposer]
+    P -->|JSON candidate| C[Interpreter + checker]
     T[(Exact BFS tables)] --> C
     C -->|replayed words, descent checks, scores| F[Compact feedback]
-    F --> P
-    C -->|sound and better| L[candidates/leads]
+    F --> E
+    C -->|checked evidence| L[Certificates and candidate archive]
     C -.->|end of campaign only| H[Held-out graphs]
 ```
 
-- Candidates are JSON in a small expression DSL, interpreted and never
-  executed as code.
-- Graphs are split into **sanity** (exhaustive; any failure stops evaluation),
+- Candidates are constrained JSON policies or expressions, interpreted and
+  never executed as generated code.
+- For controller and potential campaigns, graphs are split into **sanity**
+  (exhaustive; any failure stops evaluation),
   **train** (feedback allowed) and **held-out** (scored once at the end, never
   shown to a proposer).
 - Search engines: best-of-n, sequential refinement, and compact
   re-implementations of GEPA (Pareto front with reflective mutation),
   AdaEvolve (islands with adaptive exploration) and EvoX (a strategy that
   evolves).
-- The checker, tables, DSL, spend ledger and tests form a hash-locked trusted
-  core (`tools/orchestrator.py trusted`). An automated research agent may
+- Lifting campaigns instead use frozen development vectors and a separate
+  confirmation set, with exact fixed-word routing and trusted word replay.
+  All four adaptive planners support this adapter; the new paid pilot tested
+  only sequential and EvoX. See [lifting search](integrations/lift-search.md).
+- Mathematical context is versioned and evidence-linked. Parent feedback,
+  histories and strategies evolve within a campaign; reflections cannot
+  promote a hypothesis into a proved fact. Confirmation never enters context.
+- The checker, tables, DSL, spend ledger and existing core tests form a
+  hash-locked trusted core (`tools/orchestrator.py trusted`). An automated research agent may
   change search code, but not this core.
 
 ## Quick start
@@ -97,19 +157,31 @@ Live LLM campaigns use the xAI API (`XAI_API_KEY` in the environment) and
 require an explicit `--allow-network`. The full command reference is in
 [docs/usage.md](docs/usage.md).
 
+The supplied nine-gap certificate archive can be checked without API calls,
+BFS tables, NumPy, or executing any archive code. Use a fresh output path:
+
+```sh
+python -m integrations.nine_gap_audit \
+  autoresearch/loop-260923-2107/incoming/verification.zip \
+  /tmp/lrx-nine-gap-audit.json
+```
+
+This checks the nine-gap certificate premises. It does not reconstruct the
+projection-union counts or replace the mathematical stretching lemmas.
+
 ## Repository map
 
 | path | contents |
 |---|---|
 | `src/lrx/` | state model, BFS tables, exact DP, certificates, DSL, evaluator, search engines, LLM client, reports |
-| `tests/` | about 285 unit tests, including an independent literal-vector oracle |
+| `tests/` | 321 unit tests, including an independent literal-vector oracle |
 | `research/` | problem statement, claim register, experiment protocol |
 | `candidates/` | baselines, best controllers (`leads/`), potentials and probes (`probes/`) |
 | `campaigns/` | example campaign configs (offline and live) |
 | `datasets/` | graph registry and table hash lock; tables are generated locally |
 | `evidence/` | JSON outputs of the exact lifting checks and potential certifications cited in the claims |
 | `autoresearch/` | agent operating manual, Route B scripts and findings, session reports |
-| `integrations/`, `tools/` | official GEPA shim, cayleypy cross-check, orchestrator helpers |
+| `integrations/`, `tools/` | lifting-policy adapter, independent nine-gap auditor, official GEPA shim, cayleypy cross-check, orchestrator helpers |
 | `references/` | sources and attribution |
 
 ## Ground rules
@@ -131,6 +203,13 @@ come from an unpublished manuscript. The empirical radius formula comes from
 unpublished progress notes. Neither is distributed here. Both are cited in
 [references/source-manifest.md](references/source-manifest.md), and every
 result taken from them is attributed in `research/claims.md`.
+
+The newer supplied nine-gap theorem is a separate source. Its embedded
+verification archive and original Russian theorem text are preserved under
+`autoresearch/loop-260923-2107/incoming/`; the English review records exactly
+what was independently checked. See the source manifest for hashes and scope.
+Repository summaries and the README are maintained in English; original source
+material is retained in its original language.
 
 ## License
 

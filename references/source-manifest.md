@@ -25,6 +25,27 @@ The original audit tools named in the manuscript were not available:
 `multiset_marked_zero_lift_final_20260920.json`. This repository is an
 independent Python implementation, not a port of them.
 
+## Supplied nine-gap theorem and distributed verification data
+
+A separate unpublished Russian manuscript, "LRX coverage: all orders of eight
+labels with nine zero blocks", dated 2026-09-24, was supplied by the user as
+`lrx_multiset_nine_gap_m8.pdf`. The PDF itself is not included. Its original
+Russian theorem text and embedded verification archive are retained under
+`autoresearch/loop-260923-2107/incoming/`; hashes are in `source-manifest.json`.
+Source text retains its original language; repository summaries are in English.
+
+Our independent data-only auditor checked 40,320 orders, 4,670 reference words,
+152,937 rational mixture rows, and 42,030 literal stretch cases. Together with
+the manuscript's comparison and stretching lemmas, these support the stated
+all-positive-length nine-gap m=8 theorem. This does not prove full m=8 or the
+general conjecture. No supplied archive code was imported or executed.
+
+The manuscript's projection and union coverage counts are attributed, not
+fully re-audited here. The union also relies on earlier reverse-order and
+<=3-block results; the large <=3-block proof data are absent from this archive.
+The supplied materials retain their source attribution; no new authorship or
+license for them is inferred from this repository's code license.
+
 ## Published work
 
 - V. Antiufeev, arXiv:2601.08715 (pure LRX lower bound D_n >= C(n,2)).
