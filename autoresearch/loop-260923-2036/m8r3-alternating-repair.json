@@ -1,0 +1,74 @@
+{
+  "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    7,
+    8,
+    6,
+    5,
+    4,
+    3
+  ],
+  "j": 2,
+  "prefix": "LXLXLL",
+  "rows": [
+    {
+      "status": "WITNESS",
+      "length": 49,
+      "overhead": 6,
+      "projection_length": 43,
+      "word": "LXLXLXLLLLXLXRXRXLXLXLLXLXLXLXLXLLXLXLXLLLXLXLXLX",
+      "projection_word": "LXLXLLLLXLXRXRXLXLXLLXLXLXLXLLXLXLXLLLXLXLX",
+      "order": "LRX"
+    },
+    {
+      "status": "WITNESS",
+      "length": 49,
+      "overhead": 6,
+      "projection_length": 43,
+      "word": "LXLXLXLLLLXLXRXRXLXLXLLXLXLXLXLXLLXLXLXLLLXLXLXLX",
+      "projection_word": "LXLXLLLLXLXRXRXLXLXLLXLXLXLXLLXLXLXLLLXLXLX",
+      "order": "LXR"
+    },
+    {
+      "status": "WITNESS",
+      "length": 51,
+      "overhead": 8,
+      "projection_length": 43,
+      "word": "LXLXLXLLRXRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXRXLXLXLXLX",
+      "projection_word": "LXLXLLRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXLXLXLX",
+      "order": "RLX"
+    },
+    {
+      "status": "WITNESS",
+      "length": 51,
+      "overhead": 8,
+      "projection_length": 43,
+      "word": "LXLXLXLLRXRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXRXLXLXLXLX",
+      "projection_word": "LXLXLLRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXLXLXLX",
+      "order": "RXL"
+    },
+    {
+      "status": "WITNESS",
+      "length": 49,
+      "overhead": 6,
+      "projection_length": 43,
+      "word": "LXLXLXLLXLXLXLXLXRXRXRXLXLXRXRRRXRXRXRXRXLXLXLXLX",
+      "projection_word": "LXLXLLXLXLXLXLXRXRXRXLXLXRXRRRXRXRXRXLXLXLX",
+      "order": "XLR"
+    },
+    {
+      "status": "WITNESS",
+      "length": 49,
+      "overhead": 6,
+      "projection_length": 43,
+      "word": "LXLXLXLLXLXLXLXRXRXLXLLXRXRXRXRRXRXRXRXRXLXLXLXLX",
+      "projection_word": "LXLXLLXLXLXLXRXRXLXLLXRXRXRXRRXRXRXRXLXLXLX",
+      "order": "XRL"
+    }
+  ],
+  "selection": "prefix extracted from known exact witness; exploratory, not independent confirmation"
+}

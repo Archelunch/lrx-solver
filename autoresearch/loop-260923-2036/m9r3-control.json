@@ -1,0 +1,230 @@
+{
+  "m": 9,
+  "r": 3,
+  "q": 52,
+  "bound": 59,
+  "orders": [
+    "LRX",
+    "LXR",
+    "RLX",
+    "RXL",
+    "XLR",
+    "XRL"
+  ],
+  "smaller_radius": 52,
+  "seconds": 0.004296708997571841,
+  "positive": 0,
+  "total": 1,
+  "rows": [
+    {
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "within_bound": false,
+      "best": {
+        "status": "WITNESS",
+        "length": 61,
+        "overhead": 9,
+        "projection_length": 52,
+        "word": "RXLXLXLXRRXLXRRXLXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX",
+        "projection_word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX",
+        "j": 2,
+        "order": "RXL"
+      },
+      "candidates": [
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "LXLXRRXLXRRXLXRRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXLXRXRXRXLXLXRX",
+          "projection_word": "LXRXRXRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXRXRXRXLXLXRX",
+          "j": 2,
+          "order": "LRX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "LXLXRRXLXRRXLXRRXLXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+          "projection_word": "LXRXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+          "j": 2,
+          "order": "LXR"
+        },
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "RXLXLXLXRRXLXRRXLXRRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXLXRXRXRXLX",
+          "projection_word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXRXRXRXLX",
+          "j": 2,
+          "order": "RLX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 61,
+          "overhead": 9,
+          "projection_length": 52,
+          "word": "RXLXLXLXRRXLXRRXLXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX",
+          "projection_word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX",
+          "j": 2,
+          "order": "RXL"
+        },
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "XLXLXRRXLXRRXLXRRXLXLXLXLXLXLLXLXLXLXRXRXRXLXLXRXRRRRXRXRXLXLXR",
+          "projection_word": "XLXRXRXRXLXLXLXLXLLXLXLXLXRXRXRXLXLXRXRRRRXRXRXLXLXR",
+          "j": 2,
+          "order": "XLR"
+        },
+        {
+          "status": "WITNESS",
+          "length": 64,
+          "overhead": 12,
+          "projection_length": 52,
+          "word": "XRXLXLXLXRRXLXRRXLXRXRXRRXRXRXRXLXLXLXRXRXLXLLLLXLXLXLXLXRXRXRXL",
+          "projection_word": "XRXLXLXRXRXRXRRXRXRXRXLXLXLXRXRXLXLLLLXLXLXLXRXRXRXL",
+          "j": 2,
+          "order": "XRL"
+        },
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "LXRXRXRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXLXRRXLXRRXLXRRXLXLXLXRX",
+          "projection_word": "LXRXRXRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXRXRXRXLXLXRX",
+          "j": 3,
+          "order": "LRX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "LXRXRXRXLXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRRXLXRRXLXRRXLXLXLXRX",
+          "projection_word": "LXRXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+          "j": 3,
+          "order": "LXR"
+        },
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXLXRRXLXRRXLXRRXLXLX",
+          "projection_word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXRXRXRXLX",
+          "j": 3,
+          "order": "RLX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 61,
+          "overhead": 9,
+          "projection_length": 52,
+          "word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRXLXRRXLXRRXLXLX",
+          "projection_word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX",
+          "j": 3,
+          "order": "RXL"
+        },
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "XLXRXRXRXLXLXLXLXLXLLXLXLXLXRXRXRXLXLXRXRRRRRXLXRRXLXRRXLXLXLXR",
+          "projection_word": "XLXRXRXRXLXLXLXLXLLXLXLXLXRXRXRXLXLXRXRRRRXRXRXLXLXR",
+          "j": 3,
+          "order": "XLR"
+        },
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "XRXLXLXRXRXRXRRXRXRXRXLXLXLXRXRXLXLLLLXLXLXLXLXRRXLXRRXLXRRXLXL",
+          "projection_word": "XRXLXLXRXRXRXRRXRXRXRXLXLXLXRXRXLXLLLLXLXLXLXRXRXRXL",
+          "j": 3,
+          "order": "XRL"
+        },
+        {
+          "status": "WITNESS",
+          "length": 65,
+          "overhead": 13,
+          "projection_length": 52,
+          "word": "LXRXRXRRRRXRXLXLXRXRXRXRXLLXRXLLXRXLLXRXLXLLXLXLXLXLXRXRXRXLXLXRX",
+          "projection_word": "LXRXRXRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXRXRXRXLXLXRX",
+          "j": 4,
+          "order": "LRX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 66,
+          "overhead": 14,
+          "projection_length": 52,
+          "word": "LXRXRXRXLXLXLXLLLLLXLXRXRXLXLXLXRXRXRXRRXRXLXRRXLXRRXLXRRXLXLXLXRX",
+          "projection_word": "LXRXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+          "j": 4,
+          "order": "LXR"
+        },
+        {
+          "status": "WITNESS",
+          "length": 65,
+          "overhead": 13,
+          "projection_length": 52,
+          "word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXRXLLXRXLLXRXLLXRXLXLLXLXLXLXLXRXRXRXLX",
+          "projection_word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLLXLXLXLXLXRXRXRXLX",
+          "j": 4,
+          "order": "RLX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 62,
+          "overhead": 10,
+          "projection_length": 52,
+          "word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXLXRRXLXRRXLXLX",
+          "projection_word": "RXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX",
+          "j": 4,
+          "order": "RXL"
+        },
+        {
+          "status": "WITNESS",
+          "length": 64,
+          "overhead": 12,
+          "projection_length": 52,
+          "word": "XLXRXRXRXLXLXLXLXLLLXLXLXLXRXRXRXLXLXRXRRRXRXRXLXRRXLXRRXLXLXLXR",
+          "projection_word": "XLXRXRXRXLXLXLXLXLLXLXLXLXRXRXRXLXLXRXRRRRXRXRXLXLXR",
+          "j": 4,
+          "order": "XLR"
+        },
+        {
+          "status": "WITNESS",
+          "length": 63,
+          "overhead": 11,
+          "projection_length": 52,
+          "word": "XRXLXLXRXRXRXRRXRXRXRXRXLLXLXLXRXRXRXLLXRXLXLXLLLXLXLXLXRXRXRXL",
+          "projection_word": "XRXLXLXRXRXRXRRXRXRXRXLXLXLXRXRXLXLLLLXLXLXLXRXRXRXL",
+          "j": 4,
+          "order": "XRL"
+        }
+      ]
+    }
+  ],
+  "failure_semantics": "Portfolio miss only; never a negative for A_q or the conjecture"
+}

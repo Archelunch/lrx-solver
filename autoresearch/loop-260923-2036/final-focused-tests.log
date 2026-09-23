@@ -1,0 +1,11 @@
+test_bad_inputs (tests.test_search_word_lift.WordLiftTests.test_bad_inputs) ... ok
+test_fixed_word_infeasibility_is_not_global (tests.test_search_word_lift.WordLiftTests.test_fixed_word_infeasibility_is_not_global) ... ok
+test_fixed_word_matches_independent_bfs (tests.test_search_word_lift.WordLiftTests.test_fixed_word_matches_independent_bfs) ... ok
+test_free_trajectory_subclass (tests.test_search_word_lift.WordLiftTests.test_free_trajectory_subclass) ... ok
+test_left_sweep_bound_and_exact_router (tests.test_search_word_lift.WordLiftTests.test_left_sweep_bound_and_exact_router) ... ok
+test_sweep_bound_is_sharp_in_conjecture_domain (tests.test_search_word_lift.WordLiftTests.test_sweep_bound_is_sharp_in_conjecture_domain) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.114s
+
+OK

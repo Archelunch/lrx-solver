@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "goal": "Constructive routing lemmas toward the LRX conjecture",
+  "main_conjecture": "open",
+  "proof_note": "proof-note.md",
+  "report": "report.md",
+  "general_results": [
+    "fixed-word normal form and exact n-position routing",
+    "conditional L/X amortized repair bound",
+    "free-trajectory overhead bound"
+  ],
+  "finite_results": {
+    "m8r5": "A54<=58 for all 27 antipode insertions",
+    "m8r9": "A77<=83 for all 346 antipode insertions"
+  },
+  "limitations": [
+    "finite certificates do not cover complete graphs",
+    "L/X lemma does not cover mixed-direction hard-case words",
+    "universal short-word existence and r2 base remain open",
+    "portfolio misses are not lower bounds"
+  ],
+  "validation": {
+    "tests": 311,
+    "seconds": 9.579,
+    "compileall": "pass",
+    "smoke": "pass",
+    "trusted": "unchanged",
+    "legacy_spend_guard": "historical default fails; not overridden",
+    "ratio": 1.5625
+  },
+  "api_requests": 1,
+  "api_usd_iteration": 0.080166,
+  "iteration_cap_usd": 2.0,
+  "api_usd_campaign": 29.365861,
+  "campaign_remaining_usd": 20.634139,
+  "billing_verified": false,
+  "pending": [],
+  "next": "Develop a mixed-direction amortized repair argument using the preserved difficult witnesses; keep the general base case explicit."
+}

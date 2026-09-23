@@ -1,0 +1,32 @@
+{
+  "m": 8,
+  "r": 9,
+  "q": 79,
+  "bound": 84,
+  "orders": [
+    "LRX",
+    "LXR",
+    "RLX",
+    "RXL",
+    "XLR",
+    "XRL"
+  ],
+  "smaller_radius": 77,
+  "seconds": 9.33059054199839,
+  "positive": 346,
+  "total": 346,
+  "failure_semantics": "Portfolio miss only; never a negative for A_q or the conjecture",
+  "max_best_length": 83,
+  "max_best_projection": 77,
+  "best_length_histogram": {
+    "77": 75,
+    "78": 78,
+    "79": 94,
+    "80": 54,
+    "81": 37,
+    "82": 6,
+    "83": 2
+  },
+  "raw_sha256": "658d94335ea1d01d87429b8394afeaba4b47b45719cebdaa25fa117a6912fdf0",
+  "archive": "m8r9-all-geodesics.json.gz"
+}

@@ -1,0 +1,169 @@
+{
+  "m": 8,
+  "r": 3,
+  "q": 42,
+  "bound": 48,
+  "orders": [
+    "LRX",
+    "LXR",
+    "RLX",
+    "RXL",
+    "XLR",
+    "XRL"
+  ],
+  "smaller_radius": 42,
+  "seconds": 0.0024535839911550283,
+  "positive": 0,
+  "total": 1,
+  "rows": [
+    {
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3
+      ],
+      "within_bound": false,
+      "best": {
+        "status": "WITNESS",
+        "length": 49,
+        "overhead": 8,
+        "projection_length": 41,
+        "word": "XLXLXLXLXRXRXRXRXRRXRXRXLXLXRXRRRXRXRXRXRXLXLXLXL",
+        "projection_word": "XLXLXLXRXRXRXRRXRXRXLXLXRXRRRXRXRXRXLXLXL",
+        "j": 2,
+        "order": "XLR"
+      },
+      "candidates": [
+        {
+          "status": "WITNESS",
+          "length": 51,
+          "overhead": 10,
+          "projection_length": 41,
+          "word": "LLLLXLXLXRXRXRXRXLLXRXLLXRXLLLLLXLXRXRXLXLXLXRXRXRX",
+          "projection_word": "LLLXLXLXRXRXRXLXLXLLLLXLXRXRXLXLXLXRXRXRX",
+          "j": 2,
+          "order": "LRX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 51,
+          "overhead": 10,
+          "projection_length": 41,
+          "word": "RXRRXLXLXLXLLLLXLXLXRXRXRXRXLLXRXLLXRXLLLLXLXLXRXRX",
+          "projection_word": "RXRRXLXLXLXLLLXLXLXRXRXRXLXLXLLLXLXLXRXRX",
+          "j": 2,
+          "order": "RLX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 49,
+          "overhead": 8,
+          "projection_length": 41,
+          "word": "XLXLXLXLXRXRXRXRXRRXRXRXLXLXRXRRRXRXRXRXRXLXLXLXL",
+          "projection_word": "XLXLXLXRXRXRXRRXRXRXLXLXRXRRRXRXRXRXLXLXL",
+          "j": 2,
+          "order": "XLR"
+        },
+        {
+          "status": "WITNESS",
+          "length": 51,
+          "overhead": 10,
+          "projection_length": 41,
+          "word": "XRXRXRXLXLXLXRXRXLXLLLLLXLXLXRXRXRXRXLLXRXLLXRXLLLL",
+          "projection_word": "XRXRXRXLXLXLXRXRXLXLLLLXLXLXRXRXRXLXLXLLL",
+          "j": 2,
+          "order": "XRL"
+        },
+        {
+          "status": "WITNESS",
+          "length": 51,
+          "overhead": 10,
+          "projection_length": 41,
+          "word": "LLLLXRXLLXRXLLXRXRXRXRXLXLXLLLLLXLXRXRXLXLXLXRXRXRX",
+          "projection_word": "LLLXLXLXRXRXRXLXLXLLLLXLXRXRXLXLXLXRXRXRX",
+          "j": 3,
+          "order": "LRX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 51,
+          "overhead": 10,
+          "projection_length": 41,
+          "word": "RXRRXLXLXLXLLLLXRXLLXRXLLXRXRXRXRXLXLXLLLLXLXLXRXRX",
+          "projection_word": "RXRRXLXLXLXLLLXLXLXRXRXRXLXLXLLLXLXLXRXRX",
+          "j": 3,
+          "order": "RLX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 49,
+          "overhead": 8,
+          "projection_length": 41,
+          "word": "XLXLXLXLXRXRXRXRXRRXRXRXLXLXRXRRRXRXRXRXRXLXLXLXL",
+          "projection_word": "XLXLXLXRXRXRXRRXRXRXLXLXRXRRRXRXRXRXLXLXL",
+          "j": 3,
+          "order": "XLR"
+        },
+        {
+          "status": "WITNESS",
+          "length": 51,
+          "overhead": 10,
+          "projection_length": 41,
+          "word": "XRXRXRXLXLXLXRXRXLXLLLLLXRXLLXRXLLXRXRXRXRXLXLXLLLL",
+          "projection_word": "XRXRXRXLXLXLXRXRXLXLLLLXLXLXRXRXRXLXLXLLL",
+          "j": 3,
+          "order": "XRL"
+        },
+        {
+          "status": "WITNESS",
+          "length": 52,
+          "overhead": 11,
+          "projection_length": 41,
+          "word": "LLLXLXRXLLXRXLLXRXRXRXRXLXLXLLLLLXLXRXRXLXLXLXRXRXRX",
+          "projection_word": "LLLXLXLXRXRXRXLXLXLLLLXLXRXRXLXLXLXRXRXRX",
+          "j": 4,
+          "order": "LRX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 52,
+          "overhead": 11,
+          "projection_length": 41,
+          "word": "RXRRXLXLXLXLLLXLXRXLLXRXLLXRXRXRXRXLXLXLLLLXLXLXRXRX",
+          "projection_word": "RXRRXLXLXLXLLLXLXLXRXRXRXLXLXLLLXLXLXRXRX",
+          "j": 4,
+          "order": "RLX"
+        },
+        {
+          "status": "WITNESS",
+          "length": 49,
+          "overhead": 8,
+          "projection_length": 41,
+          "word": "XLXLXLXLXRXRXRXRXRRXRXRXLXLXRXRRRXRXRXRXRXLXLXLXL",
+          "projection_word": "XLXLXLXRXRXRXRRXRXRXLXLXRXRRRXRXRXRXLXLXL",
+          "j": 4,
+          "order": "XLR"
+        },
+        {
+          "status": "WITNESS",
+          "length": 52,
+          "overhead": 11,
+          "projection_length": 41,
+          "word": "XRXRXRXLXLXLXRXRXLXLLLLXLXRXLLXRXLLXRXRXRXRXLXLXLLLL",
+          "projection_word": "XRXRXRXLXLXLXRXRXLXLLLLXLXLXRXRXRXLXLXLLL",
+          "j": 4,
+          "order": "XRL"
+        }
+      ]
+    }
+  ],
+  "failure_semantics": "Portfolio miss only; never a negative for A_q or the conjecture"
+}

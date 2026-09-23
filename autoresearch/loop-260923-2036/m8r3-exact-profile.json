@@ -1,0 +1,61 @@
+{
+  "result": {
+    "status": "COMPLETE",
+    "within_bound": true,
+    "q": 43,
+    "bound": 48,
+    "witness": {
+      "d_small": 41,
+      "slack": 2,
+      "status": "COMPLETE",
+      "H": 47,
+      "states": 26632,
+      "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+      "j": 2
+    },
+    "deletions": [
+      {
+        "d_small": 41,
+        "slack": 2,
+        "status": "COMPLETE",
+        "H": 47,
+        "states": 26632,
+        "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+        "j": 2
+      }
+    ]
+  },
+  "projection_word": "LXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLX",
+  "defects": [
+    {
+      "index": 5,
+      "letter": "L",
+      "before": [
+        1,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3,
+        2,
+        0,
+        0
+      ],
+      "after": [
+        7,
+        8,
+        6,
+        5,
+        4,
+        3,
+        2,
+        0,
+        0,
+        1
+      ],
+      "d_before": 36,
+      "d_after": 37
+    }
+  ]
+}

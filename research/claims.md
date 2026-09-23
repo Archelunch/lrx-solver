@@ -220,3 +220,51 @@ marked deletion (checked between BFS layers; the count can overshoot).
 They establish neither the proposed lifting claim nor its negation.
 Evidence: `autoresearch/loop-260923-2004/target-summary.json` and associated
 frozen cases/checkpoint records. The main sorting-radius conjecture remains open.
+
+## 2026-09-23 session 06: constructive fixed-word routing
+
+Auxiliary constructive results, with explicit proofs in
+`autoresearch/loop-260923-2036/proof-note.md`:
+
+- For a fixed smaller sorting word V, with no projection-identity letters,
+  an optimal lift can use shortest zero-projection repairs of length <=2
+  between its letters and at its ends. A dynamic program on n marked positions
+  per letter computes its exact minimum lift in O(n(|V|+1)) operations.
+  Infeasibility applies only to that word, never all words with the same cap.
+- For V using only L and X, let k=#L and j its initial mark. The explicit
+  repair procedure in `integrations/word_lift.py` has overhead at most
+  `2 floor((k+n-1-j)/(n-2))` whenever its final mark is in the terminal set
+  after the prescribed final repair. The proof charges each repair's advance
+  of at least n-2 positions against the k left rotations and starting offset.
+  The bound is attained by the infinite family j=n-1, V=L^(n-2)X with u the
+  inverse image of the smaller root. The endpoint and short-word existence
+  conditions remain essential; this does not establish the conjecture.
+
+Finite constructive certificates from six frozen letter-priority geodesic
+policies and the exact fixed-word router:
+
+- For all 27 distinct zero insertions into the 3 (8,4) antipodes,
+  **A_54(v)<=58**, improving the previous length-60 witnesses. Search 0.171s.
+- For all **346 distinct zero insertions into the 39 (8,8) antipodes**,
+  **A_77(v)<=83** at (8,9). Search 9.331s. This includes all 24 previously
+  resource-incomplete vectors; those 24 alone took 0.560s. Table loading is
+  excluded from these search timings. This is a finite family among
+  980179200 visible (8,9) states, not a full-graph result.
+
+Each certificate was checked by trusted marked and visible replay. Evidence:
+`autoresearch/loop-260923-2036/m8r5-geodesics-certificates.json` and
+`autoresearch/loop-260923-2036/m8r9-all-geodesics-certificates.json`.
+Full policy outcomes are also preserved, compressed for the 346-case batch.
+The method searches a restricted family; a portfolio miss is not a lower bound.
+
+The six geodesic policies still miss the known old-cap (8,3)/(9,3) obstructions,
+with best full lengths 49/61. Adding one distance-level projected step repairs
+(9,3): projection 53, full length 59. The fixed-priority one-defect portfolio
+misses (8,3), but the already-known exact length-47 witness has projection 43
+with one uphill step from smaller distance 36 to 37. Thus allowing that step
+is not sufficient without suitable subsequent geodesic choices. This is a
+construction limitation, not a counterexample to the replacement lifting claim.
+
+All successful hard-family geodesic words here use both L and R; the L/X-only
+amortized lemma does not explain them. The universal short-word construction,
+mixed-direction repair bound, and general r=2 base remain unresolved.
