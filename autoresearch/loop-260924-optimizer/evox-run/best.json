@@ -1,0 +1,140 @@
+{
+  "kind": "mixture_policy",
+  "name": "even-cut low-gap complementary adjacent inversion",
+  "rules": [
+    {
+      "cuts": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "weights": {
+        "rotation": 1,
+        "zero_rotation": 1,
+        "zero_swap": 0,
+        "position": 2,
+        "rank_gap": -1
+      },
+      "direction": "shortest",
+      "tie": "left"
+    },
+    {
+      "cuts": [
+        1,
+        5,
+        9,
+        13
+      ],
+      "weights": {
+        "rotation": 1,
+        "zero_rotation": -1,
+        "zero_swap": 2,
+        "position": -2,
+        "rank_gap": 1
+      },
+      "direction": "left",
+      "tie": "right"
+    },
+    {
+      "cuts": [
+        2,
+        6,
+        10,
+        14
+      ],
+      "weights": {
+        "rotation": 0,
+        "zero_rotation": 2,
+        "zero_swap": -2,
+        "position": 1,
+        "rank_gap": -1
+      },
+      "direction": "right",
+      "tie": "left"
+    },
+    {
+      "cuts": [
+        0,
+        3,
+        6,
+        10
+      ],
+      "weights": {
+        "rotation": 2,
+        "zero_rotation": 0,
+        "zero_swap": 1,
+        "position": -1,
+        "rank_gap": 0
+      },
+      "direction": "shortest",
+      "tie": "right"
+    },
+    {
+      "cuts": [
+        0,
+        5,
+        11
+      ],
+      "weights": {
+        "rotation": -1,
+        "zero_rotation": 3,
+        "zero_swap": -1,
+        "position": 0,
+        "rank_gap": -2
+      },
+      "direction": "left",
+      "tie": "left"
+    },
+    {
+      "cuts": [
+        1,
+        7,
+        12
+      ],
+      "weights": {
+        "rotation": 2,
+        "zero_rotation": -2,
+        "zero_swap": 3,
+        "position": -3,
+        "rank_gap": 2
+      },
+      "direction": "shortest",
+      "tie": "left"
+    },
+    {
+      "cuts": [
+        3,
+        8,
+        13,
+        16
+      ],
+      "weights": {
+        "rotation": 1,
+        "zero_rotation": 1,
+        "zero_swap": -3,
+        "position": 3,
+        "rank_gap": -1
+      },
+      "direction": "right",
+      "tie": "right"
+    },
+    {
+      "cuts": [
+        0,
+        2,
+        8,
+        15
+      ],
+      "weights": {
+        "rotation": 3,
+        "zero_rotation": -1,
+        "zero_swap": 1,
+        "position": 1,
+        "rank_gap": 0
+      },
+      "direction": "shortest",
+      "tie": "left"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	d2ab64cf63614a4e	mixture_policy	seed	None		-115657.60811133657	False	keep	0	nearest adjacent inversion, three cuts
+1	1	8fe5c8d067dfb868	mixture_policy	exploit	0	0	-115657.60811133657	False	discard	0.009128	flat complementary adjacent inversion
+2	2	19548c64ad525335	mixture_policy	exploit	0	0	-108853.65014531268	False	keep	0.010058	complementary slope-bounded adjacent inversion
+3	3	dd42067bb5247987	mixture_policy	exploit	0	2	-115657.24447497292	False	discard	0.015034	complementary flat-slope adjacent inversion
+4	4	6c93d0ba85ad4c0c	mixture_policy	exploit	0	2	-112254.93504599144	False	discard	0.01323	flat complementary zero-spread adjacent inversion
+5	5	dc783b4ef361e1a7	mixture_policy	exploit	0	2	-102048.48907522252	False	keep	0.019732	even-cut low-gap complementary adjacent inversion
+6	6	31328a367b52f12b	mixture_policy	exploit	0	5	-108853.62533355878	False	discard	0.011318	odd-phase flat-slope complementary adjacent inversion
+7	7	e9cb5bf4f4febede	mixture_policy	exploit	0	5	-108855.51287324133	False	discard	0.012402	phase-shifted flat-slope complementary adjacent inversion
+8	8	9a87e433b00bb552	mixture_policy	exploit	0	5	-108852.76455282167	False	discard	0.015678	flat-slope staggered complementary adjacent inversion
+9	9	8a132ec3d45d7159	mixture_policy	exploit	0	5	-105450.012092961	False	discard	0.015994	odd-stagger flat-gap complementary adjacent inversion
+10	10	f40656ad0364a2a3	mixture_policy	exploit	0	9	-115656.22562341386	False	discard	0.013746	complementary even-odd cut slope split adjacent inversion
+11	11	95cea2441e8aea9d	mixture_policy	exploit	0	8	-112256.38588911435	False	discard	0.016626	description
+12	12	8d910ad5a5934b91	mixture_policy	exploit	0	9	-108854.06712671355	False	discard	0.015552	split-phase complementary slope and base adjacent inversion

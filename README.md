@@ -28,7 +28,7 @@ This repository does **not** prove it. It provides:
 1. **Exact ground truth**: complete BFS distance tables for registered finite
    graphs, and an exact dynamic program for the manuscript's lifting approach.
 2. **A verifier-first search loop**: an LLM proposes JSON candidates (sorting
-   controllers, potential functions, bounds, and lifting policies). A
+   controllers, potential functions, bounds, lifting policies, and mixture word policies). A
    deterministic checker replays or certifies them using exact tables and
    explicit word checks. No LLM judges anything.
 3. **A claim register** (`research/claims.md`) that separates proven,
@@ -48,6 +48,8 @@ are finite unless explicitly stated otherwise. Details and evidence:
 | Potentials (Route C) | Two potential functions with short descent arguments that hold for **all m, r**. They give cubic bounds, far weaker than T, but they are the first certificates of this kind here. They were exhaustively certified on 11 complete tables. |
 
 ### Recent results and their limits
+
+- **LLM mixture search (session 09).** EvoX and sequential now search JSON word-construction policies. For **$0.33641**, finalists add **five distinct all-length family certificates** beyond the fixed catalog baseline: four development and one fresh confirmation. Both certify 23/30 confirmation families versus 22/30 for the catalog; no engine ranking follows. Including expanded catalog search, this iteration records 41 distinct named certificates. See the [session 09 report](autoresearch/loop-260924-optimizer/report.md).
 
 - **New projected mixtures (session 08).** A deterministic, dependency-free
   optimizer produced **76 exact certificates for named m = 8 families with

@@ -1,0 +1,11 @@
+{
+  "destination": "https://api.x.ai/v1",
+  "model": "grok-4.7",
+  "max_total_usd": 4,
+  "payload": "Frozen context.json statements and hashes, mixture policy schema, evolving JSON policies, development-only case ids/masks/order indices, cost profiles, exact certificate counts, base deficits and strategy summaries. No source files, credentials, or confirmation outcomes in model messages.",
+  "arms": [
+    "sequential",
+    "evox"
+  ],
+  "authorization": "User requested this proposed autoresearch iteration with LLM search and existing $50 total budget."
+}

@@ -1,0 +1,4165 @@
+[
+  {
+    "case": {
+      "id": "k4-mask51-order34857",
+      "mask": 51,
+      "order_index": 34857,
+      "blocks": 4
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "6/11",
+        "0",
+        "0",
+        "0",
+        "1/11",
+        "0",
+        "0",
+        "4/11",
+        "0"
+      ],
+      "base": "591/11",
+      "pivots": 11
+    },
+    "certificate": {
+      "bounds": {
+        "base": "591/11",
+        "gamma": [
+          "6",
+          "61/11",
+          "63/11",
+          "6"
+        ],
+        "margin": "14/11"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 47,
+            "gamma": [
+              7,
+              4,
+              5,
+              8
+            ],
+            "state": [
+              0,
+              5,
+              0,
+              1,
+              4,
+              3,
+              0,
+              2,
+              0,
+              7,
+              8,
+              6
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              8,
+              3,
+              4,
+              0,
+              2,
+              0,
+              5,
+              6,
+              1
+            ],
+            "word": "XRXRXLXLLLXRXRXRXRXRRRXRRXLXLXLLXLXLXLLLLLXLXLXLXLXRXRX",
+            "cut": 4,
+            "affine": true,
+            "source": 921
+          },
+          "weight": "6/11"
+        },
+        {
+          "profile": {
+            "base": 57,
+            "gamma": [
+              4,
+              5,
+              9,
+              6
+            ],
+            "state": [
+              0,
+              2,
+              0,
+              8,
+              4,
+              5,
+              0,
+              6,
+              0,
+              1,
+              3,
+              7
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              8,
+              3,
+              4,
+              0,
+              2,
+              0,
+              5,
+              6,
+              1
+            ],
+            "word": "LXLLXLXLLXLLXLXRRXRXRXRXRXRRRRXLXLXLXLXLXLLXRXLLLXRXRXRXRXRXRRX",
+            "cut": 11,
+            "affine": true,
+            "source": 166
+          },
+          "weight": "1/11"
+        },
+        {
+          "profile": {
+            "base": 63,
+            "gamma": [
+              5,
+              8,
+              6,
+              3
+            ],
+            "state": [
+              0,
+              7,
+              0,
+              6,
+              2,
+              5,
+              0,
+              1,
+              0,
+              4,
+              8,
+              3
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              8,
+              3,
+              4,
+              0,
+              2,
+              0,
+              5,
+              6,
+              1
+            ],
+            "word": "RXLLXRXRRXLXLLLXLXLXLLXLLXRXRRXRRRXLXLXRXRRXRXLXLXLXLXLXLXRXRXRXRRXRX",
+            "cut": 10,
+            "affine": true,
+            "source": 4508
+          },
+          "weight": "4/11"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k4-mask78-order4911",
+      "mask": 78,
+      "order_index": 4911,
+      "blocks": 4
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/12",
+        "1/2",
+        "0",
+        "5/12",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "667/12",
+      "pivots": 3
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k4-mask78-order9701",
+      "mask": 78,
+      "order_index": 9701,
+      "blocks": 4
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/7",
+        "3/7",
+        "0",
+        "0",
+        "0",
+        "3/7",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "402/7",
+      "pivots": 5
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k4-mask312-order21771",
+      "mask": 312,
+      "order_index": 21771,
+      "blocks": 4
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/7",
+        "3/35",
+        "0",
+        "3/7",
+        "0",
+        "0",
+        "0",
+        "12/35",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "58",
+      "pivots": 9
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k4-mask308-order9799",
+      "mask": 308,
+      "order_index": 9799,
+      "blocks": 4
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "281/5",
+      "pivots": 10
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k4-mask390-order32869",
+      "mask": 390,
+      "order_index": 32869,
+      "blocks": 4
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "53",
+      "pivots": 3
+    },
+    "certificate": {
+      "bounds": {
+        "base": "53",
+        "gamma": [
+          "1",
+          "2",
+          "6",
+          "5"
+        ],
+        "margin": "2"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 53,
+            "gamma": [
+              1,
+              2,
+              6,
+              5
+            ],
+            "state": [
+              6,
+              0,
+              4,
+              0,
+              7,
+              8,
+              3,
+              5,
+              1,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              7,
+              0,
+              4,
+              0,
+              5,
+              8,
+              3,
+              1,
+              6,
+              0,
+              2,
+              0
+            ],
+            "word": "RRRXRRXRRXLXLXLXRXRRXRXLXLXLXLLLLXRXRXRXLLLLLLXLXLXLXRXR",
+            "cut": 1,
+            "affine": true,
+            "source": 658
+          },
+          "weight": "1"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k5-mask357-order10564",
+      "mask": 357,
+      "order_index": 10564,
+      "blocks": 5
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "1/3",
+        "0",
+        "0",
+        "0",
+        "2/9",
+        "0",
+        "4/9"
+      ],
+      "base": "562/9",
+      "pivots": 8
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k5-mask182-order5246",
+      "mask": 182,
+      "order_index": 5246,
+      "blocks": 5
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/7",
+        "17/35",
+        "0",
+        "13/35",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "2136/35",
+      "pivots": 5
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k5-mask458-order19435",
+      "mask": 458,
+      "order_index": 19435,
+      "blocks": 5
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "0",
+        "0",
+        "2/11",
+        "0",
+        "5/11",
+        "0",
+        "0",
+        "4/11",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "62",
+      "pivots": 6
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k5-mask342-order6852",
+      "mask": 342,
+      "order_index": 6852,
+      "blocks": 5
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "3/7",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3/7",
+        "1/7",
+        "0"
+      ],
+      "base": "416/7",
+      "pivots": 6
+    },
+    "certificate": {
+      "bounds": {
+        "base": "416/7",
+        "gamma": [
+          "6",
+          "39/7",
+          "6",
+          "6",
+          "39/7"
+        ],
+        "margin": "11/7"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 52,
+            "gamma": [
+              3,
+              6,
+              11,
+              5,
+              1
+            ],
+            "state": [
+              3,
+              0,
+              6,
+              0,
+              5,
+              1,
+              0,
+              7,
+              2,
+              0,
+              4,
+              8,
+              0
+            ],
+            "target": [
+              2,
+              0,
+              4,
+              0,
+              6,
+              1,
+              0,
+              7,
+              3,
+              0,
+              5,
+              8,
+              0
+            ],
+            "word": "RRRRXLXRRRXRXRRXLXRRRXLXLXLXLLXLXLXRRXRXRXRRRRRXLXLXLXR",
+            "cut": 0,
+            "affine": true,
+            "source": 3815
+          },
+          "weight": "3/7"
+        },
+        {
+          "profile": {
+            "base": 64,
+            "gamma": [
+              7,
+              4,
+              2,
+              8,
+              9
+            ],
+            "state": [
+              1,
+              0,
+              2,
+              0,
+              6,
+              4,
+              0,
+              7,
+              5,
+              0,
+              3,
+              8,
+              0
+            ],
+            "target": [
+              2,
+              0,
+              4,
+              0,
+              6,
+              1,
+              0,
+              7,
+              3,
+              0,
+              5,
+              8,
+              0
+            ],
+            "word": "RXRXRRRXLXLXLLLLXRXRXRXRRXRRXLXLXLXLXLLLLLXRXRXRXRXLLLLLLXLXLXLXLXRXR",
+            "cut": 5,
+            "affine": true,
+            "source": 3599
+          },
+          "weight": "3/7"
+        },
+        {
+          "profile": {
+            "base": 68,
+            "gamma": [
+              12,
+              9,
+              3,
+              3,
+              9
+            ],
+            "state": [
+              4,
+              0,
+              2,
+              0,
+              7,
+              6,
+              0,
+              1,
+              8,
+              0,
+              3,
+              5,
+              0
+            ],
+            "target": [
+              2,
+              0,
+              4,
+              0,
+              6,
+              1,
+              0,
+              7,
+              3,
+              0,
+              5,
+              8,
+              0
+            ],
+            "word": "RRXLXLLXLLXLLLXRXRXRXRXRXRXRXRRXLXRRRXLXLXLXLXLXLXLLXRXLLLXRXRXRXRRXRXRXR",
+            "cut": 8,
+            "affine": true,
+            "source": 363
+          },
+          "weight": "1/7"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k5-mask310-order4691",
+      "mask": 310,
+      "order_index": 4691,
+      "blocks": 5
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "0",
+        "1/2",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "125/2",
+      "pivots": 4
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k5-mask217-order28401",
+      "mask": 217,
+      "order_index": 28401,
+      "blocks": 5
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "4/9",
+        "0",
+        "0",
+        "0",
+        "7/45",
+        "0",
+        "0",
+        "1/15",
+        "0",
+        "0",
+        "0",
+        "1/3",
+        "0"
+      ],
+      "base": "551/9",
+      "pivots": 15
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k5-mask179-order39372",
+      "mask": 179,
+      "order_index": 39372,
+      "blocks": 5
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "2/11",
+        "0",
+        "0",
+        "0",
+        "4/11",
+        "0",
+        "0",
+        "5/11"
+      ],
+      "base": "672/11",
+      "pivots": 8
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k5-mask313-order2925",
+      "mask": 313,
+      "order_index": 2925,
+      "blocks": 5
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "0",
+        "2/7",
+        "4/7",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/7",
+        "0",
+        "0"
+      ],
+      "base": "428/7",
+      "pivots": 6
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k5-mask310-order10383",
+      "mask": 310,
+      "order_index": 10383,
+      "blocks": 5
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "6/37",
+        "0",
+        "0",
+        "0",
+        "15/37",
+        "16/37",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "2180/37",
+      "pivots": 9
+    },
+    "certificate": {
+      "bounds": {
+        "base": "2180/37",
+        "gamma": [
+          "221/37",
+          "6",
+          "6",
+          "216/37",
+          "207/37"
+        ],
+        "margin": "77/37"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 43,
+            "gamma": [
+              5,
+              8,
+              9,
+              6,
+              3
+            ],
+            "state": [
+              2,
+              0,
+              1,
+              0,
+              6,
+              5,
+              0,
+              7,
+              0,
+              8,
+              4,
+              3,
+              0
+            ],
+            "target": [
+              3,
+              0,
+              1,
+              0,
+              5,
+              6,
+              0,
+              7,
+              0,
+              4,
+              8,
+              2,
+              0
+            ],
+            "word": "RRXLXLXLXLXLLXLLXLLXRXLLXRXRXRXRXRXRRRXRRXLXLX",
+            "cut": 4,
+            "affine": true,
+            "source": 3702
+          },
+          "weight": "6/37"
+        },
+        {
+          "profile": {
+            "base": 62,
+            "gamma": [
+              1,
+              2,
+              8,
+              12,
+              3
+            ],
+            "state": [
+              2,
+              0,
+              1,
+              0,
+              5,
+              8,
+              0,
+              7,
+              0,
+              6,
+              4,
+              3,
+              0
+            ],
+            "target": [
+              3,
+              0,
+              1,
+              0,
+              5,
+              6,
+              0,
+              7,
+              0,
+              4,
+              8,
+              2,
+              0
+            ],
+            "word": "RXRRXRXRXRXRRXLXLLLXLXRXRXRXLLXLLXRXRXRXRXRXRRXLXLXLXLLXLXLLLLLXLXL",
+            "cut": 1,
+            "affine": true,
+            "source": 544
+          },
+          "weight": "15/37"
+        },
+        {
+          "profile": {
+            "base": 62,
+            "gamma": [
+              11,
+              9,
+              3,
+              0,
+              9
+            ],
+            "state": [
+              4,
+              0,
+              1,
+              0,
+              5,
+              7,
+              0,
+              2,
+              0,
+              8,
+              6,
+              3,
+              0
+            ],
+            "target": [
+              3,
+              0,
+              1,
+              0,
+              5,
+              6,
+              0,
+              7,
+              0,
+              4,
+              8,
+              2,
+              0
+            ],
+            "word": "RRXLLXRXRRXLXLXLXLXLLXLXRRXRRXRXRRRXLXLXLXLXLXLXLXLLLXRXRXRXRXRXRXRXR",
+            "cut": 8,
+            "affine": true,
+            "source": 103
+          },
+          "weight": "16/37"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k5-mask376-order5431",
+      "mask": 376,
+      "order_index": 5431,
+      "blocks": 5
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "3/8",
+        "0",
+        "0",
+        "1/2",
+        "1/8",
+        "0",
+        "0"
+      ],
+      "base": "249/4",
+      "pivots": 3
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k6-mask237-order8455",
+      "mask": 237,
+      "order_index": 8455,
+      "blocks": 6
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/2",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "67",
+      "pivots": 6
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k6-mask429-order39577",
+      "mask": 429,
+      "order_index": 39577,
+      "blocks": 6
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "4/91",
+        "0",
+        "6/91",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "6/13",
+        "0",
+        "3/7",
+        "0"
+      ],
+      "base": "6158/91",
+      "pivots": 14
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k6-mask222-order31655",
+      "mask": 222,
+      "order_index": 31655,
+      "blocks": 6
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "67",
+      "pivots": 14
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k6-mask430-order39347",
+      "mask": 430,
+      "order_index": 39347,
+      "blocks": 6
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/2",
+        "1/12",
+        "5/12",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "135/2",
+      "pivots": 7
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k6-mask249-order28370",
+      "mask": 249,
+      "order_index": 28370,
+      "blocks": 6
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/2",
+        "0",
+        "1/12",
+        "0",
+        "5/12",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "791/12",
+      "pivots": 4
+    },
+    "certificate": {
+      "bounds": {
+        "base": "791/12",
+        "gamma": [
+          "17/3",
+          "65/12",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        "margin": "13/12"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 62,
+            "gamma": [
+              7,
+              2,
+              5,
+              8,
+              11,
+              9
+            ],
+            "state": [
+              0,
+              6,
+              5,
+              4,
+              0,
+              3,
+              0,
+              1,
+              0,
+              8,
+              0,
+              2,
+              0,
+              7
+            ],
+            "target": [
+              0,
+              6,
+              5,
+              3,
+              0,
+              4,
+              0,
+              1,
+              0,
+              7,
+              0,
+              2,
+              0,
+              8
+            ],
+            "word": "XLXRXRXRXRRRXRRXRRXLXLXLXLLXLXLLXLXRXRXLXLLLLXLXLXLXLXLXLXRXRRXL",
+            "cut": 3,
+            "affine": true,
+            "source": 514
+          },
+          "weight": "1/2"
+        },
+        {
+          "profile": {
+            "base": 69,
+            "gamma": [
+              1,
+              8,
+              12,
+              9,
+              6,
+              3
+            ],
+            "state": [
+              0,
+              6,
+              5,
+              4,
+              0,
+              3,
+              0,
+              1,
+              0,
+              8,
+              0,
+              2,
+              0,
+              7
+            ],
+            "target": [
+              0,
+              6,
+              5,
+              3,
+              0,
+              4,
+              0,
+              1,
+              0,
+              7,
+              0,
+              2,
+              0,
+              8
+            ],
+            "word": "LLXLXLXLLXRXRRRXRXLXLXLXLXLLLXLLXLLXRXRRXRXRXLXLLXRXRXRRXRXRRXRXLXLXRXR",
+            "cut": 0,
+            "affine": true,
+            "source": 717
+          },
+          "weight": "1/12"
+        },
+        {
+          "profile": {
+            "base": 70,
+            "gamma": [
+              5,
+              9,
+              6,
+              3,
+              0,
+              3
+            ],
+            "state": [
+              0,
+              7,
+              6,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              4,
+              0,
+              8,
+              0,
+              3
+            ],
+            "target": [
+              0,
+              6,
+              5,
+              3,
+              0,
+              4,
+              0,
+              1,
+              0,
+              7,
+              0,
+              2,
+              0,
+              8
+            ],
+            "word": "RXRRXLXLLLXLLLXRRXLXLLLXLLXRXRRXRXRRRXLXLXRXRRXRXLXLXLXLXLXLLXRXRXRXRXRRXRX",
+            "cut": 10,
+            "affine": true,
+            "source": 4508
+          },
+          "weight": "5/12"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k6-mask318-order21803",
+      "mask": 318,
+      "order_index": 21803,
+      "blocks": 6
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "33/175",
+        "69/350",
+        "0",
+        "37/175",
+        "0",
+        "0",
+        "0",
+        "6/35",
+        "0",
+        "0",
+        "0",
+        "81/350",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "11787/175",
+      "pivots": 9
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k6-mask407-order19837",
+      "mask": 407,
+      "order_index": 19837,
+      "blocks": 6
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "3/5",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0"
+      ],
+      "base": "63",
+      "pivots": 6
+    },
+    "certificate": {
+      "bounds": {
+        "base": "63",
+        "gamma": [
+          "28/5",
+          "5",
+          "17/5",
+          "6",
+          "6",
+          "27/5"
+        ],
+        "margin": "4"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 58,
+            "gamma": [
+              6,
+              3,
+              0,
+              6,
+              8,
+              5
+            ],
+            "state": [
+              0,
+              1,
+              0,
+              8,
+              0,
+              6,
+              7,
+              0,
+              4,
+              5,
+              3,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              4,
+              0,
+              8,
+              0,
+              5,
+              2,
+              0,
+              6,
+              1,
+              7,
+              0,
+              3,
+              0
+            ],
+            "word": "XRXRRXRXRXRXRRXRXLLXLXLXLXLLXLLLLXRXRXRXRRXRXRXRXRXRXLXLXLXLXRXRXRR",
+            "cut": 4,
+            "affine": true,
+            "source": 60
+          },
+          "weight": "3/5"
+        },
+        {
+          "profile": {
+            "base": 65,
+            "gamma": [
+              2,
+              5,
+              8,
+              9,
+              0,
+              3
+            ],
+            "state": [
+              0,
+              5,
+              0,
+              8,
+              0,
+              3,
+              7,
+              0,
+              2,
+              1,
+              6,
+              0,
+              4,
+              0
+            ],
+            "target": [
+              0,
+              4,
+              0,
+              8,
+              0,
+              5,
+              2,
+              0,
+              6,
+              1,
+              7,
+              0,
+              3,
+              0
+            ],
+            "word": "RRXLXLLXLLXLXRRXRRXLXLLXLLLLXRXRXRXRXRXLXLLLLLXRXRXLXLLXRXRXRRXRXRXRX",
+            "cut": 11,
+            "affine": true,
+            "source": 4625
+          },
+          "weight": "1/5"
+        },
+        {
+          "profile": {
+            "base": 76,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6,
+              9
+            ],
+            "state": [
+              0,
+              3,
+              0,
+              8,
+              0,
+              5,
+              1,
+              0,
+              4,
+              7,
+              2,
+              0,
+              6,
+              0
+            ],
+            "target": [
+              0,
+              4,
+              0,
+              8,
+              0,
+              5,
+              2,
+              0,
+              6,
+              1,
+              7,
+              0,
+              3,
+              0
+            ],
+            "word": "RRXLXLXLXLLLXLXRXRXRXRRXRRRRXLXLXLXRRRRXLXLXLXLXLXLXLLLXRXRXLXLLLLXRXRXRXRXRXRRXRX",
+            "cut": 9,
+            "affine": true,
+            "source": 235
+          },
+          "weight": "1/5"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k6-mask123-order24414",
+      "mask": 123,
+      "order_index": 24414,
+      "blocks": 6
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "3/13",
+        "4/13",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "6/13",
+        "0"
+      ],
+      "base": "846/13",
+      "pivots": 14
+    },
+    "certificate": {
+      "bounds": {
+        "base": "846/13",
+        "gamma": [
+          "6",
+          "75/13",
+          "69/13",
+          "72/13",
+          "75/13",
+          "6"
+        ],
+        "margin": "25/13"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 44,
+            "gamma": [
+              10,
+              7,
+              1,
+              2,
+              5,
+              8
+            ],
+            "state": [
+              0,
+              7,
+              0,
+              8,
+              3,
+              0,
+              5,
+              0,
+              2,
+              0,
+              1,
+              0,
+              6,
+              4
+            ],
+            "target": [
+              0,
+              5,
+              0,
+              7,
+              8,
+              0,
+              3,
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              6
+            ],
+            "word": "XLLXLXRXRXRXRRXLXLLLXLLLLXLXLXLXLXLXLXRXRRXRRXLXLX",
+            "cut": 5,
+            "affine": true,
+            "source": 2345
+          },
+          "weight": "3/13"
+        },
+        {
+          "profile": {
+            "base": 48,
+            "gamma": [
+              12,
+              9,
+              3,
+              0,
+              3,
+              6
+            ],
+            "state": [
+              0,
+              5,
+              0,
+              8,
+              7,
+              0,
+              3,
+              0,
+              4,
+              0,
+              1,
+              0,
+              2,
+              6
+            ],
+            "target": [
+              0,
+              5,
+              0,
+              7,
+              8,
+              0,
+              3,
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              6
+            ],
+            "word": "LLXLXRXRRXLXLXLLLXRXRXRXRXRXRXLXRRRRXRRXLXLXLXLXRR",
+            "cut": 7,
+            "affine": true,
+            "source": 3461
+          },
+          "weight": "4/13"
+        },
+        {
+          "profile": {
+            "base": 87,
+            "gamma": [
+              0,
+              3,
+              9,
+              11,
+              8,
+              5
+            ],
+            "state": [
+              0,
+              7,
+              0,
+              8,
+              6,
+              0,
+              5,
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              3
+            ],
+            "target": [
+              0,
+              5,
+              0,
+              7,
+              8,
+              0,
+              3,
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              6
+            ],
+            "word": "RRRXRRXRRXRXLLXLLXLLXRXRRXRRXRRRXRXLXLXLXLXLXLLXRXRRXRRXRXRRRXLXLXLXLXLXLXLXRRRRXLXLXLXRXRXRR",
+            "cut": 0,
+            "affine": true,
+            "source": 3469
+          },
+          "weight": "6/13"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k6-mask442-order5461",
+      "mask": 442,
+      "order_index": 5461,
+      "blocks": 6
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "137/2",
+      "pivots": 13
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k6-mask303-order39177",
+      "mask": 303,
+      "order_index": 39177,
+      "blocks": 6
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "8/35",
+        "1/5",
+        "27/70",
+        "2/35",
+        "0",
+        "0",
+        "9/70",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "4713/70",
+      "pivots": 8
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k7-mask375-order36700",
+      "mask": 375,
+      "order_index": 36700,
+      "blocks": 7
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/12",
+        "1/36",
+        "17/36",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "5/12",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "2647/36",
+      "pivots": 10
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k7-mask431-order30939",
+      "mask": 431,
+      "order_index": 30939,
+      "blocks": 7
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "43/110",
+        "0",
+        "17/110",
+        "49/330",
+        "6/55",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "13/66"
+      ],
+      "base": "8027/110",
+      "pivots": 6
+    },
+    "certificate": {
+      "bounds": {
+        "base": "8027/110",
+        "gamma": [
+          "6",
+          "347/66",
+          "63/11",
+          "6",
+          "6",
+          "60/11",
+          "6"
+        ],
+        "margin": "3/110"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 63,
+            "gamma": [
+              3,
+              0,
+              3,
+              6,
+              11,
+              5,
+              2
+            ],
+            "state": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              8,
+              0,
+              6,
+              5,
+              0,
+              7,
+              4,
+              0,
+              3,
+              0
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              1,
+              0,
+              8,
+              0,
+              6,
+              2,
+              0,
+              4,
+              5,
+              0,
+              3,
+              0
+            ],
+            "word": "XRXRXRXRXRXRXRXRXLXLLXLLLXRXRXRXRXRXRRRXLXLXLXLXLXLLXRXRXRXRXRRRRRXLXL",
+            "cut": 2,
+            "affine": true,
+            "source": 102
+          },
+          "weight": "43/110"
+        },
+        {
+          "profile": {
+            "base": 74,
+            "gamma": [
+              2,
+              5,
+              8,
+              11,
+              6,
+              0,
+              3
+            ],
+            "state": [
+              0,
+              7,
+              0,
+              8,
+              0,
+              3,
+              0,
+              6,
+              2,
+              0,
+              1,
+              5,
+              0,
+              4,
+              0
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              1,
+              0,
+              8,
+              0,
+              6,
+              2,
+              0,
+              4,
+              5,
+              0,
+              3,
+              0
+            ],
+            "word": "RRXLXLLXLLXLXLXRXRRXRRXLXLLXLXLLLXRXRXRXRRXLXLXLLLXLLXLXRRXRXRXLXLLXRXRXRRXRXRX",
+            "cut": 12,
+            "affine": true,
+            "source": 4368
+          },
+          "weight": "17/110"
+        },
+        {
+          "profile": {
+            "base": 76,
+            "gamma": [
+              11,
+              9,
+              6,
+              3,
+              3,
+              9,
+              12
+            ],
+            "state": [
+              0,
+              3,
+              0,
+              7,
+              0,
+              1,
+              0,
+              6,
+              2,
+              0,
+              5,
+              8,
+              0,
+              4,
+              0
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              1,
+              0,
+              8,
+              0,
+              6,
+              2,
+              0,
+              4,
+              5,
+              0,
+              3,
+              0
+            ],
+            "word": "RRXLXRRRXLXLXLXLXLLXLLXLLXRXRRXRXRXLXLLXRXRXRRRXRRRRXLXLXLXLXLXRXRXRRRRRXLXLXLXLX",
+            "cut": 8,
+            "affine": true,
+            "source": 301
+          },
+          "weight": "49/330"
+        },
+        {
+          "profile": {
+            "base": 76,
+            "gamma": [
+              12,
+              9,
+              6,
+              3,
+              3,
+              9,
+              11
+            ],
+            "state": [
+              0,
+              7,
+              0,
+              2,
+              0,
+              8,
+              0,
+              1,
+              6,
+              0,
+              4,
+              3,
+              0,
+              5,
+              0
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              1,
+              0,
+              8,
+              0,
+              6,
+              2,
+              0,
+              4,
+              5,
+              0,
+              3,
+              0
+            ],
+            "word": "LLXLLXRXRRRXLXLXLLLLXRXRXRXRXRXRXRXRXRRXRRRXLLXLXLXRXRRXLXLXLXLXLLXLXLXRRXRXRXRXRXR",
+            "cut": 8,
+            "affine": true,
+            "source": 433
+          },
+          "weight": "6/55"
+        },
+        {
+          "profile": {
+            "base": 88,
+            "gamma": [
+              8,
+              11,
+              9,
+              6,
+              0,
+              6,
+              9
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              0,
+              6,
+              0,
+              2,
+              1,
+              0,
+              7,
+              4,
+              0,
+              5,
+              0
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              1,
+              0,
+              8,
+              0,
+              6,
+              2,
+              0,
+              4,
+              5,
+              0,
+              3,
+              0
+            ],
+            "word": "RRXLXLLXLXRRXLXLLLXLLXLXRXRXRXRXRXRRRRRRXLXLXLXLXLXRXRRRRRXLXLXLXLXLXLXLXLLXRXLLLXRXRXRXRXRXRXR",
+            "cut": 9,
+            "affine": true,
+            "source": 947
+          },
+          "weight": "13/66"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k7-mask223-order28716",
+      "mask": 223,
+      "order_index": 28716,
+      "blocks": 7
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "3/22",
+        "0",
+        "0",
+        "9/22",
+        "0",
+        "17/44",
+        "0",
+        "0",
+        "3/44"
+      ],
+      "base": "1619/22",
+      "pivots": 8
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k7-mask351-order16615",
+      "mask": 351,
+      "order_index": 16615,
+      "blocks": 7
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/22",
+        "0",
+        "3/22",
+        "4/11",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "5/11"
+      ],
+      "base": "808/11",
+      "pivots": 9
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k7-mask253-order19705",
+      "mask": 253,
+      "order_index": 19705,
+      "blocks": 7
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "4/11",
+        "0",
+        "2/11",
+        "1/11",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "4/11"
+      ],
+      "base": "804/11",
+      "pivots": 10
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k7-mask475-order29239",
+      "mask": 475,
+      "order_index": 29239,
+      "blocks": 7
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "9/176",
+        "5/44",
+        "39/88",
+        "3/8",
+        "0",
+        "3/176",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "12953/176",
+      "pivots": 7
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k7-mask443-order33553",
+      "mask": 443,
+      "order_index": 33553,
+      "blocks": 7
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "6/89",
+        "12/89",
+        "32/89",
+        "0",
+        "39/89",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "6516/89",
+      "pivots": 5
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k7-mask239-order32367",
+      "mask": 239,
+      "order_index": 32367,
+      "blocks": 7
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "3/46",
+        "9/23",
+        "5/46",
+        "0",
+        "10/23",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "3371/46",
+      "pivots": 8
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k7-mask463-order18957",
+      "mask": 463,
+      "order_index": 18957,
+      "blocks": 7
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "4/25",
+        "0",
+        "13/75",
+        "0",
+        "17/75",
+        "11/25",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "5531/75",
+      "pivots": 6
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k7-mask491-order25070",
+      "mask": 491,
+      "order_index": 25070,
+      "blocks": 7
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/28",
+        "0",
+        "0",
+        "0",
+        "15/56",
+        "57/112",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3/16"
+      ],
+      "base": "593/8",
+      "pivots": 10
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k8-mask503-order35203",
+      "mask": 503,
+      "order_index": 35203,
+      "blocks": 8
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "3/28",
+        "0",
+        "3/7",
+        "0",
+        "0",
+        "0",
+        "13/28",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "2171/28",
+      "pivots": 11
+    },
+    "certificate": {
+      "bounds": {
+        "base": "2171/28",
+        "gamma": [
+          "167/28",
+          "23/4",
+          "6",
+          "39/7",
+          "81/14",
+          "39/7",
+          "6",
+          "165/28"
+        ],
+        "margin": "41/28"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 68,
+            "gamma": [
+              10,
+              7,
+              4,
+              2,
+              5,
+              8,
+              11,
+              9
+            ],
+            "state": [
+              0,
+              7,
+              0,
+              8,
+              0,
+              3,
+              5,
+              0,
+              2,
+              0,
+              1,
+              0,
+              6,
+              0,
+              4,
+              0
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              8,
+              0,
+              6,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              4,
+              0,
+              3,
+              0
+            ],
+            "word": "XLLXLLXRXRXRXRXRXRRRXLXLXLLXLLXRXLLLLLXLXLXLXLXLXLXLXRXRRRXRRXLXLXLXRXL",
+            "cut": 6,
+            "affine": true,
+            "source": 2345
+          },
+          "weight": "3/28"
+        },
+        {
+          "profile": {
+            "base": 74,
+            "gamma": [
+              6,
+              3,
+              0,
+              6,
+              9,
+              11,
+              8,
+              5
+            ],
+            "state": [
+              0,
+              2,
+              0,
+              7,
+              0,
+              6,
+              5,
+              0,
+              4,
+              0,
+              3,
+              0,
+              1,
+              0,
+              8,
+              0
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              8,
+              0,
+              6,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              4,
+              0,
+              3,
+              0
+            ],
+            "word": "XLLXRXRRXRXRXLXRRRXRRRXRRXRXLLXLXLXLXRXRXRRXLXLXLXLXLLXLXLLLXRXRXRXRRXRXRXRXLXRR",
+            "cut": 4,
+            "affine": true,
+            "source": 234
+          },
+          "weight": "3/7"
+        },
+        {
+          "profile": {
+            "base": 83,
+            "gamma": [
+              5,
+              8,
+              12,
+              6,
+              3,
+              0,
+              3,
+              6
+            ],
+            "state": [
+              0,
+              7,
+              0,
+              8,
+              0,
+              6,
+              5,
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              0,
+              3,
+              0
+            ],
+            "target": [
+              0,
+              7,
+              0,
+              8,
+              0,
+              6,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              4,
+              0,
+              3,
+              0
+            ],
+            "word": "RRXLXLLXRXRRRRXLXLXLXLLLLLXLXRXRXLXLLLXLLXRXRXRXRXRXRXRXRXRXLXLLXLXLLLXRXRXRXRXRXRXR",
+            "cut": 11,
+            "affine": true,
+            "source": 3467
+          },
+          "weight": "13/28"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k8-mask255-order8727",
+      "mask": 255,
+      "order_index": 8727,
+      "blocks": 8
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "3/22",
+        "0",
+        "0",
+        "3/11",
+        "0",
+        "1/11",
+        "0",
+        "0",
+        "0",
+        "1/8",
+        "0",
+        "0",
+        "1/22",
+        "7/22",
+        "0",
+        "1/88"
+      ],
+      "base": "7043/88",
+      "pivots": 19
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k8-mask383-order17191",
+      "mask": 383,
+      "order_index": 17191,
+      "blocks": 8
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "17/41",
+        "8/41",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/41",
+        "0",
+        "0",
+        "15/82",
+        "15/82"
+      ],
+      "base": "3211/41",
+      "pivots": 14
+    },
+    "certificate": {
+      "bounds": {
+        "base": "3211/41",
+        "gamma": [
+          "6",
+          "6",
+          "459/82",
+          "411/82",
+          "6",
+          "222/41",
+          "6",
+          "236/41"
+        ],
+        "margin": "28/41"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 71,
+            "gamma": [
+              9,
+              6,
+              3,
+              0,
+              3,
+              6,
+              9,
+              8
+            ],
+            "state": [
+              0,
+              5,
+              0,
+              4,
+              0,
+              1,
+              0,
+              6,
+              0,
+              3,
+              0,
+              2,
+              0,
+              8,
+              7,
+              0
+            ],
+            "target": [
+              0,
+              4,
+              0,
+              3,
+              0,
+              8,
+              0,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              7,
+              6,
+              0
+            ],
+            "word": "XLLXRXRXRXRXRXLLLXRXRXLXLLLLLXRXRXRXRXRXRXRXRRXRRXRRXLXLXLXLXLXLXLXRRRXRRXLXLXR",
+            "cut": 6,
+            "affine": true,
+            "source": 1091
+          },
+          "weight": "17/41"
+        },
+        {
+          "profile": {
+            "base": 77,
+            "gamma": [
+              0,
+              3,
+              6,
+              9,
+              12,
+              8,
+              5,
+              1
+            ],
+            "state": [
+              0,
+              4,
+              0,
+              3,
+              0,
+              8,
+              0,
+              2,
+              0,
+              7,
+              0,
+              1,
+              0,
+              6,
+              5,
+              0
+            ],
+            "target": [
+              0,
+              4,
+              0,
+              3,
+              0,
+              8,
+              0,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              7,
+              6,
+              0
+            ],
+            "word": "RRRXRXRRXRXLLXRXRRRXRRXLXLXLXLXLXLLLXRXRXRXRRRRRRRXRRXLXLXLXLXLXLXRXRRRXLXLXLXR",
+            "cut": 0,
+            "affine": true,
+            "source": 3917
+          },
+          "weight": "8/41"
+        },
+        {
+          "profile": {
+            "base": 83,
+            "gamma": [
+              3,
+              0,
+              3,
+              6,
+              9,
+              11,
+              8,
+              2
+            ],
+            "state": [
+              0,
+              3,
+              0,
+              8,
+              0,
+              7,
+              0,
+              4,
+              0,
+              2,
+              0,
+              5,
+              0,
+              1,
+              6,
+              0
+            ],
+            "target": [
+              0,
+              4,
+              0,
+              3,
+              0,
+              8,
+              0,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              7,
+              6,
+              0
+            ],
+            "word": "XRXRRRXRXRXRRRXRRXLXLXLXLXLLXLLXLXRRXRRXLXLLXRRRRRRXLXRRRRRXLXLXLXLXLXLXLXLXLXRXRXRXRXRRX",
+            "cut": 2,
+            "affine": true,
+            "source": 89
+          },
+          "weight": "1/41"
+        },
+        {
+          "profile": {
+            "base": 86,
+            "gamma": [
+              8,
+              11,
+              9,
+              6,
+              3,
+              0,
+              3,
+              9
+            ],
+            "state": [
+              0,
+              6,
+              0,
+              3,
+              0,
+              5,
+              0,
+              4,
+              0,
+              2,
+              0,
+              1,
+              0,
+              8,
+              7,
+              0
+            ],
+            "target": [
+              0,
+              4,
+              0,
+              3,
+              0,
+              8,
+              0,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              7,
+              6,
+              0
+            ],
+            "word": "RRXLXLLXLXLLXRXRRRXLXLXLXLLLXRXRXRXRXRRRRRXLXLXLXLXLXLXLXLLLLXRXRXRXRXRXRXRXRXRRRRRXLXLXLXL",
+            "cut": 10,
+            "affine": true,
+            "source": 313
+          },
+          "weight": "15/82"
+        },
+        {
+          "profile": {
+            "base": 88,
+            "gamma": [
+              4,
+              5,
+              8,
+              11,
+              9,
+              6,
+              3,
+              3
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              5,
+              0,
+              4,
+              0,
+              3,
+              0,
+              2,
+              0,
+              1,
+              0,
+              7,
+              6,
+              0
+            ],
+            "target": [
+              0,
+              4,
+              0,
+              3,
+              0,
+              8,
+              0,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              7,
+              6,
+              0
+            ],
+            "word": "LXLXLXLXLXLXLLXLLXLLXRXRRXRRXRRRXRRXLXLXLXLXRRXLXRXRRRRRRXLXLXLXLXLXLXLXLXLLXLLXRXRRXRXRXRXRX",
+            "cut": 14,
+            "affine": true,
+            "source": 43
+          },
+          "weight": "15/82"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k8-mask509-order11288",
+      "mask": 509,
+      "order_index": 11288,
+      "blocks": 8
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "13/51",
+        "0",
+        "0",
+        "0",
+        "22/51",
+        "25/153",
+        "23/153",
+        "0",
+        "0"
+      ],
+      "base": "12026/153",
+      "pivots": 13
+    },
+    "certificate": {
+      "bounds": {
+        "base": "12026/153",
+        "gamma": [
+          "916/153",
+          "6",
+          "293/51",
+          "6",
+          "298/51",
+          "277/51",
+          "6",
+          "271/51"
+        ],
+        "margin": "61/153"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 68,
+            "gamma": [
+              1,
+              5,
+              8,
+              11,
+              9,
+              6,
+              3,
+              0
+            ],
+            "state": [
+              0,
+              7,
+              2,
+              0,
+              6,
+              0,
+              3,
+              0,
+              1,
+              0,
+              8,
+              0,
+              5,
+              0,
+              4,
+              0
+            ],
+            "target": [
+              0,
+              3,
+              2,
+              0,
+              7,
+              0,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              4,
+              0,
+              8,
+              0
+            ],
+            "word": "LLXLLXLXLXLXLLLLXLLXRXRRXRXRXRRRXRRXRRXLXLLXRXLXLXLXLXLXLLXLXRXRXRXRXRRXRX",
+            "cut": 0,
+            "affine": true,
+            "source": 1009
+          },
+          "weight": "13/51"
+        },
+        {
+          "profile": {
+            "base": 81,
+            "gamma": [
+              10,
+              4,
+              1,
+              2,
+              5,
+              8,
+              11,
+              9
+            ],
+            "state": [
+              0,
+              1,
+              2,
+              0,
+              6,
+              0,
+              4,
+              0,
+              7,
+              0,
+              5,
+              0,
+              3,
+              0,
+              8,
+              0
+            ],
+            "target": [
+              0,
+              3,
+              2,
+              0,
+              7,
+              0,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              4,
+              0,
+              8,
+              0
+            ],
+            "word": "XRXRXRRXRRXLXLXLXLLLLXRXRXRXRRXRRRRXLXLXLXLXLXLXLLLLLXRXRXRXRXLLLLLLLXLXLXLXLXLXLXRXR",
+            "cut": 5,
+            "affine": true,
+            "source": 3599
+          },
+          "weight": "22/51"
+        },
+        {
+          "profile": {
+            "base": 82,
+            "gamma": [
+              5,
+              11,
+              9,
+              6,
+              3,
+              0,
+              3,
+              6
+            ],
+            "state": [
+              0,
+              3,
+              7,
+              0,
+              2,
+              0,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              4,
+              0,
+              8,
+              0
+            ],
+            "target": [
+              0,
+              3,
+              2,
+              0,
+              7,
+              0,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              4,
+              0,
+              8,
+              0
+            ],
+            "word": "RRXLXLXLXLXLXLLXLLXLLXRXRRXRRXLXLLXRXRRRRRXRRRRRXLXLXLLXLLXRXRRXLXLXLLXLXLXRRRXRXRX",
+            "cut": 11,
+            "affine": true,
+            "source": 3253
+          },
+          "weight": "25/153"
+        },
+        {
+          "profile": {
+            "base": 86,
+            "gamma": [
+              4,
+              8,
+              12,
+              9,
+              6,
+              3,
+              0,
+              3
+            ],
+            "state": [
+              0,
+              5,
+              4,
+              0,
+              7,
+              0,
+              2,
+              0,
+              6,
+              0,
+              3,
+              0,
+              1,
+              0,
+              8,
+              0
+            ],
+            "target": [
+              0,
+              3,
+              2,
+              0,
+              7,
+              0,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              4,
+              0,
+              8,
+              0
+            ],
+            "word": "LLXLLLXLLXLLXLLXRXRRXRRXRRXRXRRXRRRXLXLXLLXLXLLXLLXRXRXRXRXRRXLXLXLXLXLXLLLXRXRXRXRXRXRXRXRX",
+            "cut": 13,
+            "affine": true,
+            "source": 1157
+          },
+          "weight": "23/153"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k8-mask447-order22175",
+      "mask": 447,
+      "order_index": 22175,
+      "blocks": 8
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "3/31",
+        "0",
+        "0",
+        "15/31",
+        "0",
+        "0",
+        "13/31",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "2458/31",
+      "pivots": 5
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k8-mask447-order21172",
+      "mask": 447,
+      "order_index": 21172,
+      "blocks": 8
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "1/3",
+        "1/8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "5/24",
+        "0",
+        "1/6",
+        "0",
+        "1/6"
+      ],
+      "base": "235/3",
+      "pivots": 14
+    },
+    "certificate": {
+      "bounds": {
+        "base": "235/3",
+        "gamma": [
+          "6",
+          "11/2",
+          "6",
+          "71/12",
+          "6",
+          "6",
+          "45/8",
+          "47/8"
+        ],
+        "margin": "2/3"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 69,
+            "gamma": [
+              1,
+              2,
+              5,
+              8,
+              12,
+              9,
+              3,
+              0
+            ],
+            "state": [
+              0,
+              6,
+              0,
+              5,
+              0,
+              4,
+              0,
+              3,
+              0,
+              1,
+              0,
+              8,
+              2,
+              0,
+              7,
+              0
+            ],
+            "target": [
+              0,
+              5,
+              0,
+              2,
+              0,
+              4,
+              0,
+              6,
+              0,
+              1,
+              0,
+              8,
+              3,
+              0,
+              7,
+              0
+            ],
+            "word": "LXLLXLXLXLXLLXRXRRRXRRXLXLXLXLXLXLLLXLLLXRRXRXRXLXLLXRXRXRRXRXRRXRXLXLXRXR",
+            "cut": 0,
+            "affine": true,
+            "source": 717
+          },
+          "weight": "1/3"
+        },
+        {
+          "profile": {
+            "base": 69,
+            "gamma": [
+              4,
+              1,
+              2,
+              5,
+              8,
+              11,
+              6,
+              3
+            ],
+            "state": [
+              0,
+              3,
+              0,
+              5,
+              0,
+              2,
+              0,
+              8,
+              0,
+              1,
+              0,
+              7,
+              6,
+              0,
+              4,
+              0
+            ],
+            "target": [
+              0,
+              5,
+              0,
+              2,
+              0,
+              4,
+              0,
+              6,
+              0,
+              1,
+              0,
+              8,
+              3,
+              0,
+              7,
+              0
+            ],
+            "word": "LLLXLLXLLXLXLXLLXLLXRXRXRXRRXRRXRRXLXLLXRXLXLXLXLLXLXLLLLXRXRXRXRXRXRXRXRRX",
+            "cut": 2,
+            "affine": true,
+            "source": 1138
+          },
+          "weight": "1/8"
+        },
+        {
+          "profile": {
+            "base": 85,
+            "gamma": [
+              12,
+              9,
+              6,
+              3,
+              0,
+              3,
+              9,
+              12
+            ],
+            "state": [
+              0,
+              5,
+              0,
+              1,
+              0,
+              2,
+              0,
+              6,
+              0,
+              3,
+              0,
+              8,
+              7,
+              0,
+              4,
+              0
+            ],
+            "target": [
+              0,
+              5,
+              0,
+              2,
+              0,
+              4,
+              0,
+              6,
+              0,
+              1,
+              0,
+              8,
+              3,
+              0,
+              7,
+              0
+            ],
+            "word": "XLLXLLXLLXRXRRXRRXLXLLXRXRRRXRRXRRXRXLXLXLXLXLXLXLXRRXRRXRRXLXLXLXLXLXRRRXRRRRRXLXLXLXLXR",
+            "cut": 8,
+            "affine": true,
+            "source": 3847
+          },
+          "weight": "5/24"
+        },
+        {
+          "profile": {
+            "base": 86,
+            "gamma": [
+              5,
+              8,
+              11,
+              9,
+              6,
+              3,
+              3,
+              6
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              0,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              6,
+              7,
+              0,
+              4,
+              0
+            ],
+            "target": [
+              0,
+              5,
+              0,
+              2,
+              0,
+              4,
+              0,
+              6,
+              0,
+              1,
+              0,
+              8,
+              3,
+              0,
+              7,
+              0
+            ],
+            "word": "RRXLXLLXLXLXRXRRXLXLXLLXLLXLLXLLXRXRRXRRXLXLLXRXRRXRXRXRXRRRRRRXLXLXLXLXLXLXLXLXLXLXRRRXRXR",
+            "cut": 12,
+            "affine": true,
+            "source": 4251
+          },
+          "weight": "1/6"
+        },
+        {
+          "profile": {
+            "base": 88,
+            "gamma": [
+              11,
+              9,
+              6,
+              3,
+              0,
+              3,
+              9,
+              12
+            ],
+            "state": [
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              0,
+              6,
+              0,
+              5,
+              0,
+              8,
+              7,
+              0,
+              3,
+              0
+            ],
+            "target": [
+              0,
+              5,
+              0,
+              2,
+              0,
+              4,
+              0,
+              6,
+              0,
+              1,
+              0,
+              8,
+              3,
+              0,
+              7,
+              0
+            ],
+            "word": "RRXRRXLXLXLXLXLLXRXRXRRXRRRXLXLXLXLXLXLLLLXLLXRXRRXRXRXLXLLXRXRXRRRRXRRRRRXLXLXLXLXLXLXLXRRXR",
+            "cut": 8,
+            "affine": true,
+            "source": 3478
+          },
+          "weight": "1/6"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k8-mask510-order25148",
+      "mask": 510,
+      "order_index": 25148,
+      "blocks": 8
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "1/12",
+        "1/8",
+        "0",
+        "0",
+        "0",
+        "3/8",
+        "5/12",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "1877/24",
+      "pivots": 7
+    },
+    "certificate": {
+      "bounds": {
+        "base": "1877/24",
+        "gamma": [
+          "6",
+          "45/8",
+          "11/2",
+          "11/2",
+          "11/2",
+          "6",
+          "6",
+          "6"
+        ],
+        "margin": "19/24"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 67,
+            "gamma": [
+              6,
+              3,
+              0,
+              3,
+              6,
+              9,
+              11,
+              8
+            ],
+            "state": [
+              1,
+              0,
+              8,
+              0,
+              7,
+              0,
+              6,
+              0,
+              4,
+              0,
+              3,
+              0,
+              2,
+              0,
+              5,
+              0
+            ],
+            "target": [
+              5,
+              0,
+              8,
+              0,
+              7,
+              0,
+              3,
+              0,
+              6,
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              0
+            ],
+            "word": "LXLLXRXRRRXLXLXRRRRXLXLXLXRXRRXRXRRXRRXRRXLXLXLXLXLXLXLXRRRXRRXLXLXLXRXR",
+            "cut": 5,
+            "affine": true,
+            "source": 97
+          },
+          "weight": "1/12"
+        },
+        {
+          "profile": {
+            "base": 68,
+            "gamma": [
+              10,
+              10,
+              7,
+              4,
+              1,
+              2,
+              5,
+              8
+            ],
+            "state": [
+              4,
+              0,
+              8,
+              0,
+              7,
+              0,
+              3,
+              0,
+              5,
+              0,
+              2,
+              0,
+              1,
+              0,
+              6,
+              0
+            ],
+            "target": [
+              5,
+              0,
+              8,
+              0,
+              7,
+              0,
+              3,
+              0,
+              6,
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              0
+            ],
+            "word": "XRRXLXLXLLLXLLXRXRXRXRXRXLLLLLLLXRXRXRXRXRXLLXLLLLLLXLXLXLXLXRRRXLXLXL",
+            "cut": 9,
+            "affine": true,
+            "source": 3683
+          },
+          "weight": "1/8"
+        },
+        {
+          "profile": {
+            "base": 81,
+            "gamma": [
+              8,
+              11,
+              9,
+              6,
+              3,
+              0,
+              3,
+              6
+            ],
+            "state": [
+              8,
+              0,
+              6,
+              0,
+              5,
+              0,
+              4,
+              0,
+              3,
+              0,
+              2,
+              0,
+              1,
+              0,
+              7,
+              0
+            ],
+            "target": [
+              5,
+              0,
+              8,
+              0,
+              7,
+              0,
+              3,
+              0,
+              6,
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              0
+            ],
+            "word": "XRRXRRXLXLLXLLXLXLXLLXLLXLLXRXRXRXRXRXRXRRXLXLXLLXLLXRXRXRXRXRRRXRRXLXLLXLXLXLXLXRXRXRRR",
+            "cut": 11,
+            "affine": true,
+            "source": 88
+          },
+          "weight": "3/8"
+        },
+        {
+          "profile": {
+            "base": 81,
+            "gamma": [
+              3,
+              0,
+              3,
+              6,
+              9,
+              12,
+              8,
+              5
+            ],
+            "state": [
+              5,
+              0,
+              2,
+              0,
+              8,
+              0,
+              6,
+              0,
+              3,
+              0,
+              4,
+              0,
+              1,
+              0,
+              7,
+              0
+            ],
+            "target": [
+              5,
+              0,
+              8,
+              0,
+              7,
+              0,
+              3,
+              0,
+              6,
+              0,
+              2,
+              0,
+              1,
+              0,
+              4,
+              0
+            ],
+            "word": "LXRRXRXRXRRRXRRXRRXLXLXLXLXLXLXLLXRRRRXRRXRRRRXLXLXLXLXLXLXLXLXLXLLLXRXRXRXRXRXRXRRXLXR",
+            "cut": 3,
+            "affine": true,
+            "source": 1061
+          },
+          "weight": "5/12"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k8-mask255-order21547",
+      "mask": 255,
+      "order_index": 21547,
+      "blocks": 8
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "1/2",
+        "0",
+        "1/12",
+        "0",
+        "0",
+        "0",
+        "5/12",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "317/4",
+      "pivots": 10
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k8-mask447-order14168",
+      "mask": 447,
+      "order_index": 14168,
+      "blocks": 8
+    },
+    "result": {
+      "status": "CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "12/67",
+        "21/67",
+        "6/67",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "28/67",
+        "0"
+      ],
+      "base": "5181/67",
+      "pivots": 17
+    },
+    "certificate": {
+      "bounds": {
+        "base": "5181/67",
+        "gamma": [
+          "380/67",
+          "371/67",
+          "6",
+          "363/67",
+          "6",
+          "399/67",
+          "6",
+          "369/67"
+        ],
+        "margin": "112/67"
+      },
+      "support": [
+        {
+          "profile": {
+            "base": 67,
+            "gamma": [
+              9,
+              6,
+              3,
+              0,
+              3,
+              6,
+              11,
+              8
+            ],
+            "state": [
+              0,
+              6,
+              0,
+              2,
+              0,
+              5,
+              0,
+              1,
+              0,
+              4,
+              0,
+              8,
+              3,
+              0,
+              7,
+              0
+            ],
+            "target": [
+              0,
+              3,
+              0,
+              7,
+              0,
+              6,
+              0,
+              1,
+              0,
+              4,
+              0,
+              5,
+              2,
+              0,
+              8,
+              0
+            ],
+            "word": "XLLXLLXRXRRXRXRXRXRXLXLLXRXRXRRRXLXLXLXLLLLXRXRXRXRXRXRRRRXLXLXRXRRRXLXL",
+            "cut": 6,
+            "affine": true,
+            "source": 3912
+          },
+          "weight": "12/67"
+        },
+        {
+          "profile": {
+            "base": 71,
+            "gamma": [
+              6,
+              3,
+              0,
+              3,
+              6,
+              9,
+              8,
+              5
+            ],
+            "state": [
+              0,
+              2,
+              0,
+              7,
+              0,
+              6,
+              0,
+              5,
+              0,
+              4,
+              0,
+              3,
+              1,
+              0,
+              8,
+              0
+            ],
+            "target": [
+              0,
+              3,
+              0,
+              7,
+              0,
+              6,
+              0,
+              1,
+              0,
+              4,
+              0,
+              5,
+              2,
+              0,
+              8,
+              0
+            ],
+            "word": "XLLXRXRRXRXRXLXRRRRRXRRXRRXLXLLXLXLXLXRXRXRRXLXLXLXLXLLLLLXRXRXRRXRXRXRXLXRR",
+            "cut": 4,
+            "affine": true,
+            "source": 234
+          },
+          "weight": "21/67"
+        },
+        {
+          "profile": {
+            "base": 75,
+            "gamma": [
+              1,
+              2,
+              5,
+              8,
+              12,
+              9,
+              3,
+              0
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              0,
+              6,
+              0,
+              1,
+              0,
+              7,
+              0,
+              4,
+              5,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              3,
+              0,
+              7,
+              0,
+              6,
+              0,
+              1,
+              0,
+              4,
+              0,
+              5,
+              2,
+              0,
+              8,
+              0
+            ],
+            "word": "LXLLXLLXLXLLLLXRXRXRXRRRXRRXLXLLXRXLXLXLLLXLLXRXRXRXRXLXLXLLLLXRXRXRXRXRXRXRXRXR",
+            "cut": 0,
+            "affine": true,
+            "source": 736
+          },
+          "weight": "6/67"
+        },
+        {
+          "profile": {
+            "base": 87,
+            "gamma": [
+              5,
+              8,
+              12,
+              9,
+              6,
+              3,
+              3,
+              6
+            ],
+            "state": [
+              0,
+              4,
+              0,
+              7,
+              0,
+              6,
+              0,
+              1,
+              0,
+              5,
+              0,
+              3,
+              2,
+              0,
+              8,
+              0
+            ],
+            "target": [
+              0,
+              3,
+              0,
+              7,
+              0,
+              6,
+              0,
+              1,
+              0,
+              4,
+              0,
+              5,
+              2,
+              0,
+              8,
+              0
+            ],
+            "word": "RRXLXLLXLLLXLLXRXRXRXRXRRXLXLXLLXLLLLXRXRXRXRXRXLXLXLLLLLXRXRXRXRXRXRXRXRXRRRRRRXLXLXLXLX",
+            "cut": 12,
+            "affine": true,
+            "source": 3733
+          },
+          "weight": "28/67"
+        }
+      ],
+      "scope": "all positive lengths via reviewed manuscript lemmas"
+    }
+  },
+  {
+    "case": {
+      "id": "k8-mask383-order35939",
+      "mask": 383,
+      "order_index": 35939,
+      "blocks": 8
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "14/27",
+        "0",
+        "0",
+        "0",
+        "0",
+        "4/27",
+        "0",
+        "1/3",
+        "0",
+        "0",
+        "0"
+      ],
+      "base": "715/9",
+      "pivots": 8
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k8-mask503-order575",
+      "mask": 503,
+      "order_index": 575,
+      "blocks": 8
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "1/4",
+        "1/10",
+        "0",
+        "1/8",
+        "0",
+        "3/20",
+        "0",
+        "0",
+        "0",
+        "3/8"
+      ],
+      "base": "1593/20",
+      "pivots": 8
+    },
+    "certificate": null
+  },
+  {
+    "case": {
+      "id": "k8-mask495-order36149",
+      "mask": 495,
+      "order_index": 36149,
+      "blocks": 8
+    },
+    "result": {
+      "status": "NO_CERTIFICATE",
+      "reason": "exact feasible weights; optimum not independently certified",
+      "weights": [
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "4/15",
+        "1/15",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/3",
+        "0",
+        "0",
+        "2/15"
+      ],
+      "base": "1186/15",
+      "pivots": 16
+    },
+    "certificate": null
+  }
+]

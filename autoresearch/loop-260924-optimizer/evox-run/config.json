@@ -1,0 +1,67 @@
+{
+  "engine": "evox",
+  "kinds": [
+    "mixture_policy"
+  ],
+  "seeds": [
+    "autoresearch/loop-260924-optimizer/seed.json"
+  ],
+  "split": "train",
+  "max_proposals": 12,
+  "batch": 1,
+  "seed": 409,
+  "eval_workers": 1,
+  "max_wall_seconds": 1800,
+  "islands": 3,
+  "island_size": 6,
+  "migration_every": 12,
+  "stagnation": 12,
+  "ucb_c": 1.4142135623730951,
+  "ucb_decay": 0.9,
+  "merge_prob": 1.0,
+  "max_merges": 5,
+  "gepa_n": 1,
+  "final_heldout_top": 0,
+  "insights_file": null,
+  "provider": {
+    "type": "openai_compatible",
+    "base_url": "https://api.x.ai/v1",
+    "model": "grok-4.7",
+    "api_key_env": "XAI_API_KEY",
+    "input_usd_per_mtok": 2.2,
+    "output_usd_per_mtok": 6.6,
+    "max_spend_usd": 2,
+    "max_requests": 18,
+    "max_output_tokens": 2200,
+    "max_reasoning_tokens": 16000,
+    "reasoning_effort": "low",
+    "timeout_sec": 360,
+    "idle_timeout_sec": 120,
+    "repairs": 0
+  },
+  "reflector": null,
+  "refine_mode": "exploit",
+  "explore_max": 0.7,
+  "feedback_words": false,
+  "feedback_potential": true,
+  "async": false,
+  "history": 3,
+  "inspirations": 1,
+  "focus": true,
+  "tactics": false,
+  "tactic_trials": 3,
+  "window": 3,
+  "strategy": {
+    "parent": "best",
+    "modes": {
+      "exploit": 1.0
+    },
+    "inspirations": 1,
+    "inspiration_pool": "top",
+    "history": 4,
+    "focus": true,
+    "tactic": null
+  },
+  "select": "score",
+  "eval_cache": null
+}

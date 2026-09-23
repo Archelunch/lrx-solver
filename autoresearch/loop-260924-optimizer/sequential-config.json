@@ -1,0 +1,54 @@
+{
+  "campaign": {
+    "engine": "sequential",
+    "kinds": [
+      "mixture_policy"
+    ],
+    "seeds": [
+      "autoresearch/loop-260924-optimizer/seed.json"
+    ],
+    "select": "score",
+    "max_proposals": 12,
+    "batch": 1,
+    "seed": 409,
+    "eval_workers": 1,
+    "max_wall_seconds": 1800,
+    "final_heldout_top": 0,
+    "history": 3,
+    "inspirations": 1,
+    "focus": true,
+    "window": 3,
+    "provider": {
+      "type": "openai_compatible",
+      "base_url": "https://api.x.ai/v1",
+      "model": "grok-4.7",
+      "api_key_env": "XAI_API_KEY",
+      "input_usd_per_mtok": 2.2,
+      "output_usd_per_mtok": 6.6,
+      "max_spend_usd": 2,
+      "max_requests": 18,
+      "max_output_tokens": 2200,
+      "max_reasoning_tokens": 16000,
+      "reasoning_effort": "low",
+      "timeout_sec": 360,
+      "idle_timeout_sec": 120,
+      "repairs": 0
+    }
+  },
+  "context_file": "autoresearch/loop-260924-optimizer/context.json",
+  "train_file": "autoresearch/loop-260924-optimizer/train.json",
+  "baseline_file": "autoresearch/loop-260924-optimizer/baseline.json",
+  "run_dir": "autoresearch/loop-260924-optimizer/sequential-run",
+  "manifest": {
+    "autoresearch/loop-260924-optimizer/train.json": "a654dca817eae17ce4deff9a5565eee9dca197a80a84998bfd8495eab407aab6",
+    "autoresearch/loop-260924-optimizer/confirmation.json": "afd427ddb4a7c795e995cf8687605af48468bff41fff7193deca516e8c420e1c",
+    "autoresearch/loop-260924-optimizer/baseline.json": "59a246167a9ba386c2d378c99fd7a222fcc6a496b4035a0f9ab85745de102e47",
+    "autoresearch/loop-260924-optimizer/pool.json": "59ff133184f0c45933279f665395c90d8d5bfcbb669db5d91929d5de47dfb18e",
+    "autoresearch/loop-260924-optimizer/seed.json": "c364aa0dfc1d552d55f2242d2d09e772c129090e3d6e976cdbdf6fd698cbd421",
+    "autoresearch/loop-260924-optimizer/context.json": "83a280095959be0ee17113ba4e6fea85215d14e850cdceb1550146f143ccdbe3",
+    "integrations/mixture_policy.py": "f5c103d2d3c8ec2973885920c81c83225505c09e806b5f317b0dac869eb45b04",
+    "integrations/mixture_campaign.py": "59dcc09546f31ee377abf88a5179bb4396e87e9fed6c47786a824f490822c87e",
+    "integrations/projected_mixtures.py": "781b3257e5b66c9eb7c034291ab05ddd816b9eb5e0f06504e5153ca3a2c7e633",
+    "integrations/mixture_lp.py": "62d6bff37c05e2e0dedebd34e3cc17ab533c86719a7f42f4ababaa73c1ace61d"
+  }
+}

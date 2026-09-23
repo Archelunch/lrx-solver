@@ -1,0 +1,23 @@
+Return one JSON object, no code:
+{"kind":"mixture_policy","name":"description","rules":[{"cuts":[0,4,8],"weights":{"rotation":1,"zero_rotation":1,"zero_swap":0,"position":0,"rank_gap":0},"direction":"shortest","tie":"left"}]}
+1..8 rules, each has 1..4 distinct cuts (integers 0..16, reduced modulo n).
+All five weights must be integers -16..16. direction is shortest/left/right;
+tie is left/right. No other fields or state-specific exceptions.
+For each rule and cut, construct a complete word on the family's unit-block state.
+Keep a physical array with stable ranks toward canonical target, linearized at cut.
+Choose an adjacent inverted pair that does not cross cut. Choose rotation direction
+by direction (shortest uses fewest steps, tie left). Minimize weighted sum of:
+rotation=steps to pair; zero_rotation=zeros crossed by that rotation;
+zero_swap=1 if pair contains a zero; position=pair index relative to cut;
+rank_gap=left rank minus right rank. Break score ties by physical pair index
+ascending (tie left) or descending (tie right). Rotate, swap, repeat; finally
+rotate by shortest path back to canonical phase. Every swap decreases inversions.
+Each policy supplies at most 32 words per family. Existing catalog profiles stay
+fixed; LP finds mixtures of those profiles and new words. Exact weights must sum
+one, weighted base <31+6k and every weighted block slope <=6. Such a mixture
+certifies all positive block lengths via reviewed comparison/stretching lemmas.
+Maximize number of certified development families, then reduce base-price deficits.
+A miss is not infeasibility. Seek complementary slope profiles, not only short words.
+
+Evidence context:
+{"facts": [{"evidence": [{"path": "research/problem.md", "sha256": "eda0b29a6de3c9eb5de520d39121ee8efdc8a0df1c680d2472d13c3829ef469b"}], "id": "goal", "source_role": "development", "statement": "Prove E_r(n)<=C(n,2)-(r-1)(r+4)/2 for m=n-r>=8. This pilot concerns m=8 with 4..8 positive zero blocks. Full m=8 and general m remain open.", "status": "open"}, {"evidence": [{"path": "autoresearch/loop-260923-2107/paper-review.md", "sha256": "634086174d43ea3b6d2f4a2f3ed7e1aed834567b0a6877a117dbd2a854369547"}], "id": "mixture-route", "source_role": "development", "statement": "Using supplied manuscript comparison and stretching lemmas, a convex rational mixture of verified profiles proves all positive block lengths when weighted base <31+6k and every block coefficient <=6. Integer word lengths turn strict T+1 into <=T. No LP miss proves infeasibility. This is not formal proof-assistant certification.", "status": "proved_auxiliary"}, {"evidence": [{"path": "autoresearch/loop-260924-optimizer/baseline-results.json", "sha256": "ed181a3efc362980add5e6c346a1f3023274aeeb0e508ac4ed2a88b36857ab4a"}, {"path": "autoresearch/loop-260924-optimizer/seed-eval.json", "sha256": "0a64b546ff76e05f110a9545a1fd9d6f2a6e00ce1da4fc7de35c35ee7b634c45"}], "id": "development-baseline", "source_role": "development", "statement": "A fixed 512-source catalog pool closes 14 of the previous 48 unresolved development families. The remaining 34 are the pilot. The seed adjacent-inversion policy closes none. New policies add up to32 words per family to the same fixed baseline; no cumulative changing evaluator archive. Families vary in labels and retained gap mask; success applies to all positive lengths via the lemmas.", "status": "finite_verified"}], "revision": 4, "version": 1}

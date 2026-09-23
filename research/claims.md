@@ -349,3 +349,21 @@ baseline guard; its artifacts are preserved and excluded. The corrected
 inventory was checked against the supplied data table. Global union counts
 remain partly attributed. The 74 search misses prove no infeasibility, and
 full m=8 and the general conjecture remain open. No API calls were used.
+
+## Session 09: optimizer-generated words contribute five family certificates
+
+A frozen 512-source catalog closes 14 of session08's 48 remaining development
+families. On the other 34, JSON policies optimized by Grok certify four (EvoX)
+and two (sequential, contained in the four). Fresh structural confirmation gives
+22/30 for the catalog and 23/30 for both finalists, adding the same one family.
+Thus five distinct certificates require policy-generated words beyond this
+catalog baseline, and 41 named family certificates are recorded overall.
+All cover arbitrary positive block lengths through the reviewed manuscript
+lemmas and exact rational inequalities. Word expansion audits passed.
+Evidence: `autoresearch/loop-260924-optimizer/report.md`, both run directories,
+`confirmation-results.json`, and `audit-results.json`.
+
+One seed per arm does not establish engine ranking. EvoX's sole strategy rewrite
+brought no improvement. Misses do not prove infeasibility. General m and full m=8
+remain open; global coverage counts were not reconstructed. API cost $0.336410;
+331 tests and trusted-core hashes pass. No controller lead was changed.

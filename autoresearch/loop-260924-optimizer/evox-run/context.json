@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "revision": 4,
+  "facts": [
+    {
+      "id": "goal",
+      "status": "open",
+      "source_role": "development",
+      "statement": "Prove E_r(n)<=C(n,2)-(r-1)(r+4)/2 for m=n-r>=8. This pilot concerns m=8 with 4..8 positive zero blocks. Full m=8 and general m remain open.",
+      "evidence": [
+        {
+          "path": "research/problem.md",
+          "sha256": "eda0b29a6de3c9eb5de520d39121ee8efdc8a0df1c680d2472d13c3829ef469b"
+        }
+      ]
+    },
+    {
+      "id": "mixture-route",
+      "status": "proved_auxiliary",
+      "source_role": "development",
+      "statement": "Using supplied manuscript comparison and stretching lemmas, a convex rational mixture of verified profiles proves all positive block lengths when weighted base <31+6k and every block coefficient <=6. Integer word lengths turn strict T+1 into <=T. No LP miss proves infeasibility. This is not formal proof-assistant certification.",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2107/paper-review.md",
+          "sha256": "634086174d43ea3b6d2f4a2f3ed7e1aed834567b0a6877a117dbd2a854369547"
+        }
+      ]
+    },
+    {
+      "id": "development-baseline",
+      "status": "finite_verified",
+      "source_role": "development",
+      "statement": "A fixed 512-source catalog pool closes 14 of the previous 48 unresolved development families. The remaining 34 are the pilot. The seed adjacent-inversion policy closes none. New policies add up to32 words per family to the same fixed baseline; no cumulative changing evaluator archive. Families vary in labels and retained gap mask; success applies to all positive lengths via the lemmas.",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260924-optimizer/baseline-results.json",
+          "sha256": "ed181a3efc362980add5e6c346a1f3023274aeeb0e508ac4ed2a88b36857ab4a"
+        },
+        {
+          "path": "autoresearch/loop-260924-optimizer/seed-eval.json",
+          "sha256": "0a64b546ff76e05f110a9545a1fd9d6f2a6e00ce1da4fc7de35c35ee7b634c45"
+        }
+      ]
+    }
+  ]
+}

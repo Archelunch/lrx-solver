@@ -1,0 +1,22 @@
+{
+  "kind": "mixture_policy",
+  "name": "nearest adjacent inversion, three cuts",
+  "rules": [
+    {
+      "cuts": [
+        0,
+        4,
+        8
+      ],
+      "weights": {
+        "rotation": 1,
+        "zero_rotation": 0,
+        "zero_swap": 0,
+        "position": 0,
+        "rank_gap": 0
+      },
+      "direction": "shortest",
+      "tie": "left"
+    }
+  ]
+}

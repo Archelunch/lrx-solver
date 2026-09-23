@@ -1,0 +1,14 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	d2ab64cf63614a4e	mixture_policy	seed	None		-115657.60811133657	False	keep	0	nearest adjacent inversion, three cuts
+1	1	f29c4520e4bd051b	mixture_policy	exploit	0	0	-108854.4164446699	False	keep	0.009296	description
+2	2	c980b08297b54a5c	mixture_policy	exploit	0	1	-115657.60811133657	False	discard	0.0128	flat complementary local inversions
+3	3	e3fc2b660fe807a6	mixture_policy	exploit	0	1	-115657.60811133657	False	discard	0.015428	description
+4	4	eaf0d096e7ba357e	mixture_policy	exploit	0	1	-115657.60811133657	False	discard	0.011906	description
+5	5	3c3250b322f45f7e	mixture_policy	exploit	0	1	-112256.09700022545	False	discard	0.012392	description
+6	6	f4fed4f81fa160c9	mixture_policy	exploit	0	1	-115657.60811133657	False	discard	0.012694	description
+7	7	8e586c82366f4427	mixture_policy	exploit	0	1	-108853.71958975714	False	keep	0.012664	description
+8	8	101565772a9dc147	mixture_policy	exploit	0	7	-112255.16366689211	False	discard	0.012132	description
+9	9	9cc7d0a24d12b423	mixture_policy	exploit	0	7	-115657.14557387402	False	discard	0.013626	description
+10	10	7b6d30142aa940a0	mixture_policy	exploit	0	7	-115657.60811133657	False	discard	0.012216	description
+11	11	d0a1e6259b029177	mixture_policy	exploit	0	7	-115657.60811133657	False	discard	0.01233	description
+12	12	26159a789dc45cfc	mixture_policy	exploit	0	7	-112255.48311133657	False	discard	0.017398	description

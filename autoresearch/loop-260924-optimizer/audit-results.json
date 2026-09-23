@@ -1,0 +1,32 @@
+{
+  "baseline": {
+    "certified": 14,
+    "components": 49,
+    "expanded_replays": 433
+  },
+  "confirmation_baseline": {
+    "certified": 22,
+    "components": 71,
+    "expanded_replays": 577
+  },
+  "confirmation_sequential": {
+    "certified": 23,
+    "components": 76,
+    "expanded_replays": 617
+  },
+  "confirmation_evox": {
+    "certified": 23,
+    "components": 75,
+    "expanded_replays": 613
+  },
+  "train_sequential": {
+    "certified": 2,
+    "components": 8,
+    "expanded_replays": 71
+  },
+  "train_evox": {
+    "certified": 4,
+    "components": 15,
+    "expanded_replays": 123
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "estimated_usd": 0.181528,
+  "max_spend_usd": 2.0,
+  "requests": 13,
+  "failed_requests": 0,
+  "usage_overruns": 0,
+  "provider_costed_requests": 13,
+  "input_tokens": 68543,
+  "output_tokens": 11631,
+  "billing_verified": false
+}

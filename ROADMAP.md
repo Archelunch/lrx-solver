@@ -21,9 +21,11 @@ and its union with earlier results are not yet independently reconstructed.
    keep weights summing to one, weighted base <31+6k, and slopes <=6.
    Search failure is not infeasibility. Use fresh structural confirmation
    for the next method comparison.
-3. Connect a data-only mixture adapter to the existing engines. Use EvoX and
-   sequential as a small matched pilot; retain complementary profiles for
-   GEPA and structural islands for AdaEvolve in later measured experiments.
+3. The data-only mixture adapter now works with all four planners. Session09
+   ran EvoX and sequential: four versus two development additions and the same
+   one confirmation addition. Next compare offline random policies and repeated
+   seeds; retain complementary profiles for GEPA and distinct construction
+   classes for AdaEvolve. No robust engine ranking follows from this pilot.
 4. Seek new words only after measuring the limits of the existing catalog.
    Reward newly certified infinite families, preserve an untouched structural
    confirmation set, and extract mathematical reasons for successful mixtures.

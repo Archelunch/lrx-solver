@@ -1,0 +1,137 @@
+{
+  "kind": "mixture_policy",
+  "name": "description",
+  "rules": [
+    {
+      "cuts": [
+        0,
+        4,
+        8
+      ],
+      "weights": {
+        "rotation": 1,
+        "zero_rotation": 1,
+        "zero_swap": 0,
+        "position": 0,
+        "rank_gap": 0
+      },
+      "direction": "shortest",
+      "tie": "left"
+    },
+    {
+      "cuts": [
+        1,
+        5,
+        9,
+        13
+      ],
+      "weights": {
+        "rotation": 1,
+        "zero_rotation": -1,
+        "zero_swap": -4,
+        "position": 2,
+        "rank_gap": -6
+      },
+      "direction": "right",
+      "tie": "left"
+    },
+    {
+      "cuts": [
+        2,
+        6,
+        10,
+        14
+      ],
+      "weights": {
+        "rotation": 0,
+        "zero_rotation": 2,
+        "zero_swap": 3,
+        "position": -2,
+        "rank_gap": 5
+      },
+      "direction": "left",
+      "tie": "right"
+    },
+    {
+      "cuts": [
+        3,
+        7,
+        11,
+        15
+      ],
+      "weights": {
+        "rotation": 2,
+        "zero_rotation": 0,
+        "zero_swap": -2,
+        "position": 1,
+        "rank_gap": -3
+      },
+      "direction": "shortest",
+      "tie": "left"
+    },
+    {
+      "cuts": [
+        0,
+        6,
+        12
+      ],
+      "weights": {
+        "rotation": 3,
+        "zero_rotation": -2,
+        "zero_swap": 1,
+        "position": 4,
+        "rank_gap": 2
+      },
+      "direction": "right",
+      "tie": "right"
+    },
+    {
+      "cuts": [
+        4,
+        8,
+        16
+      ],
+      "weights": {
+        "rotation": 0,
+        "zero_rotation": 4,
+        "zero_swap": -1,
+        "position": -3,
+        "rank_gap": 7
+      },
+      "direction": "left",
+      "tie": "left"
+    },
+    {
+      "cuts": [
+        1,
+        7,
+        12
+      ],
+      "weights": {
+        "rotation": 4,
+        "zero_rotation": 1,
+        "zero_swap": 2,
+        "position": 0,
+        "rank_gap": -8
+      },
+      "direction": "shortest",
+      "tie": "right"
+    },
+    {
+      "cuts": [
+        5,
+        9,
+        13
+      ],
+      "weights": {
+        "rotation": 2,
+        "zero_rotation": -3,
+        "zero_swap": 0,
+        "position": 3,
+        "rank_gap": 1
+      },
+      "direction": "left",
+      "tie": "right"
+    }
+  ]
+}

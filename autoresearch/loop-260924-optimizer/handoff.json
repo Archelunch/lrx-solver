@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "baseline_new_certificates": 14,
+  "remaining_development": 34,
+  "confirmation_cases": 30,
+  "confirmation_evaluated": true,
+  "api_spend_usd": 0.33641,
+  "remaining_budget_usd": 19.514971,
+  "verification": {
+    "tests": 331,
+    "compile": true,
+    "smoke": true,
+    "trusted": true,
+    "baseline_components": 49,
+    "expanded_replays": 433
+  },
+  "next": "Extract development-only successful word structures; compare offline random policies and repeat seeds. Confirmation consumed: never feed it into proposer context. General conjecture remains open; no push performed.",
+  "authorization": "User explicitly approved sending to Grok after reviewing payload scope; both arms $4 total cap.",
+  "development_llm": {
+    "sequential": 2,
+    "evox": 4
+  },
+  "confirmation": {
+    "catalog": 22,
+    "sequential": 23,
+    "evox": 23,
+    "total": 30
+  },
+  "unique_named_certificates": 41,
+  "llm_additions": 5
+}
