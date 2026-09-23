@@ -1,0 +1,79 @@
+{
+ "v": [
+  3,
+  2,
+  1,
+  0,
+  0,
+  10,
+  9,
+  8,
+  0,
+  7,
+  6,
+  5,
+  4
+ ],
+ "q": 63,
+ "status": "COMPLETE",
+ "A": 66,
+ "deletions": [
+  {
+   "d_small": 57,
+   "slack": 6,
+   "status": "COMPLETE",
+   "H": 66,
+   "states": 5954845,
+   "word": "RRXLXRXRXLXLXLXRXRXRXRRXRRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRX",
+   "j": 3,
+   "seconds": 36.4,
+   "replay": {
+    "terminal": true,
+    "valid": true,
+    "length": 66,
+    "projection": 61,
+    "visible_root": true
+   }
+  },
+  {
+   "d_small": 57,
+   "slack": 6,
+   "status": "COMPLETE",
+   "H": 66,
+   "states": 5661303,
+   "word": "RRXLXRXRXLXLXLXRXRXRXRRXRRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRX",
+   "j": 4,
+   "seconds": 33.1,
+   "replay": {
+    "terminal": true,
+    "valid": true,
+    "length": 66,
+    "projection": 61,
+    "visible_root": true
+   }
+  },
+  {
+   "d_small": 62,
+   "slack": 1,
+   "status": "COMPLETE",
+   "H": 73,
+   "states": 14243,
+   "word": "RRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLX",
+   "j": 8,
+   "seconds": 0.1,
+   "replay": {
+    "terminal": true,
+    "valid": true,
+    "length": 73,
+    "projection": 62,
+    "visible_root": true
+   }
+  }
+ ],
+ "P": 63,
+ "budget_P_m_2": 71,
+ "smaller_table": "cache runs/lifting-check-260922-234448/tables/dist_m10_r2.bin",
+ "seconds": 69.6,
+ "method": "autoresearch/lift_forward.check_vector, state cap 60M",
+ "scope": "finite: this vector on (13,10,3) only"
+}

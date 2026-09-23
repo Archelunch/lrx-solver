@@ -1,0 +1,47 @@
+{
+ "kind": "potential",
+ "name": "cw-m clock plus invariants",
+ "notes": "If csorted, rot_dist. Else n*cw(m)+pos1+n*cinv+cdes+(1-zeros_block). L drops this whenever cw(m)>0, since invariants ignore rotation and pos1 rises by at most n-1. Root is 0.",
+ "expr": [
+  "if",
+  "is_root",
+  0,
+  [
+   "if",
+   "csorted",
+   "rot_dist",
+   [
+    "add",
+    [
+     "mul",
+     "n",
+     [
+      "sum_tokens",
+      [
+       "if",
+       [
+        "eq",
+        "t",
+        "m"
+       ],
+       "cw",
+       0
+      ]
+     ]
+    ],
+    "pos1",
+    [
+     "mul",
+     "n",
+     "cinv"
+    ],
+    "cdes",
+    [
+     "sub",
+     1,
+     "zeros_block"
+    ]
+   ]
+  ]
+ ]
+}

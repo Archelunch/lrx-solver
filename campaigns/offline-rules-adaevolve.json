@@ -1,0 +1,13 @@
+{
+  "name": "offline-rules-adaevolve",
+  "description": "No-API baseline: random JSON mutations of the bubble controller under AdaEvolve-style islands.",
+  "engine": "adaevolve",
+  "kinds": ["rules"],
+  "seeds": ["candidates/baselines/rules_bubble.json"],
+  "max_proposals": 24,
+  "batch": 4,
+  "eval_workers": 4,
+  "islands": 3,
+  "seed": 1,
+  "provider": {"type": "offline"}
+}

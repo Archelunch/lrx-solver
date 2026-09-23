@@ -1,0 +1,23 @@
+{
+ "sources": [
+  {
+   "id": "manuscript",
+   "title": "Добавление нуля: точная редукция и неограниченный перерасход проекции",
+   "language": "ru",
+   "document_date": "2026-09-21",
+   "distributed_here": false,
+   "file": "lrx_multiset_marked_zero_reduction.tex",
+   "sha256": "e4aa3df0a1063f5d2780749f4cf20f342b4616774a40268a1fc0cf2c354b130a"
+  },
+  {
+   "id": "progress-notes",
+   "title": "LRX with repeated entries: the conjecture, corrected, reparametrised, and reduced to the pure Cayley graph",
+   "language": "en",
+   "document_date": "2026-09-18",
+   "distributed_here": false,
+   "file": "LRX_multiset_progress.md",
+   "sha256": "f085e3095317418c39ba88685e0b0e9dd02894761e833079e5dedc2ff9ca8678"
+  }
+ ],
+ "original_audits_reproduced": false
+}

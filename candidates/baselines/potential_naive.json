@@ -1,0 +1,3 @@
+{"kind": "potential", "name": "naive displacement + cyclic inversions",
+ "notes": "Deliberately weak starting point; expected to fail local descent.",
+ "expr": ["add", ["mul", 2, "disp_sum"], ["mul", 2, "cinv"], "zeros_in_prefix"]}

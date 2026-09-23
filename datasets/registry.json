@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "notes": "Roles: sanity (exhaustive, tiny, m<8 allowed, T not applied), train (feedback allowed), heldout (never returned as feedback). T_m(n) is applied only when m>=8. Tables live in datasets/generated/ (git-ignored); table_sha256 is filled by `table build-registry` and checked on load.",
+  "probe": {"random": 200, "hard": 100, "hard_layers": 2},
+  "graphs": [
+    {"m": 4, "r": 2, "role": "sanity", "table": true},
+    {"m": 5, "r": 2, "role": "sanity", "table": true},
+    {"m": 6, "r": 2, "role": "sanity", "table": true},
+    {"m": 5, "r": 3, "role": "sanity", "table": true},
+    {"m": 4, "r": 4, "role": "sanity", "table": true},
+    {"m": 7, "r": 2, "role": "train", "table": true},
+    {"m": 7, "r": 3, "role": "train", "table": true},
+    {"m": 8, "r": 2, "role": "train", "table": true},
+    {"m": 8, "r": 3, "role": "train", "table": true},
+    {"m": 9, "r": 2, "role": "train", "table": true},
+    {"m": 6, "r": 4, "role": "train", "table": true},
+    {"m": 8, "r": 4, "role": "heldout", "table": true},
+    {"m": 9, "r": 3, "role": "heldout", "table": true},
+    {"m": 10, "r": 4, "role": "heldout", "table": false},
+    {"m": 12, "r": 4, "role": "heldout", "table": false},
+    {"m": 8, "r": 8, "role": "heldout", "table": false},
+    {"m": 16, "r": 4, "role": "heldout", "table": false}
+  ]
+}

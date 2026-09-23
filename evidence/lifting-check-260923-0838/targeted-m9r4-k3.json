@@ -1,0 +1,9331 @@
+{
+ "m": 9,
+ "r": 4,
+ "n": 13,
+ "P": 59,
+ "budget_P_m_2": 66,
+ "k": 3,
+ "smaller_table": "registry",
+ "far_layer_sizes": {
+  "59": 5,
+  "58": 51,
+  "57": 245,
+  "56": 875
+ },
+ "pairs": 15288,
+ "covered_vectors": 11258,
+ "hist_H_minus_budget": {
+  "-10": 839,
+  "-9": 925,
+  "-8": 2223,
+  "-7": 1714,
+  "-6": 2776,
+  "-5": 1919,
+  "-4": 2551,
+  "-3": 1410,
+  "-2": 580,
+  "-1": 172,
+  "0": 92,
+  "1": 45,
+  "2": 13,
+  "3": 7,
+  "4": 12,
+  "5": 5,
+  "6": 2,
+  "7": 2,
+  "8": 1
+ },
+ "incomplete_pairs": [],
+ "flagged_vectors": [
+  {
+   "v": [
+    0,
+    0,
+    0,
+    7,
+    9,
+    8,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 64,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 18010,
+     "word": "LLXLXLXRRRXRXLLXRXLLXRXRRRXLXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 0,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 18000,
+     "word": "LLXRXLLXRXLLXRXRRRXLXLXRRRXLXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 1,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 11158,
+     "word": "LXLXRXLLXRXLLXRXRRRXLXLXRRRXLXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 64,
+     "states": 155443,
+     "word": "RRXLXLXLXLLLLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRXLXLXLXLLXLLXLXLXLXLX",
+     "j": 12,
+     "seconds": 0.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 64,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      7,
+      9,
+      8,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 0,
+     "H": 67
+    },
+    {
+     "u": [
+      0,
+      0,
+      7,
+      9,
+      8,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 1,
+     "H": 67
+    },
+    {
+     "u": [
+      0,
+      0,
+      7,
+      9,
+      8,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 2,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    0,
+    8,
+    7,
+    9,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 64,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 18147,
+     "word": "LLXLXLXRRRXRXLLXRXLLXRXRRRXLXLXRRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 0,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 18137,
+     "word": "LLXRXLLXRXLLXRXRRRXLXLXRRRXLXLXRRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 1,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 11636,
+     "word": "LXLXRXLLXRXLLXRXRRRXLXLXRRRXLXLXRRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 64,
+     "states": 156647,
+     "word": "RRXLXLXLXLLLLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXLX",
+     "j": 12,
+     "seconds": 0.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 64,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      8,
+      7,
+      9,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 0,
+     "H": 67
+    },
+    {
+     "u": [
+      0,
+      0,
+      8,
+      7,
+      9,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 1,
+     "H": 67
+    },
+    {
+     "u": [
+      0,
+      0,
+      8,
+      7,
+      9,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 2,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    0,
+    8,
+    9,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2069343,
+     "word": "LLXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 0,
+     "seconds": 12.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 52,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2068564,
+     "word": "LLXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 1,
+     "seconds": 12.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1694819,
+     "word": "LLXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 2,
+     "seconds": 10.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 5087,
+     "word": "LLXRXRXRXLXLXLXLXRXRXRXRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL",
+     "j": 7,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      0,
+      8,
+      9,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     "j": 7,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    0,
+    9,
+    7,
+    8,
+    0,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2377961,
+     "word": "LLXLXLXRRRXLXLXRRXRXLXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 0,
+     "seconds": 14.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2375486,
+     "word": "LLXLXLXRRRXLXLXRRXRXLXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 1,
+     "seconds": 14.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2111215,
+     "word": "LLXLXLXRRRXLXLXRRXRXLXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 12.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 9205,
+     "word": "RXLXLXLXLLLXLLXRXLXLXLXRRXRXRRXLXLXLXLXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 6,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      0,
+      9,
+      7,
+      8,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     "j": 6,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5,
+    4,
+    3,
+    1,
+    2
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1559378,
+     "word": "LLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXR",
+     "j": 0,
+     "seconds": 9.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1558197,
+     "word": "LLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXR",
+     "j": 1,
+     "seconds": 9.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1390784,
+     "word": "LLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXR",
+     "j": 2,
+     "seconds": 8.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 8636,
+     "word": "RXLXLXLXLLLXLLXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXL",
+     "j": 6,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      1,
+      2
+     ],
+     "j": 6,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    5,
+    0,
+    6,
+    4,
+    3,
+    2,
+    1
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 774445,
+     "word": "LLXLXLXRRXRXLXLXRXRXRXLXLXLLLLXLLLXRXLXLXLXRRXRXRXLXLXLXRXRXRX",
+     "j": 0,
+     "seconds": 4.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 773669,
+     "word": "LLXLXLXRRXRXLXLXRXRXRXLXLXLLLLXLLLXRXLXLXLXRRXRXRXLXLXLXRXRXRX",
+     "j": 1,
+     "seconds": 4.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 568349,
+     "word": "LLXLXLXRRXRXLXLXRXRXRXLXLXLLLLXLLLXRXLXLXLXRRXRXRXLXLXLXRXRXRX",
+     "j": 2,
+     "seconds": 2.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 33534,
+     "word": "LLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRRXLXLXRXRRXLXLXLXLXLXRXRXRXRXRRXL",
+     "j": 7,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      5,
+      6,
+      4,
+      3,
+      2,
+      1
+     ],
+     "j": 7,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4,
+    2,
+    3,
+    1
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2073155,
+     "word": "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLLXLXLXLXLXRXRXRXRXLXLXLXRXRX",
+     "j": 0,
+     "seconds": 12.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2071551,
+     "word": "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLLXLXLXLXLXRXRXRXRXLXLXLXRXRX",
+     "j": 1,
+     "seconds": 12.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 1677019,
+     "word": "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLLXLXLXLXLXRXRXRXRXLXLXLXRXRX",
+     "j": 2,
+     "seconds": 9.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 7460,
+     "word": "LLXRXRXRXLXLXLXLXRXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRRRXL",
+     "j": 7,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      2,
+      3,
+      1
+     ],
+     "j": 7,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3,
+    1,
+    2
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1299859,
+     "word": "LLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXR",
+     "j": 0,
+     "seconds": 7.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1298954,
+     "word": "LLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXR",
+     "j": 1,
+     "seconds": 7.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1025959,
+     "word": "LLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXR",
+     "j": 2,
+     "seconds": 5.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 8805,
+     "word": "RXLXLXLXLLLLXLXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXL",
+     "j": 7,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      1,
+      2
+     ],
+     "j": 7,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1868403,
+     "word": "LLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 0,
+     "seconds": 10.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1867256,
+     "word": "LLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 1,
+     "seconds": 11.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1474270,
+     "word": "LLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 2,
+     "seconds": 8.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 59,
+     "slack": 0,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 10672,
+     "word": "LLXRXRXRXLXLXLXLXRXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL",
+     "j": 7,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     "j": 7,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    8,
+    7,
+    9,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 66,
+   "deletions": [
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 160207,
+     "word": "LXLXRRXLXLLXRXRRRXLXLXRRRXLXLXRRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 0,
+     "seconds": 0.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 160254,
+     "word": "LXRXLXLXRXLLXRXRRRXLXLXRRRXLXLXRRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 1,
+     "seconds": 0.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 14383,
+     "word": "LXLXLXRRRXLXLXRRRXRXLLXRXLLXRXRRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 11,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 18069,
+     "word": "LXLXLXRRRXRXLLXRXLLXRXRRRXLXLXRRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 12,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      8,
+      7,
+      9,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0
+     ],
+     "j": 1,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1153984,
+     "word": "LLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 0,
+     "seconds": 6.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1151969,
+     "word": "LLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 1,
+     "seconds": 6.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 1933,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL",
+     "j": 6,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1863967,
+     "word": "LLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 12,
+     "seconds": 11.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 55,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 6,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    0,
+    4,
+    3,
+    2,
+    1,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2477971,
+     "word": "LLLXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 0,
+     "seconds": 15.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2475066,
+     "word": "LLLXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 1,
+     "seconds": 15.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 1984,
+     "word": "LXRXRXRXLXLXLXLLXLXLXLXLXRXLLXRXRRXRXLXLXRXRXRXLXLXLXLLXLLXRXLLXLXLXLX",
+     "j": 7,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1330526,
+     "word": "LLLXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 12,
+     "seconds": 7.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 54,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 7,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    0,
+    3,
+    2,
+    1,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 992906,
+     "word": "RRXRXRXLXLXLXRXRXRRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX",
+     "j": 0,
+     "seconds": 5.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 992405,
+     "word": "RRXRXRXLXLXLXRXRXRRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX",
+     "j": 1,
+     "seconds": 6.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 1924,
+     "word": "LXRXRXRXLXLXLXLLXLLXLXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLLXLLXRXLLXLXLXLX",
+     "j": 8,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2351045,
+     "word": "RRXRXRXLXLXLXRXRXRRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX",
+     "j": 12,
+     "seconds": 15.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 55,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 8,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    4,
+    2,
+    3,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 7527,
+     "word": "RXRXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRRRXL",
+     "j": 0,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 1762526,
+     "word": "XRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXLXLXRXRRRXLXLXLX",
+     "j": 5,
+     "seconds": 14.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 52,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 1572005,
+     "word": "XRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXLXLXRXRRRXLXLXLX",
+     "j": 6,
+     "seconds": 10.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 1507131,
+     "word": "XRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXLXLXRXRRRXLXLXLX",
+     "j": 7,
+     "seconds": 9.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 56,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      2,
+      3,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5
+     ],
+     "j": 0,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    8,
+    9,
+    7,
+    6,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 5829,
+     "word": "RXRXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRRRXRXRXRXRXRRXL",
+     "j": 0,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 1535405,
+     "word": "XRRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRRXLXRRXLXRRXLXLXLXLXRXRXLX",
+     "j": 5,
+     "seconds": 9.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 52,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 1342340,
+     "word": "XRRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRRXLXRRXLXRRXLXLXLXLXRXRXLX",
+     "j": 6,
+     "seconds": 7.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 1249640,
+     "word": "XRRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRRXLXRRXLXRRXLXLXLXLXRXRXLX",
+     "j": 7,
+     "seconds": 7.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 56,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      8,
+      9,
+      7,
+      6,
+      5
+     ],
+     "j": 0,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 10725,
+     "word": "RXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXRRXL",
+     "j": 0,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1224671,
+     "word": "XRRRXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 6,
+     "seconds": 6.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1098451,
+     "word": "XRRRXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 7,
+     "seconds": 6.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1126784,
+     "word": "XRRRXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 8,
+     "seconds": 6.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6
+     ],
+     "j": 0,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    0,
+    9,
+    8,
+    6,
+    7,
+    5,
+    0,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 49,
+     "slack": 10,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 5621823,
+     "word": "LLXLXRRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 0,
+     "seconds": 51.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 53,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 25962,
+     "word": "XRXRXRXLXLXLXLLLLXLXLXRXLXLXRXRRXRXLXLXRXRXRXLXLXLXLXLLLXRXLLXLXLXLX",
+     "j": 6,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2118158,
+     "word": "LLXLXRRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 11,
+     "seconds": 13.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 52,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2566819,
+     "word": "LLXLXRRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 12,
+     "seconds": 18.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 54,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      9,
+      8,
+      6,
+      7,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0
+     ],
+     "j": 6,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5,
+    4,
+    3,
+    2
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1220289,
+     "word": "LLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 1,
+     "seconds": 7.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 877317,
+     "word": "LLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 6.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 834402,
+     "word": "LLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 3,
+     "seconds": 4.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 9216,
+     "word": "XLXLXLXLLLXLLXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 7,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2
+     ],
+     "j": 7,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3,
+    2
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1263036,
+     "word": "XRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+     "j": 1,
+     "seconds": 7.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 862857,
+     "word": "XRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+     "j": 2,
+     "seconds": 4.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 727574,
+     "word": "XRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+     "j": 3,
+     "seconds": 4.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 9402,
+     "word": "XLXLXLXLLLLXLXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 8,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2
+     ],
+     "j": 8,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    1,
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1414039,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXR",
+     "j": 2,
+     "seconds": 8.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1166663,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXR",
+     "j": 3,
+     "seconds": 7.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1121660,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXR",
+     "j": 4,
+     "seconds": 6.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 9260,
+     "word": "LXLXLXLXLLLXLLXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXL",
+     "j": 8,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      1,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 8,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    1,
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1664125,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXR",
+     "j": 2,
+     "seconds": 11.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1279555,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXR",
+     "j": 3,
+     "seconds": 7.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1127957,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXR",
+     "j": 4,
+     "seconds": 6.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 9510,
+     "word": "LXLXLXLXLLLLXLXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXL",
+     "j": 9,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      1,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 9,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    1,
+    3,
+    0,
+    0,
+    0,
+    9,
+    8,
+    0,
+    7,
+    6,
+    5,
+    4,
+    2
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 889229,
+     "word": "RRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRRX",
+     "j": 2,
+     "seconds": 5.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 774677,
+     "word": "RRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRRX",
+     "j": 3,
+     "seconds": 4.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 755154,
+     "word": "RRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRRX",
+     "j": 4,
+     "seconds": 4.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 125264,
+     "word": "LXLXLXLXLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXLXRRRXRXRXRXLXLXLXLXL",
+     "j": 7,
+     "seconds": 0.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      1,
+      3,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      2
+     ],
+     "j": 7,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    1,
+    3,
+    2,
+    0,
+    0,
+    0,
+    9,
+    0,
+    8,
+    7,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 193012,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRXLXRRXLXRRXLXRXRRXRXRXRXRXR",
+     "j": 3,
+     "seconds": 1.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 193603,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRXLXRRXLXRRXLXRXRRXRXRXRXRXR",
+     "j": 4,
+     "seconds": 1.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 194836,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRXLXRRXLXRRXLXRXRRXRXRXRXRXR",
+     "j": 5,
+     "seconds": 1.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 71,
+     "states": 12255,
+     "word": "LLXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXRXRXRXRXLLXLXRXRXLXLXLXLLXRXLLXLXLXL",
+     "j": 7,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 71,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      1,
+      3,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 7,
+     "H": 71
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    1,
+    3,
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    0,
+    7,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 369509,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRXR",
+     "j": 3,
+     "seconds": 2.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 362789,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRXR",
+     "j": 4,
+     "seconds": 2.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 366863,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRXR",
+     "j": 5,
+     "seconds": 2.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 71,
+     "states": 12230,
+     "word": "LLXLXLXRRRXLXLXLXLLXLXLXLXLXRXRXRXLLXRXLXLLXRXRXRXRXRXLXLXLXLLXLLXLXLXL",
+     "j": 8,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 71,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      1,
+      3,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 8,
+     "H": 71
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    1,
+    3,
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 3050148,
+     "word": "RXRXLXLXRXRRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXR",
+     "j": 3,
+     "seconds": 20.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2664431,
+     "word": "RXRXLXLXRXRRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXR",
+     "j": 4,
+     "seconds": 16.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2571684,
+     "word": "RXRXLXLXRXRRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXR",
+     "j": 5,
+     "seconds": 17.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 12387,
+     "word": "LLXLXLXRRRXLXLXLXLLXLXLXLXRXLLXRXLLXRXRRXRXLXLXRXRXRXLXLXLXLLXLLXLXLXL",
+     "j": 9,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      1,
+      3,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 9,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    1,
+    4,
+    0,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    3,
+    2
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 66,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 99420,
+     "word": "LXLXRRXRXRXLXLXLXRXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXLX",
+     "j": 2,
+     "seconds": 0.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 74645,
+     "word": "LXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRXLXRRXRXRXLXLXLXRXRXLX",
+     "j": 3,
+     "seconds": 0.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 53421,
+     "word": "LXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXLXRRXRXRXLXLXLXRXRXLX",
+     "j": 4,
+     "seconds": 0.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 52599,
+     "word": "LXLXRRXRXRXLXLXLXRXRXRRRRXRXRXRXLLXLXRXRXLXLXLXRXRXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 0.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      1,
+      4,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      3,
+      2
+     ],
+     "j": 4,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    0,
+    7,
+    6,
+    5,
+    4,
+    1,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 465653,
+     "word": "LLLXLXRRXLXRRXLXRXRRRRRXLXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXR",
+     "j": 1,
+     "seconds": 3.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 339134,
+     "word": "LLLXLXRRXLXRRXLXRXRRRRRXLXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXR",
+     "j": 2,
+     "seconds": 2.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 326080,
+     "word": "LLLXLXLLXRXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRRXLXLXLXLXRXRXRXR",
+     "j": 3,
+     "seconds": 1.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 85298,
+     "word": "XRXRXRXRRRXRXRXRXRXLXLXLXLXRXLLXRXRRXRXLXLXRXRXRXRRXRXRXRXLXLXLXRXR",
+     "j": 6,
+     "seconds": 0.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      1,
+      3
+     ],
+     "j": 6,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    7,
+    0,
+    9,
+    8,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 66,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 100734,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRRRXLXRRRXLXLXRRRXRXLLXRXLLXRXRXRRRXRXRXRXRX",
+     "j": 2,
+     "seconds": 0.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 62202,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRRRXLXRRRXRXLLXRXLLXRXRRRXLXLXRXRRRXRXRXRXRX",
+     "j": 3,
+     "seconds": 0.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 65019,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRRRXLXRRRXRXLXLXRXLLXRXRRRXLXLXRXRRRXRXRXRXRX",
+     "j": 4,
+     "seconds": 0.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 145196,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRRXRXRXLLXRXLXLXRXRXRRXLXRXRRXRXRXRXLXLXRX",
+     "j": 6,
+     "seconds": 0.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      7,
+      0,
+      9,
+      8,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 4,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    7,
+    9,
+    0,
+    8,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1868374,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRRXRRRXLXLXRRRXLXLXRRRXLXLXRXRRRXRXRXRXRX",
+     "j": 2,
+     "seconds": 11.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1586752,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRRXRRRXLXLXRRRXLXLXRRRXLXLXRXRRRXRXRXRXRX",
+     "j": 3,
+     "seconds": 10.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1496613,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRRXRRRXLXLXRRRXLXLXRRRXLXLXRXRRRXRXRXRXRX",
+     "j": 4,
+     "seconds": 9.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 146447,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRRXRXRXLXLXRXLXLXRXRXRRXLXRXRRXRXRXRXLXLXRX",
+     "j": 7,
+     "seconds": 0.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      7,
+      9,
+      8,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 7,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    8,
+    0,
+    7,
+    9,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 64,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 64,
+     "states": 67581,
+     "word": "LXLXLXLXLXRRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXLLXLXLXLXLX",
+     "j": 2,
+     "seconds": 0.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 64,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 64,
+     "states": 41103,
+     "word": "LXLXLXLXLXRRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXLLXLXLXLXLX",
+     "j": 3,
+     "seconds": 0.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 64,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 64,
+     "states": 45575,
+     "word": "LXLXLXLXLXRRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXLLXLXLXLXLX",
+     "j": 4,
+     "seconds": 0.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 64,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 141359,
+     "word": "LXRXRXLXLXLXRXRXRRRRRXRXRXLXLLXRXLXLXRXRRXRXRXLXLXLXRXRXRXRRXRXRXLX",
+     "j": 6,
+     "seconds": 0.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      8,
+      7,
+      9,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 6,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    8,
+    9,
+    7,
+    0,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2788548,
+     "word": "LLLLXLXLXRRRXLXLXRRRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 18.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2351911,
+     "word": "LLLLXLXLXRRRXLXLXRRRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 3,
+     "seconds": 14.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2241890,
+     "word": "LLLLXLXLXRRRXLXLXRRRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 4,
+     "seconds": 13.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 69,
+     "states": 5888,
+     "word": "LXLXLXLXRXRXRXRXRRRRXLXRXRRXLXLXLXLXRXRXRXRRXRXLXRXRXRXRXRXLXLXLXLXLX",
+     "j": 8,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 69,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      8,
+      9,
+      7,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 8,
+     "H": 69
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    8,
+    9,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2688490,
+     "word": "LLLLXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 2,
+     "seconds": 17.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2128975,
+     "word": "LLLLXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 3,
+     "seconds": 13.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1896499,
+     "word": "LLLLXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 4,
+     "seconds": 11.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 72,
+     "states": 6294,
+     "word": "LXLXLXLXRXRXRXRXRRRRRXLXLXRXRRXLXLXLXLXRXRXRXRRXRXLXRXRXRXRXRXLXLXLXLXLX",
+     "j": 9,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 72,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      8,
+      9,
+      7,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 9,
+     "H": 72
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    7,
+    8,
+    0,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2458468,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 15.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2032089,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 3,
+     "seconds": 11.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1910565,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 4,
+     "seconds": 13.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 19092,
+     "word": "LXLXLXLXLLLXLLXRXLXLXLXRRXRXRRXLXLXLXLXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 8,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      7,
+      8,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 8,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    6,
+    0,
+    7,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 64,
+   "deletions": [
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 64,
+     "states": 1219782,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRXRRXRXRXRX",
+     "j": 2,
+     "seconds": 7.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 64,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 64,
+     "states": 952097,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRXRRXRXRXRX",
+     "j": 3,
+     "seconds": 5.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 64,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 65,
+     "states": 863680,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRRXLXRRRXLXRRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+     "j": 4,
+     "seconds": 4.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 65,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 32625,
+     "word": "LXLXLXLXLLLXLLXLXRRXLXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 8,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      6,
+      7,
+      5,
+      4,
+      3
+     ],
+     "j": 8,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    4,
+    5,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2447067,
+     "word": "RRXRXRXLXLXLXRXRXRXRRRRRXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXRX",
+     "j": 2,
+     "seconds": 16.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2136145,
+     "word": "RRXRXRXLXLXLXRXRXRXRRRRRXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXRX",
+     "j": 3,
+     "seconds": 12.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2073934,
+     "word": "RRXRXRXLXLXLXRXRXRXRRRRRXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXRX",
+     "j": 4,
+     "seconds": 12.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 18925,
+     "word": "LXLXLXLXLLLXLLXRXLXLXRXRRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 8,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      4,
+      5,
+      3
+     ],
+     "j": 8,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5,
+    3,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2819791,
+     "word": "LLLLXLXLXRRXRXLXLXRXRXRXLXLXLLLLLLXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 17.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2397067,
+     "word": "LLLLXLXLXRRXRXLXLXRXRXRXLXLXLLLLLLXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 3,
+     "seconds": 14.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2283405,
+     "word": "LLLLXLXLXRRXRXLXLXRXRXRXLXLXLLLLLLXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 4,
+     "seconds": 13.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 11090,
+     "word": "LXLXLXLXLLLXLLXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 8,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      3,
+      4
+     ],
+     "j": 8,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 466732,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 2.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 385265,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 3,
+     "seconds": 2.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 64,
+     "states": 381765,
+     "word": "LLLLXLXRRXLXLXLXRXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 4,
+     "seconds": 2.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 64,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 59,
+     "slack": 0,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 18538,
+     "word": "LXLXLXLXLLLXLLXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 8,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 8,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    5,
+    0,
+    6,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1181120,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRRRXRXRXRXLXLXRX",
+     "j": 2,
+     "seconds": 7.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 910728,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRRRXRXRXRXLXLXRX",
+     "j": 3,
+     "seconds": 5.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 771435,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRRRXRXRXRXLXLXRX",
+     "j": 4,
+     "seconds": 4.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 55893,
+     "word": "LXLXLXLLLXLXLXLXRXLLXRXLXLLXLXLXLXLXLLLXLXLXRXRXRXLXLXLXLXLLLXLXLXLX",
+     "j": 9,
+     "seconds": 0.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      5,
+      6,
+      4,
+      3
+     ],
+     "j": 9,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    4,
+    5,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1803133,
+     "word": "RXRXLXLXLLLLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRXLXLXLXRXRX",
+     "j": 2,
+     "seconds": 11.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1430064,
+     "word": "RXRXLXLXLLLLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRXLXLXLXRXRX",
+     "j": 3,
+     "seconds": 8.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1316684,
+     "word": "RXRXLXLXLLLLLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRXLXLXLXRXRX",
+     "j": 4,
+     "seconds": 7.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 19217,
+     "word": "LXLXLXLXLLLLXLXRRXLXLXLXRXRRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 9,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      4,
+      5,
+      3
+     ],
+     "j": 9,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    3,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2729032,
+     "word": "LLLLXLXLXLXRRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRXRXRXLXLXLXRXRXRX",
+     "j": 2,
+     "seconds": 18.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2223800,
+     "word": "LLLLXLXLXLXRRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRXRXRXLXLXLXRXRXRX",
+     "j": 3,
+     "seconds": 14.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2000577,
+     "word": "LLLLXLXLXLXRRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRXRXRXLXLXLXRXRXRX",
+     "j": 4,
+     "seconds": 13.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 11077,
+     "word": "LXLXLXLXLLLLXLXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 9,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      3,
+      4
+     ],
+     "j": 9,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 2743957,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+     "j": 2,
+     "seconds": 17.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 2136659,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+     "j": 3,
+     "seconds": 12.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1878966,
+     "word": "LXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX",
+     "j": 4,
+     "seconds": 10.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 59,
+     "slack": 0,
+     "status": "COMPLETE",
+     "H": 71,
+     "states": 19029,
+     "word": "LXLXLXLXLLLLXLXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 9,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 71,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 9,
+     "H": 71
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    0,
+    3,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 4968524,
+     "word": "LXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRRXRXRRXLXLXLXLXRXRXLX",
+     "j": 2,
+     "seconds": 37.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 53,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 4284441,
+     "word": "LXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRRXRXRRXLXLXLXLXRXRXLX",
+     "j": 3,
+     "seconds": 29.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 53,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 3880171,
+     "word": "LXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRRXRXRRXLXLXLXLXRXRXLX",
+     "j": 4,
+     "seconds": 26.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 53,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 10973,
+     "word": "LXLXLXLXRXRXRXRXRRRXRRXLXRXRXRXLXLXLXLXLXRXRXRXRXLXLXLLXLXLLXLXLXLX",
+     "j": 10,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      3,
+      4
+     ],
+     "j": 10,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    9,
+    0,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1891568,
+     "word": "LLLXLLXLXRRXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 12.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1520331,
+     "word": "LLLXLLXLXRRXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRX",
+     "j": 3,
+     "seconds": 9.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1848220,
+     "word": "RRXRXLXLXRXRXRRRRRXLXLXRRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRX",
+     "j": 5,
+     "seconds": 10.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 35097,
+     "word": "LLLXRXRXLXLXLXLXRXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL",
+     "j": 9,
+     "seconds": 0.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      9,
+      0,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 9,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    9,
+    0,
+    8,
+    7,
+    6,
+    5,
+    0,
+    4,
+    3
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 3405723,
+     "word": "LXRXRXLXLXLXRXRXRRXLXLXLXLXLLXLLXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 2,
+     "seconds": 23.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2852368,
+     "word": "LXRXRXLXLXLXRXRXRRXLXLXLXLXLLXLLXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 3,
+     "seconds": 18.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1339759,
+     "word": "LXRXRXLXLXLXRXRXRRXLXLXLXLXLLXLLXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 8.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 35810,
+     "word": "LXLXLXLXRRXRXRXRRXRXRRXLXRXRXRXLXLXLXLXLXRXRXRXRXLXLXLLXLXLLXLXLXLX",
+     "j": 10,
+     "seconds": 0.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      9,
+      0,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 10,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    3,
+    0,
+    0,
+    0,
+    9,
+    0,
+    8,
+    7,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 288287,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRXLXRRXLXRRXLXRXRRXRXRXRXRRX",
+     "j": 3,
+     "seconds": 1.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 276268,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRXLXRRXLXRRXLXRXRRXRXRXRXRRX",
+     "j": 4,
+     "seconds": 1.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 279212,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRXLXRRXLXRRXLXRXRRXRXRXRXRRX",
+     "j": 5,
+     "seconds": 1.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 23677,
+     "word": "RXLXLXLXRXRXRXRRRXRXRXRXRXLXLXLXRXLLXRXLLXRXRRXRXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 7,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      3,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 7,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    3,
+    0,
+    0,
+    0,
+    9,
+    8,
+    0,
+    7,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 544693,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRRX",
+     "j": 3,
+     "seconds": 3.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 518023,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRRX",
+     "j": 4,
+     "seconds": 2.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 523025,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRRX",
+     "j": 5,
+     "seconds": 2.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 22699,
+     "word": "RXLXLXLXRXRXRXRRRXRXRXRXRXLXLXLXLXRXLLXRXRRXRXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 8,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      3,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 8,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    1,
+    0,
+    0,
+    0,
+    9,
+    0,
+    8,
+    7,
+    6,
+    5,
+    4,
+    2
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 146193,
+     "word": "LXLXLXLXLXRRXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRR",
+     "j": 2,
+     "seconds": 0.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 137722,
+     "word": "LXLXLXLXLXRRXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRR",
+     "j": 3,
+     "seconds": 0.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 138066,
+     "word": "LXLXLXLXLXRRXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRR",
+     "j": 4,
+     "seconds": 0.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 71,
+     "states": 13633,
+     "word": "LXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXRXRXRXRXLLXLXRXRXLXLXLXLLXRXLLXLXLXLX",
+     "j": 6,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 71,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      2
+     ],
+     "j": 6,
+     "H": 71
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    0,
+    7,
+    6,
+    5,
+    4,
+    2
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 248238,
+     "word": "LLLLXRXRXRXLXLXLXLXLXRRXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRR",
+     "j": 2,
+     "seconds": 1.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 228045,
+     "word": "LLLLXRXRXRXLXLXLXLXLXRRXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRR",
+     "j": 3,
+     "seconds": 1.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 230623,
+     "word": "LLLLXRXRXRXLXLXLXLXLXRRXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRR",
+     "j": 4,
+     "seconds": 1.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 71,
+     "states": 13193,
+     "word": "LXLXLXRRRXLXLXLXLLXLXLXLXLXRXRXRXLLXRXLXLLXRXRXRXRXRXLXLXLXLLXLLXLXLXLX",
+     "j": 7,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 71,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      2
+     ],
+     "j": 7,
+     "H": 71
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5,
+    4,
+    2
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2478252,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRRXLXLXLXLXRXRXRXRX",
+     "j": 2,
+     "seconds": 15.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2032575,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRRXLXLXLXLXRXRXRXRX",
+     "j": 3,
+     "seconds": 12.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1919904,
+     "word": "LLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRRXLXLXLXLXRXRXRXRX",
+     "j": 4,
+     "seconds": 12.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 13248,
+     "word": "LXLXLXRRRXLXLXLXLLXLXLXLXRXLLXRXLLXRXRRXRXLXLXRXRXRXLXLXLXLLXLLXLXLXLX",
+     "j": 8,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      2
+     ],
+     "j": 8,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    1,
+    2,
+    0,
+    0,
+    0,
+    8,
+    9,
+    7,
+    0,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 3864864,
+     "word": "RXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRRXLXLXRXRXRRXRXRXRXR",
+     "j": 3,
+     "seconds": 26.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 3397523,
+     "word": "RXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRRXLXLXRXRXRRXRXRXRXR",
+     "j": 4,
+     "seconds": 22.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 3270672,
+     "word": "RXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRRXLXLXRXRXRRXRXRXRXR",
+     "j": 5,
+     "seconds": 21.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 69,
+     "states": 11997,
+     "word": "LLXLXLXLXRXRXRXRXRRRRXLXRXRRXLXLXLXLXRXRXRXRRXRXLXRXRXRXRXRXLXLXLXLXL",
+     "j": 9,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 69,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      1,
+      2,
+      0,
+      0,
+      0,
+      8,
+      9,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 9,
+     "H": 69
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    1,
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    6,
+    0,
+    7,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2150331,
+     "word": "RXRXLXLXRXRXRXLXLXLXLXLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRXRRXRXRXR",
+     "j": 3,
+     "seconds": 15.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1791489,
+     "word": "RXRXLXLXRXRXRXLXLXLXLXLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRXRRXRXRXR",
+     "j": 4,
+     "seconds": 11.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1688730,
+     "word": "RXRXLXLXRXRXRXLXLXLXLXLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRXRRXRXRXR",
+     "j": 5,
+     "seconds": 9.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 45290,
+     "word": "LLXLXLXLXLLLXLLXLXRRXLXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXL",
+     "j": 9,
+     "seconds": 0.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      1,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      6,
+      7,
+      5,
+      4
+     ],
+     "j": 9,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    1,
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 997717,
+     "word": "RXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXR",
+     "j": 3,
+     "seconds": 5.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 863859,
+     "word": "RXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXR",
+     "j": 4,
+     "seconds": 5.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 840762,
+     "word": "RXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXR",
+     "j": 5,
+     "seconds": 4.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 27308,
+     "word": "LLXLXLXLXLLLXLLXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXRXLXLXLXLXL",
+     "j": 9,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      1,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 9,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    2,
+    0,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    1,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 66,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 98921,
+     "word": "XLXRXRXLXLXLXRXRXRRXLXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXL",
+     "j": 2,
+     "seconds": 0.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 71989,
+     "word": "XLXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRXRXRXLXLXLXRXRXRRXLXL",
+     "j": 3,
+     "seconds": 0.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 50871,
+     "word": "XLXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXLXLXLXRXRXRRXLXL",
+     "j": 4,
+     "seconds": 0.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 50446,
+     "word": "XLXRXRXLXLXLXRXRXRRXLXRRRRXRXRXRXLLXLXRXRXLXLXLXRXRXRXRXRRXRXRXRXL",
+     "j": 5,
+     "seconds": 0.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      1,
+      4
+     ],
+     "j": 4,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    0,
+    7,
+    6,
+    5,
+    4,
+    1
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 915330,
+     "word": "RRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRXR",
+     "j": 2,
+     "seconds": 5.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 792261,
+     "word": "RRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRXR",
+     "j": 3,
+     "seconds": 4.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 764749,
+     "word": "RRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRRXRXRXRXRXR",
+     "j": 4,
+     "seconds": 4.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 123634,
+     "word": "XLXRXRXRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXRXLXLXRXRRXLXRXRXRRXRXRXRXL",
+     "j": 7,
+     "seconds": 0.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      1
+     ],
+     "j": 7,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    8,
+    0,
+    7,
+    9,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 65,
+   "deletions": [
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 65,
+     "states": 374780,
+     "word": "LLXLXLXLXLXRRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXLLXLXLXLXLX",
+     "j": 3,
+     "seconds": 2.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 65,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 65,
+     "states": 299269,
+     "word": "LLXLXLXLXLXRRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXLLXLXLXLXLX",
+     "j": 4,
+     "seconds": 1.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 65,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 65,
+     "states": 285597,
+     "word": "LLXLXLXLXLXRRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXLLXLXLXLXLX",
+     "j": 5,
+     "seconds": 1.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 65,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 30192,
+     "word": "XLXLXRXRXRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXRXLXLXLXRXRXRXRXRRXRXRXRXLX",
+     "j": 7,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      8,
+      7,
+      9,
+      6,
+      5,
+      4
+     ],
+     "j": 7,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    0,
+    8,
+    7,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 88165,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXLXRRXRXRXRXLXLXLXLXLX",
+     "j": 3,
+     "seconds": 0.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 88660,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXLXRRXRXRXRXLXLXLXLXLX",
+     "j": 4,
+     "seconds": 0.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 87389,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXLXRRXRXRXRXLXLXLXLXLX",
+     "j": 5,
+     "seconds": 0.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 73,
+     "states": 1285,
+     "word": "RXRXRXRXRXRXLLXLXLXLXRXRXRXRXLLXLXRXRXLXLXLXLLLXLXLXLXRXRXRXRXRXLLXLXLXLX",
+     "j": 7,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 73,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 7,
+     "H": 73
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    0,
+    7,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 114563,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXRXRXLXLXLXLXLXL",
+     "j": 3,
+     "seconds": 0.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 121923,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXRXRXLXLXLXLXLXL",
+     "j": 4,
+     "seconds": 0.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 121625,
+     "word": "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXRXRXLXLXLXLXLXL",
+     "j": 5,
+     "seconds": 0.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 74,
+     "states": 1593,
+     "word": "RXRXRXRXRXRXLXLXLXLXLXRXRXRXRXLLXLXRXRXLXLXLXLLLXLXLXLXRXRXRXRXRXLLXLXLXLX",
+     "j": 8,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 74,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 8,
+     "H": 74
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1466567,
+     "word": "RXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXRX",
+     "j": 3,
+     "seconds": 8.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1263343,
+     "word": "RXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXRX",
+     "j": 4,
+     "seconds": 7.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1237560,
+     "word": "RXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXRX",
+     "j": 5,
+     "seconds": 6.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 73,
+     "states": 1669,
+     "word": "RXRXRXRXRXRXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLLXLLLXLXLXLXRXRXRXRXRXLLXLXLXLX",
+     "j": 9,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 73,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 9,
+     "H": 73
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1557434,
+     "word": "XLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 3,
+     "seconds": 9.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1213351,
+     "word": "XLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 4,
+     "seconds": 6.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1094094,
+     "word": "XLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 5.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 72,
+     "states": 1701,
+     "word": "RXRXRXRXRXRXLXLXLXLXRXLLXRXRRXLXRXRXLXLXLLXLLLXLXLXLXRXRXRXRXRXLLXLXLXLX",
+     "j": 10,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 72,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 10,
+     "H": 72
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    0,
+    4
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 3616286,
+     "word": "XLXLXRXRXRXLXLXLXLXRXRXRXRRRRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 3,
+     "seconds": 24.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 3038814,
+     "word": "XLXLXRXRXRXLXLXLXLXRXRXRXRRRRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 4,
+     "seconds": 20.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 2662757,
+     "word": "XLXLXRXRXRXLXLXLXLXRXRXRXRRRRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 16.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 69,
+     "states": 1792,
+     "word": "RXRXRRXLXRXRXRXLXLXLXLXLXRXRXRXRXLXLXLLXLLLXLXLXLXRXRXRXRXRXLLXLXLXLX",
+     "j": 11,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 69,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 11,
+     "H": 69
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    4,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1953036,
+     "word": "LXLXLXLXRRXRXRXLXLXLXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 4,
+     "seconds": 11.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1619664,
+     "word": "LXLXLXLXRRXRXRXLXLXLXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 9.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1493555,
+     "word": "LXLXLXLXRRXRXRXLXLXLXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 6,
+     "seconds": 8.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 15011,
+     "word": "RXRRXLXLXLXRXRRRXLXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXRXRXLXLXLXLXLXL",
+     "j": 11,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      4,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5
+     ],
+     "j": 11,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    0,
+    2,
+    3,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 69,
+     "states": 7528,
+     "word": "XRXRXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRRRXL",
+     "j": 1,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 69,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2689275,
+     "word": "RRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXLXLXRXRRRXLXLXLX",
+     "j": 5,
+     "seconds": 16.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 51,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2495768,
+     "word": "RRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXLXLXRXRRRXLXLXLX",
+     "j": 6,
+     "seconds": 14.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 53,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2553838,
+     "word": "RRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXLXLXRXRRRXLXLXLX",
+     "j": 7,
+     "seconds": 14.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      2,
+      3,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5
+     ],
+     "j": 1,
+     "H": 69
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    0,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    8,
+    9,
+    7,
+    6,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 69,
+     "states": 5829,
+     "word": "XRXRXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRRRXRXRXRXRXRRXL",
+     "j": 1,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 69,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2289486,
+     "word": "RRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRRXLXRRXLXRRXLXLXLXLXRXRXLX",
+     "j": 5,
+     "seconds": 13.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 51,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2061481,
+     "word": "RRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRRXLXRRXLXRRXLXLXLXLXRXRXLX",
+     "j": 6,
+     "seconds": 11.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2062793,
+     "word": "RRRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRRXLXRRXLXRRXLXLXLXLXRXRXLX",
+     "j": 7,
+     "seconds": 11.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      8,
+      9,
+      7,
+      6,
+      5
+     ],
+     "j": 1,
+     "H": 69
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    2,
+    0,
+    3,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 3251,
+     "word": "XRXRXRXRRRXRXRXRXLXLXLXLXRXRXRXRXRRRXRXRXLXLXRXRRXLXLXLXLXRXRXRXRRXRXL",
+     "j": 2,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 522612,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXLLLXLXRRXLXLXLXRXRRRXLXLXLX",
+     "j": 5,
+     "seconds": 2.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 435498,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXLLLXLXRRXLXLXLXRXRRRXLXLXLX",
+     "j": 6,
+     "seconds": 2.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 453697,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXLLLXLXRRXLXLXLXRXRRRXLXLXLX",
+     "j": 7,
+     "seconds": 2.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      2,
+      3,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5
+     ],
+     "j": 2,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    2,
+    3,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2725779,
+     "word": "LLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 4,
+     "seconds": 16.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2308071,
+     "word": "LLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 12.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2151821,
+     "word": "LLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 6,
+     "seconds": 12.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 7375,
+     "word": "RXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRRRRRXLXRRXLXRRXLXRXRXLXLXLXLXLXL",
+     "j": 11,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      2,
+      3,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5
+     ],
+     "j": 11,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    2,
+    3,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 4412217,
+     "word": "LLXLXRXRXRXLXLXLXLXRXRXRXRRRRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 4,
+     "seconds": 29.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 3885592,
+     "word": "LLXLXRXRXRXLXLXLXLXRXRXRXRRRRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 23.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 3620033,
+     "word": "LLXLXRXRXRXLXLXLXLXRXRXRXRRRRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 6,
+     "seconds": 20.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 69,
+     "states": 7578,
+     "word": "RRXRXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRRRXL",
+     "j": 12,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 69,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      2,
+      3,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5
+     ],
+     "j": 12,
+     "H": 69
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    3,
+    1,
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    0,
+    6,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2121011,
+     "word": "XRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXR",
+     "j": 4,
+     "seconds": 11.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1891686,
+     "word": "XRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXR",
+     "j": 5,
+     "seconds": 9.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1859928,
+     "word": "XRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXR",
+     "j": 6,
+     "seconds": 9.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 11145,
+     "word": "RRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLLLXLXLXLXLXRRXRXRXRXLXLXLXLXL",
+     "j": 10,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      3,
+      1,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5
+     ],
+     "j": 10,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    3,
+    1,
+    2,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1927746,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXL",
+     "j": 4,
+     "seconds": 10.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1598498,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXL",
+     "j": 5,
+     "seconds": 8.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1482949,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXL",
+     "j": 6,
+     "seconds": 7.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 11413,
+     "word": "RRRXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLLLXLXLXLXLXRRXRXRXRXLXLXLXLXL",
+     "j": 11,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      3,
+      1,
+      2,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5
+     ],
+     "j": 11,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    8,
+    0,
+    6,
+    9,
+    7,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 644340,
+     "word": "RRXLXLXRRXRXLXLXLXLXLLXLXLXLXLXRRXRXRXRXRRXRRXRXRXLXLXLXRXRXRXR",
+     "j": 4,
+     "seconds": 3.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 513454,
+     "word": "RRXLXLXRRXRXLXLXLXLXLLXLXLXLXLXRRXRXRXRXRRXRRXRXRXLXLXLXRXRXRXR",
+     "j": 5,
+     "seconds": 2.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 55,
+     "slack": 4,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 479541,
+     "word": "RRXLXLXRRXRXLXLXLXLXLLXLXLXLXLXRRXRXRXRXRRXRRXRXRXLXLXLXRXRXRXR",
+     "j": 6,
+     "seconds": 2.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 131377,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRRXRRXRXLXLXRXLXLXLXRXRXRXRXRRXRXRXRXLX",
+     "j": 8,
+     "seconds": 0.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      8,
+      6,
+      9,
+      7,
+      5
+     ],
+     "j": 8,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    8,
+    9,
+    7,
+    6,
+    0,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2657779,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXLX",
+     "j": 4,
+     "seconds": 15.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2231725,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 12.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 2071089,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXLX",
+     "j": 6,
+     "seconds": 11.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 5749,
+     "word": "RXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXRRXLXLXLXLXLXL",
+     "j": 11,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      8,
+      9,
+      7,
+      6,
+      5
+     ],
+     "j": 11,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    8,
+    9,
+    7,
+    6,
+    5,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 61,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 4182875,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXLX",
+     "j": 4,
+     "seconds": 31.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 3623354,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 21.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 61,
+     "states": 3307217,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRRRRXLXLXRRXRXLXLXRXRXRRXRXRXRXLX",
+     "j": 6,
+     "seconds": 18.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 61,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 69,
+     "states": 5867,
+     "word": "RRXRXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRRRXRXRXRXRXRRXL",
+     "j": 12,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 69,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      8,
+      9,
+      7,
+      6,
+      5
+     ],
+     "j": 12,
+     "H": 69
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    7,
+    8,
+    0,
+    6,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2881462,
+     "word": "XRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRRRXRXRXRXRX",
+     "j": 4,
+     "seconds": 16.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2524588,
+     "word": "XRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRRRXRXRXRXRX",
+     "j": 5,
+     "seconds": 13.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2454149,
+     "word": "XRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRXRXLXLXRXRRRXRXRXRXRX",
+     "j": 6,
+     "seconds": 12.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 19108,
+     "word": "RRXLXRXRRXLXLXLXLXLLLXLXLXLXLLXLXLXLXLXRXRXRXRRXRRXRXRXRXLXLXLXLXLX",
+     "j": 10,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      7,
+      8,
+      6,
+      5
+     ],
+     "j": 10,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0,
+    5
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 2638162,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 4,
+     "seconds": 15.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 2160159,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 5,
+     "seconds": 11.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 59,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 1996030,
+     "word": "LXLXLXRXRXRXLXLXLXLXRXRXRXRRRXRRRXLXRXRXLXLXLXRXRXRXRRXRXRXRXLX",
+     "j": 6,
+     "seconds": 10.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 57,
+     "slack": 2,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 16886,
+     "word": "RXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXRXRXLXLXLXLXLXL",
+     "j": 11,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 59,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5
+     ],
+     "j": 11,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    5,
+    0,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 10737,
+     "word": "XRXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXRRXL",
+     "j": 1,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 584977,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 6,
+     "seconds": 2.9,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 521168,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 7,
+     "seconds": 2.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 52,
+     "slack": 7,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 563378,
+     "word": "RRRXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 8,
+     "seconds": 2.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 56,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6
+     ],
+     "j": 1,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    5,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 63,
+   "deletions": [
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 870223,
+     "word": "XLXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLLXLXLXLXRXRXRXLXLXRX",
+     "j": 5,
+     "seconds": 4.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 717885,
+     "word": "XLXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLLXLXLXLXRXRXRXLXLXRX",
+     "j": 6,
+     "seconds": 3.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 54,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 63,
+     "states": 690552,
+     "word": "XLXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLLXLXLXLXRXRXRXLXLXRX",
+     "j": 7,
+     "seconds": 3.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 63,
+      "projection": 56,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 10749,
+     "word": "XRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXRXRXLXLXLXLXLXL",
+     "j": 12,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6
+     ],
+     "j": 12,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    6,
+    5,
+    0,
+    4,
+    2,
+    3,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8,
+    7
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 23717,
+     "word": "LXRXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRRRXL",
+     "j": 2,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1946958,
+     "word": "RRXLXRXRXLXLXLXRXRXRXRRRRXRXLXLXRXRRXLXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 7,
+     "seconds": 10.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 50,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2069813,
+     "word": "RRXLXRXRXLXLXLXRXRXRXRRRRXRXLXLXRXRRXLXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 8,
+     "seconds": 11.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2359097,
+     "word": "RRXLXRXRXLXLXLXRXRXRXRRRRXRXLXLXRXRRXLXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 9,
+     "seconds": 13.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 54,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      6,
+      5,
+      4,
+      2,
+      3,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7
+     ],
+     "j": 2,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    7,
+    6,
+    0,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 62,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 11380,
+     "word": "LXLXLXRXRRXLXLXLXLXRXRXRXRRRRXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXRRXL",
+     "j": 2,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1405217,
+     "word": "RRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 8,
+     "seconds": 7.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1604275,
+     "word": "RRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 9,
+     "seconds": 8.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 53,
+     "slack": 6,
+     "status": "COMPLETE",
+     "H": 62,
+     "states": 1778739,
+     "word": "RRXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 10,
+     "seconds": 9.7,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 62,
+      "projection": 57,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8
+     ],
+     "j": 2,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    7,
+    6,
+    5,
+    0,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    9,
+    8
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 11542,
+     "word": "XLXLXLXRXLXLXRXRRXRXLXLXRXRXRXLXLXLXLXLLLLXLXLXLXRXRXRXRXRXLLXLXLXLX",
+     "j": 3,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1054604,
+     "word": "RXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 8,
+     "seconds": 5.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 52,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1115123,
+     "word": "RXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 9,
+     "seconds": 5.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1355942,
+     "word": "RXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 10,
+     "seconds": 7.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 54,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8
+     ],
+     "j": 3,
+     "H": 68
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    8,
+    7,
+    9,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 66,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 14992,
+     "word": "LLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRRXLXLXLXLXLXRXRXLX",
+     "j": 9,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 21562,
+     "word": "LLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLLLXLXLXRRRXLXLXRRRXLXLXLXLXLXRXRXLX",
+     "j": 10,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 26004,
+     "word": "LLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLLLXLXRRXLXRRXLXLXLXLXLXRRXLXRRXLXLX",
+     "j": 11,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 29765,
+     "word": "RXRXLXLXRXLLXRXRRRXLXLXRRRXLXLXRRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "j": 12,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      8,
+      7,
+      9,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0
+     ],
+     "j": 12,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    9,
+    8,
+    7,
+    6,
+    0,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 4232,
+     "word": "RXRXRXRXLXLXLXLXRXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL",
+     "j": 4,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2237596,
+     "word": "XRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 10,
+     "seconds": 12.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 53,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2652589,
+     "word": "XRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 11,
+     "seconds": 15.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2916239,
+     "word": "XRXLXLXLXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 12,
+     "seconds": 16.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0
+     ],
+     "j": 4,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    9,
+    8,
+    7,
+    6,
+    5,
+    0,
+    4,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 70,
+     "states": 4335,
+     "word": "LXLXLXLXLXRXLLXRXRRXRXLXLXRXRXRXLXLXLXLLXLLLXLXLXLXRXRXRXRXRXLLXLXLXLX",
+     "j": 5,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 70,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1034400,
+     "word": "LXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 10,
+     "seconds": 5.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 52,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1187732,
+     "word": "LXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 11,
+     "seconds": 6.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 54,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 50,
+     "slack": 9,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1469147,
+     "word": "LXLXRXRXLXLXLXRXRXRXRRRRXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXLX",
+     "j": 12,
+     "seconds": 8.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 54,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0
+     ],
+     "j": 5,
+     "H": 70
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    0,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 60,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 4235,
+     "word": "LXLLXLXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLLXLLLXLXLXLXRXRXRXRXRXLLXLXLXLX",
+     "j": 6,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1650835,
+     "word": "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXLXLXLXRXRXLX",
+     "j": 10,
+     "seconds": 8.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 51,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 1768837,
+     "word": "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXLXLXLXRXRXLX",
+     "j": 11,
+     "seconds": 9.6,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 51,
+     "slack": 8,
+     "status": "COMPLETE",
+     "H": 60,
+     "states": 2313859,
+     "word": "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRRXLXRRXLXLXLXLXRXRXLX",
+     "j": 12,
+     "seconds": 13.3,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 60,
+      "projection": 55,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0
+     ],
+     "j": 6,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    2,
+    1,
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "q": 59,
+   "status": "COMPLETE",
+   "A": 66,
+   "deletions": [
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 13078,
+     "word": "LLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLLXLXLXLXRRRRXLXLXLXRRRRXLXLXLXLX",
+     "j": 9,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 17020,
+     "word": "LLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLLXLXLXLXRRRRXLXLXLXRRRRXLXLXLXLX",
+     "j": 10,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 66,
+     "states": 23425,
+     "word": "LLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLLXLXLXLXRRRRXLXLXLXRRRRXLXLXLXLX",
+     "j": 11,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 66,
+      "projection": 58,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 56,
+     "slack": 3,
+     "status": "COMPLETE",
+     "H": 67,
+     "states": 27193,
+     "word": "RXRXLXLXRXLLXRXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRRXLXLXLXLXRXRXRRX",
+     "j": 12,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 67,
+      "projection": 58,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      2,
+      1,
+      3,
+      0,
+      0,
+      0
+     ],
+     "j": 12,
+     "H": 67
+    }
+   ],
+   "over_budget": false
+  }
+ ],
+ "over_budget_vectors": [],
+ "unresolved_vectors": [],
+ "scope": "finite: exhaustive over vectors with a zero whose deletion is at smaller-graph distance >= P-3 on this graph; silent elsewhere",
+ "method": "autoresearch/lift_targeted.py (lift_forward.forward_h per pair)",
+ "seconds": 5459.0
+}

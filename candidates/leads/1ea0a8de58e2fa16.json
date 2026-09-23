@@ -1,0 +1,213 @@
+{
+ "kind": "rules",
+ "name": "circular block insertion",
+ "notes": "Insert tokens 1..m into a contiguous circular block. Seek: short L/R until token r0 is at 0. Walk: XL (X then L) or RX (R then X) until predecessor sits at n-1; each pair rotates the tail by one and fixes the inserted token. Zeros stay outside and become one block, so the result is a root rotation; finish with the short L/R alignment. r2/r3 complete the two-move primitive atomically. | Provenance: grok-4.7, reasoning_effort=low, single call from the bubble seed with train feedback, 2026-09-22; 536 s, 39,338 reasoning tokens. Not from a campaign run; probe script in session scratchpad.",
+ "rules": [
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "r2",
+     1
+    ],
+    [
+     "eq",
+     "r3",
+     2
+    ]
+   ],
+   "do": "X",
+   "set": {
+    "r2": 0
+   }
+  },
+  {
+   "if": [
+    "eq",
+    "r2",
+    1
+   ],
+   "do": "L",
+   "set": {
+    "r2": 0
+   }
+  },
+  {
+   "if": [
+    "and",
+    "csorted",
+    [
+     "le",
+     [
+      "mul",
+      2,
+      "pos1"
+     ],
+     "n"
+    ]
+   ],
+   "do": "L"
+  },
+  {
+   "if": "csorted",
+   "do": "R"
+  },
+  {
+   "if": [
+    "eq",
+    "r0",
+    0
+   ],
+   "do": "L",
+   "set": {
+    "r0": 1
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "r0",
+     1
+    ],
+    [
+     "eq",
+     "a",
+     1
+    ]
+   ],
+   "do": "L",
+   "set": {
+    "r0": 2
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ],
+    [
+     "eq",
+     "last",
+     [
+      "sub",
+      "r0",
+      1
+     ]
+    ]
+   ],
+   "do": "L",
+   "set": {
+    "r0": [
+     "add",
+     "r0",
+     1
+    ]
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ],
+    [
+     "le",
+     [
+      "mul",
+      2,
+      [
+       "sum_tokens",
+       [
+        "if",
+        [
+         "eq",
+         "t",
+         [
+          "sub",
+          "r0",
+          1
+         ]
+        ],
+        "p",
+        0
+       ]
+      ]
+     ],
+     [
+      "sub",
+      "n",
+      1
+     ]
+    ]
+   ],
+   "do": "X",
+   "set": {
+    "r2": 1,
+    "r3": 1
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ]
+   ],
+   "do": "R",
+   "set": {
+    "r2": 1,
+    "r3": 2
+   }
+  },
+  {
+   "if": [
+    "le",
+    [
+     "mul",
+     2,
+     [
+      "sum_tokens",
+      [
+       "if",
+       [
+        "eq",
+        "t",
+        "r0"
+       ],
+       "p",
+       0
+      ]
+     ]
+    ],
+    "n"
+   ],
+   "do": "L"
+  }
+ ],
+ "default": "R"
+}

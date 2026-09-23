@@ -1,0 +1,47 @@
+{
+  "name": "grok-potential-adaevolve",
+  "description": "grok-4.20 (non-reasoning) proposes potential functions (local descent certificates). Reflection on stagnation by grok-4.7 (low effort). Costs are taken from xAI-reported usage; config rates only size reservations.",
+  "engine": "adaevolve",
+  "kinds": [
+    "potential"
+  ],
+  "seeds": [
+    "candidates/baselines/potential_naive.json"
+  ],
+  "max_proposals": 60,
+  "batch": 4,
+  "eval_workers": 4,
+  "islands": 3,
+  "seed": 1,
+  "provider": {
+    "type": "openai_compatible",
+    "base_url": "https://api.x.ai/v1",
+    "model": "grok-4.20-0309-non-reasoning",
+    "api_key_env": "XAI_API_KEY",
+    "input_usd_per_mtok": 1.25,
+    "output_usd_per_mtok": 2.5,
+    "max_spend_usd": 2.0,
+    "max_requests": 200,
+    "max_output_tokens": 3000,
+    "max_reasoning_tokens": 0,
+    "timeout_sec": 180,
+    "idle_timeout_sec": 60,
+    "repairs": 2
+  },
+  "insights_file": "prompts/insights.md",
+  "reflector": {
+    "type": "openai_compatible",
+    "base_url": "https://api.x.ai/v1",
+    "model": "grok-4.7",
+    "api_key_env": "XAI_API_KEY",
+    "input_usd_per_mtok": 2.2,
+    "output_usd_per_mtok": 6.6,
+    "max_spend_usd": 2.0,
+    "max_requests": 10,
+    "max_output_tokens": 3000,
+    "max_reasoning_tokens": 60000,
+    "reasoning_effort": "low",
+    "timeout_sec": 1500,
+    "idle_timeout_sec": 180
+  }
+}

@@ -1,0 +1,10 @@
+{"kind": "rules", "name": "rotating bubble sort with fixed cut",
+ "notes": "Linear bubble sort in the content frame: compare window (0,1), swap when key(a)>key(b) (zero key m+1), rotate L. rot tracks the content frame; no swap across the cut rot=n-1. Once the vector is a rotation of the root, rotate the short way.",
+ "rules": [
+   {"if": ["and", "csorted", ["le", ["mul", 2, "pos1"], "n"]], "do": "L"},
+   {"if": "csorted", "do": "R"},
+   {"if": ["and", ["ne", "rot", ["sub", "n", 1]],
+           ["gt", ["if", ["eq", "a", 0], ["add", "m", 1], "a"],
+                  ["if", ["eq", "b", 0], ["add", "m", 1], "b"]]], "do": "X"}
+ ],
+ "default": "L"}

@@ -1,0 +1,306 @@
+{
+ "m": 10,
+ "r": 3,
+ "n": 13,
+ "P": 63,
+ "budget_P_m_2": 71,
+ "k": 2,
+ "smaller_table": "bfs",
+ "far_layer_sizes": {
+  "63": 2,
+  "62": 10,
+  "61": 37
+ },
+ "pairs": 637,
+ "covered_vectors": 529,
+ "hist_H_minus_budget": {
+  "-10": 34,
+  "-9": 45,
+  "-8": 88,
+  "-7": 46,
+  "-6": 74,
+  "-5": 51,
+  "-4": 73,
+  "-3": 45,
+  "-2": 116,
+  "-1": 49,
+  "0": 13,
+  "1": 1,
+  "2": 2
+ },
+ "incomplete_pairs": [],
+ "flagged_vectors": [
+  {
+   "v": [
+    0,
+    0,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+   ],
+   "q": 63,
+   "status": "COMPLETE",
+   "A": 71,
+   "deletions": [
+    {
+     "d_small": 62,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 71,
+     "states": 35450,
+     "word": "LXRXRXRXLXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXRXLXLXLXLXLX",
+     "j": 0,
+     "seconds": 0.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 71,
+      "projection": 62,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 62,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 72,
+     "states": 35460,
+     "word": "XLXRXRXRXLXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXRXLXLXLXLXLX",
+     "j": 1,
+     "seconds": 0.2,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 72,
+      "projection": 62,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 63,
+     "slack": 0,
+     "status": "COMPLETE",
+     "H": 71,
+     "states": 81782,
+     "word": "LXRXRXRXLXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXRXLXLXLXLXLX",
+     "j": 12,
+     "seconds": 0.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 71,
+      "projection": 63,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      0,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+     ],
+     "j": 1,
+     "H": 72
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    10,
+    8,
+    0,
+    9,
+    7,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 63,
+   "status": "COMPLETE",
+   "A": 68,
+   "deletions": [
+    {
+     "d_small": 58,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 2057740,
+     "word": "LLLXLXRRXLXRXRXLXLXLXLXLXRXRXRXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXR",
+     "j": 2,
+     "seconds": 11.8,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 60,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 58,
+     "slack": 5,
+     "status": "COMPLETE",
+     "H": 68,
+     "states": 1722134,
+     "word": "LLLXLXRRXLXRXRXLXLXLXLXLXRXRXRXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXR",
+     "j": 3,
+     "seconds": 9.5,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 68,
+      "projection": 62,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 62,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 73,
+     "states": 88975,
+     "word": "LLLXLXLXLXRXLLXRXLLXRXRRXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+     "j": 6,
+     "seconds": 0.4,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 73,
+      "projection": 63,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      2,
+      1,
+      0,
+      0,
+      10,
+      8,
+      9,
+      7,
+      6,
+      5,
+      4,
+      3
+     ],
+     "j": 6,
+     "H": 73
+    }
+   ],
+   "over_budget": false
+  },
+  {
+   "v": [
+    3,
+    2,
+    1,
+    0,
+    0,
+    10,
+    9,
+    8,
+    0,
+    7,
+    6,
+    5,
+    4
+   ],
+   "q": 63,
+   "status": "INCOMPLETE",
+   "A": null,
+   "deletions": [
+    {
+     "d_small": 57,
+     "slack": 6,
+     "status": "INCOMPLETE",
+     "H": null,
+     "states": 4018354,
+     "reason": "state cap 4000000",
+     "j": 3,
+     "seconds": 21.7
+    },
+    {
+     "d_small": 57,
+     "slack": 6,
+     "status": "INCOMPLETE",
+     "H": null,
+     "states": 4085939,
+     "reason": "state cap 4000000",
+     "j": 4,
+     "seconds": 21.9
+    },
+    {
+     "d_small": 62,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 73,
+     "states": 14243,
+     "word": "RRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXRRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLX",
+     "j": 8,
+     "seconds": 0.1,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 73,
+      "projection": 62,
+      "visible_root": true
+     }
+    }
+   ],
+   "flagged_by": [
+    {
+     "u": [
+      3,
+      2,
+      1,
+      0,
+      0,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+     ],
+     "j": 8,
+     "H": 73
+    }
+   ],
+   "over_budget": false
+  }
+ ],
+ "over_budget_vectors": [],
+ "scope": "finite: exhaustive over vectors with a zero whose deletion is at smaller-graph distance >= P-2 on this graph; silent elsewhere",
+ "method": "autoresearch/lift_targeted.py (lift_forward.forward_h per pair)",
+ "seconds": 535.4
+}

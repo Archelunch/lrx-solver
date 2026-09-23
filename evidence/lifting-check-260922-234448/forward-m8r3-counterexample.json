@@ -1,0 +1,84 @@
+{
+ "m": 8,
+ "r": 3,
+ "n": 11,
+ "P": 42,
+ "budget_P_m_2": 48,
+ "smaller_table": "registry",
+ "results": [
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    7,
+    8,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 42,
+   "status": "COMPLETE",
+   "A": 49,
+   "deletions": [
+    {
+     "d_small": 41,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 49,
+     "states": 12598,
+     "word": "LXLXLXLXRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXRXLXLXLXLX",
+     "j": 2,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 49,
+      "projection": 41,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 41,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 49,
+     "states": 7359,
+     "word": "LXLXLXLXRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXRXLXLXLXLX",
+     "j": 3,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 49,
+      "projection": 41,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 41,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 49,
+     "states": 8204,
+     "word": "LXLXLXLXRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXRXLXLXLXLX",
+     "j": 4,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 49,
+      "projection": 41,
+      "visible_root": true
+     }
+    }
+   ]
+  }
+ ],
+ "method": "autoresearch/lift_forward.py (forward BFS with projection slack)",
+ "scope": "finite: these vectors on this graph only",
+ "seconds": 0.1
+}

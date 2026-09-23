@@ -1,0 +1,153 @@
+{
+ "m": 7,
+ "r": 3,
+ "n": 10,
+ "P": 33,
+ "budget_P_m_2": 38,
+ "smaller_table": "registry",
+ "results": [
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    7,
+    6,
+    5,
+    4,
+    3
+   ],
+   "q": 33,
+   "status": "COMPLETE",
+   "A": 42,
+   "deletions": [
+    {
+     "d_small": 33,
+     "slack": 0,
+     "status": "COMPLETE",
+     "H": 42,
+     "states": 1220,
+     "word": "LXLXRRXLXRRXLXRRRRXRXLXLXRXRXRRXRXRXLXLXRX",
+     "j": 2,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 42,
+      "projection": 33,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 33,
+     "slack": 0,
+     "status": "COMPLETE",
+     "H": 42,
+     "states": 324,
+     "word": "LXRXRXRRRXRXLXLXRXRXRRRXLXRRXLXRRXLXLXLXRX",
+     "j": 3,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 42,
+      "projection": 33,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 33,
+     "slack": 0,
+     "status": "COMPLETE",
+     "H": 43,
+     "states": 678,
+     "word": "LXRXRXRRRXRXLXLXRXRXRRXRXLXRRXLXRRXLXLXLXRX",
+     "j": 4,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 43,
+      "projection": 33,
+      "visible_root": true
+     }
+    }
+   ]
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    6,
+    7,
+    5,
+    4,
+    3
+   ],
+   "q": 33,
+   "status": "COMPLETE",
+   "A": 37,
+   "deletions": [
+    {
+     "d_small": 32,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 37,
+     "states": 6119,
+     "word": "LXLXLXLLLLXRXLXLXRXRXRXLXLXLLLXLXLXLX",
+     "j": 2,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 37,
+      "projection": 33,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 32,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 37,
+     "states": 3417,
+     "word": "LXLXLXLLLLXRXLXLXRXRXRXLXLXLLLXLXLXLX",
+     "j": 3,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 37,
+      "projection": 33,
+      "visible_root": true
+     }
+    },
+    {
+     "d_small": 32,
+     "slack": 1,
+     "status": "COMPLETE",
+     "H": 37,
+     "states": 3639,
+     "word": "LXLXLXLLLLXRXLXLXRXRXRXLXLXLLLXLXLXLX",
+     "j": 4,
+     "seconds": 0.0,
+     "replay": {
+      "terminal": true,
+      "valid": true,
+      "length": 37,
+      "projection": 33,
+      "visible_root": true
+     }
+    }
+   ]
+  }
+ ],
+ "method": "autoresearch/lift_forward.py (forward BFS with projection slack)",
+ "scope": "finite: these vectors on this graph only",
+ "seconds": 0.1
+}

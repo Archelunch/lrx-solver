@@ -1,0 +1,19 @@
+{
+  "name": "offline-rules-gepa",
+  "description": "No-API baseline with the gepa engine.",
+  "engine": "gepa",
+  "kinds": [
+    "rules"
+  ],
+  "seeds": [
+    "candidates/baselines/rules_bubble.json"
+  ],
+  "max_proposals": 24,
+  "batch": 4,
+  "eval_workers": 4,
+  "islands": 3,
+  "seed": 1,
+  "provider": {
+    "type": "offline"
+  }
+}

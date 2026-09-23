@@ -1,0 +1,33 @@
+{
+  "name": "grok47-rules-sequential",
+  "description": "grok-4.7 (reasoning, low effort) refines the circular-block-insertion lead. ~9 min and ~$0.27 per call measured 2026-09-22; 8 proposals ~ $2.2.",
+  "engine": "sequential",
+  "kinds": [
+    "rules"
+  ],
+  "seeds": [
+    "candidates/leads/1ea0a8de58e2fa16.json"
+  ],
+  "max_proposals": 8,
+  "batch": 4,
+  "eval_workers": 4,
+  "islands": 3,
+  "seed": 1,
+  "provider": {
+    "type": "openai_compatible",
+    "base_url": "https://api.x.ai/v1",
+    "model": "grok-4.7",
+    "api_key_env": "XAI_API_KEY",
+    "input_usd_per_mtok": 2.2,
+    "output_usd_per_mtok": 6.6,
+    "max_spend_usd": 3.0,
+    "max_requests": 12,
+    "max_output_tokens": 3000,
+    "max_reasoning_tokens": 60000,
+    "reasoning_effort": "low",
+    "timeout_sec": 1500,
+    "idle_timeout_sec": 180,
+    "repairs": 1
+  },
+  "insights_file": "prompts/insights.md"
+}

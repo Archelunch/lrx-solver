@@ -1,0 +1,1 @@
+{"T": 42, "candidate_hash": "6ff08052bb698f26", "complete": true, "evaluator_sha256": "a61c43f2aa5ae68d", "failures": 0, "holds_on_graph": true, "m": 8, "r": 2, "radius": 42, "scope": "finite: this graph only", "states": 1814400, "value_max": 158, "within_T": false, "worst": []}

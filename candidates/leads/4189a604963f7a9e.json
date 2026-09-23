@@ -1,0 +1,419 @@
+{
+ "kind": "rules",
+ "name": "block insertion, early-X finish",
+ "notes": "Parent circular insertion, plus two never-longer cuts. Skip homing token 1: relatives fix pred once token 2 is at 0, so a short seek to token 2 dominates the old init. On the XL walk, stop when pred is at position 1 and X (advance r0) instead of XL plus a completion rotate: cost 1+min(q,n-q) vs 2+min(q-1,n-q+1), equal if the next token is in the near half and 2 shorter otherwise. RX walks, block lock, and csorted alignment unchanged. | Promoted from grok47-rules-sequential-260923-003924.",
+ "rules": [
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "r2",
+     1
+    ],
+    [
+     "eq",
+     "r3",
+     2
+    ]
+   ],
+   "do": "X",
+   "set": {
+    "r2": 0
+   }
+  },
+  {
+   "if": [
+    "eq",
+    "r2",
+    1
+   ],
+   "do": "L",
+   "set": {
+    "r2": 0
+   }
+  },
+  {
+   "if": [
+    "and",
+    "csorted",
+    [
+     "le",
+     [
+      "mul",
+      2,
+      "pos1"
+     ],
+     "n"
+    ]
+   ],
+   "do": "L"
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "csorted",
+     0
+    ],
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ],
+    [
+     "lt",
+     "r0",
+     "m"
+    ],
+    [
+     "eq",
+     "b",
+     [
+      "sub",
+      "r0",
+      1
+     ]
+    ]
+   ],
+   "do": "X",
+   "set": {
+    "r0": [
+     "add",
+     "r0",
+     1
+    ]
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "csorted",
+     0
+    ],
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ],
+    [
+     "le",
+     "r0",
+     "m"
+    ],
+    [
+     "eq",
+     "last",
+     [
+      "sub",
+      "r0",
+      1
+     ]
+    ],
+    [
+     "or",
+     [
+      "eq",
+      "r0",
+      "m"
+     ],
+     [
+      "le",
+      [
+       "mul",
+       2,
+       [
+        "sum_tokens",
+        [
+         "if",
+         [
+          "eq",
+          "t",
+          [
+           "add",
+           "r0",
+           1
+          ]
+         ],
+         "p",
+         0
+        ]
+       ]
+      ],
+      "n"
+     ]
+    ]
+   ],
+   "do": "L",
+   "set": {
+    "r0": [
+     "add",
+     "r0",
+     1
+    ]
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "csorted",
+     0
+    ],
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ],
+    [
+     "lt",
+     "r0",
+     "m"
+    ],
+    [
+     "eq",
+     "last",
+     [
+      "sub",
+      "r0",
+      1
+     ]
+    ]
+   ],
+   "do": "R",
+   "set": {
+    "r0": [
+     "add",
+     "r0",
+     1
+    ]
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "csorted",
+     0
+    ],
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ],
+    [
+     "le",
+     [
+      "mul",
+      2,
+      [
+       "sum_tokens",
+       [
+        "if",
+        [
+         "eq",
+         "t",
+         [
+          "sub",
+          "r0",
+          1
+         ]
+        ],
+        "p",
+        0
+       ]
+      ]
+     ],
+     [
+      "sub",
+      "n",
+      1
+     ]
+    ]
+   ],
+   "do": "X",
+   "set": {
+    "r2": 1,
+    "r3": 1
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "csorted",
+     0
+    ],
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ]
+   ],
+   "do": "R",
+   "set": {
+    "r2": 1,
+    "r3": 2
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "csorted",
+     0
+    ],
+    [
+     "ge",
+     "r0",
+     1
+    ],
+    [
+     "le",
+     "r0",
+     "m"
+    ],
+    [
+     "ne",
+     "a",
+     "r0"
+    ],
+    [
+     "le",
+     [
+      "mul",
+      2,
+      [
+       "sum_tokens",
+       [
+        "if",
+        [
+         "eq",
+         "t",
+         "r0"
+        ],
+        "p",
+        0
+       ]
+      ]
+     ],
+     "n"
+    ]
+   ],
+   "do": "L"
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "csorted",
+     0
+    ],
+    [
+     "eq",
+     "r0",
+     0
+    ],
+    [
+     "ge",
+     "m",
+     2
+    ],
+    [
+     "le",
+     [
+      "mul",
+      2,
+      [
+       "sum_tokens",
+       [
+        "if",
+        [
+         "eq",
+         "t",
+         2
+        ],
+        "p",
+        0
+       ]
+      ]
+     ],
+     "n"
+    ]
+   ],
+   "do": "L",
+   "set": {
+    "r0": 2
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "csorted",
+     0
+    ],
+    [
+     "eq",
+     "r0",
+     0
+    ],
+    [
+     "ge",
+     "m",
+     2
+    ]
+   ],
+   "do": "R",
+   "set": {
+    "r0": 2
+   }
+  },
+  {
+   "if": [
+    "eq",
+    "r0",
+    0
+   ],
+   "do": "L",
+   "set": {
+    "r0": 1
+   }
+  }
+ ],
+ "default": "R"
+}

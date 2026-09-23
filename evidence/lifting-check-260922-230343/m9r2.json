@@ -1,0 +1,115 @@
+{
+ "m": 9,
+ "r": 2,
+ "n": 11,
+ "smaller_radius_P": 45,
+ "projection_cap_q": 45,
+ "lift_budget": 52,
+ "conjectured_T": 52,
+ "visible_states": 19958400,
+ "marked_states": 39916800,
+ "no_admissible_lift": 0,
+ "finite_over_budget": 0,
+ "max_finite_A": 52,
+ "histogram_A_minus_cap": {
+  "-3": 170,
+  "-2": 44,
+  "-1": 7,
+  "0": 2
+ },
+ "status": "COMPLETE",
+ "scope": "finite: this graph only",
+ "lifting_bound_holds_on_this_graph": true,
+ "true_radius": 52,
+ "A_below_distance_violations": 0,
+ "A_equals_distance": 19958400,
+ "worst": [
+  {
+   "v": [
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "A": 52,
+   "d": 52
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3
+   ],
+   "A": 52,
+   "d": 52
+  },
+  {
+   "v": [
+    2,
+    1,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    4,
+    5,
+    3
+   ],
+   "A": 51,
+   "d": 51
+  },
+  {
+   "v": [
+    1,
+    2,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3
+   ],
+   "A": 51,
+   "d": 51
+  },
+  {
+   "v": [
+    1,
+    0,
+    0,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2
+   ],
+   "A": 51,
+   "d": 51
+  }
+ ],
+ "seconds": 68.6,
+ "source": "src/lrx/lifting_fast.py"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "offline-rules-sequential",
+  "description": "No-API baseline with the sequential engine.",
+  "engine": "sequential",
+  "kinds": [
+    "rules"
+  ],
+  "seeds": [
+    "candidates/baselines/rules_bubble.json"
+  ],
+  "max_proposals": 24,
+  "batch": 4,
+  "eval_workers": 4,
+  "islands": 3,
+  "seed": 1,
+  "provider": {
+    "type": "offline"
+  }
+}

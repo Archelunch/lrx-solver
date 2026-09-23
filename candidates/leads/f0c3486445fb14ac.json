@@ -1,0 +1,260 @@
+{
+ "kind": "rules",
+ "name": "circular block insertion v2",
+ "notes": "Model description: when seeking r0, prefer the short direction (2*pos <= n); r1 remembers the current target token; prefer X when a > b > 0; extra finish rule for r0 = m+1. | Measured (train probes, evaluator): sound on all sanity/train graphs; value_max unchanged vs parent 1ea0a8de58e2fa16 on m8r2/m8r3/m9r2 (84/99/104), so the ratio stays 2.0625; gap_mean lower by about 3 on each m>=8 train graph. The model's claim of a ~40% max-excess reduction is false. | Provenance: grok-4.20 non-reasoning, exploit mode (free rewrite) of the lead, campaign s02-a1-exploit-sequential, 2026-09-23. | Promoted from s02-a1-exploit-sequential-260923-003924.",
+ "rules": [
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "r2",
+     1
+    ],
+    [
+     "eq",
+     "r3",
+     2
+    ]
+   ],
+   "do": "X",
+   "set": {
+    "r2": 0
+   }
+  },
+  {
+   "if": [
+    "eq",
+    "r2",
+    1
+   ],
+   "do": "L",
+   "set": {
+    "r2": 0
+   }
+  },
+  {
+   "if": [
+    "and",
+    "csorted",
+    [
+     "le",
+     [
+      "mul",
+      2,
+      "pos1"
+     ],
+     "n"
+    ]
+   ],
+   "do": "L"
+  },
+  {
+   "if": "csorted",
+   "do": "R"
+  },
+  {
+   "if": [
+    "eq",
+    "r0",
+    0
+   ],
+   "do": "L",
+   "set": {
+    "r0": 1,
+    "r1": 1
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "r0",
+     1
+    ],
+    [
+     "eq",
+     "a",
+     1
+    ]
+   ],
+   "do": "L",
+   "set": {
+    "r0": 2,
+    "r1": 2
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ],
+    [
+     "eq",
+     "last",
+     [
+      "sub",
+      "r0",
+      1
+     ]
+    ]
+   ],
+   "do": "L",
+   "set": {
+    "r0": [
+     "add",
+     "r0",
+     1
+    ],
+    "r1": [
+     "add",
+     "r1",
+     1
+    ]
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ],
+    [
+     "le",
+     [
+      "mul",
+      2,
+      [
+       "sum_tokens",
+       [
+        "if",
+        [
+         "eq",
+         "t",
+         [
+          "sub",
+          "r0",
+          1
+         ]
+        ],
+        "p",
+        0
+       ]
+      ]
+     ],
+     [
+      "sub",
+      "n",
+      1
+     ]
+    ]
+   ],
+   "do": "X",
+   "set": {
+    "r2": 1,
+    "r3": 1
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "a",
+     "r0"
+    ],
+    [
+     "gt",
+     "r0",
+     1
+    ]
+   ],
+   "do": "R",
+   "set": {
+    "r2": 1,
+    "r3": 2
+   }
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "r1",
+     "r0"
+    ],
+    [
+     "le",
+     [
+      "mul",
+      2,
+      [
+       "sum_tokens",
+       [
+        "if",
+        [
+         "eq",
+         "t",
+         "r0"
+        ],
+        "p",
+        0
+       ]
+      ]
+     ],
+     "n"
+    ]
+   ],
+   "do": "L"
+  },
+  {
+   "if": [
+    "and",
+    [
+     "gt",
+     "a",
+     "b"
+    ],
+    [
+     "gt",
+     "b",
+     0
+    ]
+   ],
+   "do": "X"
+  },
+  {
+   "if": [
+    "and",
+    [
+     "eq",
+     "r0",
+     [
+      "add",
+      "m",
+      1
+     ]
+    ],
+    "csorted"
+   ],
+   "do": "L"
+  }
+ ],
+ "default": "R"
+}

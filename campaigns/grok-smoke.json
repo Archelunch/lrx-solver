@@ -1,0 +1,32 @@
+{
+  "name": "grok-smoke",
+  "description": "One live request (plus at most one repair) with the fast model. Spend cap $0.10.",
+  "engine": "adaevolve",
+  "kinds": [
+    "rules"
+  ],
+  "seeds": [
+    "candidates/baselines/rules_bubble.json"
+  ],
+  "max_proposals": 1,
+  "batch": 1,
+  "eval_workers": 4,
+  "islands": 3,
+  "seed": 1,
+  "provider": {
+    "type": "openai_compatible",
+    "base_url": "https://api.x.ai/v1",
+    "model": "grok-4.20-0309-non-reasoning",
+    "api_key_env": "XAI_API_KEY",
+    "input_usd_per_mtok": 1.25,
+    "output_usd_per_mtok": 2.5,
+    "max_spend_usd": 0.1,
+    "max_requests": 2,
+    "max_output_tokens": 3000,
+    "max_reasoning_tokens": 0,
+    "timeout_sec": 180,
+    "idle_timeout_sec": 60,
+    "repairs": 2
+  },
+  "insights_file": "prompts/insights.md"
+}

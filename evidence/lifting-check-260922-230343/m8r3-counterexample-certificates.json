@@ -1,0 +1,61 @@
+{
+ "v": [
+  2,
+  1,
+  0,
+  0,
+  0,
+  7,
+  8,
+  6,
+  5,
+  4,
+  3
+ ],
+ "m": 8,
+ "r": 3,
+ "P": 42,
+ "lift_budget": 48,
+ "lift_witnesses": {
+  "2": {
+   "H": 49,
+   "word": "LXLXLXLXRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXRXLXLXLXLX",
+   "length": 49,
+   "replay_terminal": true,
+   "projection_length": 41
+  },
+  "3": {
+   "H": 49,
+   "word": "LXLXLXLXRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXRXLXLXLXLX",
+   "length": 49,
+   "replay_terminal": true,
+   "projection_length": 41
+  },
+  "4": {
+   "H": 49,
+   "word": "LXLXLXLXRXRXRXRXRRRXRXLXLXRXRXRRXRXRXRXRXLXLXLXLX",
+   "length": 49,
+   "replay_terminal": true,
+   "projection_length": 41
+  }
+ },
+ "geodesic": {
+  "d": 47,
+  "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+  "replays_to_root": true
+ },
+ "geodesic_projection_by_mark": {
+  "2": {
+   "terminal_for_this_mark": true,
+   "projection_length": 43
+  },
+  "3": {
+   "terminal_for_this_mark": true,
+   "projection_length": 43
+  },
+  "4": {
+   "terminal_for_this_mark": true,
+   "projection_length": 43
+  }
+ }
+}

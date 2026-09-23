@@ -1,0 +1,5 @@
+{"kind": "radius", "name": "linear radius formula for m>=8, binom(n,2) below",
+ "notes": "Empirical formula (m-2)n-(m^2-3m-4)/2 from the progress notes, section 6 (references/source-manifest.md) (equals T_m(n) identically); fails below m=8, so binom(n,2) is used there.",
+ "expr": ["if", ["ge", "m", 8],
+          ["sub", ["mul", ["sub", "m", 2], "n"], ["floordiv", ["sub", ["mul", "m", "m"], ["add", ["mul", 3, "m"], 4]], 2]],
+          ["floordiv", ["mul", "n", ["sub", "n", 1]], 2]]}

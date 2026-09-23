@@ -1,0 +1,3 @@
+{"kind": "beam", "name": "beam on displacement + cyclic inversions",
+ "expr": ["add", "disp_sum", ["mul", 2, "cinv"], ["mul", 2, ["sub", 1, "zeros_block"]]],
+ "beam_width": 8}
