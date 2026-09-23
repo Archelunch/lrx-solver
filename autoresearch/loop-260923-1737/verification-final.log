@@ -1,0 +1,347 @@
+test_bfs_parent_pointers (test_bfs.TestBFS.test_bfs_parent_pointers)
+Test that parent pointers form a valid BFS tree. ... ok
+test_bfs_path_reconstruction (test_bfs.TestBFS.test_bfs_path_reconstruction)
+Test path reconstruction from parent pointers. ... ok
+test_bfs_resource_limits (test_bfs.TestBFS.test_bfs_resource_limits)
+Test that BFS respects resource limits. ... ok
+test_bfs_small_complete (test_bfs.TestBFS.test_bfs_small_complete)
+Test BFS on small complete problem. ... ok
+test_bfs_n4_m2_r2 (test_bfs.TestBFSOnSmallInstances.test_bfs_n4_m2_r2)
+Test on n=4 (m=2, r=2). ... ok
+test_bfs_n5_m3_r2 (test_bfs.TestBFSOnSmallInstances.test_bfs_n5_m3_r2)
+Test on n=5 (m=3, r=2). ... ok
+test_bfs_no_duplicate_distances (test_bfs.TestBFSOnSmallInstances.test_bfs_no_duplicate_distances)
+Verify BFS correctly computes shortest distances. ... ok
+test_max_queue_tracking (test_bfs.TestBFSResourceTracking.test_max_queue_tracking)
+Test that max queue size is correctly tracked. ... ok
+test_verbose_output (test_bfs.TestBFSResourceTracking.test_verbose_output)
+Test verbose mode doesn't crash. ... ok
+test_already_sorted_returns_empty_word (test_candidate_runner.TestBeamSearch.test_already_sorted_returns_empty_word) ... ok
+test_deterministic_same_seed_policy (test_candidate_runner.TestBeamSearch.test_deterministic_same_seed_policy) ... ok
+test_different_weights_may_differ (test_candidate_runner.TestBeamSearch.test_different_weights_may_differ) ... ok
+test_returns_unsolved_string_when_budget_tiny (test_candidate_runner.TestBeamSearch.test_returns_unsolved_string_when_budget_tiny) ... ok
+test_sorts_2_2 (test_candidate_runner.TestBeamSearch.test_sorts_2_2)
+Test a slightly larger instance. ... ok
+test_sorts_simple_2_1 (test_candidate_runner.TestBeamSearch.test_sorts_simple_2_1) ... ok
+test_sorts_zero_at_front_2_1 (test_candidate_runner.TestBeamSearch.test_sorts_zero_at_front_2_1) ... ok
+test_sorts_zero_in_middle_2_1 (test_candidate_runner.TestBeamSearch.test_sorts_zero_in_middle_2_1) ... ok
+test_unsolved_never_crashes (test_candidate_runner.TestBeamSearch.test_unsolved_never_crashes) ... ok
+test_creation (test_candidate_runner.TestCandidate.test_creation) ... ok
+test_hash_deterministic (test_candidate_runner.TestCandidate.test_hash_deterministic) ... ok
+test_hash_differs_for_different_words (test_candidate_runner.TestCandidate.test_hash_differs_for_different_words) ... ok
+test_to_dict_keys (test_candidate_runner.TestCandidate.test_to_dict_keys) ... ok
+test_invalid_letter_rejected (test_candidate_runner.TestCandidateEvaluator.test_invalid_letter_rejected) ... ok
+test_terminal_flag_is_bool (test_candidate_runner.TestCandidateEvaluator.test_terminal_flag_is_bool) ... ok
+test_to_dict_structure (test_candidate_runner.TestCandidateEvaluator.test_to_dict_structure) ... ok
+test_valid_word (test_candidate_runner.TestCandidateEvaluator.test_valid_word) ... ok
+test_deterministic (test_candidate_runner.TestOfflineMockProposer.test_deterministic) ... ok
+test_generates_words (test_candidate_runner.TestOfflineMockProposer.test_generates_words) ... ok
+test_deterministic (test_candidate_runner.TestOfflinePolicyProposer.test_deterministic) ... ok
+test_different_seeds (test_candidate_runner.TestOfflinePolicyProposer.test_different_seeds) ... ok
+test_each_policy_parseable (test_candidate_runner.TestOfflinePolicyProposer.test_each_policy_parseable) ... ok
+test_generates_correct_count (test_candidate_runner.TestOfflinePolicyProposer.test_generates_correct_count) ... ok
+test_all_zero_weights_rejected (test_candidate_runner.TestParsePolicy.test_all_zero_weights_rejected) ... ok
+test_beam_width_over_cap_rejected (test_candidate_runner.TestParsePolicy.test_beam_width_over_cap_rejected) ... ok
+test_beam_width_zero_rejected (test_candidate_runner.TestParsePolicy.test_beam_width_zero_rejected) ... ok
+test_invalid_json_string_rejected (test_candidate_runner.TestParsePolicy.test_invalid_json_string_rejected) ... ok
+test_max_steps_over_cap_rejected (test_candidate_runner.TestParsePolicy.test_max_steps_over_cap_rejected) ... ok
+test_max_steps_zero_rejected (test_candidate_runner.TestParsePolicy.test_max_steps_zero_rejected) ... ok
+test_missing_key_rejected (test_candidate_runner.TestParsePolicy.test_missing_key_rejected) ... ok
+test_negative_weight_rejected (test_candidate_runner.TestParsePolicy.test_negative_weight_rejected) ... ok
+test_non_int_weight_rejected (test_candidate_runner.TestParsePolicy.test_non_int_weight_rejected) ... ok
+test_returns_copy (test_candidate_runner.TestParsePolicy.test_returns_copy) ... ok
+test_unknown_key_rejected (test_candidate_runner.TestParsePolicy.test_unknown_key_rejected) ... ok
+test_valid_dict (test_candidate_runner.TestParsePolicy.test_valid_dict) ... ok
+test_valid_json_string (test_candidate_runner.TestParsePolicy.test_valid_json_string) ... ok
+test_weight_over_max_rejected (test_candidate_runner.TestParsePolicy.test_weight_over_max_rejected) ... ok
+test_wrong_type_rejected (test_candidate_runner.TestParsePolicy.test_wrong_type_rejected) ... ok
+test_wrong_weights_length_rejected (test_candidate_runner.TestParsePolicy.test_wrong_weights_length_rejected) ... ok
+test_can_afford_request (test_candidate_runner.TestProposalBudget.test_can_afford_request) ... ok
+test_cost_tracking (test_candidate_runner.TestProposalBudget.test_cost_tracking) ... ok
+test_offline_mode (test_candidate_runner.TestProposalBudget.test_offline_mode) ... ok
+test_baseline_on_canonical_root (test_candidate_runner.TestRunExperiment.test_baseline_on_canonical_root) ... ok
+test_best_of_n_on_unsorted (test_candidate_runner.TestRunExperiment.test_best_of_n_on_unsorted) ... ok
+test_custom_proposer (test_candidate_runner.TestRunExperiment.test_custom_proposer)
+Custom proposer object is called. ... ok
+test_dataset_hash_changes_with_states (test_candidate_runner.TestRunExperiment.test_dataset_hash_changes_with_states) ... ok
+test_invalid_m_raises (test_candidate_runner.TestRunExperiment.test_invalid_m_raises) ... ok
+test_invalid_mode_raises (test_candidate_runner.TestRunExperiment.test_invalid_mode_raises) ... ok
+test_output_file_exclusive_create (test_candidate_runner.TestRunExperiment.test_output_file_exclusive_create) ... ok
+test_output_file_fields (test_candidate_runner.TestRunExperiment.test_output_file_fields) ... ok
+test_output_file_written (test_candidate_runner.TestRunExperiment.test_output_file_written) ... ok
+test_parallel_runs_without_error (test_candidate_runner.TestRunExperiment.test_parallel_runs_without_error) ... ok
+test_policy_hash_is_deterministic (test_candidate_runner.TestRunExperiment.test_policy_hash_is_deterministic) ... ok
+test_result_is_solved_not_failure (test_candidate_runner.TestRunExperiment.test_result_is_solved_not_failure)
+(2,1,0) must be marked SOLVED, not FAILURE (they are distinct). ... ok
+test_returns_json_serialisable_dict (test_candidate_runner.TestRunExperiment.test_returns_json_serialisable_dict) ... ok
+test_sequential_on_unsorted (test_candidate_runner.TestRunExperiment.test_sequential_on_unsorted) ... ok
+test_summary_keys (test_candidate_runner.TestRunExperiment.test_summary_keys) ... ok
+test_no_zero_raises (test_candidate_runner.TestStateFromVisible.test_no_zero_raises) ... ok
+test_zero_at_end (test_candidate_runner.TestStateFromVisible.test_zero_at_end) ... ok
+test_zero_at_front (test_candidate_runner.TestStateFromVisible.test_zero_at_front) ... ok
+test_zero_in_middle (test_candidate_runner.TestStateFromVisible.test_zero_in_middle) ... ok
+test_large_m_small_word (test_certificates.TestCertificateEdgeCases.test_large_m_small_word)
+Test on configuration with larger m and short word. ... ok
+test_single_letter_words (test_certificates.TestCertificateEdgeCases.test_single_letter_words)
+Test replay of single-letter words. ... ok
+test_state_consistency (test_certificates.TestCertificateEdgeCases.test_state_consistency)
+Test that state conversions are consistent. ... ok
+test_empty_word (test_certificates.TestCertificateValidator.test_empty_word)
+Test replay of empty word. ... ok
+test_projection_tracking (test_certificates.TestCertificateValidator.test_projection_tracking)
+Test that projection length is correctly computed. ... ok
+test_replay_invalid_word (test_certificates.TestCertificateValidator.test_replay_invalid_word)
+Test that invalid letters are rejected. ... ok
+test_replay_long_word (test_certificates.TestCertificateValidator.test_replay_long_word)
+Test replaying a longer word. ... ok
+test_replay_simple_word (test_certificates.TestCertificateValidator.test_replay_simple_word)
+Test replaying a simple word. ... ok
+test_termination_detection (test_certificates.TestCertificateValidator.test_termination_detection)
+Test detection of terminal states. ... ok
+test_family_parameters (test_certificates.TestFamilyWords.test_family_parameters)
+Test parameter generation for family. ... ok
+test_family_vector (test_certificates.TestFamilyWords.test_family_vector)
+Test vector generation for family. ... ok
+test_family_word_generation (test_certificates.TestFamilyWords.test_family_word_generation)
+Test word generation formula. ... ok
+test_family_word_k2 (test_certificates.TestFamilyWords.test_family_word_k2)
+Test canonical word for k=2. ... ok
+test_family_word_k2_replay (test_certificates.TestFamilyWords.test_family_word_k2_replay)
+Test replaying k=2 canonical word. ... ok
+test_family_word_k3 (test_certificates.TestFamilyWords.test_family_word_k3)
+Test canonical word for k=3. ... ok
+test_actual_visible_bfs (test_cli.CliTests.test_actual_visible_bfs) ... ok
+test_count_information (test_cli.CliTests.test_count_information) ... ok
+test_family_and_smoke (test_cli.CliTests.test_family_and_smoke) ... ok
+test_large_dp_refused_before_enumeration (test_cli.CliTests.test_large_dp_refused_before_enumeration) ... ok
+test_live_cli_requires_opt_in (test_cli.CliTests.test_live_cli_requires_opt_in) ... ok
+test_mocked_live_cli_integration (test_cli.CliTests.test_mocked_live_cli_integration) ... ok
+test_projection_complete_even_when_bound_fails (test_cli.CliTests.test_projection_complete_even_when_bound_fails) ... ok
+test_wrong_word_and_illegal_input_are_not_success (test_cli.CliTests.test_wrong_word_and_illegal_input_are_not_success) ... ok
+test_campaign_configs_are_well_formed (test_cli_v2.CliV2Tests.test_campaign_configs_are_well_formed) ... ok
+test_certify_features_prompt (test_cli_v2.CliV2Tests.test_certify_features_prompt) ... ok
+test_eval_and_feedback (test_cli_v2.CliV2Tests.test_eval_and_feedback) ... ok
+test_live_commands_refuse_without_flag (test_cli_v2.CliV2Tests.test_live_commands_refuse_without_flag) ... ok
+test_table_verify_and_build (test_cli_v2.CliV2Tests.test_table_verify_and_build) ... ok
+test_mixed_summary_schemas (test_cli_v2.LeaderboardTests.test_mixed_summary_schemas) ... ok
+test_baselines_are_valid (test_dsl_candidates.CandidateTests.test_baselines_are_valid) ... ok
+test_beam_solves_small (test_dsl_candidates.CandidateTests.test_beam_solves_small) ... ok
+test_bubble_rules_sort_every_small_state (test_dsl_candidates.CandidateTests.test_bubble_rules_sort_every_small_state) ... ok
+test_cycle_and_step_cap (test_dsl_candidates.CandidateTests.test_cycle_and_step_cap) ... ok
+test_hash_ignores_name_and_notes (test_dsl_candidates.CandidateTests.test_hash_ignores_name_and_notes) ... ok
+test_registers (test_dsl_candidates.CandidateTests.test_registers) ... ok
+test_schema_rejections (test_dsl_candidates.CandidateTests.test_schema_rejections) ... ok
+test_bad_divisor_is_eval_error (test_dsl_candidates.DslTests.test_bad_divisor_is_eval_error) ... ok
+test_compile_and_eval (test_dsl_candidates.DslTests.test_compile_and_eval) ... ok
+test_rejections (test_dsl_candidates.DslTests.test_rejections) ... ok
+test_cinv_matches_brute_force (test_dsl_candidates.FeatureTests.test_cinv_matches_brute_force) ... ok
+test_hand_computed_n5 (test_dsl_candidates.FeatureTests.test_hand_computed_n5) ... ok
+test_rotation_features (test_dsl_candidates.FeatureTests.test_rotation_features) ... ok
+test_random_json_never_crashes_validator (test_dsl_candidates.FuzzTests.test_random_json_never_crashes_validator) ... ok
+test_dist_of (test_dsl_candidates.TokenDistanceOpTests.test_dist_of) ... ok
+test_broken_rules_are_unsolved_not_counterexamples (test_evaluator.EvaluatorTests.test_broken_rules_are_unsolved_not_counterexamples) ... ok
+test_certify_whole_graph (test_evaluator.EvaluatorTests.test_certify_whole_graph) ... ok
+test_deterministic (test_evaluator.EvaluatorTests.test_deterministic) ... ok
+test_feedback_is_compact (test_evaluator.EvaluatorTests.test_feedback_is_compact) ... ok
+test_graph_filter_keeps_sanity_gate (test_evaluator.EvaluatorTests.test_graph_filter_keeps_sanity_gate) ... ok
+test_heldout_is_not_feedback (test_evaluator.EvaluatorTests.test_heldout_is_not_feedback) ... ok
+test_invalid_candidate (test_evaluator.EvaluatorTests.test_invalid_candidate) ... ok
+test_lock_mismatch_refused (test_evaluator.EvaluatorTests.test_lock_mismatch_refused) ... ok
+test_potential_local_check (test_evaluator.EvaluatorTests.test_potential_local_check) ... ok
+test_radius_kind (test_evaluator.EvaluatorTests.test_radius_kind) ... ok
+test_rules_words_replayed_and_scored (test_evaluator.EvaluatorTests.test_rules_words_replayed_and_scored) ... ok
+test_sanity_is_exhaustive (test_evaluator.EvaluatorTests.test_sanity_is_exhaustive) ... ok
+test_sound_bound_is_feasible (test_evaluator.EvaluatorTests.test_sound_bound_is_feasible) ... ok
+test_unsound_bound_stops_at_sanity (test_evaluator.EvaluatorTests.test_unsound_bound_stops_at_sanity) ... ok
+test_exhaustive_literal_oracle_and_both_recurrences (test_exact_dp.ExactTests.test_exhaustive_literal_oracle_and_both_recurrences) ... ok
+test_family_both_markings (test_exact_dp.ExactTests.test_family_both_markings) ... ok
+test_finite_family_exact_distance_ball_certificates (test_exact_dp.ExactTests.test_finite_family_exact_distance_ball_certificates) ... ok
+test_incomplete_or_wrong_oracle_is_rejected (test_exact_dp.ExactTests.test_incomplete_or_wrong_oracle_is_rejected) ... ok
+test_input_rejection (test_exact_dp.ExactTests.test_input_rejection) ... ok
+test_isolated_mark_and_zero_budget_closure (test_exact_dp.ExactTests.test_isolated_mark_and_zero_budget_closure) ... ok
+test_resource_limits_never_mean_infinity (test_exact_dp.ExactTests.test_resource_limits_never_mean_infinity) ... ok
+test_visible_count_and_known_small_radius (test_exact_dp.ExactTests.test_visible_count_and_known_small_radius) ... ok
+test_matches_pure_python_dp_on_every_state (test_lifting_fast.LiftingFastTests.test_matches_pure_python_dp_on_every_state) ... ok
+test_report_matches_evaluate_projection (test_lifting_fast.LiftingFastTests.test_report_matches_evaluate_projection) ... ok
+test_witness_words_replay (test_lifting_fast.LiftingFastTests.test_witness_words_replay) ... ok
+test_engines (test_llm_campaign.CampaignTests.test_engines) ... ok
+test_unknown_key_and_disallowed_kind (test_llm_campaign.CampaignTests.test_unknown_key_and_disallowed_kind) ... ok
+test_dotenv (test_llm_campaign.ClientTests.test_dotenv) ... ok
+test_http_url_rejected (test_llm_campaign.ClientTests.test_http_url_rejected) ... ok
+test_missing_key (test_llm_campaign.ClientTests.test_missing_key) ... ok
+test_missing_usage_charges_reservation (test_llm_campaign.ClientTests.test_missing_usage_charges_reservation) ... ok
+test_network_disabled_by_default (test_llm_campaign.ClientTests.test_network_disabled_by_default) ... ok
+test_network_error_names_cause (test_llm_campaign.ClientTests.test_network_error_names_cause) ... ok
+test_non_stream_path (test_llm_campaign.ClientTests.test_non_stream_path) ... ok
+test_provider_cost_and_reasoning_text (test_llm_campaign.ClientTests.test_provider_cost_and_reasoning_text) ... ok
+test_reasoning_budget_abort_charges_reservation (test_llm_campaign.ClientTests.test_reasoning_budget_abort_charges_reservation) ... ok
+test_success_counts_reasoning_tokens (test_llm_campaign.ClientTests.test_success_counts_reasoning_tokens) ... ok
+test_wall_clock_cap (test_llm_campaign.ClientTests.test_wall_clock_cap) ... ok
+test_concurrent_reservations_respect_cap (test_llm_campaign.LedgerTests.test_concurrent_reservations_respect_cap) ... ok
+test_invalid_config (test_llm_campaign.LedgerTests.test_invalid_config) ... ok
+test_limits_and_settle (test_llm_campaign.LedgerTests.test_limits_and_settle) ... ok
+test_spend_cap (test_llm_campaign.LedgerTests.test_spend_cap) ... ok
+test_deterministic_and_valid (test_llm_campaign.OfflineMutatorTests.test_deterministic_and_valid) ... ok
+test_every_prompt_example_is_valid (test_llm_campaign.PromptExampleTests.test_every_prompt_example_is_valid) ... ok
+test_json_error_is_specific (test_llm_campaign.PromptExampleTests.test_json_error_is_specific) ... ok
+test_extract_candidate (test_llm_campaign.PromptTests.test_extract_candidate) ... ok
+test_live_provider_needs_flag (test_llm_campaign.PromptTests.test_live_provider_needs_flag) ... ok
+test_llm_proposer_parses_reply (test_llm_campaign.PromptTests.test_llm_proposer_parses_reply) ... ok
+test_prefix_stable_and_mentions_dsl (test_llm_campaign.PromptTests.test_prefix_stable_and_mentions_dsl) ... ok
+test_repair_limit_and_kind_check (test_llm_campaign.PromptTests.test_repair_limit_and_kind_check) ... ok
+test_repair_turn_fixes_invalid_candidate (test_llm_campaign.PromptTests.test_repair_turn_fixes_invalid_candidate) ... ok
+test_charge_reservation_on_failure (test_provider_adapter.TestBudgetLedger.test_charge_reservation_on_failure) ... ok
+test_commit_invalid_negative_tokens_raises (test_provider_adapter.TestBudgetLedger.test_commit_invalid_negative_tokens_raises) ... ok
+test_commit_non_int_tokens_raises (test_provider_adapter.TestBudgetLedger.test_commit_non_int_tokens_raises) ... ok
+test_initial_state (test_provider_adapter.TestBudgetLedger.test_initial_state) ... ok
+test_invalid_max_spend_raises (test_provider_adapter.TestBudgetLedger.test_invalid_max_spend_raises) ... ok
+test_invalid_rate_raises (test_provider_adapter.TestBudgetLedger.test_invalid_rate_raises) ... ok
+test_no_refund_after_charge_reservation (test_provider_adapter.TestBudgetLedger.test_no_refund_after_charge_reservation) ... ok
+test_reservation_clears_after_commit (test_provider_adapter.TestBudgetLedger.test_reservation_clears_after_commit) ... ok
+test_reserve_and_commit (test_provider_adapter.TestBudgetLedger.test_reserve_and_commit) ... ok
+test_reserve_returns_false_when_over_budget (test_provider_adapter.TestBudgetLedger.test_reserve_returns_false_when_over_budget) ... ok
+test_contains_parameters (test_provider_adapter.TestBuildPrompt.test_contains_parameters) ... ok
+test_does_not_contain_secrets (test_provider_adapter.TestBuildPrompt.test_does_not_contain_secrets) ... ok
+test_hint_included (test_provider_adapter.TestBuildPrompt.test_hint_included) ... ok
+test_embedded_in_text (test_provider_adapter.TestExtractJsonObject.test_embedded_in_text) ... ok
+test_no_eval_on_arbitrary_text (test_provider_adapter.TestExtractJsonObject.test_no_eval_on_arbitrary_text)
+Ensure we're using json.loads, not eval. ... ok
+test_no_object_raises (test_provider_adapter.TestExtractJsonObject.test_no_object_raises) ... ok
+test_plain_json (test_provider_adapter.TestExtractJsonObject.test_plain_json) ... ok
+test_unterminated_raises (test_provider_adapter.TestExtractJsonObject.test_unterminated_raises) ... ok
+test_different_seeds_differ (test_provider_adapter.TestOfflineMockProposerProvider.test_different_seeds_differ) ... ok
+test_reproducible (test_provider_adapter.TestOfflineMockProposerProvider.test_reproducible) ... ok
+test_words_contain_only_valid_letters (test_provider_adapter.TestOfflineMockProposerProvider.test_words_contain_only_valid_letters) ... ok
+test_offline_mode_cannot_afford (test_provider_adapter.TestProposalBudgetProvider.test_offline_mode_cannot_afford) ... ok
+test_update_and_cost (test_provider_adapter.TestProposalBudgetProvider.test_update_and_cost) ... ok
+test_credentials_rejected (test_provider_adapter.TestValidateHttpsUrl.test_credentials_rejected) ... ok
+test_http_rejected (test_provider_adapter.TestValidateHttpsUrl.test_http_rejected) ... ok
+test_query_rejected (test_provider_adapter.TestValidateHttpsUrl.test_query_rejected) ... ok
+test_valid_url (test_provider_adapter.TestValidateHttpsUrl.test_valid_url) ... ok
+test_attach_ledger_type_check (test_provider_adapter.TestXAIAdapterConstruction.test_attach_ledger_type_check) ... ok
+test_default_allow_network_is_false (test_provider_adapter.TestXAIAdapterConstruction.test_default_allow_network_is_false) ... ok
+test_http_url_raises (test_provider_adapter.TestXAIAdapterConstruction.test_http_url_raises) ... ok
+test_propose_raises_when_network_disabled (test_provider_adapter.TestXAIAdapterConstruction.test_propose_raises_when_network_disabled) ... ok
+test_propose_raises_without_ledger (test_provider_adapter.TestXAIAdapterConstruction.test_propose_raises_without_ledger) ... ok
+test_repr_does_not_contain_api_key (test_provider_adapter.TestXAIAdapterConstruction.test_repr_does_not_contain_api_key) ... ok
+test_repr_shows_model_and_url (test_provider_adapter.TestXAIAdapterConstruction.test_repr_shows_model_and_url) ... ok
+test_str_does_not_contain_api_key (test_provider_adapter.TestXAIAdapterConstruction.test_str_does_not_contain_api_key) ... ok
+test_http_error_charges_reservation (test_provider_adapter.TestXAIAdapterHTTPErrors.test_http_error_charges_reservation) ... ok
+test_missing_api_key_raises (test_provider_adapter.TestXAIAdapterHTTPErrors.test_missing_api_key_raises)
+XAI_API_KEY not set -> ValueError before any network call. ... ok
+test_url_error_charges_reservation (test_provider_adapter.TestXAIAdapterHTTPErrors.test_url_error_charges_reservation) ... ok
+test_api_key_not_in_request_repr (test_provider_adapter.TestXAIAdapterHTTPSuccess.test_api_key_not_in_request_repr)
+Secret must not appear in any logged/printed data from adapter. ... ok
+test_ledger_committed_on_success (test_provider_adapter.TestXAIAdapterHTTPSuccess.test_ledger_committed_on_success) ... ok
+test_successful_request_returns_policy (test_provider_adapter.TestXAIAdapterHTTPSuccess.test_successful_request_returns_policy) ... ok
+test_redirect_charges_reservation (test_provider_adapter.TestXAIAdapterRedirectRejection.test_redirect_charges_reservation) ... ok
+test_request_cap_enforced (test_provider_adapter.TestXAIAdapterRequestCap.test_request_cap_enforced) ... ok
+test_float_usage_tokens_charges_reservation (test_provider_adapter.TestXAIAdapterUsageValidation.test_float_usage_tokens_charges_reservation) ... ok
+test_missing_usage_field_charges_reservation (test_provider_adapter.TestXAIAdapterUsageValidation.test_missing_usage_field_charges_reservation) ... ok
+test_negative_usage_tokens_charges_reservation (test_provider_adapter.TestXAIAdapterUsageValidation.test_negative_usage_tokens_charges_reservation) ... ok
+test_finite_rates_and_limits_required (test_safety.ProviderSafety.test_finite_rates_and_limits_required) ... ok
+test_over_cap_provider_usage_stops_campaign (test_safety.ProviderSafety.test_over_cap_provider_usage_stops_campaign) ... ok
+test_oversize_response_and_bad_usage_keep_reservations (test_safety.ProviderSafety.test_oversize_response_and_bad_usage_keep_reservations) ... ok
+test_pending_reservation_cannot_be_overwritten (test_safety.ProviderSafety.test_pending_reservation_cannot_be_overwritten) ... ok
+test_prompt_not_truncated_silently (test_safety.ProviderSafety.test_prompt_not_truncated_silently) ... ok
+test_real_redirect_handler_refuses (test_safety.ProviderSafety.test_real_redirect_handler_refuses) ... ok
+test_runner_uses_adapter_and_accounts_usage (test_safety.ProviderSafety.test_runner_uses_adapter_and_accounts_usage) ... ok
+test_empty_word_preserved_in_logs (test_safety.SearchSafety.test_empty_word_preserved_in_logs) ... ok
+test_inputs_are_rejected_before_search (test_safety.SearchSafety.test_inputs_are_rejected_before_search) ... ok
+test_invalid_json_not_silently_replaced_with_default (test_safety.SearchSafety.test_invalid_json_not_silently_replaced_with_default) ... ok
+test_parallel_order_and_budget_are_reproducible (test_safety.SearchSafety.test_parallel_order_and_budget_are_reproducible) ... ok
+test_sequential_receives_real_parent_and_feedback (test_safety.SearchSafety.test_sequential_receives_real_parent_and_feedback) ... ok
+test_incomplete_is_never_cached (test_search_budgeted.CacheTests.test_incomplete_is_never_cached) ... ok
+test_reuse_invalidation_corruption_and_heldout_isolation (test_search_budgeted.CacheTests.test_reuse_invalidation_corruption_and_heldout_isolation) ... ok
+test_evox_reflects_when_only_mean_score_improved (test_search_budgeted.ObjectiveTests.test_evox_reflects_when_only_mean_score_improved) ... ok
+test_worst_ratio_precedes_mean_and_failures_precede_ratio (test_search_budgeted.ObjectiveTests.test_worst_ratio_precedes_mean_and_failures_precede_ratio) ... ok
+test_zero_heldout_really_disables_evaluation (test_search_budgeted.ObjectiveTests.test_zero_heldout_really_disables_evaluation) ... ok
+test_only_provably_unsorted_conditions_are_exempt (test_search_contract.FinishingGuardTests.test_only_provably_unsorted_conditions_are_exempt) ... ok
+test_real_insertion_rule_can_change_but_finisher_cannot (test_search_contract.FinishingGuardTests.test_real_insertion_rule_can_change_but_finisher_cannot) ... ok
+test_full_batch_repeats_target_instead_of_focusing_passed_sanity (test_search_contract.RatioFocusTests.test_full_batch_repeats_target_instead_of_focusing_passed_sanity) ... ok
+test_sanity_failure_is_still_eligible_for_repair (test_search_contract.RatioFocusTests.test_sanity_failure_is_still_eligible_for_repair) ... ok
+test_campaign_kinds_reach_reflector_and_restrict_candidate_shapes (test_search_contract.ReflectionContractTests.test_campaign_kinds_reach_reflector_and_restrict_candidate_shapes) ... ok
+test_adaevolve_explore_cap (test_search_edit_mode.EditCampaignTests.test_adaevolve_explore_cap) ... ok
+test_bad_values (test_search_edit_mode.EditCampaignTests.test_bad_values) ... ok
+test_sequential_edit_campaign (test_search_edit_mode.EditCampaignTests.test_sequential_edit_campaign) ... ok
+test_rewrite_is_rejected_then_repaired (test_search_edit_mode.LLMEditTests.test_rewrite_is_rejected_then_repaired) ... ok
+test_unrepaired_rewrite_is_not_scored (test_search_edit_mode.LLMEditTests.test_unrepaired_rewrite_is_not_scored) ... ok
+test_offline_edit_stays_within_limit (test_search_edit_mode.OfflineEditTests.test_offline_edit_stays_within_limit) ... ok
+test_counts (test_search_edit_mode.RuleEditTests.test_counts) ... ok
+test_violation_messages (test_search_edit_mode.RuleEditTests.test_violation_messages) ... ok
+test_flag_controls_feedback (test_search_feedback_words.FeedbackWordsCampaignTests.test_flag_controls_feedback) ... ok
+test_compress_adds_words_only_with_spec_and_large_m (test_search_feedback_words.WordComparisonTests.test_compress_adds_words_only_with_spec_and_large_m) ... ok
+test_heldout_graphs_never_used (test_search_feedback_words.WordComparisonTests.test_heldout_graphs_never_used) ... ok
+test_non_rules_or_invalid_gets_nothing (test_search_feedback_words.WordComparisonTests.test_non_rules_or_invalid_gets_nothing) ... ok
+test_words_replay_and_optimal_is_shortest (test_search_feedback_words.WordComparisonTests.test_words_replay_and_optimal_is_shortest) ... ok
+test_all_small_visible_states_at_both_sides_of_bound (test_search_lift_decision.LiftDecisionTests.test_all_small_visible_states_at_both_sides_of_bound) ... ok
+test_resource_exhaustion_is_not_a_negative_answer (test_search_lift_decision.LiftDecisionTests.test_resource_exhaustion_is_not_a_negative_answer) ... ok
+test_root_stops_after_one_zero_deletion (test_search_lift_decision.LiftDecisionTests.test_root_stops_after_one_zero_deletion) ... ok
+test_check_vector_replays_witnesses (test_search_lift_tools.LiftForwardTest.test_check_vector_replays_witnesses) ... ok
+test_forward_equals_layer_dp_on_marked_states (test_search_lift_tools.LiftForwardTest.test_forward_equals_layer_dp_on_marked_states) ... ok
+test_state_cap_is_incomplete_not_infinite (test_search_lift_tools.LiftForwardTest.test_state_cap_is_incomplete_not_infinite) ... ok
+test_every_layer_equals_h_layers (test_search_lift_tools.LiftSweepTest.test_every_layer_equals_h_layers) ... ok
+test_listed_vectors_carry_deletion_data (test_search_lift_tools.LiftSweepTest.test_listed_vectors_carry_deletion_data) ... ok
+test_reshape_min_equals_minimum_at (test_search_lift_tools.LiftSweepTest.test_reshape_min_equals_minimum_at) ... ok
+test_row_at_P_matches_check_graph (test_search_lift_tools.LiftSweepTest.test_row_at_P_matches_check_graph) ... ok
+test_window_is_monotone_and_stops_when_exact (test_search_lift_tools.LiftSweepTest.test_window_is_monotone_and_stops_when_exact) ... ok
+test_capped_flagged_vectors_are_unresolved_not_cleared (test_search_lift_tools.LiftTargetedTest.test_capped_flagged_vectors_are_unresolved_not_cleared) ... ok
+test_far_layer_only_is_partial (test_search_lift_tools.LiftTargetedTest.test_far_layer_only_is_partial) ... ok
+test_full_coverage_reproduces_over_budget_list (test_search_lift_tools.LiftTargetedTest.test_full_coverage_reproduces_over_budget_list) ... ok
+test_full_controller_words_identical_on_all_m4r2_states (test_search_simplify.SimplifyTests.test_full_controller_words_identical_on_all_m4r2_states) ... ok
+test_lookup_matches_sum_including_out_of_range_registers (test_search_simplify.SimplifyTests.test_lookup_matches_sum_including_out_of_range_registers) ... ok
+test_token_dependent_target_is_not_rewritten (test_search_simplify.SimplifyTests.test_token_dependent_target_is_not_rewritten) ... ok
+test_adaevolve_paper_formulas (test_search_v3.CampaignV3Tests.test_adaevolve_paper_formulas) ... ok
+test_async_sequential_with_history (test_search_v3.CampaignV3Tests.test_async_sequential_with_history) ... ok
+test_bad_values (test_search_v3.CampaignV3Tests.test_bad_values) ... ok
+test_evox_windows_and_strategy_changes (test_search_v3.CampaignV3Tests.test_evox_windows_and_strategy_changes) ... ok
+test_gepa_pxn_focus_and_merge_cap (test_search_v3.CampaignV3Tests.test_gepa_pxn_focus_and_merge_cap) ... ok
+test_potential_archive_falls_back_to_sanity_stopped (test_search_v3.CampaignV3Tests.test_potential_archive_falls_back_to_sanity_stopped) ... ok
+test_select_failures_potential_run (test_search_v3.CampaignV3Tests.test_select_failures_potential_run) ... ok
+test_select_failures_ranks_fewer_failing_states_first (test_search_v3.CampaignV3Tests.test_select_failures_ranks_fewer_failing_states_first) ... ok
+test_tactics_are_tracked (test_search_v3.CampaignV3Tests.test_tactics_are_tracked) ... ok
+test_compress_includes_detail_only_for_potential_spec (test_search_v3.DescentFeedbackTests.test_compress_includes_detail_only_for_potential_spec) ... ok
+test_detail_matches_definition (test_search_v3.DescentFeedbackTests.test_detail_matches_definition) ... ok
+test_llm_proposer_passes_context_and_reflect_tasks (test_search_v3.PromptContextTests.test_llm_proposer_passes_context_and_reflect_tasks) ... ok
+test_user_prompt_sections (test_search_v3.PromptContextTests.test_user_prompt_sections) ... ok
+test_parse_tactics (test_search_v3.StrategyParsingTests.test_parse_tactics) ... ok
+test_validate_strategy (test_search_v3.StrategyParsingTests.test_validate_strategy) ... ok
+test_root_operations_preserve_structure (test_state.TestMarkedStateConsistency.test_root_operations_preserve_structure)
+Test that operations preserve vector structure. ... ok
+test_round_trip_with_vector (test_state.TestMarkedStateConsistency.test_round_trip_with_vector)
+Test conversion between vector and state. ... ok
+test_canonical_root (test_state.TestStateOperations.test_canonical_root)
+Test canonical root generation. ... ok
+test_cyclic_rotations (test_state.TestStateOperations.test_cyclic_rotations)
+Test L and R rotations. ... ok
+test_insert_remove_zero (test_state.TestStateOperations.test_insert_remove_zero)
+Test zero insertion and removal. ... ok
+test_is_terminal (test_state.TestStateOperations.test_is_terminal)
+Test terminal state detection. ... ok
+test_marked_L (test_state.TestStateOperations.test_marked_L)
+Test marked-zero L transitions. ... ok
+test_marked_R (test_state.TestStateOperations.test_marked_R)
+Test marked-zero R transitions. ... ok
+test_marked_X (test_state.TestStateOperations.test_marked_X)
+Test marked-zero X transitions. ... ok
+test_smaller_root (test_state.TestStateOperations.test_smaller_root)
+Test smaller root generation. ... ok
+test_swap_X (test_state.TestStateOperations.test_swap_X)
+Test swap operation X. ... ok
+test_neighbours_match_literal_moves (test_table_bfs.RankerTests.test_neighbours_match_literal_moves) ... ok
+test_rank_unrank_bijection (test_table_bfs.RankerTests.test_rank_unrank_bijection) ... ok
+test_distances_match_independent_reference_bfs (test_table_bfs.TableTests.test_distances_match_independent_reference_bfs) ... ok
+test_known_radii (test_table_bfs.TableTests.test_known_radii) ... ok
+test_parallel_build_identical (test_table_bfs.TableTests.test_parallel_build_identical) ... ok
+test_refuses_before_allocation (test_table_bfs.TableTests.test_refuses_before_allocation) ... ok
+test_write_load_roundtrip_and_integrity (test_table_bfs.TableTests.test_write_load_roundtrip_and_integrity) ... ok
+test_follow_stops_at_end (test_trace_report.TraceReportTests.test_follow_stops_at_end) ... ok
+test_logs_prompts_evals_batches (test_trace_report.TraceReportTests.test_logs_prompts_evals_batches) ... ok
+test_report_escapes_model_text (test_trace_report.TraceReportTests.test_report_escapes_model_text) ... ok
+test_reports (test_trace_report.TraceReportTests.test_reports) ... ok
+test_trace_views (test_trace_report.TraceReportTests.test_trace_views) ... ok
+
+----------------------------------------------------------------------
+Ran 301 tests in 8.292s
+
+OK

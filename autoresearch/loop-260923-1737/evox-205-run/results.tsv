@@ -1,0 +1,26 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	49ab346cb44b2f1b	rules	seed	None		-76.3415	False	keep	0	anchor token 1 and pull token 2
+4	1	7b59b81080b890e1	rules	exploit	0	0	-82.8253	False	discard	0.078898	anchor nearby token 1 before seeking 2
+4	2	eae7c77711f52027	rules	exploit	0	0	-1081.3584	False	discard	0.211756	anchor token 1 when closer than token 2
+4	3	None	None	exploit	0	0	-1000000.0	False	invalid	0.220138	anchor token 1 and pull token 2
+4	4	d6be8f16c2dcf744	rules	exploit	0	0	-76.3068	False	keep	0.08041	anchor token 1 and pull token 2
+8	5	None	None	explore	0	4	-1000000.0	False	invalid	0.600184	
+8	6	f19638a00cfc75e2	rules	explore	0	4	-466.2707	False	discard	0.091332	circular bubble then short rotate
+8	7	fb34bb73b5182b5a	rules	merge	0	4,0	-242.6449	False	discard	0.376784	two-ended shorter carry
+8	8	1a75e16e0e4fa771	rules	explore	0	4	-1958.3567	False	discard	0.31845	both-ends cocktail bubble
+12	9	None	None	edit	0	4	-1000000.0	False	invalid	0.204238	park pos1 then anchor pull
+12	10	None	None	exploit	0	4	-1000000.0	False	invalid	0.180068	
+12	11	f93b4dd47d057f93	rules	explore	0	0	-302.1127	False	discard	0.16481	counted XL arc bubble
+12	12	ad74027c3e5d643d	rules	merge	0	4,0	-92.6285	False	discard	0.081214	anchor-1 then counted XL insert
+16	13	c2a0caf872a07e12	rules	merge	0	4,0	-76.1917	False	keep	0.103076	anchor pos1=1 then pull
+16	14	None	None	exploit	0	4	-1000000.0	False	invalid	0.251872	T plus small-m slack
+16	15	6f2c5c801b03d565	rules	exploit	0	4	-82.5821	False	discard	0.135088	anchor token 1 and pull token 2
+16	16	685754ace6fa893b	rules	explore	0	4	-1468.9859	False	discard	0.211264	near-anchor then insert
+20	17	767416a6af8488cc	rules	explore	0	13	-1737.5536	False	discard	0.259736	zero-cursor cocktail passes
+20	18	678c0bec0a4cf947	rules	explore	0	6	-1073.8759	False	discard	0.293848	zero-cursor arc bubble
+20	19	f5e0e3786e9c6aba	rules	merge	0	13,15	-305.9583	False	discard	0.122984	zero-cursor counted XL bubble
+20	20	8d8e23ade44c7cd1	rules	explore	0	15	-1176.3964	False	discard	0.206794	zero-block cursor bubble
+24	21	None	None	edit	0	13	-1000000.0	False	invalid	0.22322	
+24	22	831e97a94f37b817	rules	merge	0	13,15	-1076.7595	False	discard	0.145916	insert then slide zero block
+24	23	a1c7c077f927e33d	rules	edit	0	13	-81.8214	False	discard	0.240068	anchor pos1=1 then pull
+24	24	None	None	exploit	0	13	-1000000.0	False	invalid	0.0	

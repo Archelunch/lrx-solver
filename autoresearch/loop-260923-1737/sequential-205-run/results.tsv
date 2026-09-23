@@ -1,0 +1,26 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	49ab346cb44b2f1b	rules	seed	None		-76.3415	False	keep	0	anchor token 1 and pull token 2
+4	1	702f25539e2d196c	rules	exploit	0	0	-1347.1601	False	discard	0.194702	anchor token 1 when it is already near the front
+4	2	6a24742f037a3e0f	rules	exploit	0	0	-78.9525	False	discard	0.33736	anchor token 1 when it is half a turn from token 2
+4	3	55ecfbe31b60c487	rules	exploit	0	0	-76.3415	False	discard	0.323214	anchor token 1 and pull token 2
+4	4	12231e9f91230db4	rules	exploit	0	0	-76.3415	False	discard	0.080692	anchor token 1 and pull token 2
+8	5	1e2018ffe55e1693	rules	exploit	0	0	-73.616	False	keep	0.344616	front-align token 1 then XL
+8	6	86757a9788ff52ca	rules	exploit	0	0	-87.3365	False	discard	0.148308	anchor pos1=2 then XL-pull 2
+8	7	e42aab361415d464	rules	exploit	0	0	-76.3089	False	discard	0.601072	skip already-adjacent insert
+8	8	fdeb46b1d00b2964	rules	exploit	0	0	-76.3247	False	discard	0.164422	anchor token 1 and pull token 2
+12	9	931d8b3c1bc3aa44	rules	exploit	0	5	-79.0655	False	discard	0.056348	front-align token 1 then XL
+12	10	10eda6e172503413	rules	exploit	0	5	-1265.714	False	discard	0.234102	two-sided mid anchor
+12	11	fc0198eac90bff05	rules	exploit	0	5	-73.616	False	discard	0.140024	skip cancelling open R
+12	12	cf5795c98cb3add7	rules	exploit	0	5	-73.616	False	discard	0.063682	front-align token 1 then XL
+16	13	721dbbd5229fd0c1	rules	exploit	0	5	-71.7823	False	keep	0.131018	front-align token 1 then XL
+16	14	bd98ebb180e0c6e9	rules	exploit	0	5	-73.616	False	discard	0.3285	run-jump attach +3/+4
+16	15	None	None	exploit	0	5	-1000000.0	False	invalid	0.0	
+16	16	1f5cb2eab5703459	rules	exploit	0	5	-73.5902	False	discard	0.07933	front-align token 1 then XL
+20	17	b740c615bbca7bc7	rules	exploit	0	13	-79.0644	False	discard	0.233704	front-align token 1 then XL
+20	18	7deb190f3cd2cf04	rules	exploit	0	13	-87.2441	False	discard	0.430294	downward when m closer
+20	19	None	None	exploit	0	13	-1000000.0	False	invalid	0.320724	
+20	20	43a90aa3f0913122	rules	exploit	0	13	-80.9588	False	discard	0.15362	front-align token 1 then XL
+24	21	59e65160de2f2e2d	rules	exploit	0	13	-73.5996	False	discard	0.199912	L-anchor reversed block then insert
+24	22	None	None	exploit	0	13	-1000000.0	False	invalid	0.49034	
+24	23	None	None	exploit	0	13	-1000000.0	False	invalid	0.0	
+24	24	None	None	exploit	0	13	-1000000.0	False	invalid	0.0	

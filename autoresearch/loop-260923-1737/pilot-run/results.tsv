@@ -1,0 +1,4 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	49ab346cb44b2f1b	rules	seed	None		-76.3415	False	keep	0	anchor token 1 and pull token 2
+1	1	42e815bac2c0a90d	rules	exploit	0	0	-89.1454	False	discard	0.217816	anchor nearby token 1 before chasing 2
+2	2	e7b0425c67ce275e	rules	explore	0	0	-224.2746	False	discard	0.303622	park-carry phase machine

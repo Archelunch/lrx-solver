@@ -1,0 +1,636 @@
+{
+  "manifest": {
+    "sha256": "93e228ee899b70973cede9b8961f97ac44e7b44476e86d16ae15392e31b113a4",
+    "graphs": [
+      [
+        8,
+        2
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        16,
+        4
+      ]
+    ],
+    "per_graph": 1000,
+    "scope": "Finite fresh random states; no exact distances required. New states on known graphs are not independent unseen-graph confirmation. No feedback to campaigns.",
+    "seed_rule": "lrx-s04-confirmation-20260923:m:r"
+  },
+  "results": [
+    {
+      "hash": "49ab346cb44b2f1b",
+      "sources": [
+        "/Users/pavluhin/Documents/Projects/lrx-lab/candidates/leads/49ab346cb44b2f1b.json"
+      ],
+      "graphs": [
+        {
+          "m": 8,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 65,
+          "T": 42,
+          "mean_word": 40.547,
+          "seconds": 0.528825459012296
+        },
+        {
+          "m": 8,
+          "r": 3,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 78,
+          "T": 48,
+          "mean_word": 49.714,
+          "seconds": 0.6390768749988638
+        },
+        {
+          "m": 9,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 84,
+          "T": 52,
+          "mean_word": 51.788,
+          "seconds": 0.7285314589971676
+        },
+        {
+          "m": 8,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 91,
+          "T": 54,
+          "mean_word": 57.489,
+          "seconds": 0.7214026250003371
+        },
+        {
+          "m": 10,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 129,
+          "T": 79,
+          "mean_word": 83.67,
+          "seconds": 1.1387703329965007
+        },
+        {
+          "m": 8,
+          "r": 9,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 141,
+          "T": 84,
+          "mean_word": 91.61,
+          "seconds": 1.220026124996366
+        },
+        {
+          "m": 16,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 280,
+          "T": 178,
+          "mean_word": 189.059,
+          "seconds": 3.0819500000216067
+        }
+      ]
+    },
+    {
+      "hash": "893df43f9e1c1ecf",
+      "sources": [
+        "autoresearch/loop-260923-1737/evox-204-run/best.json"
+      ],
+      "graphs": [
+        {
+          "m": 8,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 65,
+          "T": 42,
+          "mean_word": 40.571,
+          "seconds": 0.5094906669983175
+        },
+        {
+          "m": 8,
+          "r": 3,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 78,
+          "T": 48,
+          "mean_word": 49.501,
+          "seconds": 0.6249648749944754
+        },
+        {
+          "m": 9,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 84,
+          "T": 52,
+          "mean_word": 51.595,
+          "seconds": 0.6805749999766704
+        },
+        {
+          "m": 8,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 91,
+          "T": 54,
+          "mean_word": 57.395,
+          "seconds": 0.7101445420121308
+        },
+        {
+          "m": 10,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 129,
+          "T": 79,
+          "mean_word": 83.563,
+          "seconds": 1.1975560830032919
+        },
+        {
+          "m": 8,
+          "r": 9,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 141,
+          "T": 84,
+          "mean_word": 91.751,
+          "seconds": 1.243329332995927
+        },
+        {
+          "m": 16,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 280,
+          "T": 178,
+          "mean_word": 188.985,
+          "seconds": 3.1389975839992985
+        }
+      ]
+    },
+    {
+      "hash": "c2a0caf872a07e12",
+      "sources": [
+        "autoresearch/loop-260923-1737/evox-205-run/best.json"
+      ],
+      "graphs": [
+        {
+          "m": 8,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 65,
+          "T": 42,
+          "mean_word": 40.657,
+          "seconds": 0.6316245000052731
+        },
+        {
+          "m": 8,
+          "r": 3,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 78,
+          "T": 48,
+          "mean_word": 49.433,
+          "seconds": 0.6806910840095952
+        },
+        {
+          "m": 9,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 84,
+          "T": 52,
+          "mean_word": 51.523,
+          "seconds": 0.7460455000109505
+        },
+        {
+          "m": 8,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 91,
+          "T": 54,
+          "mean_word": 57.366,
+          "seconds": 0.7716870000003837
+        },
+        {
+          "m": 10,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 129,
+          "T": 79,
+          "mean_word": 83.845,
+          "seconds": 1.2238203750166576
+        },
+        {
+          "m": 8,
+          "r": 9,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 141,
+          "T": 84,
+          "mean_word": 91.718,
+          "seconds": 1.31915354100056
+        },
+        {
+          "m": 16,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 280,
+          "T": 178,
+          "mean_word": 189.097,
+          "seconds": 3.369151791994227
+        }
+      ]
+    },
+    {
+      "hash": "657bee0717db3498",
+      "sources": [
+        "autoresearch/loop-260923-1737/gepa-204-run/best.json"
+      ],
+      "graphs": [
+        {
+          "m": 8,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 65,
+          "T": 42,
+          "mean_word": 40.56,
+          "seconds": 0.5947510410042014
+        },
+        {
+          "m": 8,
+          "r": 3,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 78,
+          "T": 48,
+          "mean_word": 49.675,
+          "seconds": 0.7016237910138443
+        },
+        {
+          "m": 9,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 84,
+          "T": 52,
+          "mean_word": 51.77,
+          "seconds": 0.7717557919968385
+        },
+        {
+          "m": 8,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 91,
+          "T": 54,
+          "mean_word": 57.398,
+          "seconds": 0.8073822080041282
+        },
+        {
+          "m": 10,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 129,
+          "T": 79,
+          "mean_word": 84.06,
+          "seconds": 1.268617958005052
+        },
+        {
+          "m": 8,
+          "r": 9,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 141,
+          "T": 84,
+          "mean_word": 91.545,
+          "seconds": 1.3267334169941023
+        },
+        {
+          "m": 16,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 280,
+          "T": 178,
+          "mean_word": 189.314,
+          "seconds": 3.4655739169975277
+        }
+      ]
+    },
+    {
+      "hash": "d049e6733f4727e3",
+      "sources": [
+        "autoresearch/loop-260923-1737/gepa-205-run/best.json"
+      ],
+      "graphs": [
+        {
+          "m": 8,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 65,
+          "T": 42,
+          "mean_word": 40.624,
+          "seconds": 0.6225885419989936
+        },
+        {
+          "m": 8,
+          "r": 3,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 78,
+          "T": 48,
+          "mean_word": 49.714,
+          "seconds": 0.6659204580064397
+        },
+        {
+          "m": 9,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 84,
+          "T": 52,
+          "mean_word": 51.788,
+          "seconds": 0.7357944160175975
+        },
+        {
+          "m": 8,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 91,
+          "T": 54,
+          "mean_word": 57.489,
+          "seconds": 0.7664324999786913
+        },
+        {
+          "m": 10,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 129,
+          "T": 79,
+          "mean_word": 83.67,
+          "seconds": 1.1768143340013921
+        },
+        {
+          "m": 8,
+          "r": 9,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 141,
+          "T": 84,
+          "mean_word": 91.61,
+          "seconds": 1.2622485839820001
+        },
+        {
+          "m": 16,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 280,
+          "T": 178,
+          "mean_word": 189.059,
+          "seconds": 3.2652816670015454
+        }
+      ]
+    },
+    {
+      "hash": "f2314eed8a4f44c0",
+      "sources": [
+        "autoresearch/loop-260923-1737/sequential-204-run/best.json"
+      ],
+      "graphs": [
+        {
+          "m": 8,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 65,
+          "T": 42,
+          "mean_word": 40.421,
+          "seconds": 0.6700790000031702
+        },
+        {
+          "m": 8,
+          "r": 3,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 78,
+          "T": 48,
+          "mean_word": 49.615,
+          "seconds": 0.7995088330062572
+        },
+        {
+          "m": 9,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 84,
+          "T": 52,
+          "mean_word": 51.705,
+          "seconds": 0.8818369999935385
+        },
+        {
+          "m": 8,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 91,
+          "T": 54,
+          "mean_word": 57.355,
+          "seconds": 0.9375190420250874
+        },
+        {
+          "m": 10,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 129,
+          "T": 79,
+          "mean_word": 83.544,
+          "seconds": 1.4854284589819144
+        },
+        {
+          "m": 8,
+          "r": 9,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 141,
+          "T": 84,
+          "mean_word": 91.507,
+          "seconds": 1.5517063330044039
+        },
+        {
+          "m": 16,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 280,
+          "T": 178,
+          "mean_word": 188.933,
+          "seconds": 3.74440358299762
+        }
+      ]
+    },
+    {
+      "hash": "721dbbd5229fd0c1",
+      "sources": [
+        "autoresearch/loop-260923-1737/sequential-205-run/best.json"
+      ],
+      "graphs": [
+        {
+          "m": 8,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 65,
+          "T": 42,
+          "mean_word": 40.573,
+          "seconds": 0.6148291249992326
+        },
+        {
+          "m": 8,
+          "r": 3,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 78,
+          "T": 48,
+          "mean_word": 49.714,
+          "seconds": 0.7225621250108816
+        },
+        {
+          "m": 9,
+          "r": 2,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 84,
+          "T": 52,
+          "mean_word": 51.788,
+          "seconds": 0.8096660829905886
+        },
+        {
+          "m": 8,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 91,
+          "T": 54,
+          "mean_word": 57.489,
+          "seconds": 0.8362164159771055
+        },
+        {
+          "m": 10,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 129,
+          "T": 79,
+          "mean_word": 83.67,
+          "seconds": 1.3231044590065721
+        },
+        {
+          "m": 8,
+          "r": 9,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 141,
+          "T": 84,
+          "mean_word": 91.61,
+          "seconds": 1.416324124991661
+        },
+        {
+          "m": 16,
+          "r": 4,
+          "checked": 1000,
+          "failures": 0,
+          "failure_examples": [],
+          "max_word": 280,
+          "T": 178,
+          "mean_word": 189.059,
+          "seconds": 3.8776917080103885
+        }
+      ]
+    }
+  ],
+  "scope": "Finite random-state word replay; no universal bound or optimality claim."
+}

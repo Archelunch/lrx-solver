@@ -1,0 +1,26 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	49ab346cb44b2f1b	rules	seed	None		-76.3415	False	keep	0	anchor token 1 and pull token 2
+4	1	ca7fbd0831af5c29	rules	exploit	0	0	-87.5282	False	discard	0.05858	anchor nearby 1 then pull 2
+4	2	2173e2804dde9fcd	rules	exploit	0	0	-85.3741	False	discard	0.109288	anchor token 1 when it is the nearer end
+4	3	c0e6e3e54e141fb6	rules	exploit	0	0	-76.3415	False	discard	0.130638	anchor token 1 and pull token 2
+4	4	None	None	exploit	0	0	-1000000.0	False	invalid	0.075216	anchor token 1 at front if it sits at b
+8	5	95d677c811e031a5	rules	exploit	0	3	-117.5988	False	discard	0.583992	xrx opening then block insert
+8	6	c7bb747d1e77db6f	rules	exploit	0	3	-87.2304	False	discard	0.092294	anchor token 1 when zeros are blocked
+8	7	51e5e8fca602dd50	rules	exploit	0	0	-1691.4191	False	discard	0.1561	rotate to end-attach instead of long RX
+8	8	b06ea445fe0781b5	rules	exploit	0	0	-82.1248	False	discard	0.239814	anchor token 1 and pull token 2
+12	9	None	None	exploit	0	3	-1000000.0	False	invalid	0.134068	short-arc anchor then insert
+12	10	28b419fdb15d9d06	rules	exploit	0	3	-87.1808	False	discard	0.059794	anchor token 1 if already near the front
+12	11	ae03c48f576771b4	rules	exploit	0	6	-76.3693	False	discard	0.049404	start XL through a leading zero
+12	12	d68c6e41d5b6eb3b	rules	exploit	0	6	-84.5361	False	discard	0.042752	anchor-1 insertion without zeros-block start
+16	13	None	None	exploit	0	3	-1000000.0	False	invalid	0.157934	m8r2 anchor-1 start then insert
+16	14	4da208e1bcaf4375	rules	exploit	0	3	-76.3437	False	discard	0.067208	anchor token 1 and pull token 2
+16	15	9393b876363cde6a	rules	exploit	0	11	-82.6669	False	discard	0.146754	park token 1 then insert
+16	16	6f9b55e0fb790fb0	rules	exploit	0	11	-1053.5248	False	discard	0.075956	XL past a leading zero
+20	17	None	None	exploit	0	11	-1000000.0	False	invalid	0.109948	anchor 1 past a double zero on m8r2
+20	18	0bdc6985641c928b	rules	exploit	0	11	-83.572	False	discard	0.130892	opening descent X before seek
+20	19	d049e6733f4727e3	rules	exploit	0	0	-73.6084	False	keep	0.183414	m8r2 anchor token 1 then insert
+20	20	1bae32bbd6ffca05	rules	exploit	0	0	-400.8664	False	discard	0.127016	disp descent through zeros then insert
+24	21	687934acb4e5960e	rules	exploit	0	19	-173.2405	False	discard	0.25171	both-end short carry
+24	22	None	None	exploit	0	19	-1000000.0	False	invalid	0.491698	
+24	23	f85e22400d1cff4d	rules	exploit	0	19	-75.1604	False	discard	0.222522	m8r2 skip uphill L when token 2 is parked
+24	24	90ba0459b888fe50	rules	exploit	0	19	-73.6235	False	discard	0.05745	m4r2 anchor token 1 then insert

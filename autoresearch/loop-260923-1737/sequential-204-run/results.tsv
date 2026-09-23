@@ -1,0 +1,26 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	49ab346cb44b2f1b	rules	seed	None		-76.3415	False	keep	0	anchor token 1 and pull token 2
+4	1	1d7ee783afd155e7	rules	exploit	0	0	-87.1754	False	discard	0.089646	anchor token 1 and pull token 2
+4	2	None	None	exploit	0	0	-1000000.0	False	invalid	0.143298	anchor token 1 if short, then pull 2
+4	3	88f1c0b8ee9cc081	rules	exploit	0	0	-76.2595	False	keep	0.338586	anchor token 1 and pull token 2
+4	4	31753b22f54db010	rules	exploit	0	0	-76.4194	False	discard	0.055624	anchor token 1 and pull token 2
+8	5	779c8408c87febb0	rules	exploit	0	3	-73.5263	False	keep	0.163376	anchor token 1 and pull token 2
+8	6	b878f5ff15dc4905	rules	exploit	0	3	-78.4718	False	discard	0.212242	attach contiguous run by R not L
+8	7	152625568bd5390d	rules	exploit	0	3	-76.2422	False	discard	0.057344	anchor token 1 and pull token 2
+8	8	96476956805b0992	rules	exploit	0	3	-76.2191	False	discard	0.115998	anchor token 1 and pull token 2
+12	9	27fa05d887f51e86	rules	exploit	0	5	-78.9478	False	discard	0.04139	anchor token 1 and pull token 2
+12	10	97cfeda06a994205	rules	exploit	0	5	-77.1333	False	discard	0.261402	anchor token 1 and pull token 2
+12	11	06a382a0cc37d1a4	rules	exploit	0	5	-76.2845	False	discard	0.087114	anchor token 1 before token 2 on m8r2
+12	12	None	None	exploit	0	5	-1000000.0	False	invalid	0.135788	anchor token 1 and pull token 2
+16	13	3c9717b52f5b0416	rules	exploit	0	5	-78.9613	False	discard	0.100976	anchor token 1 and pull token 2
+16	14	1ec0df49fefaab6b	rules	exploit	0	5	-1225.6671	False	discard	0.358692	anchor token 1 and pull token 2
+16	15	None	None	exploit	0	5	-1000000.0	False	invalid	0.609088	anchor token 1 and pull token 2
+16	16	67a5d54300e29de4	rules	exploit	0	5	-73.5197	False	keep	0.111838	anchor token 1 and pull token 2
+20	17	None	None	exploit	0	16	-1000000.0	False	invalid	0.274112	
+20	18	12a115e19054f47e	rules	exploit	0	16	-73.5025	False	keep	0.075656	anchor token 1 and pull token 2
+20	19	2bff5e8e27768f18	rules	exploit	0	16	-71.6948	False	keep	0.272918	anchor token 1 and pull token 2
+20	20	adb86b06ac43aeed	rules	exploit	0	16	-73.5131	False	discard	0.139296	anchor token 1 and pull token 2
+24	21	None	None	exploit	0	19	-1000000.0	False	invalid	0.137058	
+24	22	f2314eed8a4f44c0	rules	exploit	0	19	-71.6775	False	keep	0.06843	anchor token 1 and pull token 2
+24	23	None	None	exploit	0	19	-1000000.0	False	invalid	0.0	
+24	24	ffc9c0f710e5240d	rules	exploit	0	19	-71.6887	False	discard	0.200702	anchor token 1 and pull token 2

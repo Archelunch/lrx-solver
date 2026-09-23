@@ -1,0 +1,26 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	49ab346cb44b2f1b	rules	seed	None		-76.3415	False	keep	0	anchor token 1 and pull token 2
+4	1	5220e068402941e7	rules	exploit	0	0	-93.6823	False	discard	0.100982	park anchor 1 before opposite carry
+4	2	cd5a28efec52e96c	rules	exploit	0	0	-82.5821	False	discard	0.127048	seat nearby 1 then pull 2
+4	3	None	None	exploit	0	0	-1000000.0	False	invalid	0.0	
+4	4	00d31fdaca733c2e	rules	exploit	0	0	-84.5361	False	discard	0.03253	anchor token 1 drop midpoint XL patch
+8	5	6067a2e540ce1633	rules	exploit	0	0	-73.6454	False	keep	0.173966	anchor token 1 and pull token 2
+8	6	9cfaf3178d2b94dc	rules	exploit	0	0	-82.6725	False	discard	0.24437	park adjacent 2,3 via token-1 front
+8	7	6cf7f32ae35d47ae	rules	exploit	0	2	-76.3068	False	discard	0.081188	drop long-arc park-1 start
+8	8	None	None	exploit	0	2	-1000000.0	False	invalid	0.20026	absorb adjacent next token
+12	9	7968f26b9c270ee3	rules	merge	0	5,6	-79.9906	False	discard	0.090244	odd-n park pair, even-n front walk
+12	10	14f544940c50221e	rules	exploit	0	5	-71.8011	False	keep	0.179374	anchor token 1 and pull token 2
+12	11	None	None	exploit	0	5	-1000000.0	False	invalid	0.43297	
+12	12	fa6ffb7c012badcb	rules	exploit	0	6	-74.4848	False	discard	0.05318	rx-carry if token 1 already front
+16	13	None	None	exploit	0	10	-1000000.0	False	invalid	0.36905	park pos1=5 then insert from 4
+16	14	None	None	exploit	0	10	-1000000.0	False	invalid	0.376182	anchor token 1 and pull token 2
+16	15	None	None	exploit	0	10	-1000000.0	False	invalid	0.398014	anchor token 1 and pull token 2
+16	16	da50ce683a558133	rules	exploit	0	10	-71.8895	False	discard	0.11831	anchor token 1 and pull token 2
+20	17	dc618990d4aa6f26	rules	merge	0	10,16	-70.8756	False	keep	0.06472	anchor token 1 and pull token 2
+20	18	055002a3f7b506d9	rules	exploit	0	16	-70.9697	False	discard	0.126456	anchor token 1 and pull token 2
+20	19	93ae8a977f48b709	rules	exploit	0	16	-70.0683	False	discard	0.2532	anchor token 1 and pull token 2
+20	20	a26eb95d672b2068	rules	exploit	0	10	-70.8756	False	discard	0.13347	anchor token 1 and pull token 2
+24	21	657bee0717db3498	rules	merge	0	17,19	-69.0545	False	keep	0.047514	anchor-1 pull-2 plus r2 inversion exile
+24	22	None	None	exploit	0	19	-1000000.0	False	invalid	0.130184	anchor token 1 and pull token 2
+24	23	4334a772b5177008	rules	exploit	0	19	-73.9732	False	discard	0.217558	anchor token 1 and pull token 2
+24	24	ce610f16903722a7	rules	exploit	0	20	-69.0545	False	discard	0.065466	anchor token 1 and pull token 2

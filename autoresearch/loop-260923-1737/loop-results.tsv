@@ -1,0 +1,13 @@
+iteration	run	hypothesis	decision	usd	result
+1	lift-decision-benchmark.json	Stop after a replayed witness suffices	keep	0	100 small states agree; 2.76x wall speedup; 293 tests pass
+2	lift-known-obstruction.json	Bounded decisions preserve known q42 obstruction and q43 repair	keep	0	m8r3 known vector: q42 no lift <=48; q43 replayed witness <=48; complete
+3	simplification-benchmark.json	Guarded position lookup replaces token scan without changing words	keep	0	ABBA evaluator mean 9.56s to 7.59s; identical graph metrics; no tighter bound
+4	pilot-run	Validate low-effort Grok and ratio-aware EvoX strategy switch	keep as evidence	0.537862	2 valid repaired proposals; no ratio gain; one valid strategy revision
+5	evox-204-run	Matched ratio-first engine comparison	keep evidence; no promotion	4.963209	train ratio 1.562500; all confirmation maxima equal baseline; 2 budget-denied slots
+6	evox-205-run	Matched ratio-first engine comparison	keep evidence; no promotion	4.917988	train ratio 1.562500; all confirmation maxima equal baseline; 1 budget-denied slots
+7	gepa-204-run	Matched ratio-first engine comparison	keep evidence; no promotion	4.479739	train ratio 1.500000; all confirmation maxima equal baseline; 0 budget-denied slots
+8	gepa-205-run	Matched ratio-first engine comparison	keep evidence; no promotion	4.282063	train ratio 1.562500; all confirmation maxima equal baseline; 0 budget-denied slots
+9	sequential-204-run	Matched ratio-first engine comparison	keep evidence; no promotion	4.52351	train ratio 1.562500; all confirmation maxima equal baseline; 0 budget-denied slots
+10	sequential-205-run	Matched ratio-first engine comparison	keep evidence; no promotion	5.528856	train ratio 1.520833; all confirmation maxima equal baseline; 2 budget-denied slots
+11	salvage-results.json	Recover already-paid edits after correcting finisher guard	keep guard fix and evidence	0	3 recovered sound-on-train candidates; none beats finalists
+12	verification-final.log	Align reflector kinds and ratio focus with campaign objective	keep	0	301 tests pass; core unchanged; no live post-fix campaign

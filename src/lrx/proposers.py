@@ -30,6 +30,20 @@ def _mentions(expr, name):
     return isinstance(expr, list) and any(_mentions(e, name) for e in expr)
 
 
+def _unsorted_only(expr):
+    """Conservative syntactic proof that a condition is false when csorted=1."""
+    if not isinstance(expr, list) or not expr:
+        return False
+    if expr in (["not", "csorted"], ["eq", "csorted", 0],
+                ["eq", 0, "csorted"], ["ne", "csorted", 1], ["ne", 1, "csorted"]):
+        return True
+    if expr[0] == "and":
+        return any(_unsorted_only(e) for e in expr[1:])
+    if expr[0] == "or" and len(expr) > 1:
+        return all(_unsorted_only(e) for e in expr[1:])
+    return False
+
+
 def rule_edits(parent, child):
     """Rule-level edit distance: Levenshtein over rules, plus 1 if default differs."""
     a = [canonical_json(x) for x in parent.get("rules", [])]
@@ -55,10 +69,12 @@ def edit_violation(parent, child, max_edits=MAX_EDITS):
         )
     kept = {canonical_json(x) for x in child.get("rules", [])}
     for rule in parent.get("rules", []):
-        if _mentions(rule.get("if"), "csorted") and canonical_json(rule) not in kept:
+        condition = rule.get("if")
+        if (_mentions(condition, "csorted") and not _unsorted_only(condition)
+                and canonical_json(rule) not in kept):
             return (
                 "edit mode must keep the parent's finishing rules (conditions using "
-                "csorted) unchanged"
+                "csorted that may apply when it is true) unchanged"
             )
     return None
 
@@ -220,7 +236,8 @@ TASKS = {
     "edit": f"Edit the parent with at most {MAX_EDITS} rule changes (change one "
     "rule's condition, action or register update; insert a rule; delete a rule; "
     "or change the default). Copy every other rule exactly, including the "
-    "finishing rules whose condition uses csorted. Aim the change at the worst "
+    "finishing rules that may apply when csorted is true. Rules explicitly "
+    "guarded by csorted == 0 may be edited. Aim the change at the worst "
     "reported states.",
 }
 
@@ -380,8 +397,12 @@ class LLMProposer:
 
     def reflect(self, summary, seed=0, task="insights"):
         system = REFLECT_SYSTEMS[task] + "\n\n" + prompt.PROBLEM
+        kinds = summary.get("allowed_kinds", prompt.KINDS)
+        system += ("\n\nAllowed candidate kinds: " + json.dumps(list(kinds))
+                   + ". Every tactic must stay within these kinds. Do not recommend "
+                   "switching candidate kind outside this campaign contract.")
         if task != "insights":
-            system += "\n\n" + prompt.dsl_reference()
+            system += "\n\n" + prompt.dsl_reference(kinds)
         msgs = [
             {"role": "system", "content": system},
             {"role": "user", "content": json.dumps(summary)[:40_000]},

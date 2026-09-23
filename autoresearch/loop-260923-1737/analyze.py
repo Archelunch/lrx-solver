@@ -21,11 +21,15 @@ def main():
         summary = run["summary"] or {}
         usage = summary.get("usage") or latest.get("usage") or {}
         evals = {}
+        cache_hits, cached_source_seconds = 0, 0.0
         for c in candidates:
             key = c.get("hash")
             f = path / "evals" / f"{key}.json"
             if key and f.exists() and key not in evals:
                 e = json.loads(f.read_text())
+                if e.get("cache_hit"):
+                    cache_hits += 1
+                    cached_source_seconds += e.get("source_seconds") or 0
                 graphs = [g for g in e.get("graphs", []) if g.get("feedback")]
                 if e.get("stopped") or any(g.get("failures") or g.get("incomplete") for g in graphs):
                     evals[key] = None
@@ -43,7 +47,12 @@ def main():
         rows.append({
             "run": path.name, "complete": run["complete"], "engine": run["config"]["engine"],
             "seed": run["config"]["seed"], "proposals": len(proposals),
+            "budget_denied_before_request": sum(
+                not c.get("attempts") and (c.get("proposer_error") or "").startswith("BudgetExhausted")
+                for c in proposals),
             "valid": sum(bool(c.get("valid")) for c in proposals),
+            "fully_solved_proposals": sum(evals.get(c.get("hash")) is not None for c in proposals),
+            "repair_calls": sum(c.get("repairs_used") or 0 for c in proposals),
             "duplicates": sum(c.get("status") == "duplicate" for c in proposals),
             "best_hash": best.get("hash"), "best_ratio": evals.get(best.get("hash")),
             "best_score": best.get("score"), "usd": usage.get("estimated_usd", 0),
@@ -58,6 +67,8 @@ def main():
             "stop_reason": summary.get("stop_reason"),
             "wall_seconds": summary.get("wall_seconds"),
             "evaluation_wall_seconds": sum(b["eval_seconds"] for b in run["batches"]),
+            "cache_hits": cache_hits,
+            "cached_source_seconds": cached_source_seconds,
             "best_ratio_by_completed_batch_usd": costs,
             "errors": [c["proposer_error"] for c in proposals if c.get("proposer_error")],
         })

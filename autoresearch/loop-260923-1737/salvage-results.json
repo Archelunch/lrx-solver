@@ -1,0 +1,1938 @@
+{
+  "new_api_spend": 0,
+  "results": [
+    {
+      "run": "evox-204-run",
+      "id": 10,
+      "guard_error": null,
+      "hash": "9fc01519c7f2feff",
+      "ratio_rank": [
+        true,
+        0,
+        -1.8125
+      ],
+      "score": -111.6636,
+      "evaluation": {
+        "split": "train",
+        "evaluator_sha256": "472e53b4222633ce",
+        "candidate_hash": "9fc01519c7f2feff",
+        "kind": "rules",
+        "valid": true,
+        "error": null,
+        "score": -111.6636,
+        "feasible": false,
+        "stopped": null,
+        "instances": {
+          "m4r2": -7.039,
+          "m5r2": -9.7,
+          "m6r2": -13.86,
+          "m5r3": -12.228,
+          "m4r4": -8.742,
+          "m7r2": -17.516,
+          "m7r3": -20.193,
+          "m8r2": -321.781,
+          "m8r3": -413.906,
+          "m9r2": -385.587,
+          "m6r4": -17.748
+        },
+        "heldout": {},
+        "graphs": [
+          {
+            "graph": "m4r2",
+            "m": 4,
+            "r": 2,
+            "n": 6,
+            "role": "sanity",
+            "T": 12,
+            "T_applies": false,
+            "radius": 12,
+            "checked": 360,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 25,
+            "excess_T": null,
+            "gap_mean": 7.039,
+            "gap_max": 20,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  4,
+                  2,
+                  0,
+                  1,
+                  0,
+                  3
+                ],
+                "value": 25,
+                "d": 7
+              },
+              {
+                "v": [
+                  2,
+                  0,
+                  0,
+                  1,
+                  3,
+                  4
+                ],
+                "value": 25,
+                "d": 5
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -7.039,
+            "feedback": true
+          },
+          {
+            "graph": "m5r2",
+            "m": 5,
+            "r": 2,
+            "n": 7,
+            "role": "sanity",
+            "T": 18,
+            "T_applies": false,
+            "radius": 19,
+            "checked": 2520,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 35,
+            "excess_T": null,
+            "gap_mean": 9.7,
+            "gap_max": 29,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  2,
+                  0,
+                  0,
+                  1,
+                  3,
+                  5,
+                  4
+                ],
+                "value": 35,
+                "d": 10
+              },
+              {
+                "v": [
+                  2,
+                  0,
+                  0,
+                  1,
+                  3,
+                  4,
+                  5
+                ],
+                "value": 34,
+                "d": 5
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -9.7,
+            "feedback": true
+          },
+          {
+            "graph": "m6r2",
+            "m": 6,
+            "r": 2,
+            "n": 8,
+            "role": "sanity",
+            "T": 25,
+            "T_applies": false,
+            "radius": 25,
+            "checked": 20160,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 51,
+            "excess_T": null,
+            "gap_mean": 13.86,
+            "gap_max": 38,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  5,
+                  2,
+                  0,
+                  0,
+                  1,
+                  6,
+                  3,
+                  4
+                ],
+                "value": 51,
+                "d": 15
+              },
+              {
+                "v": [
+                  2,
+                  0,
+                  0,
+                  6,
+                  1,
+                  3,
+                  4,
+                  5
+                ],
+                "value": 51,
+                "d": 13
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -13.86,
+            "feedback": true
+          },
+          {
+            "graph": "m5r3",
+            "m": 5,
+            "r": 3,
+            "n": 8,
+            "role": "sanity",
+            "T": 21,
+            "T_applies": false,
+            "radius": 21,
+            "checked": 6720,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 45,
+            "excess_T": null,
+            "gap_mean": 12.228,
+            "gap_max": 38,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  5,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0,
+                  3,
+                  4
+                ],
+                "value": 45,
+                "d": 9
+              },
+              {
+                "v": [
+                  2,
+                  0,
+                  0,
+                  0,
+                  1,
+                  3,
+                  4,
+                  5
+                ],
+                "value": 45,
+                "d": 7
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -12.228,
+            "feedback": true
+          },
+          {
+            "graph": "m4r4",
+            "m": 4,
+            "r": 4,
+            "n": 8,
+            "role": "sanity",
+            "T": 16,
+            "T_applies": false,
+            "radius": 17,
+            "checked": 1680,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 34,
+            "excess_T": null,
+            "gap_mean": 8.742,
+            "gap_max": 27,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  2,
+                  0,
+                  0,
+                  0,
+                  1,
+                  3,
+                  4,
+                  0
+                ],
+                "value": 34,
+                "d": 7
+              },
+              {
+                "v": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0,
+                  3,
+                  4
+                ],
+                "value": 34,
+                "d": 9
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -8.742,
+            "feedback": true
+          },
+          {
+            "graph": "m7r2",
+            "m": 7,
+            "r": 2,
+            "n": 9,
+            "role": "train",
+            "T": 33,
+            "T_applies": false,
+            "radius": 33,
+            "checked": 215,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 54,
+            "excess_T": null,
+            "gap_mean": 17.516,
+            "gap_max": 38,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  7,
+                  2,
+                  0,
+                  0,
+                  1,
+                  6,
+                  4,
+                  5,
+                  3
+                ],
+                "value": 54,
+                "d": 19
+              },
+              {
+                "v": [
+                  7,
+                  6,
+                  4,
+                  5,
+                  2,
+                  1,
+                  0,
+                  0,
+                  3
+                ],
+                "value": 54,
+                "d": 24
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -17.516,
+            "feedback": true
+          },
+          {
+            "graph": "m7r3",
+            "m": 7,
+            "r": 3,
+            "n": 10,
+            "role": "train",
+            "T": 38,
+            "T_applies": false,
+            "radius": 38,
+            "checked": 238,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 69,
+            "excess_T": null,
+            "gap_mean": 20.193,
+            "gap_max": 50,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  3,
+                  4,
+                  1,
+                  7,
+                  5,
+                  6,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "value": 69,
+                "d": 19
+              },
+              {
+                "v": [
+                  2,
+                  0,
+                  7,
+                  0,
+                  3,
+                  1,
+                  4,
+                  0,
+                  5,
+                  6
+                ],
+                "value": 68,
+                "d": 22
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -20.193,
+            "feedback": true
+          },
+          {
+            "graph": "m8r2",
+            "m": 8,
+            "r": 2,
+            "n": 10,
+            "role": "train",
+            "T": 42,
+            "T_applies": true,
+            "radius": 42,
+            "checked": 215,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 72,
+            "excess_T": 30,
+            "gap_mean": 21.781,
+            "gap_max": 50,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  8,
+                  3,
+                  0,
+                  1,
+                  5,
+                  7,
+                  4,
+                  6,
+                  2
+                ],
+                "value": 72,
+                "d": 24
+              },
+              {
+                "v": [
+                  7,
+                  2,
+                  0,
+                  0,
+                  1,
+                  5,
+                  3,
+                  8,
+                  4,
+                  6
+                ],
+                "value": 71,
+                "d": 21
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -321.781,
+            "feedback": true
+          },
+          {
+            "graph": "m8r3",
+            "m": 8,
+            "r": 3,
+            "n": 11,
+            "role": "train",
+            "T": 48,
+            "T_applies": true,
+            "radius": 48,
+            "checked": 223,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 87,
+            "excess_T": 39,
+            "gap_mean": 23.906,
+            "gap_max": 56,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  0,
+                  8,
+                  1,
+                  5,
+                  3,
+                  7,
+                  6,
+                  4,
+                  2,
+                  0
+                ],
+                "value": 87,
+                "d": 31
+              },
+              {
+                "v": [
+                  8,
+                  7,
+                  1,
+                  4,
+                  3,
+                  6,
+                  5,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "value": 83,
+                "d": 32
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -413.906,
+            "feedback": true
+          },
+          {
+            "graph": "m9r2",
+            "m": 9,
+            "r": 2,
+            "n": 11,
+            "role": "train",
+            "T": 52,
+            "T_applies": true,
+            "radius": 52,
+            "checked": 213,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 88,
+            "excess_T": 36,
+            "gap_mean": 25.587,
+            "gap_max": 67,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  4,
+                  8,
+                  5,
+                  6,
+                  7,
+                  2,
+                  0,
+                  9,
+                  0,
+                  3,
+                  1
+                ],
+                "value": 88,
+                "d": 21
+              },
+              {
+                "v": [
+                  0,
+                  8,
+                  1,
+                  5,
+                  4,
+                  6,
+                  3,
+                  7,
+                  2,
+                  0,
+                  9
+                ],
+                "value": 88,
+                "d": 30
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -385.587,
+            "feedback": true
+          },
+          {
+            "graph": "m6r4",
+            "m": 6,
+            "r": 4,
+            "n": 10,
+            "role": "train",
+            "T": 33,
+            "T_applies": false,
+            "radius": 33,
+            "checked": 246,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 67,
+            "excess_T": null,
+            "gap_mean": 17.748,
+            "gap_max": 52,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  2,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "value": 67,
+                "d": 15
+              },
+              {
+                "v": [
+                  5,
+                  0,
+                  1,
+                  3,
+                  4,
+                  0,
+                  6,
+                  2,
+                  0,
+                  0
+                ],
+                "value": 62,
+                "d": 19
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -17.748,
+            "feedback": true
+          }
+        ],
+        "seconds": 10.773,
+        "cache_hit": false
+      }
+    },
+    {
+      "run": "evox-204-run",
+      "id": 17,
+      "guard_error": null,
+      "hash": "b912b6315b3f75cc",
+      "ratio_rank": [
+        true,
+        0,
+        -1.5625
+      ],
+      "score": -76.3189,
+      "evaluation": {
+        "split": "train",
+        "evaluator_sha256": "472e53b4222633ce",
+        "candidate_hash": "b912b6315b3f75cc",
+        "kind": "rules",
+        "valid": true,
+        "error": null,
+        "score": -76.3189,
+        "feasible": false,
+        "stopped": null,
+        "instances": {
+          "m4r2": -4.378,
+          "m5r2": -6.642,
+          "m6r2": -8.421,
+          "m5r3": -8.126,
+          "m4r4": -6.073,
+          "m7r2": -11.912,
+          "m7r3": -13.647,
+          "m8r2": -223.595,
+          "m8r3": -286.946,
+          "m9r2": -257.695,
+          "m6r4": -12.073
+        },
+        "heldout": {},
+        "graphs": [
+          {
+            "graph": "m4r2",
+            "m": 4,
+            "r": 2,
+            "n": 6,
+            "role": "sanity",
+            "T": 12,
+            "T_applies": false,
+            "radius": 12,
+            "checked": 360,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 21,
+            "excess_T": null,
+            "gap_mean": 4.378,
+            "gap_max": 14,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  3,
+                  4,
+                  2,
+                  0,
+                  1
+                ],
+                "value": 21,
+                "d": 8
+              },
+              {
+                "v": [
+                  0,
+                  4,
+                  3,
+                  2,
+                  0,
+                  1
+                ],
+                "value": 20,
+                "d": 10
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -4.378,
+            "feedback": true
+          },
+          {
+            "graph": "m5r2",
+            "m": 5,
+            "r": 2,
+            "n": 7,
+            "role": "sanity",
+            "T": 18,
+            "T_applies": false,
+            "radius": 19,
+            "checked": 2520,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 32,
+            "excess_T": null,
+            "gap_mean": 6.642,
+            "gap_max": 22,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  2,
+                  5,
+                  4,
+                  1,
+                  0,
+                  0,
+                  3
+                ],
+                "value": 32,
+                "d": 11
+              },
+              {
+                "v": [
+                  4,
+                  1,
+                  0,
+                  0,
+                  2,
+                  5,
+                  3
+                ],
+                "value": 32,
+                "d": 11
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -6.642,
+            "feedback": true
+          },
+          {
+            "graph": "m6r2",
+            "m": 6,
+            "r": 2,
+            "n": 8,
+            "role": "sanity",
+            "T": 25,
+            "T_applies": false,
+            "radius": 25,
+            "checked": 20160,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 43,
+            "excess_T": null,
+            "gap_mean": 8.421,
+            "gap_max": 30,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  6,
+                  3,
+                  5,
+                  4,
+                  2,
+                  0,
+                  0,
+                  1
+                ],
+                "value": 43,
+                "d": 15
+              },
+              {
+                "v": [
+                  4,
+                  1,
+                  0,
+                  0,
+                  6,
+                  2,
+                  3,
+                  5
+                ],
+                "value": 42,
+                "d": 16
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -8.421,
+            "feedback": true
+          },
+          {
+            "graph": "m5r3",
+            "m": 5,
+            "r": 3,
+            "n": 8,
+            "role": "sanity",
+            "T": 21,
+            "T_applies": false,
+            "radius": 21,
+            "checked": 6720,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 39,
+            "excess_T": null,
+            "gap_mean": 8.126,
+            "gap_max": 30,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  3,
+                  5,
+                  4,
+                  2,
+                  0,
+                  0,
+                  1
+                ],
+                "value": 39,
+                "d": 13
+              },
+              {
+                "v": [
+                  0,
+                  0,
+                  3,
+                  2,
+                  5,
+                  4,
+                  1,
+                  0
+                ],
+                "value": 38,
+                "d": 14
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -8.126,
+            "feedback": true
+          },
+          {
+            "graph": "m4r4",
+            "m": 4,
+            "r": 4,
+            "n": 8,
+            "role": "sanity",
+            "T": 16,
+            "T_applies": false,
+            "radius": 17,
+            "checked": 1680,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 30,
+            "excess_T": null,
+            "gap_mean": 6.073,
+            "gap_max": 22,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  3,
+                  0,
+                  4,
+                  2,
+                  0,
+                  0,
+                  1
+                ],
+                "value": 30,
+                "d": 13
+              },
+              {
+                "v": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  2,
+                  4,
+                  3
+                ],
+                "value": 29,
+                "d": 10
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -6.073,
+            "feedback": true
+          },
+          {
+            "graph": "m7r2",
+            "m": 7,
+            "r": 2,
+            "n": 9,
+            "role": "train",
+            "T": 33,
+            "T_applies": false,
+            "radius": 33,
+            "checked": 215,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 54,
+            "excess_T": null,
+            "gap_mean": 11.912,
+            "gap_max": 38,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  5,
+                  1,
+                  0,
+                  7,
+                  0,
+                  3,
+                  2,
+                  4,
+                  6
+                ],
+                "value": 54,
+                "d": 16
+              },
+              {
+                "v": [
+                  3,
+                  6,
+                  4,
+                  1,
+                  0,
+                  0,
+                  7,
+                  5,
+                  2
+                ],
+                "value": 51,
+                "d": 24
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -11.912,
+            "feedback": true
+          },
+          {
+            "graph": "m7r3",
+            "m": 7,
+            "r": 3,
+            "n": 10,
+            "role": "train",
+            "T": 38,
+            "T_applies": false,
+            "radius": 38,
+            "checked": 238,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 63,
+            "excess_T": null,
+            "gap_mean": 13.647,
+            "gap_max": 44,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  4,
+                  1,
+                  0,
+                  0,
+                  7,
+                  0,
+                  2,
+                  3,
+                  5,
+                  6
+                ],
+                "value": 63,
+                "d": 21
+              },
+              {
+                "v": [
+                  7,
+                  4,
+                  6,
+                  2,
+                  5,
+                  1,
+                  0,
+                  0,
+                  0,
+                  3
+                ],
+                "value": 61,
+                "d": 27
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -13.647,
+            "feedback": true
+          },
+          {
+            "graph": "m8r2",
+            "m": 8,
+            "r": 2,
+            "n": 10,
+            "role": "train",
+            "T": 42,
+            "T_applies": true,
+            "radius": 42,
+            "checked": 215,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 63,
+            "excess_T": 21,
+            "gap_mean": 13.595,
+            "gap_max": 40,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  6,
+                  4,
+                  1,
+                  0,
+                  0,
+                  3,
+                  8,
+                  2,
+                  7,
+                  5
+                ],
+                "value": 63,
+                "d": 29
+              },
+              {
+                "v": [
+                  5,
+                  2,
+                  3,
+                  6,
+                  4,
+                  1,
+                  8,
+                  0,
+                  0,
+                  7
+                ],
+                "value": 60,
+                "d": 26
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -223.595,
+            "feedback": true
+          },
+          {
+            "graph": "m8r3",
+            "m": 8,
+            "r": 3,
+            "n": 11,
+            "role": "train",
+            "T": 48,
+            "T_applies": true,
+            "radius": 48,
+            "checked": 223,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 75,
+            "excess_T": 27,
+            "gap_mean": 16.946,
+            "gap_max": 52,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  6,
+                  4,
+                  1,
+                  0,
+                  0,
+                  7,
+                  0,
+                  2,
+                  3,
+                  8,
+                  5
+                ],
+                "value": 75,
+                "d": 28
+              },
+              {
+                "v": [
+                  7,
+                  6,
+                  5,
+                  4,
+                  8,
+                  1,
+                  0,
+                  0,
+                  0,
+                  2,
+                  3
+                ],
+                "value": 73,
+                "d": 21
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -286.946,
+            "feedback": true
+          },
+          {
+            "graph": "m9r2",
+            "m": 9,
+            "r": 2,
+            "n": 11,
+            "role": "train",
+            "T": 52,
+            "T_applies": true,
+            "radius": 52,
+            "checked": 213,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 76,
+            "excess_T": 24,
+            "gap_mean": 17.695,
+            "gap_max": 53,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  6,
+                  5,
+                  3,
+                  7,
+                  2,
+                  8,
+                  0,
+                  0,
+                  9,
+                  4,
+                  1
+                ],
+                "value": 76,
+                "d": 27
+              },
+              {
+                "v": [
+                  4,
+                  8,
+                  5,
+                  6,
+                  7,
+                  2,
+                  0,
+                  9,
+                  0,
+                  3,
+                  1
+                ],
+                "value": 74,
+                "d": 21
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -257.695,
+            "feedback": true
+          },
+          {
+            "graph": "m6r4",
+            "m": 6,
+            "r": 4,
+            "n": 10,
+            "role": "train",
+            "T": 33,
+            "T_applies": false,
+            "radius": 33,
+            "checked": 246,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 54,
+            "excess_T": null,
+            "gap_mean": 12.073,
+            "gap_max": 36,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  3,
+                  2,
+                  4,
+                  6,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  5
+                ],
+                "value": 54,
+                "d": 18
+              },
+              {
+                "v": [
+                  0,
+                  6,
+                  2,
+                  3,
+                  0,
+                  4,
+                  5,
+                  1,
+                  0,
+                  0
+                ],
+                "value": 54,
+                "d": 20
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -12.073,
+            "feedback": true
+          }
+        ],
+        "seconds": 10.317,
+        "cache_hit": false
+      }
+    },
+    {
+      "run": "evox-205-run",
+      "id": 21,
+      "guard_error": null,
+      "hash": "5f4153e87a70f3c4",
+      "ratio_rank": [
+        true,
+        0,
+        -1.6458333333333333
+      ],
+      "score": -80.1617,
+      "evaluation": {
+        "split": "train",
+        "evaluator_sha256": "472e53b4222633ce",
+        "candidate_hash": "5f4153e87a70f3c4",
+        "kind": "rules",
+        "valid": true,
+        "error": null,
+        "score": -80.1617,
+        "feasible": false,
+        "stopped": null,
+        "instances": {
+          "m4r2": -4.417,
+          "m5r2": -6.705,
+          "m6r2": -8.587,
+          "m5r3": -8.307,
+          "m4r4": -6.154,
+          "m7r2": -11.805,
+          "m7r3": -13.832,
+          "m8r2": -223.902,
+          "m8r3": -327.265,
+          "m9r2": -257.915,
+          "m6r4": -12.89
+        },
+        "heldout": {},
+        "graphs": [
+          {
+            "graph": "m4r2",
+            "m": 4,
+            "r": 2,
+            "n": 6,
+            "role": "sanity",
+            "T": 12,
+            "T_applies": false,
+            "radius": 12,
+            "checked": 360,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 21,
+            "excess_T": null,
+            "gap_mean": 4.417,
+            "gap_max": 14,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  3,
+                  4,
+                  2,
+                  0,
+                  1
+                ],
+                "value": 21,
+                "d": 8
+              },
+              {
+                "v": [
+                  0,
+                  4,
+                  3,
+                  2,
+                  0,
+                  1
+                ],
+                "value": 20,
+                "d": 10
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -4.417,
+            "feedback": true
+          },
+          {
+            "graph": "m5r2",
+            "m": 5,
+            "r": 2,
+            "n": 7,
+            "role": "sanity",
+            "T": 18,
+            "T_applies": false,
+            "radius": 19,
+            "checked": 2520,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 32,
+            "excess_T": null,
+            "gap_mean": 6.705,
+            "gap_max": 22,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  2,
+                  5,
+                  4,
+                  1,
+                  0,
+                  0,
+                  3
+                ],
+                "value": 32,
+                "d": 11
+              },
+              {
+                "v": [
+                  0,
+                  3,
+                  2,
+                  5,
+                  4,
+                  1,
+                  0
+                ],
+                "value": 32,
+                "d": 11
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -6.705,
+            "feedback": true
+          },
+          {
+            "graph": "m6r2",
+            "m": 6,
+            "r": 2,
+            "n": 8,
+            "role": "sanity",
+            "T": 25,
+            "T_applies": false,
+            "radius": 25,
+            "checked": 20160,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 43,
+            "excess_T": null,
+            "gap_mean": 8.587,
+            "gap_max": 30,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  6,
+                  3,
+                  5,
+                  4,
+                  2,
+                  0,
+                  0,
+                  1
+                ],
+                "value": 43,
+                "d": 15
+              },
+              {
+                "v": [
+                  0,
+                  6,
+                  3,
+                  2,
+                  5,
+                  4,
+                  1,
+                  0
+                ],
+                "value": 42,
+                "d": 18
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -8.587,
+            "feedback": true
+          },
+          {
+            "graph": "m5r3",
+            "m": 5,
+            "r": 3,
+            "n": 8,
+            "role": "sanity",
+            "T": 21,
+            "T_applies": false,
+            "radius": 21,
+            "checked": 6720,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 39,
+            "excess_T": null,
+            "gap_mean": 8.307,
+            "gap_max": 28,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  3,
+                  5,
+                  4,
+                  2,
+                  0,
+                  0,
+                  1
+                ],
+                "value": 39,
+                "d": 13
+              },
+              {
+                "v": [
+                  0,
+                  0,
+                  3,
+                  2,
+                  5,
+                  4,
+                  1,
+                  0
+                ],
+                "value": 38,
+                "d": 14
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -8.307,
+            "feedback": true
+          },
+          {
+            "graph": "m4r4",
+            "m": 4,
+            "r": 4,
+            "n": 8,
+            "role": "sanity",
+            "T": 16,
+            "T_applies": false,
+            "radius": 17,
+            "checked": 1680,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 30,
+            "excess_T": null,
+            "gap_mean": 6.154,
+            "gap_max": 19,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  3,
+                  0,
+                  4,
+                  2,
+                  0,
+                  0,
+                  1
+                ],
+                "value": 30,
+                "d": 13
+              },
+              {
+                "v": [
+                  0,
+                  0,
+                  3,
+                  2,
+                  0,
+                  4,
+                  1,
+                  0
+                ],
+                "value": 29,
+                "d": 14
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -6.154,
+            "feedback": true
+          },
+          {
+            "graph": "m7r2",
+            "m": 7,
+            "r": 2,
+            "n": 9,
+            "role": "train",
+            "T": 33,
+            "T_applies": false,
+            "radius": 33,
+            "checked": 215,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 51,
+            "excess_T": null,
+            "gap_mean": 11.805,
+            "gap_max": 36,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  6,
+                  5,
+                  3,
+                  2,
+                  4,
+                  0,
+                  1,
+                  7
+                ],
+                "value": 51,
+                "d": 26
+              },
+              {
+                "v": [
+                  3,
+                  6,
+                  4,
+                  1,
+                  0,
+                  0,
+                  7,
+                  5,
+                  2
+                ],
+                "value": 51,
+                "d": 24
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -11.805,
+            "feedback": true
+          },
+          {
+            "graph": "m7r3",
+            "m": 7,
+            "r": 3,
+            "n": 10,
+            "role": "train",
+            "T": 38,
+            "T_applies": false,
+            "radius": 38,
+            "checked": 238,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 61,
+            "excess_T": null,
+            "gap_mean": 13.832,
+            "gap_max": 44,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  7,
+                  4,
+                  6,
+                  2,
+                  5,
+                  1,
+                  0,
+                  0,
+                  0,
+                  3
+                ],
+                "value": 61,
+                "d": 27
+              },
+              {
+                "v": [
+                  1,
+                  3,
+                  6,
+                  4,
+                  5,
+                  2,
+                  7,
+                  0,
+                  0,
+                  0
+                ],
+                "value": 58,
+                "d": 14
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -13.832,
+            "feedback": true
+          },
+          {
+            "graph": "m8r2",
+            "m": 8,
+            "r": 2,
+            "n": 10,
+            "role": "train",
+            "T": 42,
+            "T_applies": true,
+            "radius": 42,
+            "checked": 215,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 63,
+            "excess_T": 21,
+            "gap_mean": 13.902,
+            "gap_max": 40,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  6,
+                  4,
+                  1,
+                  0,
+                  0,
+                  3,
+                  8,
+                  2,
+                  7,
+                  5
+                ],
+                "value": 63,
+                "d": 29
+              },
+              {
+                "v": [
+                  5,
+                  2,
+                  3,
+                  6,
+                  4,
+                  1,
+                  8,
+                  0,
+                  0,
+                  7
+                ],
+                "value": 60,
+                "d": 26
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -223.902,
+            "feedback": true
+          },
+          {
+            "graph": "m8r3",
+            "m": 8,
+            "r": 3,
+            "n": 11,
+            "role": "train",
+            "T": 48,
+            "T_applies": true,
+            "radius": 48,
+            "checked": 223,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 79,
+            "excess_T": 31,
+            "gap_mean": 17.265,
+            "gap_max": 52,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  6,
+                  4,
+                  1,
+                  0,
+                  0,
+                  7,
+                  0,
+                  2,
+                  3,
+                  8,
+                  5
+                ],
+                "value": 79,
+                "d": 28
+              },
+              {
+                "v": [
+                  4,
+                  6,
+                  3,
+                  5,
+                  1,
+                  0,
+                  0,
+                  7,
+                  0,
+                  2,
+                  8
+                ],
+                "value": 78,
+                "d": 34
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -327.265,
+            "feedback": true
+          },
+          {
+            "graph": "m9r2",
+            "m": 9,
+            "r": 2,
+            "n": 11,
+            "role": "train",
+            "T": 52,
+            "T_applies": true,
+            "radius": 52,
+            "checked": 213,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 76,
+            "excess_T": 24,
+            "gap_mean": 17.915,
+            "gap_max": 53,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  7,
+                  3,
+                  0,
+                  6,
+                  4,
+                  5,
+                  2,
+                  9,
+                  0,
+                  1,
+                  8
+                ],
+                "value": 76,
+                "d": 38
+              },
+              {
+                "v": [
+                  6,
+                  5,
+                  3,
+                  7,
+                  2,
+                  8,
+                  0,
+                  0,
+                  9,
+                  4,
+                  1
+                ],
+                "value": 76,
+                "d": 27
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -257.915,
+            "feedback": true
+          },
+          {
+            "graph": "m6r4",
+            "m": 6,
+            "r": 4,
+            "n": 10,
+            "role": "train",
+            "T": 33,
+            "T_applies": false,
+            "radius": 33,
+            "checked": 246,
+            "incomplete": 0,
+            "skipped_after_failures": 0,
+            "failures": 0,
+            "failure_kinds": {},
+            "value_max": 56,
+            "excess_T": null,
+            "gap_mean": 12.89,
+            "gap_max": 36,
+            "worst": [],
+            "largest": [
+              {
+                "v": [
+                  0,
+                  6,
+                  2,
+                  3,
+                  0,
+                  4,
+                  5,
+                  1,
+                  0,
+                  0
+                ],
+                "value": 56,
+                "d": 20
+              },
+              {
+                "v": [
+                  0,
+                  4,
+                  0,
+                  0,
+                  3,
+                  2,
+                  5,
+                  6,
+                  1,
+                  0
+                ],
+                "value": 55,
+                "d": 21
+              }
+            ],
+            "fail_rate": 0.0,
+            "score": -12.89,
+            "feedback": true
+          }
+        ],
+        "seconds": 10.821,
+        "cache_hit": false
+      }
+    }
+  ],
+  "scope": "Post-comparison train-only salvage; never credited to a frozen engine arm."
+}

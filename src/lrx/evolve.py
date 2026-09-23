@@ -614,6 +614,11 @@ class Campaign:
     def focus_for(self, parent, taken):
         """Graph where the parent lags the archive most (then its worst graph)."""
         inst = self.sel_instances(self.records[parent])
+        if self.cfg["select"] == "ratio":
+            eligible = {g["graph"] for g in self.records[parent]["eval"].get("graphs", [])
+                        if g.get("feedback") and (g.get("m", 0) >= 8
+                            or g.get("failures") or g.get("incomplete"))}
+            inst = {g: score for g, score in inst.items() if g in eligible} or inst
         if not inst:
             return None
         pool = [self.sel_instances(r) for r in self.archive()] or [inst]
@@ -849,6 +854,7 @@ class Campaign:
         top = self.ranked(self.archive())[:2]
         summary = {
             "task": task,
+            "allowed_kinds": list(self.cfg["kinds"]),
             "proposals": self.proposals,
             "remaining_proposals": self.cfg["max_proposals"] - self.proposals,
             "best": [{"spec": r["spec"], "feedback": r["feedback"]} for r in top],

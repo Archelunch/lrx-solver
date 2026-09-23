@@ -1,0 +1,26 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	49ab346cb44b2f1b	rules	seed	None		-76.3415	False	keep	0	anchor token 1 and pull token 2
+4	1	efa16acbc955cf80	rules	exploit	0	0	-93.7859	False	discard	0.044192	home token 1 then insert
+4	2	c53a80ef372ebff4	rules	exploit	0	0	-1225.3103	False	discard	0.109924	anchor token 1 and pull token 2
+4	3	None	None	exploit	0	0	-1000000.0	False	invalid	0.238072	anchor token 1 and pull token 2
+4	4	893df43f9e1c1ecf	rules	exploit	0	0	-76.3068	False	keep	0.091696	anchor token 1 and pull token 2
+8	5	2cd0612334fed2d5	rules	explore	0	4	-387.214	False	discard	0.586096	two-ended nearer attach
+8	6	ab6c8cbec16ef379	rules	explore	0	4	-1641.418	False	discard	0.188192	two-ended nearer-neighbor carry
+8	7	1166c2b416d6058e	rules	explore	0	4	-210.9148	False	discard	0.132364	two-ended exterior bubble
+8	8	0c4426d2ed2ef961	rules	exploit	0	4	-227.0824	False	discard	0.390316	middle seed both-end carry
+12	9	0d9161a613d2add9	rules	explore	0	0	-1601.5905	False	discard	0.177312	two-arc cocktail XL RX
+12	10	None	None	edit	0	4	-1000000.0	False	invalid	0.217854	
+12	11	2e81f1fd4df3d4f4	rules	explore	0	4	-205.2553	False	discard	0.130744	two-arc grow from middle
+12	12	8f8041309ad89618	rules	explore	0	0	-1959.8977	False	discard	0.473496	two-arc XL then bubble
+16	13	703d7bf8c8027f7b	rules	explore	0	4	-1485.1429	False	discard	0.262544	cinv bubble then zero-gap hop
+16	14	84c148be463cedc2	rules	explore	0	4	-226.5425	False	discard	0.17821	inversion-window gnome, zeros as one block
+16	15	9e5bf2623180e2fa	rules	merge	0	4,0	-111.1413	False	discard	0.13115	short-home 1 if 2 is far
+16	16	c017fef74dcee889	rules	merge	0	4,0	-89.0892	False	discard	0.090966	home-1-if-2-is-opposite
+20	17	None	None	edit	0	4	-1000000.0	False	invalid	0.267812	
+20	18	None	None	edit	0	4	-1000000.0	False	invalid	0.314654	anchor token 1 and pull token 2
+20	19	None	None	exploit	0	4	-1000000.0	False	invalid	0.0	
+20	20	9a4a3e0dfdf20022	rules	edit	0	4	-76.3068	False	discard	0.129298	anchor token 1 and pull token 2
+24	21	893df43f9e1c1ecf	rules	merge	0	4,0	-76.3068	False	duplicate	0.056512	anchor token 1 and pull token 2
+24	22	35bc88ab527bc802	rules	explore	0	20	-224.0087	False	discard	0.164276	unanchored RX insertion
+24	23	None	None	explore	0	20	-1000000.0	False	invalid	0.0	
+24	24	None	None	merge	0	4,0	-1000000.0	False	invalid	0.0	

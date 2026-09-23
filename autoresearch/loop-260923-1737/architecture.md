@@ -1,15 +1,29 @@
 # Architecture findings from the bounded experiment
 
-Status: interim; the frozen comparison is still running. These are proposed
-next steps, not claims that an untested optimizer will outperform another.
+Status: comparison and confirmation complete; see [report.md](report.md).
+Further proposals below are hypotheses, not established engine advantages.
+
+```mermaid
+flowchart LR
+    C[Campaign contract and budget] --> S[Strategy selection]
+    S --> P[Grok proposer]
+    P --> V[JSON validation]
+    V --> E[Deterministic evaluator]
+    E --> A[Candidate archive and costs]
+    A --> S
+    A --> R[Occasional strategy reflection]
+    R --> S
+    A --> F[Freeze finalists]
+    F --> H[Fresh-state confirmation]
+```
 
 ## Separate search control from evidence
 
 Keep the deterministic evaluator and replay boundary. Use one campaign contract
 (candidate kinds, objective, resource caps, data split) for both proposer and
-reflector. Currently the reflector sees all candidate shapes and can recommend
-a kind that the candidate validator rejects. The contract must be explicit in
-both messages. A strategy is not entitled to change the task it is measured on.
+reflector. During the comparison the reflector saw all candidate shapes and could recommend
+a kind that the candidate validator rejects. The post-comparison fix makes the
+allowed kinds explicit in both messages and restricts reflection shapes. A strategy is not entitled to change the task it is measured on.
 
 The existing ratio-first selection makes the objective correspond to the
 constructive route. Mean gap remains a tie-breaker. A raw bound expression T
@@ -34,12 +48,13 @@ expose real search choices without executing generated source.
 
 Current strategy choices mainly change mutation modes, parents and prompt text.
 New controller families often start much worse than the mature insertion seed.
-A global best/front archive can discard those families before refinement. Test
+Selection from the global best or Pareto front can leave those families without
+further refinement, even while their records remain in the archive. Test
 a small family archive with a fixed refinement allowance, charging that allowance
 to the same total budget. Keep this separate from the current engine comparison.
 
-Before increasing meta-optimization depth, fix the allowed-kind contract and
-measure it. Do not infer that official SkyDiscover EvoX is ineffective from this
+Before increasing meta-optimization depth, measure the corrected allowed-kind
+contract in a future paid comparison. Do not infer that official SkyDiscover EvoX is ineffective from this
 compact JSON-policy adaptation. Do not infer it is superior from its flexibility
 either; compare measured outcomes at matched cumulative cost.
 
@@ -78,3 +93,26 @@ different experiment, and cannot settle the paper's longer-horizon claim.
 The local adaptation exposes fixed JSON policy fields and a tactic string.
 Giving its strategy evaluator richer population descriptors and preserving
 family diversity are plausible improvements; they remain hypotheses here.
+
+## Avoid treating temporary reservations as failed science
+
+Both EvoX runs stopped with budget-denied slots in the last concurrent batch,
+although final settled spend remained below $5 of the $6 cap. The ledger was
+correct to reject overcommitted requests. A search-side scheduler could defer
+those slots until earlier calls settle, then retry only if funds remain. Such
+slots must be distinguished from generated invalid candidates in comparisons.
+Do not relax the ledger or treat missing usage as zero to increase throughput.
+
+## Reduce the outer autoresearch cost
+
+Use the general coding agent at phase boundaries: define the experiment, repair
+infrastructure failures, inspect completed evidence, and decide the next search
+space. Let a deterministic campaign runner handle proposal dispatch, budget
+reservations, validation, scoring, archival and final reports between those
+boundaries. Strategy reflection is already a bounded model call inside the loop.
+
+This session's dollar accounting covers Grok calls only. It excludes the outer
+Codex conversation and local compute. Therefore the measured API spend is not an
+end-to-end cost comparison against a general autoresearch agent. Eliminating
+repeated outer-agent supervision is a plausible architectural saving, separate
+from claiming that one evolutionary engine is better than another.

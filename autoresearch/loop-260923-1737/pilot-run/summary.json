@@ -1,0 +1,1000 @@
+{
+  "run_dir": "autoresearch/loop-260923-1737/pilot-run",
+  "engine": "evox",
+  "kinds": [
+    "rules"
+  ],
+  "stop_reason": "max_proposals",
+  "proposals": 2,
+  "valid_proposals": 2,
+  "invalid_proposals": 0,
+  "seed_best": -76.3415,
+  "best": {
+    "id": 0,
+    "hash": "49ab346cb44b2f1b",
+    "score": -76.3415,
+    "feasible_on_train_probes": false,
+    "spec": {
+      "kind": "rules",
+      "name": "anchor token 1 and pull token 2",
+      "notes": "Same block insertion as the parent. Extra: if r0=2 and token 1 is already at the front, do not seek 2 around the circle and walk back. XL (L half) or RX (R half) rotates the suffix until 2 sits at position 1, cost 2d instead of 3d-1, then the existing attached-pair rules advance. Re-fires until b==2; no earlier block to split.",
+      "rules": [
+        {
+          "if": [
+            "and",
+            [
+              "eq",
+              "r2",
+              1
+            ],
+            [
+              "eq",
+              "r3",
+              2
+            ]
+          ],
+          "do": "X",
+          "set": {
+            "r2": 0
+          }
+        },
+        {
+          "if": [
+            "eq",
+            "r2",
+            1
+          ],
+          "do": "L",
+          "set": {
+            "r2": 0
+          }
+        },
+        {
+          "if": [
+            "and",
+            "csorted",
+            [
+              "le",
+              [
+                "mul",
+                2,
+                "pos1"
+              ],
+              "n"
+            ]
+          ],
+          "do": "L"
+        },
+        {
+          "if": [
+            "and",
+            [
+              "eq",
+              "csorted",
+              0
+            ],
+            [
+              "gt",
+              "r0",
+              1
+            ],
+            [
+              "le",
+              "r0",
+              "m"
+            ],
+            [
+              "eq",
+              "b",
+              "r0"
+            ],
+            [
+              "ne",
+              "a",
+              [
+                "sub",
+                "r0",
+                1
+              ]
+            ],
+            [
+              "ne",
+              [
+                "at",
+                2
+              ],
+              [
+                "sub",
+                "r0",
+                1
+              ]
+            ],
+            [
+              "gt",
+              [
+                "mul",
+                2,
+                [
+                  "sub",
+                  [
+                    "sum_tokens",
+                    [
+                      "if",
+                      [
+                        "eq",
+                        "t",
+                        [
+                          "sub",
+                          "r0",
+                          1
+                        ]
+                      ],
+                      "p",
+                      0
+                    ]
+                  ],
+                  1
+                ]
+              ],
+              [
+                "sub",
+                "n",
+                1
+              ]
+            ]
+          ],
+          "do": "X"
+        },
+        {
+          "if": [
+            "and",
+            [
+              "eq",
+              "csorted",
+              0
+            ],
+            [
+              "eq",
+              "a",
+              "r0"
+            ],
+            [
+              "gt",
+              "r0",
+              1
+            ],
+            [
+              "lt",
+              "r0",
+              "m"
+            ],
+            [
+              "eq",
+              "b",
+              [
+                "sub",
+                "r0",
+                1
+              ]
+            ]
+          ],
+          "do": "X",
+          "set": {
+            "r0": [
+              "add",
+              "r0",
+              1
+            ]
+          }
+        },
+        {
+          "if": [
+            "and",
+            [
+              "eq",
+              "csorted",
+              0
+            ],
+            [
+              "eq",
+              "a",
+              "r0"
+            ],
+            [
+              "gt",
+              "r0",
+              1
+            ],
+            [
+              "le",
+              "r0",
+              "m"
+            ],
+            [
+              "eq",
+              "last",
+              [
+                "sub",
+                "r0",
+                1
+              ]
+            ],
+            [
+              "or",
+              [
+                "eq",
+                "r0",
+                "m"
+              ],
+              [
+                "le",
+                [
+                  "mul",
+                  2,
+                  [
+                    "sum_tokens",
+                    [
+                      "if",
+                      [
+                        "eq",
+                        "t",
+                        [
+                          "add",
+                          "r0",
+                          1
+                        ]
+                      ],
+                      "p",
+                      0
+                    ]
+                  ]
+                ],
+                "n"
+              ]
+            ],
+            [
+              "or",
+              [
+                "ne",
+                "b",
+                [
+                  "add",
+                  "r0",
+                  1
+                ]
+              ],
+              [
+                "ge",
+                "r0",
+                [
+                  "sub",
+                  "m",
+                  1
+                ]
+              ],
+              [
+                "le",
+                [
+                  "mul",
+                  2,
+                  [
+                    "sub",
+                    [
+                      "sum_tokens",
+                      [
+                        "if",
+                        [
+                          "eq",
+                          "t",
+                          [
+                            "add",
+                            "r0",
+                            2
+                          ]
+                        ],
+                        "p",
+                        0
+                      ]
+                    ],
+                    1
+                  ]
+                ],
+                "n"
+              ]
+            ]
+          ],
+          "do": "L",
+          "set": {
+            "r0": [
+              "add",
+              "r0",
+              1
+            ]
+          }
+        },
+        {
+          "if": [
+            "and",
+            [
+              "eq",
+              "csorted",
+              0
+            ],
+            [
+              "eq",
+              "a",
+              "r0"
+            ],
+            [
+              "gt",
+              "r0",
+              1
+            ],
+            [
+              "lt",
+              "r0",
+              "m"
+            ],
+            [
+              "eq",
+              "last",
+              [
+                "sub",
+                "r0",
+                1
+              ]
+            ]
+          ],
+          "do": "R",
+          "set": {
+            "r0": [
+              "if",
+              [
+                "and",
+                [
+                  "eq",
+                  "b",
+                  [
+                    "add",
+                    "r0",
+                    1
+                  ]
+                ],
+                [
+                  "lt",
+                  "r0",
+                  [
+                    "sub",
+                    "m",
+                    1
+                  ]
+                ]
+              ],
+              [
+                "add",
+                "r0",
+                2
+              ],
+              [
+                "add",
+                "r0",
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "if": [
+            "or",
+            [
+              "and",
+              [
+                "eq",
+                "r1",
+                1
+              ],
+              [
+                "ne",
+                "b",
+                "r0"
+              ]
+            ],
+            [
+              "and",
+              [
+                "eq",
+                "csorted",
+                0
+              ],
+              [
+                "eq",
+                "a",
+                "r0"
+              ],
+              [
+                "gt",
+                "r0",
+                1
+              ],
+              [
+                "le",
+                [
+                  "mul",
+                  2,
+                  [
+                    "sum_tokens",
+                    [
+                      "if",
+                      [
+                        "eq",
+                        "t",
+                        [
+                          "sub",
+                          "r0",
+                          1
+                        ]
+                      ],
+                      "p",
+                      0
+                    ]
+                  ]
+                ],
+                [
+                  "sub",
+                  "n",
+                  1
+                ]
+              ]
+            ],
+            [
+              "and",
+              [
+                "eq",
+                "csorted",
+                0
+              ],
+              [
+                "eq",
+                "r0",
+                2
+              ],
+              [
+                "eq",
+                "a",
+                1
+              ],
+              [
+                "ne",
+                "b",
+                2
+              ],
+              [
+                "le",
+                [
+                  "mul",
+                  2,
+                  [
+                    "sum_tokens",
+                    [
+                      "if",
+                      [
+                        "eq",
+                        "t",
+                        2
+                      ],
+                      "p",
+                      0
+                    ]
+                  ]
+                ],
+                "n"
+              ]
+            ]
+          ],
+          "do": "X",
+          "set": {
+            "r2": 1,
+            "r3": 1
+          }
+        },
+        {
+          "if": [
+            "or",
+            [
+              "and",
+              [
+                "eq",
+                "csorted",
+                0
+              ],
+              [
+                "eq",
+                "a",
+                "r0"
+              ],
+              [
+                "gt",
+                "r0",
+                1
+              ]
+            ],
+            [
+              "and",
+              [
+                "eq",
+                "csorted",
+                0
+              ],
+              [
+                "eq",
+                "r0",
+                2
+              ],
+              [
+                "eq",
+                "a",
+                1
+              ],
+              [
+                "ne",
+                "b",
+                2
+              ],
+              [
+                "gt",
+                [
+                  "mul",
+                  2,
+                  [
+                    "sum_tokens",
+                    [
+                      "if",
+                      [
+                        "eq",
+                        "t",
+                        2
+                      ],
+                      "p",
+                      0
+                    ]
+                  ]
+                ],
+                "n"
+              ]
+            ]
+          ],
+          "do": "R",
+          "set": {
+            "r2": 1,
+            "r3": 2
+          }
+        },
+        {
+          "if": [
+            "and",
+            [
+              "eq",
+              "csorted",
+              0
+            ],
+            [
+              "or",
+              [
+                "and",
+                [
+                  "eq",
+                  "r0",
+                  0
+                ],
+                [
+                  "ge",
+                  "m",
+                  2
+                ],
+                [
+                  "ne",
+                  "last",
+                  1
+                ]
+              ],
+              [
+                "and",
+                [
+                  "ge",
+                  "r0",
+                  1
+                ],
+                [
+                  "le",
+                  "r0",
+                  "m"
+                ],
+                [
+                  "ne",
+                  "a",
+                  "r0"
+                ]
+              ]
+            ],
+            [
+              "le",
+              [
+                "mul",
+                2,
+                [
+                  "sum_tokens",
+                  [
+                    "if",
+                    [
+                      "eq",
+                      "t",
+                      [
+                        "if",
+                        [
+                          "eq",
+                          "r0",
+                          0
+                        ],
+                        2,
+                        "r0"
+                      ]
+                    ],
+                    "p",
+                    0
+                  ]
+                ]
+              ],
+              "n"
+            ],
+            [
+              "or",
+              [
+                "ne",
+                "b",
+                "r0"
+              ],
+              [
+                "ne",
+                "a",
+                [
+                  "sub",
+                  "r0",
+                  1
+                ]
+              ],
+              [
+                "ge",
+                "r0",
+                "m"
+              ],
+              [
+                "le",
+                [
+                  "mul",
+                  2,
+                  [
+                    "sub",
+                    [
+                      "sum_tokens",
+                      [
+                        "if",
+                        [
+                          "eq",
+                          "t",
+                          [
+                            "add",
+                            "r0",
+                            1
+                          ]
+                        ],
+                        "p",
+                        0
+                      ]
+                    ],
+                    1
+                  ]
+                ],
+                "n"
+              ]
+            ]
+          ],
+          "do": "L",
+          "set": {
+            "r0": [
+              "if",
+              [
+                "eq",
+                "r0",
+                0
+              ],
+              2,
+              "r0"
+            ],
+            "r1": 0
+          }
+        },
+        {
+          "if": [
+            "and",
+            [
+              "eq",
+              "csorted",
+              0
+            ],
+            [
+              "eq",
+              "r0",
+              0
+            ],
+            [
+              "eq",
+              "a",
+              1
+            ],
+            [
+              "ge",
+              "m",
+              2
+            ],
+            [
+              "eq",
+              [
+                "sum_tokens",
+                [
+                  "if",
+                  [
+                    "eq",
+                    "t",
+                    2
+                  ],
+                  "p",
+                  0
+                ]
+              ],
+              [
+                "add",
+                [
+                  "floordiv",
+                  "n",
+                  2
+                ],
+                1
+              ]
+            ]
+          ],
+          "do": "X",
+          "set": {
+            "r0": 2,
+            "r1": 1,
+            "r2": 1,
+            "r3": 1
+          }
+        },
+        {
+          "if": [
+            "and",
+            [
+              "eq",
+              "csorted",
+              0
+            ],
+            [
+              "or",
+              [
+                "eq",
+                "r0",
+                0
+              ],
+              [
+                "and",
+                [
+                  "gt",
+                  "r0",
+                  1
+                ],
+                [
+                  "lt",
+                  "r0",
+                  "m"
+                ],
+                [
+                  "eq",
+                  "a",
+                  [
+                    "sub",
+                    "r0",
+                    1
+                  ]
+                ],
+                [
+                  "eq",
+                  "b",
+                  "r0"
+                ],
+                [
+                  "gt",
+                  [
+                    "mul",
+                    2,
+                    [
+                      "sub",
+                      [
+                        "sum_tokens",
+                        [
+                          "if",
+                          [
+                            "eq",
+                            "t",
+                            [
+                              "add",
+                              "r0",
+                              1
+                            ]
+                          ],
+                          "p",
+                          0
+                        ]
+                      ],
+                      1
+                    ]
+                  ],
+                  "n"
+                ]
+              ]
+            ]
+          ],
+          "do": "R",
+          "set": {
+            "r0": [
+              "if",
+              [
+                "eq",
+                "r0",
+                0
+              ],
+              [
+                "if",
+                [
+                  "ge",
+                  "m",
+                  2
+                ],
+                2,
+                1
+              ],
+              [
+                "add",
+                "r0",
+                1
+              ]
+            ],
+            "r1": [
+              "if",
+              [
+                "eq",
+                "r0",
+                0
+              ],
+              [
+                "if",
+                [
+                  "and",
+                  [
+                    "ge",
+                    "m",
+                    2
+                  ],
+                  [
+                    "eq",
+                    "last",
+                    1
+                  ],
+                  [
+                    "le",
+                    [
+                      "mul",
+                      2,
+                      [
+                        "sum_tokens",
+                        [
+                          "if",
+                          [
+                            "eq",
+                            "t",
+                            2
+                          ],
+                          "p",
+                          0
+                        ]
+                      ]
+                    ],
+                    "n"
+                  ]
+                ],
+                1,
+                0
+              ],
+              0
+            ]
+          }
+        }
+      ],
+      "default": "R"
+    }
+  },
+  "heldout": [],
+  "usage": {
+    "estimated_usd": 0.537862,
+    "max_spend_usd": 2.5,
+    "requests": 4,
+    "failed_requests": 0,
+    "usage_overruns": 0,
+    "provider_costed_requests": 4,
+    "input_tokens": 34562,
+    "output_tokens": 79275,
+    "billing_verified": false
+  },
+  "insights": [
+    "SESSION OBJECTIVE: First solve every checked state. Then reduce the WORST word/T on m>=8 training graphs. Mean-score changes alone are secondary. Propose a reusable mathematical mechanism, not a branch recognizing a literal probe vector. Keep the existing JSON DSL and its limits. Keep explanations concise; make one testable change. The conjecture remains open.\nInsights file (edited by the orchestrator, read by live campaigns as starting guidance).\nTrain-side evidence only; held-out results are never copied here.\n- Lead candidates/leads/49ab346cb44b2f1b.json (\"anchor token 1 and pull token 2\") is sound on all\n  train graphs; worst m>=8 ratio value/T = 1.5625 (75 vs 48 at m8r3, binding; 76 vs 52 at m9r2,\n  63 vs 42 at m8r2). The bubble baseline is ~3x T. Idea: insert tokens 2..m one by one into a\n  growing contiguous circular block (token 1 fixed), seek the next token with the short rotation,\n  walk it with two-move primitives (X then L, or R then X) tracked in r2/r3, on the XL walk finish\n  with X when pred sits at position 1. Cuts so far: skip an L that the next rule undoes (R once,\n  r0=k+1, or r0=k+2 if k+1 is already attached); when r0==2 and token 1 is at the front, XL or RX\n  walks the suffix until 2 sits at position 1 (2d moves instead of 3d-1).\n- Lineage: 1ea0a8de (2.06x) -> 4189a604 (1.83x) -> 26b3e8cd (1.63x) -> c01093d9 (1.56x) ->\n  49ab346c (1.56x). Accepted cuts removed rotations or special-cased the start without changing\n  the insertion order. In rounds 2-3 no proposal lowered m8r3 below 75; start patches keyed to one\n  worst probe state lower only that graph. Local cuts of this scheme look exhausted.\n- External structure (pure LRX, r = 1; Antiufeev arXiv:2601.08715 and an external audit of it,\n  not proved here): the hardest element is a reflection of the circle. Its short words split the\n  circle into two complementary arcs of about n/2 entries, reverse each arc separately and join\n  them with 2 shifts. Inside an arc each inverted pair costs one X plus one single shift (carry\n  pattern X L X L ... or R X R X ...; reversing j adjacent entries costs j(j-1)-1). Entries in\n  different arcs never swap: they pass around the far side, so the X count is about n^2/4, not\n  n(n-1)/2.\n- Hypothesis (not measured): one insertion costs about 2k + (return distance) for a token carried\n  k steps, and the one-ended order makes carried tokens cross tokens that a two-sided order would\n  route around the other way, so the scheme may stay near 1.5-2x T. Orders to try: start the block\n  at any token (not necessarily 1) and grow it at both ends, the next token being (first token of\n  the block) - 1 placed before it or (last token) + 1 placed after it, whichever carry is shorter\n  (one register per end); or sort two arcs separately and merge; or carry the zero block. Round 4:\n  two proposals tried a two-sided order; one tied the parent, one scored -1776. A two-sided order\n  probably needs a new controller built and tested on small graphs first, not an edit of this one.\n- Controllers written from scratch usually loop (cycle) on small graphs. Every rule sequence must\n  provably make progress: keep a register for the token being served, clear it when the token\n  reaches its slot, and keep the \"csorted -> short rotation\" finishing rules.\n"
+  ],
+  "tactics": [],
+  "merges": 0,
+  "strategy": {
+    "parent": "best",
+    "modes": {
+      "exploit": 0.1,
+      "explore": 0.7,
+      "edit": 0.1,
+      "merge": 0.1
+    },
+    "inspirations": 1,
+    "inspiration_pool": "top",
+    "history": 2,
+    "focus": true,
+    "tactic": "Do not patch the one-ended insertion controller. Write a new rules controller: split the circle into two arcs of about n/2, reverse each with XL/RX carries (j adjacent reversals cost about j(j-1)-1), then join with at most 2 shifts. Keep a token/phase register that only advances when that phase finishes, and retain csorted short-rotation finish. Must terminate on every small graph; aim worst word <= T for m>=8, especially m8r3."
+  },
+  "strategy_history": [
+    {
+      "strategy": {
+        "parent": "best",
+        "modes": {
+          "exploit": 1.0
+        },
+        "inspirations": 0,
+        "inspiration_pool": "top",
+        "history": 4,
+        "focus": true,
+        "tactic": null
+      },
+      "start": -1.5625,
+      "end": -1.5625,
+      "delta": 0.0,
+      "J": 0.0,
+      "proposals": 1
+    },
+    {
+      "strategy": {
+        "parent": "best",
+        "modes": {
+          "exploit": 0.1,
+          "explore": 0.7,
+          "edit": 0.1,
+          "merge": 0.1
+        },
+        "inspirations": 1,
+        "inspiration_pool": "top",
+        "history": 2,
+        "focus": true,
+        "tactic": "Do not patch the one-ended insertion controller. Write a new rules controller: split the circle into two arcs of about n/2, reverse each with XL/RX carries (j adjacent reversals cost about j(j-1)-1), then join with at most 2 shifts. Keep a token/phase register that only advances when that phase finishes, and retain csorted short-rotation finish. Must terminate on every small graph; aim worst word <= T for m>=8, especially m8r3."
+      },
+      "start": -1.5625,
+      "end": -1.5625,
+      "delta": 0.0,
+      "J": 0.0,
+      "proposals": 2
+    }
+  ],
+  "evaluator_sha256": "5b1487a48a68a159",
+  "wall_seconds": 1095.0,
+  "claim_scope": "finite probe evidence; not a proof"
+}

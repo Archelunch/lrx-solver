@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "goal": "Bounded EvoX comparison and finite checks",
+  "budget_usd": 50,
+  "pilot": "pilot-run",
+  "comparison_started": true,
+  "verification": "301 tests pass; compileall, smoke and trusted check pass",
+  "next": "Discuss architecture choices; no further API calls scheduled.",
+  "sessions": {
+    "pilot": 70799,
+    "evox-204": 3738,
+    "gepa-204": 48606,
+    "sequential-204": 60641,
+    "evox-205": 81616,
+    "gepa-205": 61396,
+    "sequential-205": 87708
+  },
+  "commits": [
+    "329ff08",
+    "5bac3b0",
+    "a67fd6f",
+    "74b0c83",
+    "fd3973f"
+  ],
+  "completed_offline": [
+    "shared evaluation cache",
+    "ratio-first ranking and EvoX plateau detection",
+    "bounded lift decision, independent DP tests, known m8r3 obstruction regression",
+    "position lookup simplification, ABBA benchmark with identical graph metrics"
+  ],
+  "pending": [],
+  "recorded_api_usd": 29.233227,
+  "unused_api_budget_usd": 20.766773,
+  "report": "report.md",
+  "confirmation": "49000 replayed words; zero failures; identical per-graph maxima across baseline and all six finalists",
+  "promoted_leads": []
+}

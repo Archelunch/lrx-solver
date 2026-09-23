@@ -1,4 +1,4 @@
-# Interim mechanism observations (not final results)
+# Mechanism observations (completed comparison)
 
 - First-round proposal prompts are identical across the three engines for
   each seed (initial-prompt-audit.json). Initial differences are generation
@@ -32,3 +32,10 @@
   On the original baseline this freezes 10 of 12 rules, sharply restricting
   the advertised local-edit operator. This predates the comparison; fix and
   test separately, preserving actual finishing behavior.
+
+Final outcome: GEPA 204 train ratio 1.5000; sequential 205 1.520833;
+other main arms 1.5625. All seven confirmation controllers have identical
+per-graph maxima, with 49000 successful word replays and zero failures.
+No lead promoted. Post-comparison contract fixes pass 301 tests; three paid
+edits recovered locally, none better than the finalists. Total recorded API
+spend $29.233227; no further calls scheduled. See report.md for scope.
