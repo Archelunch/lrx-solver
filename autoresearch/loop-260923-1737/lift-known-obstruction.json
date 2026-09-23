@@ -1,0 +1,87 @@
+{
+  "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    7,
+    8,
+    6,
+    5,
+    4,
+    3
+  ],
+  "m": 8,
+  "r": 3,
+  "results": [
+    {
+      "status": "COMPLETE",
+      "within_bound": false,
+      "q": 42,
+      "bound": 48,
+      "deletions": [
+        {
+          "d_small": 41,
+          "slack": 1,
+          "status": "COMPLETE_BOUND",
+          "H": null,
+          "states": 12433,
+          "lower_bound": 49,
+          "length_cap": 48,
+          "j": 2
+        },
+        {
+          "d_small": 41,
+          "slack": 1,
+          "status": "COMPLETE_BOUND",
+          "H": null,
+          "states": 7312,
+          "lower_bound": 49,
+          "length_cap": 48,
+          "j": 3
+        },
+        {
+          "d_small": 41,
+          "slack": 1,
+          "status": "COMPLETE_BOUND",
+          "H": null,
+          "states": 8121,
+          "lower_bound": 49,
+          "length_cap": 48,
+          "j": 4
+        }
+      ],
+      "seconds": 0.10085449999314733,
+      "scope": "Known regression vector only; bounded resource pilot"
+    },
+    {
+      "status": "COMPLETE",
+      "within_bound": true,
+      "q": 43,
+      "bound": 48,
+      "witness": {
+        "d_small": 41,
+        "slack": 2,
+        "status": "COMPLETE",
+        "H": 47,
+        "states": 93108,
+        "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+        "j": 2
+      },
+      "deletions": [
+        {
+          "d_small": 41,
+          "slack": 2,
+          "status": "COMPLETE",
+          "H": 47,
+          "states": 93108,
+          "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+          "j": 2
+        }
+      ],
+      "seconds": 0.3911552499921527,
+      "scope": "Known regression vector only; bounded resource pilot"
+    }
+  ]
+}

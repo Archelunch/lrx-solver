@@ -1,0 +1,434 @@
+{
+  "runs": [
+    {
+      "name": "baseline",
+      "hash": "49ab346cb44b2f1b",
+      "seconds": 9.07054116600193,
+      "score": -76.3415,
+      "graphs": [
+        {
+          "graph": "m4r2",
+          "checked": 360,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 21,
+          "gap_mean": 4.433,
+          "score": -4.433
+        },
+        {
+          "graph": "m5r2",
+          "checked": 2520,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 32,
+          "gap_mean": 6.677,
+          "score": -6.677
+        },
+        {
+          "graph": "m6r2",
+          "checked": 20160,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 43,
+          "gap_mean": 8.501,
+          "score": -8.501
+        },
+        {
+          "graph": "m5r3",
+          "checked": 6720,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 39,
+          "gap_mean": 8.206,
+          "score": -8.206
+        },
+        {
+          "graph": "m4r4",
+          "checked": 1680,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 30,
+          "gap_mean": 6.131,
+          "score": -6.131
+        },
+        {
+          "graph": "m7r2",
+          "checked": 215,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 54,
+          "gap_mean": 11.698,
+          "score": -11.698
+        },
+        {
+          "graph": "m7r3",
+          "checked": 238,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 63,
+          "gap_mean": 13.563,
+          "score": -13.563
+        },
+        {
+          "graph": "m8r2",
+          "checked": 215,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 63,
+          "gap_mean": 13.651,
+          "score": -223.651
+        },
+        {
+          "graph": "m8r3",
+          "checked": 223,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 75,
+          "gap_mean": 16.794,
+          "score": -286.794
+        },
+        {
+          "graph": "m9r2",
+          "checked": 213,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 76,
+          "gap_mean": 17.676,
+          "score": -257.676
+        },
+        {
+          "graph": "m6r4",
+          "checked": 246,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 54,
+          "gap_mean": 12.427,
+          "score": -12.427
+        }
+      ]
+    },
+    {
+      "name": "simplified",
+      "hash": "04fd641d184abe0d",
+      "seconds": 7.639339082990773,
+      "score": -76.3415,
+      "graphs": [
+        {
+          "graph": "m4r2",
+          "checked": 360,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 21,
+          "gap_mean": 4.433,
+          "score": -4.433
+        },
+        {
+          "graph": "m5r2",
+          "checked": 2520,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 32,
+          "gap_mean": 6.677,
+          "score": -6.677
+        },
+        {
+          "graph": "m6r2",
+          "checked": 20160,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 43,
+          "gap_mean": 8.501,
+          "score": -8.501
+        },
+        {
+          "graph": "m5r3",
+          "checked": 6720,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 39,
+          "gap_mean": 8.206,
+          "score": -8.206
+        },
+        {
+          "graph": "m4r4",
+          "checked": 1680,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 30,
+          "gap_mean": 6.131,
+          "score": -6.131
+        },
+        {
+          "graph": "m7r2",
+          "checked": 215,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 54,
+          "gap_mean": 11.698,
+          "score": -11.698
+        },
+        {
+          "graph": "m7r3",
+          "checked": 238,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 63,
+          "gap_mean": 13.563,
+          "score": -13.563
+        },
+        {
+          "graph": "m8r2",
+          "checked": 215,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 63,
+          "gap_mean": 13.651,
+          "score": -223.651
+        },
+        {
+          "graph": "m8r3",
+          "checked": 223,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 75,
+          "gap_mean": 16.794,
+          "score": -286.794
+        },
+        {
+          "graph": "m9r2",
+          "checked": 213,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 76,
+          "gap_mean": 17.676,
+          "score": -257.676
+        },
+        {
+          "graph": "m6r4",
+          "checked": 246,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 54,
+          "gap_mean": 12.427,
+          "score": -12.427
+        }
+      ]
+    },
+    {
+      "name": "simplified",
+      "hash": "04fd641d184abe0d",
+      "seconds": 7.536036875011632,
+      "score": -76.3415,
+      "graphs": [
+        {
+          "graph": "m4r2",
+          "checked": 360,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 21,
+          "gap_mean": 4.433,
+          "score": -4.433
+        },
+        {
+          "graph": "m5r2",
+          "checked": 2520,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 32,
+          "gap_mean": 6.677,
+          "score": -6.677
+        },
+        {
+          "graph": "m6r2",
+          "checked": 20160,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 43,
+          "gap_mean": 8.501,
+          "score": -8.501
+        },
+        {
+          "graph": "m5r3",
+          "checked": 6720,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 39,
+          "gap_mean": 8.206,
+          "score": -8.206
+        },
+        {
+          "graph": "m4r4",
+          "checked": 1680,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 30,
+          "gap_mean": 6.131,
+          "score": -6.131
+        },
+        {
+          "graph": "m7r2",
+          "checked": 215,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 54,
+          "gap_mean": 11.698,
+          "score": -11.698
+        },
+        {
+          "graph": "m7r3",
+          "checked": 238,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 63,
+          "gap_mean": 13.563,
+          "score": -13.563
+        },
+        {
+          "graph": "m8r2",
+          "checked": 215,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 63,
+          "gap_mean": 13.651,
+          "score": -223.651
+        },
+        {
+          "graph": "m8r3",
+          "checked": 223,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 75,
+          "gap_mean": 16.794,
+          "score": -286.794
+        },
+        {
+          "graph": "m9r2",
+          "checked": 213,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 76,
+          "gap_mean": 17.676,
+          "score": -257.676
+        },
+        {
+          "graph": "m6r4",
+          "checked": 246,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 54,
+          "gap_mean": 12.427,
+          "score": -12.427
+        }
+      ]
+    },
+    {
+      "name": "baseline",
+      "hash": "49ab346cb44b2f1b",
+      "seconds": 10.048364957998274,
+      "score": -76.3415,
+      "graphs": [
+        {
+          "graph": "m4r2",
+          "checked": 360,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 21,
+          "gap_mean": 4.433,
+          "score": -4.433
+        },
+        {
+          "graph": "m5r2",
+          "checked": 2520,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 32,
+          "gap_mean": 6.677,
+          "score": -6.677
+        },
+        {
+          "graph": "m6r2",
+          "checked": 20160,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 43,
+          "gap_mean": 8.501,
+          "score": -8.501
+        },
+        {
+          "graph": "m5r3",
+          "checked": 6720,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 39,
+          "gap_mean": 8.206,
+          "score": -8.206
+        },
+        {
+          "graph": "m4r4",
+          "checked": 1680,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 30,
+          "gap_mean": 6.131,
+          "score": -6.131
+        },
+        {
+          "graph": "m7r2",
+          "checked": 215,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 54,
+          "gap_mean": 11.698,
+          "score": -11.698
+        },
+        {
+          "graph": "m7r3",
+          "checked": 238,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 63,
+          "gap_mean": 13.563,
+          "score": -13.563
+        },
+        {
+          "graph": "m8r2",
+          "checked": 215,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 63,
+          "gap_mean": 13.651,
+          "score": -223.651
+        },
+        {
+          "graph": "m8r3",
+          "checked": 223,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 75,
+          "gap_mean": 16.794,
+          "score": -286.794
+        },
+        {
+          "graph": "m9r2",
+          "checked": 213,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 76,
+          "gap_mean": 17.676,
+          "score": -257.676
+        },
+        {
+          "graph": "m6r4",
+          "checked": 246,
+          "failures": 0,
+          "incomplete": 0,
+          "value_max": 54,
+          "gap_mean": 12.427,
+          "score": -12.427
+        }
+      ]
+    }
+  ],
+  "same_graph_metrics": true,
+  "scope": "Finite evaluator benchmark under concurrent network campaigns; ABBA ordering; no claim of a tighter bound."
+}
