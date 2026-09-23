@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "goal": "One proof-focused LRX autoresearch iteration",
+  "main_conjecture": "open",
+  "general_auxiliary_lemmas": [
+    "zero-erasure counting identity",
+    "smaller-distance pruning bound"
+  ],
+  "finite_result": "A_54(v)<=60 for all 27 distinct insertions into the 3 (8,4) antipodes",
+  "incomplete": "All 24 frozen (8,9) cases at q79 B84 reached state cap",
+  "verification": {
+    "tests": 305,
+    "compileall": "pass",
+    "smoke": "pass",
+    "trusted": "pass",
+    "ratio": 1.5625,
+    "legacy_spend_guard": "FAIL: historical $56.0159 vs default $20; not overridden; distinct from authorized campaign account"
+  },
+  "recorded_api_usd_this_iteration": 0.052468,
+  "recorded_api_usd_campaign": 29.285695,
+  "remaining_campaign_usd": 20.714305,
+  "billing_verified": false,
+  "approval": "User explicitly approved exact Grok research prompt; request completed",
+  "report": "report.md",
+  "proof": "proof-note.md",
+  "model_audit": "review-audit.md",
+  "certificates": "m8r5-certificates.json",
+  "pending": [],
+  "next": "Study constructions with concentrated per-zero erasures; verify a memory-bounded lift search before extending hard cases; unify campaign accounting without modifying trusted guard unreviewed."
+}

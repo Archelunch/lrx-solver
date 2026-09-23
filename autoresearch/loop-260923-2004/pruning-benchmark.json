@@ -1,0 +1,664 @@
+[
+  {
+    "m": 8,
+    "r": 3,
+    "v": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      7,
+      8,
+      6,
+      5,
+      4,
+      3
+    ],
+    "q": 42,
+    "bound": 48,
+    "rows": [
+      {
+        "engine": "before",
+        "seconds": 0.18910699998377822,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": false,
+          "q": 42,
+          "bound": 48,
+          "deletions": [
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 12433,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 2
+            },
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 7312,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 3
+            },
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 8121,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 4
+            }
+          ]
+        }
+      },
+      {
+        "engine": "after",
+        "seconds": 0.07277429199893959,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": false,
+          "q": 42,
+          "bound": 48,
+          "deletions": [
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 4454,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 2
+            },
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 4662,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 3
+            },
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 5216,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 4
+            }
+          ]
+        }
+      },
+      {
+        "engine": "after",
+        "seconds": 0.07677524999598972,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": false,
+          "q": 42,
+          "bound": 48,
+          "deletions": [
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 4454,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 2
+            },
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 4662,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 3
+            },
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 5216,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 4
+            }
+          ]
+        }
+      },
+      {
+        "engine": "before",
+        "seconds": 0.10751774997333996,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": false,
+          "q": 42,
+          "bound": 48,
+          "deletions": [
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 12433,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 2
+            },
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 7312,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 3
+            },
+            {
+              "d_small": 41,
+              "slack": 1,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 8121,
+              "lower_bound": 49,
+              "length_cap": 48,
+              "j": 4
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "m": 8,
+    "r": 3,
+    "v": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      7,
+      8,
+      6,
+      5,
+      4,
+      3
+    ],
+    "q": 43,
+    "bound": 48,
+    "rows": [
+      {
+        "engine": "before",
+        "seconds": 0.41874604200711474,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": true,
+          "q": 43,
+          "bound": 48,
+          "witness": {
+            "d_small": 41,
+            "slack": 2,
+            "status": "COMPLETE",
+            "H": 47,
+            "states": 93108,
+            "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+            "j": 2
+          },
+          "deletions": [
+            {
+              "d_small": 41,
+              "slack": 2,
+              "status": "COMPLETE",
+              "H": 47,
+              "states": 93108,
+              "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+              "j": 2
+            }
+          ]
+        }
+      },
+      {
+        "engine": "after",
+        "seconds": 0.11291104098199867,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": true,
+          "q": 43,
+          "bound": 48,
+          "witness": {
+            "d_small": 41,
+            "slack": 2,
+            "status": "COMPLETE",
+            "H": 47,
+            "states": 26632,
+            "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+            "j": 2
+          },
+          "deletions": [
+            {
+              "d_small": 41,
+              "slack": 2,
+              "status": "COMPLETE",
+              "H": 47,
+              "states": 26632,
+              "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+              "j": 2
+            }
+          ]
+        }
+      },
+      {
+        "engine": "after",
+        "seconds": 0.12111729200114496,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": true,
+          "q": 43,
+          "bound": 48,
+          "witness": {
+            "d_small": 41,
+            "slack": 2,
+            "status": "COMPLETE",
+            "H": 47,
+            "states": 26632,
+            "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+            "j": 2
+          },
+          "deletions": [
+            {
+              "d_small": 41,
+              "slack": 2,
+              "status": "COMPLETE",
+              "H": 47,
+              "states": 26632,
+              "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+              "j": 2
+            }
+          ]
+        }
+      },
+      {
+        "engine": "before",
+        "seconds": 0.41355500000645407,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": true,
+          "q": 43,
+          "bound": 48,
+          "witness": {
+            "d_small": 41,
+            "slack": 2,
+            "status": "COMPLETE",
+            "H": 47,
+            "states": 93108,
+            "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+            "j": 2
+          },
+          "deletions": [
+            {
+              "d_small": 41,
+              "slack": 2,
+              "status": "COMPLETE",
+              "H": 47,
+              "states": 93108,
+              "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+              "j": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "m": 9,
+    "r": 3,
+    "v": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3
+    ],
+    "q": 52,
+    "bound": 59,
+    "rows": [
+      {
+        "engine": "before",
+        "seconds": 0.09026095899753273,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": false,
+          "q": 52,
+          "bound": 59,
+          "deletions": [
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 12719,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 2
+            },
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 4320,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 3
+            },
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 5903,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 4
+            }
+          ]
+        }
+      },
+      {
+        "engine": "after",
+        "seconds": 0.03786179100279696,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": false,
+          "q": 52,
+          "bound": 59,
+          "deletions": [
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 2272,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 2
+            },
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 2972,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 3
+            },
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 4288,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 4
+            }
+          ]
+        }
+      },
+      {
+        "engine": "after",
+        "seconds": 0.03821341702132486,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": false,
+          "q": 52,
+          "bound": 59,
+          "deletions": [
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 2272,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 2
+            },
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 2972,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 3
+            },
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 4288,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 4
+            }
+          ]
+        }
+      },
+      {
+        "engine": "before",
+        "seconds": 0.09200558401062153,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": false,
+          "q": 52,
+          "bound": 59,
+          "deletions": [
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 12719,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 2
+            },
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 4320,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 3
+            },
+            {
+              "d_small": 52,
+              "slack": 0,
+              "status": "COMPLETE_BOUND",
+              "H": null,
+              "states": 5903,
+              "lower_bound": 60,
+              "length_cap": 59,
+              "j": 4
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "m": 9,
+    "r": 3,
+    "v": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3
+    ],
+    "q": 53,
+    "bound": 59,
+    "rows": [
+      {
+        "engine": "before",
+        "seconds": 0.2883535419823602,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": true,
+          "q": 53,
+          "bound": 59,
+          "witness": {
+            "d_small": 52,
+            "slack": 1,
+            "status": "COMPLETE",
+            "H": 59,
+            "states": 66088,
+            "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+            "j": 2
+          },
+          "deletions": [
+            {
+              "d_small": 52,
+              "slack": 1,
+              "status": "COMPLETE",
+              "H": 59,
+              "states": 66088,
+              "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+              "j": 2
+            }
+          ]
+        }
+      },
+      {
+        "engine": "after",
+        "seconds": 0.05563379201339558,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": true,
+          "q": 53,
+          "bound": 59,
+          "witness": {
+            "d_small": 52,
+            "slack": 1,
+            "status": "COMPLETE",
+            "H": 59,
+            "states": 12352,
+            "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+            "j": 2
+          },
+          "deletions": [
+            {
+              "d_small": 52,
+              "slack": 1,
+              "status": "COMPLETE",
+              "H": 59,
+              "states": 12352,
+              "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+              "j": 2
+            }
+          ]
+        }
+      },
+      {
+        "engine": "after",
+        "seconds": 0.05622241701348685,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": true,
+          "q": 53,
+          "bound": 59,
+          "witness": {
+            "d_small": 52,
+            "slack": 1,
+            "status": "COMPLETE",
+            "H": 59,
+            "states": 12352,
+            "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+            "j": 2
+          },
+          "deletions": [
+            {
+              "d_small": 52,
+              "slack": 1,
+              "status": "COMPLETE",
+              "H": 59,
+              "states": 12352,
+              "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+              "j": 2
+            }
+          ]
+        }
+      },
+      {
+        "engine": "before",
+        "seconds": 0.29393070802325383,
+        "result": {
+          "status": "COMPLETE",
+          "within_bound": true,
+          "q": 53,
+          "bound": 59,
+          "witness": {
+            "d_small": 52,
+            "slack": 1,
+            "status": "COMPLETE",
+            "H": 59,
+            "states": 66088,
+            "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+            "j": 2
+          },
+          "deletions": [
+            {
+              "d_small": 52,
+              "slack": 1,
+              "status": "COMPLETE",
+              "H": 59,
+              "states": 66088,
+              "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+              "j": 2
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

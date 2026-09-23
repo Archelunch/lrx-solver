@@ -1,0 +1,16 @@
+{
+  "type": "openai_compatible",
+  "base_url": "https://api.x.ai/v1",
+  "model": "grok-4.7",
+  "api_key_env": "XAI_API_KEY",
+  "input_usd_per_mtok": 2.2,
+  "output_usd_per_mtok": 6.6,
+  "max_spend_usd": 1.5,
+  "max_requests": 2,
+  "max_output_tokens": 4000,
+  "max_reasoning_tokens": 24000,
+  "reasoning_effort": "low",
+  "timeout_sec": 360,
+  "idle_timeout_sec": 120,
+  "repairs": 0
+}

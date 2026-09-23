@@ -184,3 +184,39 @@ non-root state has a neighbour with phi at most phi - 1. Candidates are grok-4.7
   rot_dist <= floor(n/2) <= a + 2c - 1 <= phi - 1 because u >= 2 before the X. So d(v) <= phi(v)
   for all m, r >= 1. Maximum: phi <= (floor(n/4)+2)(C(m-1,2)+(m-1)r) + floor(n/2) + floor(n/4) m,
   still O(n m^2), about half of ba656's bound for large n; it does not approach T.
+
+## 2026-09-23 session 05: erasure identity and bounded lifting checks
+
+An elementary auxiliary lemma, with a move-by-move proof in
+`autoresearch/loop-260923-2004/proof-note.md`: for m>=2, r>=1 and any LRX word W
+of length ell, label and transport the zeros. Let S count X swaps of two
+zeros, and let I_z count rotations carrying zero z across the boundary plus
+X swaps of z with a positive token. The uncancelled projection length after
+deleting z is exactly `ell-S-I_z`. Thus the minimum over marked deletions is
+`ell-S-max_z I_z`. This identifies the erasures a fixed sorting word needs to
+certify a lifting budget; it does not establish existence of short sorting
+words for every vector. It is an elementary proof, not a formalization or a
+claim of novelty in the literature.
+
+A second elementary bound: from full depth t and smaller state w, every
+sorting continuation needs at least d(w) full moves, since each projects to
+at most one smaller move. Pruning when `t+d(w)>B` is therefore safe for the
+bounded question H_q<=B. Exhaustion after this pruning certifies only H_q>B,
+not infinity. Implemented only in the search-side forward tool.
+
+Finite result: all **27 distinct vectors** formed by inserting a zero at any
+position into any of the **3 antipodes of (m=8,r=4)** have independently replayed
+sorting words of length <=60 and, for at least one marked zero, projection
+length <=54. Thus **A_54(v)<=60** for this explicitly enumerated family in
+(m=8,r=5). The search used q=55, but trusted replay of every marked deletion
+of each resulting word establishes the stronger q=54 statement. Word lengths
+range from 54 to 60; these are upper-bound witnesses, not exact A values.
+Evidence: `autoresearch/loop-260923-2004/m8r5-frozen.json` and
+`autoresearch/loop-260923-2004/m8r5-checks.jsonl`.
+
+A frozen 24-vector subset of zero insertions into (8,8) antipodes was tested
+at (8,9), q=79, B=84. **All 24 were INCOMPLETE** at 100000 stored states per
+marked deletion (checked between BFS layers; the count can overshoot).
+They establish neither the proposed lifting claim nor its negation.
+Evidence: `autoresearch/loop-260923-2004/target-summary.json` and associated
+frozen cases/checkpoint records. The main sorting-radius conjecture remains open.

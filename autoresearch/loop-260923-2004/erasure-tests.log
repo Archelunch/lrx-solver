@@ -1,0 +1,8 @@
+test_degenerate_domain_and_invalid_words_rejected (tests.test_search_zero_erasure.ZeroErasureTests.test_degenerate_domain_and_invalid_words_rejected) ... ok
+test_every_short_word_and_small_state (tests.test_search_zero_erasure.ZeroErasureTests.test_every_short_word_and_small_state) ... ok
+test_zero_swap_labels_continue_to_move (tests.test_search_zero_erasure.ZeroErasureTests.test_zero_swap_labels_continue_to_move) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.164s
+
+OK

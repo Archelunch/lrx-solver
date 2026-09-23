@@ -1,0 +1,11 @@
+test_all_small_visible_states_at_both_sides_of_bound (tests.test_search_lift_decision.LiftDecisionTests.test_all_small_visible_states_at_both_sides_of_bound) ... ok
+test_resource_exhaustion_is_not_a_negative_answer (tests.test_search_lift_decision.LiftDecisionTests.test_resource_exhaustion_is_not_a_negative_answer) ... ok
+test_root_stops_after_one_zero_deletion (tests.test_search_lift_decision.LiftDecisionTests.test_root_stops_after_one_zero_deletion) ... ok
+test_degenerate_domain_and_invalid_words_rejected (tests.test_search_zero_erasure.ZeroErasureTests.test_degenerate_domain_and_invalid_words_rejected) ... ok
+test_every_short_word_and_small_state (tests.test_search_zero_erasure.ZeroErasureTests.test_every_short_word_and_small_state) ... ok
+test_zero_swap_labels_continue_to_move (tests.test_search_zero_erasure.ZeroErasureTests.test_zero_swap_labels_continue_to_move) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.249s
+
+OK

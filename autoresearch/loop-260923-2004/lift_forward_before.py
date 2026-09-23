@@ -120,10 +120,6 @@ def forward_h(m, r, u, j0, q, dist, max_states=30_000_000, witness=True, max_len
                     e2 = e - spend
                 else:
                     c2, d2, e2 = cw, dw, e
-                # Every remaining full move projects to at most one smaller
-                # move. Thus d2 is a lower bound on remaining full length.
-                if max_length is not None and length + 1 + d2 > max_length:
-                    continue
                 key = c2 * n + j2
                 if best.get(key, -1) >= e2:
                     continue
@@ -139,11 +135,6 @@ def forward_h(m, r, u, j0, q, dist, max_states=30_000_000, witness=True, max_len
         frontier = nxt
         length += 1
     out["states"] = len(best)
-    if max_length is not None:
-        # Distance pruning may exhaust the frontier before the depth cap.
-        # It rules out bounded paths only, not all admissible paths.
-        out.update(status="COMPLETE_BOUND", lower_bound=max_length + 1,
-                   length_cap=max_length)
     return out
 
 
