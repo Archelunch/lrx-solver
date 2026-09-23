@@ -1,0 +1,247 @@
+{
+  "results": [
+    {
+      "m": 8,
+      "r": 3,
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3
+      ],
+      "q": 42,
+      "bound": 48,
+      "full_status": "COMPLETE",
+      "A": 49,
+      "decision_status": "COMPLETE",
+      "within_bound": false,
+      "full_seconds": 0.10732408400508575,
+      "decision_seconds": 0.09918229200411588,
+      "full_pairs": 3,
+      "decision_pairs": 3,
+      "agreement": true,
+      "decision": {
+        "status": "COMPLETE",
+        "within_bound": false,
+        "q": 42,
+        "bound": 48,
+        "deletions": [
+          {
+            "d_small": 41,
+            "slack": 1,
+            "status": "COMPLETE_BOUND",
+            "H": null,
+            "states": 12433,
+            "lower_bound": 49,
+            "length_cap": 48,
+            "j": 2
+          },
+          {
+            "d_small": 41,
+            "slack": 1,
+            "status": "COMPLETE_BOUND",
+            "H": null,
+            "states": 7312,
+            "lower_bound": 49,
+            "length_cap": 48,
+            "j": 3
+          },
+          {
+            "d_small": 41,
+            "slack": 1,
+            "status": "COMPLETE_BOUND",
+            "H": null,
+            "states": 8121,
+            "lower_bound": 49,
+            "length_cap": 48,
+            "j": 4
+          }
+        ]
+      }
+    },
+    {
+      "m": 8,
+      "r": 3,
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3
+      ],
+      "q": 43,
+      "bound": 48,
+      "full_status": "COMPLETE",
+      "A": 47,
+      "decision_status": "COMPLETE",
+      "within_bound": true,
+      "full_seconds": 0.9560269580106251,
+      "decision_seconds": 0.3969163750007283,
+      "full_pairs": 3,
+      "decision_pairs": 1,
+      "agreement": true,
+      "decision": {
+        "status": "COMPLETE",
+        "within_bound": true,
+        "q": 43,
+        "bound": 48,
+        "witness": {
+          "d_small": 41,
+          "slack": 2,
+          "status": "COMPLETE",
+          "H": 47,
+          "states": 93108,
+          "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+          "j": 2
+        },
+        "deletions": [
+          {
+            "d_small": 41,
+            "slack": 2,
+            "status": "COMPLETE",
+            "H": 47,
+            "states": 93108,
+            "word": "LXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLXLXLXLX",
+            "j": 2
+          }
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "r": 3,
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "q": 52,
+      "bound": 59,
+      "full_status": "COMPLETE",
+      "A": 61,
+      "decision_status": "COMPLETE",
+      "within_bound": false,
+      "full_seconds": 0.09068962500896305,
+      "decision_seconds": 0.08854662498924881,
+      "full_pairs": 3,
+      "decision_pairs": 3,
+      "agreement": true,
+      "decision": {
+        "status": "COMPLETE",
+        "within_bound": false,
+        "q": 52,
+        "bound": 59,
+        "deletions": [
+          {
+            "d_small": 52,
+            "slack": 0,
+            "status": "COMPLETE_BOUND",
+            "H": null,
+            "states": 12719,
+            "lower_bound": 60,
+            "length_cap": 59,
+            "j": 2
+          },
+          {
+            "d_small": 52,
+            "slack": 0,
+            "status": "COMPLETE_BOUND",
+            "H": null,
+            "states": 4320,
+            "lower_bound": 60,
+            "length_cap": 59,
+            "j": 3
+          },
+          {
+            "d_small": 52,
+            "slack": 0,
+            "status": "COMPLETE_BOUND",
+            "H": null,
+            "states": 5903,
+            "lower_bound": 60,
+            "length_cap": 59,
+            "j": 4
+          }
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "r": 3,
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "q": 53,
+      "bound": 59,
+      "full_status": "COMPLETE",
+      "A": 59,
+      "decision_status": "COMPLETE",
+      "within_bound": true,
+      "full_seconds": 0.6482401250104886,
+      "decision_seconds": 0.2853130000003148,
+      "full_pairs": 3,
+      "decision_pairs": 1,
+      "agreement": true,
+      "decision": {
+        "status": "COMPLETE",
+        "within_bound": true,
+        "q": 53,
+        "bound": 59,
+        "witness": {
+          "d_small": 52,
+          "slack": 1,
+          "status": "COMPLETE",
+          "H": 59,
+          "states": 66088,
+          "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+          "j": 2
+        },
+        "deletions": [
+          {
+            "d_small": 52,
+            "slack": 1,
+            "status": "COMPLETE",
+            "H": 59,
+            "states": 66088,
+            "word": "LXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLX",
+            "j": 2
+          }
+        ]
+      }
+    }
+  ],
+  "scope": "Four known finite regression cases; not new mathematical evidence or a representative large-band benchmark."
+}
