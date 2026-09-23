@@ -1,0 +1,61 @@
+{
+  "kind": "lift_policy",
+  "name": "six fixed geodesic orders",
+  "zero_order": "left",
+  "paths": [
+    {
+      "orders": [
+        "LRX"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "LXR"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "RLX"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "RXL"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "XLR"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "XRL"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    }
+  ]
+}

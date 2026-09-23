@@ -1,0 +1,13 @@
+{
+  "integrations/lift_campaign.py": "cac1a76c3257ff1402cfd867e33e89541b29698306838bd919d2eac615418c23",
+  "integrations/lift_policy.py": "a72a686b77890fa48b0b995a02aed26abb66d0807d58f9b36a17504a7c8cf5b4",
+  "integrations/word_lift.py": "e0852142a845952edc07ceb680b5cd672123fec41c982ea6c50ba25697a5a0e2",
+  "src/lrx/evolve.py": "8e99a489f2ca401091862ad9c6802d8f359327d6d8081525c6567f01fa04374a",
+  "autoresearch/loop-260923-2107/context-v1.json": "2f50ffa5fac038e9c365dd3c84c2f23249bc79eae38a147da48be1ff370c81d7",
+  "autoresearch/loop-260923-2107/train.json": "98dafe20bc1e7a9406b2f6400768b6b9dd9af70a01c7ed9b9422708478e7a9c4",
+  "autoresearch/loop-260923-2107/confirmation.json": "e62b666ce1c2f678f88ac141d5a2ab351345b69956a31da7dacf7f94132d505e",
+  "autoresearch/loop-260923-2107/seed.json": "635221dbfd55b8b7a48f4bb2e93d16f2f1165537ff9589a8aff13d9748cecceb",
+  "autoresearch/loop-260923-2107/sequential-config.json": "2ed29e916861e2b6b42505a35f698f0d73ad2c86bc3a88bb4e3b8ef4c8110fc0",
+  "autoresearch/loop-260923-2107/evox-config.json": "103ee436503f15e97d9992d850469ef9a6ec69bf8e6c7940f036e622132d8b96",
+  "autoresearch/loop-260923-2107/payload-scope.json": "9662e7f317a85ba49c77ce262f030de2ba2cf9f95cdaee122070260ed73933b0"
+}

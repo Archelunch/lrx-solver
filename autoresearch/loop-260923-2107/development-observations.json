@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "facts": [
+    {
+      "id": "sequential-construction",
+      "status": "finite_verified",
+      "source_role": "development",
+      "statement": "This policy certifies 22/28 frozen development vectors within the conjectured bound, with projection cap T(m,r-1)+1.",
+      "scope": "Finite development cases only. Portfolio misses are not lower bounds. Uses exact smaller BFS distances.",
+      "policy": {
+        "kind": "lift_policy",
+        "name": "six geodesics, early critical detours",
+        "zero_order": "left",
+        "paths": [
+          {
+            "orders": [
+              "LRX"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "uphill",
+            "detour_steps": [
+              5
+            ]
+          },
+          {
+            "orders": [
+              "LXR"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "level",
+            "detour_steps": [
+              4,
+              6,
+              8,
+              12
+            ]
+          },
+          {
+            "orders": [
+              "RLX"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "either",
+            "detour_steps": [
+              5
+            ]
+          },
+          {
+            "orders": [
+              "RXL"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "none",
+            "detour_steps": []
+          },
+          {
+            "orders": [
+              "XLR"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "none",
+            "detour_steps": []
+          },
+          {
+            "orders": [
+              "XRL"
+            ],
+            "period": 1,
+            "axis": "distance",
+            "detour": "level",
+            "detour_steps": [
+              5,
+              7
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2107/sequential-run/evals/556ab94746a63a8f.json",
+          "sha256": "9618bdf6a3d4b5870100dac8d0709fadf4012ac88d4ef0193dfba96c131f4c51"
+        }
+      ]
+    },
+    {
+      "id": "evox-construction",
+      "status": "finite_verified",
+      "source_role": "development",
+      "statement": "This policy certifies 24/28 frozen development vectors within the conjectured bound, with projection cap T(m,r-1)+1.",
+      "scope": "Finite development cases only. Portfolio misses are not lower bounds. Uses exact smaller BFS distances.",
+      "policy": {
+        "kind": "lift_policy",
+        "name": "left zeros, step-five uphill, distance band repair",
+        "zero_order": "left",
+        "paths": [
+          {
+            "orders": [
+              "LRX"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "none",
+            "detour_steps": []
+          },
+          {
+            "orders": [
+              "XRL"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "none",
+            "detour_steps": []
+          },
+          {
+            "orders": [
+              "RLX"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "none",
+            "detour_steps": []
+          },
+          {
+            "orders": [
+              "LXR"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "none",
+            "detour_steps": []
+          },
+          {
+            "orders": [
+              "LRX"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "uphill",
+            "detour_steps": [
+              5
+            ]
+          },
+          {
+            "orders": [
+              "RLX"
+            ],
+            "period": 1,
+            "axis": "step",
+            "detour": "uphill",
+            "detour_steps": [
+              5
+            ]
+          },
+          {
+            "orders": [
+              "XLR",
+              "RXL"
+            ],
+            "period": 4,
+            "axis": "distance",
+            "detour": "uphill",
+            "detour_steps": [
+              5
+            ]
+          },
+          {
+            "orders": [
+              "XLR",
+              "RXL"
+            ],
+            "period": 2,
+            "axis": "distance",
+            "detour": "level",
+            "detour_steps": [
+              0,
+              2,
+              4,
+              6
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2107/evox-run/evals/7e7c102248da0306.json",
+          "sha256": "57ea1b60cbc6f4fac7570aae8ee5808633b7db511be7df10c628479aaf47f92c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260923-2107/evox-run",
+  "engine": "evox",
+  "kinds": [
+    "lift_policy"
+  ],
+  "stop_reason": "max_proposals",
+  "proposals": 12,
+  "valid_proposals": 12,
+  "invalid_proposals": 0,
+  "seed_best": -2268820.0012,
+  "best": {
+    "id": 3,
+    "hash": "7e7c102248da0306",
+    "score": -1134409.0025,
+    "feasible_on_train_probes": false,
+    "spec": {
+      "kind": "lift_policy",
+      "name": "left zeros, step-five uphill, distance band repair",
+      "zero_order": "left",
+      "paths": [
+        {
+          "orders": [
+            "LRX"
+          ],
+          "period": 1,
+          "axis": "step",
+          "detour": "none",
+          "detour_steps": []
+        },
+        {
+          "orders": [
+            "XRL"
+          ],
+          "period": 1,
+          "axis": "step",
+          "detour": "none",
+          "detour_steps": []
+        },
+        {
+          "orders": [
+            "RLX"
+          ],
+          "period": 1,
+          "axis": "step",
+          "detour": "none",
+          "detour_steps": []
+        },
+        {
+          "orders": [
+            "LXR"
+          ],
+          "period": 1,
+          "axis": "step",
+          "detour": "none",
+          "detour_steps": []
+        },
+        {
+          "orders": [
+            "LRX"
+          ],
+          "period": 1,
+          "axis": "step",
+          "detour": "uphill",
+          "detour_steps": [
+            5
+          ]
+        },
+        {
+          "orders": [
+            "RLX"
+          ],
+          "period": 1,
+          "axis": "step",
+          "detour": "uphill",
+          "detour_steps": [
+            5
+          ]
+        },
+        {
+          "orders": [
+            "XLR",
+            "RXL"
+          ],
+          "period": 4,
+          "axis": "distance",
+          "detour": "uphill",
+          "detour_steps": [
+            5
+          ]
+        },
+        {
+          "orders": [
+            "XLR",
+            "RXL"
+          ],
+          "period": 2,
+          "axis": "distance",
+          "detour": "level",
+          "detour_steps": [
+            0,
+            2,
+            4,
+            6
+          ]
+        }
+      ]
+    }
+  },
+  "heldout": [],
+  "usage": {
+    "estimated_usd": 0.338014,
+    "max_spend_usd": 2.5,
+    "requests": 14,
+    "failed_requests": 0,
+    "usage_overruns": 0,
+    "provider_costed_requests": 14,
+    "input_tokens": 81878,
+    "output_tokens": 32787,
+    "billing_verified": false
+  },
+  "insights": [],
+  "tactics": [],
+  "merges": 0,
+  "strategy": {
+    "parent": "random",
+    "modes": {
+      "exploit": 0.15,
+      "explore": 0.25,
+      "edit": 0.6
+    },
+    "inspirations": 1,
+    "inspiration_pool": "top",
+    "history": 3,
+    "focus": true,
+    "tactic": "Front diversity and best-parent exploit both plateaued at 4 misses. Sample random archive parents and edit zero_order, axis, and detour type together, not only step-5 uphill. Keep portfolios small. Coordinate descents with zero routing; no per-vector exceptions. Finite misses are portfolio misses only."
+  },
+  "strategy_history": [
+    {
+      "strategy": {
+        "parent": "best",
+        "modes": {
+          "exploit": 1.0
+        },
+        "inspirations": 1,
+        "inspiration_pool": "top",
+        "history": 4,
+        "focus": true,
+        "tactic": null
+      },
+      "start": -2268820.0012,
+      "end": -1134409.0025,
+      "delta": 1134410.9987,
+      "J": 0.288675,
+      "proposals": 3
+    },
+    {
+      "strategy": {
+        "parent": "best",
+        "modes": {
+          "exploit": 1.0
+        },
+        "inspirations": 1,
+        "inspiration_pool": "top",
+        "history": 4,
+        "focus": true,
+        "tactic": null
+      },
+      "start": -1134409.0025,
+      "end": -1134409.0025,
+      "delta": 0.0,
+      "J": 0.0,
+      "proposals": 6
+    },
+    {
+      "strategy": {
+        "parent": "front",
+        "modes": {
+          "exploit": 0.25,
+          "explore": 0.45,
+          "edit": 0.3
+        },
+        "inspirations": 2,
+        "inspiration_pool": "random",
+        "history": 6,
+        "focus": false,
+        "tactic": "Plateau: six best-parent exploits did not beat -1134409 with 4 misses. Leave that parent. Prefer front diversity and edits that change zero_order, axis, period, or detour type rather than only step-5 uphill. Keep portfolios small. Target reusable coordination of descents with zero routing; do not encode individual vectors. Finite misses are portfolio misses only."
+      },
+      "start": -1134409.0025,
+      "end": -1134409.0025,
+      "delta": 0.0,
+      "J": 0.0,
+      "proposals": 9
+    },
+    {
+      "strategy": {
+        "parent": "random",
+        "modes": {
+          "exploit": 0.15,
+          "explore": 0.25,
+          "edit": 0.6
+        },
+        "inspirations": 1,
+        "inspiration_pool": "top",
+        "history": 3,
+        "focus": true,
+        "tactic": "Front diversity and best-parent exploit both plateaued at 4 misses. Sample random archive parents and edit zero_order, axis, and detour type together, not only step-5 uphill. Keep portfolios small. Coordinate descents with zero routing; no per-vector exceptions. Finite misses are portfolio misses only."
+      },
+      "start": -1134409.0025,
+      "end": -1134409.0025,
+      "delta": 0.0,
+      "J": 0.0,
+      "proposals": 12
+    }
+  ],
+  "evaluator_sha256": "fd9ce7b1ed0eff0e",
+  "wall_seconds": 426.3,
+  "claim_scope": "finite probe evidence; not a proof",
+  "task": "fixed-word lifting construction",
+  "context_sha256": "2f50ffa5fac038e9c365dd3c84c2f23249bc79eae38a147da48be1ff370c81d7",
+  "dataset_sha256": "582cfa8809f08729ff48000ca67c199a1a56d369c2ed88b2daecb7b16f6a632c",
+  "contract": "contract.json"
+}

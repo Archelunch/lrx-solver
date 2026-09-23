@@ -422,6 +422,10 @@ class Campaign:
             return spec if self.cfg["feedback_potential"] else None
         return spec if self.cfg["feedback_words"] else None
 
+    def make_feedback(self, spec, result):
+        """Search-side adapters may expose task-specific, train-only feedback."""
+        return compress(result, spec=self.feedback_spec(spec))
+
     def add(self, spec, result, mode, parents, island, extra):
         rec = {
             "id": len(self.records),
@@ -436,7 +440,7 @@ class Campaign:
             "instances": result.get("instances", {}),
             "valid": result.get("valid", False),
             "eval": result,
-            "feedback": compress(result, spec=self.feedback_spec(spec)),
+            "feedback": self.make_feedback(spec, result),
             **extra,
         }
         self.records.append(rec)

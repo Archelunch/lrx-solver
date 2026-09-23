@@ -1,0 +1,14 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	8a527e73c760051f	lift_policy	seed	None		-2268820.0012	False	keep	0	six fixed geodesic orders
+1	1	e21ff21fda449df2	lift_policy	exploit	0	0	-1420113.0036	False	keep	0.025478	geodesic core plus indexed level and uphill detours
+2	2	9c0e25619b44ac1b	lift_policy	exploit	0	1	-1988721.0025	False	discard	0.02702	distance-timed uphill at five plus level zeros
+3	3	7e7c102248da0306	lift_policy	exploit	0	1	-1134409.0025	False	keep	0.027268	left zeros, step-five uphill, distance band repair
+4	4	10ab018e9b30fa1e	lift_policy	exploit	0	3	-1700213.0027	False	discard	0.025064	period-three alternation with index-five uphill
+5	5	7e23be183710f14a	lift_policy	exploit	0	3	-1134409.0028	False	discard	0.035884	zero-coordinated step-five uphill before band repair
+6	6	2721d16bdd15aef9	lift_policy	exploit	0	3	-2271622.0027	False	discard	0.030688	x-first uphill and odd level repairs
+7	7	b75c637fc4239666	lift_policy	exploit	0	3	-2268819.0029	False	discard	0.028034	right zeros, distance-band uphill, front level
+8	8	5bfe583e5cfb8e19	lift_policy	exploit	0	1	-2268821.0024	False	discard	0.017094	high-distance front-zero alternation with mixed detours
+9	9	c3975d1f375d3015	lift_policy	explore	0	5	-1985918.003	False	discard	0.020734	distance-low zeros, front-count either detours
+10	10	d254ed0c0d6b8f89	lift_policy	exploit	0	4	-1703015.0027	False	discard	0.026578	left zeros, period-five switch, mixed detours
+11	11	64b93769291d6f10	lift_policy	exploit	0	1	-1985918.0029	False	discard	0.028394	distance-low zeros with step-five and band detours
+12	12	f61d008988fc8b74	lift_policy	exploit	0	7	-2268820.0023	False	discard	0.017764	distance-low mixed axis detours

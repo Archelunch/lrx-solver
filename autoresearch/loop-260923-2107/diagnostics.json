@@ -1,0 +1,801 @@
+{
+  "sequential": {
+    "original_missed": 6,
+    "geodesic_only_missed": 8,
+    "geodesic_only_failures": [
+      "m8r3-obstruction-0",
+      "m8r3-neighbours-3",
+      "m9r3-obstruction-6",
+      "m9r3-neighbours-7",
+      "m9r3-neighbours-9",
+      "m9r3-neighbours-11",
+      "m9r4-band-edge-12",
+      "m9r4-band-edge-15"
+    ],
+    "remove_one_path": [
+      {
+        "removed_path": 0,
+        "missed": 7,
+        "max_excess": 2,
+        "complexity": 17
+      },
+      {
+        "removed_path": 1,
+        "missed": 6,
+        "max_excess": 2,
+        "complexity": 14
+      },
+      {
+        "removed_path": 2,
+        "missed": 7,
+        "max_excess": 2,
+        "complexity": 17
+      },
+      {
+        "removed_path": 3,
+        "missed": 7,
+        "max_excess": 3,
+        "complexity": 18
+      },
+      {
+        "removed_path": 4,
+        "missed": 7,
+        "max_excess": 3,
+        "complexity": 18
+      },
+      {
+        "removed_path": 5,
+        "missed": 6,
+        "max_excess": 2,
+        "complexity": 16
+      }
+    ],
+    "witnesses": [
+      {
+        "case": "m8r3-neighbours-1",
+        "smaller_distance": 40,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 3,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r3-neighbours-2",
+        "smaller_distance": 39,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r3-neighbours-4",
+        "smaller_distance": 39,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r3-neighbours-5",
+        "smaller_distance": 40,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m9r3-neighbours-8",
+        "smaller_distance": 51,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 3,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m9r3-neighbours-10",
+        "smaller_distance": 50,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 3,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m9r4-band-edge-12",
+        "smaller_distance": 56,
+        "projection_slack": 2,
+        "routing_overhead": 8,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 2,
+            "defect": 5
+          }
+        ]
+      },
+      {
+        "case": "m9r4-band-edge-13",
+        "smaller_distance": 57,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m9r4-band-edge-14",
+        "smaller_distance": 57,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 3,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m9r4-band-edge-15",
+        "smaller_distance": 55,
+        "projection_slack": 2,
+        "routing_overhead": 9,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": 5
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-16",
+        "smaller_distance": 54,
+        "projection_slack": 0,
+        "routing_overhead": 6,
+        "repair_budget": 6,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-17",
+        "smaller_distance": 48,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 12,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 1,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-18",
+        "smaller_distance": 51,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-19",
+        "smaller_distance": 50,
+        "projection_slack": 0,
+        "routing_overhead": 10,
+        "repair_budget": 10,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-20",
+        "smaller_distance": 51,
+        "projection_slack": 0,
+        "routing_overhead": 7,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-21",
+        "smaller_distance": 52,
+        "projection_slack": 0,
+        "routing_overhead": 6,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 1,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-22",
+        "smaller_distance": 77,
+        "projection_slack": 0,
+        "routing_overhead": 6,
+        "repair_budget": 7,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-23",
+        "smaller_distance": 71,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 13,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-24",
+        "smaller_distance": 69,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 15,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-25",
+        "smaller_distance": 77,
+        "projection_slack": 0,
+        "routing_overhead": 4,
+        "repair_budget": 7,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-26",
+        "smaller_distance": 70,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 14,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-27",
+        "smaller_distance": 73,
+        "projection_slack": 0,
+        "routing_overhead": 6,
+        "repair_budget": 11,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          }
+        ]
+      }
+    ]
+  },
+  "evox": {
+    "original_missed": 4,
+    "geodesic_only_missed": 9,
+    "geodesic_only_failures": [
+      "m8r3-obstruction-0",
+      "m8r3-neighbours-3",
+      "m9r3-obstruction-6",
+      "m9r3-neighbours-7",
+      "m9r3-neighbours-9",
+      "m9r3-neighbours-10",
+      "m9r3-neighbours-11",
+      "m9r4-band-edge-12",
+      "m9r4-band-edge-15"
+    ],
+    "remove_one_path": [
+      {
+        "removed_path": 0,
+        "missed": 4,
+        "max_excess": 1,
+        "complexity": 23
+      },
+      {
+        "removed_path": 1,
+        "missed": 4,
+        "max_excess": 1,
+        "complexity": 23
+      },
+      {
+        "removed_path": 2,
+        "missed": 4,
+        "max_excess": 1,
+        "complexity": 23
+      },
+      {
+        "removed_path": 3,
+        "missed": 4,
+        "max_excess": 1,
+        "complexity": 23
+      },
+      {
+        "removed_path": 4,
+        "missed": 5,
+        "max_excess": 1,
+        "complexity": 22
+      },
+      {
+        "removed_path": 5,
+        "missed": 5,
+        "max_excess": 2,
+        "complexity": 22
+      },
+      {
+        "removed_path": 6,
+        "missed": 5,
+        "max_excess": 1,
+        "complexity": 21
+      },
+      {
+        "removed_path": 7,
+        "missed": 7,
+        "max_excess": 4,
+        "complexity": 18
+      }
+    ],
+    "witnesses": [
+      {
+        "case": "m8r3-neighbours-1",
+        "smaller_distance": 40,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 6,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r3-neighbours-2",
+        "smaller_distance": 39,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r3-neighbours-4",
+        "smaller_distance": 39,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r3-neighbours-5",
+        "smaller_distance": 40,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 6,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m9r3-obstruction-6",
+        "smaller_distance": 52,
+        "projection_slack": 1,
+        "routing_overhead": 6,
+        "repair_budget": 6,
+        "matching_paths": [
+          {
+            "path": 7,
+            "defect": 2
+          }
+        ]
+      },
+      {
+        "case": "m9r3-neighbours-8",
+        "smaller_distance": 51,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 6,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m9r3-neighbours-9",
+        "smaller_distance": 51,
+        "projection_slack": 1,
+        "routing_overhead": 6,
+        "repair_budget": 7,
+        "matching_paths": [
+          {
+            "path": 7,
+            "defect": 0
+          }
+        ]
+      },
+      {
+        "case": "m9r3-neighbours-10",
+        "smaller_distance": 50,
+        "projection_slack": 1,
+        "routing_overhead": 8,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 7,
+            "defect": 4
+          }
+        ]
+      },
+      {
+        "case": "m9r4-band-edge-12",
+        "smaller_distance": 56,
+        "projection_slack": 2,
+        "routing_overhead": 8,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 5,
+            "defect": 5
+          }
+        ]
+      },
+      {
+        "case": "m9r4-band-edge-13",
+        "smaller_distance": 57,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m9r4-band-edge-14",
+        "smaller_distance": 57,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 1,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m9r4-band-edge-15",
+        "smaller_distance": 55,
+        "projection_slack": 2,
+        "routing_overhead": 9,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 4,
+            "defect": 5
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-16",
+        "smaller_distance": 54,
+        "projection_slack": 0,
+        "routing_overhead": 6,
+        "repair_budget": 6,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-17",
+        "smaller_distance": 48,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 12,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 3,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-18",
+        "smaller_distance": 51,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-19",
+        "smaller_distance": 50,
+        "projection_slack": 0,
+        "routing_overhead": 10,
+        "repair_budget": 10,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-20",
+        "smaller_distance": 51,
+        "projection_slack": 0,
+        "routing_overhead": 7,
+        "repair_budget": 9,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r5-antipode-insertions-21",
+        "smaller_distance": 52,
+        "projection_slack": 0,
+        "routing_overhead": 6,
+        "repair_budget": 8,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 3,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-22",
+        "smaller_distance": 77,
+        "projection_slack": 0,
+        "routing_overhead": 6,
+        "repair_budget": 7,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-23",
+        "smaller_distance": 71,
+        "projection_slack": 0,
+        "routing_overhead": 8,
+        "repair_budget": 13,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-24",
+        "smaller_distance": 69,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 15,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          },
+          {
+            "path": 6,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-25",
+        "smaller_distance": 77,
+        "projection_slack": 0,
+        "routing_overhead": 4,
+        "repair_budget": 7,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-26",
+        "smaller_distance": 70,
+        "projection_slack": 0,
+        "routing_overhead": 9,
+        "repair_budget": 14,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      },
+      {
+        "case": "m8r9-antipode-insertions-27",
+        "smaller_distance": 73,
+        "projection_slack": 0,
+        "routing_overhead": 6,
+        "repair_budget": 11,
+        "matching_paths": [
+          {
+            "path": 0,
+            "defect": null
+          },
+          {
+            "path": 4,
+            "defect": null
+          }
+        ]
+      }
+    ]
+  }
+}

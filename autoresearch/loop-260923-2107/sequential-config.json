@@ -1,0 +1,42 @@
+{
+  "campaign": {
+    "engine": "sequential",
+    "kinds": [
+      "lift_policy"
+    ],
+    "seeds": [
+      "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260923-2107/seed.json"
+    ],
+    "select": "score",
+    "max_proposals": 12,
+    "batch": 1,
+    "seed": 307,
+    "eval_workers": 1,
+    "max_wall_seconds": 5400,
+    "final_heldout_top": 0,
+    "history": 4,
+    "inspirations": 1,
+    "focus": true,
+    "window": 3,
+    "provider": {
+      "type": "openai_compatible",
+      "base_url": "https://api.x.ai/v1",
+      "model": "grok-4.7",
+      "api_key_env": "XAI_API_KEY",
+      "input_usd_per_mtok": 2.2,
+      "output_usd_per_mtok": 6.6,
+      "max_spend_usd": 2.5,
+      "max_requests": 18,
+      "max_output_tokens": 2500,
+      "max_reasoning_tokens": 16000,
+      "reasoning_effort": "low",
+      "timeout_sec": 360,
+      "idle_timeout_sec": 120,
+      "repairs": 0
+    }
+  },
+  "context_file": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260923-2107/context-v1.json",
+  "train_file": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260923-2107/train.json",
+  "max_words": 96,
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260923-2107/sequential-run"
+}

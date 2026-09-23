@@ -1,0 +1,74 @@
+[
+  {
+    "name": "LRX_MULTISET_NINE_GAP_M8_THEOREM_RU.md",
+    "size": 31293
+  },
+  {
+    "name": "publication/README_nine_gap_m8_bundle.md",
+    "size": 3267
+  },
+  {
+    "name": "literature/multiset_nine_gap_complete_certificates_20260924.json",
+    "size": 9143903
+  },
+  {
+    "name": "literature/multiset_nine_gap_projection_search_20260924.json",
+    "size": 3873643
+  },
+  {
+    "name": "literature/multiset_nine_gap_projection_search_20260924.npz",
+    "size": 3147013
+  },
+  {
+    "name": "literature/multiset_reverse_m8_complete_certificates_20260923.json",
+    "size": 2148588
+  },
+  {
+    "name": "lean/MultisetZeroFlux.lean",
+    "size": 1618
+  },
+  {
+    "name": "scripts/audit_multiset_nine_gap_cover.py",
+    "size": 12122
+  },
+  {
+    "name": "scripts/audit_multiset_nine_gap_projections.py",
+    "size": 7438
+  },
+  {
+    "name": "scripts/verify_multiset_projection_table.cpp",
+    "size": 3201
+  },
+  {
+    "name": "scripts/audit_multiset_reverse_complete.py",
+    "size": 11049
+  },
+  {
+    "name": "scripts/audit_multiset_projected_certificates.py",
+    "size": 9441
+  },
+  {
+    "name": "scripts/multiset_zero_projection.py",
+    "size": 1779
+  },
+  {
+    "name": "scripts/multiset_zero_stretch.py",
+    "size": 6144
+  },
+  {
+    "name": "scripts/multiset_free_phase.py",
+    "size": 3480
+  },
+  {
+    "name": "scripts/multiset_box_certificate.py",
+    "size": 4544
+  },
+  {
+    "name": "scripts/multiset_circle_materialization.py",
+    "size": 3999
+  },
+  {
+    "name": "scripts/multiset_bruhat_transfer.py",
+    "size": 9968
+  }
+]

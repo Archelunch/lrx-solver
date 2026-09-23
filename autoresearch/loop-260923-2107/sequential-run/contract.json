@@ -1,0 +1,11 @@
+{
+  "context_sha256": "2f50ffa5fac038e9c365dd3c84c2f23249bc79eae38a147da48be1ff370c81d7",
+  "dataset_sha256": "582cfa8809f08729ff48000ca67c199a1a56d369c2ed88b2daecb7b16f6a632c",
+  "implementation": {
+    "integrations/lift_policy.py": "a72a686b77890fa48b0b995a02aed26abb66d0807d58f9b36a17504a7c8cf5b4",
+    "integrations/lift_campaign.py": "cac1a76c3257ff1402cfd867e33e89541b29698306838bd919d2eac615418c23",
+    "integrations/word_lift.py": "e0852142a845952edc07ceb680b5cd672123fec41c982ea6c50ba25697a5a0e2"
+  },
+  "max_words": 96,
+  "confirmation_in_proposals": false
+}

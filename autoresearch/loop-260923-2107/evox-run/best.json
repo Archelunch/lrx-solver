@@ -1,0 +1,92 @@
+{
+  "kind": "lift_policy",
+  "name": "left zeros, step-five uphill, distance band repair",
+  "zero_order": "left",
+  "paths": [
+    {
+      "orders": [
+        "LRX"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "XRL"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "RLX"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "LXR"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "LRX"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "uphill",
+      "detour_steps": [
+        5
+      ]
+    },
+    {
+      "orders": [
+        "RLX"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "uphill",
+      "detour_steps": [
+        5
+      ]
+    },
+    {
+      "orders": [
+        "XLR",
+        "RXL"
+      ],
+      "period": 4,
+      "axis": "distance",
+      "detour": "uphill",
+      "detour_steps": [
+        5
+      ]
+    },
+    {
+      "orders": [
+        "XLR",
+        "RXL"
+      ],
+      "period": 2,
+      "axis": "distance",
+      "detour": "level",
+      "detour_steps": [
+        0,
+        2,
+        4,
+        6
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "kind": "lift_policy",
+  "name": "six geodesics, early critical detours",
+  "zero_order": "left",
+  "paths": [
+    {
+      "orders": [
+        "LRX"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "uphill",
+      "detour_steps": [
+        5
+      ]
+    },
+    {
+      "orders": [
+        "LXR"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "level",
+      "detour_steps": [
+        4,
+        6,
+        8,
+        12
+      ]
+    },
+    {
+      "orders": [
+        "RLX"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "either",
+      "detour_steps": [
+        5
+      ]
+    },
+    {
+      "orders": [
+        "RXL"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "XLR"
+      ],
+      "period": 1,
+      "axis": "step",
+      "detour": "none",
+      "detour_steps": []
+    },
+    {
+      "orders": [
+        "XRL"
+      ],
+      "period": 1,
+      "axis": "distance",
+      "detour": "level",
+      "detour_steps": [
+        5,
+        7
+      ]
+    }
+  ]
+}

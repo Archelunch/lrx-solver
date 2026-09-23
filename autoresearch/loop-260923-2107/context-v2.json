@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "goal": "Find exact rational mixtures after zero-block projection, toward full m=8 and the general LRX conjecture.",
+  "invariants": [
+    "Main conjecture open",
+    "Finite tests are finite",
+    "Portfolio miss is not a lower bound",
+    "No generated code",
+    "Confirmation data never enters proposer context"
+  ],
+  "facts": [
+    {
+      "id": "target",
+      "status": "open",
+      "statement": "For m>=8,r>=2, E_r(m+r)<=T=m(m+1)/2+(r-1)(m-2). Main conjecture remains open. The general r=2 base and universal suitable-word existence are unresolved.",
+      "scope": "universal target, not established",
+      "source_role": "development",
+      "evidence": [
+        {
+          "path": "research/problem.md",
+          "sha256": "eda0b29a6de3c9eb5de520d39121ee8efdc8a0df1c680d2472d13c3829ef469b"
+        }
+      ]
+    },
+    {
+      "id": "routing",
+      "status": "proved_auxiliary",
+      "statement": "A fixed smaller sorting word with all projection-changing letters has an exact n-position routing DP. Zero-projection repairs use 1--0--(n-1), length at most 2 between projected letters. All terminal j>=m are allowed.",
+      "scope": "fixed word only; elementary argument, not proof-assistant formalized",
+      "source_role": "development",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2036/proof-note.md",
+          "sha256": "e177ce92dfd29aad076ef40f5e8f4273bee4a4d842157c747ef96b1776485b6a"
+        }
+      ]
+    },
+    {
+      "id": "sweep",
+      "status": "proved_auxiliary",
+      "statement": "For L/X words with k left rotations from initial mark j, the specified greedy repair costs at most 2 floor((k+n-1-j)/(n-2)), conditional on its terminal-position test. This does not establish existence of suitable short words.",
+      "scope": "L/X-only conditional construction; hard-family words use both directions",
+      "source_role": "development",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2036/proof-note.md",
+          "sha256": "e177ce92dfd29aad076ef40f5e8f4273bee4a4d842157c747ef96b1776485b6a"
+        }
+      ]
+    },
+    {
+      "id": "erasures",
+      "status": "proved_auxiliary",
+      "statement": "For any full word W, marked-zero projection length is |W|-S-I_z, S counting swaps of two zeros, I_z its boundary carries and swaps with positives. This audits a word; it does not construct one.",
+      "scope": "m>=2,r>=1",
+      "source_role": "development",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2004/proof-note.md",
+          "sha256": "19e6a0be5f993004e9454c73564e845c041d8a94f2d4e72f87a42a83cabf4793"
+        }
+      ]
+    },
+    {
+      "id": "old-cap",
+      "status": "refuted",
+      "statement": "Old A_P<=P+m-2 is false: m8r3 vector (2,1,0,0,0,7,8,6,5,4,3), P42,A42=49; m9r3 vector (2,1,0,0,0,9,8,7,6,5,4,3),P52,A52=61. Use Q=T(m,r-1), projection q=Q+1 and full bound B=Q+m-2.",
+      "scope": "refutes stronger old lifting claim, not original conjecture",
+      "source_role": "development",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-1737/lift-domain-benchmark.json",
+          "sha256": "fe417121568811c8d211d476af7b742a393e49050b8b02ecece898f5652be1a0"
+        }
+      ]
+    },
+    {
+      "id": "portfolio",
+      "status": "finite_verified",
+      "statement": "Six fixed geodesic priority orders yield A54<=58 on 27 m8r5 antipode insertions and A77<=83 on 346 m8r9 antipode insertions. This covers special families only.",
+      "scope": "finite development examples, not exhaustive graphs",
+      "source_role": "development",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2036/report.md",
+          "sha256": "24fc7ba7c97c9768646a1386a037bf01f929400bfe10fc86c948a3804eaf239e"
+        }
+      ]
+    },
+    {
+      "id": "repair",
+      "status": "finite_verified",
+      "statement": "The m9r3 obstruction is repaired by one level step and suitable descents (projection53,length59). The m8r3 witness has projection43,length47 with an uphill step at projection index5 from distance36 to37. Static-priority prefixes/suffixes miss that m8 repair: descent choices must coordinate with routing.",
+      "scope": "known examples; not universal rules",
+      "source_role": "development",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2036/report.md",
+          "sha256": "24fc7ba7c97c9768646a1386a037bf01f929400bfe10fc86c948a3804eaf239e"
+        }
+      ]
+    },
+    {
+      "id": "direction",
+      "status": "hypothesis",
+      "statement": "Alternating or distance-dependent priority orders, paired with a controlled detour, may coordinate descents with zero routing. Test reusable policies; do not encode individual vectors.",
+      "scope": "unproved search hypothesis",
+      "source_role": "development",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2036/report.md",
+          "sha256": "24fc7ba7c97c9768646a1386a037bf01f929400bfe10fc86c948a3804eaf239e"
+        }
+      ]
+    },
+    {
+      "id": "nine-gap-theorem",
+      "status": "proved_auxiliary",
+      "source_role": "development",
+      "statement": "Supplied manuscript establishes d(v)<=6n-18 for m=8, all 8! orders, and positive blocks in all nine linear gaps including both endpoints. Its complete mixture data passed our independent exact audit.",
+      "scope": "Computer-assisted nine-gap class for all positive lengths, relying on the reviewed comparison/stretching lemmas; not a formal proof assistant result or full m=8.",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2107/incoming/theorem.md",
+          "sha256": "b01f35ac152055ceee2475e95c7d8ee8426838d25585d36bb9bea212cde8a618"
+        },
+        {
+          "path": "autoresearch/loop-260923-2107/incoming/independent-audit-expanded.json",
+          "sha256": "1dc61fa03d2c3905009a7c02520b4afb6eb46c7e01644b481fd6b6350d2e95ec"
+        }
+      ]
+    },
+    {
+      "id": "mixture-target",
+      "status": "hypothesis",
+      "source_role": "development",
+      "statement": "Recompute mixtures after projection instead of reusing the nine-gap weights. Seek weighted base <31+6k and each retained slope <=6. A new valid mixture certifies all positive lengths in that family.",
+      "scope": "Search priority; no newly covered projected family has been found in this session. Reported remaining-family count depends on coverage not fully re-audited here.",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2107/paper-review.md",
+          "sha256": "634086174d43ea3b6d2f4a2f3ed7e1aed834567b0a6877a117dbd2a854369547"
+        }
+      ]
+    },
+    {
+      "id": "fixed-macro-obstruction",
+      "status": "proved_auxiliary",
+      "source_role": "development",
+      "statement": "For the stated separated-label class, every single fixed tagged standard macro-lift has some slope >=2 floor(m/2), exceeding m-2. A portfolio of words can evade this obstruction.",
+      "scope": "Manuscript flow lemma; excludes adaptive word choice and does not refute the conjecture. Reviewed mathematical argument, not a graph-model formalization.",
+      "evidence": [
+        {
+          "path": "autoresearch/loop-260923-2107/incoming/theorem.md",
+          "sha256": "b01f35ac152055ceee2475e95c7d8ee8426838d25585d36bb9bea212cde8a618"
+        }
+      ]
+    }
+  ],
+  "context_revision": 2
+}

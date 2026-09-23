@@ -268,3 +268,51 @@ construction limitation, not a counterexample to the replacement lifting claim.
 All successful hard-family geodesic words here use both L and R; the L/X-only
 amortized lemma does not explain them. The universal short-word construction,
 mixed-direction repair bound, and general r=2 base remain unresolved.
+
+## Session 07: engine-driven lifting portfolios (finite only)
+
+The fixed-word router now evaluates reusable constrained construction policies
+proposed by the existing engines. On 28 frozen development vectors with
+q=T(m,r-1)+1 and B=T(m,r), the six-geodesic baseline certifies 20; 12 sequential
+proposals produce a 22-case portfolio, and 12 EvoX proposals produce a 24-case
+portfolio. Baseline and both frozen finalists certify all 120 fresh random
+confirmation vectors, which do not distinguish the policies. No universal
+claim or engine ranking follows. The (8,3) obstruction remains a portfolio miss.
+
+For v=(8,7,9,6,5,4,3,2,1,0,0,0,0) at (9,4), both finalists give a trusted
+certificate **A_58(v)<=66** by deleting zero j=9. The smaller distance is 56;
+RLX priority with an uphill R at projected index 5 gives a 58-letter projection
+and 8 invisible repair moves. The six-geodesic baseline's best saved word has
+projection 56 and 12 repairs, total 68. This comparison concerns those words,
+not all geodesics. EvoX's finalist also certifies the three frozen L/R/X
+neighbours. See `autoresearch/loop-260923-2107/evox-run/evals/7e7c102248da0306.json`
+and `autoresearch/loop-260923-2107/sequential-run/evals/556ab94746a63a8f.json`.
+
+Removing all detours from the frozen EvoX policy raises development misses
+from 4 to 9 (sequential: 6 to 8). These are finite portfolio ablations, not a
+necessity theorem. The report, context provenance, full certificates, ablations
+and separated confirmation are under `autoresearch/loop-260923-2107/`.
+
+## Supplied nine-gap m=8 theorem: independently checked certificate premises
+
+After session 07 the user supplied `lrx_multiset_nine_gap_m8.pdf`, claiming
+for every permutation a of 1..8 and positive ell_0,..,ell_8 that
+v=(0^ell_0,a_1,0^ell_1,...,a_8,0^ell_8) satisfies d(v)<=6n-18.
+The manuscript's comparison/stretching lemmas reduce all positive lengths to
+finite exact rational mixture inequalities. Our separately written data-only
+auditor reproduced all 40,320 orders, 4,670 reference words, 152,937 mixture
+rows, 42,030 literal stretch checks, and 40,320 comparison-word replays.
+Maximum weighted base is 32299/380<85; all weighted slopes are <=6.
+The checked source archive and audit are in
+`autoresearch/loop-260923-2107/incoming/`; see `paper-review.md` for details.
+This supports the manuscript's computer-assisted nine-gap theorem, not a proof
+of full m=8 or arbitrary m. No archive code was executed or imported.
+
+Projection coverage 12,680,558 and union coverage 16,107,991 remain attributed
+to the supplied manuscript: we did not rerun all projected inequalities, and
+the union additionally relies on previous results including <=3-block data
+not included in the archive. The reported 4,495,529 remaining families with
+4–8 blocks are therefore a research target, not a freshly verified complement.
+The next search priority is new rational mixtures after projection. The
+single-fixed-macro obstruction has the manuscript's explicit scope and does
+not invalidate adaptive constructions or the conjecture.

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "orders": 40320,
+  "reference_words": 4670,
+  "mixture_rows": 152937,
+  "reference_cut_checks": 4670,
+  "unit_comparison_words": 40320,
+  "unit_comparison_letters": 2859789,
+  "max_weighted_base": "32299/380",
+  "scope": "Nine-gap certificate inequalities and word premises independently checked; general-length conclusion uses the paper lemmas. Projection counts and <=3-block dependency not rechecked.",
+  "seconds": 7.515850750001846,
+  "archive_sha256": "7469f605282a2c7099857a9d1da1a124f742ea47ff15abfd846f1cfeb3d53f50",
+  "auditor_sha256": "483bb10a507221fdc39b2ba770f2463d969bb53f41c65b6a99b0c6ebfb1e980e"
+}

@@ -1,0 +1,14 @@
+iteration	id	hash	kind	mode	island	parent	score	feasible	status	cost_usd	name
+0	0	8a527e73c760051f	lift_policy	seed	None		-2268820.0012	False	keep	0	six fixed geodesic orders
+1	1	a282c4544fb3bfcf	lift_policy	exploit	0	0	-1703015.0029	False	keep	0.03515	core geodesics plus indexed detours
+2	2	1af9f8d4ed2eac6a	lift_policy	exploit	0	1	-1985918.0036	False	discard	0.031152	distance-low zeros, alternate prefix then detour
+3	3	80b11e77fbc75acc	lift_policy	exploit	0	1	-1703015.0044	False	discard	0.054276	preserve geodesics, critical-index detours
+4	4	ec98032e1c997be2	lift_policy	exploit	0	1	-1708620.0036	False	discard	0.04558	alternating zero-aware detours
+5	5	556ab94746a63a8f	lift_policy	exploit	0	1	-1703015.002	False	keep	0.02874	six geodesics, early critical detours
+6	6	05fd449feda80caf	lift_policy	exploit	0	5	-2268820.0012	False	discard	0.041596	budgeted early uphill and level repairs
+7	7	e156f7d139b1ed1f	lift_policy	exploit	0	5	-1703015.0032	False	discard	0.030944	uphill-at-5 all orders plus level spread
+8	8	eea89e382353ed5b	lift_policy	exploit	0	5	-2274427.0017	False	discard	0.06015	budget-fit routing detours
+9	9	4408719f0389a542	lift_policy	exploit	0	5	-1703015.0034	False	discard	0.021798	keep geodesics, alternate around detour
+10	10	94a01268f7387426	lift_policy	exploit	0	5	-1703015.0032	False	discard	0.025272	distance-low zeros, x-uphill and level
+11	11	768bffd0677adc46	lift_policy	exploit	0	5	-2551723.0026	False	discard	0.042372	alternating X-first critical detours
+12	12	9ff29bbe6bd8cf77	lift_policy	exploit	0	5	-1985917.0044	False	discard	0.027714	front-zero alternation with shared index-5 detour
