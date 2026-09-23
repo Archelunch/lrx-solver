@@ -80,7 +80,7 @@ Python 3.10+. The runtime needs only the standard library; the `lift` command
 also needs numpy.
 
 ```sh
-git clone <this repo> && cd lrx-lab
+git clone https://github.com/Archelunch/lrx-solver.git && cd lrx-solver
 python -m unittest discover -s tests -p 'test_*.py'   # ~10 s
 python -m src.lrx.cli smoke
 
