@@ -1,0 +1,25 @@
+{
+  "tests": 327,
+  "tests_seconds": 14.221,
+  "compileall": "PASS",
+  "smoke": "PASS",
+  "trusted": "PASS",
+  "ratio": 1.5625,
+  "api_cost_usd": 0,
+  "legacy_spend_guard": {
+    "status": "FAIL",
+    "logged_usd": 56.0159,
+    "default_cap_usd": 20,
+    "scope": "historical separate ledger; no new API spend"
+  },
+  "sha256": {
+    "integrations/mixture_lp.py": "62d6bff37c05e2e0dedebd34e3cc17ab533c86719a7f42f4ababaa73c1ace61d",
+    "integrations/projected_mixtures.py": "781b3257e5b66c9eb7c034291ab05ddd816b9eb5e0f06504e5153ca3a2c7e633",
+    "integrations/mixture_inventory.py": "e335ddeb9036b96a8d5511ef2c2734e8349351ddc9a591bf3bc12565925bfb96",
+    "tests/test_search_projected_mixtures.py": "803ff0a4bf0ac5cf2e1dcca93a567ffa7df64995b9e9f43abfebd4d5ef346e09",
+    "autoresearch/loop-260923-2154/train-v2-results.json": "15702b703fe2ac0f3f84ad0f3f1f1c35f7faa5d847ed99d34380d078faacd81c",
+    "autoresearch/loop-260923-2154/confirmation-v2-results.json": "6df54aaf57ab2c8cf17d16a78a97e94452055013578c62c1d20212cbe6539180",
+    "autoresearch/loop-260923-2154/certificate-audit.json": "cc1640abc1fab5acab5c95f13fb09b3ff74604f36ccfa4302ffa87e76591b56c",
+    "autoresearch/loop-260923-2154/audit_results.py": "062f2355e29e7d1c62a7b70efe89b3644b85737f3615b3bbc886da4478430163"
+  }
+}

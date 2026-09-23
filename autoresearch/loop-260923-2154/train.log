@@ -1,0 +1,12 @@
+{"done": 1, "role": "train", "certified": 1, "case": "k4-mask90-order19755", "stage": "inherited-support", "seconds": 0.002}
+{"done": 2, "role": "train", "certified": 2, "case": "k4-mask330-order32595", "stage": "inherited-support", "seconds": 0.002}
+{"done": 3, "role": "train", "certified": 3, "case": "k4-mask85-order1857", "stage": "inherited-support", "seconds": 0.001}
+{"done": 4, "role": "train", "certified": 3, "case": "k4-mask51-order34857", "stage": "expanded-pool", "seconds": 0.034}
+Traceback (most recent call last):
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260923-2154/run.py", line 134, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260923-2154/run.py", line 105, in main
+    if oldbase<31+6*case['blocks']:raise ValueError('source residual already meets inherited criterion')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: source residual already meets inherited criterion

@@ -49,6 +49,14 @@ are finite unless explicitly stated otherwise. Details and evidence:
 
 ### Recent results and their limits
 
+- **New projected mixtures (session 08).** A deterministic, dependency-free
+  optimizer produced **76 exact certificates for named m = 8 families with
+  4–8 zero blocks**, covering all positive block lengths through the reviewed
+  comparison/stretching lemmas: 52/100 development and 24/50 confirmation
+  families. Sixty certificates reuse inherited word supports with new weights;
+  sixteen use additional existing catalog words. API cost: **$0**. Selected
+  baseline exclusions were rechecked; global coverage totals were not
+  reconstructed. See the [session 08 report](autoresearch/loop-260923-2154/report.md).
 - **Nine-gap theorem at m = 8 (supplied manuscript).** For every order of the
   eight labels and arbitrary positive zero-block lengths in all nine linear
   gaps, including both endpoints, `d(v) <= 6n - 18`. We independently checked
@@ -89,15 +97,17 @@ weighted coefficient of every retained block <= 6
 ```
 
 Then at least one word meets the target for every positive choice of block
-lengths. The next experiment will first seek **new weights for existing
-projected words**, then seek new words only where that fails. An old mixture
+lengths. The completed local experiment found new weights for existing projected
+words. The next experiment will widen the catalog beyond its 128-word pool
+before seeking new words. An old mixture
 failing after deletion does not show that every new mixture fails.
 
 The primary outcome is newly certified infinite families. GEPA can preserve
 complementary cost profiles, AdaEvolve can allocate search across structural
 families, and EvoX can adapt the proposal strategy. A mixture-search adapter
-is **planned, not yet implemented**. The completed adapter searches finite
-lifting constructions. See the [next-iteration protocol](autoresearch/next-iteration.md)
+for the campaign planners is **planned, not yet implemented**. The mixture
+profile interpreter, numerical optimizer and exact rational acceptance checks
+are implemented; the completed engine adapter searches finite lifting constructions. See the [next-iteration protocol](autoresearch/next-iteration.md)
 and [ROADMAP.md](ROADMAP.md). The current handoff is [HANDOFF.md](HANDOFF.md).
 
 ## How the search works
@@ -174,7 +184,7 @@ projection-union counts or replace the mathematical stretching lemmas.
 | path | contents |
 |---|---|
 | `src/lrx/` | state model, BFS tables, exact DP, certificates, DSL, evaluator, search engines, LLM client, reports |
-| `tests/` | 321 unit tests, including an independent literal-vector oracle |
+| `tests/` | 327 unit tests, including an independent literal-vector oracle |
 | `research/` | problem statement, claim register, experiment protocol |
 | `candidates/` | baselines, best controllers (`leads/`), potentials and probes (`probes/`) |
 | `campaigns/` | example campaign configs (offline and live) |

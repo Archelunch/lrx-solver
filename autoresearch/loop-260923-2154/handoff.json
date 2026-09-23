@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "report": "autoresearch/loop-260923-2154/report.md",
+  "context": "autoresearch/loop-260923-2154/context-v3.json",
+  "api_cost_usd": 0,
+  "remaining_budget_usd": 19.851381,
+  "development_certified": 52,
+  "confirmation_certified": 24,
+  "claims": "76 named infinite-family certificates via reviewed lemmas; full m8 and general conjecture open; global coverage totals not recomputed",
+  "next": "Expand existing-catalog search beyond128 words on unresolved development cases; freeze fresh confirmation before any method selection; no need for model calls until catalog bottlenecks are measured.",
+  "constraints": [
+    "Preserve invalid first attempt; use only v2 experiment results",
+    "Never feed confirmation into proposer context",
+    "No trusted-core changes",
+    "No archive code execution",
+    "No new live API payload was authorized or sent in this iteration",
+    "No push performed"
+  ],
+  "verification": {
+    "tests": 327,
+    "smoke": true,
+    "compile": true,
+    "trusted": true
+  }
+}

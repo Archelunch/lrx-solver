@@ -1,6 +1,10 @@
 # Next autoresearch iteration: new mixtures after projection
 
-Status: proposed, not launched. Repository documentation is maintained in
+Status: local phase completed in session 08; paid phase was unnecessary and
+was not launched. See [the report](loop-260923-2154/report.md): 76 named family
+certificates, $0 API cost. The protocol below is preserved as the pre-run plan.
+Next: a wider existing-catalog search with fresh structural confirmation.
+Repository documentation is maintained in
 English. The objective is progress toward the general LRX sorting-radius
 conjecture, starting with additional infinite families at m=8.
 

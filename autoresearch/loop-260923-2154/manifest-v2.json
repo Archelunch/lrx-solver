@@ -1,0 +1,11 @@
+{
+  "autoresearch/loop-260923-2154/train-v2.json": "6abe4d4933d8330e737fbe024e13c055615e36d91d0facfe95770591d92aba2b",
+  "autoresearch/loop-260923-2154/confirmation-v2.json": "a81673b2b300f42bd94d63c0bd6dfb1ef905bbbdad09b03b7219216d55da22b2",
+  "autoresearch/loop-260923-2154/config-v2.json": "0a01c1f8e4fb75764f3faedd9990be9880eb6359f21f3b846b98e335e9d36b6e",
+  "autoresearch/loop-260923-2154/run-v2.py": "2f473f67c051f24ce406963e700e2385b01724659d147ee51f5484f70e3d21e5",
+  "autoresearch/loop-260923-2154/freeze-v2.py": "1856015c492732c7fa1593e816989ed7a1a941d3664494747a6655b9444a6764",
+  "integrations/mixture_lp.py": "62d6bff37c05e2e0dedebd34e3cc17ab533c86719a7f42f4ababaa73c1ace61d",
+  "integrations/projected_mixtures.py": "781b3257e5b66c9eb7c034291ab05ddd816b9eb5e0f06504e5153ca3a2c7e633",
+  "integrations/mixture_inventory.py": "e335ddeb9036b96a8d5511ef2c2734e8349351ddc9a591bf3bc12565925bfb96",
+  "autoresearch/loop-260923-2107/incoming/verification.zip": "7469f605282a2c7099857a9d1da1a124f742ea47ff15abfd846f1cfeb3d53f50"
+}

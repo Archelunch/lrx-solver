@@ -316,3 +316,36 @@ not included in the archive. The reported 4,495,529 remaining families with
 The next search priority is new rational mixtures after projection. The
 single-fixed-macro obstruction has the manuscript's explicit scope and does
 not invalidate adaptive constructions or the conjecture.
+
+## Session 08: 76 projected-mixture family certificates
+
+A bounded deterministic search produced exact rational certificates for
+**76 distinct m=8 families with 4–8 retained zero blocks**, each covering all
+positive lengths through the supplied manuscript's comparison/stretching
+lemmas. Of a frozen structural sample, 52/100 development and 24/50 separate
+confirmation families were certified. The old inherited weights fail the
+projected base-price test on all selected cases, and scalar checks exclude
+them from the supplied reverse-order transfer domains. These are additional
+certificates relative to those checked methods on named cases, not a freshly
+reconstructed global coverage count or a claim of historical novelty.
+
+60 certificates use reweighted inherited word supports; 16 more use existing
+words from a fixed 128-word catalog pool. All accepted weights and inequalities
+are exact. A separate repeated marked-zero projection audit agreed on 226
+unique projected words and replayed 1,811 expanded support-component words.
+The infinite-length conclusion uses the exact affine coefficients and the
+lemmas, not extrapolation from those replay samples. Evidence:
+`autoresearch/loop-260923-2154/train-v2-results.json`,
+`confirmation-v2-results.json`, and `certificate-audit.json` in that directory.
+
+Example: for all positive a,b,c,d,
+v=(4,0^a,8,3,0^b,6,0^c,1,5,0^d,7,2) satisfies d(v)<=6n-18.
+The four weights (1/3,1/5,1/15,2/5) give weighted base 797/15<55 and
+slopes (6,6,5,6). The report supplies the averaging/integrality argument and
+catalog references. The inherited weighted base 2757/49 fails the <55 test.
+
+A failed initial sampler used the wrong byte order and was stopped by the
+baseline guard; its artifacts are preserved and excluded. The corrected
+inventory was checked against the supplied data table. Global union counts
+remain partly attributed. The 74 search misses prove no infeasibility, and
+full m=8 and the general conjecture remain open. No API calls were used.

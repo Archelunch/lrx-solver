@@ -1,0 +1,524 @@
+{
+  "status": "PASS",
+  "roles": {
+    "train": {
+      "certified_families": 52,
+      "components": 163,
+      "expanded_component_replays": 1300,
+      "nonaffine_upper_bound_components": 0
+    },
+    "confirmation": {
+      "certified_families": 24,
+      "components": 64,
+      "expanded_component_replays": 511,
+      "nonaffine_upper_bound_components": 0
+    }
+  },
+  "unique_trusted_projections": 226,
+  "development_ablation": {
+    "description": "Optimize inherited support retaining the old nine-gap coefficient bounds, instead of recomputing projected coefficients.",
+    "certified": 38,
+    "cases": [
+      {
+        "case": "k4-mask90-order19755",
+        "status": "CERTIFICATE",
+        "base": "797/15"
+      },
+      {
+        "case": "k4-mask330-order32595",
+        "status": "CERTIFICATE",
+        "base": "262/5"
+      },
+      {
+        "case": "k4-mask85-order1857",
+        "status": "CERTIFICATE",
+        "base": "600/11"
+      },
+      {
+        "case": "k4-mask149-order4313",
+        "status": "NO_CERTIFICATE",
+        "base": "619/11"
+      },
+      {
+        "case": "k4-mask354-order38105",
+        "status": "CERTIFICATE",
+        "base": "201/4"
+      },
+      {
+        "case": "k4-mask330-order18606",
+        "status": "NO_CERTIFICATE",
+        "base": "1577/28"
+      },
+      {
+        "case": "k4-mask51-order34857",
+        "status": "NO_CERTIFICATE",
+        "base": "771/14"
+      },
+      {
+        "case": "k4-mask141-order15317",
+        "status": "NO_CERTIFICATE",
+        "base": "279/5"
+      },
+      {
+        "case": "k4-mask169-order37570",
+        "status": "NO_CERTIFICATE",
+        "base": "626/11"
+      },
+      {
+        "case": "k4-mask78-order4911",
+        "status": "NO_CERTIFICATE",
+        "base": "667/12"
+      },
+      {
+        "case": "k4-mask78-order9701",
+        "status": "NO_CERTIFICATE",
+        "base": "408/7"
+      },
+      {
+        "case": "k4-mask198-order10741",
+        "status": "CERTIFICATE",
+        "base": "146/3"
+      },
+      {
+        "case": "k4-mask396-order9877",
+        "status": "CERTIFICATE",
+        "base": "109/2"
+      },
+      {
+        "case": "k4-mask46-order2011",
+        "status": "CERTIFICATE",
+        "base": "54"
+      },
+      {
+        "case": "k4-mask312-order21771",
+        "status": "NO_CERTIFICATE",
+        "base": "1163/20"
+      },
+      {
+        "case": "k4-mask308-order9799",
+        "status": "NO_CERTIFICATE",
+        "base": "281/5"
+      },
+      {
+        "case": "k4-mask417-order15734",
+        "status": "NO_CERTIFICATE",
+        "base": "612/11"
+      },
+      {
+        "case": "k4-mask390-order32869",
+        "status": "NO_CERTIFICATE",
+        "base": "55"
+      },
+      {
+        "case": "k4-mask456-order39145",
+        "status": "CERTIFICATE",
+        "base": "271/5"
+      },
+      {
+        "case": "k4-mask147-order23325",
+        "status": "CERTIFICATE",
+        "base": "269/5"
+      },
+      {
+        "case": "k5-mask357-order10564",
+        "status": "NO_CERTIFICATE",
+        "base": "688/11"
+      },
+      {
+        "case": "k5-mask182-order5246",
+        "status": "NO_CERTIFICATE",
+        "base": "371/6"
+      },
+      {
+        "case": "k5-mask406-order31059",
+        "status": "NO_CERTIFICATE",
+        "base": "307/5"
+      },
+      {
+        "case": "k5-mask458-order19435",
+        "status": "NO_CERTIFICATE",
+        "base": "3438/55"
+      },
+      {
+        "case": "k5-mask457-order13572",
+        "status": "CERTIFICATE",
+        "base": "583/10"
+      },
+      {
+        "case": "k5-mask342-order6852",
+        "status": "NO_CERTIFICATE",
+        "base": "1733/28"
+      },
+      {
+        "case": "k5-mask310-order4691",
+        "status": "NO_CERTIFICATE",
+        "base": "125/2"
+      },
+      {
+        "case": "k5-mask313-order9475",
+        "status": "CERTIFICATE",
+        "base": "59"
+      },
+      {
+        "case": "k5-mask376-order34694",
+        "status": "NO_CERTIFICATE",
+        "base": "123/2"
+      },
+      {
+        "case": "k5-mask217-order28401",
+        "status": "NO_CERTIFICATE",
+        "base": "188/3"
+      },
+      {
+        "case": "k5-mask179-order39372",
+        "status": "NO_CERTIFICATE",
+        "base": "672/11"
+      },
+      {
+        "case": "k5-mask313-order2925",
+        "status": "NO_CERTIFICATE",
+        "base": "428/7"
+      },
+      {
+        "case": "k5-mask466-order1333",
+        "status": "CERTIFICATE",
+        "base": "121/2"
+      },
+      {
+        "case": "k5-mask310-order10383",
+        "status": "NO_CERTIFICATE",
+        "base": "123/2"
+      },
+      {
+        "case": "k5-mask454-order23991",
+        "status": "CERTIFICATE",
+        "base": "56"
+      },
+      {
+        "case": "k5-mask205-order5430",
+        "status": "CERTIFICATE",
+        "base": "59"
+      },
+      {
+        "case": "k5-mask451-order22426",
+        "status": "NO_CERTIFICATE",
+        "base": "306/5"
+      },
+      {
+        "case": "k5-mask217-order39494",
+        "status": "CERTIFICATE",
+        "base": "179/3"
+      },
+      {
+        "case": "k5-mask307-order3119",
+        "status": "CERTIFICATE",
+        "base": "4441/74"
+      },
+      {
+        "case": "k5-mask376-order5431",
+        "status": "NO_CERTIFICATE",
+        "base": "127/2"
+      },
+      {
+        "case": "k6-mask237-order8455",
+        "status": "NO_CERTIFICATE",
+        "base": "67"
+      },
+      {
+        "case": "k6-mask249-order16375",
+        "status": "NO_CERTIFICATE",
+        "base": "202/3"
+      },
+      {
+        "case": "k6-mask486-order37829",
+        "status": "CERTIFICATE",
+        "base": "328/5"
+      },
+      {
+        "case": "k6-mask377-order16317",
+        "status": "CERTIFICATE",
+        "base": "66"
+      },
+      {
+        "case": "k6-mask429-order39577",
+        "status": "NO_CERTIFICATE",
+        "base": "6164/91"
+      },
+      {
+        "case": "k6-mask222-order31655",
+        "status": "NO_CERTIFICATE",
+        "base": "67"
+      },
+      {
+        "case": "k6-mask430-order39347",
+        "status": "NO_CERTIFICATE",
+        "base": "135/2"
+      },
+      {
+        "case": "k6-mask235-order25498",
+        "status": "NO_CERTIFICATE",
+        "base": "1487/22"
+      },
+      {
+        "case": "k6-mask462-order17550",
+        "status": "CERTIFICATE",
+        "base": "307/5"
+      },
+      {
+        "case": "k6-mask249-order28370",
+        "status": "NO_CERTIFICATE",
+        "base": "821/12"
+      },
+      {
+        "case": "k6-mask245-order13041",
+        "status": "CERTIFICATE",
+        "base": "3633/55"
+      },
+      {
+        "case": "k6-mask318-order21803",
+        "status": "NO_CERTIFICATE",
+        "base": "610/9"
+      },
+      {
+        "case": "k6-mask407-order19837",
+        "status": "NO_CERTIFICATE",
+        "base": "68"
+      },
+      {
+        "case": "k6-mask123-order24414",
+        "status": "NO_CERTIFICATE",
+        "base": "888/13"
+      },
+      {
+        "case": "k6-mask399-order1723",
+        "status": "CERTIFICATE",
+        "base": "61"
+      },
+      {
+        "case": "k6-mask399-order27874",
+        "status": "CERTIFICATE",
+        "base": "57"
+      },
+      {
+        "case": "k6-mask219-order18308",
+        "status": "CERTIFICATE",
+        "base": "735/11"
+      },
+      {
+        "case": "k6-mask442-order5461",
+        "status": "NO_CERTIFICATE",
+        "base": "137/2"
+      },
+      {
+        "case": "k6-mask303-order39177",
+        "status": "NO_CERTIFICATE",
+        "base": "475/7"
+      },
+      {
+        "case": "k6-mask119-order4155",
+        "status": "CERTIFICATE",
+        "base": "1935/29"
+      },
+      {
+        "case": "k7-mask239-order11050",
+        "status": "CERTIFICATE",
+        "base": "1084/15"
+      },
+      {
+        "case": "k7-mask446-order8821",
+        "status": "CERTIFICATE",
+        "base": "72"
+      },
+      {
+        "case": "k7-mask477-order14342",
+        "status": "CERTIFICATE",
+        "base": "10039/138"
+      },
+      {
+        "case": "k7-mask375-order36700",
+        "status": "NO_CERTIFICATE",
+        "base": "2647/36"
+      },
+      {
+        "case": "k7-mask431-order30939",
+        "status": "NO_CERTIFICATE",
+        "base": "8061/110"
+      },
+      {
+        "case": "k7-mask223-order28716",
+        "status": "NO_CERTIFICATE",
+        "base": "1619/22"
+      },
+      {
+        "case": "k7-mask494-order28143",
+        "status": "NO_CERTIFICATE",
+        "base": "1841/25"
+      },
+      {
+        "case": "k7-mask351-order16615",
+        "status": "NO_CERTIFICATE",
+        "base": "74"
+      },
+      {
+        "case": "k7-mask491-order9996",
+        "status": "CERTIFICATE",
+        "base": "764/11"
+      },
+      {
+        "case": "k7-mask253-order19705",
+        "status": "NO_CERTIFICATE",
+        "base": "804/11"
+      },
+      {
+        "case": "k7-mask475-order29239",
+        "status": "NO_CERTIFICATE",
+        "base": "12953/176"
+      },
+      {
+        "case": "k7-mask443-order33553",
+        "status": "NO_CERTIFICATE",
+        "base": "6540/89"
+      },
+      {
+        "case": "k7-mask471-order37780",
+        "status": "CERTIFICATE",
+        "base": "769/11"
+      },
+      {
+        "case": "k7-mask239-order32367",
+        "status": "NO_CERTIFICATE",
+        "base": "3371/46"
+      },
+      {
+        "case": "k7-mask463-order18957",
+        "status": "NO_CERTIFICATE",
+        "base": "5531/75"
+      },
+      {
+        "case": "k7-mask446-order16912",
+        "status": "CERTIFICATE",
+        "base": "948/13"
+      },
+      {
+        "case": "k7-mask375-order21679",
+        "status": "CERTIFICATE",
+        "base": "3935/54"
+      },
+      {
+        "case": "k7-mask223-order18266",
+        "status": "CERTIFICATE",
+        "base": "791/11"
+      },
+      {
+        "case": "k7-mask253-order9066",
+        "status": "CERTIFICATE",
+        "base": "3907/55"
+      },
+      {
+        "case": "k7-mask491-order25070",
+        "status": "NO_CERTIFICATE",
+        "base": "2927/39"
+      },
+      {
+        "case": "k8-mask503-order35203",
+        "status": "NO_CERTIFICATE",
+        "base": "159/2"
+      },
+      {
+        "case": "k8-mask503-order31806",
+        "status": "NO_CERTIFICATE",
+        "base": "5219/66"
+      },
+      {
+        "case": "k8-mask510-order22547",
+        "status": "CERTIFICATE",
+        "base": "2757/35"
+      },
+      {
+        "case": "k8-mask255-order8727",
+        "status": "NO_CERTIFICATE",
+        "base": "10885/136"
+      },
+      {
+        "case": "k8-mask383-order17191",
+        "status": "NO_CERTIFICATE",
+        "base": "2453/31"
+      },
+      {
+        "case": "k8-mask479-order22401",
+        "status": "CERTIFICATE",
+        "base": "5531/71"
+      },
+      {
+        "case": "k8-mask509-order11288",
+        "status": "NO_CERTIFICATE",
+        "base": "2003/25"
+      },
+      {
+        "case": "k8-mask447-order22175",
+        "status": "NO_CERTIFICATE",
+        "base": "2458/31"
+      },
+      {
+        "case": "k8-mask447-order21172",
+        "status": "NO_CERTIFICATE",
+        "base": "62983/795"
+      },
+      {
+        "case": "k8-mask509-order14388",
+        "status": "CERTIFICATE",
+        "base": "528/7"
+      },
+      {
+        "case": "k8-mask510-order10444",
+        "status": "CERTIFICATE",
+        "base": "1181/15"
+      },
+      {
+        "case": "k8-mask510-order25148",
+        "status": "NO_CERTIFICATE",
+        "base": "953/12"
+      },
+      {
+        "case": "k8-mask255-order25949",
+        "status": "NO_CERTIFICATE",
+        "base": "555/7"
+      },
+      {
+        "case": "k8-mask509-order16502",
+        "status": "CERTIFICATE",
+        "base": "1025/13"
+      },
+      {
+        "case": "k8-mask255-order21547",
+        "status": "NO_CERTIFICATE",
+        "base": "317/4"
+      },
+      {
+        "case": "k8-mask447-order14168",
+        "status": "NO_CERTIFICATE",
+        "base": "1996/25"
+      },
+      {
+        "case": "k8-mask383-order35939",
+        "status": "NO_CERTIFICATE",
+        "base": "715/9"
+      },
+      {
+        "case": "k8-mask503-order575",
+        "status": "NO_CERTIFICATE",
+        "base": "1593/20"
+      },
+      {
+        "case": "k8-mask510-order17048",
+        "status": "NO_CERTIFICATE",
+        "base": "1998/25"
+      },
+      {
+        "case": "k8-mask495-order36149",
+        "status": "NO_CERTIFICATE",
+        "base": "398/5"
+      }
+    ]
+  }
+}

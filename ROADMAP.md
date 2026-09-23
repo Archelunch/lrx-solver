@@ -12,11 +12,15 @@ premises for all 40,320 label orders and arbitrary positive block lengths.
 The full m=8 case and the general conjecture remain open. Projection coverage
 and its union with earlier results are not yet independently reconstructed.
 
-1. Establish a provenance-backed baseline for retained gap sets with 4–8 blocks.
-   Separate verified coverage from manuscript-reported totals.
-2. Reweight existing projected word/cut profiles using deterministic search.
-   Accept only exact rational certificates: weights sum to one, weighted base
-   <31+6k, and every retained slope <=6. Search failure is not infeasibility.
+1. Extend the selected-case projection baseline toward a full auditable
+   inventory. Session 08 certified 76 named families with 4–8 blocks, checking
+   their exclusion from inherited mixtures and supplied reverse transfer.
+   Global union totals remain partly attributed.
+2. Expand the existing-catalog search beyond the 128-word pool used in session
+   08. The deterministic mixture optimizer and exact acceptance checks work;
+   keep weights summing to one, weighted base <31+6k, and slopes <=6.
+   Search failure is not infeasibility. Use fresh structural confirmation
+   for the next method comparison.
 3. Connect a data-only mixture adapter to the existing engines. Use EvoX and
    sequential as a small matched pilot; retain complementary profiles for
    GEPA and structural islands for AdaEvolve in later measured experiments.

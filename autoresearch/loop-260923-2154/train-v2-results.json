@@ -1,0 +1,7404 @@
+{
+  "role": "train",
+  "status": "COMPLETE",
+  "cases": 100,
+  "planned": 100,
+  "certified": 52,
+  "api_cost_usd": 0,
+  "seconds": 3.2552365830051713,
+  "results": [
+    {
+      "id": "k4-mask90-order19755",
+      "mask": 90,
+      "order_index": 19755,
+      "blocks": 4,
+      "labels": [
+        4,
+        8,
+        3,
+        6,
+        1,
+        5,
+        7,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "2757/49",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "797/15",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 301,
+            "cut": 6,
+            "weight": "1/3"
+          },
+          {
+            "source": 1510,
+            "cut": 3,
+            "weight": "1/5"
+          },
+          {
+            "source": 1328,
+            "cut": 4,
+            "weight": "1/15"
+          },
+          {
+            "source": 1363,
+            "cut": 11,
+            "weight": "2/5"
+          }
+        ],
+        "bounds": {
+          "base": "797/15",
+          "gamma": [
+            "6",
+            "6",
+            "5",
+            "6"
+          ],
+          "margin": "28/15"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "RRXLXLLXLLLXRRXRXRXLLLXRXRXRRRRRXLXLXLXRXRRRXL",
+            "length": 46,
+            "upper": 46
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 0,
+            "word": "RRXLXLLXLLLLXRXRRXRXRXLLLXRXRXRRRRRRRRXLXLXLXLXLXLXRXRRRRRRXLXLXLXL",
+            "length": 67,
+            "upper": 67
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "RRXLXLLLXRXLLLLLLLLLLXRXRXRXRXRXRXRRXRXRXRXLLLLXRXRXRXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXRXRRRRRRRRRXLXLXLXLXLXLXL",
+            "length": 109,
+            "upper": 109
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0016786249761935323
+    },
+    {
+      "id": "k4-mask330-order32595",
+      "mask": 330,
+      "order_index": 32595,
+      "blocks": 4,
+      "labels": [
+        7,
+        4,
+        2,
+        6,
+        1,
+        5,
+        8,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "1931/35",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 6,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "262/5",
+        "pivots": 6
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 3574,
+            "cut": 1,
+            "weight": "3/5"
+          },
+          {
+            "source": 3578,
+            "cut": 6,
+            "weight": "1/10"
+          },
+          {
+            "source": 3579,
+            "cut": 8,
+            "weight": "3/10"
+          }
+        ],
+        "bounds": {
+          "base": "262/5",
+          "gamma": [
+            "39/10",
+            "6",
+            "6",
+            "47/10"
+          ],
+          "margin": "13/5"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "RXRRXLLLLLLXLLXRRRXLXLXLLXLLXLXLXRXRRXRXRXRRX",
+            "length": 45,
+            "upper": 45
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 0,
+            "word": "RXRXRXRXRRXLLLLLLLLLXLXLLXRRRRXLXLXLXLLXLLLLXRXRXLLLXRXRXLLLXRXRXRXRRXRXRXRRX",
+            "length": 77,
+            "upper": 77
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "RXRXRXRXRXRXRXRRXLLLLLLLLLLLLLXLXLXLXLXLXLXLLXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLLLXRXLLXRXLLXRXRXRRXRXRXRRX",
+            "length": 103,
+            "upper": 103
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0014515839866362512
+    },
+    {
+      "id": "k4-mask85-order1857",
+      "mask": 85,
+      "order_index": 1857,
+      "blocks": 4,
+      "labels": [
+        1,
+        4,
+        6,
+        5,
+        3,
+        7,
+        8,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "939/17",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 4,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "600/11",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 605,
+            "cut": 11,
+            "weight": "7/22"
+          },
+          {
+            "source": 347,
+            "cut": 11,
+            "weight": "5/22"
+          },
+          {
+            "source": 960,
+            "cut": 6,
+            "weight": "1/11"
+          },
+          {
+            "source": 283,
+            "cut": 5,
+            "weight": "4/11"
+          }
+        ],
+        "bounds": {
+          "base": "600/11",
+          "gamma": [
+            "6",
+            "6",
+            "6",
+            "60/11"
+          ],
+          "margin": "5/11"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "LLXLLXRRRXRRXLXLXLLLLLXLXLLXRXRRRXRXRXRR",
+            "length": 40,
+            "upper": 40
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 0,
+            "word": "LLXLXLLXRRRRXLXRRRXLXLXLXLLLLLLLXRXRXLLLXRXRXLLLLLLLXRXRXRXRXRXRXRRRXRXRXRR",
+            "length": 75,
+            "upper": 75
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LLLXLXLXLXLXLXLXLLXRRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLXLLLLLLXRXLLXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRRXRXRXRR",
+            "length": 119,
+            "upper": 119
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0012498750002123415
+    },
+    {
+      "id": "k4-mask149-order4313",
+      "mask": 149,
+      "order_index": 4313,
+      "blocks": 4,
+      "labels": [
+        1,
+        7,
+        8,
+        6,
+        4,
+        5,
+        3,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "1253/22",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 6,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "601/11",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 1100,
+            "cut": 9,
+            "weight": "1/11"
+          },
+          {
+            "source": 1636,
+            "cut": 10,
+            "weight": "5/11"
+          },
+          {
+            "source": 1829,
+            "cut": 5,
+            "weight": "2/11"
+          },
+          {
+            "source": 1830,
+            "cut": 5,
+            "weight": "3/11"
+          }
+        ],
+        "bounds": {
+          "base": "601/11",
+          "gamma": [
+            "60/11",
+            "6",
+            "6",
+            "6"
+          ],
+          "margin": "4/11"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "RXLXRRRXLXLXLXLLXLLXLLXRXRXRXLXLLLXRXRXRXRRRXRXRXL",
+            "length": 50,
+            "upper": 50
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 1,
+            "word": "RXLXLLXLXLLLLLLXRXRXLLLXRXRXRRXRXRXLLXLXRXRXLXLLLLLXRXRXRXRXRXRXRXRRRXLXRRXLXL",
+            "length": 78,
+            "upper": 78
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 1,
+            "word": "RXLXLXLLXLXLXLXLXLXLXLLLLLXRXLLXRXRRXRXRXLLXLXRXRXLXLLLLXRXRXRXRXRXRXRRRRRRRRXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXL",
+            "length": 111,
+            "upper": 111
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0014791669964324683
+    },
+    {
+      "id": "k4-mask354-order38105",
+      "mask": 354,
+      "order_index": 38105,
+      "blocks": 4,
+      "labels": [
+        8,
+        4,
+        7,
+        3,
+        5,
+        6,
+        2,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "1862/33",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 4,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "201/4",
+        "pivots": 3
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 107,
+            "cut": 1,
+            "weight": "1/4"
+          },
+          {
+            "source": 801,
+            "cut": 8,
+            "weight": "3/4"
+          }
+        ],
+        "bounds": {
+          "base": "201/4",
+          "gamma": [
+            "6",
+            "21/4",
+            "2",
+            "5"
+          ],
+          "margin": "19/4"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "RRXLLXLLLLLLXRRRXRRXLXLLXRXLXLXRXRRRXRRXRRXLXLX",
+            "length": 47,
+            "upper": 47
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 1,
+            "word": "RRRRRXLXLXLXLLXLLLLLLLXRXRRRXRRXLXLLXRXLXLXRXRRRXRRXRRRRRXLXLXLXLXLX",
+            "length": 68,
+            "upper": 68
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 1,
+            "word": "RRRRRRRRXLXLXLXLXLXLXLLXLXLLLLLLLLLLLLXRXRXRXRXRXRXRRRXRRXLXLLXRXLXLXRXRRRXRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLX",
+            "length": 109,
+            "upper": 109
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0010875840089283884
+    },
+    {
+      "id": "k4-mask330-order18606",
+      "mask": 330,
+      "order_index": 18606,
+      "blocks": 4,
+      "labels": [
+        4,
+        6,
+        8,
+        1,
+        3,
+        2,
+        5,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "740/13",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1577/28",
+        "pivots": 6
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1529/28",
+        "pivots": 8
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 385,
+            "cut": 4,
+            "weight": "1/4"
+          },
+          {
+            "source": 352,
+            "cut": 6,
+            "weight": "9/28"
+          },
+          {
+            "source": 371,
+            "cut": 0,
+            "weight": "3/7"
+          }
+        ],
+        "bounds": {
+          "base": "1529/28",
+          "gamma": [
+            "6",
+            "36/7",
+            "6",
+            "167/28"
+          ],
+          "margin": "11/28"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "LXRRXRXLLXLLXRXRRXRRXLLRRRRRRLXLXRXRXL",
+            "length": 38,
+            "upper": 38
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 0,
+            "word": "LXRRXRXRXRXRXLLLLLXRXRXRXLLLLLXRXRXRXRXRRXRRXLLRRRRRRRRLXLXLXLXRRRXLXLXRRRXLXLXL",
+            "length": 80,
+            "upper": 80
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LLXRXRRXRXRXRXRXRXRXRXLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRRXLLRRRRRRRLXLXLXRRXLXRRXLXL",
+            "length": 101,
+            "upper": 101
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.035444291977910325
+    },
+    {
+      "id": "k4-mask51-order34857",
+      "mask": 51,
+      "order_index": 34857,
+      "blocks": 4,
+      "labels": [
+        7,
+        8,
+        3,
+        4,
+        2,
+        5,
+        6,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "111/2",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "771/14",
+        "pivots": 6
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "771/14",
+        "pivots": 9
+      },
+      "certificate": null,
+      "seconds": 0.03435950001585297
+    },
+    {
+      "id": "k4-mask141-order15317",
+      "mask": 141,
+      "order_index": 15317,
+      "blocks": 4,
+      "labels": [
+        4,
+        1,
+        3,
+        7,
+        2,
+        8,
+        6,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "7446/127",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "279/5",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "51",
+        "pivots": 4
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 102,
+            "cut": 2,
+            "weight": "1"
+          }
+        ],
+        "bounds": {
+          "base": "51",
+          "gamma": [
+            "3",
+            "3",
+            "6",
+            "5"
+          ],
+          "margin": "4"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XRXRXRXRXRRXLXLLLLXRXRXRXRRRRXLXLLLLLXRXRRRRRRRXLXL",
+            "length": 51,
+            "upper": 51
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 0,
+            "word": "XRXRXRXRXRXRXRXRRXLXLLLLLLLXRXRXRXRXRXRXRRRRRRXLXLXLXLLLLLXRXRRRRRRRRRRXLXLXLXLXL",
+            "length": 81,
+            "upper": 81
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LXRXRXRXRXRXRXRXRXRXRXRXRRXLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRRRRRXLXLXLLLLLXRXRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXL",
+            "length": 108,
+            "upper": 108
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.06588137499056756
+    },
+    {
+      "id": "k4-mask169-order37570",
+      "mask": 169,
+      "order_index": 37570,
+      "blocks": 4,
+      "labels": [
+        8,
+        4,
+        2,
+        1,
+        5,
+        7,
+        3,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "3154/55",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "626/11",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "54",
+        "pivots": 8
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 413,
+            "cut": 2,
+            "weight": "1/11"
+          },
+          {
+            "source": 1118,
+            "cut": 3,
+            "weight": "5/11"
+          },
+          {
+            "source": 3418,
+            "cut": 9,
+            "weight": "1/11"
+          },
+          {
+            "source": 4534,
+            "cut": 9,
+            "weight": "4/11"
+          }
+        ],
+        "bounds": {
+          "base": "54",
+          "gamma": [
+            "6",
+            "60/11",
+            "6",
+            "6"
+          ],
+          "margin": "1"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XRRXRRXLXRRRRRRXLXLLXLXLLLLXLLLXLXLXLXLXRRXRXL",
+            "length": 46,
+            "upper": 46
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 2,
+            "word": "LXLXLLLXRXRXRXRRRRRRRRXLXLXLXLLXLLXRXRRXLXLLXLXLLLLLLLLXRXRXRRXRXRXRXLLLLXRXRXRRRRXRXR",
+            "length": 86,
+            "upper": 86
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LXRXRRXRXRXRXRXRXRXRRXLXRRRRRRRRRRRRRXLXLXLXLXLXLXLXLLXLXLXLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLLXLXLXLXLXLXLXLXLXLXLXLXRRRXLXRRXLXL",
+            "length": 127,
+            "upper": 127
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.03548612500890158
+    },
+    {
+      "id": "k4-mask78-order4911",
+      "mask": 78,
+      "order_index": 4911,
+      "blocks": 4,
+      "labels": [
+        1,
+        8,
+        6,
+        7,
+        4,
+        3,
+        5,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "8859/158",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "667/12",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "667/12",
+        "pivots": 3
+      },
+      "certificate": null,
+      "seconds": 0.03348487499170005
+    },
+    {
+      "id": "k4-mask78-order9701",
+      "mask": 78,
+      "order_index": 9701,
+      "blocks": 4,
+      "labels": [
+        2,
+        8,
+        4,
+        7,
+        1,
+        6,
+        5,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "237/4",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "408/7",
+        "pivots": 6
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "408/7",
+        "pivots": 5
+      },
+      "certificate": null,
+      "seconds": 0.0334402080043219
+    },
+    {
+      "id": "k4-mask198-order10741",
+      "mask": 198,
+      "order_index": 10741,
+      "blocks": 4,
+      "labels": [
+        3,
+        1,
+        8,
+        5,
+        6,
+        2,
+        7,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "169/3",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 4,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "146/3",
+        "pivots": 6
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 205,
+            "cut": 0,
+            "weight": "2/3"
+          },
+          {
+            "source": 204,
+            "cut": 10,
+            "weight": "1/3"
+          }
+        ],
+        "bounds": {
+          "base": "146/3",
+          "gamma": [
+            "3",
+            "6",
+            "5",
+            "2"
+          ],
+          "margin": "19/3"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "XLXLXRXRRXLXLXLXLLLLLLXRRXRXRXLLRXLXLXRRRRXRXR",
+            "length": 46,
+            "upper": 46
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 1,
+            "word": "XLXLXLXRRXLXRRRXLXLXLXLXLLLLLLLLXRXRXRRXRXRXLLRXLXLXRRRRXRXR",
+            "length": 60,
+            "upper": 60
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 1,
+            "word": "XLXLXLXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLLLLLLXRXRRXRXRXLLRXLXLXRRRRXRXR",
+            "length": 102,
+            "upper": 102
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0011465830029919744
+    },
+    {
+      "id": "k4-mask396-order9877",
+      "mask": 396,
+      "order_index": 9877,
+      "blocks": 4,
+      "labels": [
+        2,
+        8,
+        6,
+        3,
+        5,
+        1,
+        7,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "221/4",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 3,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "109/2",
+        "pivots": 2
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 24,
+            "cut": 4,
+            "weight": "1/2"
+          },
+          {
+            "source": 166,
+            "cut": 9,
+            "weight": "1/2"
+          }
+        ],
+        "bounds": {
+          "base": "109/2",
+          "gamma": [
+            "11/2",
+            "11/2",
+            "6",
+            "11/2"
+          ],
+          "margin": "1/2"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "LLXRRRXRRRXRRXLXLLXRXRRXRXLXLLLLXLLXLXRXRXRRXRXRXRLR",
+            "length": 52,
+            "upper": 52
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 1,
+            "word": "LXRXLLXLXLXLXLLXRXRXRRRXLXLXRRRXLXRRRRRRRXLXLXLXLXLXLXLXLXLLXLLXRXLLXRRRRXRRX",
+            "length": 77,
+            "upper": 77
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LLLXRXRRRXRXRXRXRXRXRXRRRRXLXRRRXLXLXLLXRXRRRXLXRRXLXLXLLLLXLLLLLLLLXRXRXRXRXRXRXLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXRLR",
+            "length": 115,
+            "upper": 115
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0008789580024313182
+    },
+    {
+      "id": "k4-mask46-order2011",
+      "mask": 46,
+      "order_index": 2011,
+      "blocks": 4,
+      "labels": [
+        1,
+        4,
+        7,
+        6,
+        8,
+        2,
+        5,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "1968/35",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "54",
+        "pivots": 5
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 83,
+            "cut": 0,
+            "weight": "1/3"
+          },
+          {
+            "source": 203,
+            "cut": 3,
+            "weight": "1/3"
+          },
+          {
+            "source": 1210,
+            "cut": 5,
+            "weight": "1/3"
+          }
+        ],
+        "bounds": {
+          "base": "54",
+          "gamma": [
+            "6",
+            "6",
+            "5",
+            "16/3"
+          ],
+          "margin": "1"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "XRXLXLRRRXLXLXLXLLLLXLXRRXRXLXLXRLLLLLXLX",
+            "length": 41,
+            "upper": 41
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 1,
+            "word": "XRXLXLRRRXLXLXLXLLLLLLLXRXRXLLLXRXRXRRXRXRXLLXRXLLXRXRLLLLLLLLLLLXLX",
+            "length": 68,
+            "upper": 68
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 2,
+            "word": "RXRRLXLXLLLXRXRXRRRXRRRRRRRRXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXLLXLXLXLXLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRRRRRRXLXLXLXLXRRRR",
+            "length": 120,
+            "upper": 120
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0012540830066427588
+    },
+    {
+      "id": "k4-mask312-order21771",
+      "mask": 312,
+      "order_index": 21771,
+      "blocks": 4,
+      "labels": [
+        5,
+        3,
+        2,
+        6,
+        1,
+        7,
+        8,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "2057/35",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1163/20",
+        "pivots": 7
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1163/20",
+        "pivots": 6
+      },
+      "certificate": null,
+      "seconds": 0.033926458010682836
+    },
+    {
+      "id": "k4-mask308-order9799",
+      "mask": 308,
+      "order_index": 9799,
+      "blocks": 4,
+      "labels": [
+        2,
+        8,
+        5,
+        6,
+        3,
+        1,
+        7,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "632/11",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "281/5",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "281/5",
+        "pivots": 4
+      },
+      "certificate": null,
+      "seconds": 0.033664666989352554
+    },
+    {
+      "id": "k4-mask417-order15734",
+      "mask": 417,
+      "order_index": 15734,
+      "blocks": 4,
+      "labels": [
+        4,
+        1,
+        8,
+        2,
+        6,
+        5,
+        3,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "225/4",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 4,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "612/11",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "48",
+        "pivots": 4
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 3793,
+            "cut": 0,
+            "weight": "2/3"
+          },
+          {
+            "source": 363,
+            "cut": 6,
+            "weight": "1/3"
+          }
+        ],
+        "bounds": {
+          "base": "48",
+          "gamma": [
+            "10/3",
+            "6",
+            "4",
+            "3"
+          ],
+          "margin": "7"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "LXLLXLXLLXLXRRXRXRRXLLLLXLLLXRXRXRRXRXRXRR",
+            "length": 42,
+            "upper": 42
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 0,
+            "word": "LXLLXLXLLLXRXLLXRXRRXRXRRXLLLLXLLLLLLXRXRXRXRXRXRRXRXRXRR",
+            "length": 57,
+            "upper": 57
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LLXLLXLXLLLLLLLLXRXRXRXRXRXRXLLLLLLLXRXRXRXRXRXRXRRXRXRRXLLLLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRRXRXRXRR",
+            "length": 100,
+            "upper": 100
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.03354641600162722
+    },
+    {
+      "id": "k4-mask390-order32869",
+      "mask": 390,
+      "order_index": 32869,
+      "blocks": 4,
+      "labels": [
+        7,
+        4,
+        5,
+        8,
+        3,
+        1,
+        6,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "2332/41",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 3,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "55",
+        "pivots": 2
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "55",
+        "pivots": 1
+      },
+      "certificate": null,
+      "seconds": 0.032864042004803196
+    },
+    {
+      "id": "k4-mask456-order39145",
+      "mask": 456,
+      "order_index": 39145,
+      "blocks": 4,
+      "labels": [
+        8,
+        6,
+        3,
+        2,
+        1,
+        4,
+        7,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "665/12",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 4,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "271/5",
+        "pivots": 6
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 997,
+            "cut": 3,
+            "weight": "13/35"
+          },
+          {
+            "source": 589,
+            "cut": 2,
+            "weight": "1/7"
+          },
+          {
+            "source": 43,
+            "cut": 9,
+            "weight": "17/35"
+          }
+        ],
+        "bounds": {
+          "base": "271/5",
+          "gamma": [
+            "6",
+            "6",
+            "201/35",
+            "198/35"
+          ],
+          "margin": "4/5"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "XRXRRXRXLLXLLXRXRRXLLLLLXLXLXLLXRXRXRXLLRX",
+            "length": 42,
+            "upper": 42
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 2,
+            "word": "XLXLXLXLLLLLXRXRRRXRRRXRXLXLXLXRRXLXRXRRRRRRXLXLXLXLXLXLXLXLLLXLXRRXRXRRR",
+            "length": 73,
+            "upper": 73
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 2,
+            "word": "XLXLXLXLXLLLLLLLLLLXRXRXRXRXRXRXRRRXRRRRXLXRRXLXLXLXLXRRXLXRXRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLLLXLXRRXRXRRR",
+            "length": 108,
+            "upper": 108
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0012066249910276383
+    },
+    {
+      "id": "k4-mask147-order23325",
+      "mask": 147,
+      "order_index": 23325,
+      "blocks": 4,
+      "labels": [
+        5,
+        6,
+        3,
+        2,
+        8,
+        4,
+        7,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "836/15",
+        "threshold": 55,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "269/5",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 564,
+            "cut": 8,
+            "weight": "3/10"
+          },
+          {
+            "source": 644,
+            "cut": 10,
+            "weight": "3/10"
+          },
+          {
+            "source": 872,
+            "cut": 4,
+            "weight": "2/5"
+          }
+        ],
+        "bounds": {
+          "base": "269/5",
+          "gamma": [
+            "6",
+            "6",
+            "6",
+            "5"
+          ],
+          "margin": "6/5"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "LXLLXLXLLXLXRXRXLLLXRXRRRRXRRRRXLXLLXLXLXRRR",
+            "length": 44,
+            "upper": 44
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "chosen": 1,
+            "word": "LXLXLLXLXLLLLXRXRXLLLXRXRXRXRXLLLLLXRXRXRXRRRRXRRRRRXLXLXLLXLXLXRRR",
+            "length": 67,
+            "upper": 67
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 1,
+            "word": "LLXLXLXLXLXLXLXLLXLXLLLXRXLLXRXRXRXLLLLXRXRXRRRRXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLXRRR",
+            "length": 87,
+            "upper": 87
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0012015829852316529
+    },
+    {
+      "id": "k5-mask357-order10564",
+      "mask": 357,
+      "order_index": 10564,
+      "blocks": 5,
+      "labels": [
+        3,
+        1,
+        7,
+        2,
+        4,
+        8,
+        5,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "13028/205",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "688/11",
+        "pivots": 7
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "688/11",
+        "pivots": 6
+      },
+      "certificate": null,
+      "seconds": 0.0415833750157617
+    },
+    {
+      "id": "k5-mask182-order5246",
+      "mask": 182,
+      "order_index": 5246,
+      "blocks": 5,
+      "labels": [
+        2,
+        1,
+        4,
+        7,
+        6,
+        5,
+        3,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "371/6",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 5,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "371/6",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "371/6",
+        "pivots": 5
+      },
+      "certificate": null,
+      "seconds": 0.04074795902124606
+    },
+    {
+      "id": "k5-mask406-order31059",
+      "mask": 406,
+      "order_index": 31059,
+      "blocks": 5,
+      "labels": [
+        7,
+        2,
+        1,
+        8,
+        3,
+        5,
+        6,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "757/12",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 5,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "307/5",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "839/15",
+        "pivots": 5
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 427,
+            "cut": 1,
+            "weight": "3/5"
+          },
+          {
+            "source": 242,
+            "cut": 10,
+            "weight": "2/15"
+          },
+          {
+            "source": 2308,
+            "cut": 6,
+            "weight": "4/15"
+          }
+        ],
+        "bounds": {
+          "base": "839/15",
+          "gamma": [
+            "11/3",
+            "58/15",
+            "6",
+            "6",
+            "77/15"
+          ],
+          "margin": "76/15"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "RXRRXRXRXLLLXRRRRRRXRXLLXLXLXLXLXLLLLLXLXLXLLRR",
+            "length": 47,
+            "upper": 47
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 0,
+            "word": "RXRXRXRXRXRRXRXRXRXRXRXLLLLLLXRXRXRXRRRRRRRRXLXLXRRRXLXLXLLXLXLXLXLXLLLLLLLLLLLLXLXLXLXLXLXLLRR",
+            "length": 95,
+            "upper": 95
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "RXRXRRXRXRXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRRRRRRRXLXRRXLXLLXLXLXLXLXLLLLLLLLLLLLLXLXLXLXLXLXLXLXLXLXLLRR",
+            "length": 107,
+            "upper": 107
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.040292040997883305
+    },
+    {
+      "id": "k5-mask458-order19435",
+      "mask": 458,
+      "order_index": 19435,
+      "blocks": 5,
+      "labels": [
+        4,
+        7,
+        8,
+        6,
+        5,
+        1,
+        3,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "3448/55",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "3438/55",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "3438/55",
+        "pivots": 8
+      },
+      "certificate": null,
+      "seconds": 0.0399904579971917
+    },
+    {
+      "id": "k5-mask457-order13572",
+      "mask": 457,
+      "order_index": 13572,
+      "blocks": 5,
+      "labels": [
+        3,
+        6,
+        8,
+        1,
+        5,
+        2,
+        4,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "308/5",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 4,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "583/10",
+        "pivots": 5
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 629,
+            "cut": 4,
+            "weight": "3/10"
+          },
+          {
+            "source": 235,
+            "cut": 7,
+            "weight": "1/10"
+          },
+          {
+            "source": 737,
+            "cut": 0,
+            "weight": "3/5"
+          }
+        ],
+        "bounds": {
+          "base": "583/10",
+          "gamma": [
+            "7/2",
+            "6",
+            "6",
+            "51/10",
+            "39/10"
+          ],
+          "margin": "27/10"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XLXRRXRXRXRXRRXRRLXLXLXLXLLXLLXRXLLLXRXRXRRXRRRRRRXLLLRR",
+            "length": 56,
+            "upper": 56
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 2,
+            "word": "RRRRRRRXRXRXRXRRXRXRXRRXRRRRXLXLXLXLLLLLLXRXRXRRXRXRRRRRXLXLXRRRXLXLXLLXLXLLXLXRRXRRRXR",
+            "length": 87,
+            "upper": 87
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 2,
+            "word": "RRRRXRXRXRXRXRXRXRRXRXRRXRRRRRRRRRXLXLXLXLXLXLXLXLXLLLLLXRXRRXRXRRRRRRRRRRXLXLXLXLXLXLXLXRRRRRRRRXLXLXLXLXLXLXLXLLXLXLLXLXRRXRRRXR",
+            "length": 130,
+            "upper": 130
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.00139929199940525
+    },
+    {
+      "id": "k5-mask342-order6852",
+      "mask": 342,
+      "order_index": 6852,
+      "blocks": 5,
+      "labels": [
+        2,
+        4,
+        6,
+        1,
+        7,
+        3,
+        5,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "2383/38",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 5,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1733/28",
+        "pivots": 6
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "865/14",
+        "pivots": 6
+      },
+      "certificate": null,
+      "seconds": 0.03954724999493919
+    },
+    {
+      "id": "k5-mask310-order4691",
+      "mask": 310,
+      "order_index": 4691,
+      "blocks": 5,
+      "labels": [
+        1,
+        8,
+        5,
+        2,
+        4,
+        7,
+        6,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "125/2",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 6,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "125/2",
+        "pivots": 2
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "125/2",
+        "pivots": 3
+      },
+      "certificate": null,
+      "seconds": 0.039511833019787446
+    },
+    {
+      "id": "k5-mask313-order9475",
+      "mask": 313,
+      "order_index": 9475,
+      "blocks": 5,
+      "labels": [
+        2,
+        8,
+        1,
+        7,
+        6,
+        3,
+        5,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "23623/380",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "59",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 969,
+            "cut": 0,
+            "weight": "2/7"
+          },
+          {
+            "source": 1442,
+            "cut": 8,
+            "weight": "4/7"
+          },
+          {
+            "source": 42,
+            "cut": 3,
+            "weight": "1/7"
+          }
+        ],
+        "bounds": {
+          "base": "59",
+          "gamma": [
+            "41/7",
+            "6",
+            "41/7",
+            "26/7",
+            "6"
+          ],
+          "margin": "2"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "RRXLXLXRRRXLXLXLXRRRRXLXLXLLLLLLXLLXRXRXRRXLXLXRRRXRXRXRX",
+            "length": 57,
+            "upper": 57
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 1,
+            "word": "RRRRRRXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXLXRRRRRRRRXLXLXLXLXLXLXLLLLLLLXRXLLLLLXRXRXRXRXRXRRXLXLXRRRXRXRXRX",
+            "length": 105,
+            "upper": 105
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 1,
+            "word": "RRRXLXLXLXLXRRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLLLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRXRRXLXLXRRRXRXRXRX",
+            "length": 113,
+            "upper": 113
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0014327910030260682
+    },
+    {
+      "id": "k5-mask376-order34694",
+      "mask": 376,
+      "order_index": 34694,
+      "blocks": 5,
+      "labels": [
+        7,
+        8,
+        2,
+        1,
+        5,
+        4,
+        3,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "123/2",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "123/2",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "670/11",
+        "pivots": 8
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 110,
+            "cut": 2,
+            "weight": "6/11"
+          },
+          {
+            "source": 4,
+            "cut": 9,
+            "weight": "5/11"
+          }
+        ],
+        "bounds": {
+          "base": "670/11",
+          "gamma": [
+            "57/11",
+            "60/11",
+            "63/11",
+            "6",
+            "6"
+          ],
+          "margin": "1/11"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "RXRLLXRRRRRXRRXLXLXLXLLLLLLXLXLXLXLXLLXRRRRRXLXLXL",
+            "length": 50,
+            "upper": 50
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 1,
+            "word": "RRRRRRXLXLXLXLXLLLXLLXRXRRRRRRRRRXLXLXLXLXLLLXLXLLLLLXRXLLLLLXRXRXRXRXRRXRXRXRRXRXLXLXRRRXLXLLLLLLXRXRXRXRXRRR",
+            "length": 110,
+            "upper": 110
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 1,
+            "word": "RRRXLXLLLXLLLXRXRXRRRRRRXLXLLLXLXLLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXRXRRXRXLXLXRRRXLXLLLLLLLXRXRXRXRXRXRRR",
+            "length": 128,
+            "upper": 128
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.04016974999103695
+    },
+    {
+      "id": "k5-mask217-order28401",
+      "mask": 217,
+      "order_index": 28401,
+      "blocks": 5,
+      "labels": [
+        6,
+        5,
+        3,
+        7,
+        2,
+        4,
+        8,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "22669/350",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "188/3",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "188/3",
+        "pivots": 6
+      },
+      "certificate": null,
+      "seconds": 0.03965016599977389
+    },
+    {
+      "id": "k5-mask179-order39372",
+      "mask": 179,
+      "order_index": 39372,
+      "blocks": 5,
+      "labels": [
+        8,
+        6,
+        5,
+        1,
+        4,
+        2,
+        3,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "3032/49",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "672/11",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "672/11",
+        "pivots": 7
+      },
+      "certificate": null,
+      "seconds": 0.04014762499718927
+    },
+    {
+      "id": "k5-mask313-order2925",
+      "mask": 313,
+      "order_index": 2925,
+      "blocks": 5,
+      "labels": [
+        1,
+        6,
+        2,
+        4,
+        8,
+        5,
+        7,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "18526/297",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "428/7",
+        "pivots": 7
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "428/7",
+        "pivots": 5
+      },
+      "certificate": null,
+      "seconds": 0.041698207991430536
+    },
+    {
+      "id": "k5-mask466-order1333",
+      "mask": 466,
+      "order_index": 1333,
+      "blocks": 5,
+      "labels": [
+        1,
+        3,
+        8,
+        2,
+        6,
+        4,
+        7,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "61",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 3,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "121/2",
+        "pivots": 5
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 238,
+            "cut": 4,
+            "weight": "1/2"
+          },
+          {
+            "source": 1363,
+            "cut": 10,
+            "weight": "1/2"
+          }
+        ],
+        "bounds": {
+          "base": "121/2",
+          "gamma": [
+            "11/2",
+            "6",
+            "6",
+            "11/2",
+            "11/2"
+          ],
+          "margin": "1/2"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "XLLRLLLLXLLLXRRXRRRXRRRRRXLXLXLXLXLLXLXLLXRXRRXRXRRXR",
+            "length": 53,
+            "upper": 53
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 1,
+            "word": "XLLRLLLLLXRXLLLLLLXRXRXRRXRXRRRXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLLLXRXRXRRXRXRRXR",
+            "length": 80,
+            "upper": 80
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 1,
+            "word": "XLXLLRLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLLXRXRRXRXRXRXRXRXRXRRRXRRRRRRRXLXLXLXLXLXLXLLXLXLLLLLLLLXRXRXRXRXRXRXRXRRXRXRRXR",
+            "length": 118,
+            "upper": 118
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.001277417002711445
+    },
+    {
+      "id": "k5-mask310-order10383",
+      "mask": 310,
+      "order_index": 10383,
+      "blocks": 5,
+      "labels": [
+        3,
+        1,
+        5,
+        6,
+        7,
+        4,
+        8,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "123/2",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "123/2",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "123/2",
+        "pivots": 4
+      },
+      "certificate": null,
+      "seconds": 0.04049754099105485
+    },
+    {
+      "id": "k5-mask454-order23991",
+      "mask": 454,
+      "order_index": 23991,
+      "blocks": 5,
+      "labels": [
+        5,
+        7,
+        2,
+        8,
+        4,
+        3,
+        6,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "6111/100",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "56",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 166,
+            "cut": 10,
+            "weight": "3/4"
+          },
+          {
+            "source": 872,
+            "cut": 3,
+            "weight": "1/4"
+          }
+        ],
+        "bounds": {
+          "base": "56",
+          "gamma": [
+            "9/2",
+            "6",
+            "5",
+            "2",
+            "7/2"
+          ],
+          "margin": "5"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XLLXRXLLXLLLLLXRRXRXRXRRRRRRXLXLXLLXLXLLLXRXLLXRXRRXRRR",
+            "length": 55,
+            "upper": 55
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 0,
+            "word": "XLLXLXRRXLXLLXLLLLLLLXRXRXRRXRXRXRRRRRRRRRRRXLXLXLXLXLXLXLXLLXLXLLLXRXLLXRXRRXRRR",
+            "length": 81,
+            "upper": 81
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "XLXLLXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXLLXLLLLLLXRXRRXRXRXRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLXLXLLLXRXLLXRXRRXRRR",
+            "length": 114,
+            "upper": 114
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0013888330140616745
+    },
+    {
+      "id": "k5-mask205-order5430",
+      "mask": 205,
+      "order_index": 5430,
+      "blocks": 5,
+      "labels": [
+        2,
+        1,
+        6,
+        4,
+        5,
+        3,
+        7,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "61",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 3,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "59",
+        "pivots": 5
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 1021,
+            "cut": 7,
+            "weight": "2/5"
+          },
+          {
+            "source": 1486,
+            "cut": 0,
+            "weight": "3/5"
+          }
+        ],
+        "bounds": {
+          "base": "59",
+          "gamma": [
+            "27/5",
+            "27/5",
+            "6",
+            "6",
+            "27/5"
+          ],
+          "margin": "2"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "LLXLLXLXLXRRRXRRXLXLXLLLLLLXRLLLXRXRRRXRXRXRR",
+            "length": 45,
+            "upper": 45
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 1,
+            "word": "LLXLXLLXLXLXLXLXRRRRRXLXLXRRRRRXLXLXLXLXLXLLLLLLLLLXRXRXRXRLLLLLLLLLLXRXRXRXRXRXRXRXRXRRRXRXRXRR",
+            "length": 96,
+            "upper": 96
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 1,
+            "word": "LLLXLXLXLXLXLXLXLLXLXLXLXRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLXLLLLLLLLLLLLXRXRXRXRXRXRXRLLLLLLLLLLXRXRXRXRXRXRXRXRXRRRXRXRXRR",
+            "length": 123,
+            "upper": 123
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0012742080143652856
+    },
+    {
+      "id": "k5-mask451-order22426",
+      "mask": 451,
+      "order_index": 22426,
+      "blocks": 5,
+      "labels": [
+        5,
+        4,
+        1,
+        8,
+        3,
+        7,
+        2,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "125/2",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 4,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "306/5",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "52",
+        "pivots": 2
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 1656,
+            "cut": 0,
+            "weight": "1"
+          }
+        ],
+        "bounds": {
+          "base": "52",
+          "gamma": [
+            "1",
+            "2",
+            "6",
+            "3",
+            "0"
+          ],
+          "margin": "9"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "LXLLLLLLLXRXRRRRXLLXRXRRXLXLXLLXLXLLLXRXRXRXRRXRXRXR",
+            "length": 52,
+            "upper": 52
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 0,
+            "word": "LXLXLLLLLLLLLXRXRXRXRRRRXLLXRXRRXLXLXLLXLXLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXR",
+            "length": 75,
+            "upper": 75
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "LLXLXLXLXLXLXLXLLLLLLLLXRXRXRRRRXLLXRXRRXLXLXLLXLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRRXRXRXR",
+            "length": 89,
+            "upper": 89
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0406295420252718
+    },
+    {
+      "id": "k5-mask217-order39494",
+      "mask": 217,
+      "order_index": 39494,
+      "blocks": 5,
+      "labels": [
+        8,
+        6,
+        7,
+        1,
+        4,
+        3,
+        2,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "1359/22",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 4,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "179/3",
+        "pivots": 7
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 113,
+            "cut": 4,
+            "weight": "1/3"
+          },
+          {
+            "source": 152,
+            "cut": 2,
+            "weight": "1/6"
+          },
+          {
+            "source": 1446,
+            "cut": 9,
+            "weight": "1/2"
+          }
+        ],
+        "bounds": {
+          "base": "179/3",
+          "gamma": [
+            "6",
+            "11/2",
+            "11/2",
+            "13/3",
+            "6"
+          ],
+          "margin": "4/3"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XLLRXRXRRXLXLXLLXRXRXRLRRRRRXRXLXLXRXRRRXLXL",
+            "length": 44,
+            "upper": 44
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 2,
+            "word": "RXLLLLLLXRXLLLLLXRXRXRXRXRRXRXRXRXLLLLXRXRXRXRRRRRRRRXLXLXLXLXLXLXLLLLXLXLLLLLLXRXRXRXRXRXRXRXRXRXRR",
+            "length": 100,
+            "upper": 100
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "LXRXLLLRXRXRXRRXRXLLXRXLLXRXLLLLXRXRXRXRXRLRRRRRRRRRRRXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXLXLXRXRRRRRRRRRRXLXLXLXLXLXLXLXLXL",
+            "length": 121,
+            "upper": 121
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0014079160173423588
+    },
+    {
+      "id": "k5-mask307-order3119",
+      "mask": 307,
+      "order_index": 3119,
+      "blocks": 5,
+      "labels": [
+        1,
+        6,
+        3,
+        8,
+        7,
+        5,
+        4,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "1987/32",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 6,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "4441/74",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 245,
+            "cut": 0,
+            "weight": "33/74"
+          },
+          {
+            "source": 490,
+            "cut": 8,
+            "weight": "9/74"
+          },
+          {
+            "source": 1047,
+            "cut": 10,
+            "weight": "9/74"
+          },
+          {
+            "source": 128,
+            "cut": 6,
+            "weight": "23/74"
+          }
+        ],
+        "bounds": {
+          "base": "4441/74",
+          "gamma": [
+            "6",
+            "6",
+            "6",
+            "393/74",
+            "194/37"
+          ],
+          "margin": "73/74"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 2,
+            "word": "LXRRRXRXLLXLXLXRRRXLXLXLXLLXLLLXRXLLLXRXRXRXRXRRXRR",
+            "length": 51,
+            "upper": 51
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "chosen": 2,
+            "word": "LXLXRRRRRRRRXLXLXLXLXRRRRRXLXLXLXLXLLXLXLXLXRRRRXLXLXLXLXLLXLLLLLXRXRXRXLLLLLLLLXRXRXRXRXRXRXRXRXRXRRXRR",
+            "length": 104,
+            "upper": 104
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "LLXLXLXLXLXLXLXLLLLXLXLLLLLLLLLXRXRXRXRXRXRXRXRXLXLLLLLLLLXRXRXRXRXRXRXRXRXRXRRRXLXRRXLXLXLXLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXRRRXLXL",
+            "length": 136,
+            "upper": 136
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0016194169875234365
+    },
+    {
+      "id": "k5-mask376-order5431",
+      "mask": 376,
+      "order_index": 5431,
+      "blocks": 5,
+      "labels": [
+        2,
+        1,
+        6,
+        4,
+        5,
+        3,
+        8,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "1081/17",
+        "threshold": 61,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "127/2",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "253/4",
+        "pivots": 3
+      },
+      "certificate": null,
+      "seconds": 0.039873500005342066
+    },
+    {
+      "id": "k6-mask237-order8455",
+      "mask": 237,
+      "order_index": 8455,
+      "blocks": 6,
+      "labels": [
+        2,
+        6,
+        7,
+        4,
+        3,
+        1,
+        8,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "67",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "67",
+        "pivots": 2
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "67",
+        "pivots": 6
+      },
+      "certificate": null,
+      "seconds": 0.04894675000105053
+    },
+    {
+      "id": "k6-mask249-order16375",
+      "mask": 249,
+      "order_index": 16375,
+      "blocks": 6,
+      "labels": [
+        4,
+        2,
+        7,
+        5,
+        3,
+        1,
+        8,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "4111/61",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "202/3",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "998/15",
+        "pivots": 3
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 1434,
+            "cut": 8,
+            "weight": "3/5"
+          },
+          {
+            "source": 1091,
+            "cut": 4,
+            "weight": "2/15"
+          },
+          {
+            "source": 479,
+            "cut": 0,
+            "weight": "4/15"
+          }
+        ],
+        "bounds": {
+          "base": "998/15",
+          "gamma": [
+            "6",
+            "6",
+            "27/5",
+            "44/15",
+            "13/3",
+            "28/5"
+          ],
+          "margin": "7/15"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "RXRRXRRXLXLLXLXLXLXLLLXLLXRXRRXRXRRXLRRRRXLLXLXLXLLXRLLXRXRXRXRXRR",
+            "length": 66,
+            "upper": 66
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 0,
+            "word": "RXRRRRRRRXLXLXLXLXLXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLXLXLXLXLLLLXRXLLLLLXRXRXRXRXRRXRXRRXLRRRRXLLXLXLXLLXRLLXRXRXRXRXRR",
+            "length": 120,
+            "upper": 120
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "RXLXRRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLXLXLXLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRRXLRRRRRXLXLLXLXLXLLXRLLXRXRXRXRXRR",
+            "length": 152,
+            "upper": 152
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.049625332991126925
+    },
+    {
+      "id": "k6-mask486-order37829",
+      "mask": 486,
+      "order_index": 37829,
+      "blocks": 6,
+      "labels": [
+        8,
+        4,
+        5,
+        2,
+        1,
+        7,
+        6,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "135/2",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 3,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "328/5",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 327,
+            "cut": 5,
+            "weight": "2/5"
+          },
+          {
+            "source": 897,
+            "cut": 11,
+            "weight": "3/5"
+          }
+        ],
+        "bounds": {
+          "base": "328/5",
+          "gamma": [
+            "27/5",
+            "6",
+            "6",
+            "27/5",
+            "22/5",
+            "5"
+          ],
+          "margin": "7/5"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "XLLXLLXLLLXLLXRXRRRXRRRRXRRRXLXLXLLXLXLXRRXRXLLXLLXLXLXRXRRRRXRX",
+            "length": 64,
+            "upper": 64
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 1,
+            "word": "XLLXLXLLXLLLLLXRXRXLLLLLLLXRXRXRXRXRXRXRRRXRRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLXRRXRXLLXLLXLXLXRXRRRRXRX",
+            "length": 108,
+            "upper": 108
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 1,
+            "word": "XLXLLXLXLXLXLXLXLXLLXLLLLXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRRXRRRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLXLXRRXRXLLXLLXLXLXRXRRRRXRX",
+            "length": 159,
+            "upper": 159
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0014246659993659705
+    },
+    {
+      "id": "k6-mask377-order16317",
+      "mask": 377,
+      "order_index": 16317,
+      "blocks": 6,
+      "labels": [
+        4,
+        2,
+        6,
+        8,
+        7,
+        3,
+        5,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "337/5",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 6,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "66",
+        "pivots": 7
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 314,
+            "cut": 8,
+            "weight": "1/3"
+          },
+          {
+            "source": 348,
+            "cut": 12,
+            "weight": "1/3"
+          },
+          {
+            "source": 283,
+            "cut": 4,
+            "weight": "2/9"
+          },
+          {
+            "source": 292,
+            "cut": 2,
+            "weight": "1/9"
+          }
+        ],
+        "bounds": {
+          "base": "66",
+          "gamma": [
+            "6",
+            "6",
+            "6",
+            "44/9",
+            "47/9",
+            "17/3"
+          ],
+          "margin": "1"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "RRXLXLRRRRRXLLXLXLXLXLXLLLXLLXRXRXRRRRRRRRXLXLXLLXRXR",
+            "length": 53,
+            "upper": 53
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 0,
+            "word": "RRRRRRRXLXLXLXLXLXLXLRRRRRRRRRRRRRRXLXLXLXLXLLXLXLXLXLXLXLXLXLXLXLLLLXRXLLLLLXRXRXRXRXRXRRRRRRRRRRRRRXLXLXLXLXLXLXLXLLXRXR",
+            "length": 122,
+            "upper": 122
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "RRRRRRRRXLXLXLXLXLXLXLXLXLRRRRRRRRRRRRRXLXLLXLXLXLXLXLXLXLXLXLXLXLXLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRXRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLLXRXR",
+            "length": 157,
+            "upper": 157
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.00214716701884754
+    },
+    {
+      "id": "k6-mask429-order39577",
+      "mask": 429,
+      "order_index": 39577,
+      "blocks": 6,
+      "labels": [
+        8,
+        6,
+        7,
+        5,
+        1,
+        2,
+        4,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "6164/91",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "6164/91",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "6164/91",
+        "pivots": 11
+      },
+      "certificate": null,
+      "seconds": 0.0496794159989804
+    },
+    {
+      "id": "k6-mask222-order31655",
+      "mask": 222,
+      "order_index": 31655,
+      "blocks": 6,
+      "labels": [
+        7,
+        2,
+        8,
+        5,
+        6,
+        4,
+        3,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "273/4",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 5,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "67",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "67",
+        "pivots": 7
+      },
+      "certificate": null,
+      "seconds": 0.047592416987754405
+    },
+    {
+      "id": "k6-mask430-order39347",
+      "mask": 430,
+      "order_index": 39347,
+      "blocks": 6,
+      "labels": [
+        8,
+        6,
+        4,
+        7,
+        2,
+        5,
+        3,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "883/13",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 6,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "135/2",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "135/2",
+        "pivots": 6
+      },
+      "certificate": null,
+      "seconds": 0.04698212500079535
+    },
+    {
+      "id": "k6-mask235-order25498",
+      "mask": 235,
+      "order_index": 25498,
+      "blocks": 6,
+      "labels": [
+        6,
+        1,
+        4,
+        5,
+        3,
+        8,
+        2,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "613/9",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1487/22",
+        "pivots": 6
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "669/10",
+        "pivots": 7
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 1381,
+            "cut": 2,
+            "weight": "3/10"
+          },
+          {
+            "source": 1005,
+            "cut": 10,
+            "weight": "1/4"
+          },
+          {
+            "source": 1560,
+            "cut": 10,
+            "weight": "1/4"
+          },
+          {
+            "source": 3639,
+            "cut": 5,
+            "weight": "1/5"
+          }
+        ],
+        "bounds": {
+          "base": "669/10",
+          "gamma": [
+            "6",
+            "11/2",
+            "6",
+            "6",
+            "9/2",
+            "57/10"
+          ],
+          "margin": "1/10"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XRRXRRXRXLLXLLXLLLLLXLLXLXRXRRRXLLXLXLLXLLXLLXRXRXRRRXRXRRXL",
+            "length": 60,
+            "upper": 60
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 1,
+            "word": "LXLXLXLXRRRRRXLXLXLXLXLXLLLLXRXRXLLLXRXRXRRXRXRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLLLLLXLLLLLLLLXRXRXRXRXRXRXRRRXRXRXRR",
+            "length": 114,
+            "upper": 114
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 1,
+            "word": "LLXLXLXLXLXLXLXLXLXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLLLXRXLLXRXRRXRXRRRRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLLLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRRRXRXRXRR",
+            "length": 164,
+            "upper": 164
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.05034062499180436
+    },
+    {
+      "id": "k6-mask462-order17550",
+      "mask": 462,
+      "order_index": 17550,
+      "blocks": 6,
+      "labels": [
+        4,
+        5,
+        3,
+        2,
+        6,
+        1,
+        7,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "1691/25",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "307/5",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 780,
+            "cut": 0,
+            "weight": "3/5"
+          },
+          {
+            "source": 738,
+            "cut": 8,
+            "weight": "1/5"
+          },
+          {
+            "source": 1091,
+            "cut": 5,
+            "weight": "1/5"
+          }
+        ],
+        "bounds": {
+          "base": "307/5",
+          "gamma": [
+            "23/5",
+            "27/5",
+            "6",
+            "6",
+            "26/5",
+            "17/5"
+          ],
+          "margin": "28/5"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XLLXLXLXLXLLLLXLLXRXRRRXLLRRRXRRRXRRXLXLXLXLXRRXLXRX",
+            "length": 52,
+            "upper": 52
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 0,
+            "word": "XLLXLXLXLXLXLXLXLLLLLLLXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRRXLLRRRXRRRRRXLXLXRRRRRXLXLXLXLXLXLXLXRRXLXRX",
+            "length": 103,
+            "upper": 103
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "XLXLLXLXLXLXLXLXLXLXLXLXLXLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRRXLLRRRXRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXRRXLXRX",
+            "length": 131,
+            "upper": 131
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0017729169921949506
+    },
+    {
+      "id": "k6-mask249-order28370",
+      "mask": 249,
+      "order_index": 28370,
+      "blocks": 6,
+      "labels": [
+        6,
+        5,
+        3,
+        4,
+        1,
+        7,
+        2,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "821/12",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 11,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "821/12",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "821/12",
+        "pivots": 7
+      },
+      "certificate": null,
+      "seconds": 0.04826879099709913
+    },
+    {
+      "id": "k6-mask245-order13041",
+      "mask": 245,
+      "order_index": 13041,
+      "blocks": 6,
+      "labels": [
+        3,
+        6,
+        1,
+        7,
+        4,
+        5,
+        8,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "14547/217",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 4,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "3633/55",
+        "pivots": 5
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 509,
+            "cut": 12,
+            "weight": "3/11"
+          },
+          {
+            "source": 515,
+            "cut": 3,
+            "weight": "21/55"
+          },
+          {
+            "source": 681,
+            "cut": 6,
+            "weight": "4/55"
+          },
+          {
+            "source": 1344,
+            "cut": 10,
+            "weight": "3/11"
+          }
+        ],
+        "bounds": {
+          "base": "3633/55",
+          "gamma": [
+            "6",
+            "6",
+            "6",
+            "63/11",
+            "60/11",
+            "54/11"
+          ],
+          "margin": "52/55"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "LLXRXLLXLLLXRXLLLXRXRXRRXLXLLLLLXRXRXRRRRRRRRRXLXLLXRX",
+            "length": 54,
+            "upper": 54
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 0,
+            "word": "LLXLXRRXLXLLXLLLLLXRXRXRXLLLLLLLLXRXRXRXRXRXRXRXRRXLXLLLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRRRRRRRRRRXLXLXLLXRX",
+            "length": 110,
+            "upper": 110
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LLLXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXLLXLLLLXRXRXLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRRXLXLLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLLXRX",
+            "length": 154,
+            "upper": 154
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0017319579783361405
+    },
+    {
+      "id": "k6-mask318-order21803",
+      "mask": 318,
+      "order_index": 21803,
+      "blocks": 6,
+      "labels": [
+        5,
+        3,
+        2,
+        7,
+        4,
+        8,
+        6,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "273/4",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "610/9",
+        "pivots": 8
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2900/43",
+        "pivots": 11
+      },
+      "certificate": null,
+      "seconds": 0.049124375014798716
+    },
+    {
+      "id": "k6-mask407-order19837",
+      "mask": 407,
+      "order_index": 19837,
+      "blocks": 6,
+      "labels": [
+        4,
+        8,
+        5,
+        2,
+        6,
+        1,
+        7,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "68",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 4,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "68",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "336/5",
+        "pivots": 4
+      },
+      "certificate": null,
+      "seconds": 0.047766959003638476
+    },
+    {
+      "id": "k6-mask123-order24414",
+      "mask": 123,
+      "order_index": 24414,
+      "blocks": 6,
+      "labels": [
+        5,
+        7,
+        8,
+        3,
+        2,
+        1,
+        4,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "888/13",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 10,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "888/13",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1691/25",
+        "pivots": 17
+      },
+      "certificate": null,
+      "seconds": 0.05084104201523587
+    },
+    {
+      "id": "k6-mask399-order1723",
+      "mask": 399,
+      "order_index": 1723,
+      "blocks": 6,
+      "labels": [
+        1,
+        4,
+        5,
+        3,
+        8,
+        2,
+        7,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "344/5",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 4,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "61",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 582,
+            "cut": 0,
+            "weight": "2/3"
+          },
+          {
+            "source": 1210,
+            "cut": 6,
+            "weight": "1/3"
+          }
+        ],
+        "bounds": {
+          "base": "61",
+          "gamma": [
+            "3",
+            "4",
+            "5",
+            "6",
+            "16/3",
+            "10/3"
+          ],
+          "margin": "6"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "RRRXRXRRXLXRRXRRXRRXRRXLXLLXLLXLXLLLXRRRRRXRRXLLLXRR",
+            "length": 52,
+            "upper": 52
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 0,
+            "word": "RRRRRRRRXRXRXRXRXRXRRXLXRRXRRRRRXLXLXLXRRRRRRRXLXLXRRRRRXLXLXLXLXLLXLXLXLXLLXLXLLLXRRRRRXRRRRRXLXLXLXLLLXRR",
+            "length": 107,
+            "upper": 107
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "RRRRRRRRRXRXRXRRXLXRRXRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLXLXLXLXLXLLXLXLLLXRRRRRXRRRRRRRRXLXLXLXLXLXLXLLLXRR",
+            "length": 138,
+            "upper": 138
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0015203749935608357
+    },
+    {
+      "id": "k6-mask399-order27874",
+      "mask": 399,
+      "order_index": 27874,
+      "blocks": 6,
+      "labels": [
+        6,
+        4,
+        7,
+        2,
+        3,
+        8,
+        1,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "2351/35",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 6,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "57",
+        "pivots": 8
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 390,
+            "cut": 2,
+            "weight": "1"
+          }
+        ],
+        "bounds": {
+          "base": "57",
+          "gamma": [
+            "3",
+            "0",
+            "3",
+            "6",
+            "5",
+            "2"
+          ],
+          "margin": "10"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XRXRRXRRXRXRXRRXLXLXLLLXLLXRXRRRXRRRRRXLXLXLXLXLLXLXRRRRR",
+            "length": 57,
+            "upper": 57
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 0,
+            "word": "XRXRXRXRXRXRXRRXRXRXRXRXRRXRXRXRRRRRXLXLXLXLXLXLLLXLLLLLLXRXRXRXRXRXRRRXRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLLXLXRRRRR",
+            "length": 111,
+            "upper": 111
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LXRXRXRXRXRXRXRXRXRRXRXRRXRXRXRRRRRRRRXLXLXLXLXLXLXLXLXLLLXLLLXRXRXRRRXRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLLXLXRRRRR",
+            "length": 116,
+            "upper": 116
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0018125420028809458
+    },
+    {
+      "id": "k6-mask219-order18308",
+      "mask": 219,
+      "order_index": 18308,
+      "blocks": 6,
+      "labels": [
+        4,
+        6,
+        3,
+        5,
+        8,
+        2,
+        1,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "15817/235",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "735/11",
+        "pivots": 10
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 914,
+            "cut": 9,
+            "weight": "1/11"
+          },
+          {
+            "source": 1061,
+            "cut": 4,
+            "weight": "5/11"
+          },
+          {
+            "source": 1335,
+            "cut": 10,
+            "weight": "5/11"
+          }
+        ],
+        "bounds": {
+          "base": "735/11",
+          "gamma": [
+            "65/11",
+            "6",
+            "6",
+            "63/11",
+            "63/11",
+            "61/11"
+          ],
+          "margin": "2/11"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "LXLLLLXLLXRXRRRXRXRRRRRXLLXLXLXLXLXLXRXRRRRRXLXRRRRXLXLXLXLX",
+            "length": 60,
+            "upper": 60
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 2,
+            "word": "RXLXLXLXLXLXLLLLXRXRXRXRRXLXRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXR",
+            "length": 121,
+            "upper": 121
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 2,
+            "word": "RXLXLXLXLXLXLXLXLXLXLXLXLLLXRXRXRRXLXRRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLLLLLLLLLLLLLXRXRXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXRXRXR",
+            "length": 178,
+            "upper": 178
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0022068750113248825
+    },
+    {
+      "id": "k6-mask442-order5461",
+      "mask": 442,
+      "order_index": 5461,
+      "blocks": 6,
+      "labels": [
+        2,
+        1,
+        6,
+        5,
+        7,
+        3,
+        8,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "137/2",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 6,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "137/2",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "137/2",
+        "pivots": 8
+      },
+      "certificate": null,
+      "seconds": 0.047452582977712154
+    },
+    {
+      "id": "k6-mask303-order39177",
+      "mask": 303,
+      "order_index": 39177,
+      "blocks": 6,
+      "labels": [
+        8,
+        6,
+        3,
+        4,
+        2,
+        5,
+        7,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "68",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 5,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "475/7",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "475/7",
+        "pivots": 4
+      },
+      "certificate": null,
+      "seconds": 0.046303915994940326
+    },
+    {
+      "id": "k6-mask119-order4155",
+      "mask": 119,
+      "order_index": 4155,
+      "blocks": 6,
+      "labels": [
+        1,
+        7,
+        6,
+        5,
+        2,
+        4,
+        8,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "740/11",
+        "threshold": 67,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 3,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1935/29",
+        "pivots": 5
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 28,
+            "cut": 0,
+            "weight": "10/29"
+          },
+          {
+            "source": 403,
+            "cut": 7,
+            "weight": "14/29"
+          },
+          {
+            "source": 570,
+            "cut": 13,
+            "weight": "5/29"
+          }
+        ],
+        "bounds": {
+          "base": "1935/29",
+          "gamma": [
+            "6",
+            "171/29",
+            "6",
+            "155/29",
+            "162/29",
+            "159/29"
+          ],
+          "margin": "8/29"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "RRRRXLLXLXLXLLXLLXLXRXRXRXRXLXLLXRXRXRRRRXRRRRXLXLLXLXLXRXRRXLXLR",
+            "length": 65,
+            "upper": 65
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "chosen": 1,
+            "word": "RRRRRRRRRXLXLXLXLXLXLLXLXLXLLLXRXLLLLLXRXRXLLLXRXRXRXRXRXRXRXLXLLLXRXRXRXRRRRXRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLXLXLXRXRRXLXLR",
+            "length": 128,
+            "upper": 128
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 1,
+            "word": "RRRRRRRRRRXLXLXLXLXLXLXLLXLXLXLXLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXLLXRXRXRXRXRXRXRXRXRXRXRXLXLLLLLLLLXRXRXRXRXRXRXRXRXRRRRRXLXRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLXLXRXRRRXLXLXLR",
+            "length": 175,
+            "upper": 175
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0015439160051755607
+    },
+    {
+      "id": "k7-mask239-order11050",
+      "mask": 239,
+      "order_index": 11050,
+      "blocks": 7,
+      "labels": [
+        3,
+        2,
+        5,
+        1,
+        6,
+        8,
+        4,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "11003/150",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1084/15",
+        "pivots": 7
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 169,
+            "cut": 6,
+            "weight": "2/5"
+          },
+          {
+            "source": 828,
+            "cut": 0,
+            "weight": "4/15"
+          },
+          {
+            "source": 304,
+            "cut": 13,
+            "weight": "1/15"
+          },
+          {
+            "source": 1344,
+            "cut": 11,
+            "weight": "4/15"
+          }
+        ],
+        "bounds": {
+          "base": "1084/15",
+          "gamma": [
+            "82/15",
+            "89/15",
+            "6",
+            "16/3",
+            "6",
+            "27/5",
+            "6"
+          ],
+          "margin": "11/15"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "LLLXLLXRXLLXLLLXRLLLXRXRXRXRXLLLLLLXRXRXRXRRRRRRRRRXLXLXLXLXRX",
+            "length": 62,
+            "upper": 62
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 3,
+            "word": "RXLLXLXLLXLXLXRRRXLXLXRRRRRXLXLXLXLXLXLLLLLLLXRXRXRXLLLLXRXRXRXRRXRRXRXRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLXLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRRRRRXRXRX",
+            "length": 158,
+            "upper": 158
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 1,
+            "word": "LLLLLLLLLLXLXLLXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXLLXLLLLXRXRLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXLLLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRRRRRRRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXRX",
+            "length": 188,
+            "upper": 188
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.002386082982411608
+    },
+    {
+      "id": "k7-mask446-order8821",
+      "mask": 446,
+      "order_index": 8821,
+      "blocks": 7,
+      "labels": [
+        2,
+        7,
+        3,
+        5,
+        6,
+        1,
+        8,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "5843/80",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 6,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "72",
+        "pivots": 7
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 106,
+            "cut": 9,
+            "weight": "1/4"
+          },
+          {
+            "source": 90,
+            "cut": 3,
+            "weight": "1/2"
+          },
+          {
+            "source": 1363,
+            "cut": 12,
+            "weight": "1/4"
+          }
+        ],
+        "bounds": {
+          "base": "72",
+          "gamma": [
+            "11/2",
+            "17/4",
+            "23/4",
+            "6",
+            "6",
+            "11/2",
+            "11/2"
+          ],
+          "margin": "1"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 2,
+            "word": "XLLXLXRRXLLLXLLLXLLXLXRRXRRRXRRXRXRRRRXLXLXLXLXLXLLLXLXLLXRRRXRXRXRXRX",
+            "length": 70,
+            "upper": 70
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 2,
+            "word": "XLLXLXLXRRRXLXLLLXLXLXLLLLLLXRXRXRXLLLLLLLLLXRXRXRXRXLLLLLXRXRXRXRXRRXRXRXRXRRRXRRRRXLXLXRRRXLXLXRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLXLXLLLLLXRXRXRXRRRXRXRXRXRX",
+            "length": 169,
+            "upper": 169
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 1,
+            "word": "LLXRXRRXRXRXRXRXRXRXRXRXRXRXRRRRXLXRRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLLXLLLLLLLLLLXRXRXRXRXRXRXRRRXLLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRRRRRXRRRXLXLXLLXLLXRXRRXR",
+            "length": 176,
+            "upper": 176
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.002388208988122642
+    },
+    {
+      "id": "k7-mask477-order14342",
+      "mask": 477,
+      "order_index": 14342,
+      "blocks": 7,
+      "labels": [
+        3,
+        7,
+        8,
+        4,
+        5,
+        2,
+        1,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "26873/360",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "10039/138",
+        "pivots": 6
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 273,
+            "cut": 9,
+            "weight": "10/23"
+          },
+          {
+            "source": 943,
+            "cut": 3,
+            "weight": "29/138"
+          },
+          {
+            "source": 629,
+            "cut": 5,
+            "weight": "11/69"
+          },
+          {
+            "source": 1554,
+            "cut": 0,
+            "weight": "9/46"
+          }
+        ],
+        "bounds": {
+          "base": "10039/138",
+          "gamma": [
+            "132/23",
+            "6",
+            "125/23",
+            "134/23",
+            "267/46",
+            "6",
+            "6"
+          ],
+          "margin": "35/138"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 2,
+            "word": "XLXRRXRXRXRRRXRRRXLLXLXLXLXLLXLLXRXLLLLXRXRXRXRRRRRRXRRXLXLXLXRR",
+            "length": 64,
+            "upper": 64
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 3,
+            "word": "RRRRRRRRRXRXRXRXRXRXRRXRXRXRXRXRXRXRRRRRXLXLXLXRRRRRRRXLXLXLXLXLXLXLLXLLLLLLLLXRXRXRXRXRRRRRXLXLXLXLXRRXRXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLXLXLXRRRRR",
+            "length": 182,
+            "upper": 182
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 1,
+            "word": "LXRXLLXRXRRXRXRRXRXRXRXRXRXRXRRRRXLXRRRRRRRRRRXLXLXLXLXLXLXLLXLXLXLXLLLLLLLLLXRXRXRXRXRXRXRRRRXRRRXLXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRRXRXRRRXLXLXLRRR",
+            "length": 191,
+            "upper": 191
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.002337415993679315
+    },
+    {
+      "id": "k7-mask375-order36700",
+      "mask": 375,
+      "order_index": 36700,
+      "blocks": 7,
+      "labels": [
+        8,
+        2,
+        7,
+        6,
+        1,
+        5,
+        3,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "2647/36",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2647/36",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2647/36",
+        "pivots": 8
+      },
+      "certificate": null,
+      "seconds": 0.057300624990602955
+    },
+    {
+      "id": "k7-mask431-order30939",
+      "mask": 431,
+      "order_index": 30939,
+      "blocks": 7,
+      "labels": [
+        7,
+        1,
+        8,
+        6,
+        2,
+        4,
+        5,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "18387/250",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "8061/110",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "8061/110",
+        "pivots": 12
+      },
+      "certificate": null,
+      "seconds": 0.05739137501223013
+    },
+    {
+      "id": "k7-mask223-order28716",
+      "mask": 223,
+      "order_index": 28716,
+      "blocks": 7,
+      "labels": [
+        6,
+        5,
+        8,
+        2,
+        4,
+        1,
+        3,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "443/6",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1619/22",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1619/22",
+        "pivots": 4
+      },
+      "certificate": null,
+      "seconds": 0.05657783302012831
+    },
+    {
+      "id": "k7-mask494-order28143",
+      "mask": 494,
+      "order_index": 28143,
+      "blocks": 7,
+      "labels": [
+        6,
+        5,
+        1,
+        4,
+        7,
+        3,
+        8,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "1473/20",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 6,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1841/25",
+        "pivots": 6
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1761/25",
+        "pivots": 8
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 644,
+            "cut": 12,
+            "weight": "4/25"
+          },
+          {
+            "source": 583,
+            "cut": 1,
+            "weight": "13/50"
+          },
+          {
+            "source": 190,
+            "cut": 3,
+            "weight": "9/50"
+          },
+          {
+            "source": 3839,
+            "cut": 8,
+            "weight": "2/5"
+          }
+        ],
+        "bounds": {
+          "base": "1761/25",
+          "gamma": [
+            "6",
+            "148/25",
+            "6",
+            "136/25",
+            "6",
+            "27/5",
+            "144/25"
+          ],
+          "margin": "64/25"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XLXLXLXLXLXLLLXLLXRXRRXRXLLRRRRRXLRRRXRRRXLXLXLLXRXLLXLXLXRXRRX",
+            "length": 63,
+            "upper": 63
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 0,
+            "word": "XLXLXLXLXLXLXLXLXLLLLLLXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXLLRRRRRRRXLXLXLRRRRRRXLXRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLLXLXLXRRRXLXLXLLXLXLXRXRRX",
+            "length": 141,
+            "upper": 141
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "XLXLXLXLXLXLXLXLXLXLXLXLXLXLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXLLRRRRRRXLXLRRRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLXLXRRXLXLLXLXLXRXRRX",
+            "length": 169,
+            "upper": 169
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.06025337500614114
+    },
+    {
+      "id": "k7-mask351-order16615",
+      "mask": 351,
+      "order_index": 16615,
+      "blocks": 7,
+      "labels": [
+        4,
+        3,
+        1,
+        6,
+        5,
+        2,
+        8,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "1263/17",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 10,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "74",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "74",
+        "pivots": 10
+      },
+      "certificate": null,
+      "seconds": 0.05943491600919515
+    },
+    {
+      "id": "k7-mask491-order9996",
+      "mask": 491,
+      "order_index": 9996,
+      "blocks": 7,
+      "labels": [
+        2,
+        8,
+        7,
+        3,
+        5,
+        1,
+        4,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "37421/504",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 7,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "764/11",
+        "pivots": 3
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 629,
+            "cut": 5,
+            "weight": "3/11"
+          },
+          {
+            "source": 62,
+            "cut": 0,
+            "weight": "5/11"
+          },
+          {
+            "source": 733,
+            "cut": 8,
+            "weight": "3/11"
+          }
+        ],
+        "bounds": {
+          "base": "764/11",
+          "gamma": [
+            "56/11",
+            "61/11",
+            "58/11",
+            "63/11",
+            "6",
+            "6",
+            "51/11"
+          ],
+          "margin": "39/11"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XLLXRXRRXRXRXRXRRXRRXRXLLXLXLXLXLLXLLXRXLLLLXRXRXRXRXRRRRRRRXLXLXLRR",
+            "length": 68,
+            "upper": 68
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 1,
+            "word": "LXLXLLLXLXLXLLLLLLLXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXRRRRXLXLXRRRXLXLXLLXLLXLXLXRXRRXLLRXLXLXLLLLLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRRRRRX",
+            "length": 154,
+            "upper": 154
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 1,
+            "word": "LLXLXLXLXLXLXLXLLLXLXLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXRRRXLXRRXLXLLXLLXLXLXRXRRXLLRXLXLXLLLLLLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRRRRRX",
+            "length": 169,
+            "upper": 169
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.002190208004321903
+    },
+    {
+      "id": "k7-mask253-order19705",
+      "mask": 253,
+      "order_index": 19705,
+      "blocks": 7,
+      "labels": [
+        4,
+        8,
+        3,
+        2,
+        1,
+        5,
+        7,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "804/11",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "804/11",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "804/11",
+        "pivots": 7
+      },
+      "certificate": null,
+      "seconds": 0.05814316699979827
+    },
+    {
+      "id": "k7-mask475-order29239",
+      "mask": 475,
+      "order_index": 29239,
+      "blocks": 7,
+      "labels": [
+        6,
+        7,
+        4,
+        5,
+        2,
+        1,
+        8,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "12953/176",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "12953/176",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "12953/176",
+        "pivots": 7
+      },
+      "certificate": null,
+      "seconds": 0.05747908400371671
+    },
+    {
+      "id": "k7-mask443-order33553",
+      "mask": 443,
+      "order_index": 33553,
+      "blocks": 7,
+      "labels": [
+        7,
+        5,
+        4,
+        6,
+        1,
+        2,
+        8,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "6540/89",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "6540/89",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "6516/89",
+        "pivots": 5
+      },
+      "certificate": null,
+      "seconds": 0.05662654197658412
+    },
+    {
+      "id": "k7-mask471-order37780",
+      "mask": 471,
+      "order_index": 37780,
+      "blocks": 7,
+      "labels": [
+        8,
+        4,
+        3,
+        7,
+        1,
+        6,
+        2,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "1777/24",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "769/11",
+        "pivots": 5
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 750,
+            "cut": 2,
+            "weight": "6/11"
+          },
+          {
+            "source": 1062,
+            "cut": 7,
+            "weight": "2/11"
+          },
+          {
+            "source": 1196,
+            "cut": 10,
+            "weight": "3/11"
+          }
+        ],
+        "bounds": {
+          "base": "769/11",
+          "gamma": [
+            "63/11",
+            "48/11",
+            "57/11",
+            "6",
+            "6",
+            "63/11",
+            "58/11"
+          ],
+          "margin": "34/11"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XRXRRXLXLLLLLXLLLXLXRRXRXLLXLLLLXRXRXRXRRXLXLLLXLLXLXRRXRXRRXRR",
+            "length": 63,
+            "upper": 63
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 0,
+            "word": "XRXRXRXRXRXRXRXRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLLLLLLLLLLLLXLXLXLLLXLXLXLXLXRRRRRXLXLXLXRRRRXLXLXLXLLXLLLLLLLLXRXRXRXRXRXRXRXRRXLXLLLXLLLLLLXRXRXRXRXLLLLLXRXRXRXRXRRXRXRRXRR",
+            "length": 176,
+            "upper": 176
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "LXRXRXRXRRXRXRXRXRXRXRXLLLLLLLXRXRXRXRXRXRXLLLLLLLLLLLLLLLLLLLXLXLLLXLXLXLXLXLXLXLXRRRRRRRRXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXLLXLLLLLXRXRXRXRXRRXLXLLLXLLLXRXLLXRXRRXRXRRXRR",
+            "length": 171,
+            "upper": 171
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0021393329952843487
+    },
+    {
+      "id": "k7-mask239-order32367",
+      "mask": 239,
+      "order_index": 32367,
+      "blocks": 7,
+      "labels": [
+        7,
+        3,
+        8,
+        5,
+        4,
+        2,
+        6,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "3371/46",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "3371/46",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "3371/46",
+        "pivots": 4
+      },
+      "certificate": null,
+      "seconds": 0.056443082983605564
+    },
+    {
+      "id": "k7-mask463-order18957",
+      "mask": 463,
+      "order_index": 18957,
+      "blocks": 7,
+      "labels": [
+        4,
+        7,
+        2,
+        8,
+        6,
+        3,
+        5,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "5531/75",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 6,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "5531/75",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "5531/75",
+        "pivots": 6
+      },
+      "certificate": null,
+      "seconds": 0.0573512090195436
+    },
+    {
+      "id": "k7-mask446-order16912",
+      "mask": 446,
+      "order_index": 16912,
+      "blocks": 7,
+      "labels": [
+        4,
+        3,
+        5,
+        8,
+        6,
+        7,
+        1,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "3097/42",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 7,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "948/13",
+        "pivots": 8
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 824,
+            "cut": 4,
+            "weight": "1/13"
+          },
+          {
+            "source": 942,
+            "cut": 7,
+            "weight": "1/13"
+          },
+          {
+            "source": 1863,
+            "cut": 5,
+            "weight": "3/13"
+          },
+          {
+            "source": 1812,
+            "cut": 12,
+            "weight": "2/13"
+          },
+          {
+            "source": 1864,
+            "cut": 5,
+            "weight": "9/26"
+          },
+          {
+            "source": 861,
+            "cut": 1,
+            "weight": "3/26"
+          }
+        ],
+        "bounds": {
+          "base": "948/13",
+          "gamma": [
+            "6",
+            "6",
+            "6",
+            "75/13",
+            "6",
+            "76/13",
+            "6"
+          ],
+          "margin": "1/13"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 2,
+            "word": "LLXRRXRRXLXLLXLXLRLLLLLXRXRXLXLLLXRXRXRXLLLLLXLXLXLLXRXL",
+            "length": 56,
+            "upper": 56
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 2,
+            "word": "LLXLXRRRXRRRRRRRRXLXLXLXLXLXLXLXLLXLXLXLRLLLLLLLLLLXRXRXRXRXRXRXRXLLLXRXRXLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXLLLLLLLLLLLLLLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLXRRXLXL",
+            "length": 163,
+            "upper": 163
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 1,
+            "word": "RRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLLLXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRRRXRRXRR",
+            "length": 188,
+            "upper": 188
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.002911625022534281
+    },
+    {
+      "id": "k7-mask375-order21679",
+      "mask": 375,
+      "order_index": 21679,
+      "blocks": 7,
+      "labels": [
+        5,
+        3,
+        1,
+        7,
+        4,
+        2,
+        8,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "2775/38",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "3935/54",
+        "pivots": 6
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 74,
+            "cut": 2,
+            "weight": "4/9"
+          },
+          {
+            "source": 681,
+            "cut": 7,
+            "weight": "1/54"
+          },
+          {
+            "source": 1103,
+            "cut": 9,
+            "weight": "1/6"
+          },
+          {
+            "source": 1076,
+            "cut": 9,
+            "weight": "7/27"
+          },
+          {
+            "source": 1191,
+            "cut": 12,
+            "weight": "1/9"
+          }
+        ],
+        "bounds": {
+          "base": "3935/54",
+          "gamma": [
+            "319/54",
+            "97/18",
+            "6",
+            "6",
+            "6",
+            "6",
+            "293/54"
+          ],
+          "margin": "7/54"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XRXRXRXRXRRXRXRRXLXLXLLXLLXRXRRXLLLLXRXRXRXRRLLRRRRRRRXLXLXLXRRXL",
+            "length": 65,
+            "upper": 65
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 2,
+            "word": "LXLXRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLLLLXRXRXRXRXRXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRRXLXLLLLLLXRXRXRRXLXLLLLLLLLLLLLLLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLX",
+            "length": 185,
+            "upper": 185
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "LXRXRXRXRXRXRXRXRXRXRXRXRXRRXRXRXRRRRRRRRXLXLXLXLXLXLXLXLXLLLXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRRLLRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXRRRRRRRRXLXLXLXLXLXLXL",
+            "length": 186,
+            "upper": 186
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0026142499991692603
+    },
+    {
+      "id": "k7-mask223-order18266",
+      "mask": 223,
+      "order_index": 18266,
+      "blocks": 7,
+      "labels": [
+        4,
+        6,
+        3,
+        2,
+        1,
+        7,
+        5,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "73",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 3,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "791/11",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 519,
+            "cut": 4,
+            "weight": "6/11"
+          },
+          {
+            "source": 4,
+            "cut": 11,
+            "weight": "5/11"
+          }
+        ],
+        "bounds": {
+          "base": "791/11",
+          "gamma": [
+            "61/11",
+            "58/11",
+            "5",
+            "63/11",
+            "6",
+            "6",
+            "63/11"
+          ],
+          "margin": "12/11"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XLLXRXRRXRXRXRXRXLLXLLXLXRXRXRRXLLLXRRXRRRRRXRRXLXLXLXRX",
+            "length": 56,
+            "upper": 56
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 1,
+            "word": "RXLLXLXLLXLXLXLXLLLLLXRXRXRXRXRRRRRXLXLXRRRRRXLXRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLLXLXLXLXLXLXLXLLLLLLLLLLXRXRXRXRXLLLLLXRXRXRXRXRRXRXRXRXRXRXRRXRXLXLXRXRRRRRXLXLXLXLXLXLXLLLLLLLXRXRXRXRXRRRRRRX",
+            "length": 190,
+            "upper": 190
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "LXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXRXRXRXRXRXRXRXRXRXLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXLLXRXRXRXRXRXRXRXRXRXRRXLLLLLLLLLXRXRXRXRXRXRXRRXRRRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXRX",
+            "length": 178,
+            "upper": 178
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.001645749987801537
+    },
+    {
+      "id": "k7-mask253-order9066",
+      "mask": 253,
+      "order_index": 9066,
+      "blocks": 7,
+      "labels": [
+        2,
+        7,
+        5,
+        4,
+        8,
+        1,
+        3,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "3539/48",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 6,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "3907/55",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 273,
+            "cut": 9,
+            "weight": "6/11"
+          },
+          {
+            "source": 62,
+            "cut": 0,
+            "weight": "6/55"
+          },
+          {
+            "source": 73,
+            "cut": 3,
+            "weight": "19/55"
+          }
+        ],
+        "bounds": {
+          "base": "3907/55",
+          "gamma": [
+            "6",
+            "6",
+            "63/11",
+            "306/55",
+            "51/11",
+            "61/11",
+            "64/11"
+          ],
+          "margin": "108/55"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "RRRXLLXLXRRXLXLLLLXLLXLLXRXRRXRXRXRXLLXLLXRRRXLLLLLLLLXLXLXL",
+            "length": 60,
+            "upper": 60
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "chosen": 0,
+            "word": "RRRRRRRRRXLXLXLXLXLXLXLLXLXRRXLXLLLLLXRXLLLLLXRXRXLLLLLLLXRXRXRXRXRXRXRRXRXRXRXRXLLXLLLXRXRRRXLLLLLLLLLLLLLLLLLLXLXLXLXLXLXLXLXLXLXLXLXLXLXL",
+            "length": 140,
+            "upper": 140
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2
+            ],
+            "chosen": 0,
+            "word": "RRRRXLXLLXLXLXRRRXLXLXLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXRXRXRXRXRXRXRXLLXLLLLLLLLXRXRXRXRXRXRXRRRXLLLLLLLLLLLLLLLLLLLLLLXLXLXLXLXLXLXLXLXLXLXL",
+            "length": 176,
+            "upper": 176
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.002111790992785245
+    },
+    {
+      "id": "k7-mask491-order25070",
+      "mask": 491,
+      "order_index": 25070,
+      "blocks": 7,
+      "labels": [
+        5,
+        8,
+        6,
+        7,
+        3,
+        2,
+        1,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "1583/21",
+        "threshold": 73,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2927/39",
+        "pivots": 6
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2927/39",
+        "pivots": 10
+      },
+      "certificate": null,
+      "seconds": 0.058544500003336
+    },
+    {
+      "id": "k8-mask503-order35203",
+      "mask": 503,
+      "order_index": 35203,
+      "blocks": 8,
+      "labels": [
+        7,
+        8,
+        6,
+        2,
+        5,
+        1,
+        4,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "159/2",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 5,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "159/2",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "159/2",
+        "pivots": 4
+      },
+      "certificate": null,
+      "seconds": 0.06803595801466145
+    },
+    {
+      "id": "k8-mask503-order31806",
+      "mask": 503,
+      "order_index": 31806,
+      "blocks": 8,
+      "labels": [
+        7,
+        3,
+        2,
+        1,
+        5,
+        4,
+        6,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "5219/66",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "5219/66",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "78",
+        "pivots": 14
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 4327,
+            "cut": 4,
+            "weight": "1/2"
+          },
+          {
+            "source": 4,
+            "cut": 11,
+            "weight": "1/2"
+          }
+        ],
+        "bounds": {
+          "base": "78",
+          "gamma": [
+            "11/2",
+            "11/2",
+            "11/2",
+            "6",
+            "6",
+            "11/2",
+            "11/2",
+            "11/2"
+          ],
+          "margin": "1"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XRXRXRXLXLLLLXRXRXRXRXRXRXRXRXRRRRXLLXLXLLLXLXLXRRRRXRRRXRRXLXLX",
+            "length": 64,
+            "upper": 64
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "chosen": 1,
+            "word": "RRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLXLXLXLXLXLXRRRRRXLXLXRRRRRXLXRRRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLXLXLXLXLXLXLLLLLXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRRXRXLXLRRRRRRXLXLXLXLXLXLXLLLXRXRXRXRRR",
+            "length": 212,
+            "upper": 212
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 1,
+            "word": "RRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLXLXLXLXLXLXLXLXLXLXRRRRXLXRRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLXLXLXLXLXLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRRXRXLXLRRRRRXLXLXLXLXLXLLLXRXRXRXRRR",
+            "length": 234,
+            "upper": 234
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.07099404200562276
+    },
+    {
+      "id": "k8-mask510-order22547",
+      "mask": 510,
+      "order_index": 22547,
+      "blocks": 8,
+      "labels": [
+        5,
+        4,
+        2,
+        8,
+        3,
+        7,
+        6,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "1759/22",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 5,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2757/35",
+        "pivots": 4
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 128,
+            "cut": 7,
+            "weight": "3/14"
+          },
+          {
+            "source": 29,
+            "cut": 13,
+            "weight": "33/140"
+          },
+          {
+            "source": 255,
+            "cut": 11,
+            "weight": "13/70"
+          },
+          {
+            "source": 1391,
+            "cut": 3,
+            "weight": "51/140"
+          }
+        ],
+        "bounds": {
+          "base": "2757/35",
+          "gamma": [
+            "199/35",
+            "27/5",
+            "6",
+            "759/140",
+            "165/28",
+            "6",
+            "27/5",
+            "6"
+          ],
+          "margin": "8/35"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "XLXLXLXLXRRRXRRRXLXLXLLXLXLLLLXLLXLLXRXRRXRRXLXLLXRXRXRRXRXRRXRXLLR",
+            "length": 67,
+            "upper": 67
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "chosen": 1,
+            "word": "XLXLXLXLXLXLXLXRRRRRRXLXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLXLXLXLXLLLLLLLXRXRXRXLLLLLLLLLXRXRXRXRXLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRRXRXRXRXRRXLXLLLLLXRXRXRXRXRXRRXRXRRRRXLXLXRRRXLXLXLLR",
+            "length": 184,
+            "upper": 184
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 1,
+            "word": "XLXLXLXLXLXLXLXLXLXLXLXLXRRRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLXLXLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXRXRXRXRXRRXLXLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRRRXLXRRXLXLLR",
+            "length": 227,
+            "upper": 227
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.0025331659999210387
+    },
+    {
+      "id": "k8-mask255-order8727",
+      "mask": 255,
+      "order_index": 8727,
+      "blocks": 8,
+      "labels": [
+        2,
+        7,
+        1,
+        6,
+        5,
+        4,
+        8,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "10885/136",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 10,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "10885/136",
+        "pivots": 11
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "10885/136",
+        "pivots": 12
+      },
+      "certificate": null,
+      "seconds": 0.07108733299537562
+    },
+    {
+      "id": "k8-mask383-order17191",
+      "mask": 383,
+      "order_index": 17191,
+      "blocks": 8,
+      "labels": [
+        4,
+        3,
+        8,
+        2,
+        5,
+        1,
+        7,
+        6
+      ],
+      "baseline": {
+        "inherited_base": "2453/31",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2453/31",
+        "pivots": 7
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2453/31",
+        "pivots": 9
+      },
+      "certificate": null,
+      "seconds": 0.0695927920169197
+    },
+    {
+      "id": "k8-mask479-order22401",
+      "mask": 479,
+      "order_index": 22401,
+      "blocks": 8,
+      "labels": [
+        5,
+        4,
+        1,
+        7,
+        3,
+        6,
+        8,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "35041/441",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 6,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "5531/71",
+        "pivots": 10
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 380,
+            "cut": 2,
+            "weight": "33/71"
+          },
+          {
+            "source": 511,
+            "cut": 13,
+            "weight": "12/71"
+          },
+          {
+            "source": 681,
+            "cut": 8,
+            "weight": "23/71"
+          },
+          {
+            "source": 1140,
+            "cut": 11,
+            "weight": "3/71"
+          }
+        ],
+        "bounds": {
+          "base": "5531/71",
+          "gamma": [
+            "6",
+            "303/71",
+            "378/71",
+            "6",
+            "411/71",
+            "6",
+            "393/71",
+            "385/71"
+          ],
+          "margin": "78/71"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "RRRRRXRRRXRXRXRRRXRRXRRRXLXLXLLXLXLXLXLLXLLXLXRRXLXRRXLRRRRRXLXRRRXLX",
+            "length": 69,
+            "upper": 69
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "chosen": 1,
+            "word": "RRRRRRRRRRRRRRRRRRXRXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRRRRRXLXLXRRRRRXLXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLXLXLXLXLXLXLLLLLXRXRXRXLLLLLLLLLXRXRXRXRXLLLLLXRXRXRXRXRRXRXRXRXLLLLXRXRXRXRRXLRRRRRXLXRRRRRXLXLXLX",
+            "length": 202,
+            "upper": 202
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LXRXRXRXRXRXRXRXRXRRXRXRXRXRXRXRXRXRXRXRXRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLXLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRRXLLLLRRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXRR",
+            "length": 187,
+            "upper": 187
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.003435708989854902
+    },
+    {
+      "id": "k8-mask509-order11288",
+      "mask": 509,
+      "order_index": 11288,
+      "blocks": 8,
+      "labels": [
+        3,
+        2,
+        7,
+        1,
+        5,
+        6,
+        4,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "2003/25",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 8,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2003/25",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2003/25",
+        "pivots": 11
+      },
+      "certificate": null,
+      "seconds": 0.06915512497653253
+    },
+    {
+      "id": "k8-mask447-order22175",
+      "mask": 447,
+      "order_index": 22175,
+      "blocks": 8,
+      "labels": [
+        5,
+        3,
+        7,
+        6,
+        8,
+        4,
+        2,
+        1
+      ],
+      "baseline": {
+        "inherited_base": "2458/31",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 5,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2458/31",
+        "pivots": 4
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "2458/31",
+        "pivots": 4
+      },
+      "certificate": null,
+      "seconds": 0.06682475001434796
+    },
+    {
+      "id": "k8-mask447-order21172",
+      "mask": 447,
+      "order_index": 21172,
+      "blocks": 8,
+      "labels": [
+        5,
+        2,
+        4,
+        6,
+        1,
+        8,
+        3,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "62983/795",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 11,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "62983/795",
+        "pivots": 8
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "62983/795",
+        "pivots": 17
+      },
+      "certificate": null,
+      "seconds": 0.06993099997635
+    },
+    {
+      "id": "k8-mask509-order14388",
+      "mask": 509,
+      "order_index": 14388,
+      "blocks": 8,
+      "labels": [
+        3,
+        7,
+        8,
+        6,
+        4,
+        1,
+        2,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "870/11",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 7,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "528/7",
+        "pivots": 9
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 273,
+            "cut": 9,
+            "weight": "3/14"
+          },
+          {
+            "source": 754,
+            "cut": 7,
+            "weight": "8/35"
+          },
+          {
+            "source": 97,
+            "cut": 5,
+            "weight": "3/20"
+          },
+          {
+            "source": 1413,
+            "cut": 0,
+            "weight": "57/140"
+          }
+        ],
+        "bounds": {
+          "base": "528/7",
+          "gamma": [
+            "6",
+            "6",
+            "381/70",
+            "81/14",
+            "153/28",
+            "783/140",
+            "6",
+            "198/35"
+          ],
+          "margin": "25/7"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 1,
+            "word": "XLLLXLLXRXRXRXRXLXLXRRRRRXRRXRRXRRXLXLXLXLXLXRXRRXLXLLLLXLRRXRR",
+            "length": 63,
+            "upper": 63
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "chosen": 0,
+            "word": "RRRRRRRRRXLXLXLXLXLXLXLXRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLXRRXLLLLLLXRXLLLLLXRXRXLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXLLLLLXRXRXRXRLLLLLLLLLLLLLLLLLLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXL",
+            "length": 202,
+            "upper": 202
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "RRRRRRRRXLXLXLXLXLXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXLXRRRXLXLLLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXLLLLLLLLLLXRXRXRXRXRXRXRXRXRLLLLLLLLLLLLLLLLLLLLLLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXL",
+            "length": 230,
+            "upper": 230
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.003268750006100163
+    },
+    {
+      "id": "k8-mask510-order10444",
+      "mask": 510,
+      "order_index": 10444,
+      "blocks": 8,
+      "labels": [
+        3,
+        1,
+        6,
+        2,
+        4,
+        8,
+        5,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "79",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 6,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1181/15",
+        "pivots": 7
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 489,
+            "cut": 1,
+            "weight": "1/15"
+          },
+          {
+            "source": 759,
+            "cut": 5,
+            "weight": "2/5"
+          },
+          {
+            "source": 1005,
+            "cut": 11,
+            "weight": "4/15"
+          },
+          {
+            "source": 983,
+            "cut": 13,
+            "weight": "2/15"
+          },
+          {
+            "source": 1486,
+            "cut": 0,
+            "weight": "2/15"
+          }
+        ],
+        "bounds": {
+          "base": "1181/15",
+          "gamma": [
+            "83/15",
+            "6",
+            "27/5",
+            "6",
+            "6",
+            "27/5",
+            "6",
+            "27/5"
+          ],
+          "margin": "4/15"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 4,
+            "word": "XLLXLLXLXLXLXRRXLRRRXRRXLXLXLXLXLLLLLLXRXRXLXLLLXRXRXRXRRXRRRRRXL",
+            "length": 65,
+            "upper": 65
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "chosen": 2,
+            "word": "XLXLXLXLRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLLXRXRXLLLLLLLXRXRXRXRXRXRXRRXRXRXRRRXLXRRRRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLXLLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRRRXRXRRR",
+            "length": 198,
+            "upper": 198
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 4,
+            "word": "XLXLLXLXLXLXLXLXLXLLXLXLXLXLXLXLXLXLXLXLXRRRRRRRRXLXLXLXLXLXLXLRRRRRRRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXLLXRXLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRRXRRRRRRRRRRRXLXLXLXLXLXLXL",
+            "length": 219,
+            "upper": 219
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.003016041999217123
+    },
+    {
+      "id": "k8-mask510-order25148",
+      "mask": 510,
+      "order_index": 25148,
+      "blocks": 8,
+      "labels": [
+        5,
+        8,
+        7,
+        3,
+        6,
+        2,
+        1,
+        4
+      ],
+      "baseline": {
+        "inherited_base": "953/12",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "953/12",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "953/12",
+        "pivots": 4
+      },
+      "certificate": null,
+      "seconds": 0.069064499984961
+    },
+    {
+      "id": "k8-mask255-order25949",
+      "mask": 255,
+      "order_index": 25949,
+      "blocks": 8,
+      "labels": [
+        6,
+        2,
+        1,
+        4,
+        3,
+        8,
+        7,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "555/7",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 13,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "555/7",
+        "pivots": 6
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "867/11",
+        "pivots": 8
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 880,
+            "cut": 2,
+            "weight": "3/55"
+          },
+          {
+            "source": 1132,
+            "cut": 14,
+            "weight": "12/55"
+          },
+          {
+            "source": 76,
+            "cut": 4,
+            "weight": "3/11"
+          },
+          {
+            "source": 41,
+            "cut": 12,
+            "weight": "3/11"
+          },
+          {
+            "source": 3639,
+            "cut": 6,
+            "weight": "2/11"
+          }
+        ],
+        "bounds": {
+          "base": "867/11",
+          "gamma": [
+            "327/55",
+            "60/11",
+            "6",
+            "327/55",
+            "6",
+            "6",
+            "6",
+            "63/11"
+          ],
+          "margin": "2/11"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "XRRXRXRXRXRXLXLLXLLXRXRXRXRXLLXRXRRRRRXRRXLXLLXRRRRRXLXLXLX",
+            "length": 59,
+            "upper": 59
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "chosen": 3,
+            "word": "RXLLXLXLXLLLLXRXRXRXRRRRXLXRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLXLXLLLLLLLLLXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRRXRXLXLXLXLXLLLLXRXRXLLLLLLLLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRRXRXRXRRR",
+            "length": 203,
+            "upper": 203
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 0,
+            "word": "LXRXRRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXRXLLLLLLLLXRXRXRXRXRXRXRXRRRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLLXRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLX",
+            "length": 214,
+            "upper": 214
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.07178175001172349
+    },
+    {
+      "id": "k8-mask509-order16502",
+      "mask": 509,
+      "order_index": 16502,
+      "blocks": 8,
+      "labels": [
+        4,
+        2,
+        8,
+        5,
+        6,
+        3,
+        1,
+        7
+      ],
+      "baseline": {
+        "inherited_base": "1345/17",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "inherited-support",
+      "columns": 3,
+      "inherited_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1025/13",
+        "pivots": 5
+      },
+      "expanded_search": null,
+      "certificate": {
+        "references": [
+          {
+            "source": 646,
+            "cut": 2,
+            "weight": "3/13"
+          },
+          {
+            "source": 492,
+            "cut": 2,
+            "weight": "3/13"
+          },
+          {
+            "source": 1155,
+            "cut": 9,
+            "weight": "7/13"
+          }
+        ],
+        "bounds": {
+          "base": "1025/13",
+          "gamma": [
+            "77/13",
+            "6",
+            "75/13",
+            "72/13",
+            "72/13",
+            "72/13",
+            "75/13",
+            "6"
+          ],
+          "margin": "2/13"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 2,
+            "word": "RRXLXLXLXLLXLLXLLXRXRRXRXRXLLLXRXRXRRRRRRRXRRXLXLXLXLXLLXLRRXRRRXLXL",
+            "length": 68,
+            "upper": 68
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "chosen": 2,
+            "word": "RRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLLXRXLLLLLXRXRXLLLLLLLXRXRXRXRXRXRXRRXRXRXRXLLLLXRXRXRXRRRRRRRRRRRRRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLRRXRRRRRRRRRRXLXLXLXLXLXLXLXLXL",
+            "length": 212,
+            "upper": 212
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 2,
+            "word": "RRRRRRRRXLXLXLXLXLXLXLXLXLXLXLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRRRRRRRRRRRRRRXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLRRXRRRRRRRRRRXLXLXLXLXLXLXLXLXL",
+            "length": 232,
+            "upper": 232
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.002316917001735419
+    },
+    {
+      "id": "k8-mask255-order21547",
+      "mask": 255,
+      "order_index": 21547,
+      "blocks": 8,
+      "labels": [
+        5,
+        2,
+        8,
+        4,
+        7,
+        1,
+        6,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "1353/17",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 9,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "317/4",
+        "pivots": 7
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "317/4",
+        "pivots": 21
+      },
+      "certificate": null,
+      "seconds": 0.07146258300053887
+    },
+    {
+      "id": "k8-mask447-order14168",
+      "mask": 447,
+      "order_index": 14168,
+      "blocks": 8,
+      "labels": [
+        3,
+        7,
+        6,
+        1,
+        4,
+        5,
+        2,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "1996/25",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1996/25",
+        "pivots": 5
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1996/25",
+        "pivots": 7
+      },
+      "certificate": null,
+      "seconds": 0.06941191700752825
+    },
+    {
+      "id": "k8-mask383-order35939",
+      "mask": 383,
+      "order_index": 35939,
+      "blocks": 8,
+      "labels": [
+        8,
+        1,
+        7,
+        4,
+        3,
+        6,
+        5,
+        2
+      ],
+      "baseline": {
+        "inherited_base": "715/9",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 6,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "715/9",
+        "pivots": 3
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "715/9",
+        "pivots": 6
+      },
+      "certificate": null,
+      "seconds": 0.06852383399382234
+    },
+    {
+      "id": "k8-mask503-order575",
+      "mask": 503,
+      "order_index": 575,
+      "blocks": 8,
+      "labels": [
+        1,
+        2,
+        7,
+        6,
+        8,
+        5,
+        4,
+        3
+      ],
+      "baseline": {
+        "inherited_base": "1593/20",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 7,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1593/20",
+        "pivots": 7
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1593/20",
+        "pivots": 8
+      },
+      "certificate": null,
+      "seconds": 0.06962487497366965
+    },
+    {
+      "id": "k8-mask510-order17048",
+      "mask": 510,
+      "order_index": 17048,
+      "blocks": 8,
+      "labels": [
+        4,
+        3,
+        7,
+        1,
+        5,
+        6,
+        2,
+        8
+      ],
+      "baseline": {
+        "inherited_base": "1998/25",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 11,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "1998/25",
+        "pivots": 13
+      },
+      "expanded_search": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "6683/85",
+        "pivots": 13
+      },
+      "certificate": {
+        "references": [
+          {
+            "source": 724,
+            "cut": 5,
+            "weight": "18/85"
+          },
+          {
+            "source": 1646,
+            "cut": 0,
+            "weight": "2/17"
+          },
+          {
+            "source": 489,
+            "cut": 1,
+            "weight": "21/85"
+          },
+          {
+            "source": 3418,
+            "cut": 11,
+            "weight": "4/17"
+          },
+          {
+            "source": 569,
+            "cut": 9,
+            "weight": "16/85"
+          }
+        ],
+        "bounds": {
+          "base": "6683/85",
+          "gamma": [
+            "101/17",
+            "6",
+            "461/85",
+            "6",
+            "6",
+            "27/5",
+            "6",
+            "471/85"
+          ],
+          "margin": "32/85"
+        },
+        "literal_checks": [
+          {
+            "lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "chosen": 0,
+            "word": "LXLLXRXRRRXRRXLXLLXRXRRXRRRXRRXLXLLXLXLLXLLLXRXRXRRXRXRRXLXLXLRRRRRRRXLXLXL",
+            "length": 75,
+            "upper": 75
+          },
+          {
+            "lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "chosen": 3,
+            "word": "XLXLXLXLLLLLXRXRXRXRXRRRXLXRRRRRRRRRRRXLXLXLXLXLXLXLXRRRRRRRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLXLXLXLLXRXRRRRXLXLXLXLLXLXLLLLLLLLLXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXRXRXLXLLLLXRXRXRXRXRRRRR",
+            "length": 198,
+            "upper": 198
+          },
+          {
+            "lengths": [
+              2,
+              7,
+              2,
+              7,
+              2,
+              7,
+              2,
+              7
+            ],
+            "chosen": 2,
+            "word": "RXRXRXRXRXRXRXRXRXRXRRXRXRXRXRXRXRXRXRXRXRXRRRRRRRRXLXLXLXLXLXLXRRRRRRRRRXLXLXLXLXLXLXLXLXLXLXLXLLLXRXLLLLLLLLLXRXRXRXRXRXRXLLLLLLLLLXRXRXRXRXRXRXRXRXRRXRXRXLLLXRXLLLLLLLLLLLLLLLLLLLLLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLXLXLRRRXRRR",
+            "length": 233,
+            "upper": 233
+          }
+        ],
+        "claim": "all positive block lengths, conditional on reviewed comparison/stretching lemmas"
+      },
+      "seconds": 0.07440899999346584
+    },
+    {
+      "id": "k8-mask495-order36149",
+      "mask": 495,
+      "order_index": 36149,
+      "blocks": 8,
+      "labels": [
+        8,
+        2,
+        3,
+        4,
+        1,
+        7,
+        6,
+        5
+      ],
+      "baseline": {
+        "inherited_base": "398/5",
+        "threshold": 79,
+        "reverse_transfer_covered": false
+      },
+      "stage": "expanded-pool",
+      "columns": 10,
+      "inherited_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "398/5",
+        "pivots": 6
+      },
+      "expanded_search": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "base": "14719/185",
+        "pivots": 14
+      },
+      "certificate": null,
+      "seconds": 0.08475791601813398
+    }
+  ],
+  "scope": "Additional certificates relative to checked inherited-weight and supplied reverse-transfer methods on selected source-reported residual cases; global coverage counts not reconstructed."
+}

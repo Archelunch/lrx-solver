@@ -1,0 +1,10 @@
+{
+  "autoresearch/loop-260923-2154/train.json": "c7702708cc27d56245d10fb5f44ddb5f425f891daa7d13e13f9bee41a1ce7bee",
+  "autoresearch/loop-260923-2154/confirmation.json": "6200e5981a79f068e73f1a797a3229975ee809d844e15a3cb7ea771fc221fde5",
+  "autoresearch/loop-260923-2154/config.json": "0a01c1f8e4fb75764f3faedd9990be9880eb6359f21f3b846b98e335e9d36b6e",
+  "autoresearch/loop-260923-2154/run.py": "48895e3c89468062b9441b5b3b65e3455a3cec22ba7607351a3f70a100e7e9bb",
+  "autoresearch/loop-260923-2154/freeze.py": "0741e1a9700f0231dfc9d7d215fd0b844bd114a5e4f18ae79668cd47b89b1d77",
+  "integrations/mixture_lp.py": "62d6bff37c05e2e0dedebd34e3cc17ab533c86719a7f42f4ababaa73c1ace61d",
+  "integrations/projected_mixtures.py": "781b3257e5b66c9eb7c034291ab05ddd816b9eb5e0f06504e5153ca3a2c7e633",
+  "autoresearch/loop-260923-2107/incoming/verification.zip": "7469f605282a2c7099857a9d1da1a124f742ea47ff15abfd846f1cfeb3d53f50"
+}
