@@ -79,9 +79,10 @@ DEFAULTS = {
     "window": 4,
     "strategy": None,
     "select": "score",
+    "eval_cache": None,
 }
 REFINE_MODES = ("exploit", "edit")
-SELECTS = ("score", "failures")
+SELECTS = ("score", "failures", "ratio")
 INT_LIMITS = {
     "gepa_n": (1, 8),
     "max_merges": (0, 100),
@@ -169,8 +170,10 @@ def parse_tactics(text):
 
 
 def _eval_job(args):
-    spec, split = args
-    return evaluator.evaluate(spec, split=split)
+    from integrations.eval_cache import evaluate_cached
+
+    spec, split, cache_dir = args
+    return evaluate_cached(spec, split, cache_dir)
 
 
 def _git_commit():
@@ -330,12 +333,31 @@ class Campaign:
         then score. The evaluator's score itself is never changed."""
         if self.cfg["select"] == "score":
             return (rec["score"],)
+        if self.cfg["select"] == "ratio":
+            return (*self.ratio_rank(rec), rec["score"])
         return (not rec["eval"].get("stopped"), -self.failures(rec), rec["score"])
+
+    @staticmethod
+    def ratio_rank(rec):
+        """Proof-facing search ranking, using unchanged train measurements."""
+        graphs = [g for g in rec["eval"].get("graphs", []) if g.get("feedback")]
+        bad = sum((g.get("failures") or 0) + (g.get("incomplete") or 0) for g in graphs)
+        ratios = [g["value_max"] / g["T"] for g in graphs
+                  if g.get("m", 0) >= 8 and g.get("T", 0) > 0
+                  and g.get("value_max") is not None]
+        return (not rec["eval"].get("stopped"), -bad, -max(ratios, default=0.0))
 
     def sel_instances(self, rec):
         """Per-graph values used for the Pareto front and focus."""
         if self.cfg["select"] == "score":
             return rec["instances"]
+        if self.cfg["select"] == "ratio":
+            return {
+                g["graph"]: -1000.0 * ((g.get("failures") or 0) + (g.get("incomplete") or 0))
+                - (g["value_max"] / g["T"] if g.get("m", 0) >= 8
+                   and g.get("T", 0) > 0 and g.get("value_max") is not None else 0.0)
+                for g in rec["eval"].get("graphs", []) if g.get("feedback")
+            }
         return {
             g["graph"]: -(g.get("failures") or 0)
             for g in rec["eval"].get("graphs", [])
@@ -389,7 +411,7 @@ class Campaign:
                     duplicate_of=self.by_hash[cand.hash],
                 )
                 continue
-            jobs[i] = pool.submit(_eval_job, (spec, self.cfg["split"]))
+            jobs[i] = pool.submit(_eval_job, (spec, self.cfg["split"], self.cfg["eval_cache"]))
         for i, fut in jobs.items():
             results[i] = fut.result()
         return results
@@ -833,6 +855,14 @@ class Campaign:
             "recent_attempts": self.recent_attempts(8),
             "current_insights": self.insights[-3:],
         }
+        if self.cfg["select"] == "ratio":
+            summary["selection_objective"] = (
+                "First pass sanity and solve every checked state; then minimize the "
+                "worst value/T over m>=8 training graphs. Mean-score-only gains do "
+                "not break a strategy's plateau. Special cases for individual probe "
+                "vectors are not evidence of general progress."
+            )
+            summary["best_ratio_rank"] = self.ratio_rank(self.best())
         if task == "tactics":
             summary["past_tactics"] = [
                 {
@@ -945,6 +975,9 @@ class Campaign:
     def evox_window(self, count):
         """Score the strategy per window: J = delta / (|start| + 1) / sqrt(W)."""
         best = self.best()["score"]
+        if self.cfg["select"] == "ratio":
+            rank = self.ratio_rank(self.best())
+            best = -1e6 * (not rank[0]) + 1000 * rank[1] + rank[2]
         if self.window_start is None:
             self.window_start = best
         self.window_count += count
@@ -1149,6 +1182,9 @@ class Campaign:
                         state["members"].append(rec["id"])
             if self.best() is not None:
                 self.window_start = self.best()["score"]
+                if cfg["select"] == "ratio":
+                    rank = self.ratio_rank(self.best())
+                    self.window_start = -1e6 * (not rank[0]) + 1000 * rank[1] + rank[2]
             if cfg["async"]:
                 self.run_async(pool, threads)
             else:
@@ -1221,6 +1257,9 @@ class Campaign:
 
     def final_heldout(self, pool):
         """Score the top candidates on held-out graphs. Never fed back."""
+        if self.cfg["final_heldout_top"] == 0:
+            self.heldout = []
+            return
         top, seen = [], set()
         for r in self.ranked(r for r in self.records if r["valid"]):
             if r["hash"] not in seen:

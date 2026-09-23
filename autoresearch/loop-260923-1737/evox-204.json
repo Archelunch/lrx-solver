@@ -1,0 +1,50 @@
+{
+  "name": "s04-evox-204",
+  "engine": "evox",
+  "kinds": [
+    "rules"
+  ],
+  "seeds": [
+    "candidates/leads/49ab346cb44b2f1b.json"
+  ],
+  "max_proposals": 24,
+  "batch": 2,
+  "eval_workers": 1,
+  "seed": 204,
+  "max_wall_seconds": 7200,
+  "provider": {
+    "type": "openai_compatible",
+    "base_url": "https://api.x.ai/v1",
+    "model": "grok-4.7",
+    "api_key_env": "XAI_API_KEY",
+    "input_usd_per_mtok": 2.2,
+    "output_usd_per_mtok": 6.6,
+    "max_spend_usd": 6,
+    "max_requests": 48,
+    "max_output_tokens": 4000,
+    "max_reasoning_tokens": 60000,
+    "reasoning_effort": "low",
+    "timeout_sec": 1200,
+    "idle_timeout_sec": 120,
+    "repairs": 1
+  },
+  "insights_file": "autoresearch/loop-260923-1737/insights-rules.md",
+  "history": 4,
+  "focus": true,
+  "feedback_words": true,
+  "select": "ratio",
+  "window": 4,
+  "strategy": {
+    "parent": "best",
+    "modes": {
+      "exploit": 1
+    },
+    "history": 4,
+    "focus": true
+  },
+  "eval_cache": "autoresearch/loop-260923-1737/eval-cache",
+  "final_heldout_top": 0,
+  "gepa_n": 2,
+  "max_merges": 3,
+  "stagnation": 8
+}

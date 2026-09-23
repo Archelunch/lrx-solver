@@ -1,0 +1,28 @@
+{
+  "budget_usd": 50,
+  "pilot_cap_usd": 2.5,
+  "comparison_cap_usd": 36,
+  "unallocated_usd": 11.5,
+  "configs": [
+    "autoresearch/loop-260923-1737/evox-204.json",
+    "autoresearch/loop-260923-1737/gepa-204.json",
+    "autoresearch/loop-260923-1737/sequential-204.json",
+    "autoresearch/loop-260923-1737/evox-205.json",
+    "autoresearch/loop-260923-1737/gepa-205.json",
+    "autoresearch/loop-260923-1737/sequential-205.json"
+  ],
+  "stop_rules": [
+    "two consecutive infrastructure failures",
+    "trusted core changed",
+    "per-run budget exhausted"
+  ],
+  "engine_label": "local JSON-policy reimplementations",
+  "seeds": [
+    204,
+    205
+  ],
+  "proposals_cap_per_run": 24,
+  "batch": 2,
+  "async": false,
+  "heldout_top": 0
+}

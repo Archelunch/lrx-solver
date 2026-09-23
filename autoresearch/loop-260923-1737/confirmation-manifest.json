@@ -1,0 +1,36 @@
+{
+  "sha256": "93e228ee899b70973cede9b8961f97ac44e7b44476e86d16ae15392e31b113a4",
+  "graphs": [
+    [
+      8,
+      2
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      16,
+      4
+    ]
+  ],
+  "per_graph": 1000,
+  "scope": "Finite fresh random states; no exact distances required. New states on known graphs are not independent unseen-graph confirmation. No feedback to campaigns.",
+  "seed_rule": "lrx-s04-confirmation-20260923:m:r"
+}

@@ -30,7 +30,7 @@ from gepa.optimize_anything import (  # noqa: E402
 
 from integrations.lrx_eval import evaluate_instance, evaluate_text  # noqa: E402
 from src.lrx import prompt  # noqa: E402
-from src.lrx.evaluator import load_registry  # noqa: E402
+from src.lrx.evaluator import load_registry, evaluate  # noqa: E402
 
 
 class LedgerLM:
@@ -131,7 +131,9 @@ def main():
     best = result.best_candidate
     best_text = best if isinstance(best, str) else json.dumps(best)
     score, side = evaluate_text(best_text, split="train")
-    held, _ = evaluate_text(best_text, split="heldout")
+    held_result = evaluate(prompt.extract_candidate(best_text), split="heldout")
+    held_instances = held_result.get("heldout", {})
+    held = sum(held_instances.values()) / len(held_instances) if held_instances else None
     summary = {
         "run_dir": str(run_dir),
         "engine": "gepa-official",
@@ -140,6 +142,7 @@ def main():
         "usd": round(sum(c.get("cost_usd", 0) for c in lm.calls), 6),
         "best_train_score": score,
         "best_heldout_score": held,
+        "heldout_instances": held_instances,
         "best_feasible_train": side.get("feasible_on_probes"),
         "best": best_text,
     }
