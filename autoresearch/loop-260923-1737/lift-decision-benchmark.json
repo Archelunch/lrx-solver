@@ -1,0 +1,16 @@
+{
+  "m": 4,
+  "r": 3,
+  "q": 13,
+  "bound": 14,
+  "sample": 100,
+  "full_seconds": 0.2552177089964971,
+  "decision_seconds": 0.09243937497376464,
+  "speedup": 2.7609198901326497,
+  "full_deletions": 300,
+  "decision_deletions": 100,
+  "full_states": 103821,
+  "decision_states": 37880,
+  "all_answers_agree": true,
+  "scope": "Finite small-graph performance pilot; not m>=8 evidence or large-graph speedup."
+}

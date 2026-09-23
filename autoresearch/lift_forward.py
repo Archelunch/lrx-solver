@@ -48,7 +48,7 @@ def smaller_table(m, r):
         return dist, meta["radius"], "bfs"
 
 
-def forward_h(m, r, u, j0, q, dist, max_states=30_000_000, witness=True):
+def forward_h(m, r, u, j0, q, dist, max_states=30_000_000, witness=True, max_length=None):
     """Exact H_q(u, j0) by forward search. Returns a dict (H is None if no lift)."""
     n = m + r
     ranker = Ranker(m, r - 1)
@@ -89,6 +89,12 @@ def forward_h(m, r, u, j0, q, dist, max_states=30_000_000, witness=True):
                         letters.append(LETTERS[letter])
                     out["word"] = "".join(reversed(letters))
                 return out
+        if max_length is not None and length >= max_length:
+            # No terminal through this full-word depth. This is a bounded
+            # decision, NOT infinity and NOT an exact H value.
+            out.update(status="COMPLETE_BOUND", H=None, states=len(best),
+                       lower_bound=length + 1, length_cap=max_length)
+            return out
         nxt = []
         for w, j, e, cw, dw in frontier:
             here = pkey(cw, j, e)
@@ -130,6 +136,41 @@ def forward_h(m, r, u, j0, q, dist, max_states=30_000_000, witness=True):
         length += 1
     out["states"] = len(best)
     return out
+
+
+def decide_vector(m, r, v, q, bound, dist, max_states=30_000_000):
+    """Decide A_q(v) <= bound, stopping at the first replayed witness.
+
+    A negative answer needs every deletion resolved by complete search. A
+    resource-limited deletion leaves the result INCOMPLETE unless another
+    deletion supplies a positive witness. Does not claim the exact A value.
+    """
+    if type(bound) is not int or bound < 0:
+        raise ValueError("bound must be a nonnegative integer")
+    v = tuple(v)
+    root = tuple(range(1, m + 1)) + (0,) * r
+    if sorted(v) != sorted(root):
+        raise ValueError("invalid visible vector")
+    validator = CertificateValidator(m, r)
+    rows = []
+    for j, token in enumerate(v):
+        if token:
+            continue
+        u = v[:j] + v[j + 1:]
+        res = forward_h(m, r, u, j, q, dist, max_states, True, max_length=bound)
+        res["j"] = j
+        rows.append(res)
+        if res["H"] is not None:
+            cert = validator.replay_word(res["word"], start_state=(u, j))
+            if not (cert.terminal and cert.replay_valid and cert.word_length <= bound
+                    and cert.projection_length <= q and replay_visible(v, res["word"]) == root):
+                raise AssertionError("bounded witness failed independent replay")
+            return {"status": "COMPLETE", "within_bound": True,
+                    "q": q, "bound": bound, "witness": res, "deletions": rows}
+    incomplete = any(row["status"] == "INCOMPLETE" for row in rows)
+    return {"status": "INCOMPLETE" if incomplete else "COMPLETE",
+            "within_bound": None if incomplete else False,
+            "q": q, "bound": bound, "deletions": rows}
 
 
 def check_vector(m, r, v, q, dist, max_states, witness=True):
