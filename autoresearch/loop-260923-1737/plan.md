@@ -30,3 +30,8 @@ Validation before paid work: 290 unit tests passed; compileall exit 0;
 smoke passed=true; trusted ok=true. Evidence: verification-initial.log.
 
 Run artifacts live in this fresh session directory. Preserve previous runs.
+
+Pre-comparison scheduling revision (pilot still pending): batch=4 for all arms,
+synchronous rounds, max wall 5400 s per run. Sequential means four sibling
+refinements from the current best per round. EvoX can change strategies only
+between complete rounds, avoiding attribution of old-policy calls to new policy.

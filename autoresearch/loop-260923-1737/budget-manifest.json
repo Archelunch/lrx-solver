@@ -22,7 +22,7 @@
     205
   ],
   "proposals_cap_per_run": 24,
-  "batch": 2,
+  "batch": 4,
   "async": false,
   "heldout_top": 0
 }

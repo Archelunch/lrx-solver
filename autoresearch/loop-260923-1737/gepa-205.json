@@ -8,10 +8,10 @@
     "candidates/leads/49ab346cb44b2f1b.json"
   ],
   "max_proposals": 24,
-  "batch": 2,
+  "batch": 4,
   "eval_workers": 1,
   "seed": 205,
-  "max_wall_seconds": 7200,
+  "max_wall_seconds": 5400,
   "provider": {
     "type": "openai_compatible",
     "base_url": "https://api.x.ai/v1",
