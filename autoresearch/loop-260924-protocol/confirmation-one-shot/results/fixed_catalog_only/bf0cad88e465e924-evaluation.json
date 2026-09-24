@@ -1,0 +1,2942 @@
+{
+  "kind": "executable_program",
+  "candidate_hash": "bf0cad88e465e924a0fcdad5810448ee3e72ec228805c92a1e713c22bc3ea6cb",
+  "combined_score": 12.0,
+  "certified": 12,
+  "new_certified": 0,
+  "new_vs_catalog": 0,
+  "incumbent_certified": 12,
+  "new_vs_incumbent": 0,
+  "secondary_score": "0",
+  "certificate_weight": 1000,
+  "score_reference": "fixed_catalog",
+  "reference_hashes": {
+    "catalog": "71c548a3bb742b9b9f6d70d6d2d082822fdf0e75dcb0444dae2eeaee45fc262c",
+    "incumbent": null,
+    "dual": null
+  },
+  "total_families": 16,
+  "feedback": "0 new exact family certificates versus catalog; 12/16 total; 0 execution or format failures. Partial progress is diagnostic, not proof; misses do not prove infeasibility.",
+  "families": [
+    {
+      "case": {
+        "id": "k4-mask240-order30976",
+        "m": 8,
+        "labels": [
+          7,
+          2,
+          1,
+          3,
+          6,
+          8,
+          4,
+          5
+        ],
+        "mask": 240,
+        "blocks": 4
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.04082879199995659,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "1",
+          "0",
+          "0"
+        ],
+        "base": "47",
+        "pivots": 1
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "1",
+          "0",
+          "0"
+        ],
+        "base": "47",
+        "pivots": 1
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "1",
+          "0",
+          "0"
+        ],
+        "base": "47",
+        "pivots": 1
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "47",
+          "gamma": [
+            "5",
+            "2",
+            "1",
+            "4"
+          ],
+          "margin": "8"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 47,
+              "gamma": [
+                5,
+                2,
+                1,
+                4
+              ],
+              "state": [
+                7,
+                2,
+                1,
+                3,
+                0,
+                6,
+                0,
+                8,
+                0,
+                4,
+                0,
+                5
+              ],
+              "target": [
+                7,
+                2,
+                1,
+                3,
+                0,
+                6,
+                0,
+                8,
+                0,
+                4,
+                0,
+                5
+              ],
+              "word": "XRRRRRRXRRXLXRRRRXRRRRXLLXLXLLXLXRRXRRXRXLXLXRR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k4-mask232-order30329",
+        "m": 8,
+        "labels": [
+          7,
+          1,
+          2,
+          6,
+          5,
+          8,
+          4,
+          3
+        ],
+        "mask": 232,
+        "blocks": 4
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.04086279199691489,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "1/6",
+          "0",
+          "1/2",
+          "1/3",
+          "0",
+          "0"
+        ],
+        "base": "163/3",
+        "pivots": 3
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "1/6",
+          "0",
+          "1/2",
+          "1/3",
+          "0",
+          "0"
+        ],
+        "base": "163/3",
+        "pivots": 3
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "1/6",
+          "0",
+          "1/2",
+          "1/3",
+          "0",
+          "0"
+        ],
+        "base": "163/3",
+        "pivots": 3
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "163/3",
+          "gamma": [
+            "6",
+            "6",
+            "11/2",
+            "11/2"
+          ],
+          "margin": "2/3"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 41,
+              "gamma": [
+                9,
+                3,
+                0,
+                3
+              ],
+              "state": [
+                7,
+                1,
+                2,
+                0,
+                6,
+                5,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3
+              ],
+              "target": [
+                7,
+                1,
+                2,
+                0,
+                6,
+                5,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3
+              ],
+              "word": "XLLLXLXRRRXLXLLLLXRXRRXRXRRRXRRXLXLXLXRXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/6"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 57,
+              "gamma": [
+                5,
+                11,
+                9,
+                6
+              ],
+              "state": [
+                7,
+                1,
+                2,
+                0,
+                6,
+                5,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3
+              ],
+              "target": [
+                7,
+                1,
+                2,
+                0,
+                6,
+                5,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3
+              ],
+              "word": "RRXRRXRXRRXLXLLLXLLXLLLXLLXLXLXLLXLLXRXRRXRXRXRRRRXLLXRXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/2"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 57,
+              "gamma": [
+                6,
+                0,
+                3,
+                6
+              ],
+              "state": [
+                7,
+                1,
+                2,
+                0,
+                6,
+                5,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3
+              ],
+              "target": [
+                7,
+                1,
+                2,
+                0,
+                6,
+                5,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3
+              ],
+              "word": "XLXRRRRXLXLXLXLLLXRXRRRRXRRRXLXLXLXLXLXLXLXLLXRXRXRXRRRXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/3"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k4-mask51-order29916",
+        "m": 8,
+        "labels": [
+          6,
+          8,
+          4,
+          2,
+          5,
+          1,
+          3,
+          7
+        ],
+        "mask": 51,
+        "blocks": 4
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.04039933398598805,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "5/11",
+          "0",
+          "9/22",
+          "3/22"
+        ],
+        "base": "1107/22",
+        "pivots": 4
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "5/11",
+          "0",
+          "9/22",
+          "3/22"
+        ],
+        "base": "1107/22",
+        "pivots": 4
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "5/11",
+          "0",
+          "9/22",
+          "3/22"
+        ],
+        "base": "1107/22",
+        "pivots": 4
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "1107/22",
+          "gamma": [
+            "6",
+            "60/11",
+            "123/22",
+            "6"
+          ],
+          "margin": "103/22"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 39,
+              "gamma": [
+                6,
+                3,
+                6,
+                9
+              ],
+              "state": [
+                0,
+                6,
+                0,
+                8,
+                4,
+                2,
+                0,
+                5,
+                0,
+                1,
+                3,
+                7
+              ],
+              "target": [
+                0,
+                6,
+                0,
+                8,
+                4,
+                2,
+                0,
+                5,
+                0,
+                1,
+                3,
+                7
+              ],
+              "word": "XLLXRXRRXRRRRXRRXRXLXLXLLXLXRRXLXRRRXLX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "5/11"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 59,
+              "gamma": [
+                7,
+                10,
+                4,
+                1
+              ],
+              "state": [
+                0,
+                6,
+                0,
+                8,
+                4,
+                2,
+                0,
+                5,
+                0,
+                1,
+                3,
+                7
+              ],
+              "target": [
+                0,
+                6,
+                0,
+                8,
+                4,
+                2,
+                0,
+                5,
+                0,
+                1,
+                3,
+                7
+              ],
+              "word": "RXLXLXLLLLLXRRXRXRXLLXRXRRRXRRXLXLLXLXLLLXRXRXLLLLLLXLXLLXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "9/22"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 62,
+              "gamma": [
+                3,
+                0,
+                9,
+                11
+              ],
+              "state": [
+                0,
+                6,
+                0,
+                8,
+                4,
+                2,
+                0,
+                5,
+                0,
+                1,
+                3,
+                7
+              ],
+              "target": [
+                0,
+                6,
+                0,
+                8,
+                4,
+                2,
+                0,
+                5,
+                0,
+                1,
+                3,
+                7
+              ],
+              "word": "XRRRRXRXRRXLXLLLXLXLXRRRXRRRRRXLXLXLXLXLXLXLXRXRRRRRRXLXLXLXRR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "3/22"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k4-mask108-order9175",
+        "m": 8,
+        "labels": [
+          2,
+          7,
+          6,
+          4,
+          3,
+          1,
+          8,
+          5
+        ],
+        "mask": 108,
+        "blocks": 4
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.03801270801341161,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "base": "54",
+        "pivots": 4
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "base": "54",
+        "pivots": 4
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "base": "54",
+        "pivots": 4
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "54",
+          "gamma": [
+            "6",
+            "3",
+            "3",
+            "6"
+          ],
+          "margin": "1"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 54,
+              "gamma": [
+                6,
+                3,
+                3,
+                6
+              ],
+              "state": [
+                2,
+                7,
+                0,
+                6,
+                0,
+                4,
+                3,
+                0,
+                1,
+                0,
+                8,
+                5
+              ],
+              "target": [
+                2,
+                7,
+                0,
+                6,
+                0,
+                4,
+                3,
+                0,
+                1,
+                0,
+                8,
+                5
+              ],
+              "word": "LLXLLXRXRRRRXRXLXLXLXRXRRRRXLLLLLLXRXRXRXRRRRRXLXLXLXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k5-mask244-order32827",
+        "m": 8,
+        "labels": [
+          7,
+          4,
+          5,
+          3,
+          8,
+          1,
+          6,
+          2
+        ],
+        "mask": 244,
+        "blocks": 5
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.039163999987067655,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "4/7",
+          "3/28",
+          "9/28",
+          "0"
+        ],
+        "base": "1597/28",
+        "pivots": 4
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "4/7",
+          "3/28",
+          "9/28",
+          "0"
+        ],
+        "base": "1597/28",
+        "pivots": 4
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "4/7",
+          "3/28",
+          "9/28",
+          "0"
+        ],
+        "base": "1597/28",
+        "pivots": 4
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "1597/28",
+          "gamma": [
+            "6",
+            "129/28",
+            "99/28",
+            "165/28",
+            "6"
+          ],
+          "margin": "111/28"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 49,
+              "gamma": [
+                9,
+                3,
+                0,
+                3,
+                6
+              ],
+              "state": [
+                7,
+                4,
+                0,
+                5,
+                3,
+                0,
+                8,
+                0,
+                1,
+                0,
+                6,
+                0,
+                2
+              ],
+              "target": [
+                7,
+                4,
+                0,
+                5,
+                3,
+                0,
+                8,
+                0,
+                1,
+                0,
+                6,
+                0,
+                2
+              ],
+              "word": "RRRXRRXLXLLXLLXLLXLLLXRRXRRXRRXLXLLXLLXRRRXRXRXRR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "4/7"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 58,
+              "gamma": [
+                8,
+                9,
+                6,
+                3,
+                0
+              ],
+              "state": [
+                7,
+                4,
+                0,
+                5,
+                3,
+                0,
+                8,
+                0,
+                1,
+                0,
+                6,
+                0,
+                2
+              ],
+              "target": [
+                7,
+                4,
+                0,
+                5,
+                3,
+                0,
+                8,
+                0,
+                1,
+                0,
+                6,
+                0,
+                2
+              ],
+              "word": "LXRXLLLXLLXLLXLLXRXRRXRXRXRXRXRRRXLLXLXLXLXLLLXRXRXRRRXRRX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "3/28"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 71,
+              "gamma": [
+                0,
+                6,
+                9,
+                12,
+                8
+              ],
+              "state": [
+                7,
+                4,
+                0,
+                5,
+                3,
+                0,
+                8,
+                0,
+                1,
+                0,
+                6,
+                0,
+                2
+              ],
+              "target": [
+                7,
+                4,
+                0,
+                5,
+                3,
+                0,
+                8,
+                0,
+                1,
+                0,
+                6,
+                0,
+                2
+              ],
+              "word": "RRXLXLXRRRRRXRRXRRXRXLLXLLXLXLXLXLXLXRXRRRRRXRRXLXLXLXLLXLXRRXLXRRRXLXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "9/28"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k5-mask118-order36647",
+        "m": 8,
+        "labels": [
+          8,
+          2,
+          7,
+          3,
+          6,
+          5,
+          4,
+          1
+        ],
+        "mask": 118,
+        "blocks": 5
+      },
+      "status": "NO_CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.03676904199528508,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        "base": "65",
+        "pivots": 5
+      },
+      "candidate_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        "base": "65",
+        "pivots": 5
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        "base": "65",
+        "pivots": 5
+      },
+      "baseline_certified": false,
+      "incumbent_certified": false,
+      "progress": null,
+      "certificate": null
+    },
+    {
+      "case": {
+        "id": "k5-mask217-order5339",
+        "m": 8,
+        "labels": [
+          2,
+          1,
+          5,
+          6,
+          4,
+          8,
+          7,
+          3
+        ],
+        "mask": 217,
+        "blocks": 5
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.038859292020788416,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "3/43",
+          "21/43",
+          "0",
+          "0",
+          "0",
+          "19/43"
+        ],
+        "base": "2601/43",
+        "pivots": 6
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "3/43",
+          "21/43",
+          "0",
+          "0",
+          "0",
+          "19/43"
+        ],
+        "base": "2601/43",
+        "pivots": 6
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "3/43",
+          "21/43",
+          "0",
+          "0",
+          "0",
+          "19/43"
+        ],
+        "base": "2601/43",
+        "pivots": 6
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "2601/43",
+          "gamma": [
+            "255/43",
+            "6",
+            "6",
+            "249/43",
+            "234/43"
+          ],
+          "margin": "22/43"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 42,
+              "gamma": [
+                2,
+                11,
+                9,
+                3,
+                0
+              ],
+              "state": [
+                0,
+                2,
+                1,
+                5,
+                0,
+                6,
+                0,
+                4,
+                8,
+                0,
+                7,
+                0,
+                3
+              ],
+              "target": [
+                0,
+                2,
+                1,
+                5,
+                0,
+                6,
+                0,
+                4,
+                8,
+                0,
+                7,
+                0,
+                3
+              ],
+              "word": "RXLXLXLLXLLLXRXRXLLLXLLXRXRXRRRRRXRRXLXRXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "3/43"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 50,
+              "gamma": [
+                1,
+                8,
+                11,
+                6,
+                3
+              ],
+              "state": [
+                0,
+                2,
+                1,
+                5,
+                0,
+                6,
+                0,
+                4,
+                8,
+                0,
+                7,
+                0,
+                3
+              ],
+              "target": [
+                0,
+                2,
+                1,
+                5,
+                0,
+                6,
+                0,
+                4,
+                8,
+                0,
+                7,
+                0,
+                3
+              ],
+              "word": "LXLLXLLXLXLLLXRXLLLXRXRXRXRXRRRXLXLXRXRRRXRXLLXRXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "21/43"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 75,
+              "gamma": [
+                12,
+                3,
+                0,
+                6,
+                9
+              ],
+              "state": [
+                0,
+                2,
+                1,
+                5,
+                0,
+                6,
+                0,
+                4,
+                8,
+                0,
+                7,
+                0,
+                3
+              ],
+              "target": [
+                0,
+                2,
+                1,
+                5,
+                0,
+                6,
+                0,
+                4,
+                8,
+                0,
+                7,
+                0,
+                3
+              ],
+              "word": "XLLLLXRRRXRRXLXRRRXRRXLXLLXLXLXLLXRXRRRRXLXLXLXLXLLXRXRXRRRRRRRXLXLXLXLXRRX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "19/43"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k5-mask316-order1893",
+        "m": 8,
+        "labels": [
+          1,
+          4,
+          6,
+          7,
+          8,
+          3,
+          5,
+          2
+        ],
+        "mask": 316,
+        "blocks": 5
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.038757832982810214,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "2/5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "3/10",
+          "3/10"
+        ],
+        "base": "591/10",
+        "pivots": 7
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "2/5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "3/10",
+          "3/10"
+        ],
+        "base": "591/10",
+        "pivots": 7
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "2/5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "3/10",
+          "3/10"
+        ],
+        "base": "591/10",
+        "pivots": 7
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "591/10",
+          "gamma": [
+            "6",
+            "24/5",
+            "27/5",
+            "9/2",
+            "6"
+          ],
+          "margin": "19/10"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 42,
+              "gamma": [
+                9,
+                6,
+                3,
+                0,
+                9
+              ],
+              "state": [
+                1,
+                4,
+                0,
+                6,
+                0,
+                7,
+                0,
+                8,
+                0,
+                3,
+                5,
+                2,
+                0
+              ],
+              "target": [
+                1,
+                4,
+                0,
+                6,
+                0,
+                7,
+                0,
+                8,
+                0,
+                3,
+                5,
+                2,
+                0
+              ],
+              "word": "RRXRXLXLXLLLXLLXLLXRXRRXLXRRRRXRRRRXLXLXRX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "2/5"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 70,
+              "gamma": [
+                5,
+                8,
+                11,
+                9,
+                0
+              ],
+              "state": [
+                1,
+                4,
+                0,
+                6,
+                0,
+                7,
+                0,
+                8,
+                0,
+                3,
+                5,
+                2,
+                0
+              ],
+              "target": [
+                1,
+                4,
+                0,
+                6,
+                0,
+                7,
+                0,
+                8,
+                0,
+                3,
+                5,
+                2,
+                0
+              ],
+              "word": "LXLLXLLXLLLXLXRRXRXRRXLXLLLXRXRXRRRRXRRXLXLLXLXLLLLLLXRXRXRXRXRXRXRRXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "3/10"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 71,
+              "gamma": [
+                3,
+                0,
+                3,
+                6,
+                8
+              ],
+              "state": [
+                1,
+                4,
+                0,
+                6,
+                0,
+                7,
+                0,
+                8,
+                0,
+                3,
+                5,
+                2,
+                0
+              ],
+              "target": [
+                1,
+                4,
+                0,
+                6,
+                0,
+                7,
+                0,
+                8,
+                0,
+                3,
+                5,
+                2,
+                0
+              ],
+              "word": "RXRRXRRRXRRXLXLLLXLLLLXRRXRXRXRXLXLXLXLXRXRRRRXLXLXLXLXLLLLXRXRXRXRRRRR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "3/10"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k6-mask363-order39289",
+        "m": 8,
+        "labels": [
+          8,
+          6,
+          4,
+          3,
+          1,
+          2,
+          7,
+          5
+        ],
+        "mask": 363,
+        "blocks": 6
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.04047362500568852,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "3/7",
+          "0",
+          "0",
+          "5/14",
+          "1/7",
+          "1/14",
+          "0"
+        ],
+        "base": "919/14",
+        "pivots": 6
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "3/7",
+          "0",
+          "0",
+          "5/14",
+          "1/7",
+          "1/14",
+          "0"
+        ],
+        "base": "919/14",
+        "pivots": 6
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "3/7",
+          "0",
+          "0",
+          "5/14",
+          "1/7",
+          "1/14",
+          "0"
+        ],
+        "base": "919/14",
+        "pivots": 6
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "919/14",
+          "gamma": [
+            "6",
+            "40/7",
+            "11/2",
+            "6",
+            "6",
+            "38/7"
+          ],
+          "margin": "19/14"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 52,
+              "gamma": [
+                9,
+                6,
+                0,
+                6,
+                9,
+                8
+              ],
+              "state": [
+                0,
+                8,
+                0,
+                6,
+                4,
+                0,
+                3,
+                1,
+                0,
+                2,
+                0,
+                7,
+                5,
+                0
+              ],
+              "target": [
+                0,
+                8,
+                0,
+                6,
+                4,
+                0,
+                3,
+                1,
+                0,
+                2,
+                0,
+                7,
+                5,
+                0
+              ],
+              "word": "XLLXRXRXRXLXLLLXRXRXRXRXRXRXLXLXRRRRRRXRXLXLXLXRXRXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "3/7"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 76,
+              "gamma": [
+                4,
+                5,
+                11,
+                6,
+                3,
+                3
+              ],
+              "state": [
+                0,
+                8,
+                0,
+                6,
+                4,
+                0,
+                3,
+                1,
+                0,
+                2,
+                0,
+                7,
+                5,
+                0
+              ],
+              "target": [
+                0,
+                8,
+                0,
+                6,
+                4,
+                0,
+                3,
+                1,
+                0,
+                2,
+                0,
+                7,
+                5,
+                0
+              ],
+              "word": "LXLXLXLXLXLLLXLLXRXRRRXRRRXRXLXLXLXRRXLXRXRRRRRXLXLXLXLXLXLXLLLXLXRRXRXRXRXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "5/14"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 74,
+              "gamma": [
+                0,
+                3,
+                9,
+                8,
+                5,
+                1
+              ],
+              "state": [
+                0,
+                8,
+                0,
+                6,
+                4,
+                0,
+                3,
+                1,
+                0,
+                2,
+                0,
+                7,
+                5,
+                0
+              ],
+              "target": [
+                0,
+                8,
+                0,
+                6,
+                4,
+                0,
+                3,
+                1,
+                0,
+                2,
+                0,
+                7,
+                5,
+                0
+              ],
+              "word": "RRRRXRRXRRRRXRXLXLXLXLLLXLLXRXRRRXRRRXLXLXRRXRRRXLXLXLXLXLXLXLXLXRXRXRRRXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/7"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 79,
+              "gamma": [
+                10,
+                13,
+                4,
+                2,
+                5,
+                11
+              ],
+              "state": [
+                0,
+                8,
+                0,
+                6,
+                4,
+                0,
+                3,
+                1,
+                0,
+                2,
+                0,
+                7,
+                5,
+                0
+              ],
+              "target": [
+                0,
+                8,
+                0,
+                6,
+                4,
+                0,
+                3,
+                1,
+                0,
+                2,
+                0,
+                7,
+                5,
+                0
+              ],
+              "word": "RRXRXLXLXLLXLXLLLXRXRXRXRRXRRXRRRXLXLXLLXLLXLXLLXRXRXRRRRXLLXLXLLLLLLXLXLXLXLXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/14"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k6-mask252-order24816",
+        "m": 8,
+        "labels": [
+          5,
+          8,
+          3,
+          7,
+          1,
+          2,
+          4,
+          6
+        ],
+        "mask": 252,
+        "blocks": 6
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.04037679097382352,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "4/7",
+          "2/21",
+          "0",
+          "1/3"
+        ],
+        "base": "1237/21",
+        "pivots": 6
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "4/7",
+          "2/21",
+          "0",
+          "1/3"
+        ],
+        "base": "1237/21",
+        "pivots": 6
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "4/7",
+          "2/21",
+          "0",
+          "1/3"
+        ],
+        "base": "1237/21",
+        "pivots": 6
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "1237/21",
+          "gamma": [
+            "6",
+            "39/7",
+            "101/21",
+            "14/3",
+            "17/3",
+            "6"
+          ],
+          "margin": "170/21"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 43,
+              "gamma": [
+                7,
+                4,
+                1,
+                2,
+                5,
+                8
+              ],
+              "state": [
+                5,
+                8,
+                0,
+                3,
+                0,
+                7,
+                0,
+                1,
+                0,
+                2,
+                0,
+                4,
+                0,
+                6
+              ],
+              "target": [
+                5,
+                8,
+                0,
+                3,
+                0,
+                7,
+                0,
+                1,
+                0,
+                2,
+                0,
+                4,
+                0,
+                6
+              ],
+              "word": "LLXLLXRXRRXRXRXRRXRRXLXLLXLLXLLXLLLLLXLXLXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "4/7"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 56,
+              "gamma": [
+                0,
+                3,
+                6,
+                9,
+                12,
+                8
+              ],
+              "state": [
+                5,
+                8,
+                0,
+                3,
+                0,
+                7,
+                0,
+                1,
+                0,
+                2,
+                0,
+                4,
+                0,
+                6
+              ],
+              "target": [
+                5,
+                8,
+                0,
+                3,
+                0,
+                7,
+                0,
+                1,
+                0,
+                2,
+                0,
+                4,
+                0,
+                6
+              ],
+              "word": "RRXLXLXRRXRRRXRRXRRXRRXLXLLXLXLXLXLXLXLXRRRRRXRRXLXLXLXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "2/21"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 87,
+              "gamma": [
+                6,
+                9,
+                11,
+                8,
+                5,
+                2
+              ],
+              "state": [
+                5,
+                8,
+                0,
+                3,
+                0,
+                7,
+                0,
+                1,
+                0,
+                2,
+                0,
+                4,
+                0,
+                6
+              ],
+              "target": [
+                5,
+                8,
+                0,
+                3,
+                0,
+                7,
+                0,
+                1,
+                0,
+                2,
+                0,
+                4,
+                0,
+                6
+              ],
+              "word": "RRXRRXRRXRRXRXLLXLLXLLXRXRRXRRXLXLLXRRRRRRXRRXLXLXLXLXLXRRRXRRRXLXLXLXLXLXLLXLXRXRRRRXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/3"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k6-mask221-order731",
+        "m": 8,
+        "labels": [
+          1,
+          3,
+          2,
+          4,
+          6,
+          8,
+          7,
+          5
+        ],
+        "mask": 221,
+        "blocks": 6
+      },
+      "status": "NO_CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.039195042016217485,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "1/10",
+          "0",
+          "1/10",
+          "0",
+          "3/10",
+          "1/2"
+        ],
+        "base": "339/5",
+        "pivots": 8
+      },
+      "candidate_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "1/10",
+          "0",
+          "1/10",
+          "0",
+          "3/10",
+          "1/2"
+        ],
+        "base": "339/5",
+        "pivots": 8
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "0",
+          "1/10",
+          "0",
+          "1/10",
+          "0",
+          "3/10",
+          "1/2"
+        ],
+        "base": "339/5",
+        "pivots": 8
+      },
+      "baseline_certified": false,
+      "incumbent_certified": false,
+      "progress": null,
+      "certificate": null
+    },
+    {
+      "case": {
+        "id": "k6-mask407-order13916",
+        "m": 8,
+        "labels": [
+          3,
+          7,
+          2,
+          8,
+          6,
+          4,
+          1,
+          5
+        ],
+        "mask": 407,
+        "blocks": 6
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.037425041024107486,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "1/2",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "base": "65",
+        "pivots": 4
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "1/2",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "base": "65",
+        "pivots": 4
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "1/2",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "base": "65",
+        "pivots": 4
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "65",
+          "gamma": [
+            "11/2",
+            "11/2",
+            "6",
+            "6",
+            "11/2",
+            "11/2"
+          ],
+          "margin": "2"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 64,
+              "gamma": [
+                5,
+                8,
+                12,
+                6,
+                3,
+                6
+              ],
+              "state": [
+                0,
+                3,
+                0,
+                7,
+                0,
+                2,
+                8,
+                0,
+                6,
+                4,
+                1,
+                0,
+                5,
+                0
+              ],
+              "target": [
+                0,
+                3,
+                0,
+                7,
+                0,
+                2,
+                8,
+                0,
+                6,
+                4,
+                1,
+                0,
+                5,
+                0
+              ],
+              "word": "RRXLXLXLXRXRRRRXLXLXLXLLLLLXLLLXLXRRXRXRRXRXLLXLLXLXRXRXRXRXRRXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/2"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 66,
+              "gamma": [
+                6,
+                3,
+                0,
+                6,
+                8,
+                5
+              ],
+              "state": [
+                0,
+                3,
+                0,
+                7,
+                0,
+                2,
+                8,
+                0,
+                6,
+                4,
+                1,
+                0,
+                5,
+                0
+              ],
+              "target": [
+                0,
+                3,
+                0,
+                7,
+                0,
+                2,
+                8,
+                0,
+                6,
+                4,
+                1,
+                0,
+                5,
+                0
+              ],
+              "word": "XLLXRXRRXRXRXRRRRRXLXLXLXLXLLXRRRRXRRRXLLXLXLXLLXLLLXRXRXRRXRRXRRX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/2"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k7-mask446-order21538",
+        "m": 8,
+        "labels": [
+          5,
+          2,
+          8,
+          4,
+          3,
+          7,
+          1,
+          6
+        ],
+        "mask": 446,
+        "blocks": 7
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.07950787502340972,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "2/5",
+          "2/5",
+          "2/15",
+          "0",
+          "1/15",
+          "0"
+        ],
+        "base": "1082/15",
+        "pivots": 6
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "2/5",
+          "2/5",
+          "2/15",
+          "0",
+          "1/15",
+          "0"
+        ],
+        "base": "1082/15",
+        "pivots": 6
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "2/5",
+          "2/5",
+          "2/15",
+          "0",
+          "1/15",
+          "0"
+        ],
+        "base": "1082/15",
+        "pivots": 6
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "1082/15",
+          "gamma": [
+            "17/3",
+            "6",
+            "82/15",
+            "17/3",
+            "6",
+            "6",
+            "29/5"
+          ],
+          "margin": "13/15"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 67,
+              "gamma": [
+                5,
+                2,
+                1,
+                4,
+                7,
+                10,
+                7
+              ],
+              "state": [
+                5,
+                0,
+                2,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3,
+                0,
+                7,
+                1,
+                0,
+                6,
+                0
+              ],
+              "target": [
+                5,
+                0,
+                2,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3,
+                0,
+                7,
+                1,
+                0,
+                6,
+                0
+              ],
+              "word": "LXRXRXRXRXRRRRXRRXLXLXLLXLXLLXLLXRXRXRXRRRXRXRRRRRXRXRXRXRRXRRRXRXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "2/5"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 75,
+              "gamma": [
+                8,
+                11,
+                9,
+                6,
+                3,
+                3,
+                6
+              ],
+              "state": [
+                5,
+                0,
+                2,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3,
+                0,
+                7,
+                1,
+                0,
+                6,
+                0
+              ],
+              "target": [
+                5,
+                0,
+                2,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3,
+                0,
+                7,
+                1,
+                0,
+                6,
+                0
+              ],
+              "word": "RRXLLXLXLXLLLXRXLLLXRXRXRXRXRRRRXRRRXLXLXLLXLXLXLXLXLLLLLXRXRXRXRRRXRRRXRXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "2/5"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 74,
+              "gamma": [
+                1,
+                2,
+                5,
+                8,
+                12,
+                6,
+                3
+              ],
+              "state": [
+                5,
+                0,
+                2,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3,
+                0,
+                7,
+                1,
+                0,
+                6,
+                0
+              ],
+              "target": [
+                5,
+                0,
+                2,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3,
+                0,
+                7,
+                1,
+                0,
+                6,
+                0
+              ],
+              "word": "RXRXRXRRXRXRXRRXRRXLXLXLXLXLLXLLLXRRXRXRXLXLLXLLLLLXLXLXLLXLXLLLLXRXRRRRRX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "2/15"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 82,
+              "gamma": [
+                5,
+                8,
+                12,
+                9,
+                6,
+                0,
+                3
+              ],
+              "state": [
+                5,
+                0,
+                2,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3,
+                0,
+                7,
+                1,
+                0,
+                6,
+                0
+              ],
+              "target": [
+                5,
+                0,
+                2,
+                0,
+                8,
+                0,
+                4,
+                0,
+                3,
+                0,
+                7,
+                1,
+                0,
+                6,
+                0
+              ],
+              "word": "XLXLXLLLXLLXLLXLXRRXRRXRXRXRXRRXRRRXLXLXLXLXLLLXLLXLLXRXRRXRRXRXLXLLLXRXRXRXRXRXRX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/15"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    },
+    {
+      "case": {
+        "id": "k7-mask445-order34334",
+        "m": 8,
+        "labels": [
+          7,
+          6,
+          5,
+          1,
+          4,
+          3,
+          2,
+          8
+        ],
+        "mask": 445,
+        "blocks": 7
+      },
+      "status": "NO_CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.04069304099539295,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "9/26",
+          "9/52",
+          "3/26",
+          "19/52"
+        ],
+        "base": "3797/52",
+        "pivots": 4
+      },
+      "candidate_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "9/26",
+          "9/52",
+          "3/26",
+          "19/52"
+        ],
+        "base": "3797/52",
+        "pivots": 4
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "9/26",
+          "9/52",
+          "3/26",
+          "19/52"
+        ],
+        "base": "3797/52",
+        "pivots": 4
+      },
+      "baseline_certified": false,
+      "incumbent_certified": false,
+      "progress": null,
+      "certificate": null
+    },
+    {
+      "case": {
+        "id": "k7-mask431-order35142",
+        "m": 8,
+        "labels": [
+          7,
+          8,
+          5,
+          6,
+          2,
+          1,
+          3,
+          4
+        ],
+        "mask": 431,
+        "blocks": 7
+      },
+      "status": "NO_CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.03981270900112577,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "6/11",
+          "0",
+          "1/11",
+          "4/11"
+        ],
+        "base": "815/11",
+        "pivots": 4
+      },
+      "candidate_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "6/11",
+          "0",
+          "1/11",
+          "4/11"
+        ],
+        "base": "815/11",
+        "pivots": 4
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "6/11",
+          "0",
+          "1/11",
+          "4/11"
+        ],
+        "base": "815/11",
+        "pivots": 4
+      },
+      "baseline_certified": false,
+      "incumbent_certified": false,
+      "progress": null,
+      "certificate": null
+    },
+    {
+      "case": {
+        "id": "k7-mask499-order1814",
+        "m": 8,
+        "labels": [
+          1,
+          4,
+          6,
+          2,
+          7,
+          5,
+          3,
+          8
+        ],
+        "mask": 499,
+        "blocks": 7
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.03841779101639986,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "6/25",
+          "0",
+          "9/25",
+          "0",
+          "0",
+          "0",
+          "2/5"
+        ],
+        "base": "1761/25",
+        "pivots": 3
+      },
+      "candidate_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "6/25",
+          "0",
+          "9/25",
+          "0",
+          "0",
+          "0",
+          "2/5"
+        ],
+        "base": "1761/25",
+        "pivots": 3
+      },
+      "incumbent_lp": null,
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "6/25",
+          "0",
+          "9/25",
+          "0",
+          "0",
+          "0",
+          "2/5"
+        ],
+        "base": "1761/25",
+        "pivots": 3
+      },
+      "baseline_certified": true,
+      "incumbent_certified": true,
+      "progress": null,
+      "certificate": {
+        "bounds": {
+          "base": "1761/25",
+          "gamma": [
+            "27/5",
+            "6",
+            "6",
+            "27/5",
+            "24/5",
+            "149/25",
+            "28/5"
+          ],
+          "margin": "64/25"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 56,
+              "gamma": [
+                0,
+                3,
+                11,
+                8,
+                5,
+                2,
+                1
+              ],
+              "state": [
+                0,
+                1,
+                0,
+                4,
+                6,
+                2,
+                0,
+                7,
+                0,
+                5,
+                0,
+                3,
+                0,
+                8,
+                0
+              ],
+              "target": [
+                0,
+                1,
+                0,
+                4,
+                6,
+                2,
+                0,
+                7,
+                0,
+                5,
+                0,
+                3,
+                0,
+                8,
+                0
+              ],
+              "word": "RRRXRRXRXRXLXLLXRXRRRXRXRRRRRXLLLXLXLLXLXLXRRXRXRRRXLXRR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "6/25"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 65,
+              "gamma": [
+                5,
+                8,
+                6,
+                3,
+                0,
+                3,
+                6
+              ],
+              "state": [
+                0,
+                1,
+                0,
+                4,
+                6,
+                2,
+                0,
+                7,
+                0,
+                5,
+                0,
+                3,
+                0,
+                8,
+                0
+              ],
+              "target": [
+                0,
+                1,
+                0,
+                4,
+                6,
+                2,
+                0,
+                7,
+                0,
+                5,
+                0,
+                3,
+                0,
+                8,
+                0
+              ],
+              "word": "RRXLXLXLXLLLLLXLLXRXRXRRXRXRRRXRRRRXLXLXLXLXLLXRXLLXLXLXLXRRXRRRR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "9/25"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 84,
+              "gamma": [
+                9,
+                6,
+                3,
+                6,
+                9,
+                11,
+                8
+              ],
+              "state": [
+                0,
+                1,
+                0,
+                4,
+                6,
+                2,
+                0,
+                7,
+                0,
+                5,
+                0,
+                3,
+                0,
+                8,
+                0
+              ],
+              "target": [
+                0,
+                1,
+                0,
+                4,
+                6,
+                2,
+                0,
+                7,
+                0,
+                5,
+                0,
+                3,
+                0,
+                8,
+                0
+              ],
+              "word": "XLLXRXRRXRXLLXRXRRXRRRXRRXLXLXLXLXLLXLXLLLLXRXRXRXRXRRXRRXRXRRRRXLXLXLXLLXLXLLXRRRRR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "2/5"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    }
+  ],
+  "isolation": "macos_seatbelt",
+  "limitations": [
+    "Finite selected families only; universal scope of each accepted mixture relies on the direct word triangle expansion criterion."
+  ],
+  "reference_files": {
+    "catalog_sha256": "97bcf8c2324f03df3d58d0e7e6ad76684825b4a0204f2389c07e1baa30af177c",
+    "incumbent_sha256": null,
+    "dual_sha256": null
+  }
+}

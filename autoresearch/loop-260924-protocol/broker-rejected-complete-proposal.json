@@ -1,0 +1,8 @@
+{
+  "classification": "complete Grok response withheld from native GEPA because broker reservation overrun; offline diagnostic only",
+  "source_sha256": "d061094815415ad528e1f195423df107ac47aab4a33679bc936ab07cee1f6619",
+  "source_bytes": 5503,
+  "receipt_sha256": "287a8c11ee46cd923e928c8e954963650961b49ef49de0a0384f7a12f1ff2836",
+  "response_finish_reason": "stop",
+  "broker_status": 502
+}

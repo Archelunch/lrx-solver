@@ -1,0 +1,573 @@
+{
+  "engine": "gepa",
+  "upstream": "gepa==0.1.4",
+  "best_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/offline-replay-02/output/best.py",
+  "best_score": 0.023604081839745297,
+  "reflection_calls": 1,
+  "model_valid_responses": 1,
+  "model_preflight_failures": 0,
+  "mandatory_hard_case_ids": [
+    "k5-mask302-order15713"
+  ],
+  "reflection_batch_calls": 1,
+  "context_receipts": [],
+  "full_evaluation": {
+    "combined_score": 0.023604081839745297,
+    "artifacts": {
+      "feedback": "0 new exact family certificates versus incumbent; 15/16 total; 0 execution or format failures. Partial progress is diagnostic, not proof; misses do not prove infeasibility.",
+      "case_statuses": [
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok"
+      ],
+      "traces": [
+        {
+          "case_id": "k4-mask23-order35811",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07816699999966659,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "43",
+            "feasible_base_after": "43",
+            "strict_target": 55,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "0",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k4-mask135-order24096",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07553570801974274,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "725/14",
+            "feasible_base_after": "725/14",
+            "strict_target": 55,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "0",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k4-mask432-order21829",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.0733890830015298,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "209/4",
+            "feasible_base_after": "103/2",
+            "strict_target": 55,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "3/4",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k4-mask113-order3821",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.1232229580054991,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "342/7",
+            "feasible_base_after": "342/7",
+            "strict_target": 55,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "0",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask425-order11302",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.1284264580172021,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "631/11",
+            "feasible_base_after": "631/11",
+            "strict_target": 61,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "0",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask283-order33834",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.12671858401154168,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "176/3",
+            "feasible_base_after": "176/3",
+            "strict_target": 61,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "0",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask333-order27563",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.1293877909774892,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "243/4",
+            "feasible_base_after": "59",
+            "strict_target": 61,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "7/4",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask302-order15713",
+          "status": "NO_CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.1295077079848852,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "24149/392",
+            "feasible_base_after": "4297/70",
+            "strict_target": 61,
+            "strict_base_pass": false,
+            "base_deficit_after": "27/70",
+            "base_improvement": "429/1960",
+            "best_reduced_cost": "-19/14",
+            "negative_reduced_cost": "19/14",
+            "best_useful_words": [
+              {
+                "word": "XLXLXRXLLLLXLXRXRXLLLLXRXRXRXLLLLLXLXRXLLXRXLLXRXLLXRX",
+                "base": 54,
+                "gamma": [
+                  7,
+                  10,
+                  10,
+                  4,
+                  5
+                ],
+                "reduced_cost": "-19/14"
+              },
+              {
+                "word": "XLXLXRXRRRXRXRRXRRXLXRRXLXLXRRRXLXRRRRRRXRXLXLXRXLLXRX",
+                "base": 54,
+                "gamma": [
+                  9,
+                  12,
+                  8,
+                  2,
+                  7
+                ],
+                "reduced_cost": "-5/7"
+              },
+              {
+                "word": "XLXLXRXRRRXRXRRXRRXLXRRXRXLLXRXLLXLLLLXLXLXRRXLXLLXRX",
+                "base": 53,
+                "gamma": [
+                  8,
+                  11,
+                  9,
+                  3,
+                  8
+                ],
+                "reduced_cost": "-69/98"
+              }
+            ],
+            "secondary_grade": "29774/78837",
+            "rewardable": true,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [
+            {
+              "word": "XLXLXRXLLLLXLXRXRXLLLLXRXRXRXLLLLLXLXRXLLXRXLLXRXLLXRX",
+              "base": 54,
+              "gamma": [
+                7,
+                10,
+                10,
+                4,
+                5
+              ],
+              "reduced_cost": "-19/14"
+            },
+            {
+              "word": "XLXLXRXRRRXRXRRXRRXLXRRXLXLXRRRXLXRRRRRRXRXLXLXRXLLXRX",
+              "base": 54,
+              "gamma": [
+                9,
+                12,
+                8,
+                2,
+                7
+              ],
+              "reduced_cost": "-5/7"
+            },
+            {
+              "word": "XLXLXRXRRRXRXRRXRRXLXRRXRXLLXRXLLXLLLLXLXLXRRXLXLLXRX",
+              "base": 53,
+              "gamma": [
+                8,
+                11,
+                9,
+                3,
+                8
+              ],
+              "reduced_cost": "-69/98"
+            }
+          ],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "NO_CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask380-order36371",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.1292163329781033,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "2807/43",
+            "feasible_base_after": "2771/43",
+            "strict_target": 67,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "36/43",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask373-order37856",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.12971866599400528,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "1297/20",
+            "feasible_base_after": "321/5",
+            "strict_target": 67,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "13/20",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask359-order24703",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.13036920898593962,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "2067/32",
+            "feasible_base_after": "1095/17",
+            "strict_target": 67,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "99/544",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask315-order31970",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.12897000001976267,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "1136/17",
+            "feasible_base_after": "2785/42",
+            "strict_target": 67,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "367/714",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask351-order6128",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.13076191701111384,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "663/10",
+            "feasible_base_after": "661/10",
+            "strict_target": 73,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "1/5",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask491-order37059",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.1302307499863673,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "2262/31",
+            "feasible_base_after": "506/7",
+            "strict_target": 73,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "148/217",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask223-order9748",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.12759516699588858,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "1225/17",
+            "feasible_base_after": "1225/17",
+            "strict_target": 73,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "0",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask445-order23635",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.13174779200926423,
+            "isolation": "macos_seatbelt"
+          },
+          "progress": {
+            "feasible_base_before": "506/7",
+            "feasible_base_after": "506/7",
+            "strict_target": 73,
+            "strict_base_pass": true,
+            "base_deficit_after": "0",
+            "base_improvement": "0",
+            "best_reduced_cost": null,
+            "negative_reduced_cost": "0",
+            "best_useful_words": [],
+            "secondary_grade": "0",
+            "rewardable": false,
+            "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"
+          },
+          "best_useful_words": [],
+          "accepted_word_count": 32,
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        }
+      ],
+      "evaluation": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/offline-replay-02/verified/evaluations/result-0040.json"
+    },
+    "certified": 15,
+    "new_certified": 3,
+    "new_vs_incumbent": 0,
+    "secondary_score": "14887/630696",
+    "reference_hashes": {
+      "catalog": "d43b71decf04360571445ce0e55503c340b62a05937b6afb16a8d73fdb4ccfbe",
+      "incumbent": "89cf717736c40ae21aff1624d4fbead9b176199bfc1c87cee985fb0d3101d18b",
+      "dual": "0593268b122c5d1c4231ad7296daada32beaee9aa25f413dfa64eef9690d5778"
+    },
+    "candidate_hash": "e33fb8a21e0904c2899d63843e604d10e09503a3af01701ec8f8f07c372fc3ac"
+  }
+}

@@ -41,14 +41,14 @@ are documented in [the integration report](autoresearch/official-integration-260
 the subsequent [bounded live iteration](autoresearch/loop-260924-live/report.md)
 found one independent deterministic named-family certificate and no paid-arm
 improvement. A [follow-on protocol](autoresearch/loop-260924-protocol/REPORT.md)
-now freezes that 15/16 all-cuts control as incumbent, retains a new sealed
-16-case structural confirmation set, and exercises per-reflection development
-archive refresh in native GEPA with a mock broker. A separate synthetic graded
-fixture checks GEPA's selection path. Neither offline check is a mathematical
-gain. After the user approved the exact payload, two live Grok requests timed
-out without a response or candidate; the fail-fast recovery stopped, and no
-new certificate was found. This is an operational result, not an engine ranking.
-None of these results establishes a broader theorem or an engine ranking.
+froze that 15/16 all-cuts control. Its [continuation](autoresearch/loop-260924-protocol/CONTINUATION.md)
+found an independent conditional k5 bound when the first zero block has length
+at least 2. A complete Grok response exceeded the live broker reservation, so
+GEPA accepted no live proposal. The recovered source was verified separately
+and accepted in an offline GEPA replay. One-shot confirmation gave catalog
+12/16, all-cuts 13/16, and that source 14/16, one named family beyond the
+controls. Confirmation is consumed. The full conjecture remains open, and
+these runs do not establish literature priority or an optimizer ranking.
 
 ## Results so far
 
@@ -139,12 +139,11 @@ The separate official framework pilot evaluates executable word constructors
 against frozen structural families. Its live iteration found a deterministic
 all-cuts k6 certificate but no paid-search addition; the next official
 program-search target is the exact reduced-cost face of the remaining k5
-family. The [prepared protocol](autoresearch/loop-260924-protocol/REPORT.md)
-adds the all-cuts incumbent automatically to each trusted evaluation, so
-proposers can focus on up to 32 additional words per case. The new structural
-confirmation set remains sealed. The later authorized live requests timed out
-without a candidate; the failure calls for provider-path diagnosis before
-another full search.
+family. The [protocol continuation](autoresearch/loop-260924-protocol/CONTINUATION.md)
+adds the all-cuts incumbent automatically to each trusted development
+evaluation, so proposers can focus on up to 32 additional words per case.
+Its one-shot structural confirmation has been consumed and must not enter
+future model prompts.
 The mixture profile interpreter, numerical optimizer and exact rational
 acceptance checks are implemented. See the [next-iteration
 protocol](autoresearch/next-iteration.md), [ROADMAP.md](ROADMAP.md), and current

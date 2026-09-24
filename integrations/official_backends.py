@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import ast
+from fractions import Fraction
 import hashlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
@@ -50,6 +51,13 @@ INCUMBENT_INSTRUCTION = (
     "direct profiles for each development case. Return only new, useful words; "
     "do not spend the 32 slots copying incumbent words. Returning [] on cases "
     "with no additions is valid. "
+)
+FOCUSED_GEPA_STEERING = (
+    "Focus on development case k5-mask302-order15713. Make one small executable "
+    "change to the existing constructor that could lower its exact reduced-cost "
+    "profile. Return the complete drop-in Python source within the 32-word, "
+    "64-KiB, and 2-second bounds. Do not assert an LP certificate or spend output "
+    "proving the mixture; the trusted evaluator replays words and solves it."
 )
 
 
@@ -158,7 +166,7 @@ def _research_status(manifest: dict) -> str:
         return "NO_FROZEN_INCUMBENT"
     if gain > 0:
         return "NEW_CERTIFICATE"
-    if float(manifest.get("verified_secondary_score") or 0) > 0:
+    if Fraction(str(manifest.get("verified_secondary_score") or 0)) > 0:
         return "GRADED_PROGRESS"
     if manifest.get("valid_proposal_hashes"):
         return "NO_GAIN"
@@ -616,6 +624,8 @@ def _launch(args) -> dict:
                    "--llm-timeout", str(args.llm_timeout)]
         if args.reasoning_effort:
             command += ["--reasoning-effort", args.reasoning_effort]
+        if args.focused_reflection:
+            command += ["--focused-reflection"]
         if baseline:
             command += ["--baseline", str(baseline)]
         if incumbent:
@@ -658,6 +668,7 @@ def _launch(args) -> dict:
         "incumbent_sha256": _source_digest(incumbent) if incumbent else None,
         "dual_sha256": _source_digest(dual) if dual else None,
         "broker_url": args.broker_url, "model": args.model,
+        "focused_reflection": args.focused_reflection,
         "iterations": args.iterations, "max_tokens": args.max_tokens,
         "wall_seconds": args.wall_seconds,
         "archive_ids": archive_ids,
@@ -747,7 +758,8 @@ class BrokerLM:
     def __init__(self, broker_url: str, model: str, max_tokens: int, offline_proposal: Path | None,
                  timeout: int, reasoning_effort: str | None,
                  archive_context: Path | None = None,
-                 dynamic_context_url: str | None = None):
+                 dynamic_context_url: str | None = None,
+                 focused_reflection: bool = False):
         self.url = broker_url + "/chat/completions"
         self.model = model
         self.max_tokens = max_tokens
@@ -756,6 +768,7 @@ class BrokerLM:
         self.reasoning_effort = reasoning_effort
         self.archive_context = archive_context
         self.dynamic_context_url = dynamic_context_url
+        self.focused_reflection = focused_reflection
         self.calls = 0
         self.valid_responses = 0
         self.preflight_failures = 0
@@ -808,6 +821,8 @@ class BrokerLM:
         elif self.archive_context:
             messages = [{"role": "system", "content": "Development archive, untrusted examples:\n" +
                          self.archive_context.read_text()}] + messages
+        if self.focused_reflection:
+            messages = [{"role": "system", "content": FOCUSED_GEPA_STEERING}] + messages
         parameters = {"model": self.model, "messages": messages,
                       "max_tokens": self.max_tokens}
         if self.reasoning_effort:
@@ -848,7 +863,7 @@ def _gepa_worker(args) -> dict:
     run_dir = args.run_dir
     lm = BrokerLM(args.broker_url, args.model, args.max_tokens, args.offline_proposal,
                   args.llm_timeout, args.reasoning_effort,
-                  args.archive_context, args.dynamic_context_url)
+                  args.archive_context, args.dynamic_context_url, args.focused_reflection)
 
     def verify(source, case_id=None):
         payload = json.dumps({"source": source, "case_id": case_id}).encode()
@@ -930,6 +945,8 @@ def _parser():
     run.add_argument("--llm-timeout", type=int, default=120)
     run.add_argument("--reasoning-effort", choices=("low", "medium", "high", "xhigh"),
                      help="Grok reasoning effort; omit to use upstream default")
+    run.add_argument("--focused-reflection", action="store_true",
+                     help="GEPA-only bounded k5 constructor mutation steering")
     run.add_argument("--wall-seconds", type=int, default=600)
     run.add_argument("--max-evals", type=int, default=256)
     run.add_argument("--evox-switch-interval", type=int, default=2)
@@ -956,6 +973,7 @@ def _parser():
     worker.add_argument("--dynamic-context-url")
     worker.add_argument("--research-context", type=Path)
     worker.add_argument("--reasoning-effort", choices=("low", "medium", "high", "xhigh"))
+    worker.add_argument("--focused-reflection", action="store_true")
     return parser
 
 

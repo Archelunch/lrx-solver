@@ -1,0 +1,180 @@
+{
+  "selection_sha256": "c3b369c683cf8e61cda37ac36f4609fef666d61a10954bfb3afdd482443199f8",
+  "receipt_sha256": "3c48c76a2bfd3bbde34786cbb0e0f1f6c72961d4eb6dd09217a1287d0ab7946d",
+  "confirmation_cases": 16,
+  "arms": {
+    "fixed_catalog_only": {
+      "source_sha256": "bf0cad88e465e924a0fcdad5810448ee3e72ec228805c92a1e713c22bc3ea6cb",
+      "evaluation_sha256": "ea1bfb417938a3c40ffea4eeea1651163a2d2ddf93e92e48e65658be12866af8",
+      "certified": 12,
+      "new_vs_catalog": 0,
+      "accepted_word_checks": 0,
+      "certificate_support_checks": 33,
+      "nonunit_literal_replays": 99,
+      "certified_ids": [
+        "k4-mask108-order9175",
+        "k4-mask232-order30329",
+        "k4-mask240-order30976",
+        "k4-mask51-order29916",
+        "k5-mask217-order5339",
+        "k5-mask244-order32827",
+        "k5-mask316-order1893",
+        "k6-mask252-order24816",
+        "k6-mask363-order39289",
+        "k6-mask407-order13916",
+        "k7-mask446-order21538",
+        "k7-mask499-order1814"
+      ]
+    },
+    "deterministic_all_cuts": {
+      "source_sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+      "evaluation_sha256": "e197e376229e6951b0ba6b1f9f32e1f99bee7d9bad1a2bf368c5ed4a7a5a2873",
+      "certified": 13,
+      "new_vs_catalog": 1,
+      "accepted_word_checks": 331,
+      "certificate_support_checks": 40,
+      "nonunit_literal_replays": 120,
+      "certified_ids": [
+        "k4-mask108-order9175",
+        "k4-mask232-order30329",
+        "k4-mask240-order30976",
+        "k4-mask51-order29916",
+        "k5-mask217-order5339",
+        "k5-mask244-order32827",
+        "k5-mask316-order1893",
+        "k6-mask252-order24816",
+        "k6-mask363-order39289",
+        "k6-mask407-order13916",
+        "k7-mask445-order34334",
+        "k7-mask446-order21538",
+        "k7-mask499-order1814"
+      ]
+    },
+    "broker_rejected_complete_grok": {
+      "source_sha256": "d061094815415ad528e1f195423df107ac47aab4a33679bc936ab07cee1f6619",
+      "evaluation_sha256": "165c9493dfa503769dca1916c90a0b20a72d15c230772bc064534797d086bfb9",
+      "certified": 14,
+      "new_vs_catalog": 2,
+      "accepted_word_checks": 512,
+      "certificate_support_checks": 44,
+      "nonunit_literal_replays": 132,
+      "certified_ids": [
+        "k4-mask108-order9175",
+        "k4-mask232-order30329",
+        "k4-mask240-order30976",
+        "k4-mask51-order29916",
+        "k5-mask217-order5339",
+        "k5-mask244-order32827",
+        "k5-mask316-order1893",
+        "k6-mask221-order731",
+        "k6-mask252-order24816",
+        "k6-mask363-order39289",
+        "k6-mask407-order13916",
+        "k7-mask445-order34334",
+        "k7-mask446-order21538",
+        "k7-mask499-order1814"
+      ]
+    }
+  },
+  "fixed_profile_checks": 252,
+  "accepted_word_checks": 843,
+  "certificate_support_checks": 117,
+  "nonunit_literal_replays": 351,
+  "allcuts_additions_vs_catalog": [
+    "k7-mask445-order34334"
+  ],
+  "grok_additions_vs_allcuts": [
+    "k6-mask221-order731"
+  ],
+  "union_certified": 14,
+  "union_certified_ids": [
+    "k4-mask108-order9175",
+    "k4-mask232-order30329",
+    "k4-mask240-order30976",
+    "k4-mask51-order29916",
+    "k5-mask217-order5339",
+    "k5-mask244-order32827",
+    "k5-mask316-order1893",
+    "k6-mask221-order731",
+    "k6-mask252-order24816",
+    "k6-mask363-order39289",
+    "k6-mask407-order13916",
+    "k7-mask445-order34334",
+    "k7-mask446-order21538",
+    "k7-mask499-order1814"
+  ],
+  "union_new_vs_catalog_plus_allcuts": [
+    {
+      "case_id": "k6-mask221-order731",
+      "base": "1255/19",
+      "slopes": [
+        "110/19",
+        "110/19",
+        "6",
+        "6",
+        "108/19",
+        "102/19"
+      ],
+      "support": [
+        {
+          "origin": "catalog",
+          "weight": "3/19",
+          "base": 48,
+          "gamma": [
+            4,
+            8,
+            11,
+            9,
+            3,
+            0
+          ],
+          "word": "LLXRXLLXLXRXRXRRRXLXLXLXLXLXLXLLXLXLLXRXRXRRRRRR"
+        },
+        {
+          "origin": "catalog",
+          "weight": "9/19",
+          "base": 76,
+          "gamma": [
+            7,
+            1,
+            2,
+            5,
+            11,
+            9
+          ],
+          "word": "XRRXRXRRXRXLLXLLLXRXRXRRXLXLLXLLLXRXRXRXRXRRXRRRXLXLXLLXLLLLLLLLXLXLXLXLLXRR"
+        },
+        {
+          "origin": "broker_rejected_grok",
+          "weight": "7/19",
+          "base": 61,
+          "gamma": [
+            5,
+            11,
+            9,
+            6,
+            0,
+            3
+          ],
+          "word": "RXLXLXLXRXRXRRRXLXLXLXLXLXLXRXRXLLLLXRXRXLLLLXLXRRXLXRRXRRRRR"
+        }
+      ]
+    }
+  ],
+  "k6_old_pool_dual": {
+    "columns_checked": 29,
+    "mu": [
+      "0",
+      "0",
+      "1",
+      "59/12",
+      "1/12",
+      "0"
+    ],
+    "nu": "207/2",
+    "minimum_old_reduced_cost": "0",
+    "old_pool_primal_equals_dual": "135/2",
+    "new_grok_word_reduced_cost": "-4"
+  },
+  "scope": "Consumed one-shot confirmation, saved outputs only. Missing certificates do not prove infeasibility; recovered Grok source was broker-rejected, not an accepted native GEPA proposal."
+}

@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_BEFORE_CONFIRMATION",
+  "purpose": "one-shot 16-case structural confirmation with fixed catalog baseline; no model receives outputs",
+  "confirmation_cases_sha256": "f97d39992de054b7f725482107376d85f06e46374003ffb657515f88486a62b9",
+  "confirmation_baseline_sha256": "97bcf8c2324f03df3d58d0e7e6ad76684825b4a0204f2389c07e1baa30af177c",
+  "frozen_manifest_sha256": "e75836b984d2aef04ef48fa26f17dce9bc42e9d030e9905d92a8f9f1350ea1fd",
+  "comparison_rule": "catalog control, all-cuts control, and exact recovered Grok source; audit any distinct words/certificates against catalog plus all-cuts without tuning sources",
+  "sources": [
+    {
+      "label": "fixed_catalog_only",
+      "role": "control",
+      "source_snapshot": "autoresearch/loop-260924-protocol/confirmation-one-shot/fixed_catalog_only.py",
+      "sha256": "bf0cad88e465e924a0fcdad5810448ee3e72ec228805c92a1e713c22bc3ea6cb"
+    },
+    {
+      "label": "deterministic_all_cuts",
+      "role": "control",
+      "source_snapshot": "autoresearch/loop-260924-protocol/confirmation-one-shot/deterministic_all_cuts.py",
+      "sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884"
+    },
+    {
+      "label": "broker_rejected_complete_grok",
+      "role": "provider-completed broker-rejected offline-only",
+      "source_snapshot": "autoresearch/loop-260924-protocol/confirmation-one-shot/broker_rejected_complete_grok.py",
+      "sha256": "d061094815415ad528e1f195423df107ac47aab4a33679bc936ab07cee1f6619"
+    }
+  ]
+}

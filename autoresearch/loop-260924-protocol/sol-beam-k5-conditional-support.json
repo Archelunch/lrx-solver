@@ -1,0 +1,85 @@
+{
+  "case_id": "k5-mask302-order15713",
+  "source_sha256": "5eebd52cd158f497ba0b609c23d9396b14c192d843f5df8fc5f707ec5418908b",
+  "evaluation_sha256": "d3468f9dc8f60be46a8773e106028f0c9383fe4ef3873d39910c1eafcb2e7069",
+  "base": "2147/35",
+  "gamma": [
+    "28/5",
+    "6",
+    "6",
+    "6",
+    "6"
+  ],
+  "support": [
+    {
+      "pool_index": 1,
+      "origin": "fixed",
+      "weight": "3/40",
+      "base": 56,
+      "gamma": [
+        5,
+        8,
+        12,
+        6,
+        3
+      ],
+      "word": "XLXLXLLLLXRXLXLLXRXRXRRXLXLLLLXRXRXRXRXRXRXRRXRRRXLXLXLX"
+    },
+    {
+      "pool_index": 2,
+      "origin": "fixed",
+      "weight": "2/5",
+      "base": 61,
+      "gamma": [
+        9,
+        6,
+        3,
+        3,
+        12
+      ],
+      "word": "RRRXLXRXRRRXLLXLXLXLXLLXLLXRXLLLXRXRXRRRXRRRRRXLXLXLXLXRXRXRX"
+    },
+    {
+      "pool_index": 3,
+      "origin": "fixed",
+      "weight": "23/70",
+      "base": 64,
+      "gamma": [
+        2,
+        5,
+        8,
+        9,
+        0
+      ],
+      "word": "XLLXLLXRXRRXLXLXLLLLLXLLXRXRXRXRXRXRXLLLXLXRRXLXLLLXRXRXRXRXRXRR"
+    },
+    {
+      "pool_index": 6,
+      "origin": "fixed",
+      "weight": "1/10",
+      "base": 67,
+      "gamma": [
+        1,
+        2,
+        5,
+        12,
+        3
+      ],
+      "word": "RXRRRXRXRXLLXLLLLLLXLLXRXLLLXLXLXLLXRXRXRXRRXLXLXLXLLLXRXRXRXRXRRXR"
+    },
+    {
+      "pool_index": 43,
+      "origin": "beam",
+      "weight": "27/280",
+      "base": 52,
+      "gamma": [
+        9,
+        12,
+        8,
+        2,
+        7
+      ],
+      "word": "XLXRRRXLXRRXLXLXLXRXRRRRXRRXRXRXLLXLXRXRXRRRXRXRXRXL"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "exact finite-pool dual for frozen development k5, 27 fixed direct columns plus 32 Sol allcuts64 columns",
+  "case_id": "k5-mask302-order15713",
+  "source_sha256": "29df962327cba31c254964f34c8318e7d14b2652237abd7d676e756f5c41b271",
+  "evaluation_sha256": "0e7e23a064460e7a87096fb3a198057a3dd7822c54206d25226bf88eafdde512",
+  "broker_rejected_source_sha256": "d061094815415ad528e1f195423df107ac47aab4a33679bc936ab07cee1f6619",
+  "broker_rejected_evaluation_sha256": "aed66da40d2b241a95861fc11da2a0469c151270795f38af892e91c5adcba3d4",
+  "reweighted_source_sha256": "2e72f7de60d18c1c5a0a2536a3b09633a4b164c87e4140a96264a0655f83cb22",
+  "reweighted_evaluation_sha256": "bb70438fe6f143fb3c259b89e0b5ebe7a586988d08e21e5f986f03ab7aa870f6",
+  "support_indices": [1, 2, 3, 6, 32],
+  "tight_slope_indices_zero_based": [1, 2, 3, 4],
+  "mu": ["11/5", "1/2", "19/20", "3/4"],
+  "nu": "1751/20",
+  "primal_and_dual_base": "1223/20"
+}

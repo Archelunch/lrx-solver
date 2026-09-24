@@ -1,0 +1,21 @@
+{
+  "kind": "readiness_probe",
+  "model": "grok-4.7",
+  "prior_generation_attempts": 2,
+  "prior_generation_charged_usd": 0.4010996,
+  "prior_metadata_get_contacts": 1,
+  "broker_max_requests": 1,
+  "broker_max_usd": 4.5989004,
+  "broker_timeout_seconds": 30,
+  "wall_deadline_seconds": 45,
+  "max_completion_tokens": 32,
+  "reasoning_effort": "low",
+  "broker_http_status": 200,
+  "finish_reason": "stop",
+  "reply_exact": false,
+  "usage_present": true,
+  "elapsed_seconds": 2.463,
+  "upstream_attempts": 1,
+  "ledger_spent_usd": 0.003704800000000008,
+  "ledger_halted_reason": null
+}

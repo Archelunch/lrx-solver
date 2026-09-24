@@ -4,12 +4,21 @@
     "receipt": "authorization-receipt.json",
     "user_quote": "yes, I approve send it to grok\nStart next autoresearch iteration to prove LRX"
   },
-  "claim_boundary": "Native mock and synthetic fixture validate integration behavior only; finite development dual guidance and 15/16 inherited control do not prove the remaining family or the general conjecture.",
+  "claim_boundary": "Sol-derived k5 criterion applies when first retained zero block length>=2, not the missing unit-block family. Recovered Grok source adds one named all-positive-length holdout certificate beyond frozen catalog+allcuts; literature priority and general conjecture remain open. Live native GEPA accepted no proposal; zero-provider offline native replay accepted the source.",
   "confirmation": {
     "case_count": 16,
     "manifest": "frozen/manifest.json",
-    "prompt_access": "EXCLUDED",
-    "status": "SEALED_UNEVALUATED_UNCONSUMED"
+    "prompt_access": "EXCLUDED_PERMANENTLY",
+    "status": "CONSUMED_ONE_SHOT_AUDITED",
+    "selection": "confirmation-one-shot/selection-frozen.json",
+    "receipts": "confirmation-one-shot/run-receipts.json",
+    "audit": "confirmation-one-shot/independent-audit.json",
+    "control_counts": {
+      "catalog": 12,
+      "allcuts": 13,
+      "recovered_grok": 14
+    },
+    "new_beyond_catalog_plus_allcuts": "k6-mask221-order731"
   },
   "development": {
     "allcuts_incumbent": "frozen/allcuts_seed.py",
@@ -38,13 +47,14 @@
     "initial_rejection_before_process": true,
     "metadata_get_http_200": true,
     "provider_actual_charge": "unknown",
-    "remaining_contacts_under_24": 21,
-    "total_external_http_contacts": 3,
-    "valid_proposals": 0
+    "remaining_contacts_under_24": 18,
+    "total_external_http_contacts": 6,
+    "valid_proposals": 0,
+    "historical_scope": "initial_two_timeouts_only; continuation below"
   },
   "live_summary": "live-summary.json",
-  "mathematical_result": "NO_NEW_CERTIFICATE_THIS_ITERATION",
-  "next_action": "Diagnose Grok chat-completion response latency/account/provider path before another full search. No further calls in this iteration; preserve sealed confirmation.",
+  "mathematical_result": "CONDITIONAL_K5_SUBFAMILY_AND_ONE_NAMED_HOLDOUT_FAMILY_VS_FROZEN_CONTROLS; GENERAL_CONJECTURE_OPEN",
+  "next_action": "Do not reuse consumed confirmation in prompts. Pursue a strict unit-block k5 certificate using a newly frozen development/holdout design; retain fail-closed budget and exact replay. No further paid calls are planned in this session.",
   "offline_evidence": {
     "final_tests": "final-tests.log",
     "native_gepa_manifest": "offline-gepa-native-01/manifest.json",
@@ -56,12 +66,38 @@
     "max_conservative_usd": 5.0,
     "max_upstream_attempts": 24
   },
-  "recorded_original_50_remaining_conservative_usd": 17.2117294,
+  "recorded_original_50_remaining_conservative_usd": 16.6923578,
   "recorded_prior_remaining_usd": 17.612829,
-  "remaining_session_usd": 4.5989004,
-  "report": "REPORT.md",
+  "remaining_session_usd": 4.0795288,
+  "report": "CONTINUATION.md",
   "results": "results.tsv",
   "schema": "lrx-autoresearch-handoff-v1",
   "session": "loop-260924-protocol",
-  "status": "COMPLETE_OPERATIONAL_TIMEOUT_NO_CANDIDATE"
+  "status": "COMPLETE_CONFIRMATION_CONSUMED_ONE_NAMED_HOLDOUT_ADDITION",
+  "prior_report": "REPORT.md",
+  "continuation": {
+    "generation_contacts_added": 3,
+    "metadata_contacts_added": 0,
+    "generation_contacts_total": 5,
+    "external_http_contacts_total": 6,
+    "conservative_usd_added": 0.5193716,
+    "conservative_usd_total": 0.9204712,
+    "remaining_session_usd": 4.0795288,
+    "stream_diagnostic": "stream-diagnostic-01.md",
+    "stream_focused_ledger": "broker-ledger-stream-focused-01.json",
+    "live_native_manifest": "gepa-live-stream-focused-01/manifest.json",
+    "live_native_status": "INCOMPLETE_BROKER_RESERVATION_OVERRUN",
+    "recovered_source": "broker-rejected-complete-proposal.py",
+    "offline_native_replay_manifest": "offline-replay-02/manifest.json",
+    "offline_native_replay_status": "COMPLETE_GRADED_PROGRESS_NO_DEVELOPMENT_CERTIFICATE_GAIN",
+    "sol_k5_report": "sol-beam-k5-allcuts64-report.md",
+    "sol_conditional_proof": "sol-beam-k5-conditional-proof.md",
+    "confirmation_proof": "confirmation-one-shot/k6-mask221-proof.md",
+    "final_tests": "final-tests-stream-closed.log",
+    "archive_snapshot_local": {
+      "path": "development-archive-stream-continuation-final.sqlite",
+      "rows": 41,
+      "sha256": "ef9c6c3e7bdd936db355af19adb6e1e0179a8c068b5539bbf5e0992d84dee75d"
+    }
+  }
 }

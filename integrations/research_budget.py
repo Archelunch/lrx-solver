@@ -12,6 +12,7 @@ import json
 import math
 import os
 import re
+import socket
 import threading
 import time
 import urllib.error
@@ -50,6 +51,146 @@ def _sanitize(value, credential):
 
 def _utc_now():
     return datetime.now(timezone.utc).isoformat()
+
+
+def _stream_snapshot(progress):
+    """Copy fixed fields without iterating a reader-mutated mapping or list."""
+    keys = ("headers_seconds", "first_event_seconds", "first_reasoning_seconds",
+            "first_content_seconds", "done_seconds", "cancelled_seconds",
+            "response_bytes", "event_count", "reasoning_chars", "content_chars")
+    snapshot = {key: progress.get(key) for key in keys}
+    snapshot["events"] = list(progress["events"])
+    return snapshot
+
+
+def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress):
+    """Read xAI SSE to a chat JSON response with a hard total wall deadline.
+
+    The fetch runs in a daemon thread so a stalled header or SSE read cannot
+    extend the budgeted attempt past the deadline. The broker fail-stops if a
+    complete stream and its final usage are unavailable.
+    """
+    outcome = {}
+    stop = threading.Event()
+    active_response = []
+
+    def read():
+        try:
+            response = fetch()
+            active_response.append(response)
+            with response:
+                if stop.is_set():
+                    return
+                progress["headers_seconds"] = time.monotonic() - started
+                data_lines = []
+                content = []
+                role = "assistant"
+                finish_reason = None
+                usage = None
+                last_event_had_usage = False
+                identity = {}
+                done = False
+
+                def accept_event():
+                    nonlocal role, finish_reason, usage, done, last_event_had_usage
+                    if stop.is_set():
+                        return
+                    if not data_lines:
+                        return
+                    value = "\n".join(data_lines)
+                    data_lines.clear()
+                    if value == "[DONE]":
+                        done = True
+                        progress["done_seconds"] = time.monotonic() - started
+                        return
+                    event = json.loads(value)
+                    if not isinstance(event, dict):
+                        raise ValueError("invalid SSE event")
+                    progress["events"].append(event)
+                    progress["event_count"] += 1
+                    if progress.get("first_event_seconds") is None:
+                        progress["first_event_seconds"] = time.monotonic() - started
+                    for key in ("id", "model", "created", "system_fingerprint"):
+                        if key in event and key not in identity:
+                            identity[key] = event[key]
+                    last_event_had_usage = isinstance(event.get("usage"), dict)
+                    if last_event_had_usage:
+                        usage = event["usage"]
+                    choices = event.get("choices")
+                    if not isinstance(choices, list) or not choices:
+                        return
+                    first = choices[0]
+                    if not isinstance(first, dict):
+                        raise ValueError("invalid SSE choice")
+                    delta = first.get("delta") or {}
+                    if not isinstance(delta, dict):
+                        raise ValueError("invalid SSE delta")
+                    if isinstance(delta.get("role"), str):
+                        role = delta["role"]
+                    reasoning = delta.get("reasoning_content")
+                    if isinstance(reasoning, str) and reasoning:
+                        progress["reasoning_chars"] += len(reasoning)
+                        if progress.get("first_reasoning_seconds") is None:
+                            progress["first_reasoning_seconds"] = time.monotonic() - started
+                    text = delta.get("content")
+                    if isinstance(text, str) and text:
+                        content.append(text)
+                        progress["content_chars"] += len(text)
+                        if progress.get("first_content_seconds") is None:
+                            progress["first_content_seconds"] = time.monotonic() - started
+                    if first.get("finish_reason") is not None:
+                        finish_reason = first["finish_reason"]
+
+                while not done and not stop.is_set():
+                    line = response.readline(max_bytes - progress["response_bytes"] + 1)
+                    if stop.is_set():
+                        break
+                    if not line:
+                        accept_event()
+                        break
+                    progress["response_bytes"] += len(line)
+                    if progress["response_bytes"] > max_bytes:
+                        raise ValueError("upstream response byte cap exceeded")
+                    stripped = line.decode("utf-8").rstrip("\r\n")
+                    if stripped.startswith("data:"):
+                        data_lines.append(stripped[5:].lstrip())
+                    elif not stripped:
+                        accept_event()
+                if not done:
+                    raise ValueError("stream ended without [DONE]")
+                if not last_event_had_usage or not isinstance(usage, dict):
+                    raise ValueError("stream ended without final usage")
+                if finish_reason is None:
+                    raise ValueError("stream ended without finish reason")
+                outcome["result"] = {**identity, "object": "chat.completion",
+                                     "choices": [{"index": 0, "message": {"role": role,
+                                                                     "content": "".join(content)},
+                                                  "finish_reason": finish_reason}],
+                                     "usage": usage}
+        except BaseException as exc:
+            outcome["error"] = exc
+
+    worker = threading.Thread(target=read, daemon=True)
+    worker.start()
+    worker.join(max(0, deadline_seconds - (time.monotonic() - started)))
+    if worker.is_alive():
+        stop.set()
+        if active_response:
+            response = active_response[0]
+            try:
+                response.fp.raw._sock.shutdown(socket.SHUT_RDWR)
+            except (AttributeError, OSError):
+                pass
+            try:
+                response.close()
+            except OSError:
+                pass
+        worker.join(0.1)
+        progress["cancelled_seconds"] = time.monotonic() - started
+        raise TimeoutError("stream total wall deadline exceeded")
+    if "error" in outcome:
+        raise outcome["error"]
+    return outcome["result"]
 
 
 class DurableBudget:
@@ -193,7 +334,8 @@ class DurableBudget:
 class Broker(HTTPServer):
     def __init__(self, address, *, upstream_url, model, api_key_env, ledger,
                  max_prompt_bytes=120_000, max_response_bytes=8_000_000,
-                 max_tokens=4000, reasoning_reserve=20_000, timeout=180):
+                 max_tokens=4000, reasoning_reserve=20_000, timeout=180,
+                 upstream_stream=False):
         _validate_https_url(upstream_url)
         if not model or not api_key_env.isidentifier():
             raise ValueError("invalid model or credential variable")
@@ -213,6 +355,7 @@ class Broker(HTTPServer):
         self.max_tokens = max_tokens
         self.reasoning_reserve = reasoning_reserve
         self.timeout = timeout
+        self.upstream_stream = upstream_stream
         super().__init__(address, BrokerHandler)
 
 
@@ -264,15 +407,17 @@ class BrokerHandler(BaseHTTPRequestHandler):
                 raise ValueError("chat messages required")
             accepted = {"model", "messages", "max_tokens", "max_completion_tokens",
                         "temperature", "top_p", "stop", "seed", "reasoning_effort",
-                        "response_format", "stream", "n"}
+                        "response_format", "stream", "stream_options", "n"}
             if set(payload) - accepted:
                 raise ValueError("unsupported chat request fields")
             if payload.get("n", 1) != 1 or type(payload.get("n", 1)) is not int:
                 raise ValueError("n must equal 1")
             if "max_tokens" in payload and "max_completion_tokens" in payload:
                 raise ValueError("specify one output token bound")
-            if payload.get("stream"):
-                raise ValueError("streaming is unsupported by the budget broker")
+            if type(payload.get("stream", False)) is not bool:
+                raise ValueError("stream must be boolean")
+            if payload.get("stream", False) or "stream_options" in payload:
+                raise ValueError("client streaming is unsupported; use broker upstream-stream mode")
             if payload.get("tools") or payload.get("functions"):
                 raise ValueError("tool calls are unsupported by the budget broker")
             output_tokens = payload.get("max_completion_tokens", payload.get("max_tokens"))
@@ -283,8 +428,21 @@ class BrokerHandler(BaseHTTPRequestHandler):
                 raise ValueError("text chat messages required")
             if payload.get("model") != self.server.model:
                 raise ValueError("request model does not match broker model")
+            streaming = self.server.upstream_stream
+            wire_payload = dict(payload)
+            if self.server.upstream_stream:
+                # GEPA still sends and receives ordinary JSON. Only the
+                # broker/provider leg streams, exposing timing and partial
+                # reasoning evidence without changing native GEPA's API.
+                if "max_tokens" in wire_payload:
+                    wire_payload["max_completion_tokens"] = wire_payload.pop("max_tokens")
+                wire_payload["stream"] = True
+                wire_payload["stream_options"] = {"include_usage": True}
+            wire_body = json.dumps(wire_payload).encode() if self.server.upstream_stream else body
+            if len(wire_body) > self.server.max_prompt_bytes:
+                raise ValueError("forwarded request byte cap exceeded")
             attempt_id = self.server.ledger.reserve(
-                len(body), output_tokens + self.server.reasoning_reserve, role=role)
+                len(wire_body), output_tokens + self.server.reasoning_reserve, role=role)
         except BudgetExceeded as exc:
             self._json(429, {"error": {"message": str(exc), "type": "budget_exhausted"}})
             return
@@ -295,10 +453,13 @@ class BrokerHandler(BaseHTTPRequestHandler):
         receipt = {"attempt_id": attempt_id, "role": role,
                    "request_at_utc": _utc_now(), "request_bytes": len(body),
                    "request_sha256": hashlib.sha256(body).hexdigest(),
+                   "forwarded_request_bytes": len(wire_body),
+                   "forwarded_request_sha256": hashlib.sha256(wire_body).hexdigest(),
                    "declared_context_sha256": context_hash,
                    "declared_archive_ids": archive_ids,
                    "upstream_endpoint": self.server.upstream_url + "/chat/completions",
                    "request_payload": _sanitize(payload, key),
+                   "forwarded_request_payload": _sanitize(wire_payload, key),
                    "response_payload": None, "response_status": None,
                    "latency_seconds": None, "finish_reason": None,
                    "response_role": None}
@@ -316,20 +477,34 @@ class BrokerHandler(BaseHTTPRequestHandler):
             self._json(503, {"error": {"message": "upstream credential unavailable"}})
             return
         request = urllib.request.Request(
-            self.server.upstream_url + "/chat/completions", data=body,
+            self.server.upstream_url + "/chat/completions", data=wire_body,
             headers={"Content-Type": "application/json", "Authorization": "Bearer " + key},
             method="POST")
         opener = urllib.request.build_opener(_NoRedirectHandler())
         settled = False
         raw = None
+        stream_progress = None
         try:
-            with opener.open(request, timeout=self.server.timeout) as response:
-                raw = response.read(self.server.max_response_bytes + 1)
-                if len(raw) > self.server.max_response_bytes:
-                    raise ValueError("upstream response byte cap exceeded")
-                result = json.loads(raw)
-                if not isinstance(result, dict):
-                    raise ValueError("invalid upstream response")
+            if streaming:
+                stream_progress = {"headers_seconds": None, "first_event_seconds": None,
+                                   "first_reasoning_seconds": None, "first_content_seconds": None,
+                                   "done_seconds": None, "response_bytes": 0,
+                                   "event_count": 0, "reasoning_chars": 0,
+                                   "content_chars": 0, "events": []}
+                result = _buffer_chat_stream(
+                    lambda: opener.open(request, timeout=self.server.timeout),
+                    deadline_seconds=self.server.timeout,
+                    max_bytes=self.server.max_response_bytes,
+                    started=request_started, progress=stream_progress)
+                raw = json.dumps(result).encode()
+            else:
+                with opener.open(request, timeout=self.server.timeout) as response:
+                    raw = response.read(self.server.max_response_bytes + 1)
+                    if len(raw) > self.server.max_response_bytes:
+                        raise ValueError("upstream response byte cap exceeded")
+                    result = json.loads(raw)
+                    if not isinstance(result, dict):
+                        raise ValueError("invalid upstream response")
             choices = result.get("choices")
             first = choices[0] if isinstance(choices, list) and choices and isinstance(choices[0], dict) else {}
             message = first.get("message") if isinstance(first.get("message"), dict) else {}
@@ -338,6 +513,8 @@ class BrokerHandler(BaseHTTPRequestHandler):
                            latency_seconds=time.monotonic() - request_started,
                            finish_reason=first.get("finish_reason"),
                            response_role=message.get("role"))
+            if stream_progress is not None:
+                receipt["stream_progress"] = _sanitize(_stream_snapshot(stream_progress), key)
             self.server.ledger.write_receipt(attempt_id, receipt)
             attempt = self.server.ledger.settle(attempt_id, usage=result.get("usage"))
             settled = True
@@ -381,8 +558,11 @@ class BrokerHandler(BaseHTTPRequestHandler):
                            response_payload=_sanitize(response_body, key),
                            latency_seconds=time.monotonic() - request_started,
                            error_type=type(exc).__name__)
+            if stream_progress is not None:
+                receipt["stream_progress"] = _sanitize(_stream_snapshot(stream_progress), key)
             self.server.ledger.write_receipt(attempt_id, receipt)
             self.server.ledger.settle(attempt_id, status="upstream_error")
+            self.server.shutdown_requested = True
             code = exc.code if isinstance(exc, urllib.error.HTTPError) else 502
             self._json(code, {"error": {"message": "upstream request failed", "type": "upstream_error"}})
 
@@ -403,6 +583,8 @@ def main():
     parser.add_argument("--reasoning-reserve", type=int, default=20_000)
     parser.add_argument("--timeout", type=int, default=180,
                         help="upstream request timeout in seconds")
+    parser.add_argument("--upstream-stream", action="store_true",
+                        help="buffer upstream SSE into JSON for ordinary clients")
     args = parser.parse_args()
     ledger = DurableBudget(args.ledger, max_requests=args.max_requests,
                            max_usd=args.max_usd,
@@ -411,7 +593,7 @@ def main():
     broker = Broker(("127.0.0.1", args.port), upstream_url=args.upstream_url,
                     model=args.model, api_key_env=args.api_key_env, ledger=ledger,
                     max_tokens=args.max_tokens, reasoning_reserve=args.reasoning_reserve,
-                    timeout=args.timeout)
+                    timeout=args.timeout, upstream_stream=args.upstream_stream)
     print(json.dumps({"base_url": "http://127.0.0.1:%d/v1" % broker.server_port,
                       "model": args.model, "ledger": args.ledger}), flush=True)
     try:

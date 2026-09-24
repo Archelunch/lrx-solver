@@ -2,55 +2,13 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
-## Latest iteration: focused k5 protocol (2026-09-24)
+## Latest iteration: focused k5 protocol and confirmation (2026-09-24)
 
-The [protocol report](autoresearch/loop-260924-protocol/REPORT.md) records a
-completed operationally without a model candidate. It freezes the independently verified all-cuts
-15/16 development control as an automatic incumbent, the old 16-case
-development set and fixed 48-source catalog, and a new sealed 16-case
-structural confirmation set disjoint from prior structural sets and cycle7.
-The remaining named development miss is `k5-mask302-order15713`; an exact
-finite-pool dual is guidance for new direct word columns, not a lower bound.
-The evaluator peer repriced the frozen incumbent profiles and checked the dual
-against catalog plus all-cuts. Candidate words supplement that pool; returning
-`[]` on a case retains incumbent certificates.
+The [initial protocol report](autoresearch/loop-260924-protocol/REPORT.md) is a historical snapshot after two timed-out Grok requests. The [continuation](autoresearch/loop-260924-protocol/CONTINUATION.md) records the final outcome. Frozen all-cuts remained 15/16 on development; the remaining unit-block k5 case was not certified. Independent Sol-authored construction reduced its exact feasible base to 1223/20, still 3/20 above the threshold, and establishes a conditional bound for every positive block-length vector with the first retained zero block of length at least 2. It does not prove the whole k5 family or the general conjecture.
 
-Archive retrieval now deduplicates source/case repeats, labels evaluation
-coverage, and refuses to invent a parent diff. A native official GEPA 0.1.4
-offline mock run completed with 2 mock model responses, 30 trusted evaluator
-requests and 60 successful case executions. A refreshed second reflection
-received a distinct-source k5 archive trace. Its best stayed at the 15/16
-incumbent with zero new certificates; neither generated proposal was evaluated
-on all 16 cases. A separate scripted synthetic graded fixture selected
-a higher fixture grade, showing optimizer plumbing only, not LRX progress.
-The receipts are `offline-gepa-native-01/manifest.json`,
-`offline-gepa-native-01/offline-smoke-report.json`, and
-`offline-gepa-graded/fixture-report.json` within the protocol directory.
+A focused streamed Grok response completed after 533.977 seconds but exceeded the broker reservation, so live GEPA accepted no proposal. The exact source was recovered from the private receipt, evaluated under strict Seatbelt, and accepted in a separate zero-provider offline native GEPA replay. One-shot 16-case structural confirmation was then consumed: fixed catalog 12/16, deterministic all-cuts 13/16, recovered source 14/16. An independent exact audit verifies one extra named family, `k6-mask221-order731`, beyond catalog plus all-cuts, with base 1255/19 < 67 and all slopes at most 6. This is novelty against the frozen controls, not a literature-priority claim. Confirmation results are excluded from future prompts and archive retrieval.
 
-An initial automatic approval rejection was resolved by the user's explicit
-approval of the exact [payload](autoresearch/loop-260924-protocol/PAYLOAD-REVIEW.md)
-and $5/24 ceiling; its bound [receipt](autoresearch/loop-260924-protocol/authorization-receipt.json)
-preserves the quote. Two authorized Grok chat-completion requests then timed
-out after 601.04 and 180.15 seconds, with no model text or usage. A fail-fast
-recovery stopped after its single request. Both ledgers conservatively charge
-their full reservations: **2 generation attempts, $0.4010996**, provider
-actual billing unknown. A separate model-catalog GET succeeded, making three
-external HTTP contacts total; at most 21 remain under the original 24-contact
-ceiling, but no further calls are planned for this iteration. The recorded
-$50 allocation remainder is $17.2117294 conservatively. There were **zero
-valid proposals and zero new certificates**; the inherited incumbent remains
-15/16. This is a chat-completion timeout, not an optimizer efficacy result.
-The new confirmation stays sealed and unconsumed. Diagnose provider request
-latency/account behavior before another full search. See
-[`live-summary.json`](autoresearch/loop-260924-protocol/live-summary.json),
-[`results.tsv`](autoresearch/loop-260924-protocol/results.tsv), and
-[`handoff.json`](autoresearch/loop-260924-protocol/handoff.json).
-
-The post-live guarded suite passed 368 tests in 13.559 seconds with no skips
-([receipt](autoresearch/loop-260924-protocol/final-tests-live.log)); compile,
-CLI smoke, trusted lock, and authored-source diff checks passed. The full live
-archive is preserved locally under a separate runtime filename while the
-tracked initial archive is unchanged.
+Across this protocol, five generation requests plus one model-catalog GET used six of the 24-contact ceiling. Conservative broker accounting charged $0.9204712 of the $5 session cap, leaving $4.0795288 there and $16.6923578 of the previously recorded $50 allocation. No further provider calls are planned. The final 375-test guarded suite passed without skips in 14.152 seconds; compile, CLI smoke, trusted-lock, and authored-source diff checks passed. The [results](autoresearch/loop-260924-protocol/results.tsv), [handoff JSON](autoresearch/loop-260924-protocol/handoff.json), and confirmation audit give exact sources and receipts. Preserve the raw local receipts and development archive snapshot, but do not put consumed confirmation into model context.
 
 ## Latest completed work: official program search (2026-09-24)
 

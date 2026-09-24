@@ -144,6 +144,14 @@ class OfficialBackendTests(unittest.TestCase):
         self.assertEqual(official._completion_status({"successes": 0}, clean), "INCOMPLETE")
         self.assertEqual(official._completion_status({"successes": 1}, failed), "INCOMPLETE")
 
+    def test_research_status_accepts_exact_fractional_progress(self):
+        manifest = {"status": "COMPLETE", "verified_new_vs_incumbent": 0,
+                    "verified_secondary_score": "14887/630696",
+                    "valid_proposal_hashes": ["candidate"]}
+        self.assertEqual(official._research_status(manifest), "GRADED_PROGRESS")
+        manifest["verified_secondary_score"] = "0"
+        self.assertEqual(official._research_status(manifest), "NO_GAIN")
+
     def test_gepa_file_stopper_only_after_full_valid_incumbent_gain(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -198,6 +206,26 @@ class OfficialBackendTests(unittest.TestCase):
             config = json.loads(official._sky_config(args, Path(temp), None, None).read_text())
             self.assertEqual(config["llm"]["reasoning_effort"], "low")
             self.assertTrue(config["search"]["database"]["auto_generate_variation_operators"])
+
+    def test_focused_gepa_steering_is_opt_in_and_keeps_research_prompt(self):
+        captured = []
+
+        def respond(request, timeout):
+            captured.append(json.loads(request.data))
+            return io.BytesIO(b'{"choices":[{"message":{"content":"```python\\ndef propose_words(case):\\n    return []\\n```"},"finish_reason":"stop"}]}')
+
+        base = official.BrokerLM("http://127.0.0.1:8877/v1", "grok-4.7", 4096,
+                                 None, 10, "low")
+        focused = official.BrokerLM("http://127.0.0.1:8877/v1", "grok-4.7", 4096,
+                                    None, 10, "low", focused_reflection=True)
+        with patch.object(official, "urlopen", side_effect=respond):
+            base("Native GEPA reflection prompt")
+            focused("Native GEPA reflection prompt")
+        self.assertEqual(captured[0]["messages"],
+                         [{"role": "user", "content": "Native GEPA reflection prompt"}])
+        self.assertEqual(captured[1]["messages"][0]["content"],
+                         official.FOCUSED_GEPA_STEERING)
+        self.assertEqual(captured[1]["messages"][1], captured[0]["messages"][0])
 
     def test_reviewed_archive_context_is_staged_byte_for_byte(self):
         with tempfile.TemporaryDirectory() as temp:

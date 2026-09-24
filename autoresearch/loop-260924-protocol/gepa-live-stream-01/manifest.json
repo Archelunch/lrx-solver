@@ -1,0 +1,146 @@
+{
+  "engine": "gepa",
+  "upstream": "gepa==0.1.4",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/frozen/manifest.json",
+  "frozen_manifest_sha256": "e75836b984d2aef04ef48fa26f17dce9bc42e9d030e9905d92a8f9f1350ea1fd",
+  "seed_sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+  "cases_sha256": "855ba92453c21b038f93210745d61b60ebe0d2a00ef911b8eecc8cc5f0237dc9",
+  "baseline_sha256": "9ab9f6ed4eb5c4a3328095623f6d883b16c0590c79464bf46101ac607686a725",
+  "incumbent_sha256": "b583c7c2acec3ffb403038d821321f59c4366be62a09473add0f6c67b9f9ccaf",
+  "dual_sha256": "b05be717239f04be6b9486748a152b929632d777536e0a893c2e9875058531ce",
+  "broker_url": "http://127.0.0.1:8877/v1",
+  "model": "grok-4.7",
+  "iterations": 1,
+  "max_tokens": 4096,
+  "wall_seconds": 900,
+  "archive_ids": [
+    1
+  ],
+  "dynamic_context_case_id": "k5-mask302-order15713",
+  "seed_development_score": 0.0,
+  "archive_context_sha256": "7ecc1a5608181dcce029fc8b268a4cc2e1b670ba365ef5bf393055b3e714b5f7",
+  "research_context_sha256": "a01f19f2556969dbdc3bb54a0bcbf4f7c68a489e61528d00c6d32bec03a874a2",
+  "verifier_url": "http://127.0.0.1:56197/evaluate",
+  "max_evals": 64,
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/official_worker.py",
+    "_gepa_worker",
+    "--seed",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/initial_program.py",
+    "--cases",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/cases.json",
+    "--run-dir",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/output",
+    "--broker-url",
+    "http://127.0.0.1:8877/v1",
+    "--model",
+    "grok-4.7",
+    "--verifier-url",
+    "http://127.0.0.1:56197/evaluate",
+    "--max-tokens",
+    "4096",
+    "--proposals",
+    "1",
+    "--llm-timeout",
+    "190",
+    "--reasoning-effort",
+    "low",
+    "--baseline",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/baseline.json",
+    "--incumbent",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/incumbent.json",
+    "--archive-context",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/archive_context.json",
+    "--dynamic-context-url",
+    "http://127.0.0.1:56197/development-context",
+    "--research-context",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/research_context.txt"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/official_worker.py",
+    "_gepa_worker",
+    "--seed",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/initial_program.py",
+    "--cases",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/cases.json",
+    "--run-dir",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/output",
+    "--broker-url",
+    "http://127.0.0.1:8877/v1",
+    "--model",
+    "grok-4.7",
+    "--verifier-url",
+    "http://127.0.0.1:56197/evaluate",
+    "--max-tokens",
+    "4096",
+    "--proposals",
+    "1",
+    "--llm-timeout",
+    "190",
+    "--reasoning-effort",
+    "low",
+    "--baseline",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/baseline.json",
+    "--incumbent",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/incumbent.json",
+    "--archive-context",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/archive_context.json",
+    "--dynamic-context-url",
+    "http://127.0.0.1:56197/development-context",
+    "--research-context",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/stage/research_context.txt"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/gepa-live-stream-01",
+  "candidate_evaluations": {
+    "requests": 20,
+    "successes": 35,
+    "failures": 0,
+    "distinct_source_hashes": [
+      "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884"
+    ],
+    "batch_valid_source_hashes": [
+      "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884"
+    ],
+    "full_valid_source_hashes": [
+      "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884"
+    ],
+    "context_accesses": [
+      {
+        "sha256": "0f43935ef9ce77a81de5d804aea967fd3fdded41e031d2f6d2e8f7654c5eceb6",
+        "selected": [
+          {
+            "id": 2,
+            "source_sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+            "case_id": "k5-mask302-order15713",
+            "evaluated_case_count": 16,
+            "lineage_status": "unknown_parent"
+          }
+        ],
+        "case_id": "k5-mask302-order15713"
+      }
+    ],
+    "stop_after_new_certificate": false
+  },
+  "mechanism_evidence": {
+    "reflection_batches": 0,
+    "mandatory_hard_case_ids": []
+  },
+  "proposal_hashes": [],
+  "valid_proposal_hashes": [],
+  "full_development_valid_proposal_hashes": [],
+  "returncode": 1,
+  "status": "INCOMPLETE",
+  "reason": "official optimizer exited nonzero",
+  "research_status": "INCOMPLETE"
+}

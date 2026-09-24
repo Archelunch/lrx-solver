@@ -1,0 +1,24 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.0037048000000000003,
+      "id": 1,
+      "input_tokens": 1255,
+      "kind": "chat",
+      "output_tokens": 143,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/chat-latency-probe-01/ledger.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.13485119999999998,
+      "role": "gepa_preflight",
+      "status": "ok"
+    }
+  ],
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 2.2,
+    "max_requests": 1,
+    "max_usd": 4.5989004,
+    "output_rate": 6.6
+  },
+  "spent_usd": 0.003704800000000008
+}

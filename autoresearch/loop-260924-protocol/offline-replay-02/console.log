@@ -1,0 +1,186 @@
+/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/core/engine.py:742: UserWarning: cloudpickle is not installed; falling back to standard pickle. Install it with: pip install gepa[full]  or  pip install cloudpickle
+  state.save(self.run_dir, use_cloudpickle=self.use_cloudpickle)
+/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/core/engine.py:889: UserWarning: cloudpickle is not installed; falling back to standard pickle. Install it with: pip install gepa[full]  or  pip install cloudpickle
+  state.save(self.run_dir, use_cloudpickle=self.use_cloudpickle)
+Iteration 0: Base program full valset score: 0.0 over 16 / 16 examples
+Iteration 1: Selected program 0 score: 0.0
+Iteration 1: Proposed new text for current_candidate: """LRX constructor: incumbent all-cuts seed plus local selection perturbations.
+
+Words are unit-skeleton sorts. Perturbations change only which adjacent
+inversion is brought to the front, so each word is a complete direct candidate.
+"""
+
+
+def _state(labels, mask):
+    out = []
+    for j in range(9):
+        if mask >> j & 1:
+            out.append(0)
+        if j < 8:
+            out.append(labels[j])
+    return out
+
+
+def _ranks(state, cut):
+    n = len(state)
+    targets = {x: (x - 1 - cut) % n for x in range(1, 9)}
+    zeros = iter(sorted(set(range(n)) - set(targets.values())))
+    return [targets[x] if x else next(zeros) for x in state[cut:] + state[:cut]]
+
+
+def _tags(state):
+    tags = []
+    z = 0
+    for x in state:
+        if x == 0:
+            tags.append(z)
+            z += 1
+        else:
+            tags.append(-1)
+    return tags, z
+
+
+def _construct(state, cut, prefer_right, scale=0.0, weights=None, perturb=None):
+    n = len(state)
+    rank = _ranks(state, cut)
+    tags, nz = _tags(state)
+    if not weights:
+        weights = (0.0, 11 / 14, 197 / 196, 1 / 8, 261 / 392, 0.5, 0.5, 0.5)
+    weights = list(weights[:nz]) + [0.0] * max(0, nz - len(weights))
+    at = 0
+    word = []
+    step_no = 0
+    while True:
+        choices = []
+        for pos in range(n):
+            j = (pos - cut) % n
+            if j == n - 1 or rank[j] <= rank[j + 1]:
+                continue
+            left, right = (pos - at) % n, (at - pos) % n
+            if left < right or (left == right and not prefer_right):
+                direction, steps = 'L', left
+            else:
+                direction, steps = 'R', right
+            if direction == 'L':
+                arc = tags[:steps]
+            else:
+                arc = tags[n - steps:] if steps else []
+            pen = 0.0
+            for t in arc:
+                if t >= 0:
+                    pen += weights[t]
+            tie = -pos if prefer_right else pos
+            choices.append((steps + scale * pen, steps, tie, pos, j, direction, steps))
+        if not choices:
+            break
+        choices.sort()
+        pick = 0
+        if perturb is not None and step_no == perturb[0] and len(choices) > 1:
+            pick = 1 if perturb[1] >= 1 else 0
+        _, _, _, pos, j, direction, steps = choices[pick]
+        word.extend(direction * steps)
+        word.append('X')
+        if direction == 'L' and steps:
+            tags = tags[steps:] + tags[:steps]
+        elif direction == 'R' and steps:
+            tags = tags[n - steps:] + tags[:n - steps]
+        tags[0], tags[1] = tags[1], tags[0]
+        rank[j], rank[j + 1] = rank[j + 1], rank[j]
+        at = pos
+        step_no += 1
+    left, right = (-at) % n, at
+    word.extend('L' * left if left <= right else 'R' * right)
+    return ''.join(word)
+
+
+def _proxy(state, word):
+    tags, nz = _tags(state)
+    ring = list(tags)
+    g_exit = [0] * nz
+    g_near = [0] * nz
+    n = len(state)
+    if n == 0 or nz == 0:
+        return len(word)
+    for ch in word:
+        if ch == 'X':
+            ring[0], ring[1] = ring[1], ring[0]
+            continue
+        if ch == 'L':
+            if ring[0] >= 0:
+                g_exit[ring[0]] += 1
+            for t in ring:
+                if t >= 0:
+                    g_near[t] += 1
+                    break
+            ring = ring[1:] + ring[:1]
+        else:
+            if ring[-1] >= 0:
+                g_exit[ring[-1]] += 1
+            for t in reversed(ring):
+                if t >= 0:
+                    g_near[t] += 1
+                    break
+            ring = ring[-1:] + ring[:-1]
+    mu = (11 / 14, 197 / 196, 1 / 8, 261 / 392)
+
+    def rc(g):
+        score = float(len(word))
+        for i, m in enumerate(mu):
+            if i + 1 < len(g):
+                score += m * g[i + 1]
+        return score
+
+    return min(rc(g_exit), rc(g_near))
+
+
+def propose_words(case):
+    if case['m'] != 8:
+        raise ValueError('m=8 only')
+    state = _state(case['labels'], case['mask'])
+    n = len(state)
+    nz = sum(x == 0 for x in state)
+    base_w = (0.0, 11 / 14, 197 / 196, 1 / 8, 261 / 392, 0.5, 0.5, 0.5)[:max(nz, 1)]
+    weightings = [
+        base_w,
+        tuple(reversed(base_w)),
+        base_w[1:] + base_w[:1],
+        base_w[-1:] + base_w[:-1],
+    ]
+    incumbent = set()
+    for cut in range(n):
+        for prefer_right in (False, True):
+            incumbent.add(_construct(state, cut, prefer_right))
+    found = {}
+    scales = (0.0, 0.35, 0.7, 1.5, 3.0)
+    for cut in range(n):
+        for prefer_right in (False, True):
+            for scale in scales:
+                for weights in weightings:
+                    if scale == 0.0 and weights == base_w:
+                        continue
+                    word = _construct(state, cut, prefer_right, scale, weights)
+                    if word not in incumbent and word not in found and len(word) <= 4096:
+                        found[word] = _proxy(state, word)
+            for at in range(0, 8):
+                word = _construct(state, cut, prefer_right, 0.0, base_w, (at, 1))
+                if word not in incumbent and word not in found and len(word) <= 4096:
+                    found[word] = _proxy(state, word)
+                word = _construct(state, cut, prefer_right, 1.5, base_w, (at, 1))
+                if word not in incumbent and word not in found and len(word) <= 4096:
+                    found[word] = _proxy(state, word)
+    ranked = sorted(found, key=lambda w: (found[w], len(w), w))
+    return ranked[:32]
+Iteration 1: Accepted candidate (subsample score 0.0 -> 0.37766530943592475); running full eval.
+Iteration 1: Found a better program on the valset with score 0.023604081839745297.
+Iteration 1: Valset score for new program: 0.023604081839745297 (coverage 16 / 16)
+Iteration 1: Val aggregate for new program: 0.023604081839745297
+Iteration 1: Individual valset scores for new program: {0: 0.0, 1: 0.0, 2: 0.0, 3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.37766530943592475, 8: 0.0, 9: 0.0, 10: 0.0, 11: 0.0, 12: 0.0, 13: 0.0, 14: 0.0, 15: 0.0}
+Iteration 1: New valset pareto front scores: {0: 0.0, 1: 0.0, 2: 0.0, 3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.37766530943592475, 8: 0.0, 9: 0.0, 10: 0.0, 11: 0.0, 12: 0.0, 13: 0.0, 14: 0.0, 15: 0.0}
+Iteration 1: Valset pareto front aggregate score: 0.023604081839745297
+Iteration 1: Updated valset pareto front programs: {0: {0, 1}, 1: {0, 1}, 2: {0, 1}, 3: {0, 1}, 4: {0, 1}, 5: {0, 1}, 6: {0, 1}, 7: {1}, 8: {0, 1}, 9: {0, 1}, 10: {0, 1}, 11: {0, 1}, 12: {0, 1}, 13: {0, 1}, 14: {0, 1}, 15: {0, 1}}
+Iteration 1: Best valset aggregate score so far: 0.023604081839745297
+Iteration 1: Best program as per aggregate score on valset: 1
+Iteration 1: Best score on valset: 0.023604081839745297
+Iteration 1: Linear pareto front program index: 1
+Iteration 1: New program candidate index: 1
+{"engine": "gepa", "upstream": "gepa==0.1.4", "best_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/offline-replay-02/output/best.py", "best_score": 0.023604081839745297, "reflection_calls": 1, "model_valid_responses": 1, "model_preflight_failures": 0, "mandatory_hard_case_ids": ["k5-mask302-order15713"], "reflection_batch_calls": 1, "context_receipts": [], "full_evaluation": {"combined_score": 0.023604081839745297, "artifacts": {"feedback": "0 new exact family certificates versus incumbent; 15/16 total; 0 execution or format failures. Partial progress is diagnostic, not proof; misses do not prove infeasibility.", "case_statuses": ["ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok"], "traces": [{"case_id": "k4-mask23-order35811", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.07816699999966659, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "43", "feasible_base_after": "43", "strict_target": 55, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "0", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k4-mask135-order24096", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.07553570801974274, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "725/14", "feasible_base_after": "725/14", "strict_target": 55, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "0", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k4-mask432-order21829", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.0733890830015298, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "209/4", "feasible_base_after": "103/2", "strict_target": 55, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "3/4", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k4-mask113-order3821", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.1232229580054991, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "342/7", "feasible_base_after": "342/7", "strict_target": 55, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "0", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k5-mask425-order11302", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.1284264580172021, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "631/11", "feasible_base_after": "631/11", "strict_target": 61, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "0", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k5-mask283-order33834", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.12671858401154168, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "176/3", "feasible_base_after": "176/3", "strict_target": 61, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "0", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k5-mask333-order27563", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.1293877909774892, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "243/4", "feasible_base_after": "59", "strict_target": 61, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "7/4", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k5-mask302-order15713", "status": "NO_CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.1295077079848852, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "24149/392", "feasible_base_after": "4297/70", "strict_target": 61, "strict_base_pass": false, "base_deficit_after": "27/70", "base_improvement": "429/1960", "best_reduced_cost": "-19/14", "negative_reduced_cost": "19/14", "best_useful_words": [{"word": "XLXLXRXLLLLXLXRXRXLLLLXRXRXRXLLLLLXLXRXLLXRXLLXRXLLXRX", "base": 54, "gamma": [7, 10, 10, 4, 5], "reduced_cost": "-19/14"}, {"word": "XLXLXRXRRRXRXRRXRRXLXRRXLXLXRRRXLXRRRRRRXRXLXLXRXLLXRX", "base": 54, "gamma": [9, 12, 8, 2, 7], "reduced_cost": "-5/7"}, {"word": "XLXLXRXRRRXRXRRXRRXLXRRXRXLLXRXLLXLLLLXLXLXRRXLXLLXRX", "base": 53, "gamma": [8, 11, 9, 3, 8], "reduced_cost": "-69/98"}], "secondary_grade": "29774/78837", "rewardable": true, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [{"word": "XLXLXRXLLLLXLXRXRXLLLLXRXRXRXLLLLLXLXRXLLXRXLLXRXLLXRX", "base": 54, "gamma": [7, 10, 10, 4, 5], "reduced_cost": "-19/14"}, {"word": "XLXLXRXRRRXRXRRXRRXLXRRXLXLXRRRXLXRRRRRRXRXLXLXRXLLXRX", "base": 54, "gamma": [9, 12, 8, 2, 7], "reduced_cost": "-5/7"}, {"word": "XLXLXRXRRRXRXRRXRRXLXRRXRXLLXRXLLXLLLLXLXLXRRXLXLLXRX", "base": 53, "gamma": [8, 11, 9, 3, 8], "reduced_cost": "-69/98"}], "accepted_word_count": 32, "rejected_words": [], "lp_status": "NO_CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k6-mask380-order36371", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.1292163329781033, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "2807/43", "feasible_base_after": "2771/43", "strict_target": 67, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "36/43", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k6-mask373-order37856", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.12971866599400528, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "1297/20", "feasible_base_after": "321/5", "strict_target": 67, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "13/20", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k6-mask359-order24703", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.13036920898593962, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "2067/32", "feasible_base_after": "1095/17", "strict_target": 67, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "99/544", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k6-mask315-order31970", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.12897000001976267, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "1136/17", "feasible_base_after": "2785/42", "strict_target": 67, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "367/714", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k7-mask351-order6128", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.13076191701111384, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "663/10", "feasible_base_after": "661/10", "strict_target": 73, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "1/5", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k7-mask491-order37059", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.1302307499863673, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "2262/31", "feasible_base_after": "506/7", "strict_target": 73, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "148/217", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k7-mask223-order9748", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.12759516699588858, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "1225/17", "feasible_base_after": "1225/17", "strict_target": 73, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "0", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k7-mask445-order23635", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.13174779200926423, "isolation": "macos_seatbelt"}, "progress": {"feasible_base_before": "506/7", "feasible_base_after": "506/7", "strict_target": 73, "strict_base_pass": true, "base_deficit_after": "0", "base_improvement": "0", "best_reduced_cost": null, "negative_reduced_cost": "0", "best_useful_words": [], "secondary_grade": "0", "rewardable": false, "diagnostic_scope": "exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement"}, "best_useful_words": [], "accepted_word_count": 32, "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}], "evaluation": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/offline-replay-02/verified/evaluations/result-0040.json"}, "certified": 15, "new_certified": 3, "new_vs_incumbent": 0, "secondary_score": "14887/630696", "reference_hashes": {"catalog": "d43b71decf04360571445ce0e55503c340b62a05937b6afb16a8d73fdb4ccfbe", "incumbent": "89cf717736c40ae21aff1624d4fbead9b176199bfc1c87cee985fb0d3101d18b", "dual": "0593268b122c5d1c4231ad7296daada32beaee9aa25f413dfa64eef9690d5778"}, "candidate_hash": "e33fb8a21e0904c2899d63843e604d10e09503a3af01701ec8f8f07c372fc3ac"}}

@@ -29,23 +29,18 @@ and its union with earlier results are not yet independently reconstructed.
 4. Seek new words only after measuring the limits of the existing catalog.
    Reward newly certified infinite families, preserve an untouched structural
    confirmation set, and extract mathematical reasons for successful mixtures.
-5. On the official executable-program branch, target the remaining
-   `k5-mask302-order15713` development family with exact dual-guided column
-   generation. The 2026-09-24 independent all-cuts control added a direct
-   all-positive-length certificate for k6, raising selected development
-   coverage from the seed's 14/16 to 15/16; official paid GEPA, AdaEvolve,
-   and EvoX runs added none. Search for complementary k5 base/slope profiles
-   under strict source, word-count and runtime limits, then replay and solve
-   the rational mixture exactly. The finite-pool dual filter is a guide, not
-   an infeasibility proof. This session's one-shot confirmation is consumed;
-   a new 16-case structural set is now frozen and sealed in the
-   [prepared protocol](autoresearch/loop-260924-protocol/REPORT.md). A native
-   GEPA mock smoke exercised refreshed distinct-source development context,
-   and a synthetic graded fixture checked selection; neither yielded LRX
-   progress. After specific payload approval, two live chat-completion
-   requests timed out with no candidate; diagnose the provider request path
-   before another full search. Confirmation remains sealed.
-   See also the [closed iteration](autoresearch/loop-260924-live/report.md).
+5. On the official executable-program branch, the frozen all-cuts control
+   certifies 15/16 development families. The remaining unit-block k5 family
+   is still open; a Sol-authored dual-guided column lowered the feasible base
+   to 1223/20 but did not cross the strict threshold 61. Its conditional
+   construction works when the first retained zero block has length at least
+   2. A broker-rejected complete Grok response, independently evaluated and
+   accepted in an offline native GEPA replay, added one named family beyond
+   catalog plus all-cuts on the consumed one-shot confirmation (14/16 versus
+   13/16). See the [continuation](autoresearch/loop-260924-protocol/CONTINUATION.md).
+   Next seek an exact unit-block k5 mixture or a different proof mechanism;
+   freeze a new holdout before any further model search, and never treat a
+   failed finite search as infeasibility.
 
 This supersedes the pre-PDF proposal to immediately expand routing-priority
 search. See [the bounded next-iteration protocol](autoresearch/next-iteration.md)
@@ -121,7 +116,8 @@ and [the source review](autoresearch/loop-260923-2107/paper-review.md).
     deterministic all-cuts control reached 15/16. Catalog and all frozen
     finalists tied at 6/8 on sealed confirmation. See the [live report](autoresearch/loop-260924-live/report.md)
     for exact accounting, failure modes, and source attribution. No engine
-    ranking or general theorem follows. The subsequent k5 protocol has only
-    offline mock and synthetic acceptance evidence. Its authorized paid
-    attempt and one recovery request both timed out without model output;
-    no optimizer efficacy conclusion follows.
+    ranking or general theorem follows. The subsequent k5 protocol's
+    [continuation](autoresearch/loop-260924-protocol/CONTINUATION.md) has a
+    conditional Sol-authored k5 bound and one independently audited named
+    holdout certificate from a broker-rejected Grok response. An offline
+    native replay accepted that source; the live native run did not.
