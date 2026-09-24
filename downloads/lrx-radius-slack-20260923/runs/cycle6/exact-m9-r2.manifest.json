@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/s/Cowork/lrx-research/experiments/cycle6/radius_slack",
+    "9",
+    "2",
+    "--state-limit=4000000"
+  ],
+  "cwd": "/Users/s/Cowork/lrx-research",
+  "utc": "2026-09-23T12:10:28.809129+00:00",
+  "timeout_seconds": 600,
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "source_sha256": "7bbc1c588e3f848b6b256725e270bdd15797fadf5eaa80964327653bed2d97c5",
+  "binary_sha256": "0f84806103bd0031b6eacd038b48015dacddd7737652b99dc6b74719eb27d2e6",
+  "exit_code": 0,
+  "wall_seconds": 3.636063417419791
+}

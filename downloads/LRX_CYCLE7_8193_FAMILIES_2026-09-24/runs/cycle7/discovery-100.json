@@ -1,0 +1,3279 @@
+{
+  "format": "lrx_cycle7_explicit_mixtures_v1",
+  "status": "DISCOVERY_REQUIRES_INDEPENDENT_AUDIT",
+  "source_bundle_sha256": "82c64ae99ea37e0328603b89af4652c9d48fb61e688373ac81515f3e78d0c740",
+  "source_coverage_sha256": "72a2262c955938f8fa577e3df01c7c8f28a2307734abc0766780c338c68617d3",
+  "cases": [
+    {
+      "order_index": 11,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        7,
+        5
+      ],
+      "mask": 507,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        0,
+        4,
+        0,
+        6,
+        0,
+        8,
+        0,
+        7,
+        0,
+        5,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRXRXRXRXRXRXRXLXLLXLLXRXRXRXLXRRRRRRRRRXLLLXRXRXL",
+          "source": 974,
+          "cut": 0,
+          "base_cost": 51,
+          "beta": [
+            0,
+            3,
+            9,
+            11,
+            8,
+            5,
+            2,
+            1
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/35"
+        },
+        {
+          "word": "RRXLXLXLXLXLXLLXLLXLLXRXRRXRRXRRRRXRRRRXLXLXLXLXLXLXLXLXLLLXRRXRRRRR",
+          "source": 460,
+          "cut": 12,
+          "base_cost": 68,
+          "beta": [
+            5,
+            8,
+            9,
+            6,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "17/35"
+        },
+        {
+          "word": "XRXRRXRXRRXRRXLXLLXLLLXRXRXRRXLXLLXLLLLLXRXRXRXRXRXRXRRXRRRRXLXLXLXLLXLLLLLLLLLXLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 94,
+          "beta": [
+            7,
+            4,
+            2,
+            5,
+            8,
+            11,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/7"
+        }
+      ],
+      "mean_base": "2719/35",
+      "mean_beta": [
+        "38/7",
+        "41/7",
+        "6",
+        "6",
+        "39/7",
+        "36/7",
+        "192/35",
+        "39/7"
+      ]
+    },
+    {
+      "order_index": 21,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        6,
+        7,
+        5
+      ],
+      "mask": 507,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        0,
+        4,
+        0,
+        8,
+        0,
+        6,
+        0,
+        7,
+        0,
+        5,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "LLLLXLLXLLXLLLXRRXLXLLLXRXRXRXRXRRXRRXRRXLXLLXRXLLLLLLLLLLLXRXRXRXRXRXRXRXRXRXRX",
+          "source": 771,
+          "cut": 2,
+          "base_cost": 80,
+          "beta": [
+            4,
+            1,
+            5,
+            8,
+            11,
+            9,
+            6,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "2/5"
+        },
+        {
+          "word": "RRRXRXRXRXRXRXRXLXLLXLLXRXRRXRXLLXRXRRRRRRRRXLLLXRXRXL",
+          "source": 974,
+          "cut": 0,
+          "base_cost": 54,
+          "beta": [
+            0,
+            3,
+            9,
+            11,
+            8,
+            5,
+            2,
+            1
+          ],
+          "mixed_gaps": 0,
+          "weight": "4/33"
+        },
+        {
+          "word": "RRXLXLXLXLXLXLXLXRRXRRRXRRRRRXRRXRXRXLXLLXRXRXRRRRRRXRXL",
+          "source": 1094,
+          "cut": 8,
+          "base_cost": 56,
+          "beta": [
+            3,
+            6,
+            12,
+            8,
+            5,
+            2,
+            1,
+            4
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/165"
+        },
+        {
+          "word": "RRXLXLXLXLXRRXRRRRXLXLXLXLXLXLXLLLXLLXRXRRRXRXRRRRRRRRXLXLXLXLXLXLXLXLXLLXRXRXRRR",
+          "source": 9,
+          "cut": 10,
+          "base_cost": 81,
+          "beta": [
+            8,
+            11,
+            6,
+            3,
+            0,
+            3,
+            6,
+            9
+          ],
+          "mixed_gaps": 0,
+          "weight": "26/55"
+        }
+      ],
+      "mean_base": "12734/165",
+      "mean_beta": [
+        "27/5",
+        "6",
+        "6",
+        "6",
+        "27/5",
+        "62/11",
+        "181/33",
+        "28/5"
+      ]
+    },
+    {
+      "order_index": 59,
+      "labels": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        8,
+        7,
+        4
+      ],
+      "mask": 447,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        6,
+        0,
+        5,
+        0,
+        8,
+        7,
+        0,
+        4,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRRRRXRRXLXRRRXLXLXRRRRRXRRXRRRXLXLXLXLXLXLXRRRXRRRRRXLXLXLXLXLXLXLXLXLXLXRXRRRR",
+          "source": 1758,
+          "cut": 12,
+          "base_cost": 81,
+          "beta": [
+            6,
+            9,
+            12,
+            8,
+            5,
+            2,
+            4,
+            7
+          ],
+          "mixed_gaps": 0,
+          "weight": "7/24"
+        },
+        {
+          "word": "XRXRRXRXRRRXLLXLLLXRXRXRRXLXLLXLLLLLXRXRXRXRXRXRXRRXRRRXLXLXLXLXLXLLLLLLLLLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 88,
+          "beta": [
+            7,
+            4,
+            1,
+            2,
+            5,
+            8,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "11/24"
+        },
+        {
+          "word": "RRRRRXRXRRXRXLLXLLXRXLLLLXLXLXLXLXLXLXLXRRRXRRXLXLLLXRXRXL",
+          "source": 990,
+          "cut": 7,
+          "base_cost": 58,
+          "beta": [
+            2,
+            5,
+            8,
+            11,
+            9,
+            6,
+            2,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/4"
+        }
+      ],
+      "mean_base": "1883/24",
+      "mean_beta": [
+        "131/24",
+        "137/24",
+        "143/24",
+        "6",
+        "6",
+        "23/4",
+        "139/24",
+        "133/24"
+      ]
+    },
+    {
+      "order_index": 59,
+      "labels": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        8,
+        7,
+        4
+      ],
+      "mask": 509,
+      "base_state": [
+        0,
+        1,
+        2,
+        0,
+        3,
+        0,
+        6,
+        0,
+        5,
+        0,
+        8,
+        0,
+        7,
+        0,
+        4,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRRRRRXRRXLXRRRXLXLXRRRRRXRRRRXLXLXLXLXLXRRRXRRRRXLXLXLXLXLXLXLXLXLXRXRRRR",
+          "source": 1758,
+          "cut": 12,
+          "base_cost": 75,
+          "beta": [
+            6,
+            12,
+            8,
+            5,
+            2,
+            1,
+            4,
+            7
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/13"
+        },
+        {
+          "word": "RRXLXLXLXLLXRXLLLXLLXLLXRXRRXRRXRRRRRRRRXLXLXLXLXLXLXLXLLXLLXRXRRXRXRRRR",
+          "source": 460,
+          "cut": 12,
+          "base_cost": 72,
+          "beta": [
+            5,
+            12,
+            9,
+            6,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/13"
+        },
+        {
+          "word": "XRXRRXRXRRXRRXLXLLXLLLXRXRXRRXLXLLXLLLLXRXRXRXRXRXRRXRRRRXLXLXLXLXLXLXLLLLLLLLXLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 93,
+          "beta": [
+            7,
+            1,
+            2,
+            5,
+            8,
+            11,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "6/13"
+        },
+        {
+          "word": "RRRRRXRXRXRRXRXLLXLLXRXLLLLLXLXLXLXLXLXLXRRRXRXLLLXRXRXL",
+          "source": 990,
+          "cut": 7,
+          "base_cost": 56,
+          "beta": [
+            2,
+            8,
+            11,
+            9,
+            6,
+            3,
+            2,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/13"
+        }
+      ],
+      "mean_base": "1023/13",
+      "mean_beta": [
+        "71/13",
+        "6",
+        "6",
+        "6",
+        "75/13",
+        "6",
+        "75/13",
+        "72/13"
+      ]
+    },
+    {
+      "order_index": 63,
+      "labels": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        5,
+        8,
+        4
+      ],
+      "mask": 507,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        0,
+        6,
+        0,
+        7,
+        0,
+        5,
+        0,
+        8,
+        0,
+        4,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "LLLLXLLXLLXLLLXRRXLLLLXRXRXRXRXRRXRRXRRXLXLLXRXLLLXLXLLLLLLLXRXRXRXRXRXRXRXRXRXRX",
+          "source": 771,
+          "cut": 2,
+          "base_cost": 81,
+          "beta": [
+            4,
+            1,
+            5,
+            8,
+            11,
+            9,
+            6,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "18/95"
+        },
+        {
+          "word": "RRXLXLXLXLXRRXRRRRXLXLXLXLXLXLXLLLXLLXRXRRRXRXRRRRRRRRXLXLXLXLXLXLXLXLXLLXLXRRRRRR",
+          "source": 9,
+          "cut": 10,
+          "base_cost": 82,
+          "beta": [
+            8,
+            11,
+            6,
+            3,
+            0,
+            3,
+            6,
+            9
+          ],
+          "mixed_gaps": 0,
+          "weight": "34/95"
+        },
+        {
+          "word": "XRXRRXRXRRXRRXLXLLXLLLXRXRXRRXLXLXLLLLLLXRXRXRXRXRXRXRRXRRRRXLXLXLXLXLXLXLLLLLLLLXLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 96,
+          "beta": [
+            7,
+            4,
+            2,
+            5,
+            8,
+            11,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "4/19"
+        },
+        {
+          "word": "RRXLXLXLXLXLXLXLLLXLLXRXLLLXRXRXRRXRXRRRRRRXLLLXRXRXL",
+          "source": 554,
+          "cut": 14,
+          "base_cost": 53,
+          "beta": [
+            2,
+            5,
+            11,
+            9,
+            6,
+            3,
+            0,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "52/285"
+        },
+        {
+          "word": "LXLLLXLLLLLXLLXRXRRXRXRXLLXLXLLLLXRXRXRXRXRXRXRXRRRXRXL",
+          "source": 1400,
+          "cut": 0,
+          "base_cost": 55,
+          "beta": [
+            1,
+            2,
+            8,
+            12,
+            9,
+            6,
+            3,
+            0
+          ],
+          "mixed_gaps": 0,
+          "weight": "17/285"
+        }
+      ],
+      "mean_base": "22189/285",
+      "mean_beta": [
+        "1573/285",
+        "6",
+        "6",
+        "6",
+        "27/5",
+        "6",
+        "509/95",
+        "28/5"
+      ]
+    },
+    {
+      "order_index": 83,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        5,
+        8,
+        6,
+        4
+      ],
+      "mask": 447,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        7,
+        0,
+        5,
+        0,
+        8,
+        6,
+        0,
+        4,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRRRXRXRRXRXLLXLLXRXRRXRRRXRRXRRXRRRXLXLXLXLXLXLXLXRRXRRXLXL",
+          "source": 1202,
+          "cut": 7,
+          "base_cost": 61,
+          "beta": [
+            3,
+            6,
+            9,
+            12,
+            8,
+            5,
+            1,
+            4
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/68"
+        },
+        {
+          "word": "XRXRRXRXRRRXLLXLLLXRXRXRRXLXLLXLLLLLXRXRXRXRXRXRXRRXRRRXLXLXLXLXLXLXLLLLLLLLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 89,
+          "beta": [
+            7,
+            4,
+            1,
+            2,
+            5,
+            8,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "33/68"
+        },
+        {
+          "word": "RRXLXLXLXLXLXLXLXLLLXRXLLLXRXLLXRXRXRXRRRRRRXRRXLXLLLXRXRXL",
+          "source": 554,
+          "cut": 14,
+          "base_cost": 59,
+          "beta": [
+            2,
+            5,
+            8,
+            11,
+            9,
+            6,
+            0,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "9/68"
+        },
+        {
+          "word": "RRXLXLXLXLLLXLLXLLXLLXRXRRXRXRXLXLLXRXRRRRRXRRXRRRRXLXLXLXLXLXLXLXLXRRXRR",
+          "source": 560,
+          "cut": 12,
+          "base_cost": 73,
+          "beta": [
+            5,
+            8,
+            12,
+            9,
+            6,
+            3,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "23/68"
+        }
+      ],
+      "mean_base": "2665/34",
+      "mean_beta": [
+        "373/68",
+        "379/68",
+        "6",
+        "6",
+        "6",
+        "201/34",
+        "369/68",
+        "375/68"
+      ]
+    },
+    {
+      "order_index": 83,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        5,
+        8,
+        6,
+        4
+      ],
+      "mask": 495,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        7,
+        5,
+        0,
+        8,
+        0,
+        6,
+        0,
+        4,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "XRXRRXRXRRXRRXLXLLXLLLXRXRXRRXLXLLXLLLLLXRXRXRXRXRXRXRRXRRRXLXLXLXLXLXLXLLLLLLLLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 93,
+          "beta": [
+            7,
+            4,
+            1,
+            2,
+            8,
+            11,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "15/31"
+        },
+        {
+          "word": "RRXLXLXLXLXLXLXLXLLXLLXLLXRXRXRXRRRRRRXRRXLXLLLXRXRXL",
+          "source": 554,
+          "cut": 14,
+          "base_cost": 53,
+          "beta": [
+            2,
+            5,
+            8,
+            11,
+            6,
+            3,
+            0,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "6/31"
+        },
+        {
+          "word": "RRXLXLXLXLLLXLLXLLLXRRXRXRXLXLLXRXRRRRRXRRXRRRRXLXLXLXLXLXLXLXLXRRXRR",
+          "source": 560,
+          "cut": 12,
+          "base_cost": 69,
+          "beta": [
+            5,
+            8,
+            12,
+            9,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "10/31"
+        }
+      ],
+      "mean_base": "2403/31",
+      "mean_beta": [
+        "167/31",
+        "170/31",
+        "183/31",
+        "6",
+        "6",
+        "183/31",
+        "165/31",
+        "168/31"
+      ]
+    },
+    {
+      "order_index": 83,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        5,
+        8,
+        6,
+        4
+      ],
+      "mask": 503,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        7,
+        0,
+        5,
+        0,
+        8,
+        0,
+        6,
+        0,
+        4,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRRRXRXRXRRXRXLLXLLXRXRRXRRRRXRRXRRRXLXLXLXLXLXLXRRRXL",
+          "source": 1202,
+          "cut": 7,
+          "base_cost": 55,
+          "beta": [
+            3,
+            6,
+            9,
+            8,
+            5,
+            2,
+            1,
+            4
+          ],
+          "mixed_gaps": 0,
+          "weight": "6/25"
+        },
+        {
+          "word": "XRXRRXRXRRXRRXLXLLXLLLXRXRXRRXLXLLXLLLLLXRXRXRXRXRXRXRRXRRRRXLXLXLXLXLXLXLXLLLLLLLLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 96,
+          "beta": [
+            7,
+            4,
+            1,
+            5,
+            8,
+            11,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "12/25"
+        },
+        {
+          "word": "RRXLXLXLXLLLXLLLXLLXRXRRXRXLXLXRRRRRXRRXRRRRXLXLXLXLXLXLXLXLXRRXRR",
+          "source": 560,
+          "cut": 12,
+          "base_cost": 66,
+          "beta": [
+            5,
+            8,
+            12,
+            6,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "7/25"
+        }
+      ],
+      "mean_base": "1944/25",
+      "mean_beta": [
+        "137/25",
+        "28/5",
+        "6",
+        "6",
+        "147/25",
+        "144/25",
+        "27/5",
+        "138/25"
+      ]
+    },
+    {
+      "order_index": 83,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        5,
+        8,
+        6,
+        4
+      ],
+      "mask": 507,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        0,
+        7,
+        0,
+        5,
+        0,
+        8,
+        0,
+        6,
+        0,
+        4,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "XRXRRXRXRRXRRXLXLLXLLLXRXRXRRXLXLLXLLLLLXRXRXRXRXRXRXRRXRRRRXLXLXLXLXLXLXLXLLLLLLLXLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 97,
+          "beta": [
+            7,
+            4,
+            2,
+            5,
+            8,
+            11,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "13/29"
+        },
+        {
+          "word": "RRXLXLXLXLXLXLXLLLXRXLLLXRXLLLXRXRXRXRXRRRRRRRXLLLXRXRXL",
+          "source": 554,
+          "cut": 14,
+          "base_cost": 56,
+          "beta": [
+            2,
+            5,
+            11,
+            9,
+            6,
+            3,
+            0,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "2/29"
+        },
+        {
+          "word": "RRXLXLXLXLLLLXLLXLLXRXRRXRXLLXRRRRRXRRXRRRRXLXLXLXLXLXLXLXLXRRXRR",
+          "source": 560,
+          "cut": 12,
+          "base_cost": 65,
+          "beta": [
+            5,
+            8,
+            9,
+            6,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "14/29"
+        }
+      ],
+      "mean_base": "2283/29",
+      "mean_beta": [
+        "165/29",
+        "6",
+        "6",
+        "167/29",
+        "158/29",
+        "149/29",
+        "159/29",
+        "168/29"
+      ]
+    },
+    {
+      "order_index": 83,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        5,
+        8,
+        6,
+        4
+      ],
+      "mask": 509,
+      "base_state": [
+        0,
+        1,
+        2,
+        0,
+        3,
+        0,
+        7,
+        0,
+        5,
+        0,
+        8,
+        0,
+        6,
+        0,
+        4,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRRRXRXRXRRXRXLLXLLXRXRRXRRRXRRXRRRRXLXLXLXLXLXLXRRXRRXLXL",
+          "source": 1202,
+          "cut": 7,
+          "base_cost": 59,
+          "beta": [
+            3,
+            9,
+            12,
+            8,
+            5,
+            2,
+            1,
+            4
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/68"
+        },
+        {
+          "word": "XRXRRXRXRRXRRXLXLLXLLLXRXRXRRXLXLLXLLLLXRXRXRXRXRXRRXRRRRXLXLXLXLXLXLXLXLLLLLLLXLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 94,
+          "beta": [
+            7,
+            1,
+            2,
+            5,
+            8,
+            11,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "33/68"
+        },
+        {
+          "word": "RRXLXLXLXLXLXLXLLLXRXLLLXRXLLLXRXRXRXRXRRRRRRXRXLLLXRXRXL",
+          "source": 554,
+          "cut": 14,
+          "base_cost": 57,
+          "beta": [
+            2,
+            8,
+            11,
+            9,
+            6,
+            3,
+            0,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "9/68"
+        },
+        {
+          "word": "RRXLXLXLLLXLLXLLXLLXRXRRXRXRXLXLLXRXRRRRRXRRRRRXLXLXLXLXLXLXLXRRXRR",
+          "source": 560,
+          "cut": 12,
+          "base_cost": 67,
+          "beta": [
+            5,
+            12,
+            9,
+            6,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "23/68"
+        }
+      ],
+      "mean_base": "5333/68",
+      "mean_beta": [
+        "373/68",
+        "6",
+        "6",
+        "6",
+        "201/34",
+        "99/17",
+        "369/68",
+        "375/68"
+      ]
+    },
+    {
+      "order_index": 83,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        5,
+        8,
+        6,
+        4
+      ],
+      "mask": 510,
+      "base_state": [
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        7,
+        0,
+        5,
+        0,
+        8,
+        0,
+        6,
+        0,
+        4,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRRRXRXRXRRXRXLLXLLXRXRRXRRRXRRXRRXRRXLXLXLXLXLXLXRRXRRXLXL",
+          "source": 1202,
+          "cut": 7,
+          "base_cost": 60,
+          "beta": [
+            6,
+            9,
+            12,
+            8,
+            5,
+            2,
+            1,
+            4
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/68"
+        },
+        {
+          "word": "RXRRXRXRRXRRXLXLLXLLLXRXRXRRXLXLLXLLLLXRXRXRXRXRXRRXRRRRXLXLXLXLXLXLXLXLLLLLLLXLXLXLXLXLLXRXR",
+          "source": 282,
+          "cut": 4,
+          "base_cost": 93,
+          "beta": [
+            4,
+            1,
+            2,
+            5,
+            8,
+            11,
+            9,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "33/68"
+        },
+        {
+          "word": "RRXLXLXLXLXLXLXLLLXRXLLLXRXLLLXRXRXRXRXRRRRRRXRRXLXLLLXRXRXL",
+          "source": 554,
+          "cut": 14,
+          "base_cost": 60,
+          "beta": [
+            5,
+            8,
+            11,
+            9,
+            6,
+            3,
+            0,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "9/68"
+        },
+        {
+          "word": "RRXLXLXLLLXLLXLLXLLXRXRRXRXRXLXLLXRXRRRRRXRRXRRRXLXLXLXLXLXLXLXRRXRR",
+          "source": 560,
+          "cut": 12,
+          "base_cost": 68,
+          "beta": [
+            8,
+            12,
+            9,
+            6,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "23/68"
+        }
+      ],
+      "mean_base": "5353/68",
+      "mean_beta": [
+        "379/68",
+        "6",
+        "6",
+        "6",
+        "201/34",
+        "99/17",
+        "369/68",
+        "375/68"
+      ]
+    },
+    {
+      "order_index": 88,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        6,
+        8,
+        4,
+        5
+      ],
+      "mask": 479,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        7,
+        0,
+        6,
+        8,
+        0,
+        4,
+        0,
+        5,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "LLLXLLXLLXLLLLXRXRXLLLLXRXRXRXRRRRXRRXLXLLLXLXLXLLLLLLXRXRXRXRXRXRXRXRXRXRX",
+          "source": 771,
+          "cut": 2,
+          "base_cost": 75,
+          "beta": [
+            4,
+            1,
+            2,
+            5,
+            8,
+            9,
+            6,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/2"
+        },
+        {
+          "word": "RRXLXLXLXLXRRXRRRRXLXLXLXLXLXLLLXLLXLLXLXRRXRXRXLXLLXRXRRRRXRXRR",
+          "source": 772,
+          "cut": 12,
+          "base_cost": 64,
+          "beta": [
+            5,
+            8,
+            12,
+            9,
+            6,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/4"
+        },
+        {
+          "word": "RRXLXLXLLXLLXLLXRXRRXRRXRRRRRXLXLXLXLXRRRRRRXLXLXLXLXLXLXLXLXLLXRXRRXRXRRRRRRRRXRXRXRXRXRXRRRRR",
+          "source": 1216,
+          "cut": 10,
+          "base_cost": 95,
+          "beta": [
+            9,
+            11,
+            8,
+            5,
+            2,
+            4,
+            7,
+            10
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/4"
+        }
+      ],
+      "mean_base": "309/4",
+      "mean_beta": [
+        "11/2",
+        "21/4",
+        "6",
+        "6",
+        "6",
+        "11/2",
+        "11/2",
+        "11/2"
+      ]
+    },
+    {
+      "order_index": 88,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        6,
+        8,
+        4,
+        5
+      ],
+      "mask": 495,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        7,
+        6,
+        0,
+        8,
+        0,
+        4,
+        0,
+        5,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "LLLXLLXLLLXLLLXRXRXLLLLXRXRXRXRRRXRRRXLLXRXLLLXLXLXLLLLLLXRXRXRXRXRXRXRXRXRXRX",
+          "source": 771,
+          "cut": 2,
+          "base_cost": 78,
+          "beta": [
+            4,
+            1,
+            2,
+            5,
+            11,
+            9,
+            6,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "7/30"
+        },
+        {
+          "word": "LXLLXLLXLLLLXLLXLLXRXRRXRXRXRXLXLLLXRXRXRXRRRRXRRXLXL",
+          "source": 590,
+          "cut": 0,
+          "base_cost": 53,
+          "beta": [
+            1,
+            2,
+            5,
+            8,
+            9,
+            6,
+            3,
+            0
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/3"
+        },
+        {
+          "word": "RRXLXLXLLXLLXLLXRXRRXRRXRRRRRXLXLXLXLXRRRRRRXLXLXLXLXLXLXLXLXLLXRXRRXRXRRRRRRRRRXRXRXRXRXRRRRR",
+          "source": 1216,
+          "cut": 10,
+          "base_cost": 94,
+          "beta": [
+            9,
+            11,
+            8,
+            5,
+            1,
+            4,
+            7,
+            10
+          ],
+          "mixed_gaps": 0,
+          "weight": "13/30"
+        }
+      ],
+      "mean_base": "383/5",
+      "mean_beta": [
+        "31/6",
+        "17/3",
+        "28/5",
+        "6",
+        "6",
+        "35/6",
+        "163/30",
+        "151/30"
+      ]
+    },
+    {
+      "order_index": 88,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        6,
+        8,
+        4,
+        5
+      ],
+      "mask": 507,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        0,
+        7,
+        0,
+        6,
+        0,
+        8,
+        0,
+        4,
+        0,
+        5,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "LLLLXLLXLLXLLLXRXRXLLLLXRXRXRXRRRXRRXRRXLXLLXRXLLLXLXLXLLLLLLXRXRXRXRXRXRXRXRXRXRX",
+          "source": 771,
+          "cut": 2,
+          "base_cost": 82,
+          "beta": [
+            4,
+            1,
+            5,
+            8,
+            11,
+            9,
+            6,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "7/26"
+        },
+        {
+          "word": "RRXLXLXLXLXRRXRRRRXLXLXLXLXLXLLLLXLLXLLXRXRRXRXLLXRRRRXRXRR",
+          "source": 772,
+          "cut": 12,
+          "base_cost": 59,
+          "beta": [
+            5,
+            8,
+            9,
+            6,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/13"
+        },
+        {
+          "word": "LXLLLXLLXLLLXLLXLLXRXRRXRXRXRXLXLLLXRXRXRXRRRXRRXRXLLXRXL",
+          "source": 590,
+          "cut": 0,
+          "base_cost": 57,
+          "beta": [
+            1,
+            2,
+            8,
+            11,
+            9,
+            6,
+            3,
+            0
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/13"
+        },
+        {
+          "word": "RRXLXLXLLXLLLXRRXRRXRRRRRXLXLXLXLXRRRRRRXLXLXLXLXLXLXLXLXLLXRXRRXRXRRRRRRRRRXRXRXRXRXRRRRR",
+          "source": 1216,
+          "cut": 10,
+          "base_cost": 90,
+          "beta": [
+            9,
+            11,
+            5,
+            2,
+            1,
+            4,
+            7,
+            10
+          ],
+          "mixed_gaps": 0,
+          "weight": "11/26"
+        }
+      ],
+      "mean_base": "1012/13",
+      "mean_beta": [
+        "11/2",
+        "6",
+        "6",
+        "6",
+        "74/13",
+        "11/2",
+        "11/2",
+        "11/2"
+      ]
+    },
+    {
+      "order_index": 88,
+      "labels": [
+        1,
+        2,
+        3,
+        7,
+        6,
+        8,
+        4,
+        5
+      ],
+      "mask": 509,
+      "base_state": [
+        0,
+        1,
+        2,
+        0,
+        3,
+        0,
+        7,
+        0,
+        6,
+        0,
+        8,
+        0,
+        4,
+        0,
+        5,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "LLXLLXLLXLLXLLLXRXRXLLLLXRXRXRXRRRXRRXRRXLXLLXRXLLLXLXLXLLLLLLXRXRXRXRXRXRXRXRXRXRX",
+          "source": 771,
+          "cut": 2,
+          "base_cost": 83,
+          "beta": [
+            4,
+            2,
+            5,
+            8,
+            11,
+            9,
+            6,
+            3
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/6"
+        },
+        {
+          "word": "LLXLLXLLXLLLXLLXLLXRXRRXRXRXRXLXLLLXRXRXRXRRRXRRXRRXLXLLXRXL",
+          "source": 590,
+          "cut": 0,
+          "base_cost": 60,
+          "beta": [
+            1,
+            5,
+            8,
+            11,
+            9,
+            6,
+            3,
+            0
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/3"
+        },
+        {
+          "word": "RRXLXLXLLLXLLXRXRRRXRRRRRXLXLXLXLXRRRRRRXLXLXLXLXLXLXLXLXLXRRXRXRRRRRRRRRXRXRXRXRXRRRRR",
+          "source": 1216,
+          "cut": 10,
+          "base_cost": 87,
+          "beta": [
+            9,
+            8,
+            5,
+            2,
+            1,
+            4,
+            7,
+            10
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/2"
+        }
+      ],
+      "mean_base": "232/3",
+      "mean_beta": [
+        "11/2",
+        "6",
+        "6",
+        "6",
+        "16/3",
+        "11/2",
+        "11/2",
+        "11/2"
+      ]
+    },
+    {
+      "order_index": 139,
+      "labels": [
+        1,
+        2,
+        4,
+        3,
+        8,
+        5,
+        7,
+        6
+      ],
+      "mask": 479,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        4,
+        0,
+        3,
+        0,
+        8,
+        5,
+        0,
+        7,
+        0,
+        6,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRXRXRXRRXRXLXLLLXRRXRXLLXRXRRRRRXLXRRRXRRXLXLLXRXL",
+          "source": 602,
+          "cut": 0,
+          "base_cost": 52,
+          "beta": [
+            0,
+            3,
+            6,
+            9,
+            11,
+            5,
+            2,
+            1
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/4"
+        },
+        {
+          "word": "RRXLXLXLXLXRRXRRRRXLXLXLXLXLXLXLLXLLXLLXRXRRXRRXRXRRRRRRRRXLXLXLXLXLXLXLXLLLXLLXRRRXRXRXRR",
+          "source": 9,
+          "cut": 10,
+          "base_cost": 90,
+          "beta": [
+            8,
+            11,
+            9,
+            6,
+            3,
+            3,
+            6,
+            9
+          ],
+          "mixed_gaps": 0,
+          "weight": "7/20"
+        },
+        {
+          "word": "XRXRRXRXRRXRRRXLLXLLLLLXLLLLXRXRXRXRRXRXRXRXLXLXLXLXRXRXRXRRRXLXLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRRR",
+          "source": 283,
+          "cut": 6,
+          "base_cost": 96,
+          "beta": [
+            9,
+            6,
+            3,
+            0,
+            3,
+            9,
+            11,
+            8
+          ],
+          "mixed_gaps": 0,
+          "weight": "7/30"
+        },
+        {
+          "word": "XRXRXRXRXRXRXRRRXLLXLXLLXLLXRXRXRXRRRXLLLLXRRRRRRRXLXLXLXRRRRRXLXLXLX",
+          "source": 502,
+          "cut": 2,
+          "base_cost": 69,
+          "beta": [
+            3,
+            0,
+            3,
+            6,
+            9,
+            8,
+            5,
+            2
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/6"
+        }
+      ],
+      "mean_base": "392/5",
+      "mean_beta": [
+        "27/5",
+        "6",
+        "117/20",
+        "107/20",
+        "6",
+        "86/15",
+        "6",
+        "28/5"
+      ]
+    },
+    {
+      "order_index": 139,
+      "labels": [
+        1,
+        2,
+        4,
+        3,
+        8,
+        5,
+        7,
+        6
+      ],
+      "mask": 503,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        4,
+        3,
+        0,
+        8,
+        0,
+        5,
+        0,
+        7,
+        0,
+        6,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRXRXRXRRXRXRXLXLLXLLXRXRRXRXLLXRXRRRRXRRXRRXLXL",
+          "source": 602,
+          "cut": 0,
+          "base_cost": 49,
+          "beta": [
+            0,
+            3,
+            6,
+            11,
+            8,
+            5,
+            2,
+            1
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/4"
+        },
+        {
+          "word": "RRXLXLXLXLXRRXRRRRXLXLXLXLXLXLXLLXLLLXRRXRRXRXRRRRRRRRXLXLXLXLXLXLXLXLLLXLLXRRRXRXRXRR",
+          "source": 9,
+          "cut": 10,
+          "base_cost": 86,
+          "beta": [
+            8,
+            11,
+            9,
+            3,
+            0,
+            3,
+            6,
+            9
+          ],
+          "mixed_gaps": 0,
+          "weight": "7/20"
+        },
+        {
+          "word": "XRXRRXRXRRXRRXRRXLXLLXLLLLLXLLLLXRXRXRXRRXRXRXRXLXLXLXLXRXRXRXRRRXLXLXLLLLLLLLLLXRXRXRXRXRXRXRXRXRRR",
+          "source": 283,
+          "cut": 6,
+          "base_cost": 100,
+          "beta": [
+            9,
+            6,
+            3,
+            3,
+            6,
+            9,
+            11,
+            8
+          ],
+          "mixed_gaps": 0,
+          "weight": "7/30"
+        },
+        {
+          "word": "XRXRXRXRXRXRXRRXRRXLXLLXLXLLXLLXRXRXRXRRRXLLLLXRRRRRRRXLXLXLXRRRRRXLXLXLX",
+          "source": 502,
+          "cut": 2,
+          "base_cost": 73,
+          "beta": [
+            3,
+            0,
+            3,
+            9,
+            12,
+            8,
+            5,
+            2
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/6"
+        }
+      ],
+      "mean_base": "1557/20",
+      "mean_beta": [
+        "27/5",
+        "6",
+        "117/20",
+        "6",
+        "27/5",
+        "86/15",
+        "6",
+        "28/5"
+      ]
+    },
+    {
+      "order_index": 139,
+      "labels": [
+        1,
+        2,
+        4,
+        3,
+        8,
+        5,
+        7,
+        6
+      ],
+      "mask": 507,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        4,
+        0,
+        3,
+        0,
+        8,
+        0,
+        5,
+        0,
+        7,
+        0,
+        6,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 78,
+      "rows": [
+        {
+          "word": "RRRXRXRXRRXRXRXLXLLXLLXRXRRXRXLLXRXRRRRRXLXRRRRXLLXRXL",
+          "source": 602,
+          "cut": 0,
+          "base_cost": 54,
+          "beta": [
+            0,
+            3,
+            9,
+            11,
+            8,
+            5,
+            2,
+            1
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/25"
+        },
+        {
+          "word": "RRXLXLXLXLXRRXRRRRXLXLXLXLXLXLXLLLXLLXRXRRRXRXRRRRRRRRXLXLXLXLXLXLXLXLLLXRXRXRXRR",
+          "source": 9,
+          "cut": 10,
+          "base_cost": 81,
+          "beta": [
+            8,
+            11,
+            6,
+            3,
+            0,
+            3,
+            6,
+            9
+          ],
+          "mixed_gaps": 0,
+          "weight": "12/25"
+        },
+        {
+          "word": "XRXRRXRXRRXRRXRRXLXLLXLLLLLXLLLLXRXRXRXRRXRXRXRXLXLXLXLXRXRXRXRRRXLXLXLLLLLLLLLXRXRXRXRXRXRXRXRRR",
+          "source": 283,
+          "cut": 6,
+          "base_cost": 97,
+          "beta": [
+            9,
+            6,
+            0,
+            3,
+            6,
+            9,
+            11,
+            8
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/50"
+        },
+        {
+          "word": "XRXRXRXRXRXRXRRXRRXLXLLXLXLLXLLXRXRXRXRRRXLLLLXRRRRRRRRXLXLXLXLXRRRRRXLXLXLX",
+          "source": 502,
+          "cut": 2,
+          "base_cost": 76,
+          "beta": [
+            3,
+            0,
+            6,
+            9,
+            12,
+            8,
+            5,
+            2
+          ],
+          "mixed_gaps": 0,
+          "weight": "17/50"
+        }
+      ],
+      "mean_base": "3851/50",
+      "mean_beta": [
+        "27/5",
+        "6",
+        "6",
+        "6",
+        "27/5",
+        "53/10",
+        "137/25",
+        "28/5"
+      ]
+    },
+    {
+      "order_index": 5,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        7,
+        6
+      ],
+      "mask": 415,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        4,
+        0,
+        5,
+        8,
+        7,
+        0,
+        6,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 72,
+      "rows": [
+        {
+          "word": "RRXLXLXLXLXLLXRXLLLXLLXLXRRXRRXRXRRRRXRRRRXLXLXLXLXLXLXLXLXLLXLLXRXRRXRXRRRR",
+          "source": 460,
+          "cut": 12,
+          "base_cost": 76,
+          "beta": [
+            5,
+            8,
+            12,
+            9,
+            6,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "2/5"
+        },
+        {
+          "word": "XLLXRXRRXRXRXRXRXRRRXRRXLXLLLXLLLLXLLXRXRXRXRXRXRRXLXLLLXLXRXRRRRRXLXR",
+          "source": 121,
+          "cut": 4,
+          "base_cost": 70,
+          "beta": [
+            6,
+            3,
+            0,
+            3,
+            6,
+            8,
+            5
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/5"
+        }
+      ],
+      "mean_base": "362/5",
+      "mean_beta": [
+        "28/5",
+        "5",
+        "24/5",
+        "27/5",
+        "6",
+        "6",
+        "27/5"
+      ]
+    },
+    {
+      "order_index": 5,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        7,
+        6
+      ],
+      "mask": 487,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        4,
+        5,
+        0,
+        8,
+        0,
+        7,
+        0,
+        6,
+        0
+      ],
+      "prior_union_covered": false,
+      "target_base": 72,
+      "rows": [
+        {
+          "word": "RRXLXLXLXLXLLXRXLLLLLXRRRXRXRRRRXRRRRXLXLXLXLXLXLXLXLXLLXLXRRXRXRRRR",
+          "source": 460,
+          "cut": 12,
+          "base_cost": 68,
+          "beta": [
+            5,
+            8,
+            12,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/2"
+        },
+        {
+          "word": "XLLXRXRRXRXRXRXRXRXRRXRXLLXLLLXLLXLLXRXRXRXRXRXRXRRXLXLLLXLLXRXRXRRRRRRXLXLXR",
+          "source": 121,
+          "cut": 4,
+          "base_cost": 77,
+          "beta": [
+            6,
+            3,
+            0,
+            9,
+            11,
+            8,
+            5
+          ],
+          "mixed_gaps": 0,
+          "weight": "1/2"
+        }
+      ],
+      "mean_base": "145/2",
+      "mean_beta": [
+        "11/2",
+        "11/2",
+        "6",
+        "6",
+        "11/2",
+        "11/2",
+        "11/2"
+      ]
+    },
+    {
+      "order_index": 5,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        7,
+        6
+      ],
+      "mask": 31,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        4,
+        0,
+        5,
+        8,
+        7,
+        6
+      ],
+      "prior_union_covered": false,
+      "target_base": 60,
+      "rows": [
+        {
+          "word": "XLLXRXRRXRXRXRRRXRRXLXLLLXLLLLXRXRXRXRRXLXLLLXLXRXRRRRRXLXR",
+          "source": 121,
+          "cut": 4,
+          "base_cost": 59,
+          "beta": [
+            6,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "1"
+        }
+      ],
+      "mean_base": "59",
+      "mean_beta": [
+        "6",
+        "3",
+        "0",
+        "3",
+        "6"
+      ]
+    },
+    {
+      "order_index": 5,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        7,
+        6
+      ],
+      "mask": 115,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        4,
+        0,
+        5,
+        0,
+        8,
+        0,
+        7,
+        6
+      ],
+      "prior_union_covered": false,
+      "target_base": 60,
+      "rows": [
+        {
+          "word": "RXLXLXLXLXLLLXLLXRXRRRXRRRRXRRXLXLXLXLXLXLXLXRXRRRR",
+          "source": 460,
+          "cut": 12,
+          "base_cost": 51,
+          "beta": [
+            5,
+            8,
+            6,
+            3,
+            0
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/5"
+        },
+        {
+          "word": "XLLXRXRRXRXRXRXRRXRRXRXLLXLLXLLLXLLXRXRXRXRXRRXLXLLLXLLXRXRXRRRRRRXLXLXR",
+          "source": 121,
+          "cut": 4,
+          "base_cost": 72,
+          "beta": [
+            6,
+            3,
+            6,
+            9,
+            11
+          ],
+          "mixed_gaps": 0,
+          "weight": "2/5"
+        }
+      ],
+      "mean_base": "297/5",
+      "mean_beta": [
+        "27/5",
+        "6",
+        "6",
+        "27/5",
+        "22/5"
+      ]
+    },
+    {
+      "order_index": 5,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        7,
+        6
+      ],
+      "mask": 83,
+      "base_state": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        4,
+        0,
+        5,
+        8,
+        0,
+        7,
+        6
+      ],
+      "prior_union_covered": false,
+      "target_base": 54,
+      "rows": [
+        {
+          "word": "RXLXLXLXLXLLLXLXRRRXRRRRXRRXLXLXLXLXLXLXLXRXRRRR",
+          "source": 460,
+          "cut": 12,
+          "base_cost": 48,
+          "beta": [
+            5,
+            8,
+            6,
+            0
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/5"
+        },
+        {
+          "word": "XLLXRXRRXRXRXRXRRRXRXLLLXLLLXLLXRXRXRXRXRRXLXLLLXLLXRXRXRRRRRXLXR",
+          "source": 121,
+          "cut": 4,
+          "base_cost": 65,
+          "beta": [
+            6,
+            3,
+            6,
+            11
+          ],
+          "mixed_gaps": 0,
+          "weight": "2/5"
+        }
+      ],
+      "mean_base": "274/5",
+      "mean_beta": [
+        "27/5",
+        "6",
+        "6",
+        "22/5"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "order_index": 11,
+      "mask": 507,
+      "k": 8,
+      "columns": 5,
+      "solver_status": 0,
+      "lp_base": 77.68571428571428,
+      "certified": true
+    },
+    {
+      "order_index": 21,
+      "mask": 507,
+      "k": 8,
+      "columns": 5,
+      "solver_status": 0,
+      "lp_base": 77.17575757575756,
+      "certified": true
+    },
+    {
+      "order_index": 59,
+      "mask": 447,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 78.45833333333333,
+      "certified": true
+    },
+    {
+      "order_index": 59,
+      "mask": 507,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 79.21052631578947,
+      "certified": false
+    },
+    {
+      "order_index": 59,
+      "mask": 509,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 78.6923076923077,
+      "certified": true
+    },
+    {
+      "order_index": 59,
+      "mask": 510,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 79.23076923076924,
+      "certified": false
+    },
+    {
+      "order_index": 63,
+      "mask": 507,
+      "k": 8,
+      "columns": 5,
+      "solver_status": 0,
+      "lp_base": 77.8561403508772,
+      "certified": true
+    },
+    {
+      "order_index": 83,
+      "mask": 447,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 78.38235294117646,
+      "certified": true
+    },
+    {
+      "order_index": 83,
+      "mask": 495,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 77.51612903225806,
+      "certified": true
+    },
+    {
+      "order_index": 83,
+      "mask": 503,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 77.76,
+      "certified": true
+    },
+    {
+      "order_index": 83,
+      "mask": 507,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 78.72413793103449,
+      "certified": true
+    },
+    {
+      "order_index": 83,
+      "mask": 509,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 78.4264705882353,
+      "certified": true
+    },
+    {
+      "order_index": 83,
+      "mask": 510,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 78.72058823529413,
+      "certified": true
+    },
+    {
+      "order_index": 88,
+      "mask": 479,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 77.25,
+      "certified": true
+    },
+    {
+      "order_index": 88,
+      "mask": 495,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 76.6,
+      "certified": true
+    },
+    {
+      "order_index": 88,
+      "mask": 507,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 77.84615384615384,
+      "certified": true
+    },
+    {
+      "order_index": 88,
+      "mask": 509,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 77.33333333333333,
+      "certified": true
+    },
+    {
+      "order_index": 139,
+      "mask": 479,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 78.4,
+      "certified": true
+    },
+    {
+      "order_index": 139,
+      "mask": 503,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 77.85,
+      "certified": true
+    },
+    {
+      "order_index": 139,
+      "mask": 507,
+      "k": 8,
+      "columns": 4,
+      "solver_status": 0,
+      "lp_base": 77.02000000000001,
+      "certified": true
+    },
+    {
+      "order_index": 5,
+      "mask": 239,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 319,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 351,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 367,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 74.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 375,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 379,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 381,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 382,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 415,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 72.4,
+      "certified": true
+    },
+    {
+      "order_index": 5,
+      "mask": 431,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 74.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 439,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 443,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 445,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 446,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 477,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 478,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 487,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 72.5,
+      "certified": true
+    },
+    {
+      "order_index": 5,
+      "mask": 491,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 73.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 493,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 74.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 494,
+      "k": 7,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 74.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 63,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 68.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 95,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 111,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 68.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 119,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 123,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 125,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 68.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 126,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 68.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 159,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 175,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 68.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 183,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 187,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 189,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 68.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 190,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 68.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 207,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 215,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 219,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 221,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 222,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 231,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 67.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 235,
+      "k": 6,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 68.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 31,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 59.0,
+      "certified": true
+    },
+    {
+      "order_index": 5,
+      "mask": 47,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 64.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 55,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 59,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 61,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 62,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 79,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 62.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 87,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 62.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 91,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 62.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 93,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 94,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 103,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 62.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 107,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 109,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 64.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 110,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 64.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 115,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 59.400000000000006,
+      "certified": true
+    },
+    {
+      "order_index": 5,
+      "mask": 117,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 118,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 121,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 122,
+      "k": 5,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 63.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 15,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 55.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 23,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 56.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 27,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 58.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 29,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 56.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 30,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 55.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 39,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 58.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 43,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 59.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 45,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 59.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 46,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 59.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 51,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 55.800000000000004,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 53,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 58.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 54,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 58.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 57,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 58.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 58,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 58.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 60,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 59.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 75,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 57.5,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 77,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 58.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 78,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 58.0,
+      "certified": false
+    },
+    {
+      "order_index": 5,
+      "mask": 83,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 54.800000000000004,
+      "certified": true
+    },
+    {
+      "order_index": 5,
+      "mask": 85,
+      "k": 4,
+      "columns": 2,
+      "solver_status": 0,
+      "lp_base": 58.0,
+      "certified": false
+    }
+  ],
+  "seconds": 0.7629057504236698
+}

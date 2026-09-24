@@ -1,0 +1,57 @@
+{
+  "method": "literal marked-word resource BFS; independent of C++ ranks and recurrence",
+  "cases": [],
+  "packed_comparisons": [
+    {
+      "m": 2,
+      "r": 2,
+      "layers_equal": 3
+    },
+    {
+      "m": 2,
+      "r": 3,
+      "layers_equal": 3
+    },
+    {
+      "m": 3,
+      "r": 2,
+      "layers_equal": 3
+    },
+    {
+      "m": 2,
+      "r": 4,
+      "layers_equal": 3
+    },
+    {
+      "m": 3,
+      "r": 3,
+      "layers_equal": 3
+    },
+    {
+      "m": 4,
+      "r": 2,
+      "layers_equal": 3
+    },
+    {
+      "m": 2,
+      "r": 5,
+      "layers_equal": 3
+    },
+    {
+      "m": 3,
+      "r": 4,
+      "layers_equal": 3
+    },
+    {
+      "m": 4,
+      "r": 3,
+      "layers_equal": 3
+    },
+    {
+      "m": 5,
+      "r": 2,
+      "layers_equal": 3
+    }
+  ],
+  "source_sha256": "8650a82ded7d46b1798b3b64efd4faf35d7c2b52bf13ea1b5cc0e4ea550b337d"
+}

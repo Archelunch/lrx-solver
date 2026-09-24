@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/home/desktop/.elan/bin/lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "LRX/ProjectionFrontier.lean"
+  ],
+  "returncode": 0,
+  "stdout": "'LRX.ProjectionFrontier.obstruction' depends on axioms: [propext, Quot.sound]\n'LRX.ProjectionFrontier.geodesic_losses' depends on axioms: [propext, Quot.sound]\n'LRX.ProjectionFrontier.constrained_losses' depends on axioms: [propext, Quot.sound]\n'LRX.ProjectionFrontier.allowance_nontrivial' depends on axioms: [propext, Quot.sound]\n'LRX.ProjectionFrontier.frontier_repair' depends on axioms: [propext, Quot.sound]\n",
+  "sha256": "a7145f4168768b137ef27188b904c1a04c42f128af99b86258f51689d1952336",
+  "scope": "Conditional scalar consequences only; finite certificate is not supplied or proved."
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "families": 8193,
+  "by_blocks": {
+    "5": 2,
+    "4": 1,
+    "7": 2,
+    "8": 8188
+  },
+  "counts": {
+    "rows": 32417,
+    "letters": 2493005,
+    "replays": 3691,
+    "negative_controls_rejected": 3
+  },
+  "checks": "all base words and exact rational inequalities; sampled expanded words; mathematical block-macro lemma required",
+  "full_m8_proved": false,
+  "full_conjecture_proved": false,
+  "human_reviewed": false,
+  "certificate_sha256": "3409a4bb19e9ee117abeccfa2cc9acd8e7ea2d48a2526c933150e3ea8bca6add",
+  "coverage_sha256": "72a2262c955938f8fa577e3df01c7c8f28a2307734abc0766780c338c68617d3",
+  "verifier_sha256": "aa3a0aa543e6ceb73d0ebeb10193e3ae884783f7f1929cd3d0d1cf3e45256e13",
+  "seconds": 2.139116999693215
+}

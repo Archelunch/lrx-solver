@@ -1,0 +1,21 @@
+{
+  "v": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    7,
+    8,
+    6,
+    5,
+    4,
+    3
+  ],
+  "D": 47,
+  "P": 42,
+  "A_P": 49,
+  "bound": 48,
+  "general_conjecture_disproved": false,
+  "absolute_radius_candidate_disproved_by_exact_enumeration": true
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/s/Cowork/lrx-research/experiments/cycle6/packed_budget_check",
+    "9",
+    "2",
+    "0"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 9.060895167291164,
+  "source_sha256": "3c1d166b5535f446cccdf6f09f748b4b19f39854154b90ceeac91caaecafb0ca",
+  "binary_sha256": "00f13e2d00e1a730c8e647a2b3c41e6875e0080c1f3310e6d95c6fae3f926767",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "timeout_seconds": 600
+}

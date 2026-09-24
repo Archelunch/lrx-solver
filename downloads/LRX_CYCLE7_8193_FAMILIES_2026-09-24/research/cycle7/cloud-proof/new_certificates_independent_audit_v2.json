@@ -1,0 +1,731 @@
+{
+  "status": "PASS",
+  "families": 8193,
+  "rows": 32417,
+  "base_letters": 2493005,
+  "by_blocks": {
+    "5": 2,
+    "4": 1,
+    "7": 2,
+    "8": 8188
+  },
+  "mixed_gaps": 0,
+  "large_length_replays": 114,
+  "negative_controls_rejected": [
+    "weight",
+    "slope",
+    "word",
+    "mask",
+    "index"
+  ],
+  "previously_uncovered_eight_block_families": 10248,
+  "remaining_eight_block_families_relative_to_snapshot": 2060,
+  "special_cases": {
+    "(5, 31)": {
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        7,
+        6
+      ],
+      "mask": 31,
+      "base": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        4,
+        0,
+        5,
+        8,
+        7,
+        6
+      ],
+      "rows": [
+        {
+          "word": "XLLXRXRRXRXRXRRRXRRXLXLLLXLLLLXRXRXRXRRXLXLLLXLXRXRRRRRXLXR",
+          "source": 121,
+          "cut": 4,
+          "base_cost": 59,
+          "beta": [
+            6,
+            3,
+            0,
+            3,
+            6
+          ],
+          "mixed_gaps": 0,
+          "weight": "1"
+        }
+      ],
+      "mean_B": "59",
+      "mean_beta": [
+        "6",
+        "3",
+        "0",
+        "3",
+        "6"
+      ],
+      "strict_margin": "2"
+    },
+    "(5, 83)": {
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        7,
+        6
+      ],
+      "mask": 83,
+      "base": [
+        0,
+        1,
+        0,
+        2,
+        3,
+        4,
+        0,
+        5,
+        8,
+        0,
+        7,
+        6
+      ],
+      "rows": [
+        {
+          "word": "RXLXLXLXLXLLLXLXRRRXRRRRXRRXLXLXLXLXLXLXLXRXRRRR",
+          "source": 460,
+          "cut": 12,
+          "base_cost": 48,
+          "beta": [
+            5,
+            8,
+            6,
+            0
+          ],
+          "mixed_gaps": 0,
+          "weight": "3/5"
+        },
+        {
+          "word": "XLLXRXRRXRXRXRXRRRXRXLLLXLLLXLLXRXRXRXRXRRXLXLLLXLLXRXRXRRRRRXLXR",
+          "source": 121,
+          "cut": 4,
+          "base_cost": 65,
+          "beta": [
+            6,
+            3,
+            6,
+            11
+          ],
+          "mixed_gaps": 0,
+          "weight": "2/5"
+        }
+      ],
+      "mean_B": "274/5",
+      "mean_beta": [
+        "27/5",
+        "6",
+        "6",
+        "22/5"
+      ],
+      "strict_margin": "1/5"
+    }
+  },
+  "large_length_examples": [
+    {
+      "order_index": 5,
+      "mask": 31,
+      "lengths": [
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "prices": [
+        1823
+      ]
+    },
+    {
+      "order_index": 5,
+      "mask": 31,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        6059
+      ]
+    },
+    {
+      "order_index": 5,
+      "mask": 31,
+      "lengths": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "prices": [
+        173
+      ]
+    },
+    {
+      "order_index": 5,
+      "mask": 83,
+      "lengths": [
+        97,
+        98,
+        99,
+        100
+      ],
+      "prices": [
+        1892,
+        2609
+      ]
+    },
+    {
+      "order_index": 5,
+      "mask": 83,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        5048,
+        6065
+      ]
+    },
+    {
+      "order_index": 5,
+      "mask": 83,
+      "lengths": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "prices": [
+        74,
+        163
+      ]
+    },
+    {
+      "order_index": 8172,
+      "mask": 503,
+      "lengths": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "prices": [
+        4942,
+        4177,
+        3643,
+        4878,
+        5574
+      ]
+    },
+    {
+      "order_index": 8172,
+      "mask": 503,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        8086,
+        3080,
+        63,
+        6075,
+        9082
+      ]
+    },
+    {
+      "order_index": 8172,
+      "mask": 503,
+      "lengths": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "prices": [
+        1759,
+        1134,
+        689,
+        1735,
+        2196
+      ]
+    },
+    {
+      "order_index": 13376,
+      "mask": 479,
+      "lengths": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "prices": [
+        4830,
+        3849,
+        5078,
+        4383
+      ]
+    },
+    {
+      "order_index": 13376,
+      "mask": 479,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        5081,
+        1071,
+        9081,
+        6076
+      ]
+    },
+    {
+      "order_index": 13376,
+      "mask": 479,
+      "lengths": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "prices": [
+        1226,
+        686,
+        2192,
+        1701
+      ]
+    },
+    {
+      "order_index": 17272,
+      "mask": 507,
+      "lengths": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "prices": [
+        5492,
+        4014,
+        5292,
+        4222,
+        4255
+      ]
+    },
+    {
+      "order_index": 17272,
+      "mask": 507,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        9090,
+        4058,
+        9094,
+        4074,
+        1086
+      ]
+    },
+    {
+      "order_index": 17272,
+      "mask": 507,
+      "lengths": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "prices": [
+        2321,
+        996,
+        2199,
+        742,
+        701
+      ]
+    },
+    {
+      "order_index": 22284,
+      "mask": 503,
+      "lengths": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "prices": [
+        4929,
+        5644,
+        4279,
+        5672
+      ]
+    },
+    {
+      "order_index": 22284,
+      "mask": 503,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        8073,
+        12074,
+        3082,
+        9078
+      ]
+    },
+    {
+      "order_index": 22284,
+      "mask": 503,
+      "lengths": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "prices": [
+        1746,
+        2296,
+        1151,
+        2255
+      ]
+    },
+    {
+      "order_index": 27318,
+      "mask": 507,
+      "lengths": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "prices": [
+        4469,
+        4353,
+        3957,
+        5451
+      ]
+    },
+    {
+      "order_index": 27318,
+      "mask": 507,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        3078,
+        1085,
+        83,
+        12072
+      ]
+    },
+    {
+      "order_index": 27318,
+      "mask": 507,
+      "lengths": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "prices": [
+        1141,
+        707,
+        718,
+        2412
+      ]
+    },
+    {
+      "order_index": 31695,
+      "mask": 507,
+      "lengths": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "prices": [
+        5376,
+        4451,
+        4127,
+        4040
+      ]
+    },
+    {
+      "order_index": 31695,
+      "mask": 507,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        7077,
+        3060,
+        3073,
+        5084
+      ]
+    },
+    {
+      "order_index": 31695,
+      "mask": 507,
+      "lengths": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "prices": [
+        1943,
+        1123,
+        879,
+        1157
+      ]
+    },
+    {
+      "order_index": 36292,
+      "mask": 255,
+      "lengths": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "prices": [
+        4522,
+        4585,
+        4474,
+        4729
+      ]
+    },
+    {
+      "order_index": 36292,
+      "mask": 255,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        5085,
+        3067,
+        80,
+        10081
+      ]
+    },
+    {
+      "order_index": 36292,
+      "mask": 255,
+      "lengths": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "prices": [
+        753,
+        1733,
+        1146,
+        1548
+      ]
+    },
+    {
+      "order_index": 40310,
+      "mask": 510,
+      "lengths": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "prices": [
+        4592,
+        4730,
+        4720,
+        4757,
+        4784
+      ]
+    },
+    {
+      "order_index": 40310,
+      "mask": 510,
+      "lengths": [
+        1001,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prices": [
+        3074,
+        11074,
+        8088,
+        9060,
+        88
+      ]
+    },
+    {
+      "order_index": 40310,
+      "mask": 510,
+      "lengths": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "prices": [
+        1740,
+        1736,
+        1165,
+        2270,
+        1231
+      ]
+    }
+  ],
+  "novelty_scope": "Every distinct pair absent in exact supplied union_covered snapshot; not a claim of absolute priority versus unseen newer posts.",
+  "all_lengths_basis": "PROOF_AUDIT.md direct block-macro proof and exact rational inequalities, not finite replay extrapolation",
+  "full_m8_proved": false,
+  "full_conjecture_proved": false,
+  "source_sha256": {
+    "review-input/runs/cycle7/certificates.json": "3409a4bb19e9ee117abeccfa2cc9acd8e7ea2d48a2526c933150e3ea8bca6add",
+    "input/literature/multiset_nine_gap_projection_search_20260924.npz": "72a2262c955938f8fa577e3df01c7c8f28a2307734abc0766780c338c68617d3",
+    "input/literature/multiset_nine_gap_complete_certificates_20260924.json": "82c64ae99ea37e0328603b89af4652c9d48fb61e688373ac81515f3e78d0c740",
+    "direct_stretch.py": "4b2c25129fe59d10092e8974c7b0736c5ce264bf6f110db7e7d883ae3be8b4db",
+    "verify_new_certificates.py": "2fb3257101a4db62dd924760a594f54beb251aa800c5bb86b1a9a9536efc6516"
+  },
+  "seconds": 3.3186389952898026
+}

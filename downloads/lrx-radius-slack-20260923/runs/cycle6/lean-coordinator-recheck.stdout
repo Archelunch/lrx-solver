@@ -1,0 +1,13 @@
+Decompressing 12 file(s) (812 already decompressed)
+Decompressed in 44 ms
+Completed successfully!
+'LRX.MarkedZero.silent_distance_le_two' depends on axioms: [propext]
+'LRX.MarkedZero.block_sum_bound' depends on axioms: [propext, Quot.sound]
+'LRX.MarkedZero.normalized_cost_bound' depends on axioms: [propext, Quot.sound]
+'LRX.MarkedZero.family_paid' depends on axioms: [propext, Quot.sound]
+'LRX.MarkedZero.joint_budget' depends on axioms: [propext, Quot.sound]
+'LRX.ProjectionFrontier.obstruction' depends on axioms: [propext, Quot.sound]
+'LRX.ProjectionFrontier.geodesic_losses' depends on axioms: [propext, Quot.sound]
+'LRX.ProjectionFrontier.constrained_losses' depends on axioms: [propext, Quot.sound]
+'LRX.ProjectionFrontier.allowance_nontrivial' depends on axioms: [propext, Quot.sound]
+'LRX.ProjectionFrontier.frontier_repair' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "counts": {
+    "words": 600,
+    "lifts": 1200,
+    "projections": 600,
+    "mixed_sign_profiles": 0
+  },
+  "mixed_affine_checks": 2000,
+  "scope": "Finite implementation tests; all-positive-length proof is in PROOF_AUDIT.md",
+  "sha256": {
+    "direct_stretch.py": "4b2c25129fe59d10092e8974c7b0736c5ce264bf6f110db7e7d883ae3be8b4db",
+    "check_direct_stretch.py": "26e7628c9c363c321934faa4e96c8ee3bc61003a4f2b249f202132e8039e6256"
+  }
+}

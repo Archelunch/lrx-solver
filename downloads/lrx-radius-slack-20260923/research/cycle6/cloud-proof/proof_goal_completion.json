@@ -1,0 +1,13 @@
+{
+  "goal": {
+    "threadId": "01a0ae64-56f1-7cf0-80ec-5174b1abe216",
+    "objective": "Первый независимый доказательный проход cycle6 по marked-zero источнику: законченный аудит Theorem 2 и точной редукции для эксцентриситета E_r мультимножества; исследовать A_P(v)<=P+m-2 при P=E_{r-1}(m+r-1), отделяя существование подъёма от полной цены. Получить хотя бы одну новую полезную доказанную лемму/точный контрпример либо честно локализовать неразрешённое обязательство после проверки конкретных подходов. Сохранить research/cycle6/PROOF_PROGRESS.md, PROOF_RESULT.md, claims.json и воспроизводимые проверки; важные утверждения проверить Lean с аудитом аксиом. Не дублировать крупный BFS координатора, не запускать агентов и внешние вычисления. Регулярно читать борду, отвечать прямым обращениям; технический final пустой.",
+    "status": "complete",
+    "tokensUsed": 43546,
+    "timeUsedSeconds": 390,
+    "createdAt": 1790164468,
+    "updatedAt": 1790164858
+  },
+  "remainingTokens": null,
+  "completionBudgetReport": "Goal achieved. Report final usage from this tool result's structured goal fields. If `goal.tokenBudget` is present, include token usage from `goal.tokensUsed` and `goal.tokenBudget`. If `goal.timeUsedSeconds` is greater than 0, summarize elapsed time in a concise, human-friendly form appropriate to the response language."
+}

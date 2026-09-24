@@ -1,0 +1,229 @@
+{
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "steps": [
+    {
+      "name": "literal-small",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/Users/s/Cowork/lrx-research/experiments/cycle6/independent_check.py",
+        "--output",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/literal-small.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.13238149974495173
+    },
+    {
+      "name": "family",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/Users/s/Cowork/lrx-research/experiments/cycle6/independent_check.py",
+        "--family",
+        "--output",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/family.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6760569168254733
+    },
+    {
+      "name": "archived-words",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/Users/s/Cowork/lrx-research/experiments/cycle6/independent_check.py",
+        "--verify-packed",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/packed-m8-r3.json",
+        "--output",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/archived-words.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04001362528651953
+    },
+    {
+      "name": "compiler-version",
+      "command": [
+        "/usr/bin/clang++",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12994504254311323
+    },
+    {
+      "name": "compile-radius_slack",
+      "command": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "/Users/s/Cowork/lrx-research/experiments/cycle6/radius_slack.cpp",
+        "-o",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/radius_slack"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8169174995273352
+    },
+    {
+      "name": "compile-packed_budget_check",
+      "command": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "/Users/s/Cowork/lrx-research/experiments/cycle6/packed_budget_check.cpp",
+        "-o",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/packed_budget_check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5562429167330265
+    },
+    {
+      "name": "compare-small",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/Users/s/Cowork/lrx-research/experiments/cycle6/independent_check.py",
+        "--binary",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/radius_slack",
+        "--output",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/compare-small.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5078276246786118
+    },
+    {
+      "name": "compare-dual-small",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/Users/s/Cowork/lrx-research/experiments/cycle6/independent_check.py",
+        "--packed-binary",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/packed_budget_check",
+        "--output",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/compare-dual-small.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.613031791523099
+    },
+    {
+      "name": "primary-m8-r3",
+      "command": [
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/radius_slack",
+        "8",
+        "3",
+        "--full"
+      ],
+      "exit_code": 0,
+      "seconds": 2.7156091667711735
+    },
+    {
+      "name": "independent-m8-r3",
+      "command": [
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/packed_budget_check",
+        "8",
+        "3",
+        "2"
+      ],
+      "exit_code": 0,
+      "seconds": 8.179262374527752
+    },
+    {
+      "name": "fresh-words",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/Users/s/Cowork/lrx-research/experiments/cycle6/independent_check.py",
+        "--verify-packed",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/independent-m8-r3.stdout",
+        "--output",
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/fresh-words.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.037746500223875046
+    },
+    {
+      "name": "primary-m8-r2",
+      "command": [
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/radius_slack",
+        "8",
+        "2",
+        "--state-limit=3000000"
+      ],
+      "exit_code": 0,
+      "seconds": 0.29193249996751547
+    },
+    {
+      "name": "independent-m8-r2",
+      "command": [
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/packed_budget_check",
+        "8",
+        "2",
+        "0"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6165556255728006
+    },
+    {
+      "name": "primary-m8-r4",
+      "command": [
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/radius_slack",
+        "8",
+        "4",
+        "--state-limit=7000000"
+      ],
+      "exit_code": 0,
+      "seconds": 7.129931375384331
+    },
+    {
+      "name": "independent-m8-r4",
+      "command": [
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/packed_budget_check",
+        "8",
+        "4",
+        "0"
+      ],
+      "exit_code": 0,
+      "seconds": 11.358802792616189
+    },
+    {
+      "name": "primary-m9-r2",
+      "command": [
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/radius_slack",
+        "9",
+        "2",
+        "--state-limit=4000000"
+      ],
+      "exit_code": 0,
+      "seconds": 3.7455872502177954
+    },
+    {
+      "name": "independent-m9-r2",
+      "command": [
+        "/Users/s/Cowork/lrx-research/runs/cycle6/reproductions/20260923T122412.213735Z/packed_budget_check",
+        "9",
+        "2",
+        "0"
+      ],
+      "exit_code": 0,
+      "seconds": 9.547463208436966
+    }
+  ],
+  "sources": [
+    {
+      "path": "experiments/cycle6/radius_slack.cpp",
+      "sha256": "7bbc1c588e3f848b6b256725e270bdd15797fadf5eaa80964327653bed2d97c5"
+    },
+    {
+      "path": "experiments/cycle6/reproduce.py",
+      "sha256": "9f7bc1f61e3e5087249a26adff1031a7e6908aec1eceafb868e462d7bb72831e"
+    },
+    {
+      "path": "experiments/cycle6/run_exact.py",
+      "sha256": "f84114a3a14caad1b903f07c03ed0ca228d693bae5b9470e434ae2f6192bc85e"
+    },
+    {
+      "path": "experiments/cycle6/packed_budget_check.cpp",
+      "sha256": "d74cd9f0de85af9441e0fdc9ec38df3fcb031fb381f953403bd007ca291a4472"
+    },
+    {
+      "path": "experiments/cycle6/independent_check.py",
+      "sha256": "8650a82ded7d46b1798b3b64efd4faf35d7c2b52bf13ea1b5cc0e4ea550b337d"
+    }
+  ]
+}

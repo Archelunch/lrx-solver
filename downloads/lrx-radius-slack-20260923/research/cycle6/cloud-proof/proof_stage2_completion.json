@@ -1,0 +1,13 @@
+{
+  "goal": {
+    "threadId": "01a0ae64-56f1-7cf0-80ec-5174b1abe216",
+    "objective": "Второй ограниченный доказательный этап cycle6: условно проанализировать кандидат координатора m=8,r=3,d=47,A_42=49 без дублирования большого checker и без публикации неподтверждённого контрпримера. Вывести конкретное структурное препятствие и минимально ослабленную нетавтологическую формулировку с полной ценой P+m-2 и дополнительным/переменным бюджетом проекции; сохранить предыдущие артефакты, дополнить PROOF_PROGRESS/PROOF_RESULT, claims и воспроизводимые арифметические/формальные свидетельства. Явно отделить доказанные импликации от ожидаемого сертификата координатора.",
+    "status": "complete",
+    "tokensUsed": 16795,
+    "timeUsedSeconds": 228,
+    "createdAt": 1790165133,
+    "updatedAt": 1790165361
+  },
+  "remainingTokens": null,
+  "completionBudgetReport": "Goal achieved. Report final usage from this tool result's structured goal fields. If `goal.tokenBudget` is present, include token usage from `goal.tokensUsed` and `goal.tokenBudget`. If `goal.timeUsedSeconds` is greater than 0, summarize elapsed time in a concise, human-friendly form appropriate to the response language."
+}

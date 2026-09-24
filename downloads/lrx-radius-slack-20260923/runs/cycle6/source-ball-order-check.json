@@ -1,0 +1,30 @@
+[
+  {
+    "k": 2,
+    "root_radius": 4,
+    "v_radius": 5,
+    "root_ball": 42,
+    "v_ball": 94
+  },
+  {
+    "k": 3,
+    "root_radius": 7,
+    "v_radius": 8,
+    "root_ball": 307,
+    "v_ball": 682
+  },
+  {
+    "k": 4,
+    "root_radius": 10,
+    "v_radius": 11,
+    "root_ball": 1989,
+    "v_ball": 4405
+  },
+  {
+    "k": 5,
+    "root_radius": 13,
+    "v_radius": 14,
+    "root_ball": 11990,
+    "v_ball": 26536
+  }
+]

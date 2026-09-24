@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "counts": {
+    "reference_words": 4670,
+    "independent_slope_checks": 42030,
+    "reference_cut_checks": 4670,
+    "named_orders": 40320,
+    "mixture_rows": 152937,
+    "unit_comparison_words": 40320,
+    "unit_comparison_letters": 2859789,
+    "expanded_comparison_words": 1260,
+    "expanded_comparison_letters": 261839,
+    "negative_controls_rejected": 3
+  },
+  "nine_gap_m8_proved": true,
+  "full_conjecture_proved": false,
+  "source_sha256": {
+    "/persist/workspace/lrx/research/cycle7/input/scripts/audit_multiset_nine_gap_cover.py": "134e56f6bbf5ed0d8736a1698089d92d6353883c621fc52414fbdea043d44789",
+    "literature/multiset_nine_gap_complete_certificates_20260924.json": "82c64ae99ea37e0328603b89af4652c9d48fb61e688373ac81515f3e78d0c740",
+    "scripts/multiset_zero_stretch.py": "1212eeae02047fd8aa62a65f0c0db1fae1188d4f14906c8e065809460ea0b1de",
+    "scripts/multiset_free_phase.py": "84b90b5ec9a0fc39a00c0a4db26cd1d80c93f6d6fe947cd171cdc78e4a5c2118",
+    "scripts/audit_multiset_projected_certificates.py": "1b3de20459ac0d05d128de012fc52523801cf96680602698edbd88a9451461d6",
+    "scripts/multiset_zero_projection.py": "d6035886a85eb4cf3cc40dec6fa9595de05a4dde92469e091464499e7516709c"
+  },
+  "seconds": 12.301516165956855
+}

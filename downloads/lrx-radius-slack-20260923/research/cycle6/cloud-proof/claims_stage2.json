@@ -1,0 +1,76 @@
+{
+  "author": "persistent proof branch",
+  "stage": 2,
+  "coordinator_candidate": {
+    "v": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      7,
+      8,
+      6,
+      5,
+      4,
+      3
+    ],
+    "m": 8,
+    "r": 3,
+    "P": 42,
+    "d": 47,
+    "A_P": 49,
+    "status": "source_claimed; independent certificate pending",
+    "provenance": "Coordinator message in this conversation, 23 September 2026; no certificate artifact provided"
+  },
+  "claims": [
+    {
+      "id": "C6-P06",
+      "status": "conditional",
+      "statement": "If d=47 and A_42=49, all witnesses of length<=48 have every marked projection>=43; losses at length47 are<=4, whereas a length49 witness attaining A_42 loses>=7 for its selected mark.",
+      "verification": [
+        "text proof",
+        "lean_kernel_checked conditional scalar consequences"
+      ],
+      "evidence": [
+        "formal/LRX/ProjectionFrontier.lean",
+        "research/cycle6/proof_frontier_lean.json"
+      ]
+    },
+    {
+      "id": "C6-P07",
+      "status": "proved-in-text",
+      "statement": "For a word without X on two zeros, summing erasures over all r tracked zeros yields exactly zero-label swaps plus rotations carrying a zero across the visible boundary.",
+      "verification": [
+        "per-letter general proof",
+        "740 literal finite transition checks"
+      ],
+      "evidence": [
+        "research/cycle6/PROOF_RESULT.md",
+        "research/cycle6/proof_frontier_checks.py",
+        "research/cycle6/proof_frontier_checks.json"
+      ],
+      "limits": "Not a lower bound on that sum and not formalized as LRX in Lean; new lemma awaits coordinator review."
+    },
+    {
+      "id": "C6-P08",
+      "status": "conditional",
+      "statement": "A sorting word of length l<=B with Z+C>=r*(l-P-delta-1)+1 when l>P+delta guarantees A_(P+delta)<=B.",
+      "dependencies": [
+        "C6-P07",
+        "pigeonhole principle"
+      ],
+      "verification": [
+        "text proof",
+        "55944 finite arithmetic checks"
+      ],
+      "limits": "Requires a short word meeting the explicit structural premise."
+    },
+    {
+      "id": "C6-P09",
+      "status": "open",
+      "statement": "A_(P+1)<=P+m-2 (first weaker candidate), or A_(P+2)<=P+m-2 (next weaker candidate), for m>=8,r>=2.",
+      "limits": "Neither universal candidate follows from reported finite data. For the specific candidate, minimal allowance is H_48-42, conditionally between1 and5."
+    }
+  ]
+}

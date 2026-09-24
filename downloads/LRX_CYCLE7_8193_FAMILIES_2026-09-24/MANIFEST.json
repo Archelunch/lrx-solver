@@ -1,0 +1,246 @@
+{
+  "format": "lrx_cycle7_package_v1",
+  "date": "2026-09-24",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5498,
+      "sha256": "a5e322c497a370daf5141bb300c0eeb48bef3f3f866b2aeb36cfdb790f22261b"
+    },
+    {
+      "path": "experiments/cycle7/build_package.py",
+      "bytes": 2962,
+      "sha256": "853b0e35813609c325950ae5317ac52fdc5c3604b68d7ef4962778612c176b95"
+    },
+    {
+      "path": "experiments/cycle7/reproduce.py",
+      "bytes": 3182,
+      "sha256": "e603a8ee46030914ed0761cbf8d4a7407a32f7499f872936d0920a2dd24f9558"
+    },
+    {
+      "path": "experiments/cycle7/search_projected_mixtures.py",
+      "bytes": 5425,
+      "sha256": "4df10edba531b24720b9070cd77298266dd5c3acb4ef663e44a22eac186725cd"
+    },
+    {
+      "path": "experiments/cycle7/verify_bundle.py",
+      "bytes": 809,
+      "sha256": "4ef5ee87781b4fb3eb276e24c5aed39263c5bb635b7f22a98ab46e83dddfa884"
+    },
+    {
+      "path": "experiments/cycle7/verify_certificates.py",
+      "bytes": 8804,
+      "sha256": "aa3a0aa543e6ceb73d0ebeb10193e3ae884783f7f1929cd3d0d1cf3e45256e13"
+    },
+    {
+      "path": "reports/cycle7/NEXT_PASS.md",
+      "bytes": 2586,
+      "sha256": "c0a24f8ca2aa723bf7b9e2698178aaf7c365b857b2db7a1d0f849818e45fd486"
+    },
+    {
+      "path": "reports/cycle7/PACKAGE_README_RU.md",
+      "bytes": 5498,
+      "sha256": "a5e322c497a370daf5141bb300c0eeb48bef3f3f866b2aeb36cfdb790f22261b"
+    },
+    {
+      "path": "reports/cycle7/RESULTS.md",
+      "bytes": 6481,
+      "sha256": "5466ffb6244924ef27568125918a4c1c7909d79a3dd4aa32f6804bcd99cc6572"
+    },
+    {
+      "path": "reports/cycle7/THEOREM_RU.md",
+      "bytes": 14072,
+      "sha256": "54b7d0d9d987a25ac5efd9da0db863f61a0e7528f29dfce060e5197219a298b0"
+    },
+    {
+      "path": "reports/cycle7/VERSION_NOTE.md",
+      "bytes": 2813,
+      "sha256": "78f2cb2a8f6b7c641aec2361481340985ece9e680634ea6850225d29797dfc43"
+    },
+    {
+      "path": "research/cycle7/PROJECT.md",
+      "bytes": 3865,
+      "sha256": "0634eba73e25b31f4c8875ee6147c7d7f7a9ca1e17440d7c495a057170fe1386"
+    },
+    {
+      "path": "research/cycle7/claims.json",
+      "bytes": 2814,
+      "sha256": "0cc8b0dded62215517d182f7bd00a0c099078ccc054fde13399b67de45e414d0"
+    },
+    {
+      "path": "research/cycle7/cloud-proof/PROOF_AUDIT.md",
+      "bytes": 24180,
+      "sha256": "66a1e1dea6f40529c4c006baaddc970e555aaddc041765380de038ccdcc0f231"
+    },
+    {
+      "path": "research/cycle7/cloud-proof/REVIEW_NEW_CERTIFICATES.md",
+      "bytes": 11044,
+      "sha256": "92cbc767520ddb20267aa3465149648225dbb885577de31d06d785e0d8b00cf3"
+    },
+    {
+      "path": "research/cycle7/cloud-proof/check_direct_stretch.py",
+      "bytes": 3172,
+      "sha256": "26e7628c9c363c321934faa4e96c8ee3bc61003a4f2b249f202132e8039e6256"
+    },
+    {
+      "path": "research/cycle7/cloud-proof/direct_stretch.py",
+      "bytes": 3990,
+      "sha256": "4b2c25129fe59d10092e8974c7b0736c5ce264bf6f110db7e7d883ae3be8b4db"
+    },
+    {
+      "path": "research/cycle7/cloud-proof/direct_stretch_checks.json",
+      "bytes": 463,
+      "sha256": "7e72685db024cba7fdbb6e3e0ddfaf58ca94c0d174c0502e796006b0593a6499"
+    },
+    {
+      "path": "research/cycle7/cloud-proof/new_certificates_independent_audit_v2.json",
+      "bytes": 10924,
+      "sha256": "5b10c075e001c5dae1c2449569837274cd4cbc45ce1145d3ba1dc9724defa7b1"
+    },
+    {
+      "path": "research/cycle7/cloud-proof/source_cover_audit.json",
+      "bytes": 1265,
+      "sha256": "59ef847e4baa26c7bad6600e5f3a2636e463a165bc2265f69d2bf181cb978af9"
+    },
+    {
+      "path": "research/cycle7/cloud-proof/verify_new_certificates.py",
+      "bytes": 7246,
+      "sha256": "2fb3257101a4db62dd924760a594f54beb251aa800c5bb86b1a9a9536efc6516"
+    },
+    {
+      "path": "runs/cycle7/certificates.json",
+      "bytes": 18232294,
+      "sha256": "3409a4bb19e9ee117abeccfa2cc9acd8e7ea2d48a2526c933150e3ea8bca6add"
+    },
+    {
+      "path": "runs/cycle7/discovery-100.json",
+      "bytes": 60321,
+      "sha256": "adb2bb852697d7586b3e3beb8e8be0fcd152ed5c7f91cb9740c7bd1eb65d95c6"
+    },
+    {
+      "path": "runs/cycle7/discovery-eight-blocks.json",
+      "bytes": 20035680,
+      "sha256": "623154a53626b1b003e6d1fab19b3b0233ea74626c32d6f70c1cc08b86bdc600"
+    },
+    {
+      "path": "runs/cycle7/environment.json",
+      "bytes": 146,
+      "sha256": "0f4f7b578d6f83776ef154dae64778f65449c5c273c68cfdaa3c170879f3acfe"
+    },
+    {
+      "path": "runs/cycle7/independent-final.json",
+      "bytes": 752,
+      "sha256": "f5233552800f09388e2dd2cef25302cbc9196b47cf6dd3d909f6caa85cc931e1"
+    },
+    {
+      "path": "runs/cycle7/source-nine-gap-audit.json",
+      "bytes": 1285,
+      "sha256": "68c1bab30277b5c358c0accc879369f59ec4d7fa0e62793747330d983522fe01"
+    },
+    {
+      "path": "runs/cycle7/source-projection-audit.json",
+      "bytes": 1753,
+      "sha256": "44cb143813b19fa84f158d0c4d24c4a3b06bd699e44b3f4e807a63b5ef2e7f48"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/LRX_MULTISET_NINE_GAP_M8_THEOREM_RU.md",
+      "bytes": 31293,
+      "sha256": "b01f35ac152055ceee2475e95c7d8ee8426838d25585d36bb9bea212cde8a618"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/lean/MultisetZeroFlux.lean",
+      "bytes": 1618,
+      "sha256": "01f5a00960be97daf9b03be35ced68fbee6973c2a3a58a4fdb0bdad4e43ee3ea"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/literature/multiset_nine_gap_complete_certificates_20260924.json",
+      "bytes": 9143903,
+      "sha256": "82c64ae99ea37e0328603b89af4652c9d48fb61e688373ac81515f3e78d0c740"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/literature/multiset_nine_gap_projection_search_20260924.json",
+      "bytes": 3873643,
+      "sha256": "78c1af76cffacba41af4e81b140bc6107a2e276e763583efe76318633a0a9ce7"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/literature/multiset_nine_gap_projection_search_20260924.npz",
+      "bytes": 3147013,
+      "sha256": "72a2262c955938f8fa577e3df01c7c8f28a2307734abc0766780c338c68617d3"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/literature/multiset_reverse_m8_complete_certificates_20260923.json",
+      "bytes": 2148588,
+      "sha256": "6e26db774dccc60a54a33145e068a1df32118c8ccbcf36dab5ea3da1e997c05f"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/publication/README_nine_gap_m8_bundle.md",
+      "bytes": 3267,
+      "sha256": "60ce4193df59497e2e1a9d358faabd978b04a03003ac32412f9b19cfb81dc77e"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/audit_multiset_nine_gap_cover.py",
+      "bytes": 12122,
+      "sha256": "134e56f6bbf5ed0d8736a1698089d92d6353883c621fc52414fbdea043d44789"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/audit_multiset_nine_gap_projections.py",
+      "bytes": 7438,
+      "sha256": "ba00595da2c7851ca22fc4c9de7e3d45230f409683efc369f52c4e7ea2962bbd"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/audit_multiset_projected_certificates.py",
+      "bytes": 9441,
+      "sha256": "1b3de20459ac0d05d128de012fc52523801cf96680602698edbd88a9451461d6"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/audit_multiset_reverse_complete.py",
+      "bytes": 11049,
+      "sha256": "49d7cab1a8dc8398ec35fb2d454290c398ca53fac8c94d66eef072129d7e147b"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/multiset_box_certificate.py",
+      "bytes": 4544,
+      "sha256": "be8dc3fd9bd8d66fb5b55e971e1e937310e2b18dfb9d2f920be2322177f77149"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/multiset_bruhat_transfer.py",
+      "bytes": 9968,
+      "sha256": "b35d7cff844638065284949fb0511d1b4b7d2f2f1cd801f743d331fc4ea05304"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/multiset_circle_materialization.py",
+      "bytes": 3999,
+      "sha256": "44460d8b64f7eb7e3f99a350fb7647be4f10bd859774d5b91eb5a3c816ec5f26"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/multiset_free_phase.py",
+      "bytes": 3480,
+      "sha256": "84b90b5ec9a0fc39a00c0a4db26cd1d80c93f6d6fe947cd171cdc78e4a5c2118"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/multiset_zero_projection.py",
+      "bytes": 1779,
+      "sha256": "d6035886a85eb4cf3cc40dec6fa9595de05a4dde92469e091464499e7516709c"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/multiset_zero_stretch.py",
+      "bytes": 6144,
+      "sha256": "1212eeae02047fd8aa62a65f0c0db1fae1188d4f14906c8e065809460ea0b1de"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/extracted/scripts/verify_multiset_projection_table.cpp",
+      "bytes": 3201,
+      "sha256": "c65f4825cb4d34fd405308006b4db8381813ba8321eb2c2fd17de518d346def0"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/lrx_multiset_nine_gap_m8.tex",
+      "bytes": 44053,
+      "sha256": "6c0b02be79fe7b8b9f6ec03f4371a00d1bd230f82365b1b1302e8999972b6013"
+    },
+    {
+      "path": "sources/2026-09-24-nine-gap/manifest.json",
+      "bytes": 3959,
+      "sha256": "3f728509453f33b01e229a2d90c88eaad0d18e8e4ed392881c2b2a916ff037dc"
+    }
+  ]
+}

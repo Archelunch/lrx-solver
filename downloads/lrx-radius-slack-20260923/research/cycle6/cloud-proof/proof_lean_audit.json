@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/desktop/.elan/bin/lake",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "LRX/MarkedZeroBudget.lean"
+  ],
+  "cwd": "/persist/workspace/lrx/formal",
+  "returncode": 0,
+  "stdout": "'LRX.MarkedZero.silent_distance_le_two' depends on axioms: [propext]\n'LRX.MarkedZero.block_sum_bound' depends on axioms: [propext, Quot.sound]\n'LRX.MarkedZero.normalized_cost_bound' depends on axioms: [propext, Quot.sound]\n'LRX.MarkedZero.family_paid' depends on axioms: [propext, Quot.sound]\n'LRX.MarkedZero.joint_budget' depends on axioms: [propext, Quot.sound]\n",
+  "source_sha256": "bbe53447a274bd42839822efc500e7e889f10be6604afb0d76b4b46391cf7979",
+  "scope": "Abstract silent graph and conditional arithmetic, not full LRX theorem",
+  "first_run": "Passed with unused hproj warning; conclusion strengthened to retain projection constraint before warning-as-error rerun."
+}

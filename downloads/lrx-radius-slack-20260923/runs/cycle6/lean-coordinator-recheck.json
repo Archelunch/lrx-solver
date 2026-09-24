@@ -1,0 +1,8 @@
+{
+  "returncode": 0,
+  "command": "railwayctl exec runuser -u desktop -- bash -c [cache unpack; lean -DwarningAsError=true LRX/MarkedZeroBudget.lean; lean -DwarningAsError=true LRX/ProjectionFrontier.lean]",
+  "execution": "existing Railway participant, uid desktop",
+  "scope": "10 auxiliary/conditional statements, not full finite certificate or conjecture",
+  "stdout_sha256": "e92dfe3e3026bed6835ec83861048041f096a4e837f38893d8e7d30b22ec8229",
+  "recovery": "An earlier owner SSH verification ran as root and recloned package caches. Ownership restored, existing local mathlib cache unpacked without downloading new files, and both Lean commands passed under desktop."
+}

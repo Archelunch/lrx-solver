@@ -1,0 +1,10 @@
+{"m": 2, "r": 2, "P": 2, "max_A_P": 3, "full_radius": 3, "missing": 0, "excess": 3}
+{"m": 2, "r": 3, "P": 3, "max_A_P": 5, "full_radius": 5, "missing": 0, "excess": 4}
+{"m": 3, "r": 2, "P": 6, "max_A_P": 7, "full_radius": 7, "missing": 0, "excess": 0}
+{"m": 2, "r": 4, "P": 5, "max_A_P": 6, "full_radius": 6, "missing": 0, "excess": 1}
+{"m": 3, "r": 3, "P": 7, "max_A_P": 9, "full_radius": 9, "missing": 0, "excess": 5}
+{"m": 4, "r": 2, "P": 10, "max_A_P": 12, "full_radius": 12, "missing": 0, "excess": 0}
+{"m": 2, "r": 5, "P": 6, "max_A_P": 7, "full_radius": 7, "missing": 0, "excess": 2}
+{"m": 3, "r": 4, "P": 9, "max_A_P": 11, "full_radius": 11, "missing": 0, "excess": 1}
+{"m": 4, "r": 3, "P": 12, "max_A_P": 15, "full_radius": 15, "missing": 0, "excess": 2}
+{"m": 5, "r": 2, "P": 15, "max_A_P": 19, "full_radius": 19, "missing": 0, "excess": 1}

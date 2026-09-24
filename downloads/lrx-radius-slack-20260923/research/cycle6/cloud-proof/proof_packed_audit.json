@@ -1,0 +1,461 @@
+{
+  "scope": "45 literal marked replays of 15 supplied words, aggregate consistency; lower-bound exclusion relies on reviewed exhaustive DP, not these words alone",
+  "files_sha256": {
+    "packed-m8-r3.json": "d5479764c6c7e654c73f9b0dac78811892b3d8aa62cf324eb3d3d657ce89b88c",
+    "exact-m8-r3.json": "7a11bc0c5e6a35958a6bfdc7f934a990bfdf2234074d478e28fda312639aa2b3",
+    "packed_budget_check.cpp": "3c1d166b5535f446cccdf6f09f748b4b19f39854154b90ceeac91caaecafb0ca",
+    "independent_check.py": "8650a82ded7d46b1798b3b64efd4faf35d7c2b52bf13ea1b5cc0e4ea550b337d"
+  },
+  "word_records": [
+    {
+      "v": [
+        0,
+        0,
+        0,
+        8,
+        7,
+        6,
+        5,
+        4,
+        2,
+        3,
+        1
+      ],
+      "extra": 0,
+      "length": 47,
+      "replayed_projection_all_marks": [
+        43,
+        43,
+        43
+      ],
+      "reported_minima": [
+        43,
+        43,
+        43
+      ],
+      "Z": 6,
+      "C": 6,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        0,
+        0,
+        0,
+        8,
+        7,
+        6,
+        5,
+        4,
+        2,
+        3,
+        1
+      ],
+      "extra": 1,
+      "length": 48,
+      "replayed_projection_all_marks": [
+        41,
+        41,
+        43
+      ],
+      "reported_minima": [
+        41,
+        41,
+        43
+      ],
+      "Z": 9,
+      "C": 10,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        0,
+        0,
+        0,
+        8,
+        7,
+        6,
+        5,
+        4,
+        2,
+        3,
+        1
+      ],
+      "extra": 2,
+      "length": 48,
+      "replayed_projection_all_marks": [
+        41,
+        41,
+        43
+      ],
+      "reported_minima": [
+        41,
+        41,
+        41
+      ],
+      "Z": 9,
+      "C": 10,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        3,
+        1,
+        0,
+        0,
+        0,
+        8,
+        7,
+        6,
+        5,
+        4,
+        2
+      ],
+      "extra": 0,
+      "length": 47,
+      "replayed_projection_all_marks": [
+        43,
+        43,
+        43
+      ],
+      "reported_minima": [
+        43,
+        43,
+        43
+      ],
+      "Z": 6,
+      "C": 6,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        3,
+        1,
+        0,
+        0,
+        0,
+        8,
+        7,
+        6,
+        5,
+        4,
+        2
+      ],
+      "extra": 1,
+      "length": 48,
+      "replayed_projection_all_marks": [
+        39,
+        45,
+        43
+      ],
+      "reported_minima": [
+        39,
+        39,
+        43
+      ],
+      "Z": 9,
+      "C": 8,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        3,
+        1,
+        0,
+        0,
+        0,
+        8,
+        7,
+        6,
+        5,
+        4,
+        2
+      ],
+      "extra": 2,
+      "length": 48,
+      "replayed_projection_all_marks": [
+        39,
+        45,
+        43
+      ],
+      "reported_minima": [
+        39,
+        39,
+        39
+      ],
+      "Z": 9,
+      "C": 8,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4
+      ],
+      "extra": 0,
+      "length": 47,
+      "replayed_projection_all_marks": [
+        43,
+        43,
+        43
+      ],
+      "reported_minima": [
+        43,
+        43,
+        43
+      ],
+      "Z": 6,
+      "C": 6,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4
+      ],
+      "extra": 1,
+      "length": 48,
+      "replayed_projection_all_marks": [
+        39,
+        45,
+        43
+      ],
+      "reported_minima": [
+        39,
+        39,
+        43
+      ],
+      "Z": 9,
+      "C": 8,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4
+      ],
+      "extra": 2,
+      "length": 48,
+      "replayed_projection_all_marks": [
+        39,
+        45,
+        43
+      ],
+      "reported_minima": [
+        39,
+        39,
+        39
+      ],
+      "Z": 9,
+      "C": 8,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3
+      ],
+      "extra": 0,
+      "length": 47,
+      "replayed_projection_all_marks": [
+        43,
+        43,
+        43
+      ],
+      "reported_minima": [
+        43,
+        43,
+        43
+      ],
+      "Z": 6,
+      "C": 6,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3
+      ],
+      "extra": 1,
+      "length": 47,
+      "replayed_projection_all_marks": [
+        43,
+        43,
+        43
+      ],
+      "reported_minima": [
+        43,
+        43,
+        43
+      ],
+      "Z": 6,
+      "C": 6,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3
+      ],
+      "extra": 2,
+      "length": 49,
+      "replayed_projection_all_marks": [
+        41,
+        41,
+        41
+      ],
+      "reported_minima": [
+        41,
+        41,
+        41
+      ],
+      "Z": 12,
+      "C": 12,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "extra": 0,
+      "length": 47,
+      "replayed_projection_all_marks": [
+        43,
+        43,
+        43
+      ],
+      "reported_minima": [
+        43,
+        43,
+        43
+      ],
+      "Z": 6,
+      "C": 6,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "extra": 1,
+      "length": 48,
+      "replayed_projection_all_marks": [
+        41,
+        41,
+        43
+      ],
+      "reported_minima": [
+        41,
+        41,
+        43
+      ],
+      "Z": 9,
+      "C": 10,
+      "zero_zero_swaps": 0
+    },
+    {
+      "v": [
+        0,
+        0,
+        0,
+        7,
+        8,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "extra": 2,
+      "length": 49,
+      "replayed_projection_all_marks": [
+        39,
+        43,
+        45
+      ],
+      "reported_minima": [
+        39,
+        39,
+        41
+      ],
+      "Z": 9,
+      "C": 11,
+      "zero_zero_swaps": 0
+    }
+  ]
+}

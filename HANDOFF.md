@@ -2,6 +2,10 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Next session pointer (2026-09-24)
+
+The [short restart handoff](.handoffs/codex-s04-budgeted-evox-20260924T1331Z.md) and [proof-oriented optimizer plan](autoresearch/next-optimizer-session.md) specify a bounded native GEPA/AdaEvolve/EvoX pilot, matched controls, exact certificate gates, holdout exclusions, and budget reconciliation. No new experiment or paid call was run while preparing them. Preserve the existing evidence below.
+
 ## Latest iteration: focused k5 protocol and confirmation (2026-09-24)
 
 The [initial protocol report](autoresearch/loop-260924-protocol/REPORT.md) is a historical snapshot after two timed-out Grok requests. The [continuation](autoresearch/loop-260924-protocol/CONTINUATION.md) records the final outcome. Frozen all-cuts remained 15/16 on development; the remaining unit-block k5 case was not certified. Independent Sol-authored construction reduced its exact feasible base to 1223/20, still 3/20 above the threshold, and establishes a conditional bound for every positive block-length vector with the first retained zero block of length at least 2. It does not prove the whole k5 family or the general conjecture.

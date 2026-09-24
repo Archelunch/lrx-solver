@@ -1,0 +1,1893 @@
+{
+  "format": "lrx-direct-word-certificate-v1",
+  "cases": [
+    {
+      "id": "k6-mask221-order731",
+      "labels": [
+        1,
+        3,
+        2,
+        4,
+        6,
+        8,
+        7,
+        5
+      ],
+      "mask": 221,
+      "scope": "all positive block lengths",
+      "support": [
+        {
+          "origin": "control",
+          "weight": "3/19",
+          "base": 48,
+          "gamma": [
+            4,
+            8,
+            11,
+            9,
+            3,
+            0
+          ],
+          "word": "LLXRXLLXLXRXRXRRRXLXLXLXLXLXLXLLXLXLLXRXRXRRRRRR"
+        },
+        {
+          "origin": "control",
+          "weight": "9/19",
+          "base": 76,
+          "gamma": [
+            7,
+            1,
+            2,
+            5,
+            11,
+            9
+          ],
+          "word": "XRRXRXRRXRXLLXLLLXRXRXRRXLXLLXLLLXRXRXRXRXRRXRRRXLXLXLLXLLLLLLLLXLXLXLXLLXRR"
+        },
+        {
+          "origin": "new_word",
+          "weight": "7/19",
+          "base": 61,
+          "gamma": [
+            5,
+            11,
+            9,
+            6,
+            0,
+            3
+          ],
+          "word": "RXLXLXLXRXRXRRRXLXLXLXLXLXLXRXRXLLLLXRXRXLLLLXLXRRXLXRRXRRRRR"
+        }
+      ],
+      "old_pool": [
+        {
+          "word": "RRXRXRXRXRXRXLXLLLXRXRXLXRRRRRRRRXRXLLXLXRXRXL",
+          "base": 46,
+          "gamma": [
+            0,
+            6,
+            9,
+            11,
+            5,
+            2
+          ]
+        },
+        {
+          "word": "LLXRXLLXLXRXRXRRRXLXLXLXLXLXLXLLXLXLLXRXRXRRRRRR",
+          "base": 48,
+          "gamma": [
+            4,
+            8,
+            11,
+            9,
+            3,
+            0
+          ]
+        },
+        {
+          "word": "LLXLXLXLLXLLLLXRXLLLXRXRXRXRXRRRXRRXRRXLXLLXRXL",
+          "base": 47,
+          "gamma": [
+            1,
+            5,
+            8,
+            11,
+            6,
+            3
+          ]
+        },
+        {
+          "word": "RXLXLXLXLXLXLXRRXRRXRRRRRXRXRRXLXLXRRRRRRRXRRXLXLLXR",
+          "base": 52,
+          "gamma": [
+            3,
+            9,
+            12,
+            8,
+            2,
+            1
+          ]
+        },
+        {
+          "word": "RXLLLXLLLXLLXLLLXRRXRRXLXLLXRXRXRRRRXRRXRXLXLXLXLXRRR",
+          "base": 53,
+          "gamma": [
+            2,
+            8,
+            12,
+            9,
+            3,
+            0
+          ]
+        },
+        {
+          "word": "RXLXLLLXRXRXLXLLLXLLXLXRRXRRXRXRRRRRRXLXLXLXLXLXLXLLXLLXRXRRXRRRRR",
+          "base": 66,
+          "gamma": [
+            5,
+            12,
+            9,
+            6,
+            0,
+            3
+          ]
+        },
+        {
+          "word": "XRRXRXRRXRXLLXLLLXRXRXRRXLXLLXLLLXRXRXRXRXRRXRRRXLXLXLLXLLLLLLLLXLXLXLXLLXRR",
+          "base": 76,
+          "gamma": [
+            7,
+            1,
+            2,
+            5,
+            11,
+            9
+          ]
+        },
+        {
+          "word": "XLXLLXRXRXRRRXRXRXRXRXRXLXLXLLXRXRXRRRRXRXRXLLLXRXRXLLLXRXRXLLLXRXRXLLLXRXRXLLLLLLL",
+          "base": 83,
+          "gamma": [
+            24,
+            18,
+            15,
+            12,
+            6,
+            3
+          ]
+        },
+        {
+          "word": "XLXLLXRXRXRRRXRXRXLXRRXLXRRXRXLXLXLXRRRRRXLXLXLXLXRRRRRXLXLXLXLXRRRRRXLXLXLXLXLLLLLLL",
+          "base": 85,
+          "gamma": [
+            24,
+            18,
+            15,
+            12,
+            6,
+            3
+          ]
+        },
+        {
+          "word": "LXLXLXRXRXLLLXLXRXRXLLLXLXRXRXRXLLLLXRXRXRXLLLLXLXRXRXRXRXRXLLLLLLXLXRXRXRXRXRXRXRXRXRRRRRXL",
+          "base": 92,
+          "gamma": [
+            4,
+            19,
+            16,
+            13,
+            7,
+            4
+          ]
+        },
+        {
+          "word": "LXLXLXLXLXLXLXLXLXLXLXLXLXRRXRXRXLXRRXLXRRXRXLXLXLXRRRRRXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXR",
+          "base": 90,
+          "gamma": [
+            4,
+            19,
+            16,
+            13,
+            7,
+            4
+          ]
+        },
+        {
+          "word": "RRXRXRXRXRXRXLXLXLLXRXRXRRRRXRXRXLLXLXRXRXLLLXRXRXLLLXRXRXLLLXRXRXLLLXLXLXLXLX",
+          "base": 78,
+          "gamma": [
+            2,
+            15,
+            16,
+            13,
+            7,
+            4
+          ]
+        },
+        {
+          "word": "RRXRXRXLXRRXLXRRXRXLXLXLXRRRRRXLXLXLXLXRRRRRXLXLXLXLXLXLXLXLXLXLXLLLXLXLXLXLXLLLLLLL",
+          "base": 84,
+          "gamma": [
+            3,
+            16,
+            17,
+            14,
+            8,
+            5
+          ]
+        },
+        {
+          "word": "LLXRXLLLXLLXRXLLXRXRXRXLLLLXRXRXRXLLLLXRXLLXRXRXRXRXRXLLLLLLXRXLLXRXRXRXRXRXRXRXRXRRRRRXLXLXLXRRRRXLXLX",
+          "base": 103,
+          "gamma": [
+            7,
+            11,
+            13,
+            16,
+            10,
+            7
+          ]
+        },
+        {
+          "word": "RRXRXRXLXRRXLXRRXRXLXLXLXRRRRXLXLXLXLXLXLXLXLXLXLXRXRXLLLLXLXLXLXLXLXLXLXLXLXLXLLLLXLXLXLXLLLLLLL",
+          "base": 97,
+          "gamma": [
+            5,
+            11,
+            15,
+            16,
+            10,
+            7
+          ]
+        },
+        {
+          "word": "RXLXLXLXRXRXLLLXRXLLLLXLXRXRXLLLXRXRXLLLXLXRXRXRXRXLLLLLXLXLXLXLXLXRR",
+          "base": 69,
+          "gamma": [
+            4,
+            10,
+            10,
+            11,
+            5,
+            2
+          ]
+        },
+        {
+          "word": "RXLXLXLXLXRRXLXRRXRRRRXRXRRXLXLXRRRXLXLXLXLXLXLXLXLXLXLXLLLXLXLXLLLLLLL",
+          "base": 71,
+          "gamma": [
+            6,
+            12,
+            10,
+            11,
+            5,
+            4
+          ]
+        },
+        {
+          "word": "RXLXLXLXRXRXLLLXRXLLXRXRXRXLLLLLXLLXRXRXLLLXRXLLXRXRXRXRXLLLLLXRXLLXRXLLXLXLXLXLXLXRRRRRRXLXLXLXLXRR",
+          "base": 100,
+          "gamma": [
+            7,
+            13,
+            16,
+            8,
+            8,
+            5
+          ]
+        },
+        {
+          "word": "RXLXLXLXLXLXRXRRXLXLXLLLXLLXLXLXLXLXLXLXRXLLXLXLXLXLLLXLXLXLXLXLXLXLXRXLLXLXLLLLXLLXRXRXRRRRRR",
+          "base": 94,
+          "gamma": [
+            6,
+            12,
+            15,
+            9,
+            7,
+            4
+          ]
+        },
+        {
+          "word": "RXLXLXLXRXRXLLLXRXLLXRXRXRXLLLLXLLLXRXLLXLLXRXLLXRXLLXLXLXLXLXLXLXLLLLLLLXLXLXLXLXLXLXRRRR",
+          "base": 90,
+          "gamma": [
+            8,
+            12,
+            15,
+            5,
+            3,
+            6
+          ]
+        },
+        {
+          "word": "RXLXLXLXLXLXLXRRXRRXLXLXRRRXLXRRRRXLXLXLXLXLXLXLXLXLLLXLXLXLXLXLXLXLXLXLXLXLLLXLLLLLLL",
+          "base": 86,
+          "gamma": [
+            8,
+            14,
+            17,
+            5,
+            3,
+            6
+          ]
+        },
+        {
+          "word": "RXLXLXLXRXRXLLLXRXLLXRXRXRXLLLLXLXRXRXRXRXRRRRRXLXLXLXLXLXLXLXLXLXLLLXRXLLXRXLLXRXLLXRXLLXLXLXLXLXLXLXLXLLLLLLXLXLXLXLXLXLXRRRR",
+          "base": 127,
+          "gamma": [
+            11,
+            17,
+            18,
+            21,
+            6,
+            9
+          ]
+        },
+        {
+          "word": "RXLXLXLXLXLXLXLXRXRRXLXRRRXLXLXLXRRRRXLXLXRRRRRXLXLXLXLXLXLXLXLXLXLLLXLXLXLXLXLXLXLXLXLXLXLXLLXLXLXLXLXLXLXLXLXLXLXRRRR",
+          "base": 119,
+          "gamma": [
+            9,
+            15,
+            18,
+            21,
+            4,
+            7
+          ]
+        },
+        {
+          "word": "RXLXLXLXRXRXLLLXRXLLXRXRXRXLLLLXLLXLLXLXLXRXLLXRXLLXLXLXLXLXLXLXLXLLLLLLXLXLXLXLXLXLXLXRRRRR",
+          "base": 92,
+          "gamma": [
+            8,
+            12,
+            15,
+            5,
+            3,
+            6
+          ]
+        },
+        {
+          "word": "RXLXLXLXLXLXLXLLXLLXLXLXLXLXLXLXLXLXLXLXLXLLLLXLXLXLXLXRXRXLLLXLXLXLXLXRRRRXRXRXLLXR",
+          "base": 84,
+          "gamma": [
+            6,
+            12,
+            15,
+            5,
+            3,
+            4
+          ]
+        },
+        {
+          "word": "RXLXLXLXRXRXLLLXRXLLLXRXLLLXRXLLXRXLLLLXLXLXLXLXLXLXLXLXRRRRR",
+          "base": 61,
+          "gamma": [
+            4,
+            10,
+            10,
+            7,
+            1,
+            2
+          ]
+        },
+        {
+          "word": "RXLXLXLXLXLLXRXLLLXLXRRXLXLLLLXLXLXLXLXLXLXLXLXRRRRRXRXLLXR",
+          "base": 59,
+          "gamma": [
+            4,
+            10,
+            10,
+            7,
+            1,
+            2
+          ]
+        },
+        {
+          "word": "RXLXLXLLXRXRXLLLLXRXRXLLLLXRXRXLLLXRXRXLLLLXRXRXRXRXRRRRRR",
+          "base": 58,
+          "gamma": [
+            2,
+            15,
+            12,
+            9,
+            3,
+            0
+          ]
+        },
+        {
+          "word": "RXLXLXLLXRXRXLLLLXRXRXLLLLXLXLLXRXRXRRXLXLXRRRXLXLXLLLLLLL",
+          "base": 58,
+          "gamma": [
+            3,
+            16,
+            13,
+            10,
+            4,
+            1
+          ]
+        }
+      ],
+      "dual": {
+        "mu": [
+          "0",
+          "0",
+          "1",
+          "59/12",
+          "1/12",
+          "0"
+        ],
+        "nu": "207/2",
+        "old_pool_lower_bound": "135/2",
+        "new_column_reduced_cost": "-4"
+      }
+    },
+    {
+      "id": "k5-mask302-order15713",
+      "labels": [
+        4,
+        1,
+        7,
+        8,
+        5,
+        6,
+        3,
+        2
+      ],
+      "mask": 302,
+      "scope": "first retained block length at least 2; other four positive",
+      "support": [
+        {
+          "weight": "3/40",
+          "base": 56,
+          "gamma": [
+            5,
+            8,
+            12,
+            6,
+            3
+          ],
+          "word": "XLXLXLLLLXRXLXLLXRXRXRRXLXLLLLXRXRXRXRXRXRXRRXRRRXLXLXLX"
+        },
+        {
+          "weight": "2/5",
+          "base": 61,
+          "gamma": [
+            9,
+            6,
+            3,
+            3,
+            12
+          ],
+          "word": "RRRXLXRXRRRXLLXLXLXLXLLXLLXRXLLLXRXRXRRRXRRRRRXLXLXLXLXRXRXRX"
+        },
+        {
+          "weight": "23/70",
+          "base": 64,
+          "gamma": [
+            2,
+            5,
+            8,
+            9,
+            0
+          ],
+          "word": "XLLXLLXRXRRXLXLXLLLLLXLLXRXRXRXRXRXRXLLLXLXRRXLXLLLXRXRXRXRXRXRR"
+        },
+        {
+          "weight": "1/10",
+          "base": 67,
+          "gamma": [
+            1,
+            2,
+            5,
+            12,
+            3
+          ],
+          "word": "RXRRRXRXRXLLXLLLLLLXLLXRXLLLXLXLXLLXRXRXRXRRXLXLXLXLLLXRXRXRXRXRRXR"
+        },
+        {
+          "weight": "27/280",
+          "base": 50,
+          "gamma": [
+            9,
+            12,
+            8,
+            2,
+            7
+          ],
+          "word": "XLXRRRXRXLXLXLXRRXRRRXRRXRXLXLXRXRRXLXRRRXRXRXRXLX"
+        }
+      ],
+      "old_pool": [
+        {
+          "word": "XRRXLXLLXLLLLXLXRXRXLLLLXRXRXRXRRXLXLXLXLLLLXLXLXLXRX",
+          "base": 53,
+          "gamma": [
+            7,
+            13,
+            10,
+            4,
+            5
+          ]
+        },
+        {
+          "word": "XLXLXLLLLXRXLXLLXRXRXRRXLXLLLLXRXRXRXRXRXRXRRXRRRXLXLXLX",
+          "base": 56,
+          "gamma": [
+            5,
+            8,
+            12,
+            6,
+            3
+          ]
+        },
+        {
+          "word": "RRRXLXRXRRRXLLXLXLXLXLLXLLXRXLLLXRXRXRRRXRRRRRXLXLXLXLXRXRXRX",
+          "base": 61,
+          "gamma": [
+            9,
+            6,
+            3,
+            3,
+            12
+          ]
+        },
+        {
+          "word": "XLLXLLXRXRRXLXLXLLLLLXLLXRXRXRXRXRXRXLLLXLXRRXLXLLLXRXRXRXRXRXRR",
+          "base": 64,
+          "gamma": [
+            2,
+            5,
+            8,
+            9,
+            0
+          ]
+        },
+        {
+          "word": "XLLXRXLLLXLLLLXLXRRRXRXRRXRXRRRRXLXLXLXLLXLLLLXRXLLXRXRXRXRXRRX",
+          "base": 63,
+          "gamma": [
+            5,
+            8,
+            11,
+            6,
+            3
+          ]
+        },
+        {
+          "word": "RRXLLXLLXRXRRXLXLLLLLXLXRXRXRRXRXRRRRXLXLXLXLXLLLLLLLXRXRXRXRRRRR",
+          "base": 65,
+          "gamma": [
+            8,
+            11,
+            9,
+            3,
+            6
+          ]
+        },
+        {
+          "word": "RXRRRXRXRXLLXLLLLLLXLLXRXLLLXLXLXLLXRXRXRXRRXLXLXLXLLLXRXRXRXRXRRXR",
+          "base": 67,
+          "gamma": [
+            1,
+            2,
+            5,
+            12,
+            3
+          ]
+        },
+        {
+          "word": "LXRXLLLXRXLLLXRXRXLLLXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRRRRR",
+          "base": 96,
+          "gamma": [
+            18,
+            15,
+            12,
+            6,
+            3
+          ]
+        },
+        {
+          "word": "LXRXRRRXRXLXRRXLXLXRRRXLXRRXLXLXLXRRRRXLXLXLXLXRRRRRXLXLXLXRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXRR",
+          "base": 102,
+          "gamma": [
+            20,
+            17,
+            14,
+            8,
+            1
+          ]
+        },
+        {
+          "word": "RXRRXRXRXRXRXRXRXRXRXRXLLXLXRXRXLLLXLXRXRXRXLLLLXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXLLLLLLXLXL",
+          "base": 130,
+          "gamma": [
+            18,
+            19,
+            16,
+            10,
+            7
+          ]
+        },
+        {
+          "word": "RXRRXRXLXLXRRRXLXLXLXRRRRXLXLXRRRXLXLXLXLXRRRRRXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLXLXLXLXLLLXLXLXLXLXLXLXRRRRRRXLXLXLXLXRRRRRXLXLXLXLXLXLXLLLLLL",
+          "base": 139,
+          "gamma": [
+            23,
+            24,
+            21,
+            15,
+            6
+          ]
+        },
+        {
+          "word": "RXRXLXLXLLXLXRXLLXLXRXRXLLLXRXRXRXRXLLLLLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRRRRRXLXL",
+          "base": 104,
+          "gamma": [
+            6,
+            18,
+            15,
+            9,
+            8
+          ]
+        },
+        {
+          "word": "RXRXLXLXLLXLXLXLXLXLXLXLXLXLXLXLLLXLLXLXRXRXLXRRXLLLLLXLXLXRRXLXRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXRRR",
+          "base": 104,
+          "gamma": [
+            4,
+            20,
+            17,
+            11,
+            6
+          ]
+        },
+        {
+          "word": "RXRXRXRXRXRXRXRXRXRXLXLLXRXLLXRXRXRXLLLLLXRXRXRXRXLLLLLLXLXLXLXRRRXLXLX",
+          "base": 71,
+          "gamma": [
+            5,
+            15,
+            12,
+            6,
+            7
+          ]
+        },
+        {
+          "word": "RXRXLXLXLXLLXLLXLXRXRXLXRRXLLLLLXRXRXRXRXLLLLLLXLXLXLXLXRRRRRXRXRXRXRXRXRXRRR",
+          "base": 77,
+          "gamma": [
+            5,
+            15,
+            12,
+            6,
+            7
+          ]
+        },
+        {
+          "word": "XLXLXRXRRRXRXLXLXLXLXRRRXLXLXLLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+          "base": 57,
+          "gamma": [
+            8,
+            11,
+            9,
+            3,
+            6
+          ]
+        },
+        {
+          "word": "XLXLXRXRRRXLXLXLXRRRRXLXLXLXLXLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+          "base": 57,
+          "gamma": [
+            8,
+            11,
+            9,
+            3,
+            6
+          ]
+        },
+        {
+          "word": "XLXLXRXLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLLXLXRXRXRXLLLLXRXRXRXLLLLXLXRXLLXLXLXLXLXRRRRRXLXLX",
+          "base": 88,
+          "gamma": [
+            11,
+            14,
+            10,
+            8,
+            9
+          ]
+        },
+        {
+          "word": "XLXLXLXRXRXLXRRXRXRXLXLXLXLXLLLXLLXLXLXLXLXLXLXLXLXLXLLLLXRXRXLLLLXLXLXLXLXLXRRRRRRXRXRXRRRRRR",
+          "base": 94,
+          "gamma": [
+            11,
+            14,
+            10,
+            8,
+            9
+          ]
+        },
+        {
+          "word": "XLXLXRXLLXRXRXRXRXRXRXRXRXRXRXRRXRXRRRRXLXLXLXLXLLLLLXLLXRXLLXRXRXLLLXLXLXLXLXLXRRRRRRXRXLLXLXLXLXLXRRRRRXLXLXLXR",
+          "base": 113,
+          "gamma": [
+            15,
+            18,
+            17,
+            4,
+            13
+          ]
+        },
+        {
+          "word": "XLXLXLXLXRRXRXLXLXRRRXRXRXLXLXLXLXLXLLLLXLLXLXLXLXLXLXLXLXLXLLLLXLXLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLLXRXRRRRRR",
+          "base": 114,
+          "gamma": [
+            12,
+            15,
+            14,
+            7,
+            10
+          ]
+        },
+        {
+          "word": "XLXLXRXLLLXRXRXLLLXRXRXRXRXRXRXRXRXRXRXRXLXLLXRXLLXRXRXLLLXLXLXLXLXLXRRRRRRXRXRXLLLXLXLXLXLXRRRRRXRXLLXLXLXRRRXLXLX",
+          "base": 115,
+          "gamma": [
+            15,
+            18,
+            21,
+            4,
+            13
+          ]
+        },
+        {
+          "word": "XLXLXRXRRRXLXLXLXLLLXLXRXRXLXRRXLXRRXLXRRXRXRXRXLXLXLXLXLXLXLLLLXLLXLXLXLXLXLXLXLXLXLLLLXLXLXLXLXLXLXLXLXLLLLXLLLLLL",
+          "base": 116,
+          "gamma": [
+            14,
+            17,
+            20,
+            7,
+            12
+          ]
+        },
+        {
+          "word": "XLXLXRXLLLXRXRXLLLLXRXLLLLXLXRXLLXRXRXLLLXLXLXLXLXLXRRRRRRXRXLLXLXLXRRRXLXLX",
+          "base": 76,
+          "gamma": [
+            10,
+            13,
+            16,
+            1,
+            8
+          ]
+        },
+        {
+          "word": "XLXLXRXRRRXLXLXLXLLLXRXRXRXRRRRXLXLXLXLXLXLLLLXRXLLLLXLXLXLXLXLXLXLXLXRRRR",
+          "base": 74,
+          "gamma": [
+            10,
+            13,
+            16,
+            1,
+            8
+          ]
+        },
+        {
+          "word": "XLXLLXLLXRXLLXRXRXRXLLLLLXRXRXRXRXLLLLLXRXRXRXRXRXRXRXRRRRXLXLX",
+          "base": 63,
+          "gamma": [
+            5,
+            15,
+            12,
+            6,
+            3
+          ]
+        },
+        {
+          "word": "XLXLLXLLXLXRXRXLXRRXRRRRRXLXLXRRRRXRXLXRRXLXRRXLXRRXLXRRXLXRRXRXRR",
+          "base": 66,
+          "gamma": [
+            6,
+            14,
+            11,
+            5,
+            4
+          ]
+        }
+      ],
+      "dual": {
+        "mu": [
+          "5/7",
+          "47/49",
+          "2/3",
+          "50/147"
+        ],
+        "nu": "4079/49",
+        "old_pool_lower_bound": "3291/49"
+      },
+      "expanded_pool": {
+        "set_a": [
+          {
+            "word": "XLXRRRXLXRRXLXLXLXRXRRRRXRRXRXRXLLXLXRXRXRRRXRXRXRXL",
+            "base": 52,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "LXRXRRRXRXRXRRXLXRXRXRXRXRXRXRRRRXRXLXRRXRXRXLXRRXRXLXLXRXRRXLXLXLLLXLXRRXLXRRXLXRXRXRRRXRR",
+            "base": 91,
+            "gamma": [
+              19,
+              16,
+              13,
+              7,
+              2
+            ]
+          },
+          {
+            "word": "LLXLXLXLXLXLXLXLXLXRRXRXLXLXRXRRXRXLXLXRXRXRXRXRXRXRRRXLXRXRXRXRXRXRRXLXRRXLXRRXLXRRXLXLLXLLXRXRXRXLXLLLXLXRRXLXRRXLXRXRXRRRRR",
+            "base": 126,
+            "gamma": [
+              20,
+              21,
+              18,
+              12,
+              5
+            ]
+          },
+          {
+            "word": "RXRXRRXRXRXRXRXRXRXRXLXLXLXLXLXLLXRXLXLXRXRXRXRXRXRXLLXLXRXRXRRXLXLXLXLLXRXRXRXRRRRRRXLXRRXLXL",
+            "base": 94,
+            "gamma": [
+              6,
+              18,
+              15,
+              9,
+              8
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXRXRXRRRXRXRRRXRRXRXLXRRXRXLXLXLLXRXRXRXRRRRXRX",
+            "base": 69,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              9
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXLXRRXRRRXRRXRXLXLXRXRRXLXRRRXRXRXRXLX",
+            "base": 50,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXLXRXRXRXRXRRXLXRXRRXLXRRXRXLLXLXLXLXLXLXRRXLXLLXLXRXRXLXLLXLLXLLXRXLXLLLXLXLXLX",
+            "base": 84,
+            "gamma": [
+              11,
+              14,
+              10,
+              8,
+              9
+            ]
+          },
+          {
+            "word": "XLXLXLXRXRXRXRXRXRXRXRXRXLXLLXLXLXLXLXLXLXLXLLXLLLXLXLXLXRRXLXRRXLXLXLLXLXLXLXRXRRXRXLXLXRXRRXLXLX",
+            "base": 98,
+            "gamma": [
+              14,
+              17,
+              16,
+              5,
+              12
+            ]
+          },
+          {
+            "word": "XLXLXLLXLXRXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLXLLLXLXRXLLXLXLXLXRRXLXRRXLXLXLLXLXLXLXRXRRXRXLXLXRXRRXLXLX",
+            "base": 102,
+            "gamma": [
+              14,
+              17,
+              20,
+              5,
+              12
+            ]
+          },
+          {
+            "word": "XLXLXLLXLLXLLLXLXLXLXLXLXLXLXLLXRXLLLLLXLXLXLLXRXLXLLXRXRXRRRRXLXLXLXLX",
+            "base": 71,
+            "gamma": [
+              9,
+              12,
+              15,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXLLXLLXLLLXLXLXLXLXLXLXLXLLXRXLLLLLXLXLXLXLXLLXRXRRXRRRXLXLXLXLXRXL",
+            "base": 71,
+            "gamma": [
+              9,
+              12,
+              15,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRXLXLXLXRXRRRRXRRXRXLXLXRXRRXLXRRRXRXRXRXL",
+            "base": 52,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXRRRXRRXRXRXRXRXRXRXRXRRRXRRRXRRXRXLXLXRXRRXRXLXLXLXRRXRRRRRX",
+            "base": 63,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "LXRXRRRXRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRRXRRXRXLXLXRRRXRXLXLXLXRRRRXLXLXLXRXRXRRRRR",
+            "base": 94,
+            "gamma": [
+              18,
+              15,
+              12,
+              6,
+              3
+            ]
+          },
+          {
+            "word": "XLXRRRXLXLXRRRXLXLXRRRRXRRXLXRRXRXLLXLXRRXRRRXRXRXRXLLXR",
+            "base": 56,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXLXRRXRRRXRRXRXLXLXRXRRXRRXRXRXRXLXLLLLLXRRRRR",
+            "base": 58,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXLLLLXLLXRXLLLXLXLXLXLXRXRRRXLXLXLXLLLLLXLXRRXLXLLXRRRRRRR",
+            "base": 62,
+            "gamma": [
+              7,
+              10,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXLXLLLLXLLXRXLLLXLXLXLXLXRXRRRXLXLXLXLLLLLXLXRRXLXLLXLLLLLL",
+            "base": 61,
+            "gamma": [
+              8,
+              11,
+              11,
+              5,
+              6
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXLXRRXRRRXRRXRXLXLXRXRRXRRXRXRXRXLXLLLLLXLLLLLLLL",
+            "base": 61,
+            "gamma": [
+              10,
+              13,
+              9,
+              3,
+              8
+            ]
+          },
+          {
+            "word": "XRRXLXRRRXRXRXRXRXRXRXRRXRXRRRRXRRXRXLXLXRXRRXRXLXLXLXRRXRRRXRR",
+            "base": 63,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRXLXLXLXRXRRRRXRRXRXLXLXRXRRXLXRRRXRXRXRXRRRRRRRRRRRR",
+            "base": 63,
+            "gamma": [
+              10,
+              13,
+              9,
+              3,
+              8
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRRXRXRXRXRXRXRXRXRRXRRRRXRRXRXLXLXRRRXRXLXLXLXRXRXRRRRR",
+            "base": 65,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRRXRXRXRXRXRXRXRXRRXRRRRXRRXRXLXLXRXRRXLXRRXLXLXLXRRRRRRR",
+            "base": 67,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRRXRXRXRXRXRXRXRXRRXRRRRXRRXRXLXLXRXRRXLXRRXLXLXLXLLLLLL",
+            "base": 66,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              6
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRRXRXRXRXRXRXRXRXRRXRRRRXRRXRXLXLXRRRXRXLXLXLXRXRXLLLLLLLL",
+            "base": 68,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              6
+            ]
+          },
+          {
+            "word": "XRRXLXRRRXRXRXRXRXRXRXRRXRXRRRRXRRXRXLXLXRXRRXRXLXLXLXRRXRRRXLLLLLLLLLLL",
+            "base": 72,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              6
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXRXRXRRRXLXRRXLXRRRRXRRXRXLXLXRRRXRXLXLXLXRXRXRRRRR",
+            "base": 73,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              9
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXRXRXRRRXLXRRXLXRRRRXRRXRXLXLXRXRRXLXRRXLXLXLXRRRRRRR",
+            "base": 75,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              9
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXRXRXRRRXLXRRXLXRRRRXRRXRXLXLXRXRRXLXRRXLXLXLXLLLLLL",
+            "base": 74,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              10
+            ]
+          },
+          {
+            "word": "XLXRRRXRXRXLXLXLXLXRRXRXLLXLLXLXLLXLLXRXRRXLXRRRXRXRXLLLXRXRXRRXLXLXLXR",
+            "base": 71,
+            "gamma": [
+              11,
+              14,
+              17,
+              0,
+              9
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXRXRXRRRXLXRRXLXRRRRXRRXRXLXLXRRRXRXLXLXLXRXRXLLLLLLLL",
+            "base": 76,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              10
+            ]
+          },
+          {
+            "word": "XLXLXLLXLLXLLLXLXLXLXLXLXLXLXLLXLLLLXLXLXLXLXRXRRRXLXLXLLLLXRXRXRXLXLLLLXRRRR",
+            "base": 77,
+            "gamma": [
+              9,
+              12,
+              15,
+              2,
+              7
+            ]
+          }
+        ],
+        "set_b": [
+          {
+            "word": "XLXLXRXRRRXRXRRXRRXLXRRXLXLXRRRXLXRRRRRRXRXLXLXRXLLXRX",
+            "base": 54,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXRXRRXRRXLXRRXRXLLXRXLLXLLLLXLXLXRRXLXLLXRX",
+            "base": 53,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              8
+            ]
+          },
+          {
+            "word": "XRRXRXLXLXRXRRRXRRXLXRRXRXLLXRXLLXRRRRRXRXRXRXLLLXRXRX",
+            "base": 54,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXRXRRXRRXRXRXLLXLXRXRXLLLLLLXLXLXLXRRRXLXLX",
+            "base": 53,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              8
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRRXLXRXRRXRRXLXRRXLXLXRRRXLXRRRRRRXRXLLXRXLLXRX",
+            "base": 56,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXRXLLLLXLXRXRXLLLLXRXRXRXLLLLLXLXRXLLXRXLLXRXLLXRX",
+            "base": 54,
+            "gamma": [
+              7,
+              10,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRRXLXRXRRXRRXLXRRXRXLLXRXLLXLLLLLXLXRRXLXLLXRX",
+            "base": 55,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              8
+            ]
+          },
+          {
+            "word": "RRXRXLXLLXRXRXRRRXRRXLXRRXLXLXRRRXLXRRRXRXLXRRXRXLLXRX",
+            "base": 54,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXRXLXRRRXRRXRXRXLLXLXRXRXRRRRRRXLXLXRRRXLXLX",
+            "base": 54,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXRXLXRRRXRRXLXRRXLXLXRRRXLXRRRRRRXRXLLXRXLLXRX",
+            "base": 56,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXLXLXLXLLLLXLXRXRXLLLLXRXRXRXLLLLLXLXLXLXLXR",
+            "base": 54,
+            "gamma": [
+              7,
+              10,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXRXLXRRRXRRXLXRRXRXLLXRXLLXLLLLLXLXRRXLXLLXRX",
+            "base": 55,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              8
+            ]
+          },
+          {
+            "word": "XLLXRXLXLLLXLXRXRXLLLLXRXRXRXLLLLLXLXRXLLXLXLXRRRXLXLX",
+            "base": 54,
+            "gamma": [
+              7,
+              10,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXLXRXLLLLXLXRXRXLLLLXRXRXRXLLLLLXLXRXLLXLXLXRRRXLXLX",
+            "base": 54,
+            "gamma": [
+              7,
+              10,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXLXRXLLLLXLXRXRXLLLLXRXRXRXLLLLLXLXRXLLXRXLLXLXRRXLX",
+            "base": 54,
+            "gamma": [
+              7,
+              10,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXRXLXLXLXRRXLXLLXRXLLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+            "base": 57,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXRXLXLXRXLLXRXLLXRXLLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+            "base": 57,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXLXLLXRXRXRRXLXLXLLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+            "base": 57,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6
+            ]
+          },
+          {
+            "word": "XRRXRXLXLXRXLLLXLXRXRXRXLLXRXLLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+            "base": 57,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXRXLLXRXLLLXRXRXRXRRRRXRRXLXRRXLXLXRRRXLXRRRRR",
+            "base": 58,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXRRRXLXLXLLXRXRXRRRXLXLXLXLXLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+            "base": 57,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6
+            ]
+          },
+          {
+            "word": "XRRXLXRRXLXLXLLXLXRXRXRXLLXRXLLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+            "base": 57,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXRXLXLXRXLLXLXRRXLXLLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+            "base": 57,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXRXLXLXRXLLXRXLLXRXRRRRRXRRXLXRRXLXLXRRRXLXRRRRR",
+            "base": 58,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "LLXRRXLXLXLLLXLXRXRXLLLLXRXRXRXLLLLLXLXRXLLXLXLXRRRXLXLX",
+            "base": 56,
+            "gamma": [
+              9,
+              10,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XRRXRXLXLXRXLLLXRXRXLLLXRXRXRXLLLLLLXLXRXRXLLLLXRXRXRXRRRRR",
+            "base": 59,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXLXLXRRRXLXLXLXLXRXRRRRRXRRXLXRRXLXLXRRRXLXRRRRR",
+            "base": 58,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXLXRRXLXLXLXRXLLXRXRRRRRXRRXLXRRXLXLXRRRXLXRRRRR",
+            "base": 58,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XRRXLXRRXLXLXLLXLXRXRXRXLLXRXRRRRRXRRXLXRRXLXLXRRRXLXRRRRR",
+            "base": 58,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXLLLXLXRXRXRRRXRRRXRXLXLXLXRRXLXLLXRXRRRRRXRXRXRXRRRRR",
+            "base": 58,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXLLLXLXRXRXRRRXRRRXRXLXLXRXLLXRXLLXRXRRRRRXRXRXRXRRRRR",
+            "base": 58,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXRXRRRXLXLXLXLLLLXLXRXRXLLLLXLLXLXLXLXLXLLLLLLXRXRXRRRRR",
+            "base": 60,
+            "gamma": [
+              7,
+              10,
+              10,
+              4,
+              5
+            ]
+          }
+        ],
+        "set_c": [
+          {
+            "word": "XLXRRRXRXLXLXLXRRXRRRXRRXRXLXLXRXRRXLXRRRXRXRXRXLX",
+            "base": 50,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "LXRXRRRXRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXLXLXLLXRXRRXRRXLXRRXLXRRXLXLLXRXLLXLXRRXLXRXRXRRRXRR",
+            "base": 91,
+            "gamma": [
+              19,
+              16,
+              13,
+              7,
+              2
+            ]
+          },
+          {
+            "word": "LLXLXLXLXLXLXLXLXLXRXRXRXRRXRXLXLXRXRRXLXRXRXRXRRXRXRRXRXRXRXRXRXRXRXRRRXRRXRXRXRXRXRRXRXLLXRXLLXRXLLXRXLLLLXRXRXRXRXRXRRXRRR",
+            "base": 125,
+            "gamma": [
+              19,
+              20,
+              17,
+              11,
+              6
+            ]
+          },
+          {
+            "word": "RXRXLXLXLLXLXLXLLXRXLXLXLXLXLXRRXRXRXRRXLXRXRXLXLLXLLXLXRRXLXRXRXRXRXRRXLXLXLXLXLXRXRXRRRRRRRXLXL",
+            "base": 97,
+            "gamma": [
+              5,
+              19,
+              16,
+              10,
+              7
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXLXLXRXRRXRXRRRXRXRRRXRXRXRRXRXLXLXLXRRXRRRRXRX",
+            "base": 69,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              9
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRXLXLXLXRXRRRRXRRXRXLXLXRXRRXLXRRRXRXRXRXL",
+            "base": 52,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXLXLXRXRXRXRXRRXLXRXRRXRXLXLXLXLXLXLXLXRRRXLXLXLLXLXLLLXRXLXLLXRXRXLLLLXLXLLLXRXRXLX",
+            "base": 86,
+            "gamma": [
+              11,
+              14,
+              10,
+              8,
+              9
+            ]
+          },
+          {
+            "word": "XLXLXLXRXRXRXRXRXRXRXLXLXRXRRXRXRXLLXLXLXLLXLXLXRRRXLXRRXLXRRXLXLLLXLLXLXLXRXRRXLXLXRRRXRXLXLXRXRRXLXLX",
+            "base": 103,
+            "gamma": [
+              15,
+              18,
+              17,
+              4,
+              13
+            ]
+          },
+          {
+            "word": "XLXRRRRXRXLXLXLXLXLXLXLLXLXRXRXRXRXRXRXRRXLXRXRXRXRXLXLXLXLXLXRXRRXLXLLLXLXLXLLXRXRRXLXRRXRXLXLXRXRRXLXLX",
+            "base": 105,
+            "gamma": [
+              15,
+              18,
+              21,
+              4,
+              13
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXRXRRXLXLXLXLXLXLXLLXLLXRXRRXLXRRRXLXRRXRXLXLXRXRRXLXLX",
+            "base": 67,
+            "gamma": [
+              11,
+              14,
+              17,
+              0,
+              9
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRXRXLXLXRXLLLXRXLXLXLXLLXLLXRXRRXLXRRRXLXRRXRXRXLXLXLXRXRXL",
+            "base": 69,
+            "gamma": [
+              11,
+              14,
+              17,
+              0,
+              9
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRRRXRRXLXRRXLXRRXLXLLXLLLXLXLLXLLXRXRXRXLXLXR",
+            "base": 55,
+            "gamma": [
+              8,
+              11,
+              9,
+              3,
+              6
+            ]
+          },
+          {
+            "word": "XLXRRRXRRXRXRXRXRXLXLXRXRRXRXRXRRRXRRRXRXRRRXRXLXLXLXRXRXRRRRRX",
+            "base": 63,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "LXRXRRRXRXRXRRXRXLXLXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXLXRRXRXRRRRRXRXRXRRXLXRRXRXLXLXLLXRXRRXRRRRR",
+            "base": 94,
+            "gamma": [
+              18,
+              15,
+              12,
+              6,
+              3
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXLXRRXRRRXRRXRXLXLXRXRRRRXRXRXRXLXLLLLXLXRRRRR",
+            "base": 58,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXLXRRXRRRXRRXLXRRXLXRRXRRXRXRXRXLXLLLLLXLLXRRRRRRR",
+            "base": 62,
+            "gamma": [
+              9,
+              12,
+              8,
+              2,
+              7
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXLXRRXRRRXRRXLXRRXLXRRXRRXRXRXRXLXLLLLLXLLXLLLLLL",
+            "base": 61,
+            "gamma": [
+              10,
+              13,
+              9,
+              3,
+              8
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXLXRRXRRRXRRXRXLXLXRXRRRRXRXRXRXLXLLLLXLXLLLLLLLL",
+            "base": 61,
+            "gamma": [
+              10,
+              13,
+              9,
+              3,
+              8
+            ]
+          },
+          {
+            "word": "XRRXLXRRRXRXRXRXRXLXLXRXRRXRXRRXRXRRRRXRXRRRXRXLXLXLXRXRXRRRXRR",
+            "base": 63,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRXLXLXLXRXRRRRXRRXRXLXLXRXRRXLXRRRXRXRXRXRRRRRRRRRRRR",
+            "base": 63,
+            "gamma": [
+              10,
+              13,
+              9,
+              3,
+              8
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRRXRXRXRXRXLXLXRXRRXRXRXRRXRRRRXRXRRRXRXLXLXLXRXRXRRRRR",
+            "base": 65,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRRXRXRRXRXRXLLXLXRXRXRXRXRXRRXRRRRXRXRXRXRRXLXLXLXRRRRRRR",
+            "base": 67,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              5
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRRXRXRRXRXRXLLXLXRXRXRXRXRXRRXRRRRXRXRXRXRRXLXLXLXLLLLLL",
+            "base": 66,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              6
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRRXRXRXRXRXLXLXRXRRXRXRXRRXRRRRXRXRRRXRXLXLXLXRXRXLLLLLLLL",
+            "base": 68,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              6
+            ]
+          },
+          {
+            "word": "XLXRRRXLXRRXRXLXLXRXLLLXRXLXLXLXLLXLLXRXRRXLXRRRXLXRRXLXRRXLXRRXLXLXLXR",
+            "base": 71,
+            "gamma": [
+              11,
+              14,
+              17,
+              0,
+              9
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXLXLXRXRRXRXRRRXLXRRXLXRRRRXRXRRRXRXLXLXLXRXRXRRRRR",
+            "base": 73,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              9
+            ]
+          },
+          {
+            "word": "XRRXLXRRRXRXRXRXRXLXLXRXRRXRXRRXRXRRRRXRXRRRXRXLXLXLXRXRXRRRXLLLLLLLLLLL",
+            "base": 72,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              6
+            ]
+          },
+          {
+            "word": "XLXRRRXRXLXLXRXRRXLXLXLXLXLXLXLLXLLXRXRRXRRXLXRRXRXLXLXRXRRXLXLXLLLLXRRRR",
+            "base": 73,
+            "gamma": [
+              11,
+              14,
+              17,
+              0,
+              9
+            ]
+          },
+          {
+            "word": "RRXLXLXRRXRXRXRXRXRXRXLXLXRXRRXLXRRXRRXRRRXLXLXRRRRXRXRRRRXLXLXLXRXRXRRRRXR",
+            "base": 75,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              9
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXLXLXRXRRXLXRRXRRRXLXRRXLXRRRRXRXRXRXRRXLXLXLXRRRRRRR",
+            "base": 75,
+            "gamma": [
+              7,
+              13,
+              10,
+              4,
+              9
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXLXLXRXRRXLXRRXRRRXLXRRXLXRRRRXRXRXRXRRXLXLXLXLLLLLL",
+            "base": 74,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              10
+            ]
+          },
+          {
+            "word": "RRXRXLXLXRXRXRXRXRXRXRXLXLXRXRRXRXRRRXLXRRXLXRRRRXRXRRRXRXLXLXLXRXRXLLLLLLLL",
+            "base": 76,
+            "gamma": [
+              8,
+              14,
+              11,
+              5,
+              10
+            ]
+          }
+        ]
+      },
+      "expanded_dual": {
+        "mu": [
+          "11/5",
+          "1/2",
+          "19/20",
+          "3/4"
+        ],
+        "nu": "1751/20",
+        "tight_slopes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "primal_dual_base": "1223/20"
+      }
+    }
+  ]
+}

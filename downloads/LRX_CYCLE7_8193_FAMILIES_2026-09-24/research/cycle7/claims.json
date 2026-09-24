@@ -1,0 +1,78 @@
+{
+  "format": "lrx_cycle7_claims_v1",
+  "date": "2026-09-24",
+  "human_reviewed": false,
+  "fully_lean_formalized": false,
+  "source_messages": [
+    "https://t.me/c/4375515554/2353",
+    "https://t.me/c/4375515554/2354",
+    "https://t.me/c/4375515554/2355"
+  ],
+  "claims": [
+    {
+      "id": "C7-MACRO",
+      "status": "textual_proof_independently_agent_reviewed",
+      "statement": "For a concrete unit sorting word without X(0,0), the documented macros sort every positive block expansion to the exact root, with cost bounded by B + beta dot (lengths-1).",
+      "evidence": [
+        "reports/cycle7/THEOREM_RU.md",
+        "research/cycle7/cloud-proof/PROOF_AUDIT.md"
+      ]
+    },
+    {
+      "id": "C7-8193",
+      "status": "computer_assisted_proof_independently_agent_reviewed",
+      "statement": "For the 8193 explicitly listed m=8 families, d(v,(1,...,8,0^r)) <= 6n-18 for every positive integral block length vector.",
+      "depends_on": [
+        "C7-MACRO"
+      ],
+      "evidence": [
+        "runs/cycle7/certificates.json",
+        "runs/cycle7/independent-final.json",
+        "research/cycle7/cloud-proof/new_certificates_independent_audit_v2.json",
+        "research/cycle7/cloud-proof/REVIEW_NEW_CERTIFICATES.md"
+      ]
+    },
+    {
+      "id": "C7-NOVELTY",
+      "status": "exact_finite_comparison",
+      "statement": "All 8193 pairs are absent in the supplied union_covered snapshot. 8188 of 10248 previously uncovered eight-block pairs are added; 2060 remain. This does not establish absolute priority against unavailable work.",
+      "evidence": [
+        "runs/cycle7/independent-final.json",
+        "research/cycle7/cloud-proof/new_certificates_independent_audit_v2.json"
+      ]
+    },
+    {
+      "id": "C7-FOUR",
+      "status": "textual_proof_with_verified_explicit_words",
+      "statement": "For a,b,c,d>=1, v=(0^a,1,0^b,2,3,4,0^c,5,8,0^d,7,6) satisfies d(v)<=floor(33+27a/5+6b+6c+22d/5)<=6n-18.",
+      "depends_on": [
+        "C7-MACRO"
+      ],
+      "evidence": [
+        "reports/cycle7/THEOREM_RU.md",
+        "runs/cycle7/certificates.json"
+      ]
+    },
+    {
+      "id": "C7-FIVE",
+      "status": "textual_proof_with_verified_explicit_word",
+      "statement": "For a,b,c,d,e>=1, v=(0^a,1,0^b,2,0^c,3,0^d,4,0^e,5,8,7,6) satisfies d(v)<=6n-19.",
+      "depends_on": [
+        "C7-MACRO"
+      ],
+      "evidence": [
+        "reports/cycle7/THEOREM_RU.md",
+        "runs/cycle7/certificates.json"
+      ]
+    }
+  ],
+  "not_established": [
+    "full m=8 root bound",
+    "general m>8 bound",
+    "original LRX diameter conjecture",
+    "projection cap A_(P+1)<=P+m-2",
+    "whole previous three-block theorem"
+  ],
+  "finite_replays_are_not_all_lengths_proof": true,
+  "certificate_sha256": "3409a4bb19e9ee117abeccfa2cc9acd8e7ea2d48a2526c933150e3ea8bca6add"
+}

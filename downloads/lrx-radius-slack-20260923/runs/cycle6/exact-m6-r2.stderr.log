@@ -1,0 +1,4 @@
+small_states=5040 P=21 marked_states=40320 estimated_bytes=1456560
+projection_budget=10/21
+projection_budget=20/21
+projection_budget=21/21

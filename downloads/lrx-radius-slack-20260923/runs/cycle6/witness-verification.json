@@ -1,0 +1,229 @@
+{
+  "method": "literal marked-word resource BFS; independent of C++ ranks and recurrence",
+  "cases": [],
+  "word_certificates": [
+    {
+      "source": "runs/cycle6/exact-m8-r2.json",
+      "v": [
+        0,
+        0,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "length": 42,
+      "projection_length": 34,
+      "endpoint": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        0,
+        0
+      ],
+      "marked_endpoint": 8
+    },
+    {
+      "source": "runs/cycle6/exact-m8-r2.json",
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "length": 42,
+      "projection_length": 36,
+      "endpoint": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        0,
+        0
+      ],
+      "marked_endpoint": 8
+    },
+    {
+      "source": "runs/cycle6/exact-m7-r2.json",
+      "v": [
+        0,
+        0,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "length": 33,
+      "projection_length": 26,
+      "endpoint": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0,
+        0
+      ],
+      "marked_endpoint": 7
+    },
+    {
+      "source": "runs/cycle6/exact-m7-r2.json",
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        7,
+        6,
+        5,
+        3,
+        4
+      ],
+      "length": 33,
+      "projection_length": 25,
+      "endpoint": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0,
+        0
+      ],
+      "marked_endpoint": 7
+    },
+    {
+      "source": "runs/cycle6/exact-m7-r2.json",
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "length": 33,
+      "projection_length": 28,
+      "endpoint": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0,
+        0
+      ],
+      "marked_endpoint": 8
+    },
+    {
+      "source": "runs/cycle6/exact-m6-r2.json",
+      "v": [
+        0,
+        0,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "length": 25,
+      "projection_length": 19,
+      "endpoint": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        0
+      ],
+      "marked_endpoint": 6
+    },
+    {
+      "source": "runs/cycle6/exact-m6-r2.json",
+      "v": [
+        2,
+        1,
+        0,
+        0,
+        6,
+        5,
+        4,
+        3
+      ],
+      "length": 25,
+      "projection_length": 21,
+      "endpoint": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        0
+      ],
+      "marked_endpoint": 6
+    },
+    {
+      "source": "runs/cycle6/exact-m6-r2.json",
+      "v": [
+        3,
+        1,
+        2,
+        0,
+        0,
+        6,
+        5,
+        4
+      ],
+      "length": 25,
+      "projection_length": 19,
+      "endpoint": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        0
+      ],
+      "marked_endpoint": 6
+    }
+  ],
+  "source_sha256": "d7869657ce2531e9babfc14fafa6ce7ec38d40c20b790a64efeccd082909f67d"
+}

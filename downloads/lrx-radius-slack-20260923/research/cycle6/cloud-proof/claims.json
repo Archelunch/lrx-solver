@@ -1,0 +1,99 @@
+{
+  "final_addendum_registry": "research/cycle6/claims_final_addendum.json",
+  "current_audit_registry": "research/cycle6/claims_audit.json",
+  "stage2_registry": "research/cycle6/claims_stage2.json",
+  "source_sha256": "e4aa3df0a1063f5d2780749f4cf20f342b4616774a40268a1fc0cf2c354b130a",
+  "author": "persistent native proof branch",
+  "review_status": "New textual lemmas await coordinator review; formal scopes are explicitly narrower.",
+  "claims": [
+    {
+      "id": "C6-P01",
+      "statement": "Marked-zero transition table and excess-budget recurrence (3)-(6) compute the exact constrained minimum.",
+      "status": "proved-in-text",
+      "verification": [
+        "independent textual reconstruction",
+        "17712 literal finite transition checks"
+      ],
+      "dependencies": [
+        "LRX tuple conventions",
+        "marked zero-zero swaps retained at unit cost"
+      ],
+      "evidence": [
+        "research/cycle6/PROOF_RESULT.md",
+        "research/cycle6/proof_replay.py",
+        "research/cycle6/proof_replay.json"
+      ],
+      "limits": "Full general correspondence not formalized in Lean; source large tables not rerun."
+    },
+    {
+      "id": "C6-P02",
+      "statement": "For k>=2,m>=8k-1 the source family has deletion distances 3k-1, minimal projection 5k-3 and full distance 6k-2.",
+      "status": "proved-in-text",
+      "verification": [
+        "independent reconstruction of localization and ordered crossings",
+        "297 family words",
+        "exact distances k=2..5 by disjoint literal balls"
+      ],
+      "dependencies": [
+        "untouched-label phase argument",
+        "short-path integer representatives",
+        "zero order without visible loops"
+      ],
+      "evidence": [
+        "research/cycle6/PROOF_RESULT.md",
+        "research/cycle6/proof_replay.json"
+      ],
+      "limits": "No full Lean formalization. Source ball cardinalities differ from independently generated counts; distances agree."
+    },
+    {
+      "id": "C6-P03",
+      "statement": "Any feasible marked lift with q projected steps normalizes to at most 2 silent letters per block, hence full length <=3q+2.",
+      "status": "proved-in-text",
+      "verification": [
+        "silent-component path replacement proof",
+        "Lean abstract gate diameter and list-sum bound"
+      ],
+      "dependencies": [
+        "exact silent transition graph 1--0--(n-1)"
+      ],
+      "evidence": [
+        "research/cycle6/PROOF_RESULT.md",
+        "formal/LRX/MarkedZeroBudget.lean",
+        "research/cycle6/proof_lean_audit.json"
+      ],
+      "limits": "Lean certifies abstract accounting only; no assertion that a lift with q<=P exists."
+    },
+    {
+      "id": "C6-P04",
+      "statement": "For m>=3, E_1(m+1)>=m; for the Theorem 2 family and P=E_1(m+1), A_P(v)=6k-2<=P+m-2.",
+      "status": "proved-in-text",
+      "verification": [
+        "degree-three ball-volume bound and factorial induction",
+        "explicit source-family word",
+        "Lean conditional arithmetic family_paid"
+      ],
+      "dependencies": [
+        "(m+1)! distinct vertices when r=1",
+        "C6-P02"
+      ],
+      "evidence": [
+        "research/cycle6/PROOF_RESULT.md",
+        "formal/LRX/MarkedZeroBudget.lean"
+      ],
+      "limits": "Combinatorial volume argument and LRX realization are textual; formal theorem explicitly assumes P>=m."
+    },
+    {
+      "id": "C6-P05",
+      "statement": "For every v with m>=8,r>=2 and P=E_{r-1}, A_P(v)<=P+m-2.",
+      "status": "open",
+      "verification": [],
+      "dependencies": [
+        "find one path simultaneously satisfying q<=P and s<=P-q+m-2"
+      ],
+      "evidence": [
+        "research/cycle6/PROOF_RESULT.md"
+      ],
+      "limits": "Neither finiteness alone nor normalization proves the candidate. No large BFS performed by this branch."
+    }
+  ]
+}

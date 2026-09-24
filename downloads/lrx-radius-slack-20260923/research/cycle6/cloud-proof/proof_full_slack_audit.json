@@ -1,0 +1,96 @@
+{
+  "scope": "Small exhaustive per-mark equality; Python translation of source formulas, not execution of C++ binary",
+  "cases": [
+    {
+      "m": 2,
+      "r": 2,
+      "visible_states": 12,
+      "marked_states": 24,
+      "per_mark_cells_checked": 72,
+      "transitions_checked": 72,
+      "resource_states": 105
+    },
+    {
+      "m": 2,
+      "r": 3,
+      "visible_states": 20,
+      "marked_states": 60,
+      "per_mark_cells_checked": 180,
+      "transitions_checked": 180,
+      "resource_states": 316
+    },
+    {
+      "m": 3,
+      "r": 2,
+      "visible_states": 60,
+      "marked_states": 120,
+      "per_mark_cells_checked": 360,
+      "transitions_checked": 360,
+      "resource_states": 443
+    },
+    {
+      "m": 2,
+      "r": 4,
+      "visible_states": 30,
+      "marked_states": 120,
+      "per_mark_cells_checked": 360,
+      "transitions_checked": 360,
+      "resource_states": 731
+    },
+    {
+      "m": 3,
+      "r": 3,
+      "visible_states": 120,
+      "marked_states": 360,
+      "per_mark_cells_checked": 1080,
+      "transitions_checked": 1080,
+      "resource_states": 2454
+    },
+    {
+      "m": 4,
+      "r": 2,
+      "visible_states": 360,
+      "marked_states": 720,
+      "per_mark_cells_checked": 2160,
+      "transitions_checked": 2160,
+      "resource_states": 6565
+    },
+    {
+      "m": 2,
+      "r": 5,
+      "visible_states": 42,
+      "marked_states": 210,
+      "per_mark_cells_checked": 630,
+      "transitions_checked": 630,
+      "resource_states": 1323
+    },
+    {
+      "m": 3,
+      "r": 4,
+      "visible_states": 210,
+      "marked_states": 840,
+      "per_mark_cells_checked": 2520,
+      "transitions_checked": 2520,
+      "resource_states": 3739
+    },
+    {
+      "m": 4,
+      "r": 3,
+      "visible_states": 840,
+      "marked_states": 2520,
+      "per_mark_cells_checked": 7560,
+      "transitions_checked": 7560,
+      "resource_states": 22351
+    },
+    {
+      "m": 5,
+      "r": 2,
+      "visible_states": 2520,
+      "marked_states": 5040,
+      "per_mark_cells_checked": 15120,
+      "transitions_checked": 15120,
+      "resource_states": 34747
+    }
+  ],
+  "compiler_limitation": "g++ unavailable on proof node (exit127); no software installed and no large BFS repeated"
+}

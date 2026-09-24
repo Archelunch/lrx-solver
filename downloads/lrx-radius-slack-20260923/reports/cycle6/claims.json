@@ -1,0 +1,113 @@
+{
+  "date": "2026-09-23",
+  "submission_ready": false,
+  "claims": [
+    {
+      "id": "C6-01",
+      "claim": "The absolute projection-radius candidate fails at m=8,r=3: v=(2,1,0,0,0,7,8,6,5,4,3), P=42, d(v)=47, A_42(v)=49>48.",
+      "status": "independently_checked_finite",
+      "evidence": [
+        "runs/cycle6/exact-m8-r3.json",
+        "runs/cycle6/packed-m8-r3.json",
+        "runs/cycle6/packed-word-verification.json"
+      ],
+      "scope": "One exact counterexample in the stated parameter domain; general radius conjecture is not refuted.",
+      "human_reviewed": false,
+      "claim_sha256": "256d34d150d143cbae2df563f1f0afff339c35a5ef626c994c9805a8d8791c0b"
+    },
+    {
+      "id": "C6-02",
+      "claim": "At (8,3) exactly five states have A_42>d, and exactly one exceeds total budget 48.",
+      "status": "independently_checked_finite",
+      "evidence": [
+        "runs/cycle6/exact-m8-r3.json",
+        "runs/cycle6/packed-m8-r3.json"
+      ],
+      "scope": "All 6652800 visible states of this one graph.",
+      "human_reviewed": false,
+      "claim_sha256": "56d27f43fd461fb3213cb0d4d1777effdee9eb1479429ee78a8677099b144cce"
+    },
+    {
+      "id": "C6-03",
+      "claim": "At (8,3), A_43(v)=d(v) for every v.",
+      "status": "independently_checked_finite",
+      "evidence": [
+        "runs/cycle6/packed-m8-r3.json",
+        "runs/cycle6/packed-independent-small.json"
+      ],
+      "scope": "One full parameter pair; not universal.",
+      "human_reviewed": false,
+      "claim_sha256": "8818c0d39450437fcd85a1a513e55495f43c07157da4c3121bdfe52aa49edb56"
+    },
+    {
+      "id": "C6-04",
+      "claim": "The table covers (8,2),(8,3),(8,4),(9,2), with exact radii 42,48,54,52 and max A_P 42,49,54,52.",
+      "status": "independently_checked_finite",
+      "evidence": [
+        "runs/cycle6/exact-m8-r2.json",
+        "runs/cycle6/packed-m8-r2.json",
+        "runs/cycle6/exact-m8-r3.json",
+        "runs/cycle6/packed-m8-r3.json",
+        "runs/cycle6/exact-m8-r4.json",
+        "runs/cycle6/packed-m8-r4.json",
+        "runs/cycle6/exact-m9-r2.json",
+        "runs/cycle6/packed-m9-r2.json"
+      ],
+      "scope": "48384000 visible states; radii were already stated by the source and are reproduced, not claimed novel.",
+      "human_reviewed": false,
+      "claim_sha256": "0710b61842e69847690434faedfc42ca60bff001f0b8811a543a64e9c1d7d968"
+    },
+    {
+      "id": "C6-05",
+      "claim": "Requiring a geodesic with projection <=P+1 fails at (8,4), e.g. (4,1,2,3,0,0,0,0,6,7,8,5), D=50 and min geodesic projection=50>P+1=49.",
+      "status": "independently_checked_finite",
+      "evidence": [
+        "runs/cycle6/packed-m8-r4-witnesses.json",
+        "runs/cycle6/packed-m8-r4-word-verification.json"
+      ],
+      "scope": "Does not refute A_(P+1)<=P+m-2, which permits non-geodesic full words.",
+      "human_reviewed": false,
+      "claim_sha256": "963a80b621184cc734f2a30eff7fa850202d5009169a26f513f1f2420fa2ec93"
+    },
+    {
+      "id": "C6-06",
+      "claim": "A_(P+1)(v)<=P+m-2 for every m>=8,r>=2.",
+      "status": "open",
+      "evidence": [
+        "reports/cycle6/RESULTS.md"
+      ],
+      "scope": "Proposed repair; supported on four finite parameter pairs only.",
+      "human_reviewed": false,
+      "claim_sha256": "9c2ff779def0b4c3008e0ec0aedc85003d620d0b189dec08d95deabea25543fa"
+    },
+    {
+      "id": "C6-07",
+      "claim": "The source family v_(m,k) satisfies A_P=6k-2 under m>=8k-1,k>=2 and P=E_1(m+1).",
+      "status": "proved_in_text_agent_reviewed",
+      "evidence": [
+        "sources/2026-09-23-marked-zero/lrx_multiset_marked_zero_reduction.tex",
+        "research/cycle6/cloud-proof/PROOF_RESULT.md",
+        "research/cycle6/COORDINATOR_REVIEW.md",
+        "runs/cycle6/family-words.json"
+      ],
+      "scope": "Uses the audited source Theorem 2 and the elementary volume lower bound E_1>=m; not a proof for all vectors.",
+      "human_reviewed": false,
+      "claim_sha256": "1064b42439242bf3946bbf0af42ea1cef3b2fb1fc352e85019bf74dcdbe02681"
+    },
+    {
+      "id": "C6-08",
+      "claim": "Ten auxiliary/conditional scalar statements in two Lean files passed both the cloud proof branch and coordinator rerun under the desktop user.",
+      "status": "formally_checked_auxiliary_only",
+      "evidence": [
+        "research/cycle6/cloud-proof/MarkedZeroBudget.lean",
+        "research/cycle6/cloud-proof/ProjectionFrontier.lean",
+        "research/cycle6/cloud-proof/proof_lean_audit.json",
+        "research/cycle6/cloud-proof/proof_frontier_lean.json",
+        "runs/cycle6/lean-coordinator-recheck.json"
+      ],
+      "scope": "Does not formalize the LRX word semantics, the BFS tables, or the general conjecture.",
+      "human_reviewed": false,
+      "claim_sha256": "d430ae55bf5de02b540cbde2b5238f34c352b1ecca2c2254fad4098a20416587"
+    }
+  ]
+}

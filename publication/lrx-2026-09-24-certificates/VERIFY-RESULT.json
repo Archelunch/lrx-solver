@@ -1,0 +1,42 @@
+{
+  "data_sha256": "308301ddc30baa3dc158a71ba7317ad7de8aa841c67de72c83d8908878c55ea2",
+  "cases": [
+    {
+      "id": "k6-mask221-order731",
+      "blocks": 6,
+      "support_words": 3,
+      "control_columns": 29,
+      "weighted_base": "1255/19",
+      "weighted_slopes": [
+        "110/19",
+        "110/19",
+        "6",
+        "6",
+        "108/19",
+        "102/19"
+      ],
+      "control_dual_lower_bound": "135/2",
+      "expanded_columns": 0,
+      "literal_replays": 9,
+      "status": "PASS"
+    },
+    {
+      "id": "k5-mask302-order15713",
+      "blocks": 5,
+      "support_words": 5,
+      "control_columns": 27,
+      "weighted_base": "1223/20",
+      "weighted_slopes": [
+        "28/5",
+        "6",
+        "6",
+        "6",
+        "6"
+      ],
+      "control_dual_lower_bound": "3291/49",
+      "expanded_columns": 123,
+      "literal_replays": 15,
+      "status": "PASS"
+    }
+  ]
+}

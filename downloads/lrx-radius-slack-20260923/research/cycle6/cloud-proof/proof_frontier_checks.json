@@ -1,0 +1,10 @@
+{
+  "scope": "Finite literal single-step accounting and pigeonhole arithmetic; no BFS or candidate certification",
+  "local_checks": {
+    "m=2,r=2": 68,
+    "m=2,r=3": 324,
+    "m=3,r=2": 348
+  },
+  "arithmetic_checks": 55944,
+  "candidate_status": "reported by coordinator; independent certificate pending"
+}
