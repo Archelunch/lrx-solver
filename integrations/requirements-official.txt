@@ -1,0 +1,4 @@
+# Official optimizers only. Install in a separate environment with
+# `uv pip install --python .venv-official/bin/python -r integrations/requirements-official.txt`.
+gepa==0.1.4
+skydiscover @ git+https://github.com/skydiscover-ai/skydiscover.git@0d932b690670a7e544388ad362e9876c8bd256a0

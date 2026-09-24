@@ -90,6 +90,15 @@ and [the source review](autoresearch/loop-260923-2107/paper-review.md).
 12. **Retire the legacy `experiment` command** and `provider_adapter.py` once
     nothing depends on them; `evolve` supersedes both.
 13. **Windows.** Parallel table builds use the `fork` start method.
-14. **Official integrations.** The official GEPA runner
-    (`integrations/run_gepa_official.py`) has run only with a fake LM;
-    SkyDiscover is not integrated.
+14. **Official program-search pilot.** The older JSON GEPA shim
+    (`integrations/run_gepa_official.py`) was tested only with a fake LM.
+    A separate official GEPA/SkyDiscover program-search integration has
+    completed offline smokes; its frozen 4–7-block inputs, shared broker, and development
+    archive are described in `integrations/official-research.md`. Native
+    offline iterations of GEPA, AdaEvolve, and EvoX have run with isolated
+    candidate evaluation. Bounded archive context retrieval reached an
+    AdaEvolve proposer in an offline smoke. An evolved EvoX strategy also
+    executed inside its worker boundary. Next, use a bounded paid comparison
+    only if authorized, followed by fresh one-shot confirmation. See the
+    integration report for exact counts.
+    No engine ranking or new theorem follows from the smoke runs.

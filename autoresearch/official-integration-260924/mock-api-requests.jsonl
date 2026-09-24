@@ -1,0 +1,43 @@
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "response_has_strategy_marker": false}
+{"kind": "variation", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "variation", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "strategy", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": true}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "response_has_strategy_marker": false}
+{"kind": "variation", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": true, "archive_source_diff_seen": true, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "variation", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "variation", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "variation", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "strategy", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": true}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 1, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "variation", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "variation", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}
+{"kind": "strategy", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": true}
+{"kind": "solution", "fields": ["max_tokens", "messages", "model", "temperature"], "max_tokens": 4000, "archive_raw_trace_seen": false, "archive_source_diff_seen": false, "response_has_strategy_marker": false}

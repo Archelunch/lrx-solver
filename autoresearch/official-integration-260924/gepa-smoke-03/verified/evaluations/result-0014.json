@@ -1,0 +1,728 @@
+{
+  "kind": "executable_program",
+  "candidate_hash": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3",
+  "combined_score": 1001.0,
+  "certified": 1,
+  "new_certified": 1,
+  "total_families": 1,
+  "feedback": "1 new exact family certificates; 1/1 total; 0 execution or format failures. Misses do not prove infeasibility.",
+  "families": [
+    {
+      "case": {
+        "id": "k7-mask491-order37059",
+        "m": 8,
+        "labels": [
+          8,
+          3,
+          4,
+          7,
+          1,
+          5,
+          6,
+          2
+        ],
+        "mask": 491,
+        "blocks": 7
+      },
+      "status": "CERTIFICATE",
+      "candidate_run": {
+        "status": "ok",
+        "seconds": 0.03916745900642127,
+        "isolation": "macos_seatbelt"
+      },
+      "accepted_words": [
+        {
+          "raw_word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLXRXRXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRXRRRRRXRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRR",
+          "normalized_word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLXRXRXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRXRRRRRXRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRR",
+          "profile": {
+            "kind": "direct",
+            "base": 111,
+            "gamma": [
+              22,
+              19,
+              13,
+              7,
+              4,
+              3,
+              2
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLXRXRXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRXRRRRRXRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRR",
+            "affine": true
+          }
+        },
+        {
+          "raw_word": "XLLXLXLLXLXRXRXLXRRXRXRXLXLXLXLLLLXRXRXRXRXRRRRXLXLXLXLXLLLLLLXRXRXRXRXRXRXRRRRRRRXRXRXRXRXRXRXRXRXRXRXRXR",
+          "normalized_word": "XLLXLXLLXLXRXRXLXRRXRXRXLXLXLXLLLLXRXRXRXRXRRRRXLXLXLXLXLLLLLLXRXRXRXRXRXRXRRRRRRRXRXRXRXRXRXRXRXRXRXRXRXR",
+          "profile": {
+            "kind": "direct",
+            "base": 106,
+            "gamma": [
+              23,
+              20,
+              14,
+              8,
+              5,
+              2,
+              1
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "word": "XLLXLXLLXLXRXRXLXRRXRXRXLXLXLXLLLLXRXRXRXRXRRRRXLXLXLXLXLLLLLLXRXRXRXRXRXRXRRRRRRRXRXRXRXRXRXRXRXRXRXRXRXR",
+            "affine": true
+          }
+        },
+        {
+          "raw_word": "XRXRXRXRRXLXRRRXRXRXRXLXLLXLXRXRXRXRRRXLXLXLXLXLXLXLXRXRXRXLLLLXRXLLXRXLLXLXLXLXRRRXRXLLXLXRRXLXL",
+          "normalized_word": "XRXRXRXRRXLXRRRXRXRXRXLXLLXLXRXRXRXRRRXLXLXLXLXLXLXLXRXRXRXLLLLXRXLLXRXLLXLXLXLXRRRXRXLLXLXRRXLXL",
+          "profile": {
+            "kind": "direct",
+            "base": 97,
+            "gamma": [
+              11,
+              8,
+              13,
+              11,
+              10,
+              7,
+              10
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "word": "XRXRXRXRRXLXRRRXRXRXRXLXLLXLXRXRXRXRRRXLXLXLXLXLXLXLXRXRXRXLLLLXRXLLXRXLLXLXLXLXRRRXRXLLXLXRRXLXL",
+            "affine": true
+          }
+        },
+        {
+          "raw_word": "XRXRXLXLXLXLLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLXLLXLXLXLXLXLXLXLXLXRRRRXRRXLXRRRXLXLXRRRXLXLXRRRXLXRRRRR",
+          "normalized_word": "XRXRXLXLXLXLLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLXLLXLXLXLXLXLXLXLXLXRRRRXRRXLXRRRXLXLXRRRXLXLXRRRXLXRRRRR",
+          "profile": {
+            "kind": "direct",
+            "base": 100,
+            "gamma": [
+              10,
+              7,
+              14,
+              12,
+              9,
+              6,
+              9
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "word": "XRXRXLXLXLXLLXLXLXLXLXLXLXLXLXLXLXLXLXLXLLLXLLXLXLXLXLXLXLXLXLXRRRRXRRXLXRRRXLXLXRRRXLXLXRRRXLXRRRRR",
+            "affine": true
+          }
+        },
+        {
+          "raw_word": "XRXRXRXRXRXRXRXRXLXLLXRXLLLXRXRXLLLXRXLLXLXLXLXLXLXRXRXRRRRXRXRXLLLXLXLXLXLXRRRRRXRXLLXLXRRXLXL",
+          "normalized_word": "XRXRXRXRXRXRXRXRXLXLLXRXLLLXRXRXLLLXRXLLXLXLXLXLXLXRXRXRRRRXRXRXLLLXLXLXLXLXRRRRRXRXLLXLXRRXLXL",
+          "profile": {
+            "kind": "direct",
+            "base": 95,
+            "gamma": [
+              14,
+              11,
+              17,
+              4,
+              7,
+              10,
+              13
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "word": "XRXRXRXRXRXRXRXRXLXLLXRXLLLXRXRXLLLXRXLLXLXLXLXLXLXRXRXRRRRXRXRXLLLXLXLXLXLXRRRRRXRXLLXLXRRXLXL",
+            "affine": true
+          }
+        },
+        {
+          "raw_word": "XRXRXLXLXLXLLLXRXRXRRRRRXRXLXLXLXLXLXLXLXLXLLLXLLXLXLXLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXRRRRRRXRXRRRRRRR",
+          "normalized_word": "XRXRXLXLXLXLLLXRXRXRRRRRXRXLXLXLXLXLXLXLXLXLLLXLLXLXLXLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXRRRRRRXRXRRRRRRR",
+          "profile": {
+            "kind": "direct",
+            "base": 102,
+            "gamma": [
+              13,
+              10,
+              16,
+              5,
+              6,
+              9,
+              12
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "word": "XRXRXLXLXLXLLLXRXRXRRRRRXRXLXLXLXLXLXLXLXLXLLLXLLXLXLXLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXRRRRRRXRXRRRRRRR",
+            "affine": true
+          }
+        },
+        {
+          "raw_word": "LXLXLXLLXRXLLXRXRXRXRXRRRRXLXLXLXRRRRRXLXLXLXLXLXLXLXLLLLLXRXRXRXRXRRRR",
+          "normalized_word": "LXLXLXLLXRXLLXRXRXRXRXRRRRXLXLXLXRRRRRXLXLXLXLXLXLXLXLLLLLXRXRXRXRXRRRR",
+          "profile": {
+            "kind": "direct",
+            "base": 71,
+            "gamma": [
+              7,
+              8,
+              9,
+              3,
+              0,
+              3,
+              6
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "word": "LXLXLXLLXRXLLXRXRXRXRXRRRRXLXLXLXRRRRRXLXLXLXLXLXLXLXLLLLLXRXRXRXRXRRRR",
+            "affine": true
+          }
+        },
+        {
+          "raw_word": "LXLXLXLLXLXRXRXLXRRXRXRRRRXLXLXLXRRRRRXLXLXLXLXLXLXLXLLLLLXRXRXRXRXRRRR",
+          "normalized_word": "LXLXLXLLXLXRXRXLXRRXRXRRRRXLXLXLXRRRRRXLXLXLXLXLXLXLXLLLLLXRXRXRXRXRRRR",
+          "profile": {
+            "kind": "direct",
+            "base": 71,
+            "gamma": [
+              7,
+              8,
+              9,
+              3,
+              0,
+              3,
+              6
+            ],
+            "state": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "target": [
+              0,
+              8,
+              0,
+              3,
+              4,
+              0,
+              7,
+              1,
+              0,
+              5,
+              0,
+              6,
+              0,
+              2,
+              0
+            ],
+            "word": "LXLXLXLLXLXRXRXLXRRXRXRRRRXLXLXLXRRRRRXLXLXLXLXLXLXLXLLLLLXRXRXRXRXRRRR",
+            "affine": true
+          }
+        }
+      ],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "15/31",
+          "0",
+          "1/31",
+          "9/31",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "6/31",
+          "0"
+        ],
+        "base": "2262/31",
+        "pivots": 5
+      },
+      "baseline_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "39/98",
+          "9/49",
+          "17/98",
+          "12/49"
+        ],
+        "base": "3594/49",
+        "pivots": 4
+      },
+      "baseline_certified": false,
+      "certificate": {
+        "bounds": {
+          "base": "2262/31",
+          "gamma": [
+            "6",
+            "171/31",
+            "6",
+            "6",
+            "168/31",
+            "171/31",
+            "173/31"
+          ],
+          "margin": "1/31"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 68,
+              "gamma": [
+                4,
+                1,
+                5,
+                11,
+                9,
+                6,
+                3
+              ],
+              "state": [
+                0,
+                8,
+                0,
+                3,
+                4,
+                0,
+                7,
+                1,
+                0,
+                5,
+                0,
+                6,
+                0,
+                2,
+                0
+              ],
+              "target": [
+                0,
+                8,
+                0,
+                3,
+                4,
+                0,
+                7,
+                1,
+                0,
+                5,
+                0,
+                6,
+                0,
+                2,
+                0
+              ],
+              "word": "XRXRRXLXLLLLLLXLLXLXRRRRXLLXLXLLLLXRRXRRRXRXLXLLLLXLLXLXRRXRXRXRXRXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "15/31"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 78,
+              "gamma": [
+                12,
+                9,
+                3,
+                3,
+                6,
+                9,
+                11
+              ],
+              "state": [
+                0,
+                8,
+                0,
+                3,
+                4,
+                0,
+                7,
+                1,
+                0,
+                5,
+                0,
+                6,
+                0,
+                2,
+                0
+              ],
+              "target": [
+                0,
+                8,
+                0,
+                3,
+                4,
+                0,
+                7,
+                1,
+                0,
+                5,
+                0,
+                6,
+                0,
+                2,
+                0
+              ],
+              "word": "XLLXLLLXRRXRRXRXRXRRRXRRXLXLLXLXLLXLLXLLXRXRRXRXRXLLLXRXRRRRRXLXLXRRRRRRXLXLXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/31"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 82,
+              "gamma": [
+                8,
+                11,
+                6,
+                0,
+                3,
+                6,
+                9
+              ],
+              "state": [
+                0,
+                8,
+                0,
+                3,
+                4,
+                0,
+                7,
+                1,
+                0,
+                5,
+                0,
+                6,
+                0,
+                2,
+                0
+              ],
+              "target": [
+                0,
+                8,
+                0,
+                3,
+                4,
+                0,
+                7,
+                1,
+                0,
+                5,
+                0,
+                6,
+                0,
+                2,
+                0
+              ],
+              "word": "RRXRRXRRXLXLLXLXLXLLXLXLLLXLXRXRXRXRXRRXRRXRRXLXLXLXLLXLXRRXLXLLLXRXLLXRRRXRRRRXLX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "9/31"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 71,
+              "gamma": [
+                7,
+                8,
+                9,
+                3,
+                0,
+                3,
+                6
+              ],
+              "state": [
+                0,
+                8,
+                0,
+                3,
+                4,
+                0,
+                7,
+                1,
+                0,
+                5,
+                0,
+                6,
+                0,
+                2,
+                0
+              ],
+              "target": [
+                0,
+                8,
+                0,
+                3,
+                4,
+                0,
+                7,
+                1,
+                0,
+                5,
+                0,
+                6,
+                0,
+                2,
+                0
+              ],
+              "word": "LXLXLXLLXRXLLXRXRXRXRXRRRRXLXLXLXRRRRRXLXLXLXLXLXLXLXLLLLLXRXRXRXRXRRRR",
+              "affine": true
+            },
+            "weight": "6/31"
+          }
+        ],
+        "scope": "all positive lengths via reviewed manuscript comparison and stretching lemmas"
+      }
+    }
+  ],
+  "isolation": "macos_seatbelt",
+  "limitations": [
+    "Finite selected families only; universal scope of each accepted mixture relies on reviewed manuscript lemmas."
+  ]
+}

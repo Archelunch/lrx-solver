@@ -34,6 +34,12 @@ This repository does **not** prove it. It provides:
 3. **A claim register** (`research/claims.md`) that separates proven,
    attributed, finite and open statements.
 
+An [official framework program-search pilot](integrations/official-research.md)
+now runs separately. It uses generated Python under an OS sandbox,
+frozen development families, and trusted replay. Its offline framework smokes
+are documented in [the integration report](autoresearch/official-integration-260924/report.md);
+they do not establish a broader theorem or a paid method comparison.
+
 ## Results so far
 
 The general conjecture and full m = 8 case remain open. All results below
@@ -104,13 +110,14 @@ words. The next experiment will widen the catalog beyond its 128-word pool
 before seeking new words. An old mixture
 failing after deletion does not show that every new mixture fails.
 
-The primary outcome is newly certified infinite families. GEPA can preserve
-complementary cost profiles, AdaEvolve can allocate search across structural
-families, and EvoX can adapt the proposal strategy. A mixture-search adapter
-for the campaign planners is **planned, not yet implemented**. The mixture
-profile interpreter, numerical optimizer and exact rational acceptance checks
-are implemented; the completed engine adapter searches finite lifting constructions. See the [next-iteration protocol](autoresearch/next-iteration.md)
-and [ROADMAP.md](ROADMAP.md). The current handoff is [HANDOFF.md](HANDOFF.md).
+The primary outcome is newly certified infinite families. The data-only
+mixture adapter works with all four local planners and was used in session09.
+The separate official framework pilot evaluates executable word constructors
+against frozen structural families. Its offline smokes show integration, with
+no engine ranking. The mixture profile interpreter, numerical optimizer and
+exact rational acceptance checks are implemented. See the [next-iteration
+protocol](autoresearch/next-iteration.md), [ROADMAP.md](ROADMAP.md), and current
+[HANDOFF.md](HANDOFF.md).
 
 ## How the search works
 
@@ -126,7 +133,9 @@ flowchart LR
 ```
 
 - Candidates are constrained JSON policies or expressions, interpreted and
-  never executed as generated code.
+  never executed as generated code in the original campaigns. The separate
+  official-framework pilot evaluates generated `propose_words` programs inside
+  an OS sandbox; its evaluator and frozen evidence are outside candidate control.
 - For controller and potential campaigns, graphs are split into **sanity**
   (exhaustive; any failure stops evaluation),
   **train** (feedback allowed) and **held-out** (scored once at the end, never
@@ -206,7 +215,8 @@ These rules apply to every claim in this repository:
 - A finite check is a statement about that graph only. A pattern across
   graphs, or a model's explanation, is not a proof.
 - Held-out results never reach a prompt or feedback.
-- Model-generated code is never executed.
+- In the official-framework pilot only, generated code runs under the bounded
+  evaluator sandbox described in [the integration guide](integrations/official-research.md).
 
 ## Sources
 

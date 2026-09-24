@@ -1,0 +1,66 @@
+[
+    1001.0,
+    {
+        "current_candidate": "\"\"\"Executable seed: several complete unit-block LRX words per family.\n\nThis file is deliberately self-contained so it can run in a restricted child\nwithout importing the verifier or any repository module.  It is a constructor,\nnot a claim that its words yield a successful rational mixture.\n\"\"\"\n\n\ndef _state(labels, mask):\n    out = []\n    for j in range(9):\n        if mask >> j & 1:\n            out.append(0)\n        if j < 8:\n            out.append(labels[j])\n    return out\n\n\ndef _ranks(state, cut):\n    n = len(state)\n    targets = {x: (x-1-cut) % n for x in range(1, 9)}\n    zeros = iter(sorted(set(range(n)) - set(targets.values())))\n    return [targets[x] if x else next(zeros) for x in state[cut:] + state[:cut]]\n\n\ndef _construct(state, cut, prefer_right):\n    n = len(state)\n    rank = _ranks(state, cut)\n    at = 0\n    word = []\n    while True:\n        choices = []\n        for pos in range(n):\n            j = (pos-cut) % n\n            if j == n-1 or rank[j] <= rank[j+1]:\n                continue\n            left, right = (pos-at) % n, (at-pos) % n\n            if left < right or (left == right and not prefer_right):\n                direction, steps = 'L', left\n            else:\n                direction, steps = 'R', right\n            choices.append((steps, -pos if prefer_right else pos, pos, j, direction))\n        if not choices:\n            break\n        steps, _, pos, j, direction = min(choices)\n        word.extend(direction * steps)\n        word.append('X')\n        rank[j], rank[j+1] = rank[j+1], rank[j]\n        at = pos\n    left, right = (-at) % n, at\n    word.extend('L' * left if left <= right else 'R' * right)\n    return ''.join(word)\n\n\ndef propose_words(case):\n    if case['m'] != 8:\n        raise ValueError('m=8 only')\n    state = _state(case['labels'], case['mask'])\n    cuts = (0, len(state)//4, len(state)//2, 3*len(state)//4)\n    words = []\n    for cut in cuts:\n        for prefer_right in (False, True):\n            word = _construct(state, cut, prefer_right)\n            if word not in words:\n                words.append(word)\n    return words\n"
+    },
+    {
+        "case_id": "k5-mask333-order27563",
+        "feedback": {
+            "feedback": "1 new exact family certificates; 1/1 total; 0 execution or format failures. Misses do not prove infeasibility.",
+            "case_statuses": [
+                "ok"
+            ],
+            "traces": [
+                {
+                    "case_id": "k5-mask333-order27563",
+                    "status": "CERTIFICATE",
+                    "candidate_run": {
+                        "status": "ok",
+                        "seconds": 0.04910433301120065,
+                        "isolation": "macos_seatbelt"
+                    },
+                    "accepted_words": [
+                        {
+                            "word": "XLXRXLLLXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRRRXRXRRXRXRXRXRXRXLLLLLXRXRXLLLXRXRXRXRXLLLLLXRXRXLLLLLL",
+                            "base": 96,
+                            "gamma": [
+                                23,
+                                17,
+                                14,
+                                5,
+                                3
+                            ]
+                        },
+                        {
+                            "word": "XLXRXRRRXRXLXRRXLXRRXRXLXLXRRRXLXLXLXLXRRRRRXRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXLXLXRRRRXLXLXRR",
+                            "base": 98,
+                            "gamma": [
+                                23,
+                                17,
+                                14,
+                                5,
+                                1
+                            ]
+                        },
+                        {
+                            "word": "XLXRXRXLXRRXRXRXRXRXRXRXRXRXLLXLXRXRXLLLLXRXRXRXLLLLXRXLLXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXRXRXRRRRRRXLXLXRRRXLXLX",
+                            "base": 115,
+                            "gamma": [
+                                16,
+                                13,
+                                14,
+                                11,
+                                15
+                            ]
+                        }
+                    ],
+                    "rejected_words": [],
+                    "lp_status": "CERTIFICATE",
+                    "baseline_lp_status": "NO_CERTIFICATE"
+                }
+            ],
+            "evaluation": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/official-integration-260924/gepa-smoke-03/verified/evaluations/result-0007.json"
+        },
+        "candidate_hash": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3"
+    }
+]

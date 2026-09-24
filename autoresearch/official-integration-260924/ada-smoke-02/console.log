@@ -1,0 +1,36 @@
+08:31:14 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:31:14 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:31:14 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:31:14 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+Error: [Errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/skydiscover/optimize/cli.py", line 285, in main_async
+    best_program = await runner.run(
+                   ^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/skydiscover/optimize/runner.py", line 166, in run
+    self.discovery_controller = get_discovery_controller(controller_input)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/skydiscover/optimize/search/route.py", line 51, in get_discovery_controller
+    return controller_class(controller_input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/skydiscover/optimize/search/adaevolve/controller.py", line 63, in __init__
+    super().__init__(controller_input)
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/skydiscover/optimize/search/default_discovery_controller.py", line 72, in __init__
+    self.shutdown_event = mp.Event()
+                          ^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/context.py", line 93, in Event
+    return Event(ctx=self.get_context())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/synchronize.py", line 331, in __init__
+    self._cond = ctx.Condition(ctx.Lock())
+                               ^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
+Using search algorithm: adaevolve

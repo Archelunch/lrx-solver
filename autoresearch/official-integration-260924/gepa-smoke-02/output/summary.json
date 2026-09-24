@@ -1,0 +1,35 @@
+{
+  "engine": "gepa",
+  "upstream": "gepa==0.1.4",
+  "best_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/official-integration-260924/gepa-smoke-02/output/best.py",
+  "best_score": 2014.0,
+  "reflection_calls": 1,
+  "full_evaluation": {
+    "combined_score": 2014.0,
+    "artifacts": {
+      "feedback": "2 new exact family certificates; 14/16 total; 0 execution or format failures. Misses do not prove infeasibility.",
+      "case_statuses": [
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok"
+      ],
+      "evaluation": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/official-integration-260924/gepa-smoke-02/verified/evaluations/result-0023.json"
+    },
+    "certified": 14,
+    "new_certified": 2,
+    "candidate_hash": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3"
+  }
+}
