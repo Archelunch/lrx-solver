@@ -1,7 +1,9 @@
 {
   "authorization": {
     "prior_approval_scope": "does_not_include_new_allcuts_or_context",
-    "specific_new_payload": "required_after_auto_review_rejection"
+    "receipt": "authorization-receipt.json",
+    "specific_new_payload": "approved_after_initial_auto_review_rejection",
+    "user_quote": "yes, I approve send it to grok\nStart next autoresearch iteration to prove LRX"
   },
   "auto_review": {
     "attempted_script": "launch-live-gepa.sh",
@@ -16,7 +18,7 @@
     "blocks": "four per 4..7",
     "case_count": 16,
     "model_access": "excluded",
-    "status": "sealed_not_evaluated"
+    "status": "sealed_not_evaluated_unconsumed"
   },
   "created_date": "2026-09-24",
   "development": {
@@ -26,14 +28,27 @@
     "incumbent_certified": 15,
     "remaining_named_miss": "k5-mask302-order15713"
   },
-  "engineering_decision": "KEEP_OFFLINE_PROTOCOL_IMPLEMENTATION",
+  "engineering_decision": "KEEP_OFFLINE_PROTOCOL_AND_FAIL_FAST_FIX",
   "limitations": [
     "no new paid research result",
     "finite development dual screen only",
     "confirmation outcomes deliberately uninspected"
   ],
+  "live": {
+    "conservative_charged_usd": 0.4010996,
+    "generation_attempts": 2,
+    "metadata_http_contacts": 1,
+    "no_further_calls": true,
+    "provider_actual_charge": "unknown_for_two_timeouts",
+    "remaining_original_50_usd": 17.2117294,
+    "remaining_session_usd": 4.5989004,
+    "remaining_total_http_contacts_under_24": 21,
+    "research_status": "NO_VALID_PROPOSAL",
+    "summary": "live-summary.json",
+    "total_external_http_contacts": 3
+  },
   "mathematical_result": "NO_NEW_CERTIFICATE_THIS_ITERATION",
-  "no_live_calls": true,
+  "no_live_calls": false,
   "proposed_limits": {
     "max_conservative_usd": 5.0,
     "max_requests": 24,
@@ -42,6 +57,8 @@
   "session": "loop-260924-protocol",
   "sha256": {
     "PAYLOAD-REVIEW.md": "742b2350fbd88a1e394bfe566a71280fdbab34f272a915d2d6e63fecf983b6b5",
+    "authorization-receipt.json": "00afad2e00db3d968a6acbe74ca186596ff9d1b8fad21523d56804578eea2141",
+    "development-archive-live-final.sqlite": "f8a509381d648462e6d3029b0d6c59838ffef97e42bd1bbea2ff2d388b49644e",
     "development-archive.sqlite": "f304196aba0929c5d4e351584d708ec81888a569e1cd39af90afe086785ac61f",
     "development-context.txt": "a01f19f2556969dbdc3bb54a0bcbf4f7c68a489e61528d00c6d32bec03a874a2",
     "frozen/allcuts_seed.py": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
@@ -52,7 +69,8 @@
     "frozen/development-incumbent.json": "b583c7c2acec3ffb403038d821321f59c4366be62a09473add0f6c67b9f9ccaf",
     "frozen/development.json": "855ba92453c21b038f93210745d61b60ebe0d2a00ef911b8eecc8cc5f0237dc9",
     "frozen/manifest.json": "e75836b984d2aef04ef48fa26f17dce9bc42e9d030e9905d92a8f9f1350ea1fd",
-    "launch-live-gepa.sh": "12f07602a6cc0d17f4d98052569aa1f1848985e77961ac40723e14c9e766262b"
+    "launch-live-gepa.sh": "12f07602a6cc0d17f4d98052569aa1f1848985e77961ac40723e14c9e766262b",
+    "live-summary.json": "c5391f8dcf2ba9c0584b620e6d1c4148ca4d658efb400161f32bb058eb19b589"
   },
-  "status": "LIVE_BLOCKED_AUTO_REVIEW"
+  "status": "COMPLETE_OPERATIONAL_TIMEOUT_NO_CANDIDATE"
 }

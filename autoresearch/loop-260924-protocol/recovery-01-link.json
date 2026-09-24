@@ -1,0 +1,15 @@
+{
+  "authorization_receipt": "autoresearch/loop-260924-protocol/authorization-receipt.json",
+  "prior_halted_ledger": "autoresearch/loop-260924-protocol/broker-ledger.json",
+  "prior_halted_ledger_sha256": "e22b485beff201613999270517c4905aa03c38bbd0f6a3c233e71ed511c49e96",
+  "prior_attempts": 1,
+  "prior_conservative_charged_usd": "0.200519",
+  "remaining_aggregate_attempts": 23,
+  "remaining_aggregate_usd": "4.799481",
+  "recovery_ledger": "autoresearch/loop-260924-protocol/broker-ledger-recovery-01.json",
+  "recovery_max_attempts": 1,
+  "recovery_max_usd": "4.799481",
+  "recovery_timeout_seconds": 180,
+  "recovery_script_sha256": "1f6786773b54ee6debea7d05079cf8aa230b43334c580b0fbf69eaece175870f",
+  "scope": "same frozen development seed, incumbent, dual, research context, and evolving development archive; Grok-4.7 only; no confirmation"
+}

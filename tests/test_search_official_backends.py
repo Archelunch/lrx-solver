@@ -6,6 +6,7 @@ from pathlib import Path
 import tempfile
 import types
 import unittest
+from urllib.error import HTTPError, URLError
 from unittest.mock import patch
 
 from integrations import official_backends as official
@@ -48,6 +49,19 @@ class OfficialBackendTests(unittest.TestCase):
                                 (valid, "length")):
             with self.subTest(content=content[:20], reason=reason), self.assertRaises((ValueError, SyntaxError)):
                 official.BrokerLM._preflight(content, reason)
+
+    def test_halted_broker_aborts_gepa_reflection_without_local_retry(self):
+        lm = official.BrokerLM("http://127.0.0.1:8877/v1", "grok-4.7", 4096,
+                               None, 10, "low")
+        self.assertFalse(issubclass(official.BrokerHalted, Exception))
+        for error in (HTTPError(lm.url, 502, "timeout", {}, None),
+                      HTTPError(lm.url, 429, "halted", {}, None),
+                      URLError("connection refused"), TimeoutError("read timeout")):
+            with self.subTest(error=str(error)), patch.object(official, "urlopen", side_effect=error):
+                with self.assertRaises(official.BrokerHalted):
+                    lm("Improve the program")
+        self.assertEqual(lm.calls, 4)
+        self.assertEqual(lm.valid_responses, 0)
 
     def test_mechanism_evidence_does_not_count_bootstrap_as_strategy_rewrite(self):
         with tempfile.TemporaryDirectory() as temp:

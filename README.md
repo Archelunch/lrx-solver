@@ -45,9 +45,9 @@ now freezes that 15/16 all-cuts control as incumbent, retains a new sealed
 16-case structural confirmation set, and exercises per-reflection development
 archive refresh in native GEPA with a mock broker. A separate synthetic graded
 fixture checks GEPA's selection path. Neither offline check is a mathematical
-gain or a new paid campaign. Automatic approval review rejected the prepared
-Grok launch before process start because the new private payload lacks
-specific authorization; this session made no live call.
+gain. After the user approved the exact payload, two live Grok requests timed
+out without a response or candidate; the fail-fast recovery stopped, and no
+new certificate was found. This is an operational result, not an engine ranking.
 None of these results establishes a broader theorem or an engine ranking.
 
 ## Results so far
@@ -142,8 +142,9 @@ program-search target is the exact reduced-cost face of the remaining k5
 family. The [prepared protocol](autoresearch/loop-260924-protocol/REPORT.md)
 adds the all-cuts incumbent automatically to each trusted evaluation, so
 proposers can focus on up to 32 additional words per case. The new structural
-confirmation set remains sealed. The prepared live launch was rejected before
-process start by automatic approval review pending specific payload approval.
+confirmation set remains sealed. The later authorized live requests timed out
+without a candidate; the failure calls for provider-path diagnosis before
+another full search.
 The mixture profile interpreter, numerical optimizer and exact rational
 acceptance checks are implemented. See the [next-iteration
 protocol](autoresearch/next-iteration.md), [ROADMAP.md](ROADMAP.md), and current

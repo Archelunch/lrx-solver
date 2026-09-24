@@ -2,10 +2,10 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
-## Current preparation: focused k5 protocol (2026-09-24)
+## Latest iteration: focused k5 protocol (2026-09-24)
 
 The [protocol report](autoresearch/loop-260924-protocol/REPORT.md) records a
-fresh, unspent iteration. It freezes the independently verified all-cuts
+completed operationally without a model candidate. It freezes the independently verified all-cuts
 15/16 development control as an automatic incumbent, the old 16-case
 development set and fixed 48-source catalog, and a new sealed 16-case
 structural confirmation set disjoint from prior structural sets and cycle7.
@@ -27,27 +27,30 @@ The receipts are `offline-gepa-native-01/manifest.json`,
 `offline-gepa-native-01/offline-smoke-report.json`, and
 `offline-gepa-graded/fixture-report.json` within the protocol directory.
 
-The new private all-cuts code, frozen dual, context, and evolving development
-feedback would be sent to Grok only after the focused
-[payload review](autoresearch/loop-260924-protocol/PAYLOAD-REVIEW.md).
-The proposed shared ceiling is $5/24 upstream attempts from the recorded
-$17.612829 remainder. The root attempted the exact prepared launch, but
-automatic approval review rejected it **before process start**: “This would
-transmit private seed, dual, development context, and evolving code/feedback
-to api.x.ai; transcript does not explicitly authorize this newly expanded
-payload, despite prior narrower Grok approvals.” No broker ledger or live run
-directory was created. The live phase is blocked pending explicit approval of
-that payload; do not retry through a workaround. This new session made **zero
-live calls** and spent **$0**. Its new confirmation contents and the previous consumed confirmation
-must stay out of prompts and development archive. The root orchestrator owns
-authorization and any subsequent live run. Its final guarded suite passed
-366 tests in 14.437 seconds with no skips; compile, CLI smoke, trusted lock,
-and authored-source diff checks passed. The concise test receipt is
-`autoresearch/loop-260924-protocol/final-tests.log`. Later focused
-evaluator/receipt checks passed 13/13 under Seatbelt in 2.291 seconds; after
-the backend's final generic sampler fix, 18 focused backend, budget, and archive
-tests passed in 0.130 seconds. `results.tsv` and `handoff.json` preserve the
-blocked state.
+An initial automatic approval rejection was resolved by the user's explicit
+approval of the exact [payload](autoresearch/loop-260924-protocol/PAYLOAD-REVIEW.md)
+and $5/24 ceiling; its bound [receipt](autoresearch/loop-260924-protocol/authorization-receipt.json)
+preserves the quote. Two authorized Grok chat-completion requests then timed
+out after 601.04 and 180.15 seconds, with no model text or usage. A fail-fast
+recovery stopped after its single request. Both ledgers conservatively charge
+their full reservations: **2 generation attempts, $0.4010996**, provider
+actual billing unknown. A separate model-catalog GET succeeded, making three
+external HTTP contacts total; at most 21 remain under the original 24-contact
+ceiling, but no further calls are planned for this iteration. The recorded
+$50 allocation remainder is $17.2117294 conservatively. There were **zero
+valid proposals and zero new certificates**; the inherited incumbent remains
+15/16. This is a chat-completion timeout, not an optimizer efficacy result.
+The new confirmation stays sealed and unconsumed. Diagnose provider request
+latency/account behavior before another full search. See
+[`live-summary.json`](autoresearch/loop-260924-protocol/live-summary.json),
+[`results.tsv`](autoresearch/loop-260924-protocol/results.tsv), and
+[`handoff.json`](autoresearch/loop-260924-protocol/handoff.json).
+
+The post-live guarded suite passed 368 tests in 13.559 seconds with no skips
+([receipt](autoresearch/loop-260924-protocol/final-tests-live.log)); compile,
+CLI smoke, trusted lock, and authored-source diff checks passed. The full live
+archive is preserved locally under a separate runtime filename while the
+tracked initial archive is unchanged.
 
 ## Latest completed work: official program search (2026-09-24)
 
@@ -137,15 +140,17 @@ classes. Aim for reusable proof structure and eventually general m.
 
 Current allocation $50; recorded spend before the latest iteration was
 $30.485029, remaining $19.514971. The latest four broker ledgers account for
-$1.902142 conservatively, leaving $17.612829 on that basis; actual provider
-billing for three timeout reservations is unknown.
+$1.902142 conservatively, leaving $17.612829 before the focused k5 protocol.
+Its two timed-out generation requests add $0.4010996 conservatively, leaving
+$17.2117294. Actual provider billing for all five timeout reservations is
+unknown.
 Session09 cost $0.336410, provider-reported, not invoice-reconciled. Legacy spend
 guard is separate; never silently reset it. Exact payload approved by user.
 Generated program execution and pinned official framework dependencies were
 authorized for the separate isolated pilot (scope:
 `autoresearch/official-integration-260924/authorization.md`); the trusted
 core remains locked.
-Any new paid calls belong to the separate prepared k5 protocol and remain
-pending focused payload review.
+The focused k5 protocol's exact payload was approved; its two generation
+attempts timed out, and no further call is planned in that iteration.
 Main controller remains1.5625. Source manuscript global totals remain attributed.
 Preserve old untracked runs. No push performed.

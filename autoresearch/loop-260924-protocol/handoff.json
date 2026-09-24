@@ -1,44 +1,67 @@
 {
-  "schema": "lrx-autoresearch-handoff-v1",
-  "session": "loop-260924-protocol",
-  "status": "LIVE_BLOCKED_AUTO_REVIEW",
-  "engineering_decision": "KEEP_OFFLINE_PROTOCOL_IMPLEMENTATION",
-  "mathematical_result": "NO_NEW_CERTIFICATE_THIS_ITERATION",
-  "live_attempt": {
-    "script": "launch-live-gepa.sh",
-    "process_started": false,
-    "broker_started": false,
-    "upstream_attempts": 0,
-    "conservative_accounted_usd": 0,
-    "auto_review_rejection": "This would transmit private seed, dual, development context, and evolving code/feedback to api.x.ai; transcript does not explicitly authorize this newly expanded payload, despite prior narrower Grok approvals."
+  "authorization": {
+    "prior_auto_review_rejection": "historical_resolved_by_explicit_approval",
+    "receipt": "authorization-receipt.json",
+    "user_quote": "yes, I approve send it to grok\nStart next autoresearch iteration to prove LRX"
   },
-  "proposed_cap_if_authorized": {"max_upstream_attempts": 24, "max_conservative_usd": 5.0},
-  "recorded_prior_remaining_usd": 17.612829,
+  "claim_boundary": "Native mock and synthetic fixture validate integration behavior only; finite development dual guidance and 15/16 inherited control do not prove the remaining family or the general conjecture.",
+  "confirmation": {
+    "case_count": 16,
+    "manifest": "frozen/manifest.json",
+    "prompt_access": "EXCLUDED",
+    "status": "SEALED_UNEVALUATED_UNCONSUMED"
+  },
   "development": {
-    "frozen_cases": "frozen/development.json",
-    "fixed_catalog": "frozen/development-baseline.json",
     "allcuts_incumbent": "frozen/allcuts_seed.py",
     "direct_profiles": "frozen/development-incumbent.json",
     "finite_pool_dual": "frozen/development-dual.json",
-    "named_remaining_miss": "k5-mask302-order15713",
+    "fixed_catalog": "frozen/development-baseline.json",
+    "frozen_cases": "frozen/development.json",
     "incumbent_certified_of_16": 15,
+    "named_remaining_miss": "k5-mask302-order15713",
     "new_vs_incumbent": 0
   },
-  "confirmation": {
-    "manifest": "frozen/manifest.json",
-    "status": "SEALED_UNEVALUATED",
-    "case_count": 16,
-    "prompt_access": "EXCLUDED"
+  "engineering_decision": "KEEP_OFFLINE_PROTOCOL_AND_FAIL_FAST_FIX",
+  "live_archive_snapshot_local": {
+    "path": "development-archive-live-final.sqlite",
+    "rows": 99,
+    "sha256": "f8a509381d648462e6d3029b0d6c59838ffef97e42bd1bbea2ff2d388b49644e"
   },
+  "live_attempt": {
+    "broker_stopped": true,
+    "conservative_charged_usd": 0.4010996,
+    "generation_attempts": 2,
+    "generation_outcomes": [
+      "upstream_timeout_601.044s",
+      "upstream_timeout_180.153s"
+    ],
+    "initial_rejection_before_process": true,
+    "metadata_get_http_200": true,
+    "provider_actual_charge": "unknown",
+    "remaining_contacts_under_24": 21,
+    "total_external_http_contacts": 3,
+    "valid_proposals": 0
+  },
+  "live_summary": "live-summary.json",
+  "mathematical_result": "NO_NEW_CERTIFICATE_THIS_ITERATION",
+  "next_action": "Diagnose Grok chat-completion response latency/account/provider path before another full search. No further calls in this iteration; preserve sealed confirmation.",
   "offline_evidence": {
+    "final_tests": "final-tests.log",
     "native_gepa_manifest": "offline-gepa-native-01/manifest.json",
     "native_smoke_report": "offline-gepa-native-01/offline-smoke-report.json",
-    "synthetic_fixture_report": "offline-gepa-graded/fixture-report.json",
-    "final_tests": "final-tests.log"
+    "synthetic_fixture_report": "offline-gepa-graded/fixture-report.json"
   },
-  "results": "results.tsv",
-  "report": "REPORT.md",
   "payload_review": "PAYLOAD-REVIEW.md",
-  "next_action": "Ask the focused authorization question in PAYLOAD-REVIEW.md. Do not retry or work around the rejected launch without explicit authorization.",
-  "claim_boundary": "Native mock and synthetic fixture validate integration behavior only; finite development dual guidance and 15/16 inherited control do not prove the remaining family or the general conjecture."
+  "proposed_cap_if_authorized": {
+    "max_conservative_usd": 5.0,
+    "max_upstream_attempts": 24
+  },
+  "recorded_original_50_remaining_conservative_usd": 17.2117294,
+  "recorded_prior_remaining_usd": 17.612829,
+  "remaining_session_usd": 4.5989004,
+  "report": "REPORT.md",
+  "results": "results.tsv",
+  "schema": "lrx-autoresearch-handoff-v1",
+  "session": "loop-260924-protocol",
+  "status": "COMPLETE_OPERATIONAL_TIMEOUT_NO_CANDIDATE"
 }

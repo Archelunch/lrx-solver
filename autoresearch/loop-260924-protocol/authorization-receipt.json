@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-09-24T11:24:48.410591+00:00",
+  "authorization": "Explicit approval of the prepared payload and $5/24 cap question in PAYLOAD-REVIEW.md.",
+  "scope": "Prepared newly derived all-cuts seed, frozen development dual and context, selected evolving candidate code/diffs, development-only archive excerpts and feedback; excludes all confirmation data.",
+  "recipient": "https://api.x.ai/v1/chat/completions via local durable budget broker",
+  "model": "grok-4.7",
+  "conservative_max_usd": 5.0,
+  "max_upstream_requests": 24,
+  "payload_review_path": "autoresearch/loop-260924-protocol/PAYLOAD-REVIEW.md",
+  "payload_review_sha256": "742b2350fbd88a1e394bfe566a71280fdbab34f272a915d2d6e63fecf983b6b5",
+  "launch_script_path": "autoresearch/loop-260924-protocol/launch-live-gepa.sh",
+  "launch_script_sha256": "12f07602a6cc0d17f4d98052569aa1f1848985e77961ac40723e14c9e766262b",
+  "confirmation_excluded": true,
+  "user_quote": "yes, I approve send it to grok\nStart next autoresearch iteration to prove LRX"
+}

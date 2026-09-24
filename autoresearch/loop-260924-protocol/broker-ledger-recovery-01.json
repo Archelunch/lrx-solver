@@ -1,0 +1,24 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.2005806,
+      "id": 1,
+      "input_tokens": null,
+      "kind": "chat",
+      "output_tokens": null,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-protocol/broker-ledger-recovery-01.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.2005806,
+      "role": "gepa_reflection",
+      "status": "upstream_error"
+    }
+  ],
+  "halted_reason": "upstream_error",
+  "limits": {
+    "input_rate": 2.2,
+    "max_requests": 1,
+    "max_usd": 4.799481,
+    "output_rate": 6.6
+  },
+  "spent_usd": 0.2005806
+}

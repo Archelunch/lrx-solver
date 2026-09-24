@@ -1,0 +1,90 @@
+{
+  "authorization_receipt": "authorization-receipt.json",
+  "confirmation": "SEALED_UNEVALUATED",
+  "conservative_charged_usd": 0.4010996,
+  "final_live_archive_local_path": "development-archive-live-final.sqlite",
+  "final_live_archive_rows": 99,
+  "final_live_archive_sha256": "f8a509381d648462e6d3029b0d6c59838ffef97e42bd1bbea2ff2d388b49644e",
+  "generation_attempts": 2,
+  "metadata_check": {
+    "endpoint": "https://api.x.ai/v1/models",
+    "generation": false,
+    "http_status": 200,
+    "latency_seconds": 0.324,
+    "method": "GET",
+    "model_listed": "grok-4.7"
+  },
+  "metadata_http_contacts": 1,
+  "next_action": "Diagnose chat-completion response latency/account/provider path before any new full search; no more calls in this iteration.",
+  "original_50_allocation_remaining_conservative_usd": 17.2117294,
+  "provider_actual_charge": "unknown_for_both_timeouts",
+  "receipts": [
+    {
+      "conservative_charged_usd": 0.200519,
+      "declared_archive_ids": [
+        2
+      ],
+      "declared_context_sha256": "0f43935ef9ce77a81de5d804aea967fd3fdded41e031d2f6d2e8f7654c5eceb6",
+      "error_type": "TimeoutError",
+      "finish_reason": null,
+      "latency_seconds": 601.043950042018,
+      "ledger": "broker-ledger.json",
+      "ledger_sha256": "e22b485beff201613999270517c4905aa03c38bbd0f6a3c233e71ed511c49e96",
+      "local_response_status": 502,
+      "receipt_sha256": "ae36fcaefd7e8df04ba298b008e95ba6d45667d287e006fcf974fe4f5b042d1c",
+      "request_sha256": "0823f09d4dc737a19f19bdcfc09eb5ecdd807bd432274629e0594f33a1b0d177",
+      "role": "gepa_reflection",
+      "status": "upstream_error"
+    },
+    {
+      "conservative_charged_usd": 0.2005806,
+      "declared_archive_ids": [
+        80
+      ],
+      "declared_context_sha256": "8cacb50b566e887c6ed384c2a0234f52d1732e4fbdb773968e7f9c104366f45d",
+      "error_type": "TimeoutError",
+      "finish_reason": null,
+      "latency_seconds": 180.1530922499951,
+      "ledger": "broker-ledger-recovery-01.json",
+      "ledger_sha256": "0f1a6dcd9feb1285ffc108ecf0bb3c4e7a1afd76ad9017949c8e9100b34a9fc9",
+      "local_response_status": 502,
+      "receipt_sha256": "17ba8a9692c4b0ef970a063d3a7931d135d8f15aee8c1f6a88bf7bb2d798d4fc",
+      "request_sha256": "e57d3257269beacbcbf0fb9c5531804c8ab23b754cfe680458d7e82c09a6a5d0",
+      "role": "gepa_reflection",
+      "status": "upstream_error"
+    }
+  ],
+  "remaining_session_usd": 4.5989004,
+  "remaining_total_http_contacts_under_24": 21,
+  "runs": [
+    {
+      "context_accesses": 40,
+      "failed_case_runs": 0,
+      "path": "gepa-live-01/manifest.json",
+      "process_status": "COMPLETE",
+      "proposal_count": 0,
+      "research_status": "NO_VALID_PROPOSAL",
+      "sha256": "1ba2606f309709a187e216aaca3cdbaf1075e0bbb8a0297b4e5f19d1fbb5bc50",
+      "successful_case_runs": 108,
+      "verifier_requests": 78
+    },
+    {
+      "context_accesses": 1,
+      "failed_case_runs": 0,
+      "path": "gepa-live-recovery-01/manifest.json",
+      "process_status": "INCOMPLETE",
+      "proposal_count": 0,
+      "research_status": "INCOMPLETE",
+      "sha256": "549d1a5334e55747bbde90ab552e2168f1f9ba4c92591551e542164b28f73970",
+      "successful_case_runs": 35,
+      "verifier_requests": 20
+    }
+  ],
+  "schema": "lrx-protocol-live-summary-v1",
+  "selected_context_source_hashes": [
+    "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884"
+  ],
+  "status": "COMPLETE_OPERATIONAL_TIMEOUT_NO_CANDIDATE",
+  "total_external_http_contacts": 3,
+  "tracked_initial_archive_sha256": "f304196aba0929c5d4e351584d708ec81888a569e1cd39af90afe086785ac61f"
+}

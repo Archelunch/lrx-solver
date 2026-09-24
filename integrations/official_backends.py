@@ -25,6 +25,7 @@ import sys
 import tempfile
 import threading
 from urllib.parse import urlparse
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 
@@ -732,6 +733,14 @@ def _launch(args) -> dict:
     return manifest
 
 
+class BrokerHalted(BaseException):
+    """Abort upstream GEPA when the budget broker cannot serve more calls.
+
+    GEPA intentionally catches ordinary reflection exceptions and retries per
+    task. A halted broker is a campaign boundary, not a bad proposal.
+    """
+
+
 class BrokerLM:
     """GEPA reflection model using only the local request-budget broker."""
 
@@ -811,8 +820,15 @@ class BrokerLM:
             headers["X-LRX-Context-SHA256"] = context_hash
             headers["X-LRX-Archive-Ids"] = ",".join(str(item) for item in archive_ids)
         req = Request(self.url, payload, headers)
-        with urlopen(req, timeout=self.timeout) as response:
-            body = json.load(response)
+        try:
+            with urlopen(req, timeout=self.timeout) as response:
+                body = json.load(response)
+        except HTTPError as exc:
+            if exc.code in (429, 502, 503, 504):
+                raise BrokerHalted(f"research broker stopped: HTTP {exc.code}") from exc
+            raise
+        except (URLError, TimeoutError, OSError) as exc:
+            raise BrokerHalted("research broker connection failed") from exc
         choice = body["choices"][0]
         content = choice["message"]["content"]
         try:

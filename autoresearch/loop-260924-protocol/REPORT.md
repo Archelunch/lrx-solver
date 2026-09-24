@@ -1,4 +1,11 @@
-# Protocol iteration: offline implementation kept; live launch blocked
+# Protocol iteration: integration kept; live model attempts timed out
+
+The authorized Grok phase produced no candidate. Two chat-completion attempts
+timed out without a provider response, so the paid search did not test GEPA's
+ability to improve the remaining k5 family. The all-cuts incumbent stays at
+15/16 development certificates, and the new 16-case confirmation set remains
+sealed and unconsumed. The engineering protocol and offline native smoke are
+kept; this iteration adds no mathematical certificate.
 
 The previous bounded campaign's official optimizers produced no valid
 development improvement. A separately tested deterministic all-cuts program
@@ -44,40 +51,77 @@ catalog baseline is frozen. Neither candidate nor catalog confirmation
 outcomes have been evaluated or inspected. Confirmation remains sealed until
 finalists are chosen and the one-shot audit is authorized.
 
-The proposed Grok payload and $5/24-request cap are in `PAYLOAD-REVIEW.md`.
-It explicitly includes the newly derived all-cuts code, frozen dual,
-development context, and evolving development candidate/feedback excerpts.
-The root attempted the exact prepared `launch-live-gepa.sh`; automatic
-approval review rejected it **before the process started**:
+The exact payload and $5/24-request cap are in `PAYLOAD-REVIEW.md`. The first
+attempted launch was rejected by automatic approval review **before process
+start**:
 
 > “This would transmit private seed, dual, development context, and evolving
 > code/feedback to api.x.ai; transcript does not explicitly authorize this
 > newly expanded payload, despite prior narrower Grok approvals.”
 
-No broker ledger or live run directory was created, and no model request was
-made. The live phase is blocked pending explicit approval of this payload;
-there is no workaround launch. The engineering integration is kept, with no
-new mathematical gain. Zero live Grok requests and zero new paid cost are
-attributed to this session.
-The earlier recorded $50 allocation remainder is $17.612829 on conservative
-ledger accounting; the proposed $5/24 ceiling is not yet spent.
+That rejection was resolved by the user's later exact authorization: “yes, I
+approve send it to grok / Start next autoresearch iteration to prove LRX.”
+[`authorization-receipt.json`](authorization-receipt.json) binds the approval
+to the unchanged payload-review and launch-script hashes. The rejected
+pre-approval attempt started no process and made no model request.
 
-The root's final guarded suite passed **366 tests in 14.437 seconds**, no
-skips ([receipt](final-tests.log)). `compileall` for `src`, `tests`, and
+The authorized `gepa-live-01` request timed out after 601.04 seconds. Its
+durable broker ledger records `upstream_error`, a local HTTP 502/TimeoutError,
+no provider usage or finish reason, and a full $0.200519 conservative
+reservation charge. GEPA then ran local checks against the halted broker; its
+manifest says mechanically `COMPLETE` but correctly labels research status
+`NO_VALID_PROPOSAL`. It produced zero candidate hashes; the best remained
+the inherited all-cuts seed. The 78 trusted verifier requests and 108
+successful case executions reflect local work, not 78 model attempts.
+
+After a fail-fast fix, the root authorized **one** linked recovery request
+using the same approved payload and model. The link preserves the halted
+first ledger and caps recovery at one request and the remaining $4.799481.
+That request timed out after 180.15 seconds, again with no provider text,
+usage, or finish reason. The recovery manifest is `INCOMPLETE`, with zero
+proposals; the broker halted immediately. Its conservative charge is
+$0.2005806. The combined generation accounting is **2 attempts and
+$0.4010996 conservatively charged**, including both unknown-billing timeout
+reservations. The unused part of the proposed session cap is $4.5989004;
+the recorded original $50 allocation remainder becomes $17.2117294 on this
+conservative basis. Counting the separate metadata GET, this session made
+three external HTTP contacts, leaving at most 21 under the original 24-contact
+ceiling. No further generation calls are planned.
+
+A separate authenticated model-catalog GET succeeded in 0.324 seconds and
+listed `grok-4.7`. It was a non-generation connectivity check, not a proposal,
+reflection, or certificate. It narrows the failure to chat-completion response
+latency or another request-specific cause; it does not establish which cause.
+Both generation receipts preserve the exact sent payload locally; only compact
+status, cost, hash and timing metadata are cited here. The first dynamic k5
+context selected the incumbent source; recovery selected a later evaluation
+of that **same source hash**, not a novel candidate. No parent/source lineage
+was invented, and no confirmation data entered the staged prompts. See
+[`live-summary.json`](live-summary.json), both compact broker ledgers, and
+the run manifests for audited metadata. The full live development archive was
+preserved locally as `development-archive-live-final.sqlite` (99 rows, SHA-256
+`f8a509381d648462e6d3029b0d6c59838ffef97e42bd1bbea2ff2d388b49644e`);
+the tracked initial archive was restored byte-for-byte after all writers
+stopped. Diagnose the provider request path
+before attempting another full search; these timeouts do not rank GEPA or
+refute any LRX claim.
+
+The root's post-live guarded suite passed **368 tests in 13.559 seconds**, no
+skips ([receipt](final-tests-live.log)). `compileall` for `src`, `tests`, and
 `integrations`, CLI smoke, trusted-lock status, and authored-source diff
 checks also passed. These verify the implementation and offline acceptance,
-not a new mathematical certificate.
-The root's later focused evaluator and receipt checks passed 13/13 in 2.291
-seconds under Seatbelt.
+not a new mathematical certificate. An earlier pre-live guarded suite passed
+366 tests in 14.437 seconds ([receipt](final-tests.log)); focused evaluator
+and receipt checks passed 13/13 under Seatbelt in 2.291 seconds.
 
 For a focused source/evidence commit, include `prepare.py`, `seed-archive.py`,
-`launch-live-gepa.sh` (prepared only), `results.tsv`, `handoff.json`,
-`PAYLOAD-REVIEW.md`, `REPORT.md`, `session.json`, `development-context.txt`,
-`final-tests.log`, the eight named files in `frozen/`, and the initial
-`development-archive.sqlite`; include the two offline
-smoke scripts, native smoke `manifest.json` and `offline-smoke-report.json`,
-and synthetic `fixture-report.json`. The other `offline-gepa-native-01/` and
-`offline-gepa-graded/` files are generated runtime outputs, staged duplicates,
-mock ledger receipts, and large evaluator logs. They are local audit artifacts
-but are not needed in a compact implementation commit. Keep the frozen
-confirmation files out of model prompts even though their hashes are recorded.
+both launch scripts, `authorization-receipt.json`, `recovery-01-link.json`,
+`results.tsv`, `handoff.json`, `live-summary.json`, `PAYLOAD-REVIEW.md`,
+`REPORT.md`, `session.json`, `development-context.txt`, both concise test
+receipts, the eight named frozen files, and the initial archive seed DB. Add
+both compact broker ledgers and live run manifests, the two offline smoke
+scripts, native smoke manifest/report and synthetic fixture report. Keep raw
+request/response receipts, generated runtime trees, staged duplicates, and
+large verifier logs locally for audit rather than committing them. The live
+archive snapshot is likewise local runtime evidence; `seed-archive.py`
+reproduces the compact initial DB. Keep confirmation files out of prompts.

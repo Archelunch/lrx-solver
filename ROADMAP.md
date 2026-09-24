@@ -42,8 +42,9 @@ and its union with earlier results are not yet independently reconstructed.
    [prepared protocol](autoresearch/loop-260924-protocol/REPORT.md). A native
    GEPA mock smoke exercised refreshed distinct-source development context,
    and a synthetic graded fixture checked selection; neither yielded LRX
-   progress. Automatic approval review rejected the prepared live launch
-   before process start; this new private payload needs specific authorization.
+   progress. After specific payload approval, two live chat-completion
+   requests timed out with no candidate; diagnose the provider request path
+   before another full search. Confirmation remains sealed.
    See also the [closed iteration](autoresearch/loop-260924-live/report.md).
 
 This supersedes the pre-PDF proposal to immediately expand routing-priority
@@ -121,5 +122,6 @@ and [the source review](autoresearch/loop-260923-2107/paper-review.md).
     finalists tied at 6/8 on sealed confirmation. See the [live report](autoresearch/loop-260924-live/report.md)
     for exact accounting, failure modes, and source attribution. No engine
     ranking or general theorem follows. The subsequent k5 protocol has only
-    offline mock and synthetic acceptance evidence so far; its prepared paid
-    launch was rejected before process start pending specific payload approval.
+    offline mock and synthetic acceptance evidence. Its authorized paid
+    attempt and one recovery request both timed out without model output;
+    no optimizer efficacy conclusion follows.
