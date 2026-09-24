@@ -2,6 +2,53 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Current preparation: focused k5 protocol (2026-09-24)
+
+The [protocol report](autoresearch/loop-260924-protocol/REPORT.md) records a
+fresh, unspent iteration. It freezes the independently verified all-cuts
+15/16 development control as an automatic incumbent, the old 16-case
+development set and fixed 48-source catalog, and a new sealed 16-case
+structural confirmation set disjoint from prior structural sets and cycle7.
+The remaining named development miss is `k5-mask302-order15713`; an exact
+finite-pool dual is guidance for new direct word columns, not a lower bound.
+The evaluator peer repriced the frozen incumbent profiles and checked the dual
+against catalog plus all-cuts. Candidate words supplement that pool; returning
+`[]` on a case retains incumbent certificates.
+
+Archive retrieval now deduplicates source/case repeats, labels evaluation
+coverage, and refuses to invent a parent diff. A native official GEPA 0.1.4
+offline mock run completed with 2 mock model responses, 30 trusted evaluator
+requests and 60 successful case executions. A refreshed second reflection
+received a distinct-source k5 archive trace. Its best stayed at the 15/16
+incumbent with zero new certificates; neither generated proposal was evaluated
+on all 16 cases. A separate scripted synthetic graded fixture selected
+a higher fixture grade, showing optimizer plumbing only, not LRX progress.
+The receipts are `offline-gepa-native-01/manifest.json`,
+`offline-gepa-native-01/offline-smoke-report.json`, and
+`offline-gepa-graded/fixture-report.json` within the protocol directory.
+
+The new private all-cuts code, frozen dual, context, and evolving development
+feedback would be sent to Grok only after the focused
+[payload review](autoresearch/loop-260924-protocol/PAYLOAD-REVIEW.md).
+The proposed shared ceiling is $5/24 upstream attempts from the recorded
+$17.612829 remainder. The root attempted the exact prepared launch, but
+automatic approval review rejected it **before process start**: “This would
+transmit private seed, dual, development context, and evolving code/feedback
+to api.x.ai; transcript does not explicitly authorize this newly expanded
+payload, despite prior narrower Grok approvals.” No broker ledger or live run
+directory was created. The live phase is blocked pending explicit approval of
+that payload; do not retry through a workaround. This new session made **zero
+live calls** and spent **$0**. Its new confirmation contents and the previous consumed confirmation
+must stay out of prompts and development archive. The root orchestrator owns
+authorization and any subsequent live run. Its final guarded suite passed
+366 tests in 14.437 seconds with no skips; compile, CLI smoke, trusted lock,
+and authored-source diff checks passed. The concise test receipt is
+`autoresearch/loop-260924-protocol/final-tests.log`. Later focused
+evaluator/receipt checks passed 13/13 under Seatbelt in 2.291 seconds; after
+the backend's final generic sampler fix, 18 focused backend, budget, and archive
+tests passed in 0.130 seconds. `results.tsv` and `handoff.json` preserve the
+blocked state.
+
 ## Latest completed work: official program search (2026-09-24)
 
 The bounded official GEPA, SkyDiscover AdaEvolve, and EvoX live portfolio is
@@ -27,7 +74,7 @@ Four durable broker ledgers account for 18 upstream attempts and $1.902142
 conservatively against the run's 24-attempt/$8 cap. Three timeouts are charged
 at full reservation, with provider billing unknown. The recorded remainder
 of the original $50 allocation is $17.612829 on this conservative basis.
-All model processes are stopped; no more live calls are planned. The final
+All model processes from that closed run are stopped. The final
 guarded suite passed 353 tests in 12.587 seconds with no skips, plus compile,
 CLI smoke and clean trusted lock. Next research should focus on exact
 dual-guided k5 word/profile generation with strict output limits, trusted
@@ -98,6 +145,7 @@ Generated program execution and pinned official framework dependencies were
 authorized for the separate isolated pilot (scope:
 `autoresearch/official-integration-260924/authorization.md`); the trusted
 core remains locked.
-No more paid calls are planned after the closed official iteration.
+Any new paid calls belong to the separate prepared k5 protocol and remain
+pending focused payload review.
 Main controller remains1.5625. Source manuscript global totals remain attributed.
 Preserve old untracked runs. No push performed.

@@ -1,0 +1,44 @@
+LRX development search context, 2026-09-24. This text is development-only.
+The main conjecture is open. L rotates the visible vector left, R rotates
+right, and X swaps its first two entries. A finite word replay proves a bound
+only at that unit state. A named family fixes the label order and selected
+zero gaps, then gives every selected gap an arbitrary positive length ell_j.
+The trusted direct-stretch proof must establish a word's upper bound
+B + sum_j gamma_j*(ell_j-1), and an exact rational mixture must have weighted
+B < 31+6k and each weighted gamma_j <= 6 (k selected gaps, m=8). Only then
+does that named family receive an all-positive-length certificate.
+Do not infer global lower bounds, eight-block completion, or infeasibility from
+NO_CERTIFICATE. Programs must obey evaluator word, source, length, and time
+limits. Case-specific constructions are welcome if independently certified.
+Do not edit evaluator, baseline, or frozen data. The evaluator always includes
+the frozen all-cuts direct profiles: propose at most 32 useful *additional*
+words per case, not copies of incumbent words. Return [] where no useful new
+word is known. The incumbent's certificates remain in that case.
+
+Frozen incumbent: deterministic all-cuts program SHA-256
+3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884.
+It certifies 15/16 frozen development families against the same fixed 48-source
+catalog, one more than the earlier four-cut seed's 14/16. The new named case is
+k6-mask315-order31970: cut 11, prefer-right yields a direct word with base 70
+and slopes [6,7,10,7,4,5]; an exact five-support mixture has base 1136/17 < 67.
+This is an offline control, not an LLM discovery. Last paid pilot had no model
+gain. Its old archive is historical evidence, not this protocol's ranker.
+
+The remaining development miss is k5-mask302-order15713, state
+(4,0,1,0,7,0,8,5,0,6,3,2,0). Current all-cuts finite-pool optimum has base
+24149/392, versus required strict base < 61. The fixed old catalog plus
+all-cuts incumbent dual screen on retained zero-block positions 1,2,3,4 (zero-based)
+is mu=(11/14,197/196,1/8,261/392), nu=30221/392. For a direct profile,
+reduced cost is base + sum(mu_j*gamma_j) - nu. Negative reduced cost is a
+promising *finite-pool* screen only; recompute the exact LP and literal word
+replay before claiming any certificate. The best current all-cuts candidate
+column on this case (cut 4/10 left, 57 letters) has gamma [8,11,9,3,6],
+dual reduced cost +55/28. With those slopes, lowering its base by 2,
+its second gamma by 3, third gamma by 2, or fifth gamma by 3 would cross that screen.
+These one-coordinate targets do not guarantee a mixture certificate.
+
+Archive excerpts give development raw word/block traces, source hash, coverage,
+and lineage. Missing parent means unknown lineage, not an inferred diff.
+Seek valid columns complementary to incumbent tight support; raw single-case
+and full-set scores are incomparable. No confirmation case or result enters
+this prompt or archive; confirmation is one-shot after finalist selection.

@@ -1,0 +1,6 @@
+arm	phase	status	upstream_attempts	conservative_usd	development_certified_of_16	new_vs_allcuts_incumbent	candidate_sha256	confirmation	attribution
+fixed_catalog	inherited_control	KNOWN_PRIOR	0	0	12			SEALED	Fixed 48-source direct catalog, carried from prior frozen development
+allcuts_incumbent	inherited_offline_control	VERIFIED_15_OF_16	0	0	15	0	3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884	SEALED	Independent deterministic prior-session result; not model credit for this iteration
+gepa_native_mock	offline_integration	COMPLETE_NO_GAIN	0	0	15	0	3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884	SEALED	Two mock responses; 30 evaluator requests, 60 successful case executions; generated proposals sampled only, best remains incumbent
+gepa_synthetic_fixture	offline_plumbing	SYNTHETIC_GRADE_ACCEPTED	0	0				SEALED	Scripted grade 0 to 2 in native GEPA; no LRX mathematical evaluation or claim
+gepa_live_prepared	live_attempt	AUTO_REVIEW_REJECTED_BEFORE_PROCESS	0	0				SEALED	Exact prepared launch rejected for newly expanded private payload; no broker, no API request

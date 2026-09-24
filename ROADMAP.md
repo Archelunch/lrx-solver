@@ -38,8 +38,13 @@ and its union with earlier results are not yet independently reconstructed.
    under strict source, word-count and runtime limits, then replay and solve
    the rational mixture exactly. The finite-pool dual filter is a guide, not
    an infeasibility proof. This session's one-shot confirmation is consumed;
-   freeze a new structural set before a future assessment. See the
-   [closed iteration](autoresearch/loop-260924-live/report.md).
+   a new 16-case structural set is now frozen and sealed in the
+   [prepared protocol](autoresearch/loop-260924-protocol/REPORT.md). A native
+   GEPA mock smoke exercised refreshed distinct-source development context,
+   and a synthetic graded fixture checked selection; neither yielded LRX
+   progress. Automatic approval review rejected the prepared live launch
+   before process start; this new private payload needs specific authorization.
+   See also the [closed iteration](autoresearch/loop-260924-live/report.md).
 
 This supersedes the pre-PDF proposal to immediately expand routing-priority
 search. See [the bounded next-iteration protocol](autoresearch/next-iteration.md)
@@ -115,4 +120,6 @@ and [the source review](autoresearch/loop-260923-2107/paper-review.md).
     deterministic all-cuts control reached 15/16. Catalog and all frozen
     finalists tied at 6/8 on sealed confirmation. See the [live report](autoresearch/loop-260924-live/report.md)
     for exact accounting, failure modes, and source attribution. No engine
-    ranking or general theorem follows; further model calls are stopped.
+    ranking or general theorem follows. The subsequent k5 protocol has only
+    offline mock and synthetic acceptance evidence so far; its prepared paid
+    launch was rejected before process start pending specific payload approval.

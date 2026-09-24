@@ -1,0 +1,19 @@
+{
+  "k5-mask302-order15713": {
+    "mu": [
+      "11/14",
+      "197/196",
+      "1/8",
+      "261/392"
+    ],
+    "nu": "30221/392",
+    "scope": "fixed_catalog_plus_allcuts_incumbent_finite_pool",
+    "status": "development_filter_only",
+    "tight": [
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}

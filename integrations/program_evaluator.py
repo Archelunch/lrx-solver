@@ -7,6 +7,7 @@ or resource limit is never evidence of infeasibility.
 """
 from __future__ import annotations
 
+from fractions import Fraction
 import hashlib
 import json
 import os
@@ -192,6 +193,101 @@ def _certificate(profiles, result):
             'scope': 'all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required'}
 
 
+def _feasible_base(result, profiles):
+    """Independently verify a returned feasible mixture before using its base."""
+    if 'base' not in result or 'weights' not in result:
+        return None
+    weights = [Fraction(value) for value in result['weights']]
+    if len(weights) != len(profiles) or any(weight < 0 for weight in weights) or sum(weights) != 1:
+        raise ValueError('optimizer returned invalid primal weights')
+    if not profiles or any(sum(weight * profile['gamma'][j]
+                               for weight, profile in zip(weights, profiles)) > 6
+                           for j in range(len(profiles[0]['gamma']))):
+        raise ValueError('optimizer returned infeasible primal slopes')
+    base = sum(weight * profile['base'] for weight, profile in zip(weights, profiles))
+    if base != Fraction(result['base']):
+        raise ValueError('optimizer returned inconsistent primal base')
+    return base
+
+
+def _mapping_hash(value):
+    if value is None:
+        return None
+    canonical = json.dumps(value, sort_keys=True, separators=(',', ':')).encode('utf-8')
+    return hashlib.sha256(canonical).hexdigest()
+
+
+def _verified_dual(profiles, result, raw, blocks):
+    """Check a proposed old-pool dual and primal witness using exact rationals."""
+    if not isinstance(raw, dict):
+        raise ValueError('dual must be an object')
+    tight = raw.get('tight')
+    mu = raw.get('mu')
+    if not isinstance(tight, list) or not tight or any(type(j) is not int or not 0 <= j < blocks for j in tight) or len(set(tight)) != len(tight):
+        raise ValueError('invalid dual tight positions')
+    if not isinstance(mu, list) or len(mu) != len(tight):
+        raise ValueError('dual multipliers must match tight positions')
+    try:
+        multipliers = [Fraction(x) for x in mu]
+        intercept = Fraction(raw['nu'])
+    except (KeyError, TypeError, ValueError, ZeroDivisionError) as exc:
+        raise ValueError('invalid rational dual') from exc
+    if any(x < 0 for x in multipliers):
+        raise ValueError('negative dual multiplier')
+    base = _feasible_base(result, profiles)
+    if base is None:
+        raise ValueError('dual needs an exact feasible incumbent mixture')
+    weights = [Fraction(x) for x in result['weights']]
+    if len(weights) != len(profiles) or sum(weights) != 1 or any(x < 0 for x in weights):
+        raise ValueError('invalid incumbent primal weights')
+    slopes = [sum(w*p['gamma'][j] for w, p in zip(weights, profiles)) for j in range(blocks)]
+    if any(slopes[j] != 6 for j in tight) or base != intercept - 6 * sum(multipliers):
+        raise ValueError('incumbent primal and dual objective disagree')
+    def reduced_cost(profile):
+        return Fraction(profile['base']) + sum(x*profile['gamma'][j] for x, j in zip(multipliers, tight)) - intercept
+    if any(reduced_cost(p) < 0 for p in profiles):
+        raise ValueError('dual fails an incumbent column')
+    if any(w and reduced_cost(p) != 0 for w, p in zip(weights, profiles)):
+        raise ValueError('dual violates complementary slackness')
+    return {'tight': tight, 'mu': multipliers, 'nu': intercept, 'reduced_cost': reduced_cost}
+
+
+def _progress(accepted, before, before_profiles, after, after_profiles, dual, *, valid, rewardable, blocks):
+    target = 31 + 6 * blocks
+    base_before = _feasible_base(before, before_profiles)
+    base_after = _feasible_base(after, after_profiles)
+    entries = []
+    if dual is not None:
+        unique = set()
+        for item in accepted:
+            p = item['profile']
+            key = (p['base'], tuple(p['gamma']))
+            if key in unique:
+                continue
+            unique.add(key)
+            cost = dual['reduced_cost'](p)
+            entries.append({'word': p['word'], 'base': p['base'], 'gamma': p['gamma'],
+                            'reduced_cost': str(cost)})
+        entries.sort(key=lambda item: (Fraction(item['reduced_cost']), item['base'], item['word']))
+    best_cost = Fraction(entries[0]['reduced_cost']) if entries else None
+    improvement = max(Fraction(0), base_before - base_after) if valid and base_before is not None and base_after is not None else Fraction(0)
+    negative = max(Fraction(0), -best_cost) if valid and best_cost is not None else Fraction(0)
+    grade = ((improvement/(1+improvement) + negative/(1+negative)) / 2
+             if rewardable else Fraction(0))
+    return {'feasible_base_before': str(base_before) if base_before is not None else None,
+            'feasible_base_after': str(base_after) if valid and base_after is not None else None,
+            'strict_target': target,
+            'strict_base_pass': bool(valid and base_after is not None and base_after < target),
+            'base_deficit_after': str(max(Fraction(0), base_after-target)) if valid and base_after is not None else None,
+            'base_improvement': str(improvement),
+            'best_reduced_cost': str(best_cost) if valid and best_cost is not None else None,
+            'negative_reduced_cost': str(negative),
+            'best_useful_words': entries[:3] if valid else [],
+            'secondary_grade': str(grade),
+            'rewardable': rewardable,
+            'diagnostic_scope': 'exact feasible mixtures and verified old-pool dual; negative reduced cost is necessary, not sufficient, for pool improvement'}
+
+
 def _preexec(timeout):
     # This runs in the child immediately before exec, never in the verifier.
     cpu = max(1, int(timeout) + 1)
@@ -203,7 +299,8 @@ def _preexec(timeout):
 class ProgramEvaluator:
     def __init__(self, cases, baseline=None, *, timeout_seconds=2.0,
                  max_source_bytes=MAX_SOURCE_BYTES, max_words_per_case=MAX_WORDS_PER_CASE,
-                 max_word_length=MAX_WORD_LENGTH, require_os_sandbox=True):
+                 max_word_length=MAX_WORD_LENGTH, require_os_sandbox=True,
+                 incumbent=None, dual=None):
         self.cases = [_case(c) for c in cases]
         if len({c['id'] for c in self.cases}) != len(self.cases):
             raise ValueError('duplicate case ids')
@@ -212,7 +309,28 @@ class ProgramEvaluator:
         baseline = baseline or {}
         if not isinstance(baseline, dict):
             raise ValueError('baseline must map case ids to profiles')
+        self.reference_hashes = {'catalog': _mapping_hash(baseline),
+                                 'incumbent': _mapping_hash(incumbent),
+                                 'dual': _mapping_hash(dual)}
         self.baseline = {c['id']: _verified_baseline(c, baseline.get(c['id'], [])) for c in self.cases}
+        if incumbent is not None and not isinstance(incumbent, dict):
+            raise ValueError('incumbent must map case ids to direct profiles')
+        if dual is not None and incumbent is None:
+            raise ValueError('dual requires a frozen incumbent')
+        if dual is not None and not isinstance(dual, dict):
+            raise ValueError('dual must map case ids to exact witnesses')
+        self.has_incumbent = incumbent is not None
+        self.incumbent = {}
+        self.dual = {}
+        for case in self.cases:
+            case_id = case['id']
+            raw = (incumbent or {}).get(case_id, [])
+            if not isinstance(raw, list) or any(not isinstance(row, dict) or row.get('kind') != 'direct' for row in raw):
+                raise ValueError('incumbent supports must be direct profiles')
+            self.incumbent[case_id] = _verified_baseline(case, raw)
+            if dual is not None and case_id in dual:
+                pool = self.baseline[case_id] + self.incumbent[case_id]
+                self.dual[case_id] = _verified_dual(pool, optimize(pool), dual[case_id], case['blocks'])
         self.timeout_seconds = float(timeout_seconds)
         self.max_source_bytes = int(max_source_bytes)
         self.max_words_per_case = int(max_words_per_case)
@@ -302,12 +420,21 @@ class ProgramEvaluator:
             baseline_profiles = self.baseline[case['id']]
             baseline_result = optimize(baseline_profiles)
             baseline_certificate = _certificate(baseline_profiles, baseline_result)
+            incumbent_profiles = baseline_profiles + self.incumbent[case['id']]
+            incumbent_result = optimize(incumbent_profiles)
+            incumbent_certificate = _certificate(incumbent_profiles, incumbent_result)
             attempt = self._run_case(raw, case)
             words = attempt.get('words')
             accepted, rejected = [], []
             if attempt.get('status') == 'ok':
-                if not isinstance(words, list) or len(words) > self.max_words_per_case:
-                    attempt = dict(attempt, status='INVALID_OUTPUT', reason='expected bounded list of words')
+                if not isinstance(words, list):
+                    attempt = dict(attempt, status='INVALID_OUTPUT',
+                                   reason=f'expected list of words; got {type(words).__name__}',
+                                   actual_type=type(words).__name__)
+                elif len(words) > self.max_words_per_case:
+                    attempt = dict(attempt, status='INVALID_OUTPUT',
+                                   reason=f'candidate returned {len(words)} words; limit {self.max_words_per_case}',
+                                   actual_word_count=len(words), max_words_per_case=self.max_words_per_case)
                 else:
                     state = state_for(case['labels'], case['mask'])
                     seen = set()
@@ -322,11 +449,19 @@ class ProgramEvaluator:
                             accepted.append({'raw_word': word, 'normalized_word': profile['word'], 'profile': profile})
                         except (ValueError, TypeError, IndexError) as exc:
                             rejected.append({'index': index, 'reason': str(exc)[:200]})
-            profiles = baseline_profiles + [r['profile'] for r in accepted]
-            result = optimize(profiles)
-            certificate = _certificate(profiles, result)
-            if certificate is None and baseline_certificate is not None:
-                certificate = baseline_certificate
+            profiles = incumbent_profiles + [r['profile'] for r in accepted]
+            candidate_result = optimize(profiles)
+            result = candidate_result
+            result_profiles = profiles
+            # The incumbent is a valid feasible witness even if a numerical
+            # basis proposal on the enlarged pool is worse or incomplete.
+            incumbent_base = _feasible_base(incumbent_result, incumbent_profiles)
+            candidate_base = _feasible_base(candidate_result, profiles)
+            if incumbent_base is not None and (candidate_base is None or candidate_base > incumbent_base):
+                result, result_profiles = incumbent_result, incumbent_profiles
+            certificate = _certificate(result_profiles, result)
+            if certificate is None and incumbent_certificate is not None:
+                certificate = incumbent_certificate
             if attempt['status'] != 'ok':
                 status = attempt['status']
             elif certificate is not None:
@@ -335,31 +470,61 @@ class ProgramEvaluator:
                 status = 'NO_CERTIFICATE'
             else:
                 status = 'INCOMPLETE'
+            progress = (_progress(accepted, incumbent_result, incumbent_profiles,
+                                  result, result_profiles, self.dual.get(case['id']),
+                                  valid=attempt['status'] == 'ok',
+                                  rewardable=attempt['status'] == 'ok' and incumbent_certificate is None,
+                                  blocks=case['blocks'])
+                        if self.has_incumbent else None)
             rows.append({'case': case, 'status': status, 'candidate_run': {k:v for k,v in attempt.items() if k!='words'},
                          'accepted_words': accepted, 'rejected_words': rejected,
-                         'lp': result, 'baseline_lp': baseline_result,
+                         'lp': result, 'candidate_lp': candidate_result,
+                         'incumbent_lp': incumbent_result if self.has_incumbent else None,
+                         'baseline_lp': baseline_result,
                          'baseline_certified': baseline_certificate is not None,
-                         'certificate': certificate})
+                         'incumbent_certified': incumbent_certificate is not None,
+                         'progress': progress, 'certificate': certificate})
         certified = sum(r['certificate'] is not None for r in rows)
         new = sum(r['certificate'] is not None and not r['baseline_certified'] for r in rows)
+        incumbent_new = sum(r['certificate'] is not None and not r['incumbent_certified']
+                            and r['candidate_run']['status'] == 'ok' for r in rows)
         invalid = sum(r['status'] in ('INVALID_OUTPUT', 'candidate_error', 'INCOMPLETE') for r in rows)
-        score = float(1000 * new + certified - invalid)
+        secondary = (sum(Fraction(r['progress']['secondary_grade']) for r in rows) / len(rows)
+                     if self.has_incumbent else Fraction(0))
+        certificate_weight = max(1001, len(rows) + 2)
+        score = (float(certificate_weight * incumbent_new - invalid + secondary) if self.has_incumbent
+                 else float(1000 * new + certified - invalid))
         return {'kind': 'executable_program', 'candidate_hash': digest, 'combined_score': score,
-                'certified': certified, 'new_certified': new, 'total_families': len(rows),
-                'feedback': f'{new} new exact family certificates; {certified}/{len(rows)} total; {invalid} execution or format failures. Misses do not prove infeasibility.',
+                'certified': certified, 'new_certified': new, 'new_vs_catalog': new,
+                'incumbent_certified': sum(r['incumbent_certified'] for r in rows),
+                'new_vs_incumbent': incumbent_new,
+                'secondary_score': str(secondary),
+                'certificate_weight': certificate_weight if self.has_incumbent else 1000,
+                'score_reference': 'frozen_incumbent' if self.has_incumbent else 'fixed_catalog',
+                'reference_hashes': self.reference_hashes,
+                'total_families': len(rows),
+                'feedback': f'{incumbent_new if self.has_incumbent else new} new exact family certificates versus {"incumbent" if self.has_incumbent else "catalog"}; {certified}/{len(rows)} total; {invalid} execution or format failures. Partial progress is diagnostic, not proof; misses do not prove infeasibility.',
                 'families': rows, 'isolation': 'macos_seatbelt' if self.require_os_sandbox else 'process_only',
-                'limitations': ['Finite selected families only; universal scope of each accepted mixture relies on reviewed manuscript lemmas.']}
+                'limitations': ['Finite selected families only; universal scope of each accepted mixture relies on the direct word triangle expansion criterion.']}
 
 
 def evaluate(program_path, cases_path, output_dir, *, baseline_path=None, timeout_seconds=2.0,
-             require_os_sandbox=True):
+             require_os_sandbox=True, incumbent_path=None, dual_path=None):
     """File-based adapter for GEPA/SkyDiscover; writes one detailed JSON artifact."""
     cases_data = json.loads(Path(cases_path).read_text(encoding='utf-8'))
     cases = cases_data['cases'] if isinstance(cases_data, dict) else cases_data
     baseline = json.loads(Path(baseline_path).read_text(encoding='utf-8')) if baseline_path else None
+    incumbent = json.loads(Path(incumbent_path).read_text(encoding='utf-8')) if incumbent_path else None
+    dual = json.loads(Path(dual_path).read_text(encoding='utf-8')) if dual_path else None
     evaluator = ProgramEvaluator(cases, baseline, timeout_seconds=timeout_seconds,
-                                 require_os_sandbox=require_os_sandbox)
+                                 require_os_sandbox=require_os_sandbox,
+                                 incumbent=incumbent, dual=dual)
     result = evaluator.evaluate(program_path)
+    result['reference_files'] = {
+        'catalog_sha256': hashlib.sha256(Path(baseline_path).read_bytes()).hexdigest() if baseline_path else None,
+        'incumbent_sha256': hashlib.sha256(Path(incumbent_path).read_bytes()).hexdigest() if incumbent_path else None,
+        'dual_sha256': hashlib.sha256(Path(dual_path).read_bytes()).hexdigest() if dual_path else None,
+    }
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     artifact = output / (result['candidate_hash'][:16] + '-evaluation.json')

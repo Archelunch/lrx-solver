@@ -1,0 +1,59 @@
+{
+  "run_dir": "autoresearch/loop-260924-protocol/offline-gepa-native-01",
+  "model_calls": 2,
+  "sampled_case_ids": [
+    [
+      "k5-mask302-order15713",
+      "k4-mask23-order35811",
+      "k4-mask135-order24096"
+    ],
+    [
+      "k5-mask302-order15713",
+      "k4-mask432-order21829",
+      "k4-mask113-order3821"
+    ]
+  ],
+  "hard_case_ids": [
+    "k5-mask302-order15713"
+  ],
+  "reflection_batch_calls": 2,
+  "context_receipts": [
+    {
+      "sha256": "0f43935ef9ce77a81de5d804aea967fd3fdded41e031d2f6d2e8f7654c5eceb6",
+      "selected": [
+        {
+          "id": 2,
+          "source_sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+          "case_id": "k5-mask302-order15713",
+          "evaluated_case_count": 16,
+          "lineage_status": "unknown_parent"
+        }
+      ]
+    },
+    {
+      "sha256": "dd93da26045113b21aa3fbad3e93f33ebb5e10d30af3cc1160f9c79f6fab86d4",
+      "selected": [
+        {
+          "id": 2,
+          "source_sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+          "case_id": "k5-mask302-order15713",
+          "evaluated_case_count": 16,
+          "lineage_status": "unknown_parent"
+        },
+        {
+          "id": 22,
+          "source_sha256": "1c9e1bdf6da290f18a64d8934ca339ab3d61df5121f82aee40adc2671d7c6e6d",
+          "case_id": "k5-mask302-order15713",
+          "evaluated_case_count": 1,
+          "lineage_status": "unknown_parent"
+        }
+      ]
+    }
+  ],
+  "broker_receipts": [
+    "autoresearch/loop-260924-protocol/offline-gepa-native-01-mock-ledger.json.receipts/attempt-0001.json",
+    "autoresearch/loop-260924-protocol/offline-gepa-native-01-mock-ledger.json.receipts/attempt-0002.json"
+  ],
+  "manifest_research_status": "NO_GAIN",
+  "manifest_status": "COMPLETE"
+}

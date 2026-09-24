@@ -1,0 +1,58 @@
+{
+  "authorization": {
+    "prior_approval_scope": "does_not_include_new_allcuts_or_context",
+    "specific_new_payload": "required_after_auto_review_rejection"
+  },
+  "auto_review": {
+    "attempted_script": "launch-live-gepa.sh",
+    "broker_started": false,
+    "decision": "REJECTED_BEFORE_PROCESS_START",
+    "exact_reason": "This would transmit private seed, dual, development context, and evolving code/feedback to api.x.ai; transcript does not explicitly authorize this newly expanded payload, despite prior narrower Grok approvals.",
+    "new_paid_usd": 0,
+    "process_started": false,
+    "upstream_attempts": 0
+  },
+  "confirmation": {
+    "blocks": "four per 4..7",
+    "case_count": 16,
+    "model_access": "excluded",
+    "status": "sealed_not_evaluated"
+  },
+  "created_date": "2026-09-24",
+  "development": {
+    "archive_initial_rows": 1,
+    "case_count": 16,
+    "catalog_sources": 48,
+    "incumbent_certified": 15,
+    "remaining_named_miss": "k5-mask302-order15713"
+  },
+  "engineering_decision": "KEEP_OFFLINE_PROTOCOL_IMPLEMENTATION",
+  "limitations": [
+    "no new paid research result",
+    "finite development dual screen only",
+    "confirmation outcomes deliberately uninspected"
+  ],
+  "mathematical_result": "NO_NEW_CERTIFICATE_THIS_ITERATION",
+  "no_live_calls": true,
+  "proposed_limits": {
+    "max_conservative_usd": 5.0,
+    "max_requests": 24,
+    "prior_recorded_remaining_usd": 17.612829
+  },
+  "session": "loop-260924-protocol",
+  "sha256": {
+    "PAYLOAD-REVIEW.md": "742b2350fbd88a1e394bfe566a71280fdbab34f272a915d2d6e63fecf983b6b5",
+    "development-archive.sqlite": "f304196aba0929c5d4e351584d708ec81888a569e1cd39af90afe086785ac61f",
+    "development-context.txt": "a01f19f2556969dbdc3bb54a0bcbf4f7c68a489e61528d00c6d32bec03a874a2",
+    "frozen/allcuts_seed.py": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+    "frozen/confirmation-baseline.json": "97bcf8c2324f03df3d58d0e7e6ad76684825b4a0204f2389c07e1baa30af177c",
+    "frozen/confirmation.json": "f97d39992de054b7f725482107376d85f06e46374003ffb657515f88486a62b9",
+    "frozen/development-baseline.json": "9ab9f6ed4eb5c4a3328095623f6d883b16c0590c79464bf46101ac607686a725",
+    "frozen/development-dual.json": "b05be717239f04be6b9486748a152b929632d777536e0a893c2e9875058531ce",
+    "frozen/development-incumbent.json": "b583c7c2acec3ffb403038d821321f59c4366be62a09473add0f6c67b9f9ccaf",
+    "frozen/development.json": "855ba92453c21b038f93210745d61b60ebe0d2a00ef911b8eecc8cc5f0237dc9",
+    "frozen/manifest.json": "e75836b984d2aef04ef48fa26f17dce9bc42e9d030e9905d92a8f9f1350ea1fd",
+    "launch-live-gepa.sh": "12f07602a6cc0d17f4d98052569aa1f1848985e77961ac40723e14c9e766262b"
+  },
+  "status": "LIVE_BLOCKED_AUTO_REVIEW"
+}

@@ -1,0 +1,41 @@
+{
+  "calls": 2,
+  "sampled_ids": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      2
+    ]
+  ],
+  "before": [
+    [
+      0.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.1,
+      1.0,
+      1.0
+    ]
+  ],
+  "after": [
+    [
+      0.1,
+      1.0,
+      1.0
+    ],
+    [
+      0.2,
+      1.0,
+      1.0
+    ]
+  ],
+  "best_grade": 2,
+  "warning": "synthetic scores only; no LRX mathematical progress"
+}

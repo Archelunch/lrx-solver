@@ -7,13 +7,17 @@ one request slot; an error or missing usage consumes its whole reservation.
 
 import argparse
 import fcntl
+import hashlib
 import json
 import math
 import os
+import re
 import threading
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
@@ -22,6 +26,30 @@ from src.lrx.provider_adapter import _NoRedirectHandler, _validate_https_url
 
 class BudgetExceeded(RuntimeError):
     pass
+
+
+_SECRET_PATTERN = re.compile(r"(?i)\b(?:bearer\s+|xai-|sk-)[A-Za-z0-9._-]{12,}")
+_SECRET_KEYS = frozenset(("api_key", "access_token", "authorization", "secret", "password"))
+_CALL_ROLES = frozenset(("gepa_reflection", "gepa_preflight", "sky_solution",
+                         "sky_meta", "sky_variation", "unknown"))
+
+
+def _sanitize(value, credential):
+    """Retain complete audit text while removing credential-shaped substrings."""
+    if isinstance(value, str):
+        if credential:
+            value = value.replace(credential, "[REDACTED_CREDENTIAL]")
+        return _SECRET_PATTERN.sub("[REDACTED_TOKEN]", value)
+    if isinstance(value, list):
+        return [_sanitize(item, credential) for item in value]
+    if isinstance(value, dict):
+        return {key: ("[REDACTED]" if str(key).lower() in _SECRET_KEYS
+                      else _sanitize(item, credential)) for key, item in value.items()}
+    return value
+
+
+def _utc_now():
+    return datetime.now(timezone.utc).isoformat()
 
 
 class DurableBudget:
@@ -35,6 +63,9 @@ class DurableBudget:
             raise ValueError("max_usd and rates must be positive")
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.receipts_dir = self.path.with_suffix(self.path.suffix + ".receipts")
+        self.receipts_dir.mkdir(mode=0o700, exist_ok=True)
+        os.chmod(self.receipts_dir, 0o700)
         self._owner_file = self.path.with_suffix(self.path.suffix + ".owner")
         self._owner = self._owner_file.open("a+")
         try:
@@ -73,7 +104,7 @@ class DurableBudget:
             os.fsync(stream.fileno())
         os.replace(tmp, self.path)
 
-    def reserve(self, prompt_bytes, output_tokens, *, kind="chat"):
+    def reserve(self, prompt_bytes, output_tokens, *, kind="chat", role="unknown"):
         # UTF-8 byte count is deliberately larger than ordinary text token
         # counts; a fixed allowance covers chat framing. Reasoning allowance
         # is separate because some providers do not include it in max_tokens.
@@ -92,13 +123,33 @@ class DurableBudget:
                 raise BudgetExceeded("shared upstream request cap reached")
             if self.state["spent_usd"] + reserved > self.limits["max_usd"]:
                 raise BudgetExceeded("shared estimated spend cap reached")
-            attempt = dict(id=len(self.state["attempts"]) + 1, kind=kind,
+            attempt = dict(id=len(self.state["attempts"]) + 1, kind=kind, role=role,
                            reserved_usd=reserved, charged_usd=reserved,
                            status="reserved", input_tokens=None, output_tokens=None)
             self.state["attempts"].append(attempt)
             self.state["spent_usd"] += reserved
             self._save()
             return attempt["id"]
+
+    def write_receipt(self, attempt_id, receipt):
+        """Atomically persist the sanitized, complete request/response payload."""
+        path = self.receipts_dir / f"attempt-{attempt_id:04d}.json"
+        tmp = self.receipts_dir / f"attempt-{attempt_id:04d}.tmp"
+        data = (json.dumps(receipt, ensure_ascii=False, sort_keys=True, indent=2) + "\n").encode()
+        with self.lock:
+            fd = os.open(tmp, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+            try:
+                with os.fdopen(fd, "wb") as stream:
+                    stream.write(data)
+                    stream.flush()
+                    os.fsync(stream.fileno())
+                os.replace(tmp, path)
+                self.state["attempts"][attempt_id - 1]["receipt_path"] = str(path)
+                self._save()
+            finally:
+                if tmp.exists():
+                    tmp.unlink()
+        return path
 
     def settle(self, attempt_id, *, usage=None, status="ok"):
         with self.lock:
@@ -192,6 +243,17 @@ class BrokerHandler(BaseHTTPRequestHandler):
         if self.path != "/v1/chat/completions":
             self._json(404, {"error": {"message": "unknown endpoint"}})
             return
+        request_started = time.monotonic()
+        role = self.headers.get("X-LRX-Call-Role", "unknown")
+        if role not in _CALL_ROLES:
+            role = "unknown"
+        context_hash = self.headers.get("X-LRX-Context-SHA256")
+        if not (isinstance(context_hash, str) and len(context_hash) == 64 and
+                all(c in "0123456789abcdef" for c in context_hash)):
+            context_hash = None
+        archive_ids_header = self.headers.get("X-LRX-Archive-Ids", "")[:256]
+        archive_ids = [int(item) for item in archive_ids_header.split(",")
+                       if item.isdigit()][:8]
         try:
             size = int(self.headers.get("Content-Length", "0"))
             if not 0 < size <= self.server.max_prompt_bytes:
@@ -222,7 +284,7 @@ class BrokerHandler(BaseHTTPRequestHandler):
             if payload.get("model") != self.server.model:
                 raise ValueError("request model does not match broker model")
             attempt_id = self.server.ledger.reserve(
-                len(body), output_tokens + self.server.reasoning_reserve)
+                len(body), output_tokens + self.server.reasoning_reserve, role=role)
         except BudgetExceeded as exc:
             self._json(429, {"error": {"message": str(exc), "type": "budget_exhausted"}})
             return
@@ -230,8 +292,27 @@ class BrokerHandler(BaseHTTPRequestHandler):
             self._json(400, {"error": {"message": str(exc)}})
             return
         key = os.environ.get(self.server.api_key_env)
+        receipt = {"attempt_id": attempt_id, "role": role,
+                   "request_at_utc": _utc_now(), "request_bytes": len(body),
+                   "request_sha256": hashlib.sha256(body).hexdigest(),
+                   "declared_context_sha256": context_hash,
+                   "declared_archive_ids": archive_ids,
+                   "upstream_endpoint": self.server.upstream_url + "/chat/completions",
+                   "request_payload": _sanitize(payload, key),
+                   "response_payload": None, "response_status": None,
+                   "latency_seconds": None, "finish_reason": None,
+                   "response_role": None}
+        try:
+            self.server.ledger.write_receipt(attempt_id, receipt)
+        except OSError:
+            self.server.ledger.settle(attempt_id, status="receipt_error")
+            self._json(500, {"error": {"message": "audit receipt unavailable; broker stopped"}})
+            return
         if not key:
             self.server.ledger.settle(attempt_id, status="missing_credential")
+            receipt.update(response_status=503, latency_seconds=time.monotonic() - request_started,
+                           error="missing_credential")
+            self.server.ledger.write_receipt(attempt_id, receipt)
             self._json(503, {"error": {"message": "upstream credential unavailable"}})
             return
         request = urllib.request.Request(
@@ -240,6 +321,7 @@ class BrokerHandler(BaseHTTPRequestHandler):
             method="POST")
         opener = urllib.request.build_opener(_NoRedirectHandler())
         settled = False
+        raw = None
         try:
             with opener.open(request, timeout=self.server.timeout) as response:
                 raw = response.read(self.server.max_response_bytes + 1)
@@ -248,8 +330,23 @@ class BrokerHandler(BaseHTTPRequestHandler):
                 result = json.loads(raw)
                 if not isinstance(result, dict):
                     raise ValueError("invalid upstream response")
+            choices = result.get("choices")
+            first = choices[0] if isinstance(choices, list) and choices and isinstance(choices[0], dict) else {}
+            message = first.get("message") if isinstance(first.get("message"), dict) else {}
+            receipt.update(response_at_utc=_utc_now(), response_status=200,
+                           response_bytes=len(raw), response_payload=_sanitize(result, key),
+                           latency_seconds=time.monotonic() - request_started,
+                           finish_reason=first.get("finish_reason"),
+                           response_role=message.get("role"))
+            self.server.ledger.write_receipt(attempt_id, receipt)
             attempt = self.server.ledger.settle(attempt_id, usage=result.get("usage"))
             settled = True
+            receipt["settlement"] = {key: attempt.get(key) for key in
+                                     ("status", "charged_usd", "input_tokens", "output_tokens",
+                                      "reservation_overrun")}
+            receipt["broker_status"] = (502 if attempt["status"] == "missing_usage" or
+                                        attempt["reservation_overrun"] else 200)
+            self.server.ledger.write_receipt(attempt_id, receipt)
             if attempt["status"] == "missing_usage" or attempt["reservation_overrun"]:
                 self._json(502, {"error": {"message": "upstream usage unbounded; broker stopped"}})
                 self.server.shutdown_requested = True
@@ -260,8 +357,32 @@ class BrokerHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(raw)
         except (urllib.error.HTTPError, urllib.error.URLError, OSError, ValueError) as exc:
-            if not settled:
-                self.server.ledger.settle(attempt_id, status="upstream_error")
+            if settled:
+                # The provider response and usage are already in the private
+                # receipt. A downstream disconnect must not erase that proof.
+                return
+            response_body = None
+            if isinstance(exc, urllib.error.HTTPError):
+                response_body = exc.read(self.server.max_response_bytes + 1)
+                if len(response_body) > self.server.max_response_bytes:
+                    response_body = {"error": "upstream error body exceeded byte cap"}
+                else:
+                    try:
+                        response_body = json.loads(response_body)
+                    except (ValueError, TypeError):
+                        response_body = response_body.decode("utf-8", "replace")
+            elif raw is not None:
+                try:
+                    response_body = json.loads(raw)
+                except (ValueError, TypeError):
+                    response_body = raw.decode("utf-8", "replace")
+            receipt.update(response_at_utc=_utc_now(),
+                           response_status=exc.code if isinstance(exc, urllib.error.HTTPError) else 502,
+                           response_payload=_sanitize(response_body, key),
+                           latency_seconds=time.monotonic() - request_started,
+                           error_type=type(exc).__name__)
+            self.server.ledger.write_receipt(attempt_id, receipt)
+            self.server.ledger.settle(attempt_id, status="upstream_error")
             code = exc.code if isinstance(exc, urllib.error.HTTPError) else 502
             self._json(code, {"error": {"message": "upstream request failed", "type": "upstream_error"}})
 

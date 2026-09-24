@@ -8,6 +8,7 @@ import difflib
 import hashlib
 import json
 import sqlite3
+from fractions import Fraction
 from pathlib import Path
 
 
@@ -51,13 +52,15 @@ class DevelopmentArchive:
             raise TypeError("feedback and traces must be structured data")
         if not isinstance(provenance, dict):
             raise TypeError("provenance must be structured data")
-        parent_source = ""
+        parent_source = None
         if parent_id is not None:
             parent = self.db.execute("SELECT source FROM candidates WHERE id=?", (parent_id,)).fetchone()
             if parent is None:
                 raise ValueError("parent candidate not found")
             parent_source = parent["source"]
-        diff = "".join(difflib.unified_diff(
+        # An unknown parent is not an empty program.  Only store a source diff
+        # when the actual parent source is present in this archive.
+        diff = "" if parent_source is None else "".join(difflib.unified_diff(
             parent_source.splitlines(keepends=True), source.splitlines(keepends=True),
             fromfile="parent", tofile="candidate"))
         with self.db:
@@ -78,11 +81,44 @@ class DevelopmentArchive:
         out = dict(row)
         for key in ("feedback", "traces", "provenance"):
             out[key] = json.loads(out.pop(key + "_json"))
+        out["lineage_status"] = "known_parent" if out["parent_id"] is not None else "unknown_parent"
+        # Old archives contain a synthetic empty-to-source diff for roots. Do
+        # not present it as a real parent diff; leave the old database intact.
+        if out["parent_id"] is None:
+            out["source_diff"] = ""
         return out
 
-    def search(self, query="", *, run_id=None, limit=10):
+    @staticmethod
+    def _case_traces(row, case_id=None):
+        traces = row["traces"]
+        if isinstance(traces, dict):
+            traces = traces.get("families", traces.get("traces", [traces]))
+        if not isinstance(traces, list):
+            return []
+        if case_id is None:
+            return [trace for trace in traces if isinstance(trace, dict)]
+        return [trace for trace in traces if isinstance(trace, dict)
+                and (trace.get("case_id") or trace.get("case", {}).get("id")) == case_id]
+
+    @classmethod
+    def _coverage(cls, row):
+        return len({trace.get("case_id") or trace.get("case", {}).get("id")
+                    for trace in cls._case_traces(row)
+                    if trace.get("case_id") or trace.get("case", {}).get("id")})
+
+    def search(self, query="", *, run_id=None, limit=10, case_id=None,
+               objective="coverage", exclude_source_sha256=()):
+        """Return distinct sources; raw scores are never compared across coverage.
+
+        The numeric score is meaningful only within a fixed evaluation scope.
+        `coverage` prefers complete evaluations. `failure` prefers a target
+        case miss, and `novelty` prefers recent distinct sources. Exact
+        complementarity ranking is available through `select_context`.
+        """
         if not 1 <= limit <= 100:
             raise ValueError("limit must be 1..100")
+        if objective not in ("coverage", "failure", "novelty"):
+            raise ValueError("unknown archive search objective")
         sql = "SELECT id FROM candidates WHERE 1=1"
         args = []
         if run_id is not None:
@@ -91,9 +127,135 @@ class DevelopmentArchive:
         if query:
             sql += " AND (source LIKE ? OR feedback_json LIKE ? OR traces_json LIKE ? OR provenance_json LIKE ?)"
             args.extend(["%" + query + "%"] * 4)
-        sql += " ORDER BY score DESC, id DESC LIMIT ?"
-        args.append(limit)
-        return [self.get(row[0]) for row in self.db.execute(sql, args)]
+        sql += " ORDER BY id DESC"
+        excluded = set(exclude_source_sha256)
+        rows = []
+        for item in self.db.execute(sql, args).fetchall():
+            row = self.get(item[0])
+            if row["source_sha256"] in excluded or (case_id and not self._case_traces(row, case_id)):
+                continue
+            rows.append(row)
+        # The same source is often evaluated once per case. Pick its richest
+        # target trace, then return at most one row per source hash.
+        def richness(row):
+            target = self._case_traces(row, case_id)
+            return (self._coverage(row), len(json.dumps(target)), row["id"])
+        unique = {}
+        for row in rows:
+            key = (row["source_sha256"], case_id)
+            if key not in unique or richness(row) > richness(unique[key]):
+                unique[key] = row
+        def rank(row):
+            target = self._case_traces(row, case_id)
+            failed = any(t.get("status") not in ("CERTIFICATE", "certified", "ok")
+                         for t in target)
+            if objective == "failure":
+                return (failed, self._coverage(row), row["id"])
+            if objective == "novelty":
+                return (row["id"], self._coverage(row))
+            return (self._coverage(row), row["id"])
+        return sorted(unique.values(), key=rank, reverse=True)[:limit]
+
+    @staticmethod
+    def _reduced_cost(trace, dual):
+        if not dual:
+            return None
+        values = []
+        for item in trace.get("accepted_words", []):
+            profile = item.get("profile", {})
+            gamma = profile.get("gamma", [])
+            try:
+                cost = Fraction(profile["base"]) - Fraction(dual["nu"])
+                cost += sum(Fraction(mu) * Fraction(gamma[int(index)])
+                            for index, mu in zip(dual["tight"], dual["mu"], strict=True))
+            except (KeyError, IndexError, TypeError, ValueError, ZeroDivisionError):
+                continue
+            values.append((cost, item))
+        return min(values, key=lambda pair: pair[0]) if values else None
+
+    def select_context(self, case_id, *, limit=2, max_chars=6000,
+                       objective="complementarity", dual=None,
+                       incumbent_source_sha256=None):
+        """Build a bounded development-only excerpt for one fixed case.
+
+        Selection is one incumbent plus distinct-source examples. `dual` is a
+        frozen development finite-pool screen, never a proof or LP result.
+        The full traces remain queryable in the SQLite archive.
+        """
+        if not case_id or not 1 <= limit <= 10 or max_chars < 500:
+            raise ValueError("invalid context bounds or case id")
+        if objective not in ("complementarity", "failure", "novelty"):
+            raise ValueError("unknown context objective")
+        rows = self.search(case_id=case_id, limit=100, objective="novelty")
+        if not rows:
+            return {"text": "", "selected": [], "case_id": case_id,
+                    "objective": objective, "chars": 0}
+        incumbent = next((r for r in rows if r["source_sha256"] == incumbent_source_sha256), None)
+        if incumbent is None:
+            incumbent = next((r for r in rows if r["provenance"].get("role") == "incumbent"), None)
+        if incumbent is None:
+            incumbent = max(rows, key=lambda r: (self._coverage(r), r["id"]))
+
+        def merit(row):
+            trace = self._case_traces(row, case_id)[0]
+            reduced = self._reduced_cost(trace, dual)
+            miss = trace.get("status") not in ("CERTIFICATE", "certified", "ok")
+            valid = row["claim_status"] == "finite_development"
+            if objective == "complementarity":
+                # An exact reduced-cost screen precedes case failure and
+                # novelty. Missing profiles rank after measured profiles.
+                return (reduced is not None, -reduced[0] if reduced else Fraction(0),
+                        valid, miss, row["id"])
+            if objective == "failure":
+                return (miss, valid, row["id"])
+            return (row["id"], valid)
+
+        others = [r for r in rows if r["source_sha256"] != incumbent["source_sha256"]]
+        chosen = [incumbent] + sorted(others, key=merit, reverse=True)[:limit - 1]
+
+        def excerpt(row, field_chars):
+            trace = self._case_traces(row, case_id)[0]
+            reduced = self._reduced_cost(trace, dual)
+            words = trace.get("accepted_words", [])
+            best = reduced[1] if reduced else (words[0] if words else None)
+            payload = {
+                "archive_id": row["id"], "source_sha256": row["source_sha256"],
+                "role": "incumbent" if row is incumbent else "distinct_candidate",
+                "engine": row["engine"], "claim_status": row["claim_status"],
+                "case_status": trace.get("status"), "evaluated_case_count": self._coverage(row),
+                "score": row["score"], "score_scope": "development_case_count",
+                "lineage_status": row["lineage_status"],
+                "parent_id": row["parent_id"],
+                "source_excerpt": row["source"][:field_chars],
+                "source_total_chars": len(row["source"]),
+                "source_diff_excerpt": row["source_diff"][:field_chars] if row["parent_id"] else "",
+                "feedback_excerpt": json.dumps(row["feedback"], sort_keys=True)[:field_chars],
+                "case": trace.get("case", {"id": case_id}),
+                "raw_trace_excerpt": json.dumps({
+                    "accepted_word_count": len(words),
+                    "best_screened_word": best,
+                    "rejected_word_count": len(trace.get("rejected_words", [])),
+                    "lp": trace.get("lp"), "certificate": trace.get("certificate"),
+                }, sort_keys=True)[:field_chars],
+                "reduced_cost": str(reduced[0]) if reduced else None,
+                "reduced_cost_scope": "frozen_development_finite_pool_filter" if reduced else None,
+            }
+            return payload
+
+        # Deterministic size reduction keeps provenance and case identity, but
+        # never silently presents a clipped field as the complete raw trace.
+        selected = [{"id": row["id"], "source_sha256": row["source_sha256"],
+                     "case_id": case_id, "evaluated_case_count": self._coverage(row),
+                     "lineage_status": row["lineage_status"]} for row in chosen]
+        for field_chars in (900, 600, 350, 150, 0):
+            payload = {"case_id": case_id, "objective": objective,
+                       "selection_note": "distinct source hashes; exact finite-pool screen is not a certificate",
+                       "examples": [excerpt(row, field_chars) for row in chosen]}
+            rendered = json.dumps(payload, sort_keys=True)
+            if len(rendered) <= max_chars:
+                return {"text": rendered, "selected": selected,
+                        "case_id": case_id, "objective": objective, "chars": len(rendered)}
+        raise ValueError("context bound too small for selected provenance")
 
 
 def main():

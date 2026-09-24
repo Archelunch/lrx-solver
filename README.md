@@ -40,7 +40,15 @@ frozen development families, and trusted replay. Its offline framework smokes
 are documented in [the integration report](autoresearch/official-integration-260924/report.md);
 the subsequent [bounded live iteration](autoresearch/loop-260924-live/report.md)
 found one independent deterministic named-family certificate and no paid-arm
-improvement. Neither establishes a broader theorem or an engine ranking.
+improvement. A [follow-on protocol](autoresearch/loop-260924-protocol/REPORT.md)
+now freezes that 15/16 all-cuts control as incumbent, retains a new sealed
+16-case structural confirmation set, and exercises per-reflection development
+archive refresh in native GEPA with a mock broker. A separate synthetic graded
+fixture checks GEPA's selection path. Neither offline check is a mathematical
+gain or a new paid campaign. Automatic approval review rejected the prepared
+Grok launch before process start because the new private payload lacks
+specific authorization; this session made no live call.
+None of these results establishes a broader theorem or an engine ranking.
 
 ## Results so far
 
@@ -131,7 +139,11 @@ The separate official framework pilot evaluates executable word constructors
 against frozen structural families. Its live iteration found a deterministic
 all-cuts k6 certificate but no paid-search addition; the next official
 program-search target is the exact reduced-cost face of the remaining k5
-family, with bounded valid outputs and a new structural confirmation set.
+family. The [prepared protocol](autoresearch/loop-260924-protocol/REPORT.md)
+adds the all-cuts incumbent automatically to each trusted evaluation, so
+proposers can focus on up to 32 additional words per case. The new structural
+confirmation set remains sealed. The prepared live launch was rejected before
+process start by automatic approval review pending specific payload approval.
 The mixture profile interpreter, numerical optimizer and exact rational
 acceptance checks are implemented. See the [next-iteration
 protocol](autoresearch/next-iteration.md), [ROADMAP.md](ROADMAP.md), and current
