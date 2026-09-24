@@ -1,0 +1,1 @@
+The seed only emits eight nearest-inversion words, so the two missed families never see a complementary slope vector. I am adding several adjacent-inversion policies and more cuts, still within the 32-word cap, so replay can mix profiles the current LP face does not have.

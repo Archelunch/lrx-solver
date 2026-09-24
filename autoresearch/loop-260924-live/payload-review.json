@@ -1,0 +1,65 @@
+{
+  "status": "BLOCKED_BEFORE_UPSTREAM",
+  "model": "grok-4.7",
+  "upstream_endpoint": "https://api.x.ai/v1/chat/completions",
+  "caps": {
+    "input_rate": 2.2,
+    "max_requests": 24,
+    "max_usd": 8.0,
+    "output_rate": 6.6
+  },
+  "attempts": 0,
+  "estimated_spent_usd": 0.0,
+  "files": [
+    {
+      "path": "integrations/program_seed.py",
+      "bytes": 2087,
+      "sha256": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3"
+    },
+    {
+      "path": "autoresearch/loop-260924-live/development-context.txt",
+      "bytes": 3985,
+      "sha256": "8e09a614211f50f15ef63760eff2cba7c880e53b28bfa28f0c15f72ddf02414d"
+    },
+    {
+      "path": "autoresearch/loop-260924-live/development-archive.sqlite",
+      "bytes": 110592,
+      "sha256": "3bb5c4bbe1a84e26b107aa8b8621b8fbbd3379350b2f588b0d1a692225ace6bf"
+    },
+    {
+      "path": "autoresearch/official-integration-260924/frozen/development.json",
+      "bytes": 2926,
+      "sha256": "855ba92453c21b038f93210745d61b60ebe0d2a00ef911b8eecc8cc5f0237dc9"
+    },
+    {
+      "path": "autoresearch/official-integration-260924/frozen/development-baseline.json",
+      "bytes": 55293,
+      "sha256": "9ab9f6ed4eb5c4a3328095623f6d883b16c0590c79464bf46101ac607686a725"
+    }
+  ],
+  "selected_archive": {
+    "row_ids": [
+      1
+    ],
+    "staged_prompt_path": "autoresearch/loop-260924-live/payload-preview/archive_context.json",
+    "staged_payload_bytes": 14076,
+    "staged_payload_sha256": "bbc02245bce1dd81c1644bf821a1319597865c52d93d154aad750fd15537e7f5",
+    "traces_selected": 2,
+    "raw_trace_policy": "complete raw records for up to two development failures per archive row; source/diff excerpts capped at 8000 characters each"
+  },
+  "rejected_action": "official EvoX live launch under OS sandbox (no model request forwarded)",
+  "review_reason": "Auto-review rejected external Grok transmission of private seed code, archive-derived feedback, and research context without specific sensitive-payload authorization.",
+  "outbound_scope": [
+    "Initial executable seed program source and official-optimizer instructions",
+    "Reviewed development-only research context and selected archive row source, diff, scores, raw failed-family traces, and provenance",
+    "Frozen development case labels/masks/IDs and evaluator feedback: words, direct base/gamma profiles, certificate statuses, and failures",
+    "New candidate Python source and EvoX generated strategy source/feedback in later iterative model prompts"
+  ],
+  "excluded_from_model": [
+    "XAI_API_KEY (broker process only)",
+    "frozen confirmation cases and outputs",
+    "trusted verifier implementation and repository-wide files"
+  ],
+  "archive_staging_note": "Full SQLite archive row remains intact. The exact selected model prompt preview contains the two complete raw failed-family traces plus bounded source/diff excerpts (14076 bytes; SHA256 in selected_archive).",
+  "approval": "User explicitly approved sending the prepared payload to Grok for proper autoresearch after the initial auto-review rejection."
+}

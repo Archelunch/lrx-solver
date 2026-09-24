@@ -1,0 +1,50 @@
+{
+  "split": "frozen development only; confirmation sealed",
+  "model_calls_stopped": true,
+  "finalists": [
+    {
+      "name": "original-seed",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/finalists/original-seed.py",
+      "sha256": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3",
+      "development_evidence": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/evox-low-approved/verified/evaluations/result-0001.json",
+      "development_score": 2014.0,
+      "development_certified": 14,
+      "candidate_executions_ok": 16,
+      "candidate_executions_other": 0,
+      "provenance": "preexisting seed"
+    },
+    {
+      "name": "deterministic-allcuts",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/finalists/deterministic-allcuts.py",
+      "sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+      "development_evidence": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/offline-allcuts/3fcc0f0d23ced3f0-evaluation.json",
+      "development_score": 3015.0,
+      "development_certified": 15,
+      "candidate_executions_ok": 16,
+      "candidate_executions_other": 0,
+      "provenance": "independent offline control; not model generated"
+    },
+    {
+      "name": "adaevolve-valid-tie",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/finalists/adaevolve-valid-tie.py",
+      "sha256": "a5712e6b25e33572167d2a36d9a11ae3e048cbce4d184077dca216a7da2af129",
+      "development_evidence": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/adaevolve-low/verified/evaluations/result-0002.json",
+      "development_score": 2014.0,
+      "development_certified": 14,
+      "candidate_executions_ok": 16,
+      "candidate_executions_other": 0,
+      "provenance": "official AdaEvolve generated"
+    },
+    {
+      "name": "evox-valid-tie",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/finalists/evox-valid-tie.py",
+      "sha256": "aa416e9ce56a620b9670276ffe498c3d653c583aff9edc22e748a2dc95611dc2",
+      "development_evidence": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/evox-low-approved/verified/evaluations/result-0002.json",
+      "development_score": 2014.0,
+      "development_certified": 14,
+      "candidate_executions_ok": 16,
+      "candidate_executions_other": 0,
+      "provenance": "official EvoX generated"
+    }
+  ]
+}

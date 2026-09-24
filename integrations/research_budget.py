@@ -280,6 +280,8 @@ def main():
     parser.add_argument("--port", type=int, default=8877)
     parser.add_argument("--max-tokens", type=int, default=4000)
     parser.add_argument("--reasoning-reserve", type=int, default=20_000)
+    parser.add_argument("--timeout", type=int, default=180,
+                        help="upstream request timeout in seconds")
     args = parser.parse_args()
     ledger = DurableBudget(args.ledger, max_requests=args.max_requests,
                            max_usd=args.max_usd,
@@ -287,7 +289,8 @@ def main():
                            output_rate=args.output_usd_per_million)
     broker = Broker(("127.0.0.1", args.port), upstream_url=args.upstream_url,
                     model=args.model, api_key_env=args.api_key_env, ledger=ledger,
-                    max_tokens=args.max_tokens, reasoning_reserve=args.reasoning_reserve)
+                    max_tokens=args.max_tokens, reasoning_reserve=args.reasoning_reserve,
+                    timeout=args.timeout)
     print(json.dumps({"base_url": "http://127.0.0.1:%d/v1" % broker.server_port,
                       "model": args.model, "ledger": args.ledger}), flush=True)
     try:

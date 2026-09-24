@@ -1,0 +1,82 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.0028930000000000006,
+      "id": 1,
+      "input_tokens": 1243,
+      "kind": "chat",
+      "output_tokens": 24,
+      "reservation_overrun": false,
+      "reserved_usd": 0.13460039999999998,
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0028996000000000004,
+      "id": 2,
+      "input_tokens": 1243,
+      "kind": "chat",
+      "output_tokens": 25,
+      "reservation_overrun": false,
+      "reserved_usd": 0.13460039999999998,
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.033268400000000004,
+      "id": 3,
+      "input_tokens": 11810,
+      "kind": "chat",
+      "output_tokens": 1104,
+      "reservation_overrun": false,
+      "reserved_usd": 0.23927640000000003,
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.054859200000000004,
+      "id": 4,
+      "input_tokens": 15168,
+      "kind": "chat",
+      "output_tokens": 3256,
+      "reservation_overrun": false,
+      "reserved_usd": 0.2415622,
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.23101760000000002,
+      "id": 5,
+      "input_tokens": 21986,
+      "kind": "chat",
+      "output_tokens": 27674,
+      "reservation_overrun": false,
+      "reserved_usd": 0.279631,
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.1019634,
+      "id": 6,
+      "input_tokens": 22020,
+      "kind": "chat",
+      "output_tokens": 8109,
+      "reservation_overrun": false,
+      "reserved_usd": 0.27999180000000007,
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0727716,
+      "id": 7,
+      "input_tokens": 22035,
+      "kind": "chat",
+      "output_tokens": 3681,
+      "reservation_overrun": false,
+      "reserved_usd": 0.280126,
+      "status": "ok"
+    }
+  ],
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 2.2,
+    "max_requests": 13,
+    "max_usd": 6.5975308,
+    "output_rate": 6.6
+  },
+  "spent_usd": 0.4996728000000001
+}

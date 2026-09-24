@@ -1,0 +1,170 @@
+{
+  "kind": "executable_program",
+  "candidate_hash": "4fc49ae8d742e6118602f1e9a08ea66f70a3a598a5ae245a7cbcf56175419499",
+  "combined_score": 0.0,
+  "certified": 1,
+  "new_certified": 0,
+  "total_families": 1,
+  "feedback": "0 new exact family certificates; 1/1 total; 1 execution or format failures. Misses do not prove infeasibility.",
+  "families": [
+    {
+      "case": {
+        "id": "k4-mask113-order3821",
+        "m": 8,
+        "labels": [
+          1,
+          7,
+          3,
+          8,
+          2,
+          6,
+          5,
+          4
+        ],
+        "mask": 113,
+        "blocks": 4
+      },
+      "status": "INVALID_OUTPUT",
+      "candidate_run": {
+        "status": "INVALID_OUTPUT",
+        "seconds": 0.04118320799898356,
+        "isolation": "macos_seatbelt",
+        "reason": "expected bounded list of words"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "6/7",
+          "1/7",
+          "0",
+          "0"
+        ],
+        "base": "342/7",
+        "pivots": 3
+      },
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "6/7",
+          "1/7",
+          "0",
+          "0"
+        ],
+        "base": "342/7",
+        "pivots": 3
+      },
+      "baseline_certified": true,
+      "certificate": {
+        "bounds": {
+          "base": "342/7",
+          "gamma": [
+            "6",
+            "36/7",
+            "3",
+            "6/7"
+          ],
+          "margin": "43/7"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 49,
+              "gamma": [
+                5,
+                6,
+                3,
+                0
+              ],
+              "state": [
+                0,
+                1,
+                7,
+                3,
+                8,
+                0,
+                2,
+                0,
+                6,
+                0,
+                5,
+                4
+              ],
+              "target": [
+                0,
+                1,
+                7,
+                3,
+                8,
+                0,
+                2,
+                0,
+                6,
+                0,
+                5,
+                4
+              ],
+              "word": "RXLXLLXLLLXRXRXRRXRRRXLXLXLXLXLLLLLXRXRXRXRRRXRXR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "6/7"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 48,
+              "gamma": [
+                12,
+                0,
+                3,
+                6
+              ],
+              "state": [
+                0,
+                1,
+                7,
+                3,
+                8,
+                0,
+                2,
+                0,
+                6,
+                0,
+                5,
+                4
+              ],
+              "target": [
+                0,
+                1,
+                7,
+                3,
+                8,
+                0,
+                2,
+                0,
+                6,
+                0,
+                5,
+                4
+              ],
+              "word": "RRRRXRRXLXLLXLXLLXRXRXRXLXLLLLXRXLXLXRRRXRXRXRRX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "1/7"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    }
+  ],
+  "isolation": "macos_seatbelt",
+  "limitations": [
+    "Finite selected families only; universal scope of each accepted mixture relies on reviewed manuscript lemmas."
+  ]
+}

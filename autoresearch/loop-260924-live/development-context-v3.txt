@@ -1,0 +1,29 @@
+LRX Lab research context (development evidence only, revision 3 on 2026-09-24)
+
+Goal and scope
+- The general visible sorting-radius conjecture E_r(n) <= T_m(n) is open. This bounded program search studies m=8 families with 4..7 positive zero blocks. A result on these 16 selected development families is not a full m=8 proof.
+- The accepted family certificate uses complete L/R/X sorting words on the unit-block state. Trusted replay computes a direct resource profile (base, one slope per retained zero block). An elementary triangle bound controls the direct word's expansion to arbitrary positive block lengths. An exact rational mixture certifies a named family when nonnegative weights sum to 1, weighted base < 31+6k, and each weighted slope <= 6. Finite sample replays guard the implementation; they do not alone prove the all-length statement. A miss or timeout proves no impossibility.
+
+Frozen development baseline
+- Cases: 16 residual families, four each with 4, 5, 6, 7 blocks. The same fixed 48-source direct catalog profiles are reused in every evaluation. This catalog alone certifies 12/16.
+- The executable seed uses monotone adjacent-inversion sorting with four physical cuts and left/right shortest-rotation variants. The trusted offline evaluator gives 14/16 certificates, two beyond catalog, with score 2014.0 and zero execution/format failures. Its two remaining misses are k5-mask302-order15713 (labels 4,1,7,8,5,6,3,2; mask 302) and k6-mask315-order31970 (labels 7,3,4,5,1,6,2,8; mask 315). These are development misses, not counterexamples.
+- Prefer constructions that add complementary block-slope vectors on those misses. A shorter word alone can still have an unusable slope. Reusable rules matter, but report case-specific constructions as specializations; they are allowed when independently certified. Inspect raw words, base, gamma, and candidate diffs from the development archive when useful.
+- In the fixed development LP, the k5 miss has base 24149/392 against strict target <61 (deficit 237/392); slopes 2..5 are tight at 6. The k6 miss has base 1817/27 against strict target <67 (deficit 8/27); slopes 2, 5, 6 are tight at 6 and slope 4 is 215/36. These are outcomes for the current finite profile pool, not optimality or infeasibility proofs.
+- Optional reduced-cost search filters for one new profile (base,gamma) are k5: base+(11/14)gamma2+(197/196)gamma3+(1/8)gamma4+(261/392)gamma5 <30221/392; k6: base+(1/3)gamma2+(91/27)gamma5+(8/9)gamma6 <2561/27. They prioritize complementary columns near the current LP face. They are development guidance, not certificate conditions; all proposed words still face full trusted replay and exact mixture checking.
+
+Prior findings and claim boundaries
+- The supplied nine-gap m=8 theorem covers the nine-positive-block family via a reviewed source argument; it does not close the 4..7-block residual or the full m=8 case. The earlier projection-union global totals remain partly attributed.
+- The earlier local JSON mixture-policy campaign added five named all-positive-length family certificates beyond its fixed catalog (four development, one fresh confirmation) on different frozen cases. Its EvoX strategy rewrite did not improve its best. It is evidence that cut/rotation variants can supply complementary profiles, not evidence that an optimizer is superior here.
+- The manuscript's stronger lifting candidate A_P <= P+m-2 fails on documented finite r=3 states. This does not refute the sorting-radius conjecture and is not a valid premise for a proof.
+- Official GEPA, AdaEvolve, and EvoX integrations passed isolated offline smokes on this same development set. All selected the seed; those tests established execution and trace plumbing, not model performance.
+
+Use only development feedback in proposals or reflections. Confirmation is reserved for a one-shot evaluation after finalists are frozen. Do not claim an engine ranking from this small adaptive sequence or a theorem from a model explanation.
+
+Post-hoc deterministic development control (added after live prompts began)
+- An independently executed all-cuts variant of the seed certifies 15/16 on the same 16 development cases, compared with the original frozen four-cut seed 14/16 and fixed catalog 12/16. This is offline control evidence, not an LLM result or the precommitted campaign baseline.
+- It closes k6-mask315-order31970: cut 11, prefer-right yields a complete word with direct base 70 and gamma [6,7,10,7,4,5]. A five-word rational mixture has weighted base 1136/17 < 67 (margin 3/17) and slopes [199/34,6,6,99/17,6,6], certifying this named family for all positive block lengths. The remaining k5 family is uncertified by this control.
+- The earlier k6 finite-pool deficit and reduced-cost filter above describe the original four-cut seed pool before this post-hoc new column; do not present them as current k6 failure. Keep the original seed as the run's precommitted comparison and attribute the k6 gain to the deterministic control.
+
+Development-only k5 local target (future fresh arms, not a certificate)
+- For the remaining k5-mask302-order15713, the visible unit state is (4,0,1,0,7,0,8,5,0,6,3,2,0). The independent all-cuts control yielded a 57-letter complete word at physical cut 4 or 10 with prefer-left, direct block slopes [8,11,9,3,6] left-to-right (retained gaps 1,2,3,5,8). Its old finite-pool dual reduced cost is +55/28.
+- A new word with the same slopes but direct base at least 2 lower, or with the same base but slope 3 at least 2 lower, slope 2 at least 3 lower, or slope 5 at least 3 lower, would cross that old-dual negative-reduced-cost *screen*. This only motivates local variation. Such a word would still require trusted replay and an exact LP mixture with weighted base <61 and slopes <=6; negative reduced cost alone is not a certificate.

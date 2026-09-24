@@ -1,0 +1,72 @@
+{
+  "kind": "executable_program",
+  "candidate_hash": "077f0c4ab91f330e9f496a2d6a87e87300060b5c2f6b8e3b2c1b425827ce971c",
+  "combined_score": -1.0,
+  "certified": 0,
+  "new_certified": 0,
+  "total_families": 1,
+  "feedback": "0 new exact family certificates; 0/1 total; 1 execution or format failures. Misses do not prove infeasibility.",
+  "families": [
+    {
+      "case": {
+        "id": "k6-mask315-order31970",
+        "m": 8,
+        "labels": [
+          7,
+          3,
+          4,
+          5,
+          1,
+          6,
+          2,
+          8
+        ],
+        "mask": 315,
+        "blocks": 6
+      },
+      "status": "INVALID_OUTPUT",
+      "candidate_run": {
+        "status": "INVALID_OUTPUT",
+        "seconds": 0.039418416999978945,
+        "isolation": "macos_seatbelt",
+        "reason": "expected bounded list of words"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "5/18",
+          "0",
+          "1/4",
+          "19/108",
+          "0",
+          "8/27"
+        ],
+        "base": "1817/27",
+        "pivots": 9
+      },
+      "baseline_lp": {
+        "status": "NO_CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "5/18",
+          "0",
+          "1/4",
+          "19/108",
+          "0",
+          "8/27"
+        ],
+        "base": "1817/27",
+        "pivots": 9
+      },
+      "baseline_certified": false,
+      "certificate": null
+    }
+  ],
+  "isolation": "macos_seatbelt",
+  "limitations": [
+    "Finite selected families only; universal scope of each accepted mixture relies on reviewed manuscript lemmas."
+  ]
+}

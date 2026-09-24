@@ -1,0 +1,45 @@
+{
+  "status": "FROZEN_BY_ROOT_BEFORE_CONFIRMATION",
+  "purpose": "one-shot sealed confirmation comparison; no model receives results",
+  "confirmation_scope": "same 8 frozen cases and fixed direct catalog baseline for all five sources",
+  "selection_rule": "replace provisional EvoX source only if a later valid generated candidate strictly improves development certificates before root freeze",
+  "sources": [
+    {
+      "label": "fixed_catalog_only",
+      "role": "control",
+      "source_snapshot": "autoresearch/loop-260924-live/confirmation-prep/catalog_only.py",
+      "sha256": "bf0cad88e465e924a0fcdad5810448ee3e72ec228805c92a1e713c22bc3ea6cb",
+      "development_note": "no candidate words; fixed direct catalog only"
+    },
+    {
+      "label": "original_four_cut_seed",
+      "role": "control",
+      "source_snapshot": "autoresearch/loop-260924-live/confirmation-prep/seed.py",
+      "sha256": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3",
+      "development_note": "official selected best seed; not a generated improvement"
+    },
+    {
+      "label": "deterministic_all_cuts",
+      "role": "post_hoc_control",
+      "source_snapshot": "autoresearch/loop-260924-live/confirmation-prep/allcuts.py",
+      "sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+      "development_note": "15/16 development control, one above four-cut seed"
+    },
+    {
+      "label": "adaevolve_valid_generated",
+      "role": "official_generated",
+      "source_snapshot": "autoresearch/loop-260924-live/confirmation-prep/ada_generated.py",
+      "sha256": "a5712e6b25e33572167d2a36d9a11ae3e048cbce4d184077dca216a7da2af129",
+      "development_note": "valid 14/16 development candidate tied seed"
+    },
+    {
+      "label": "evox_valid_generated",
+      "role": "official_generated",
+      "source_snapshot": "autoresearch/loop-260924-live/confirmation-prep/evox_generated.py",
+      "sha256": "aa416e9ce56a620b9670276ffe498c3d653c583aff9edc22e748a2dc95611dc2",
+      "development_note": "provisional valid 14/16 development candidate; replace only on strict development gain"
+    }
+  ],
+  "excluded": "invalid GEPA proposals and post-hoc repairs",
+  "finalists_manifest_sha256": "a73cfdbfebc71afea6101f84ff4d4b079e66bcea3290f32274e37c4af3695d03"
+}

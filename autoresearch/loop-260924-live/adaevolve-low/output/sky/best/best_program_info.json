@@ -1,0 +1,1619 @@
+{
+  "id": "21395f48-ede0-4565-b856-1b198a47063d",
+  "generation": 0,
+  "iteration": 0,
+  "timestamp": 1790244639.023944,
+  "parent_id": null,
+  "metrics": {
+    "combined_score": 2014.0,
+    "artifacts": {
+      "feedback": "2 new exact family certificates; 14/16 total; 0 execution or format failures. Misses do not prove infeasibility.",
+      "case_statuses": [
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok"
+      ],
+      "traces": [
+        {
+          "case_id": "k4-mask23-order35811",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.03881137500866316,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXRXRRXRXRRXRXRXRXRXRXRXLLLLXRXRXRXLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLL",
+              "base": 108,
+              "gamma": [
+                23,
+                20,
+                17,
+                11
+              ]
+            },
+            {
+              "word": "XRRXRXRRXLXLXLXRRRRXLXRRXLXLXLXRRRRXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLL",
+              "base": 106,
+              "gamma": [
+                27,
+                24,
+                21,
+                15
+              ]
+            },
+            {
+              "word": "XRXLXLXLLXLXRXLLXRXRXLLLXLLXRXRXRXRXLLLLLXRXRXRXLLLLXRXRXRXLLLLXLXRRXLXL",
+              "base": 72,
+              "gamma": [
+                10,
+                7,
+                17,
+                11
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k4-mask135-order24096",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.03998549998505041,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXRXRXRRXRRRRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLXRXRXLLLXRXRXRXRXRRRRR",
+              "base": 99,
+              "gamma": [
+                21,
+                18,
+                15,
+                4
+              ]
+            },
+            {
+              "word": "XRRXRRRRXLXLXLXRRRRXLXRRXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXRRRRRRXLXLXLXLXRRRRRXLXLXLXRRR",
+              "base": 101,
+              "gamma": [
+                25,
+                22,
+                19,
+                4
+              ]
+            },
+            {
+              "word": "XRXRXLXRRRXRXRXRXRXRXLLLXRXLLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXLXLXRRRXRXLLXLXRRXLXL",
+              "base": 89,
+              "gamma": [
+                11,
+                8,
+                12,
+                13
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k4-mask432-order21829",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.040591874974779785,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXRXRRRXRXRRXRXRXRXRXRXRXLLLLLXRXLLLXRXRXRXRXLLLLLXRXRXLLLLLL",
+              "base": 62,
+              "gamma": [
+                12,
+                9,
+                3,
+                2
+              ]
+            },
+            {
+              "word": "XLXRXRRRXRXRRXLXLXRRRXLXRRXLXLXLXRRRRXLXLXLXRRRRXLXRRXRX",
+              "base": 56,
+              "gamma": [
+                11,
+                8,
+                2,
+                1
+              ]
+            },
+            {
+              "word": "LXRRXRRXRXRXRXRXRXRXLLXRXLLLLXRXRXRXLLLLXLXRXRXRXRXRXRXRRRRRXL",
+              "base": 62,
+              "gamma": [
+                11,
+                8,
+                6,
+                5
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k4-mask113-order3821",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.03886425000382587,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXLXRXLLXLLXRXRXRXRXRRRXRXRXRXRXRXRXRXLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRR",
+              "base": 76,
+              "gamma": [
+                23,
+                11,
+                8,
+                5
+              ]
+            },
+            {
+              "word": "XLXLXLXLLXRXRXRXRXLXRRRRXRXLXRRXLXRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRRR",
+              "base": 78,
+              "gamma": [
+                23,
+                11,
+                8,
+                5
+              ]
+            },
+            {
+              "word": "LXRXRRXRXRXRXRXRXRXRXLXLXLXLXRXLLXRXRXRXRXLLLLLXRXLLXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXLLLLLXLX",
+              "base": 95,
+              "gamma": [
+                9,
+                12,
+                15,
+                12
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask425-order11302",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.03790295901126228,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXRXLLXLLXRXRXRXRXRRRXRRXRXRXRXRXRXLLLXRXLLLXRXRXRXRXLLLLLXRXRXRXRXRXRRRR",
+              "base": 74,
+              "gamma": [
+                23,
+                14,
+                8,
+                2,
+                1
+              ]
+            },
+            {
+              "word": "XLXLXLLXLXLLXLXRXRXLXRRXLXRRRXLXLXLXLLLLXRXRXRXRXRXRRRXLXLXLXRRRRXRXLXR",
+              "base": 71,
+              "gamma": [
+                24,
+                15,
+                9,
+                3,
+                0
+              ]
+            },
+            {
+              "word": "LXLLLLXRXLLXLXRXRXRXRXLLLLLXRXRXRXRXRXLLLLLLXLXRXRXRXRXRXRXRRRRRRXLXL",
+              "base": 69,
+              "gamma": [
+                4,
+                12,
+                10,
+                4,
+                3
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask283-order33834",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.04087520801112987,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXRXLLLXRXLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRR",
+              "base": 113,
+              "gamma": [
+                21,
+                18,
+                12,
+                9,
+                3
+              ]
+            },
+            {
+              "word": "XLLXLXLLXRXRXRRXLXLXRRRXLXRRRRRRXLXLXRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRR",
+              "base": 127,
+              "gamma": [
+                23,
+                20,
+                14,
+                11,
+                1
+              ]
+            },
+            {
+              "word": "XRXRXRXRXRRXRXRXRXRXLLLXRXLLLXRXRXLLLLLLXLXLXRRRXRXLLXLXRRXLXL",
+              "base": 62,
+              "gamma": [
+                11,
+                8,
+                9,
+                6,
+                10
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask333-order27563",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.04051895800512284,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXRXLLLXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRRRXRXRRXRXRXRXRXRXLLLLLXRXRXLLLXRXRXRXRXLLLLLXRXRXLLLLLL",
+              "base": 96,
+              "gamma": [
+                23,
+                17,
+                14,
+                5,
+                3
+              ]
+            },
+            {
+              "word": "XLXRXRRRXRXLXRRXLXRRXRXLXLXRRRXLXLXLXLXRRRRRXRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXLXLXRRRRXLXLXRR",
+              "base": 98,
+              "gamma": [
+                23,
+                17,
+                14,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XLXRXRXLXRRXRXRXRXRXRXRXRXRXLLXLXRXRXLLLLXRXRXRXLLLLXRXLLXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXRXRXRRRRRRXLXLXRRRXLXLX",
+              "base": 115,
+              "gamma": [
+                16,
+                13,
+                14,
+                11,
+                15
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask302-order15713",
+          "status": "NO_CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.0406807090039365,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "LXRXLLLXRXLLLXRXRXLLLXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRRRRR",
+              "base": 96,
+              "gamma": [
+                18,
+                15,
+                12,
+                6,
+                3
+              ]
+            },
+            {
+              "word": "LXRXRRRXRXLXRRXLXLXRRRXLXRRXLXLXLXRRRRXLXLXLXLXRRRRRXLXLXLXRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXRR",
+              "base": 102,
+              "gamma": [
+                20,
+                17,
+                14,
+                8,
+                1
+              ]
+            },
+            {
+              "word": "RXRXRXRXRXRXRXRXRXRXLXLLXRXLLXRXRXRXLLLLLXRXRXRXRXLLLLLLXLXLXLXRRRXLXLX",
+              "base": 71,
+              "gamma": [
+                5,
+                15,
+                12,
+                6,
+                7
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "NO_CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask380-order36371",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.040079541999148205,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXLLLLLXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRRR",
+              "base": 93,
+              "gamma": [
+                17,
+                14,
+                11,
+                8,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XLLXRXLLLXRXRXRXRXRRRXRXLXRRXLXRRXLXLXRRRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRR",
+              "base": 93,
+              "gamma": [
+                17,
+                14,
+                11,
+                8,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "LXRRXRXLXLXLXLLLLXLXRXRXRXLLLLXLXRXRXRXLLLLXLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXLXL",
+              "base": 80,
+              "gamma": [
+                7,
+                13,
+                14,
+                11,
+                8,
+                6
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask373-order37856",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.040438959025777876,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXRXLLLXRXRXLLLXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRXRXRRRXRRXLXRRRXRXRXRXRXRXRXLLLLLLLXRXRXRXLLLLXRXRXRXRRRRRR",
+              "base": 106,
+              "gamma": [
+                22,
+                16,
+                10,
+                7,
+                4,
+                2
+              ]
+            },
+            {
+              "word": "XLXRXLLLXLXRXRXLXRRXLXRRXRRRRXLXRRXRXLXLXRRRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRXLXRRXLXR",
+              "base": 104,
+              "gamma": [
+                23,
+                17,
+                11,
+                8,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XLXRXRXLXRRXRXRXRXRXRXRXRXRXRXLXLLXLXLXRXLLXRXRXRXRXLLLLLXRXLLXRXLLXRXRXRXRXRXRXLLLLLLLXLXLXRRRXRXRXRXRXRXLLLLLLXLXRRXLXL",
+              "base": 121,
+              "gamma": [
+                14,
+                15,
+                13,
+                16,
+                13,
+                13
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask359-order24703",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.040554666018579155,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXRXRXRRRXRXLXRRRXRXRXRXRXRXRXRXRXRRRRRXLXRRRXRXRXRXRXRXLLLLLXRXRXRXLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXRRRRR",
+              "base": 115,
+              "gamma": [
+                22,
+                19,
+                16,
+                7,
+                6,
+                2
+              ]
+            },
+            {
+              "word": "XLLXRXLLLXLXLXRXRRXLXLXLLLXRXRXRXRXRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXRRRRRXRXLXRRXLXRRXLXRRXLXRRXLXRRXLXRRXLXRRXRRR",
+              "base": 111,
+              "gamma": [
+                23,
+                20,
+                17,
+                8,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XRXRRXRXRXRXRXRXRXRXRXLLLXRXRXLLLLXRXLLXRXLLXRXRXLLLXRXRXRXRXRXRXRXRRRRRRXRXRXRXRXRXRXRXRXRRRRRXLXLXRRRXRXLLXLXRRXLXL",
+              "base": 117,
+              "gamma": [
+                13,
+                10,
+                10,
+                11,
+                14,
+                12
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask315-order31970",
+          "status": "NO_CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.04042466700775549,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLLXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLL",
+              "base": 108,
+              "gamma": [
+                23,
+                20,
+                14,
+                11,
+                8,
+                3
+              ]
+            },
+            {
+              "word": "XLLXLXLLXRXLLLXRXRXRXRXRXRXLXLXLXRRRRXLXLXLXLLLLLLXLXLXRRXRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXRRXRXRXR",
+              "base": 102,
+              "gamma": [
+                24,
+                21,
+                15,
+                12,
+                9,
+                0
+              ]
+            },
+            {
+              "word": "XRXRXRXLXLXLXLXLLXLXLXRXLLXLXLXRXLLXRXRXRXRXLLLLLXRXRXRXRXLLLLLXRXRXRXRXLLLLLXRXLLXLXLXRRRXLXL",
+              "base": 94,
+              "gamma": [
+                10,
+                7,
+                14,
+                11,
+                14,
+                9
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "NO_CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask351-order6128",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.0442357909923885,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRRRR",
+              "base": 108,
+              "gamma": [
+                23,
+                20,
+                17,
+                14,
+                11,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRRRRXLXRRXRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRRR",
+              "base": 106,
+              "gamma": [
+                23,
+                20,
+                17,
+                14,
+                11,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "LXLLXLXRXLLXLXLXRXLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXRXLLXRXRXRXRXRXRXRXRXRRRRRRXRXRXRXRXRXLLLLLLXRXLLXLXLXRRRXLXL",
+              "base": 113,
+              "gamma": [
+                7,
+                8,
+                16,
+                13,
+                16,
+                10,
+                6
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask491-order37059",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.040541374997701496,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLXRXRXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRXRRRRRXRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRR",
+              "base": 111,
+              "gamma": [
+                22,
+                19,
+                13,
+                7,
+                4,
+                3,
+                2
+              ]
+            },
+            {
+              "word": "XLLXLXLLXLXRXRXLXRRXRXRXLXLXLXLLLLXRXRXRXRXRRRRXLXLXLXLXLLLLLLXRXRXRXRXRXRXRRRRRRRXRXRXRXRXRXRXRXRXRXRXRXR",
+              "base": 106,
+              "gamma": [
+                23,
+                20,
+                14,
+                8,
+                5,
+                2,
+                1
+              ]
+            },
+            {
+              "word": "XRXRXRXRRXLXRRRXRXRXRXLXLLXLXRXRXRXRRRXLXLXLXLXLXLXLXRXRXRXLLLLXRXLLXRXLLXLXLXLXRRRXRXLLXLXRRXLXL",
+              "base": 97,
+              "gamma": [
+                11,
+                8,
+                13,
+                11,
+                10,
+                7,
+                10
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask223-order9748",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.04069474997231737,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXRXRRRXRRXRXRRXRXRXRXRXRXRXRXRXRRRXRXRRXLXLXRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXRXRXRXRXRRRRRR",
+              "base": 124,
+              "gamma": [
+                22,
+                19,
+                16,
+                13,
+                10,
+                4,
+                3
+              ]
+            },
+            {
+              "word": "XRRXRRXLXRRXLXRRRXLXLXLXRRRRXRXLXLXLXLXRRRRRXLXLXRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXRRRRRRRX",
+              "base": 127,
+              "gamma": [
+                23,
+                20,
+                17,
+                14,
+                11,
+                5,
+                2
+              ]
+            },
+            {
+              "word": "LXLLLXRXLLLLXLXLXRXRXRXRXRXLLLLLLXRXLLXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRRRRRRRXRXLLXLXLXRRRXLXL",
+              "base": 101,
+              "gamma": [
+                8,
+                9,
+                11,
+                8,
+                9,
+                9,
+                8
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask445-order23635",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.03948458400554955,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRXRRRXRXRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRR",
+              "base": 112,
+              "gamma": [
+                21,
+                15,
+                12,
+                9,
+                6,
+                4,
+                3
+              ]
+            },
+            {
+              "word": "XLXLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRXRRRXRXRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRR",
+              "base": 122,
+              "gamma": [
+                23,
+                17,
+                14,
+                11,
+                8,
+                2,
+                1
+              ]
+            },
+            {
+              "word": "XLXLLXLLXRXLLLXRXRXRXRXRRRRXLXRRXRXRXRXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXRXRXRXRXRRRRRRRXRXLLXLXLXRRRXLXL",
+              "base": 105,
+              "gamma": [
+                18,
+                13,
+                10,
+                7,
+                4,
+                10,
+                15
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        }
+      ],
+      "evaluation": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/adaevolve-low/verified/evaluations/result-0001.json"
+    },
+    "certified": 14,
+    "new_certified": 2,
+    "candidate_hash": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3",
+    "test_combined_score": 2014.0,
+    "test_artifacts": {
+      "feedback": "2 new exact family certificates; 14/16 total; 0 execution or format failures. Misses do not prove infeasibility.",
+      "case_statuses": [
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok"
+      ],
+      "traces": [
+        {
+          "case_id": "k4-mask23-order35811",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.08244908301276155,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXRXRRXRXRRXRXRXRXRXRXRXLLLLXRXRXRXLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLL",
+              "base": 108,
+              "gamma": [
+                23,
+                20,
+                17,
+                11
+              ]
+            },
+            {
+              "word": "XRRXRXRRXLXLXLXRRRRXLXRRXLXLXLXRRRRXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLL",
+              "base": 106,
+              "gamma": [
+                27,
+                24,
+                21,
+                15
+              ]
+            },
+            {
+              "word": "XRXLXLXLLXLXRXLLXRXRXLLLXLLXRXRXRXRXLLLLLXRXRXRXLLLLXRXRXRXLLLLXLXRRXLXL",
+              "base": 72,
+              "gamma": [
+                10,
+                7,
+                17,
+                11
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k4-mask135-order24096",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.1899635000154376,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXRXRXRRXRRRRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLXRXRXLLLXRXRXRXRXRRRRR",
+              "base": 99,
+              "gamma": [
+                21,
+                18,
+                15,
+                4
+              ]
+            },
+            {
+              "word": "XRRXRRRRXLXLXLXRRRRXLXRRXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXRRRRRRXLXLXLXLXRRRRRXLXLXLXRRR",
+              "base": 101,
+              "gamma": [
+                25,
+                22,
+                19,
+                4
+              ]
+            },
+            {
+              "word": "XRXRXLXRRRXRXRXRXRXRXLLLXRXLLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXLXLXRRRXRXLLXLXRRXLXL",
+              "base": 89,
+              "gamma": [
+                11,
+                8,
+                12,
+                13
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k4-mask432-order21829",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07030950000626035,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXRXRRRXRXRRXRXRXRXRXRXRXLLLLLXRXLLLXRXRXRXRXLLLLLXRXRXLLLLLL",
+              "base": 62,
+              "gamma": [
+                12,
+                9,
+                3,
+                2
+              ]
+            },
+            {
+              "word": "XLXRXRRRXRXRRXLXLXRRRXLXRRXLXLXLXRRRRXLXLXLXRRRRXLXRRXRX",
+              "base": 56,
+              "gamma": [
+                11,
+                8,
+                2,
+                1
+              ]
+            },
+            {
+              "word": "LXRRXRRXRXRXRXRXRXRXLLXRXLLLLXRXRXRXLLLLXLXRXRXRXRXRXRXRRRRRXL",
+              "base": 62,
+              "gamma": [
+                11,
+                8,
+                6,
+                5
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k4-mask113-order3821",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.13407420899602585,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXLXRXLLXLLXRXRXRXRXRRRXRXRXRXRXRXRXRXLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRR",
+              "base": 76,
+              "gamma": [
+                23,
+                11,
+                8,
+                5
+              ]
+            },
+            {
+              "word": "XLXLXLXLLXRXRXRXRXLXRRRRXRXLXRRXLXRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRRR",
+              "base": 78,
+              "gamma": [
+                23,
+                11,
+                8,
+                5
+              ]
+            },
+            {
+              "word": "LXRXRRXRXRXRXRXRXRXRXLXLXLXLXRXLLXRXRXRXRXLLLLLXRXLLXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXLLLLLXLX",
+              "base": 95,
+              "gamma": [
+                9,
+                12,
+                15,
+                12
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask425-order11302",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07878991699544713,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXRXLLXLLXRXRXRXRXRRRXRRXRXRXRXRXRXLLLXRXLLLXRXRXRXRXLLLLLXRXRXRXRXRXRRRR",
+              "base": 74,
+              "gamma": [
+                23,
+                14,
+                8,
+                2,
+                1
+              ]
+            },
+            {
+              "word": "XLXLXLLXLXLLXLXRXRXLXRRXLXRRRXLXLXLXLLLLXRXRXRXRXRXRRRXLXLXLXRRRRXRXLXR",
+              "base": 71,
+              "gamma": [
+                24,
+                15,
+                9,
+                3,
+                0
+              ]
+            },
+            {
+              "word": "LXLLLLXRXLLXLXRXRXRXRXLLLLLXRXRXRXRXRXLLLLLLXLXRXRXRXRXRXRXRRRRRRXLXL",
+              "base": 69,
+              "gamma": [
+                4,
+                12,
+                10,
+                4,
+                3
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask283-order33834",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.13509191598859616,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXRXLLLXRXLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRR",
+              "base": 113,
+              "gamma": [
+                21,
+                18,
+                12,
+                9,
+                3
+              ]
+            },
+            {
+              "word": "XLLXLXLLXRXRXRRXLXLXRRRXLXRRRRRRXLXLXRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRR",
+              "base": 127,
+              "gamma": [
+                23,
+                20,
+                14,
+                11,
+                1
+              ]
+            },
+            {
+              "word": "XRXRXRXRXRRXRXRXRXRXLLLXRXLLLXRXRXLLLLLLXLXLXRRRXRXLLXLXRRXLXL",
+              "base": 62,
+              "gamma": [
+                11,
+                8,
+                9,
+                6,
+                10
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask333-order27563",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.09305424999911338,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXRXLLLXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRRRXRXRRXRXRXRXRXRXLLLLLXRXRXLLLXRXRXRXRXLLLLLXRXRXLLLLLL",
+              "base": 96,
+              "gamma": [
+                23,
+                17,
+                14,
+                5,
+                3
+              ]
+            },
+            {
+              "word": "XLXRXRRRXRXLXRRXLXRRXRXLXLXRRRXLXLXLXLXRRRRRXRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXLXLXRRRRXLXLXRR",
+              "base": 98,
+              "gamma": [
+                23,
+                17,
+                14,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XLXRXRXLXRRXRXRXRXRXRXRXRXRXLLXLXRXRXLLLLXRXRXRXLLLLXRXLLXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXRXRXRRRRRRXLXLXRRRXLXLX",
+              "base": 115,
+              "gamma": [
+                16,
+                13,
+                14,
+                11,
+                15
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k5-mask302-order15713",
+          "status": "NO_CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07095374999335036,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "LXRXLLLXRXLLLXRXRXLLLXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRRRRR",
+              "base": 96,
+              "gamma": [
+                18,
+                15,
+                12,
+                6,
+                3
+              ]
+            },
+            {
+              "word": "LXRXRRRXRXLXRRXLXLXRRRXLXRRXLXLXLXRRRRXLXLXLXLXRRRRRXLXLXLXRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXRR",
+              "base": 102,
+              "gamma": [
+                20,
+                17,
+                14,
+                8,
+                1
+              ]
+            },
+            {
+              "word": "RXRXRXRXRXRXRXRXRXRXLXLLXRXLLXRXRXRXLLLLLXRXRXRXRXLLLLLLXLXLXLXRRRXLXLX",
+              "base": 71,
+              "gamma": [
+                5,
+                15,
+                12,
+                6,
+                7
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "NO_CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask380-order36371",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07401916701928712,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXLLLLLXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRRR",
+              "base": 93,
+              "gamma": [
+                17,
+                14,
+                11,
+                8,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XLLXRXLLLXRXRXRXRXRRRXRXLXRRXLXRRXLXLXRRRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRR",
+              "base": 93,
+              "gamma": [
+                17,
+                14,
+                11,
+                8,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "LXRRXRXLXLXLXLLLLXLXRXRXRXLLLLXLXRXRXRXLLLLXLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXLXL",
+              "base": 80,
+              "gamma": [
+                7,
+                13,
+                14,
+                11,
+                8,
+                6
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask373-order37856",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07310312500339933,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXRXLLLXRXRXLLLXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRXRXRRRXRRXLXRRRXRXRXRXRXRXRXLLLLLLLXRXRXRXLLLLXRXRXRXRRRRRR",
+              "base": 106,
+              "gamma": [
+                22,
+                16,
+                10,
+                7,
+                4,
+                2
+              ]
+            },
+            {
+              "word": "XLXRXLLLXLXRXRXLXRRXLXRRXRRRRXLXRRXRXLXLXRRRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRXLXRRXLXR",
+              "base": 104,
+              "gamma": [
+                23,
+                17,
+                11,
+                8,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XLXRXRXLXRRXRXRXRXRXRXRXRXRXRXLXLLXLXLXRXLLXRXRXRXRXLLLLLXRXLLXRXLLXRXRXRXRXRXRXLLLLLLLXLXLXRRRXRXRXRXRXRXLLLLLLXLXRRXLXL",
+              "base": 121,
+              "gamma": [
+                14,
+                15,
+                13,
+                16,
+                13,
+                13
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask359-order24703",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07919595798011869,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXRXRXRRRXRXLXRRRXRXRXRXRXRXRXRXRXRRRRRXLXRRRXRXRXRXRXRXLLLLLXRXRXRXLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXRRRRR",
+              "base": 115,
+              "gamma": [
+                22,
+                19,
+                16,
+                7,
+                6,
+                2
+              ]
+            },
+            {
+              "word": "XLLXRXLLLXLXLXRXRRXLXLXLLLXRXRXRXRXRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXRRRRRXRXLXRRXLXRRXLXRRXLXRRXLXRRXLXRRXLXRRXRRR",
+              "base": 111,
+              "gamma": [
+                23,
+                20,
+                17,
+                8,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XRXRRXRXRXRXRXRXRXRXRXLLLXRXRXLLLLXRXLLXRXLLXRXRXLLLXRXRXRXRXRXRXRXRRRRRRXRXRXRXRXRXRXRXRXRRRRRXLXLXRRRXRXLLXLXRRXLXL",
+              "base": 117,
+              "gamma": [
+                13,
+                10,
+                10,
+                11,
+                14,
+                12
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k6-mask315-order31970",
+          "status": "NO_CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.04114895800012164,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLLXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLL",
+              "base": 108,
+              "gamma": [
+                23,
+                20,
+                14,
+                11,
+                8,
+                3
+              ]
+            },
+            {
+              "word": "XLLXLXLLXRXLLLXRXRXRXRXRXRXLXLXLXRRRRXLXLXLXLLLLLLXLXLXRRXRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXRRXRXRXR",
+              "base": 102,
+              "gamma": [
+                24,
+                21,
+                15,
+                12,
+                9,
+                0
+              ]
+            },
+            {
+              "word": "XRXRXRXLXLXLXLXLLXLXLXRXLLXLXLXRXLLXRXRXRXRXLLLLLXRXRXRXRXLLLLLXRXRXRXRXLLLLLXRXLLXLXLXRRRXLXL",
+              "base": 94,
+              "gamma": [
+                10,
+                7,
+                14,
+                11,
+                14,
+                9
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "NO_CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask351-order6128",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07659350000903942,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRRRR",
+              "base": 108,
+              "gamma": [
+                23,
+                20,
+                17,
+                14,
+                11,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "XLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRRRRXLXRRXRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRRR",
+              "base": 106,
+              "gamma": [
+                23,
+                20,
+                17,
+                14,
+                11,
+                5,
+                1
+              ]
+            },
+            {
+              "word": "LXLLXLXRXLLXLXLXRXLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXRXLLXRXRXRXRXRXRXRXRXRRRRRRXRXRXRXRXRXLLLLLLXRXLLXLXLXRRRXLXL",
+              "base": 113,
+              "gamma": [
+                7,
+                8,
+                16,
+                13,
+                16,
+                10,
+                6
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask491-order37059",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.07815500002470799,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLXRXRXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRXRRRRRXRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRR",
+              "base": 111,
+              "gamma": [
+                22,
+                19,
+                13,
+                7,
+                4,
+                3,
+                2
+              ]
+            },
+            {
+              "word": "XLLXLXLLXLXRXRXLXRRXRXRXLXLXLXLLLLXRXRXRXRXRRRRXLXLXLXLXLLLLLLXRXRXRXRXRXRXRRRRRRRXRXRXRXRXRXRXRXRXRXRXRXR",
+              "base": 106,
+              "gamma": [
+                23,
+                20,
+                14,
+                8,
+                5,
+                2,
+                1
+              ]
+            },
+            {
+              "word": "XRXRXRXRRXLXRRRXRXRXRXLXLLXLXRXRXRXRRRXLXLXLXLXLXLXLXRXRXRXLLLLXRXLLXRXLLXLXLXLXRRRXRXLLXLXRRXLXL",
+              "base": 97,
+              "gamma": [
+                11,
+                8,
+                13,
+                11,
+                10,
+                7,
+                10
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "NO_CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask223-order9748",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.08104562500375323,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLLXRXLLLXRXRXRXRRRXRRXRXRRXRXRXRXRXRXRXRXRXRRRXRXRRXLXLXRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXRXRXRXRXRRRRRR",
+              "base": 124,
+              "gamma": [
+                22,
+                19,
+                16,
+                13,
+                10,
+                4,
+                3
+              ]
+            },
+            {
+              "word": "XRRXRRXLXRRXLXRRRXLXLXLXRRRRXRXLXLXLXLXRRRRRXLXLXRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXRRRRRRRX",
+              "base": 127,
+              "gamma": [
+                23,
+                20,
+                17,
+                14,
+                11,
+                5,
+                2
+              ]
+            },
+            {
+              "word": "LXLLLXRXLLLLXLXLXRXRXRXRXRXLLLLLLXRXLLXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRRRRRRRXRXLLXLXLXRRRXLXL",
+              "base": 101,
+              "gamma": [
+                8,
+                9,
+                11,
+                8,
+                9,
+                9,
+                8
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        },
+        {
+          "case_id": "k7-mask445-order23635",
+          "status": "CERTIFICATE",
+          "candidate_run": {
+            "status": "ok",
+            "seconds": 0.03961854201043025,
+            "isolation": "macos_seatbelt"
+          },
+          "accepted_words": [
+            {
+              "word": "XLXLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRXRRRXRXRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRR",
+              "base": 112,
+              "gamma": [
+                21,
+                15,
+                12,
+                9,
+                6,
+                4,
+                3
+              ]
+            },
+            {
+              "word": "XLXLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRXRRRXRXRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRR",
+              "base": 122,
+              "gamma": [
+                23,
+                17,
+                14,
+                11,
+                8,
+                2,
+                1
+              ]
+            },
+            {
+              "word": "XLXLLXLLXRXLLLXRXRXRXRXRRRRXLXRRXRXRXRXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXRXRXRXRXRRRRRRRXRXLLXLXLXRRRXLXL",
+              "base": 105,
+              "gamma": [
+                18,
+                13,
+                10,
+                7,
+                4,
+                10,
+                15
+              ]
+            }
+          ],
+          "rejected_words": [],
+          "lp_status": "CERTIFICATE",
+          "baseline_lp_status": "CERTIFICATE"
+        }
+      ],
+      "evaluation": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/adaevolve-low/verified/evaluations/result-0004.json"
+    },
+    "test_certified": 14,
+    "test_new_certified": 2,
+    "test_candidate_hash": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3"
+  },
+  "language": "python",
+  "saved_at": 1790245485.2165031
+}

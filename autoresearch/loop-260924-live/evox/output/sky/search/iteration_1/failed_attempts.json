@@ -1,0 +1,13 @@
+{
+  "iteration": 1,
+  "failed_attempts": [
+    {
+      "attempt_number": 1,
+      "solution_iter": 3,
+      "error": "LLM generation failed: Error code: 429 - {'error': {'message': 'broker halted: upstream_error', 'type': 'budget_exhausted'}}",
+      "stage": "generation",
+      "solution": "",
+      "program_id": "unknown"
+    }
+  ]
+}

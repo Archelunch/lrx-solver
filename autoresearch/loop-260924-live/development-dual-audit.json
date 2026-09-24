@@ -1,0 +1,57 @@
+{
+  "k5-mask302-order15713": {
+    "pool_profiles": 15,
+    "threshold_strictly_below": 61,
+    "exact_pool_minimum_base": "24149/392",
+    "deficit": "237/392",
+    "weighted_slopes": [
+      "2179/392",
+      "6",
+      "6",
+      "6",
+      "6"
+    ],
+    "tight_slope_positions_1_based": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "dual_multipliers": [
+      "11/14",
+      "197/196",
+      "1/8",
+      "261/392"
+    ],
+    "dual_intercept": "30221/392",
+    "minimum_new_seed_reduced_cost": "1135/49",
+    "interpretation": "finite baseline-plus-seed pool only; new word must have negative reduced cost to lower this pool optimum"
+  },
+  "k6-mask315-order31970": {
+    "pool_profiles": 14,
+    "threshold_strictly_below": 67,
+    "exact_pool_minimum_base": "1817/27",
+    "deficit": "8/27",
+    "weighted_slopes": [
+      "50/9",
+      "6",
+      "209/36",
+      "215/36",
+      "6",
+      "6"
+    ],
+    "tight_slope_positions_1_based": [
+      2,
+      5,
+      6
+    ],
+    "dual_multipliers": [
+      "1/3",
+      "91/27",
+      "8/9"
+    ],
+    "dual_intercept": "2561/27",
+    "minimum_new_seed_reduced_cost": "55/9",
+    "interpretation": "finite baseline-plus-seed pool only; new word must have negative reduced cost to lower this pool optimum"
+  }
+}

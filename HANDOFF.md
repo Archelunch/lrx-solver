@@ -2,6 +2,38 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Latest completed work: official program search (2026-09-24)
+
+The bounded official GEPA, SkyDiscover AdaEvolve, and EvoX live portfolio is
+closed. On the frozen 16 development families the fixed direct catalog
+certifies 12/16, the original executable seed 14/16, and an independent
+post-hoc all-cuts control 15/16. The control adds the named
+`k6-mask315-order31970` certificate for all positive block lengths by an
+exact direct-word mixture; `k5-mask302-order15713` remains uncertified.
+Every paid arm's best stayed at the 14/16 seed. Valid AdaEvolve and EvoX
+programs tied it; invalid outputs, a failed strategy diff, and upstream
+timeouts supplied development feedback, not a negative theorem.
+
+The coordinator froze four finalist source hashes before local one-shot
+confirmation. The catalog-only control and all four finalists certified the
+same 6/8, zero addition over catalog; 40 candidate executions succeeded in
+Seatbelt. The independent exact audit repriced 38 catalog profiles, checked
+72 support appearances and 216 nonunit literal expansions. Confirmation is
+consumed and must not enter future model prompts. See the [final report](autoresearch/loop-260924-live/report.md),
+[confirmation report](autoresearch/loop-260924-live/confirmation-prep/confirmation-report.md),
+and [frozen finalists](autoresearch/loop-260924-live/finalists/manifest.json).
+
+Four durable broker ledgers account for 18 upstream attempts and $1.902142
+conservatively against the run's 24-attempt/$8 cap. Three timeouts are charged
+at full reservation, with provider billing unknown. The recorded remainder
+of the original $50 allocation is $17.612829 on this conservative basis.
+All model processes are stopped; no more live calls are planned. The final
+guarded suite passed 353 tests in 12.587 seconds with no skips, plus compile,
+CLI smoke and clean trusted lock. Next research should focus on exact
+dual-guided k5 word/profile generation with strict output limits, trusted
+replay/LP and a **new** untouched structural confirmation set. No general
+proof or optimizer ranking follows from this session.
+
 ## Official-framework integration smoke (2026-09-24)
 
 This work is separate from session09's local JSON planner labels. The frozen
@@ -56,13 +88,16 @@ classes. Aim for reusable proof structure and eventually general m.
 
 ## Budget and constraints
 
-Current allocation $50; total recorded spend $30.485029, remaining $19.514971.
+Current allocation $50; recorded spend before the latest iteration was
+$30.485029, remaining $19.514971. The latest four broker ledgers account for
+$1.902142 conservatively, leaving $17.612829 on that basis; actual provider
+billing for three timeout reservations is unknown.
 Session09 cost $0.336410, provider-reported, not invoice-reconciled. Legacy spend
 guard is separate; never silently reset it. Exact payload approved by user.
 Generated program execution and pinned official framework dependencies were
 authorized for the separate isolated pilot (scope:
 `autoresearch/official-integration-260924/authorization.md`); the trusted
 core remains locked.
-No new paid spend is recorded in this handoff update.
+No more paid calls are planned after the closed official iteration.
 Main controller remains1.5625. Source manuscript global totals remain attributed.
 Preserve old untracked runs. No push performed.

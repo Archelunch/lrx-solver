@@ -1,0 +1,303 @@
+{
+  "kind": "executable_program",
+  "candidate_hash": "4fc49ae8d742e6118602f1e9a08ea66f70a3a598a5ae245a7cbcf56175419499",
+  "combined_score": 0.0,
+  "certified": 1,
+  "new_certified": 0,
+  "total_families": 1,
+  "feedback": "0 new exact family certificates; 1/1 total; 1 execution or format failures. Misses do not prove infeasibility.",
+  "families": [
+    {
+      "case": {
+        "id": "k7-mask223-order9748",
+        "m": 8,
+        "labels": [
+          2,
+          8,
+          5,
+          3,
+          1,
+          7,
+          4,
+          6
+        ],
+        "mask": 223,
+        "blocks": 7
+      },
+      "status": "INVALID_OUTPUT",
+      "candidate_run": {
+        "status": "INVALID_OUTPUT",
+        "seconds": 0.07545837500947528,
+        "isolation": "macos_seatbelt",
+        "reason": "expected bounded list of words"
+      },
+      "accepted_words": [],
+      "rejected_words": [],
+      "lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "33/65",
+          "2/65",
+          "0",
+          "0",
+          "0",
+          "27/65",
+          "3/65"
+        ],
+        "base": "942/13",
+        "pivots": 6
+      },
+      "baseline_lp": {
+        "status": "CERTIFICATE",
+        "reason": "exact feasible weights; optimum not independently certified",
+        "weights": [
+          "33/65",
+          "2/65",
+          "0",
+          "0",
+          "0",
+          "27/65",
+          "3/65"
+        ],
+        "base": "942/13",
+        "pivots": 6
+      },
+      "baseline_certified": true,
+      "certificate": {
+        "bounds": {
+          "base": "942/13",
+          "gamma": [
+            "6",
+            "75/13",
+            "72/13",
+            "66/13",
+            "72/13",
+            "6",
+            "6"
+          ],
+          "margin": "7/13"
+        },
+        "support": [
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 66,
+              "gamma": [
+                9,
+                6,
+                3,
+                0,
+                3,
+                9,
+                11
+              ],
+              "state": [
+                0,
+                2,
+                0,
+                8,
+                0,
+                5,
+                0,
+                3,
+                0,
+                1,
+                7,
+                0,
+                4,
+                0,
+                6
+              ],
+              "target": [
+                0,
+                2,
+                0,
+                8,
+                0,
+                5,
+                0,
+                3,
+                0,
+                1,
+                7,
+                0,
+                4,
+                0,
+                6
+              ],
+              "word": "XLLXLLXRXRXRXRRXRXRXLLXLXRXRRRRXLXLXLXLXLLLXRXRRRRRRRRRXLXLXLXRRXL",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "33/65"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 72,
+              "gamma": [
+                12,
+                9,
+                6,
+                3,
+                0,
+                6,
+                9
+              ],
+              "state": [
+                0,
+                2,
+                0,
+                8,
+                0,
+                5,
+                0,
+                3,
+                0,
+                1,
+                7,
+                0,
+                4,
+                0,
+                6
+              ],
+              "target": [
+                0,
+                2,
+                0,
+                8,
+                0,
+                5,
+                0,
+                3,
+                0,
+                1,
+                7,
+                0,
+                4,
+                0,
+                6
+              ],
+              "word": "XRXRRXRRXLXLXLXLXLLLXLLXRXRXRXRXRXLLLXLLLLXRXRXRXRXRXRXRXRRRRRXLXLLXLXRR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "2/65"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 79,
+              "gamma": [
+                2,
+                5,
+                8,
+                11,
+                9,
+                3,
+                0
+              ],
+              "state": [
+                0,
+                2,
+                0,
+                8,
+                0,
+                5,
+                0,
+                3,
+                0,
+                1,
+                7,
+                0,
+                4,
+                0,
+                6
+              ],
+              "target": [
+                0,
+                2,
+                0,
+                8,
+                0,
+                5,
+                0,
+                3,
+                0,
+                1,
+                7,
+                0,
+                4,
+                0,
+                6
+              ],
+              "word": "RXLLXLLXLLXLXLLXLXRRXRRRXRRXRRXLXLLXLLXLXLXRRXRXRRXLXLXLXLXLLXLLLXRXRXRXRXRXRRR",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "27/65"
+          },
+          {
+            "profile": {
+              "kind": "direct",
+              "base": 85,
+              "gamma": [
+                5,
+                8,
+                11,
+                9,
+                6,
+                0,
+                3
+              ],
+              "state": [
+                0,
+                2,
+                0,
+                8,
+                0,
+                5,
+                0,
+                3,
+                0,
+                1,
+                7,
+                0,
+                4,
+                0,
+                6
+              ],
+              "target": [
+                0,
+                2,
+                0,
+                8,
+                0,
+                5,
+                0,
+                3,
+                0,
+                1,
+                7,
+                0,
+                4,
+                0,
+                6
+              ],
+              "word": "RXLLXLLXLXLLXRXRRRXRRXRRRXLXLXLLXLXLXLXLLLLXLXRRXRXRXRRXLXRXRRRXLXLXLXLLLLLXRXRRRRRRX",
+              "affine": true,
+              "origin": "validated_legacy_comparison"
+            },
+            "weight": "3/65"
+          }
+        ],
+        "scope": "all positive lengths via direct word resources, triangle stretch bounds, and exact rational mixture; no comparison cut required"
+      }
+    }
+  ],
+  "isolation": "macos_seatbelt",
+  "limitations": [
+    "Finite selected families only; universal scope of each accepted mixture relies on reviewed manuscript lemmas."
+  ]
+}

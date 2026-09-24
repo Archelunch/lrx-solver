@@ -38,7 +38,9 @@ An [official framework program-search pilot](integrations/official-research.md)
 now runs separately. It uses generated Python under an OS sandbox,
 frozen development families, and trusted replay. Its offline framework smokes
 are documented in [the integration report](autoresearch/official-integration-260924/report.md);
-they do not establish a broader theorem or a paid method comparison.
+the subsequent [bounded live iteration](autoresearch/loop-260924-live/report.md)
+found one independent deterministic named-family certificate and no paid-arm
+improvement. Neither establishes a broader theorem or an engine ranking.
 
 ## Results so far
 
@@ -54,6 +56,19 @@ are finite unless explicitly stated otherwise. Details and evidence:
 | Potentials (Route C) | Two potential functions with short descent arguments that hold for **all m, r**. They give cubic bounds, far weaker than T, but they are the first certificates of this kind here. They were exhaustively certified on 11 complete tables. |
 
 ### Recent results and their limits
+
+- **Official program-search iteration (2026-09-24).** On 16 frozen m=8
+  development families with 4–7 zero blocks, the fixed direct catalog
+  certifies 12, the original four-cut seed 14, and an independent post-hoc
+  all-cuts control **15**. The added k6 family has an exact all-positive-length
+  direct-word mixture certificate; k5 remains uncertified. Paid GEPA,
+  AdaEvolve, and EvoX runs added **zero** development certificates beyond
+  their input. One-shot sealed confirmation gave the catalog and all four
+  frozen finalists the same **6/8**, with zero addition over catalog.
+  Broker accounting records 18 upstream attempts and **$1.902142
+  conservatively accounted**, including full reservations for three timed-out
+  calls whose provider bills are unknown. This is a sequential research
+  portfolio, not a matched engine comparison. See the [final live report](autoresearch/loop-260924-live/report.md).
 
 - **LLM mixture search (session 09).** EvoX and sequential now search JSON word-construction policies. For **$0.33641**, finalists add **five distinct all-length family certificates** beyond the fixed catalog baseline: four development and one fresh confirmation. Both certify 23/30 confirmation families versus 22/30 for the catalog; no engine ranking follows. Including expanded catalog search, this iteration records 41 distinct named certificates. See the [session 09 report](autoresearch/loop-260924-optimizer/report.md).
 
@@ -113,9 +128,12 @@ failing after deletion does not show that every new mixture fails.
 The primary outcome is newly certified infinite families. The data-only
 mixture adapter works with all four local planners and was used in session09.
 The separate official framework pilot evaluates executable word constructors
-against frozen structural families. Its offline smokes show integration, with
-no engine ranking. The mixture profile interpreter, numerical optimizer and
-exact rational acceptance checks are implemented. See the [next-iteration
+against frozen structural families. Its live iteration found a deterministic
+all-cuts k6 certificate but no paid-search addition; the next official
+program-search target is the exact reduced-cost face of the remaining k5
+family, with bounded valid outputs and a new structural confirmation set.
+The mixture profile interpreter, numerical optimizer and exact rational
+acceptance checks are implemented. See the [next-iteration
 protocol](autoresearch/next-iteration.md), [ROADMAP.md](ROADMAP.md), and current
 [HANDOFF.md](HANDOFF.md).
 

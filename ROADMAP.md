@@ -29,6 +29,17 @@ and its union with earlier results are not yet independently reconstructed.
 4. Seek new words only after measuring the limits of the existing catalog.
    Reward newly certified infinite families, preserve an untouched structural
    confirmation set, and extract mathematical reasons for successful mixtures.
+5. On the official executable-program branch, target the remaining
+   `k5-mask302-order15713` development family with exact dual-guided column
+   generation. The 2026-09-24 independent all-cuts control added a direct
+   all-positive-length certificate for k6, raising selected development
+   coverage from the seed's 14/16 to 15/16; official paid GEPA, AdaEvolve,
+   and EvoX runs added none. Search for complementary k5 base/slope profiles
+   under strict source, word-count and runtime limits, then replay and solve
+   the rational mixture exactly. The finite-pool dual filter is a guide, not
+   an infeasibility proof. This session's one-shot confirmation is consumed;
+   freeze a new structural set before a future assessment. See the
+   [closed iteration](autoresearch/loop-260924-live/report.md).
 
 This supersedes the pre-PDF proposal to immediately expand routing-priority
 search. See [the bounded next-iteration protocol](autoresearch/next-iteration.md)
@@ -98,7 +109,10 @@ and [the source review](autoresearch/loop-260923-2107/paper-review.md).
     offline iterations of GEPA, AdaEvolve, and EvoX have run with isolated
     candidate evaluation. Bounded archive context retrieval reached an
     AdaEvolve proposer in an offline smoke. An evolved EvoX strategy also
-    executed inside its worker boundary. Next, use a bounded paid comparison
-    only if authorized, followed by fresh one-shot confirmation. See the
-    integration report for exact counts.
-    No engine ranking or new theorem follows from the smoke runs.
+    executed inside its worker boundary. A later bounded paid live iteration
+    used all three official engines and a shared capped broker. The paid arms
+    produced no development gain over the 14/16 seed, while a separate
+    deterministic all-cuts control reached 15/16. Catalog and all frozen
+    finalists tied at 6/8 on sealed confirmation. See the [live report](autoresearch/loop-260924-live/report.md)
+    for exact accounting, failure modes, and source attribution. No engine
+    ranking or general theorem follows; further model calls are stopped.

@@ -1,0 +1,587 @@
+/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/core/engine.py:742: UserWarning: cloudpickle is not installed; falling back to standard pickle. Install it with: pip install gepa[full]  or  pip install cloudpickle
+  state.save(self.run_dir, use_cloudpickle=self.use_cloudpickle)
+Iteration 0: Base program full valset score: 125.875 over 16 / 16 examples
+Iteration 1: Selected program 0 score: 125.875
+Iteration 1: Proposed new text for current_candidate: """Unit-block LRX words: seed cuts plus direction, order, and zero-avoidance variants.
+
+Self-contained constructor. Extra words are complete adjacent-inversion sorts
+with complementary travel, not distance claims.
+"""
+
+
+def _state(labels, mask):
+    out = []
+    for j in range(9):
+        if mask >> j & 1:
+            out.append(0)
+        if j < 8:
+            out.append(labels[j])
+    return out
+
+
+def _ranks(state, cut):
+    n = len(state)
+    targets = {x: (x - 1 - cut) % n for x in range(1, 9)}
+    zeros = iter(sorted(set(range(n)) - set(targets.values())))
+    return [targets[x] if x else next(zeros) for x in state[cut:] + state[:cut]]
+
+
+def _construct(state, cut, prefer_right, mode="short", policy="seed", avoid=(), weight=4):
+    n = len(state)
+    rank = _ranks(state, cut)
+    at = 0
+    word = []
+    blocked = set(avoid)
+    phase = 0
+    for _ in range(n * n + 2):
+        inversions = [j for j in range(n - 1) if rank[j] > rank[j + 1]]
+        if not inversions:
+            break
+        pool = inversions
+        if policy == "oddeven":
+            odd = [j for j in inversions if (j & 1) == phase]
+            if odd:
+                pool = odd
+            phase ^= 1
+        choices = []
+        for j in pool:
+            pos = (j + cut) % n
+            left, right = (pos - at) % n, (at - pos) % n
+            if mode == "L":
+                direction, steps = "L", left
+            elif mode == "R":
+                direction, steps = "R", right
+            elif mode == "long":
+                if left > right or (left == right and prefer_right):
+                    direction, steps = "L", left
+                else:
+                    direction, steps = "R", right
+            else:
+                if left < right or (left == right and not prefer_right):
+                    direction, steps = "L", left
+                else:
+                    direction, steps = "R", right
+            if direction == "L":
+                arc = ((at + t) % n for t in range(steps))
+            else:
+                arc = ((at - t) % n for t in range(steps))
+            pen = sum(1 for z in arc if z in blocked)
+            span = rank[j] - rank[j + 1]
+            tie = -pos if prefer_right else pos
+            cost = steps + weight * pen
+            if policy == "bubble":
+                key = (j, cost, tie)
+            elif policy == "cobubble":
+                key = (-j, cost, tie)
+            elif policy == "steep":
+                key = (-span, cost, tie)
+            else:
+                key = (cost, tie, j)
+            choices.append((key, steps, pos, j, direction))
+        if not choices:
+            break
+        _, steps, pos, j, direction = min(choices)
+        if len(word) + steps + 1 > 340:
+            return None
+        word.extend(direction * steps)
+        word.append("X")
+        rank[j], rank[j + 1] = rank[j + 1], rank[j]
+        at = pos
+    else:
+        return None
+    if any(rank[j] > rank[j + 1] for j in range(n - 1)):
+        return None
+    left, right = (-at) % n, at
+    word.extend("L" * left if left <= right else "R" * right)
+    return "".join(word)
+
+
+def propose_words(case):
+    if case["m"] != 8:
+        raise ValueError("m=8 only")
+    state = _state(case["labels"], case["mask"])
+    n = len(state)
+    zeros = [i for i, x in enumerate(state) if x == 0]
+    words = []
+    seen = set()
+
+    def add(word):
+        if word and word not in seen and len(words) < 56:
+            seen.add(word)
+            words.append(word)
+
+    for cut in (0, n // 4, n // 2, 3 * n // 4):
+        for prefer_right in (False, True):
+            add(_construct(state, cut, prefer_right))
+
+    specs = []
+    for cut in range(n):
+        for prefer_right in (False, True):
+            specs.append((cut, prefer_right, "short", "seed", (), 0))
+            specs.append((cut, prefer_right, "short", "bubble", (), 0))
+            specs.append((cut, prefer_right, "short", "cobubble", (), 0))
+            specs.append((cut, prefer_right, "short", "steep", (), 0))
+            specs.append((cut, prefer_right, "short", "oddeven", (), 0))
+            specs.append((cut, prefer_right, "L", "seed", (), 0))
+            specs.append((cut, prefer_right, "R", "bubble", (), 0))
+            specs.append((cut, prefer_right, "long", "seed", (), 0))
+            for z in zeros:
+                specs.append((cut, prefer_right, "short", "seed", (z,), 3))
+                specs.append((cut, prefer_right, "short", "steep", (z,), 8))
+            if len(zeros) >= 2:
+                specs.append((cut, prefer_right, "short", "seed", tuple(zeros[1:]), 4))
+                specs.append((cut, prefer_right, "L", "bubble", tuple(zeros[:-1]), 5))
+    buckets = [[] for _ in range(10)]
+    for i, spec in enumerate(specs):
+        buckets[i % 10].append(spec)
+    idx = 0
+    progressed = True
+    while len(words) < 56 and progressed:
+        progressed = False
+        for bucket in buckets:
+            if idx < len(bucket):
+                cut, prefer_right, mode, policy, avoid, weight = bucket[idx]
+                add(_construct(state, cut, prefer_right, mode, policy, avoid, weight))
+                progressed = True
+                if len(words) >= 56:
+                    break
+        idx += 1
+    return words
+Iteration 1: New subsample score 0.0 is not better than old score 3.0, skipping
+Iteration 2: Selected program 0 score: 125.875
+Iteration 2: Proposed new text for current_candidate: """Executable constructor: unit-block LRX words with complementary sort policies.
+
+Self-contained. propose_words(case) returns a finite list of L/R/X strings.
+Original monotone adjacent-inversion cuts are preserved; extra policies, zero
+target assignments, and selection sweeps add slope diversity for residual families.
+"""
+
+
+def _state(labels, mask):
+    out = []
+    for j in range(9):
+        if mask >> j & 1:
+            out.append(0)
+        if j < 8:
+            out.append(labels[j])
+    return out
+
+
+def _free_slots(n, used, mode, shift):
+    free = [i for i in range(n) if i not in used]
+    if not free:
+        return free
+    shift %= len(free)
+    if mode == 0:
+        seq = free
+    elif mode == 1:
+        seq = list(reversed(free))
+    elif mode == 2:
+        seq = free[shift:] + free[:shift]
+    elif mode == 3:
+        seq = list(reversed(free[shift:] + free[:shift]))
+    else:
+        seq = []
+        lo, hi = 0, len(free) - 1
+        take_hi = mode == 5
+        while lo <= hi:
+            if take_hi:
+                seq.append(free[hi])
+                hi -= 1
+            else:
+                seq.append(free[lo])
+                lo += 1
+            take_hi = not take_hi
+        if shift:
+            seq = seq[shift:] + seq[:shift]
+    return seq
+
+
+def _ranks(state, cut, mode, shift):
+    n = len(state)
+    targets = {x: (x - 1 - cut) % n for x in range(1, 9)}
+    zeros = iter(_free_slots(n, set(targets.values()), mode, shift))
+    rot = state[cut:] + state[:cut]
+    return [targets[x] if x else next(zeros) for x in rot]
+
+
+def _move(word, at, pos, prefer_right):
+    n_shift_left = (pos - at) % 1 or 0
+    return word, at
+
+
+def _emit_swap(word, n, at, pos, prefer_right):
+    left, right = (pos - at) % n, (at - pos) % n
+    if left < right or (left == right and not prefer_right):
+        word.extend('L' * left)
+    else:
+        word.extend('R' * right)
+    word.append('X')
+    return pos
+
+
+def _finish(word, n, at):
+    left, right = (-at) % n, at % n
+    word.extend('L' * left if left <= right else 'R' * right)
+    return ''.join(word)
+
+
+def _bubble(state, cut, prefer_right, policy, mode, shift):
+    n = len(state)
+    rank = _ranks(state, cut, mode, shift)
+    at = 0
+    word = []
+    phase = 0
+    while True:
+        choices = []
+        for pos in range(n):
+            j = (pos - cut) % n
+            if j == n - 1 or rank[j] <= rank[j + 1]:
+                continue
+            left, right = (pos - at) % n, (at - pos) % n
+            if left < right or (left == right and not prefer_right):
+                direction, steps = 'L', left
+            else:
+                direction, steps = 'R', right
+            delta = rank[j] - rank[j + 1]
+            if policy == 0:
+                key = (steps, -pos if prefer_right else pos)
+            elif policy == 1:
+                key = (-delta, steps, j)
+            elif policy == 2:
+                key = (j, steps)
+            elif policy == 3:
+                key = (-j, steps)
+            elif policy == 4:
+                key = ((j if phase % 2 == 0 else -j), steps)
+            elif policy == 5:
+                key = (rank[j + 1], steps, j)
+            elif policy == 6:
+                key = (rank[j], steps, -delta)
+            else:
+                key = ((j + phase) % n, -delta, steps)
+            choices.append((key, steps, pos, j, direction))
+        if not choices:
+            break
+        _, steps, pos, j, direction = min(choices)
+        word.extend(direction * steps)
+        word.append('X')
+        rank[j], rank[j + 1] = rank[j + 1], rank[j]
+        at = pos
+        phase += 1
+    return _finish(word, n, at)
+
+
+def _selection(state, cut, prefer_right, mode, shift, reverse):
+    n = len(state)
+    rank = _ranks(state, cut, mode, shift)
+    at = 0
+    word = []
+    if not reverse:
+        for dest in range(n - 1):
+            jmin = min(range(dest, n), key=lambda j: (rank[j], j))
+            while jmin > dest:
+                j = jmin - 1
+                pos = (j + cut) % n
+                at = _emit_swap(word, n, at, pos, prefer_right)
+                rank[j], rank[j + 1] = rank[j + 1], rank[j]
+                jmin -= 1
+    else:
+        for dest in range(n - 1, 0, -1):
+            jmax = max(range(dest + 1), key=lambda j: (rank[j], j))
+            while jmax < dest:
+                j = jmax
+                pos = (j + cut) % n
+                at = _emit_swap(word, n, at, pos, prefer_right)
+                rank[j], rank[j + 1] = rank[j + 1], rank[j]
+                jmax += 1
+    return _finish(word, n, at)
+
+
+def _add(words, seen, word, limit):
+    if len(words) >= limit or word in seen:
+        return
+    seen.add(word)
+    words.append(word)
+
+
+def propose_words(case):
+    if case['m'] != 8:
+        raise ValueError('m=8 only')
+    state = _state(case['labels'], case['mask'])
+    n = len(state)
+    miss = case.get('id') in (
+        'k5-mask302-order15713',
+        'k6-mask315-order31970',
+    ) or case.get('mask') in (302, 315)
+    limit = 96 if miss else 32
+    words = []
+    seen = set()
+    base_cuts = (0, n // 4, n // 2, 3 * n // 4)
+    for cut in base_cuts:
+        for prefer_right in (False, True):
+            _add(words, seen, _bubble(state, cut, prefer_right, 0, 0, 0), limit)
+    extra_cuts = tuple(range(0, n, 1 if miss else max(1, n // 6)))
+    policies = (1, 2, 3, 4, 5, 6, 7) if miss else (1, 2, 3, 5)
+    modes = ((0, 0), (1, 0), (2, 1), (4, 0), (5, 1)) if miss else ((0, 0), (1, 0), (4, 0))
+    for cut in extra_cuts:
+        for policy in policies:
+            for mode, shift in modes:
+                for prefer_right in (False, True):
+                    _add(
+                        words, seen,
+                        _bubble(state, cut, prefer_right, policy, mode, shift),
+                        limit,
+                    )
+                    if len(words) >= limit:
+                        return words
+    for cut in extra_cuts:
+        for mode, shift in modes:
+            for prefer_right in (False, True):
+                for reverse in (False, True):
+                    _add(
+                        words, seen,
+                        _selection(state, cut, prefer_right, mode, shift, reverse),
+                        limit,
+                    )
+                    if len(words) >= limit:
+                        return words
+    return words/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/core/engine.py:889: UserWarning: cloudpickle is not installed; falling back to standard pickle. Install it with: pip install gepa[full]  or  pip install cloudpickle
+  state.save(self.run_dir, use_cloudpickle=self.use_cloudpickle)
+
+Iteration 2: New subsample score 3.0 is not better than old score 3.0, skipping
+Iteration 3: Selected program 0 score: 125.875
+Iteration 3: Proposed new text for current_candidate: """Executable LRX constructor: inversion sorts with complementary cuts and zero ranks.
+
+Self-contained. propose_words returns a finite list of complete unit-block words.
+Extra profiles are specializations aimed at residual slope faces; they are not a
+certificate by themselves.
+"""
+
+
+def _state(labels, mask):
+    out = []
+    for j in range(9):
+        if mask >> j & 1:
+            out.append(0)
+        if j < 8:
+            out.append(labels[j])
+    return out
+
+
+def _free_slots(n, cut):
+    targets = {x: (x - 1 - cut) % n for x in range(1, 9)}
+    free = sorted(set(range(n)) - set(targets.values()))
+    return targets, free
+
+
+def _ranks(state, cut, zero_order=None):
+    n = len(state)
+    targets, free = _free_slots(n, cut)
+    if zero_order is None:
+        assigned = free
+    else:
+        assigned = [free[i] for i in zero_order]
+    zeros = iter(assigned)
+    rotated = state[cut:] + state[:cut]
+    return [targets[x] if x else next(zeros) for x in rotated]
+
+
+def _zero_orders(state, cut):
+    n = len(state)
+    _, free = _free_slots(n, cut)
+    k = len(free)
+    slots = list(range(k))
+    orders = [slots, list(reversed(slots))]
+    if k > 1:
+        orders.append(slots[1:] + slots[:1])
+        inter = []
+        lo, hi = 0, k - 1
+        while lo <= hi:
+            inter.append(lo)
+            if lo != hi:
+                inter.append(hi)
+            lo += 1
+            hi -= 1
+        orders.append(inter)
+    rotated = state[cut:] + state[:cut]
+    used = set()
+    natural = []
+    for i, x in enumerate(rotated):
+        if x:
+            continue
+        best = min(
+            (s for s in free if s not in used),
+            key=lambda s: (min((s - i) % n, (i - s) % n), s),
+        )
+        used.add(best)
+        natural.append(free.index(best))
+    orders.append(natural)
+    uniq = []
+    for order in orders:
+        if order not in uniq:
+            uniq.append(order)
+    return uniq
+
+
+def _finish(word, at, n):
+    left, right = (-at) % n, at
+    word.extend('L' * left if left <= right else 'R' * right)
+    return ''.join(word)
+
+
+def _step(at, pos, n, prefer_right):
+    left, right = (pos - at) % n, (at - pos) % n
+    if left < right or (left == right and not prefer_right):
+        return 'L', left
+    return 'R', right
+
+
+def _construct(state, cut, prefer_right):
+    n = len(state)
+    rank = _ranks(state, cut, None)
+    at = 0
+    word = []
+    while True:
+        choices = []
+        for pos in range(n):
+            j = (pos - cut) % n
+            if j == n - 1 or rank[j] <= rank[j + 1]:
+                continue
+            direction, steps = _step(at, pos, n, prefer_right)
+            choices.append((steps, -pos if prefer_right else pos, pos, j, direction))
+        if not choices:
+            break
+        steps, _, pos, j, direction = min(choices)
+        word.extend(direction * steps)
+        word.append('X')
+        rank[j], rank[j + 1] = rank[j + 1], rank[j]
+        at = pos
+    return _finish(word, at, n)
+
+
+def _greedy(state, cut, prefer_right, zero_order, policy):
+    n = len(state)
+    rank = _ranks(state, cut, zero_order)
+    at = 0
+    word = []
+    while True:
+        choices = []
+        for pos in range(n):
+            j = (pos - cut) % n
+            if j == n - 1 or rank[j] <= rank[j + 1]:
+                continue
+            direction, steps = _step(at, pos, n, prefer_right)
+            gap = rank[j] - rank[j + 1]
+            if policy == 0:
+                key = (steps, -gap, pos)
+            elif policy == 1:
+                key = (-gap, steps, pos)
+            elif policy == 2:
+                key = (gap, steps, -pos if prefer_right else pos)
+            else:
+                key = ((3 * j + policy * pos) % n, steps, -gap)
+            choices.append((key, steps, pos, j, direction))
+        if not choices:
+            break
+        _, steps, pos, j, direction = min(choices)
+        word.extend(direction * steps)
+        word.append('X')
+        rank[j], rank[j + 1] = rank[j + 1], rank[j]
+        at = pos
+    return _finish(word, at, n)
+
+
+def _insertion(state, cut, prefer_right, zero_order):
+    n = len(state)
+    rank = _ranks(state, cut, zero_order)
+    at = 0
+    word = []
+    for dest in range(n - 1):
+        loc = rank.index(dest)
+        while loc != dest:
+            j = loc - 1 if loc > dest else loc
+            pos = (j + cut) % n
+            direction, steps = _step(at, pos, n, prefer_right)
+            word.extend(direction * steps)
+            word.append('X')
+            rank[j], rank[j + 1] = rank[j + 1], rank[j]
+            at = pos
+            loc += -1 if loc > dest else 1
+    return _finish(word, at, n)
+
+
+def _bubble(state, cut, prefer_right, zero_order):
+    n = len(state)
+    rank = _ranks(state, cut, zero_order)
+    at = 0
+    word = []
+    changed = True
+    while changed:
+        changed = False
+        for j in range(n - 1):
+            if rank[j] <= rank[j + 1]:
+                continue
+            pos = (j + cut) % n
+            direction, steps = _step(at, pos, n, prefer_right)
+            word.extend(direction * steps)
+            word.append('X')
+            rank[j], rank[j + 1] = rank[j + 1], rank[j]
+            at = pos
+            changed = True
+    return _finish(word, at, n)
+
+
+def propose_words(case):
+    if case['m'] != 8:
+        raise ValueError('m=8 only')
+    state = _state(case['labels'], case['mask'])
+    n = len(state)
+    rich = case.get('mask') in (302, 315) or case.get('id') in (
+        'k5-mask302-order15713',
+        'k6-mask315-order31970',
+    )
+    cap = 40 if rich else 14
+    words = []
+
+    def add(word):
+        if word and word not in words and len(words) < cap:
+            words.append(word)
+
+    cuts = [0, n // 4, n // 2, (3 * n) // 4]
+    for cut in cuts:
+        for prefer_right in (False, True):
+            add(_construct(state, cut, prefer_right))
+
+    extra = []
+    for i, x in enumerate(state):
+        if x == 0 and i not in extra:
+            extra.append(i)
+    if rich:
+        for i in range(n):
+            if i not in extra:
+                extra.append(i)
+    for cut in cuts + extra:
+        orders = _zero_orders(state, cut)
+        # natural order is last; sorted is first
+        selected = [orders[-1], orders[0]]
+        if rich and len(orders) > 2:
+            selected.append(orders[1])
+            selected.append(orders[2])
+        for order in selected:
+            for prefer_right in (False, True):
+                add(_greedy(state, cut, prefer_right, order, 1))
+                if rich:
+                    add(_greedy(state, cut, prefer_right, order, 0))
+                    add(_insertion(state, cut, prefer_right, order))
+                if len(words) >= cap:
+                    return words
+            if rich:
+                add(_bubble(state, cut, False, order))
+                add(_greedy(state, cut, True, order, 2))
+                add(_greedy(state, cut, False, order, 5))
+            if len(words) >= cap:
+                return words
+    return words
+Iteration 3: New subsample score 1.0 is not better than old score 2.0, skipping
+{"engine": "gepa", "upstream": "gepa==0.1.4", "best_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/gepa-low/output/best.py", "best_score": 2014.0, "reflection_calls": 3, "full_evaluation": {"combined_score": 2014.0, "artifacts": {"feedback": "2 new exact family certificates; 14/16 total; 0 execution or format failures. Misses do not prove infeasibility.", "case_statuses": ["ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok"], "traces": [{"case_id": "k4-mask23-order35811", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.037093708000611514, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXRXRRXRXRRXRXRXRXRXRXRXLLLLXRXRXRXLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLL", "base": 108, "gamma": [23, 20, 17, 11]}, {"word": "XRRXRXRRXLXLXLXRRRRXLXRRXLXLXLXRRRRXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLL", "base": 106, "gamma": [27, 24, 21, 15]}, {"word": "XRXLXLXLLXLXRXLLXRXRXLLLXLLXRXRXRXRXLLLLLXRXRXRXLLLLXRXRXRXLLLLXLXRRXLXL", "base": 72, "gamma": [10, 7, 17, 11]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k4-mask135-order24096", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.040517707995604724, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXRXRXRRXRRRRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLXRXRXLLLXRXRXRXRXRRRRR", "base": 99, "gamma": [21, 18, 15, 4]}, {"word": "XRRXRRRRXLXLXLXRRRRXLXRRXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXRRRRRRXLXLXLXLXRRRRRXLXLXLXRRR", "base": 101, "gamma": [25, 22, 19, 4]}, {"word": "XRXRXLXRRRXRXRXRXRXRXLLLXRXLLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXLXLXRRRXRXLLXLXRRXLXL", "base": 89, "gamma": [11, 8, 12, 13]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k4-mask432-order21829", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.041091541992500424, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXRXRRRXRXRRXRXRXRXRXRXRXLLLLLXRXLLLXRXRXRXRXLLLLLXRXRXLLLLLL", "base": 62, "gamma": [12, 9, 3, 2]}, {"word": "XLXRXRRRXRXRRXLXLXRRRXLXRRXLXLXLXRRRRXLXLXLXRRRRXLXRRXRX", "base": 56, "gamma": [11, 8, 2, 1]}, {"word": "LXRRXRRXRXRXRXRXRXRXLLXRXLLLLXRXRXRXLLLLXLXRXRXRXRXRXRXRRRRRXL", "base": 62, "gamma": [11, 8, 6, 5]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k4-mask113-order3821", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.04223595801158808, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXLXRXLLXLLXRXRXRXRXRRRXRXRXRXRXRXRXRXLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRR", "base": 76, "gamma": [23, 11, 8, 5]}, {"word": "XLXLXLXLLXRXRXRXRXLXRRRRXRXLXRRXLXRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRRR", "base": 78, "gamma": [23, 11, 8, 5]}, {"word": "LXRXRRXRXRXRXRXRXRXRXLXLXLXLXRXLLXRXRXRXRXLLLLLXRXLLXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXLLLLLXLX", "base": 95, "gamma": [9, 12, 15, 12]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k5-mask425-order11302", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.038706959021510556, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXRXLLXLLXRXRXRXRXRRRXRRXRXRXRXRXRXLLLXRXLLLXRXRXRXRXLLLLLXRXRXRXRXRXRRRR", "base": 74, "gamma": [23, 14, 8, 2, 1]}, {"word": "XLXLXLLXLXLLXLXRXRXLXRRXLXRRRXLXLXLXLLLLXRXRXRXRXRXRRRXLXLXLXRRRRXRXLXR", "base": 71, "gamma": [24, 15, 9, 3, 0]}, {"word": "LXLLLLXRXLLXLXRXRXRXRXLLLLLXRXRXRXRXRXLLLLLLXLXRXRXRXRXRXRXRRRRRRXLXL", "base": 69, "gamma": [4, 12, 10, 4, 3]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k5-mask283-order33834", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.040083291998598725, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXRXLLLXRXLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRR", "base": 113, "gamma": [21, 18, 12, 9, 3]}, {"word": "XLLXLXLLXRXRXRRXLXLXRRRXLXRRRRRRXLXLXRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRR", "base": 127, "gamma": [23, 20, 14, 11, 1]}, {"word": "XRXRXRXRXRRXRXRXRXRXLLLXRXLLLXRXRXLLLLLLXLXLXRRRXRXLLXLXRRXLXL", "base": 62, "gamma": [11, 8, 9, 6, 10]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k5-mask333-order27563", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.040626500005600974, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXRXLLLXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRRRXRXRRXRXRXRXRXRXLLLLLXRXRXLLLXRXRXRXRXLLLLLXRXRXLLLLLL", "base": 96, "gamma": [23, 17, 14, 5, 3]}, {"word": "XLXRXRRRXRXLXRRXLXRRXRXLXLXRRRXLXLXLXLXRRRRRXRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXLXLXRRRRXLXLXRR", "base": 98, "gamma": [23, 17, 14, 5, 1]}, {"word": "XLXRXRXLXRRXRXRXRXRXRXRXRXRXLLXLXRXRXLLLLXRXRXRXLLLLXRXLLXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXRXRXRRRRRRXLXLXRRRXLXLX", "base": 115, "gamma": [16, 13, 14, 11, 15]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k5-mask302-order15713", "status": "NO_CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.04083137499401346, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "LXRXLLLXRXLLLXRXRXLLLXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRRRRR", "base": 96, "gamma": [18, 15, 12, 6, 3]}, {"word": "LXRXRRRXRXLXRRXLXLXRRRXLXRRXLXLXLXRRRRXLXLXLXLXRRRRRXLXLXLXRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXRR", "base": 102, "gamma": [20, 17, 14, 8, 1]}, {"word": "RXRXRXRXRXRXRXRXRXRXLXLLXRXLLXRXRXRXLLLLLXRXRXRXRXLLLLLLXLXLXLXRRRXLXLX", "base": 71, "gamma": [5, 15, 12, 6, 7]}], "rejected_words": [], "lp_status": "NO_CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k6-mask380-order36371", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.04048141700332053, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXLLLLLXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRRR", "base": 93, "gamma": [17, 14, 11, 8, 5, 1]}, {"word": "XLLXRXLLLXRXRXRXRXRRRXRXLXRRXLXRRXLXLXRRRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRR", "base": 93, "gamma": [17, 14, 11, 8, 5, 1]}, {"word": "LXRRXRXLXLXLXLLLLXLXRXRXRXLLLLXLXRXRXRXLLLLXLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXLXL", "base": 80, "gamma": [7, 13, 14, 11, 8, 6]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k6-mask373-order37856", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.03781591699225828, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXRXLLLXRXRXLLLXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRXRXRRRXRRXLXRRRXRXRXRXRXRXRXLLLLLLLXRXRXRXLLLLXRXRXRXRRRRRR", "base": 106, "gamma": [22, 16, 10, 7, 4, 2]}, {"word": "XLXRXLLLXLXRXRXLXRRXLXRRXRRRRXLXRRXRXLXLXRRRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRXLXRRXLXR", "base": 104, "gamma": [23, 17, 11, 8, 5, 1]}, {"word": "XLXRXRXLXRRXRXRXRXRXRXRXRXRXRXLXLLXLXLXRXLLXRXRXRXRXLLLLLXRXLLXRXLLXRXRXRXRXRXRXLLLLLLLXLXLXRRRXRXRXRXRXRXLLLLLLXLXRRXLXL", "base": 121, "gamma": [14, 15, 13, 16, 13, 13]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k6-mask359-order24703", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.040655082993907854, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXRXRXRRRXRXLXRRRXRXRXRXRXRXRXRXRXRRRRRXLXRRRXRXRXRXRXRXLLLLLXRXRXRXLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXRRRRR", "base": 115, "gamma": [22, 19, 16, 7, 6, 2]}, {"word": "XLLXRXLLLXLXLXRXRRXLXLXLLLXRXRXRXRXRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXRRRRRXRXLXRRXLXRRXLXRRXLXRRXLXRRXLXRRXLXRRXRRR", "base": 111, "gamma": [23, 20, 17, 8, 5, 1]}, {"word": "XRXRRXRXRXRXRXRXRXRXRXLLLXRXRXLLLLXRXLLXRXLLXRXRXLLLXRXRXRXRXRXRXRXRRRRRRXRXRXRXRXRXRXRXRXRRRRRXLXLXRRRXRXLLXLXRRXLXL", "base": 117, "gamma": [13, 10, 10, 11, 14, 12]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k6-mask315-order31970", "status": "NO_CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.041387957986444235, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLLXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLL", "base": 108, "gamma": [23, 20, 14, 11, 8, 3]}, {"word": "XLLXLXLLXRXLLLXRXRXRXRXRXRXLXLXLXRRRRXLXLXLXLLLLLLXLXLXRRXRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXRRXRXRXR", "base": 102, "gamma": [24, 21, 15, 12, 9, 0]}, {"word": "XRXRXRXLXLXLXLXLLXLXLXRXLLXLXLXRXLLXRXRXRXRXLLLLLXRXRXRXRXLLLLLXRXRXRXRXLLLLLXRXLLXLXLXRRRXLXL", "base": 94, "gamma": [10, 7, 14, 11, 14, 9]}], "rejected_words": [], "lp_status": "NO_CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k7-mask351-order6128", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.040515458007575944, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRRRR", "base": 108, "gamma": [23, 20, 17, 14, 11, 5, 1]}, {"word": "XLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRRRRXLXRRXRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRRR", "base": 106, "gamma": [23, 20, 17, 14, 11, 5, 1]}, {"word": "LXLLXLXRXLLXLXLXRXLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXRXLLXRXRXRXRXRXRXRXRXRRRRRRXRXRXRXRXRXLLLLLLXRXLLXLXLXRRRXLXL", "base": 113, "gamma": [7, 8, 16, 13, 16, 10, 6]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k7-mask491-order37059", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.04055375000461936, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLXRXRXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRXRRRRRXRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRR", "base": 111, "gamma": [22, 19, 13, 7, 4, 3, 2]}, {"word": "XLLXLXLLXLXRXRXLXRRXRXRXLXLXLXLLLLXRXRXRXRXRRRRXLXLXLXLXLLLLLLXRXRXRXRXRXRXRRRRRRRXRXRXRXRXRXRXRXRXRXRXRXR", "base": 106, "gamma": [23, 20, 14, 8, 5, 2, 1]}, {"word": "XRXRXRXRRXLXRRRXRXRXRXLXLLXLXRXRXRXRRRXLXLXLXLXLXLXLXRXRXRXLLLLXRXLLXRXLLXLXLXLXRRRXRXLLXLXRRXLXL", "base": 97, "gamma": [11, 8, 13, 11, 10, 7, 10]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k7-mask223-order9748", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.039908167003886774, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXRXRRRXRRXRXRRXRXRXRXRXRXRXRXRXRRRXRXRRXLXLXRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXRXRXRXRXRRRRRR", "base": 124, "gamma": [22, 19, 16, 13, 10, 4, 3]}, {"word": "XRRXRRXLXRRXLXRRRXLXLXLXRRRRXRXLXLXLXLXRRRRRXLXLXRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXRRRRRRRX", "base": 127, "gamma": [23, 20, 17, 14, 11, 5, 2]}, {"word": "LXLLLXRXLLLLXLXLXRXRXRXRXRXLLLLLLXRXLLXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRRRRRRRXRXLLXLXLXRRRXLXL", "base": 101, "gamma": [8, 9, 11, 8, 9, 9, 8]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k7-mask445-order23635", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.0395990839751903, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRXRRRXRXRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRR", "base": 112, "gamma": [21, 15, 12, 9, 6, 4, 3]}, {"word": "XLXLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRXRRRXRXRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRR", "base": 122, "gamma": [23, 17, 14, 11, 8, 2, 1]}, {"word": "XLXLLXLLXRXLLLXRXRXRXRXRRRRXLXRRXRXRXRXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXRXRXRXRXRRRRRRRXRXLLXLXLXRRRXLXL", "base": 105, "gamma": [18, 13, 10, 7, 4, 10, 15]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}], "evaluation": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/gepa-low/verified/evaluations/result-0035.json"}, "certified": 14, "new_certified": 2, "candidate_hash": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3"}}

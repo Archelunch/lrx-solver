@@ -1,0 +1,633 @@
+{
+  "selection_sha256": "c74b0c68399b1793cf823008a51128afd52baa784e796ccbb524f40f433a485f",
+  "case_file_sha256": "6808afa3a6a26f411574e53cd0e2d9eb43af98f20a8a7689d035083644d173bd",
+  "baseline_file_sha256": "00a7ec53a995abc987f51396f60da2910e41a9aa5056921a47daa2cac758961c",
+  "cases": 8,
+  "catalog_baseline_profiles_rechecked": 38,
+  "arms": {
+    "fixed_catalog_only": {
+      "role": "control",
+      "source_sha256": "bf0cad88e465e924a0fcdad5810448ee3e72ec228805c92a1e713c22bc3ea6cb",
+      "evaluation": "autoresearch/loop-260924-live/confirmation-prep/results/fixed_catalog_only/bf0cad88e465e924-evaluation.json",
+      "evaluation_sha256": "cb6c6c1f759401b649e00bb3aec6c02ae08c644b1b7c530aa2afa751a91c49a4",
+      "certified": 6,
+      "certified_ids": [
+        "k4-mask216-order39181",
+        "k4-mask54-order38858",
+        "k5-mask412-order38747",
+        "k5-mask472-order19117",
+        "k6-mask363-order26185",
+        "k7-mask478-order12940"
+      ],
+      "new_vs_catalog": 0,
+      "accepted_words_rechecked": 0,
+      "support_profiles_rechecked": 14,
+      "nonunit_literal_replays": 42,
+      "execution_statuses": {
+        "k4-mask54-order38858": "ok",
+        "k4-mask216-order39181": "ok",
+        "k5-mask412-order38747": "ok",
+        "k5-mask472-order19117": "ok",
+        "k6-mask363-order26185": "ok",
+        "k6-mask378-order33207": "ok",
+        "k7-mask478-order12940": "ok",
+        "k7-mask367-order13766": "ok"
+      },
+      "cases": {
+        "k4-mask54-order38858": {
+          "outcome": "CERTIFICATE",
+          "base": "125/3",
+          "base_margin": "40/3",
+          "slopes": [
+            "6",
+            "5",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k4-mask216-order39181": {
+          "outcome": "CERTIFICATE",
+          "base": "53",
+          "base_margin": "2",
+          "slopes": [
+            "6",
+            "3",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask412-order38747": {
+          "outcome": "CERTIFICATE",
+          "base": "408/7",
+          "base_margin": "19/7",
+          "slopes": [
+            "5",
+            "38/7",
+            "36/7",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask472-order19117": {
+          "outcome": "CERTIFICATE",
+          "base": "60",
+          "base_margin": "1",
+          "slopes": [
+            "6",
+            "6",
+            "6",
+            "11/2",
+            "11/2"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask363-order26185": {
+          "outcome": "CERTIFICATE",
+          "base": "734/11",
+          "base_margin": "3/11",
+          "slopes": [
+            "63/11",
+            "60/11",
+            "6",
+            "6",
+            "63/11",
+            "62/11"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask378-order33207": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "6611/96",
+          "strict_target": 67,
+          "baseline_certified": false
+        },
+        "k7-mask478-order12940": {
+          "outcome": "CERTIFICATE",
+          "base": "281/4",
+          "base_margin": "11/4",
+          "slopes": [
+            "6",
+            "11/2",
+            "6",
+            "23/4",
+            "6",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k7-mask367-order13766": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "958/13",
+          "strict_target": 73,
+          "baseline_certified": false
+        }
+      }
+    },
+    "original_four_cut_seed": {
+      "role": "control",
+      "source_sha256": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3",
+      "evaluation": "autoresearch/loop-260924-live/confirmation-prep/results/original_four_cut_seed/c27df808a5d2265c-evaluation.json",
+      "evaluation_sha256": "ec69d9ce389596986e391b09e9d2409e37cb944109fbb697d3361e5e28a061ac",
+      "certified": 6,
+      "certified_ids": [
+        "k4-mask216-order39181",
+        "k4-mask54-order38858",
+        "k5-mask412-order38747",
+        "k5-mask472-order19117",
+        "k6-mask363-order26185",
+        "k7-mask478-order12940"
+      ],
+      "new_vs_catalog": 0,
+      "accepted_words_rechecked": 64,
+      "support_profiles_rechecked": 14,
+      "nonunit_literal_replays": 42,
+      "execution_statuses": {
+        "k4-mask54-order38858": "ok",
+        "k4-mask216-order39181": "ok",
+        "k5-mask412-order38747": "ok",
+        "k5-mask472-order19117": "ok",
+        "k6-mask363-order26185": "ok",
+        "k6-mask378-order33207": "ok",
+        "k7-mask478-order12940": "ok",
+        "k7-mask367-order13766": "ok"
+      },
+      "cases": {
+        "k4-mask54-order38858": {
+          "outcome": "CERTIFICATE",
+          "base": "125/3",
+          "base_margin": "40/3",
+          "slopes": [
+            "6",
+            "5",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k4-mask216-order39181": {
+          "outcome": "CERTIFICATE",
+          "base": "53",
+          "base_margin": "2",
+          "slopes": [
+            "6",
+            "3",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask412-order38747": {
+          "outcome": "CERTIFICATE",
+          "base": "408/7",
+          "base_margin": "19/7",
+          "slopes": [
+            "5",
+            "38/7",
+            "36/7",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask472-order19117": {
+          "outcome": "CERTIFICATE",
+          "base": "60",
+          "base_margin": "1",
+          "slopes": [
+            "6",
+            "6",
+            "6",
+            "11/2",
+            "11/2"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask363-order26185": {
+          "outcome": "CERTIFICATE",
+          "base": "734/11",
+          "base_margin": "3/11",
+          "slopes": [
+            "63/11",
+            "60/11",
+            "6",
+            "6",
+            "63/11",
+            "62/11"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask378-order33207": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "6611/96",
+          "strict_target": 67,
+          "baseline_certified": false
+        },
+        "k7-mask478-order12940": {
+          "outcome": "CERTIFICATE",
+          "base": "281/4",
+          "base_margin": "11/4",
+          "slopes": [
+            "6",
+            "11/2",
+            "6",
+            "23/4",
+            "6",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k7-mask367-order13766": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "956/13",
+          "strict_target": 73,
+          "baseline_certified": false
+        }
+      }
+    },
+    "deterministic_all_cuts": {
+      "role": "post_hoc_control",
+      "source_sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+      "evaluation": "autoresearch/loop-260924-live/confirmation-prep/results/deterministic_all_cuts/3fcc0f0d23ced3f0-evaluation.json",
+      "evaluation_sha256": "3d0577a23eee805e84f44b1257d79f8e9ca18e08f31befb214b3a91b629ccaa1",
+      "certified": 6,
+      "certified_ids": [
+        "k4-mask216-order39181",
+        "k4-mask54-order38858",
+        "k5-mask412-order38747",
+        "k5-mask472-order19117",
+        "k6-mask363-order26185",
+        "k7-mask478-order12940"
+      ],
+      "new_vs_catalog": 0,
+      "accepted_words_rechecked": 168,
+      "support_profiles_rechecked": 16,
+      "nonunit_literal_replays": 48,
+      "execution_statuses": {
+        "k4-mask54-order38858": "ok",
+        "k4-mask216-order39181": "ok",
+        "k5-mask412-order38747": "ok",
+        "k5-mask472-order19117": "ok",
+        "k6-mask363-order26185": "ok",
+        "k6-mask378-order33207": "ok",
+        "k7-mask478-order12940": "ok",
+        "k7-mask367-order13766": "ok"
+      },
+      "cases": {
+        "k4-mask54-order38858": {
+          "outcome": "CERTIFICATE",
+          "base": "125/3",
+          "base_margin": "40/3",
+          "slopes": [
+            "6",
+            "5",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k4-mask216-order39181": {
+          "outcome": "CERTIFICATE",
+          "base": "53",
+          "base_margin": "2",
+          "slopes": [
+            "6",
+            "3",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask412-order38747": {
+          "outcome": "CERTIFICATE",
+          "base": "407/7",
+          "base_margin": "20/7",
+          "slopes": [
+            "5",
+            "39/7",
+            "36/7",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask472-order19117": {
+          "outcome": "CERTIFICATE",
+          "base": "539/9",
+          "base_margin": "10/9",
+          "slopes": [
+            "6",
+            "35/6",
+            "6",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask363-order26185": {
+          "outcome": "CERTIFICATE",
+          "base": "734/11",
+          "base_margin": "3/11",
+          "slopes": [
+            "63/11",
+            "60/11",
+            "6",
+            "6",
+            "63/11",
+            "62/11"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask378-order33207": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "6611/96",
+          "strict_target": 67,
+          "baseline_certified": false
+        },
+        "k7-mask478-order12940": {
+          "outcome": "CERTIFICATE",
+          "base": "281/4",
+          "base_margin": "11/4",
+          "slopes": [
+            "6",
+            "11/2",
+            "6",
+            "23/4",
+            "6",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k7-mask367-order13766": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "956/13",
+          "strict_target": 73,
+          "baseline_certified": false
+        }
+      }
+    },
+    "adaevolve_valid_generated": {
+      "role": "official_generated",
+      "source_sha256": "a5712e6b25e33572167d2a36d9a11ae3e048cbce4d184077dca216a7da2af129",
+      "evaluation": "autoresearch/loop-260924-live/confirmation-prep/results/adaevolve_valid_generated/a5712e6b25e33572-evaluation.json",
+      "evaluation_sha256": "abcc504a7df802dceaa3a7dcf396fc8326c999acb29a36ef0c90da74a62c8389",
+      "certified": 6,
+      "certified_ids": [
+        "k4-mask216-order39181",
+        "k4-mask54-order38858",
+        "k5-mask412-order38747",
+        "k5-mask472-order19117",
+        "k6-mask363-order26185",
+        "k7-mask478-order12940"
+      ],
+      "new_vs_catalog": 0,
+      "accepted_words_rechecked": 230,
+      "support_profiles_rechecked": 14,
+      "nonunit_literal_replays": 42,
+      "execution_statuses": {
+        "k4-mask54-order38858": "ok",
+        "k4-mask216-order39181": "ok",
+        "k5-mask412-order38747": "ok",
+        "k5-mask472-order19117": "ok",
+        "k6-mask363-order26185": "ok",
+        "k6-mask378-order33207": "ok",
+        "k7-mask478-order12940": "ok",
+        "k7-mask367-order13766": "ok"
+      },
+      "cases": {
+        "k4-mask54-order38858": {
+          "outcome": "CERTIFICATE",
+          "base": "125/3",
+          "base_margin": "40/3",
+          "slopes": [
+            "6",
+            "5",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k4-mask216-order39181": {
+          "outcome": "CERTIFICATE",
+          "base": "53",
+          "base_margin": "2",
+          "slopes": [
+            "6",
+            "3",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask412-order38747": {
+          "outcome": "CERTIFICATE",
+          "base": "408/7",
+          "base_margin": "19/7",
+          "slopes": [
+            "5",
+            "38/7",
+            "36/7",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask472-order19117": {
+          "outcome": "CERTIFICATE",
+          "base": "59",
+          "base_margin": "2",
+          "slopes": [
+            "6",
+            "11/2",
+            "11/2",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask363-order26185": {
+          "outcome": "CERTIFICATE",
+          "base": "734/11",
+          "base_margin": "3/11",
+          "slopes": [
+            "63/11",
+            "60/11",
+            "6",
+            "6",
+            "63/11",
+            "62/11"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask378-order33207": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "6611/96",
+          "strict_target": 67,
+          "baseline_certified": false
+        },
+        "k7-mask478-order12940": {
+          "outcome": "CERTIFICATE",
+          "base": "281/4",
+          "base_margin": "11/4",
+          "slopes": [
+            "6",
+            "11/2",
+            "6",
+            "23/4",
+            "6",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k7-mask367-order13766": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "956/13",
+          "strict_target": 73,
+          "baseline_certified": false
+        }
+      }
+    },
+    "evox_valid_generated": {
+      "role": "official_generated",
+      "source_sha256": "aa416e9ce56a620b9670276ffe498c3d653c583aff9edc22e748a2dc95611dc2",
+      "evaluation": "autoresearch/loop-260924-live/confirmation-prep/results/evox_valid_generated/aa416e9ce56a620b-evaluation.json",
+      "evaluation_sha256": "497de991b50432f504575c208e80cf24ded40904740cca98a5719a0b92176a9a",
+      "certified": 6,
+      "certified_ids": [
+        "k4-mask216-order39181",
+        "k4-mask54-order38858",
+        "k5-mask412-order38747",
+        "k5-mask472-order19117",
+        "k6-mask363-order26185",
+        "k7-mask478-order12940"
+      ],
+      "new_vs_catalog": 0,
+      "accepted_words_rechecked": 256,
+      "support_profiles_rechecked": 14,
+      "nonunit_literal_replays": 42,
+      "execution_statuses": {
+        "k4-mask54-order38858": "ok",
+        "k4-mask216-order39181": "ok",
+        "k5-mask412-order38747": "ok",
+        "k5-mask472-order19117": "ok",
+        "k6-mask363-order26185": "ok",
+        "k6-mask378-order33207": "ok",
+        "k7-mask478-order12940": "ok",
+        "k7-mask367-order13766": "ok"
+      },
+      "cases": {
+        "k4-mask54-order38858": {
+          "outcome": "CERTIFICATE",
+          "base": "125/3",
+          "base_margin": "40/3",
+          "slopes": [
+            "6",
+            "5",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k4-mask216-order39181": {
+          "outcome": "CERTIFICATE",
+          "base": "53",
+          "base_margin": "2",
+          "slopes": [
+            "6",
+            "3",
+            "3",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask412-order38747": {
+          "outcome": "CERTIFICATE",
+          "base": "408/7",
+          "base_margin": "19/7",
+          "slopes": [
+            "5",
+            "38/7",
+            "36/7",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k5-mask472-order19117": {
+          "outcome": "CERTIFICATE",
+          "base": "60",
+          "base_margin": "1",
+          "slopes": [
+            "6",
+            "6",
+            "6",
+            "11/2",
+            "11/2"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask363-order26185": {
+          "outcome": "CERTIFICATE",
+          "base": "734/11",
+          "base_margin": "3/11",
+          "slopes": [
+            "63/11",
+            "60/11",
+            "6",
+            "6",
+            "63/11",
+            "62/11"
+          ],
+          "baseline_certified": true
+        },
+        "k6-mask378-order33207": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "6611/96",
+          "strict_target": 67,
+          "baseline_certified": false
+        },
+        "k7-mask478-order12940": {
+          "outcome": "CERTIFICATE",
+          "base": "281/4",
+          "base_margin": "11/4",
+          "slopes": [
+            "6",
+            "11/2",
+            "6",
+            "23/4",
+            "6",
+            "6",
+            "6"
+          ],
+          "baseline_certified": true
+        },
+        "k7-mask367-order13766": {
+          "outcome": "NO_CERTIFICATE",
+          "returned_feasible_base": "956/13",
+          "strict_target": 73,
+          "baseline_certified": false
+        }
+      }
+    }
+  },
+  "union_certified_ids": [
+    "k4-mask216-order39181",
+    "k4-mask54-order38858",
+    "k5-mask412-order38747",
+    "k5-mask472-order19117",
+    "k6-mask363-order26185",
+    "k7-mask478-order12940"
+  ],
+  "union_new_vs_catalog": [],
+  "unresolved_ids": [
+    "k6-mask378-order33207",
+    "k7-mask367-order13766"
+  ],
+  "scope": "Saved one-shot confirmation artifacts; exact direct resource and rational mixture checks plus finite literal expansion checks. A missing certificate is not infeasibility; no global LRX solution claimed."
+}

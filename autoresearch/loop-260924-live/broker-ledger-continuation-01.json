@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.2575012,
+      "id": 1,
+      "input_tokens": null,
+      "kind": "chat",
+      "output_tokens": null,
+      "reservation_overrun": false,
+      "reserved_usd": 0.2575012,
+      "status": "upstream_error"
+    }
+  ],
+  "halted_reason": "upstream_error",
+  "limits": {
+    "input_rate": 2.2,
+    "max_requests": 20,
+    "max_usd": 7.6628918,
+    "output_rate": 6.6
+  },
+  "spent_usd": 0.2575012
+}

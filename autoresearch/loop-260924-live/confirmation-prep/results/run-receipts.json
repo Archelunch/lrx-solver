@@ -1,0 +1,97 @@
+[
+  {
+    "label": "fixed_catalog_only",
+    "role": "control",
+    "source_sha256": "bf0cad88e465e924a0fcdad5810448ee3e72ec228805c92a1e713c22bc3ea6cb",
+    "score": 6.0,
+    "certified": 6,
+    "new_vs_catalog": 0,
+    "statuses": [
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok"
+    ],
+    "artifact": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/confirmation-prep/results/fixed_catalog_only/bf0cad88e465e924-evaluation.json"
+  },
+  {
+    "label": "original_four_cut_seed",
+    "role": "control",
+    "source_sha256": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3",
+    "score": 6.0,
+    "certified": 6,
+    "new_vs_catalog": 0,
+    "statuses": [
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok"
+    ],
+    "artifact": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/confirmation-prep/results/original_four_cut_seed/c27df808a5d2265c-evaluation.json"
+  },
+  {
+    "label": "deterministic_all_cuts",
+    "role": "post_hoc_control",
+    "source_sha256": "3fcc0f0d23ced3f0202454d3f44c419819e0fa3e8621a82a75bae2b2ab9df884",
+    "score": 6.0,
+    "certified": 6,
+    "new_vs_catalog": 0,
+    "statuses": [
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok"
+    ],
+    "artifact": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/confirmation-prep/results/deterministic_all_cuts/3fcc0f0d23ced3f0-evaluation.json"
+  },
+  {
+    "label": "adaevolve_valid_generated",
+    "role": "official_generated",
+    "source_sha256": "a5712e6b25e33572167d2a36d9a11ae3e048cbce4d184077dca216a7da2af129",
+    "score": 6.0,
+    "certified": 6,
+    "new_vs_catalog": 0,
+    "statuses": [
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok"
+    ],
+    "artifact": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/confirmation-prep/results/adaevolve_valid_generated/a5712e6b25e33572-evaluation.json"
+  },
+  {
+    "label": "evox_valid_generated",
+    "role": "official_generated",
+    "source_sha256": "aa416e9ce56a620b9670276ffe498c3d653c583aff9edc22e748a2dc95611dc2",
+    "score": 6.0,
+    "certified": 6,
+    "new_vs_catalog": 0,
+    "statuses": [
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok"
+    ],
+    "artifact": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/confirmation-prep/results/evox_valid_generated/aa416e9ce56a620b-evaluation.json"
+  }
+]

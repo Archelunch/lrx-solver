@@ -1,0 +1,186 @@
+/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/core/engine.py:742: UserWarning: cloudpickle is not installed; falling back to standard pickle. Install it with: pip install gepa[full]  or  pip install cloudpickle
+  state.save(self.run_dir, use_cloudpickle=self.use_cloudpickle)
+Iteration 0: Base program full valset score: 125.875 over 16 / 16 examples
+Iteration 1: Selected program 0 score: 125.875
+Batched reflection failed (timed out); retrying per task.
+Traceback (most recent call last):
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 214, in _propose_texts_batch_safe
+    return list(self._propose_texts_batch(jobs))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 184, in _propose_texts_batch
+    results = list(reflect_many(jobs))
+                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 168, in reflect_many
+    raw_outputs = self._batch_complete([r[2] for r in rendered], [r[3] for r in rendered])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 139, in _batch_complete
+    return [self.lm(prompts[0])]
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/lm.py", line 231, in __call__
+    result = self._fn(prompt)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/gepa/stage/official_worker.py", line 536, in __call__
+    with urlopen(req, timeout=self.timeout) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+Per-task reflection failed: HTTP Error 429: Too Many Requests
+Iteration 1: Reflective mutation did not propose a new candidate
+Iteration 2: Selected program 0 score: 125.875
+Batched reflection failed (HTTP Error 429: Too Many Requests); retrying per task.
+Traceback (most recent call last):
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 214, in _propose_texts_batch_safe
+    return list(self._propose_texts_batch(jobs))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 184, in _propose_texts_batch
+    results = list(reflect_many(jobs))
+                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 168, in reflect_many
+    raw_outputs = self._batch_complete([r[2] for r in rendered], [r[3] for r in rendered])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 139, in _batch_complete
+    return [self.lm(prompts[0])]
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/lm.py", line 231, in __call__
+    result = self._fn(prompt)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/gepa/stage/official_worker.py", line 536, in __call__
+    with urlopen(req, timeout=self.timeout) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+
+Per-task reflection failed: HTTP Error 429: Too Many Requests
+Iteration 2: Reflective mutation did not propose a new candidate
+Iteration 3: Selected program 0 score: 125.875
+Batched reflection failed (HTTP Error 429: Too Many Requests); retrying per task.
+Traceback (most recent call last):
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 214, in _propose_texts_batch_safe
+    return list(self._propose_texts_batch(jobs))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 184, in _propose_texts_batch
+    results = list(reflect_many(jobs))
+                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 168, in reflect_many
+    raw_outputs = self._batch_complete([r[2] for r in rendered], [r[3] for r in rendered])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 139, in _batch_complete
+    return [self.lm(prompts[0])]
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/lm.py", line 231, in __call__
+    result = self._fn(prompt)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/gepa/stage/official_worker.py", line 536, in __call__
+    with urlopen(req, timeout=self.timeout) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/core/engine.py:889: UserWarning: cloudpickle is not installed; falling back to standard pickle. Install it with: pip install gepa[full]  or  pip install cloudpickle
+  state.save(self.run_dir, use_cloudpickle=self.use_cloudpickle)
+
+Per-task reflection failed: HTTP Error 429: Too Many Requests
+Iteration 3: Reflective mutation did not propose a new candidate
+Iteration 4: Selected program 0 score: 125.875
+Batched reflection failed (HTTP Error 429: Too Many Requests); retrying per task.
+Traceback (most recent call last):
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 214, in _propose_texts_batch_safe
+    return list(self._propose_texts_batch(jobs))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 184, in _propose_texts_batch
+    results = list(reflect_many(jobs))
+                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 168, in reflect_many
+    raw_outputs = self._batch_complete([r[2] for r in rendered], [r[3] for r in rendered])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 139, in _batch_complete
+    return [self.lm(prompts[0])]
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/lm.py", line 231, in __call__
+    result = self._fn(prompt)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/gepa/stage/official_worker.py", line 536, in __call__
+    with urlopen(req, timeout=self.timeout) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+
+Per-task reflection failed: HTTP Error 429: Too Many Requests
+Iteration 4: Reflective mutation did not propose a new candidate
+{"engine": "gepa", "upstream": "gepa==0.1.4", "best_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/gepa/output/best.py", "best_score": 2014.0, "reflection_calls": 8, "full_evaluation": {"combined_score": 2014.0, "artifacts": {"feedback": "2 new exact family certificates; 14/16 total; 0 execution or format failures. Misses do not prove infeasibility.", "case_statuses": ["ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok", "ok"], "traces": [{"case_id": "k4-mask23-order35811", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.07869283301988617, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXRXRRXRXRRXRXRXRXRXRXRXLLLLXRXRXRXLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLL", "base": 108, "gamma": [23, 20, 17, 11]}, {"word": "XRRXRXRRXLXLXLXRRRRXLXRRXLXLXLXRRRRXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLL", "base": 106, "gamma": [27, 24, 21, 15]}, {"word": "XRXLXLXLLXLXRXLLXRXRXLLLXLLXRXRXRXRXLLLLLXRXRXRXLLLLXRXRXRXLLLLXLXRRXLXL", "base": 72, "gamma": [10, 7, 17, 11]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k4-mask135-order24096", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.040446208004141226, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXRXRXRRXRRRRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLXRXRXLLLXRXRXRXRXRRRRR", "base": 99, "gamma": [21, 18, 15, 4]}, {"word": "XRRXRRRRXLXLXLXRRRRXLXRRXLXLXLXLXLXLLLLLXLXLXLXLXLXLXLLLLLXLXLXLXLXLXLXRRRRRRXLXLXLXLXRRRRRXLXLXLXRRR", "base": 101, "gamma": [25, 22, 19, 4]}, {"word": "XRXRXLXRRRXRXRXRXRXRXLLLXRXLLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXLXLXRRRXRXLLXLXRRXLXL", "base": 89, "gamma": [11, 8, 12, 13]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k4-mask432-order21829", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.03996729198843241, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXRXRRRXRXRRXRXRXRXRXRXRXLLLLLXRXLLLXRXRXRXRXLLLLLXRXRXLLLLLL", "base": 62, "gamma": [12, 9, 3, 2]}, {"word": "XLXRXRRRXRXRRXLXLXRRRXLXRRXLXLXLXRRRRXLXLXLXRRRRXLXRRXRX", "base": 56, "gamma": [11, 8, 2, 1]}, {"word": "LXRRXRRXRXRXRXRXRXRXLLXRXLLLLXRXRXRXLLLLXLXRXRXRXRXRXRXRRRRRXL", "base": 62, "gamma": [11, 8, 6, 5]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k4-mask113-order3821", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.03807137502008118, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXLXRXLLXLLXRXRXRXRXRRRXRXRXRXRXRXRXRXLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRR", "base": 76, "gamma": [23, 11, 8, 5]}, {"word": "XLXLXLXLLXRXRXRXRXLXRRRRXRXLXRRXLXRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRRR", "base": 78, "gamma": [23, 11, 8, 5]}, {"word": "LXRXRRXRXRXRXRXRXRXRXLXLXLXLXRXLLXRXRXRXRXLLLLLXRXLLXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXLLLLLXLX", "base": 95, "gamma": [9, 12, 15, 12]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k5-mask425-order11302", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.037939292000373825, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXRXLLXLLXRXRXRXRXRRRXRRXRXRXRXRXRXLLLXRXLLLXRXRXRXRXLLLLLXRXRXRXRXRXRRRR", "base": 74, "gamma": [23, 14, 8, 2, 1]}, {"word": "XLXLXLLXLXLLXLXRXRXLXRRXLXRRRXLXLXLXLLLLXRXRXRXRXRXRRRXLXLXLXRRRRXRXLXR", "base": 71, "gamma": [24, 15, 9, 3, 0]}, {"word": "LXLLLLXRXLLXLXRXRXRXRXLLLLLXRXRXRXRXRXLLLLLLXLXRXRXRXRXRXRXRRRRRRXLXL", "base": 69, "gamma": [4, 12, 10, 4, 3]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k5-mask283-order33834", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.04207433300325647, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXRXLLLXRXLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRR", "base": 113, "gamma": [21, 18, 12, 9, 3]}, {"word": "XLLXLXLLXRXRXRRXLXLXRRRXLXRRRRRRXLXLXRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRR", "base": 127, "gamma": [23, 20, 14, 11, 1]}, {"word": "XRXRXRXRXRRXRXRXRXRXLLLXRXLLLXRXRXLLLLLLXLXLXRRRXRXLLXLXRRXLXL", "base": 62, "gamma": [11, 8, 9, 6, 10]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k5-mask333-order27563", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.03928983400692232, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXRXLLLXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRRRXRXRRXRXRXRXRXRXLLLLLXRXRXLLLXRXRXRXRXLLLLLXRXRXLLLLLL", "base": 96, "gamma": [23, 17, 14, 5, 3]}, {"word": "XLXRXRRRXRXLXRRXLXRRXRXLXLXRRRXLXLXLXLXRRRRRXRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXLXLXRRRRXLXLXRR", "base": 98, "gamma": [23, 17, 14, 5, 1]}, {"word": "XLXRXRXLXRRXRXRXRXRXRXRXRXRXLLXLXRXRXLLLLXRXRXRXLLLLXRXLLXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXRXRXRRRRRRXLXLXRRRXLXLX", "base": 115, "gamma": [16, 13, 14, 11, 15]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k5-mask302-order15713", "status": "NO_CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.03916149999713525, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "LXRXLLLXRXLLLXRXRXLLLXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRRRRR", "base": 96, "gamma": [18, 15, 12, 6, 3]}, {"word": "LXRXRRRXRXLXRRXLXLXRRRXLXRRXLXLXLXRRRRXLXLXLXLXRRRRRXLXLXLXRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXRR", "base": 102, "gamma": [20, 17, 14, 8, 1]}, {"word": "RXRXRXRXRXRXRXRXRXRXLXLLXRXLLXRXRXRXLLLLLXRXRXRXRXLLLLLLXLXLXLXRRRXLXLX", "base": 71, "gamma": [5, 15, 12, 6, 7]}], "rejected_words": [], "lp_status": "NO_CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k6-mask380-order36371", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.041084625001531094, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXLLLLLXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRXRRRRR", "base": 93, "gamma": [17, 14, 11, 8, 5, 1]}, {"word": "XLLXRXLLLXRXRXRXRXRRRXRXLXRRXLXRRXLXLXRRRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRR", "base": 93, "gamma": [17, 14, 11, 8, 5, 1]}, {"word": "LXRRXRXLXLXLXLLLLXLXRXRXRXLLLLXLXRXRXRXLLLLXLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXLXL", "base": 80, "gamma": [7, 13, 14, 11, 8, 6]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k6-mask373-order37856", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.04008725000312552, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXRXLLLXRXRXLLLXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRXRXRRRXRRXLXRRRXRXRXRXRXRXRXLLLLLLLXRXRXRXLLLLXRXRXRXRRRRRR", "base": 106, "gamma": [22, 16, 10, 7, 4, 2]}, {"word": "XLXRXLLLXLXRXRXLXRRXLXRRXRRRRXLXRRXRXLXLXRRRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRXLXRRXLXR", "base": 104, "gamma": [23, 17, 11, 8, 5, 1]}, {"word": "XLXRXRXLXRRXRXRXRXRXRXRXRXRXRXLXLLXLXLXRXLLXRXRXRXRXLLLLLXRXLLXRXLLXRXRXRXRXRXRXLLLLLLLXLXLXRRRXRXRXRXRXRXLLLLLLXLXRRXLXL", "base": 121, "gamma": [14, 15, 13, 16, 13, 13]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k6-mask359-order24703", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.037674709019484, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXRXRXRRRXRXLXRRRXRXRXRXRXRXRXRXRXRRRRRXLXRRRXRXRXRXRXRXLLLLLXRXRXRXLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXRRRRR", "base": 115, "gamma": [22, 19, 16, 7, 6, 2]}, {"word": "XLLXRXLLLXLXLXRXRRXLXLXLLLXRXRXRXRXRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXRRRRRXRXLXRRXLXRRXLXRRXLXRRXLXRRXLXRRXLXRRXRRR", "base": 111, "gamma": [23, 20, 17, 8, 5, 1]}, {"word": "XRXRRXRXRXRXRXRXRXRXRXLLLXRXRXLLLLXRXLLXRXLLXRXRXLLLXRXRXRXRXRXRXRXRRRRRRXRXRXRXRXRXRXRXRXRRRRRXLXLXRRRXRXLLXLXRRXLXL", "base": 117, "gamma": [13, 10, 10, 11, 14, 12]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k6-mask315-order31970", "status": "NO_CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.03880337500595488, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLLXRXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLL", "base": 108, "gamma": [23, 20, 14, 11, 8, 3]}, {"word": "XLLXLXLLXRXLLLXRXRXRXRXRXRXLXLXLXRRRRXLXLXLXLLLLLLXLXLXRRXRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXRRXRXRXR", "base": 102, "gamma": [24, 21, 15, 12, 9, 0]}, {"word": "XRXRXRXLXLXLXLXLLXLXLXRXLLXLXLXRXLLXRXRXRXRXLLLLLXRXRXRXRXLLLLLXRXRXRXRXLLLLLXRXLLXLXLXRRRXLXL", "base": 94, "gamma": [10, 7, 14, 11, 14, 9]}], "rejected_words": [], "lp_status": "NO_CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k7-mask351-order6128", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.039584165991982445, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRRRRXRXRXRXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRRRR", "base": 108, "gamma": [23, 20, 17, 14, 11, 5, 1]}, {"word": "XLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRRRRXLXRRXRXRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXLXLXRRRRXLXRRRR", "base": 106, "gamma": [23, 20, 17, 14, 11, 5, 1]}, {"word": "LXLLXLXRXLLXLXLXRXLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXRXLLXRXRXRXRXRXRXRXRXRRRRRRXRXRXRXRXRXLLLLLLXRXLLXLXLXRRRXLXL", "base": 113, "gamma": [7, 8, 16, 13, 16, 10, 6]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k7-mask491-order37059", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.039875792019302025, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXRXLLLXRXRXLLLLXRXRXRXLLLLXRXRXRXRXRXRXRRRXRXRXRXRXRXRXRXRXRXRXRXRRRRRXRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXRRRRR", "base": 111, "gamma": [22, 19, 13, 7, 4, 3, 2]}, {"word": "XLLXLXLLXLXRXRXLXRRXRXRXLXLXLXLLLLXRXRXRXRXRRRRXLXLXLXLXLLLLLLXRXRXRXRXRXRXRRRRRRRXRXRXRXRXRXRXRXRXRXRXRXR", "base": 106, "gamma": [23, 20, 14, 8, 5, 2, 1]}, {"word": "XRXRXRXRRXLXRRRXRXRXRXLXLLXLXRXRXRXRRRXLXLXLXLXLXLXLXRXRXRXLLLLXRXLLXRXLLXLXLXLXRRRXRXLLXLXRRXLXL", "base": 97, "gamma": [11, 8, 13, 11, 10, 7, 10]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "NO_CERTIFICATE"}, {"case_id": "k7-mask223-order9748", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.040975125011755154, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLLXRXLLLXRXRXRXRRRXRRXRXRRXRXRXRXRXRXRXRXRXRRRXRXRRXLXLXRRRRXRXRXRXRXRXLLLLLLXRXRXRXRXRXLLLLLLXRXRXRXRXLLLLLXRXRXRXRXRRRRRR", "base": 124, "gamma": [22, 19, 16, 13, 10, 4, 3]}, {"word": "XRRXRRXLXRRXLXRRRXLXLXLXRRRRXRXLXLXLXLXRRRRRXLXLXRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXLXRRRRRRRXLXLXLXLXLXLXRRRRRRRX", "base": 127, "gamma": [23, 20, 17, 14, 11, 5, 2]}, {"word": "LXLLLXRXLLLLXLXLXRXRXRXRXRXLLLLLLXRXLLXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRRRRRRRXRXLLXLXLXRRRXLXL", "base": 101, "gamma": [8, 9, 11, 8, 9, 9, 8]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}, {"case_id": "k7-mask445-order23635", "status": "CERTIFICATE", "candidate_run": {"status": "ok", "seconds": 0.040637250000145286, "isolation": "macos_seatbelt"}, "accepted_words": [{"word": "XLXLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRXRRRXRXRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXRR", "base": 112, "gamma": [21, 15, 12, 9, 6, 4, 3]}, {"word": "XLXLLXRXLLLXRXRXLLLLXRXRXRXRXRXRXRXRRRXRXRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRR", "base": 122, "gamma": [23, 17, 14, 11, 8, 2, 1]}, {"word": "XLXLLXLLXRXLLLXRXRXRXRXRRRRXLXRRXRXRXRXRXRXRXRXRXRXRRRRRXLXLXRRRXRXRXRXRXRXRXRXRXRRRRRRRXRXLLXLXLXRRRXLXL", "base": 105, "gamma": [18, 13, 10, 7, 4, 10, 15]}], "rejected_words": [], "lp_status": "CERTIFICATE", "baseline_lp_status": "CERTIFICATE"}], "evaluation": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/loop-260924-live/gepa/verified/evaluations/result-0029.json"}, "certified": 14, "new_certified": 2, "candidate_hash": "c27df808a5d2265c7e9befa3ae6eb2f0ec98811b3fe0126cf4dab85afc346eb3"}}

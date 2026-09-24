@@ -1,6 +1,7 @@
 """Trust and upstream-routing gates for executable official optimizers."""
 
 import json
+import io
 from pathlib import Path
 import tempfile
 import types
@@ -89,6 +90,44 @@ class OfficialBackendTests(unittest.TestCase):
             self.assertEqual(ids, [row_id])
             self.assertIn("TRACE_MARKER", payload)
             self.assertIn("--- parent", payload)
+
+    def test_reasoning_effort_reaches_both_official_request_paths(self):
+        captured = {}
+
+        def respond(request, timeout):
+            captured["payload"] = json.loads(request.data)
+            captured["timeout"] = timeout
+            return io.BytesIO(b'{"choices":[{"message":{"content":"proposal"}}]}')
+
+        lm = official.BrokerLM("http://127.0.0.1:8877/v1", "grok-4.7", 4096,
+                               None, 600, "low")
+        with patch.object(official, "urlopen", side_effect=respond):
+            self.assertEqual(lm("Improve the program"), "proposal")
+        self.assertEqual(captured["payload"]["reasoning_effort"], "low")
+        self.assertEqual(captured["payload"]["model"], "grok-4.7")
+        self.assertEqual(captured["timeout"], 600)
+
+        with tempfile.TemporaryDirectory() as temp:
+            args = types.SimpleNamespace(
+                engine="evox", iterations=2, sky_log_level="INFO", model="grok-4.7",
+                broker_url="http://127.0.0.1:8877/v1", max_tokens=4096,
+                llm_timeout=600, reasoning_effort="low", offline_no_auto_variation=False,
+                evox_switch_interval=2, eval_timeout=120)
+            config = json.loads(official._sky_config(args, Path(temp), None, None).read_text())
+            self.assertEqual(config["llm"]["reasoning_effort"], "low")
+            self.assertTrue(config["search"]["database"]["auto_generate_variation_operators"])
+
+    def test_reviewed_archive_context_is_staged_byte_for_byte(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            reviewed = root / "reviewed.json"
+            reviewed.write_bytes(b'[{"id":1,"traces":[{"status":"NO_CERTIFICATE"}]}]\n')
+            stage = root / "stage"
+            stage.mkdir()
+            args = types.SimpleNamespace(archive=None, archive_context_file=reviewed)
+            staged, ids = official._stage_archive(args, stage)
+            self.assertEqual(ids, [1])
+            self.assertEqual(staged.read_bytes(), reviewed.read_bytes())
 
 
 if __name__ == "__main__":

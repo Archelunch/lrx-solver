@@ -1,0 +1,52 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.0028864000000000003,
+      "id": 1,
+      "input_tokens": 1243,
+      "kind": "chat",
+      "output_tokens": 23,
+      "reservation_overrun": false,
+      "reserved_usd": 0.13454539999999998,
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0028864000000000003,
+      "id": 2,
+      "input_tokens": 1243,
+      "kind": "chat",
+      "output_tokens": 23,
+      "reservation_overrun": false,
+      "reserved_usd": 0.13454539999999998,
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.09009,
+      "id": 3,
+      "input_tokens": 11781,
+      "kind": "chat",
+      "output_tokens": 9723,
+      "reservation_overrun": false,
+      "reserved_usd": 0.2389948,
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.24124540000000003,
+      "id": 4,
+      "input_tokens": null,
+      "kind": "chat",
+      "output_tokens": null,
+      "reservation_overrun": false,
+      "reserved_usd": 0.24124540000000003,
+      "status": "upstream_error"
+    }
+  ],
+  "halted_reason": "upstream_error",
+  "limits": {
+    "input_rate": 2.2,
+    "max_requests": 24,
+    "max_usd": 8.0,
+    "output_rate": 6.6
+  },
+  "spent_usd": 0.3371082000000001
+}
