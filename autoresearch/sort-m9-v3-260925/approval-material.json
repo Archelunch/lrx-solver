@@ -1,0 +1,926 @@
+{
+  "broker_config": {
+    "api_key_env": "GEMINI_API_KEY",
+    "chars_per_reasoning_token_assumption": 3,
+    "input_usd_per_million": 0.825,
+    "ledger": "autoresearch/sort-m9-v3-260925/broker-ledger-v3.json",
+    "max_prompt_bytes": 120000,
+    "max_tokens": 8192,
+    "max_usd_per_run": 10.0,
+    "max_usd_per_run_note": "PROPOSED, to confirm: about 215 calls at an estimated $0.025-0.035 each (SPEC section 4) is $5.4-7.5; the broker needs spend plus one reservation (reservation_usd_per_request_conservative) below this cap.",
+    "model": "gemini-3.8-flash",
+    "model_note": "Copied unchanged from the applied broker-config.json; re-verify against a live /v1beta/openai/models listing and current pricing before use.",
+    "note": "Flash proposer broker for loop v3. Copied from sort-m9-260925/broker-config.json (gemini-3.8-flash, same prices, reasoning and timeout fields). Per-run caps replace the shared pool: each (arm, seed) run gets its own ledger broker-ledger-v3.<engine>-s<S>.json (path recorded in the run manifest), --max-requests = campaign-config engines.<arm>.max_requests and --max-usd = max_usd_per_run. Pending human approval (payload-approved.sha256).",
+    "output_usd_per_million": 4.125,
+    "price_source": "Copied unchanged from the applied broker-config.json.",
+    "price_source_date": "2026-09-24",
+    "reasoning_cap_chars_conservative": 24000,
+    "reasoning_cap_tokens": 8000,
+    "reasoning_effort": "low",
+    "reasoning_effort_note": "Copied unchanged from the applied broker-config.json.",
+    "reasoning_effort_support_confirmed": true,
+    "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+    "reservation_usd_per_request_conservative": 0.1666368,
+    "run": "sort-m9-v3-260925",
+    "timeout": 480,
+    "upstream_stream": true,
+    "upstream_url": "https://generativelanguage.googleapis.com/v1beta/openai"
+  },
+  "brokers": {
+    "flash": {
+      "dry_run_payload": {
+        "max_completion_tokens": 8192,
+        "messages": [
+          {
+            "content": "<research_context placeholder; not sent by dry-run>",
+            "role": "system"
+          },
+          {
+            "content": "<gepa_reflection prompt placeholder; not sent by dry-run>",
+            "role": "user"
+          }
+        ],
+        "model": "gemini-3.8-flash",
+        "reasoning_effort": "low",
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "upstream_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+    },
+    "reflection": {
+      "dry_run_payload": {
+        "max_completion_tokens": 3000,
+        "messages": [
+          {
+            "content": "<research_context placeholder; not sent by dry-run>",
+            "role": "system"
+          },
+          {
+            "content": "<gepa_reflection prompt placeholder; not sent by dry-run>",
+            "role": "user"
+          }
+        ],
+        "model": "gemini-3.8-pro",
+        "reasoning_effort": "low",
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "upstream_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+    }
+  },
+  "campaign_config": {
+    "broker_port": 8898,
+    "campaign": "sort-m9-v3-260925",
+    "campaign_max_usd": null,
+    "campaign_max_usd_note": "null until the scale (pilot vs full) and the reflection model (O2, O3) are decided; live refuses to start while null.",
+    "engines": {
+      "adaevolve": {
+        "iterations": 200,
+        "max_full_evals": 230,
+        "max_requests": 215,
+        "max_screen_evals": 230,
+        "wall_seconds": 28800
+      },
+      "evox": {
+        "iterations": 200,
+        "max_full_evals": 230,
+        "max_requests": 215,
+        "max_screen_evals": 230,
+        "wall_seconds": 28800
+      },
+      "gepa": {
+        "frontier_type": "instance",
+        "iterations": 200,
+        "max_metric_calls": 7266,
+        "max_requests": 215,
+        "max_state_evals": 380000,
+        "minibatch": 3,
+        "wall_seconds": 28800
+      },
+      "sequential": {
+        "iterations": 200,
+        "max_full_evals": 205,
+        "max_requests": 215,
+        "max_screen_evals": 205,
+        "wall_seconds": 28800
+      }
+    },
+    "eval_cache": "autoresearch/sort-m9-v3-260925/eval-cache",
+    "eval_timeout": 900,
+    "evox_note": "EvoX's outer loop writes and runs LLM-generated Python search strategies; AGENTS.md forbids executing generated code outside the evaluator sandbox, so it is disabled in every run (switch_interval = iterations + 1, variation operators off, post-run leak check).",
+    "evox_strategy_evolution": false,
+    "frozen_manifest": "autoresearch/sort-m9-260925/frozen/manifest.json",
+    "frozen_v3_manifest": "autoresearch/sort-m9-v3-260925/frozen-v3/manifest.json",
+    "note": "Loop v3 (autoresearch/loop-v3-260925/SPEC-track1.md). Every limit under engines applies to one run = one (arm, seed). Development set and holdout are the sort-m9-260925 frozen files, referenced by manifest and hash; frozen-v3 holds the 30-instance partition and the 100-state screen (build_instances.py). Covered by the approval hash: python -m integrations.sort_loop3 approval-hash.",
+    "packet": {
+      "instance_max_chars": 2500,
+      "key_max_chars": 2000,
+      "marker": "SORT_PACKET_V2",
+      "sequential_max_chars": 6000,
+      "worst_states": 5
+    },
+    "python": ".venv-official/bin/python",
+    "reflection": {
+      "broker_config": "broker-config-reflection.json",
+      "broker_port": 8899,
+      "diagnosis_max_chars": 4000,
+      "enabled": true,
+      "max_requests": {
+        "adaevolve": 20,
+        "evox": 0,
+        "gepa": 215,
+        "sequential": 215
+      },
+      "on_failure": "halt"
+    },
+    "reveal_optimal_max_states": 300,
+    "screen_threshold": 1.1,
+    "seed_program": "integrations/sort_control_sweep.py",
+    "seed_screen_score": 1.1886524822695037,
+    "seed_screen_score_note": "Exact screen combined score of the seed, computed from the saved v2 per-state rows (controls/v2-sort_control_sweep-development.json); _setup_v3 re-evaluates the seed under Seatbelt without cache every run and aborts on a difference above 1e-9.",
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "sky_note": "inject_evaluator_context is false. AdaEvolve paradigm prompts still include the staged evaluator stub source (SkyDiscover 0.2.0 adaevolve/controller.py:80-112); the stub holds only the HTTP call."
+  },
+  "code_sha256": {
+    "lift_backends": "05ef38f705033eda93c179a6fd1c506b2bedeace945926473ebbbaa2236a0905",
+    "official_backends": "284ce1e6c6d8054c293d416574a8388ae6f85d5b3f489433e9b71602429649fe",
+    "research_budget": "30e406d955358473fcda42883e140825938941bbc2f702b9a042fa2e8a9b8097",
+    "sort_backends": "835c58b6f8d4ce2515060c94c67e815cfdba5a556847f3d3009252ab6318b417",
+    "sort_loop3": "9f9031872d43503d139fbf91c5ee35cd91d3b90e2e5d00c06191cda76affa12a"
+  },
+  "data": {
+    "development_sha256": "f4dd4752758b573c6ba246f612fbbef5340bae754c14e63438fcc945eabb3346",
+    "frozen_manifest_sha256": "c98fd6136f4df9038188f754c5e458758e989f0d83efc052349858145affca4e",
+    "frozen_v3_manifest_sha256": "cf7041199cbf41de6ed4168f8d81bd800ed36553a98226682f8e55f8b3f1534b",
+    "frozen_v3_recorded": {
+      "development_sha256": "f4dd4752758b573c6ba246f612fbbef5340bae754c14e63438fcc945eabb3346",
+      "instances_sha256": "cf0cfcbaed44d245b05af07257db46d28414bb5925b95c41b852fbd2f8c3bb65",
+      "screen_sha256": "fa28017d1bef66aa14907a3c5f7ec479f6600cbfe6cc14a33658fc21218192b6"
+    },
+    "instances_sha256": "cf0cfcbaed44d245b05af07257db46d28414bb5925b95c41b852fbd2f8c3bb65",
+    "screen_sha256": "fa28017d1bef66aa14907a3c5f7ec479f6600cbfe6cc14a33658fc21218192b6",
+    "seed_sha256": "65fbfc47f728f589189f839f77065220da74f8692df4632adecde2a999bf9906"
+  },
+  "engine_knobs": {
+    "adaevolve/s1": {
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "reflection_max_requests": 20,
+      "seed": 1,
+      "sky": {
+        "checkpoint_interval": 1,
+        "diff_based_generation": true,
+        "evaluator": {
+          "cascade_evaluation": true,
+          "cascade_thresholds": [
+            1.1,
+            1.1
+          ],
+          "inject_evaluator_context": false,
+          "max_retries": 0,
+          "timeout": 900
+        },
+        "language": "python",
+        "llm": {
+          "api_base": "http://127.0.0.1:8898/v1",
+          "api_key": "local-broker",
+          "guide_models": [
+            {
+              "api_base": "http://127.0.0.1:8899/v1",
+              "api_key": "local-broker",
+              "max_tokens": 3000,
+              "name": "gemini-3.8-pro",
+              "reasoning_effort": "low",
+              "retries": 0,
+              "timeout": 510
+            }
+          ],
+          "max_tokens": 8192,
+          "models": [
+            {
+              "api_base": "http://127.0.0.1:8898/v1",
+              "api_key": "local-broker",
+              "name": "gemini-3.8-flash",
+              "weight": 1.0
+            }
+          ],
+          "reasoning_effort": "low",
+          "retries": 0,
+          "temperature": 0.7,
+          "timeout": 510
+        },
+        "log_level": "INFO",
+        "max_iterations": 200,
+        "max_parallel_iterations": 1,
+        "max_solution_length": 40000,
+        "monitor": {
+          "enabled": false
+        },
+        "prompt": {
+          "system_message": "Find a constructive, uniform LRX sorting procedure. Goal: an algorithm that is uniform in r (and ideally in m) and provably stays within the budget T_m(n) = m(m+1)/2 + (r-1)(m-2) (45 + 7(r-1) at m=9), with a route whose length can be bounded by an argument. Useful ingredients: sweep strategies that use zero blocks as buffers, comparison-transfer routes that carry one label through a block, cycle-based service of labels in cyclic order, choosing the final rotation. The candidate source must define sort_word(v) -> str. v is a list of length n = m + r holding labels 1..m once (m = max(v)) and r >= 1 zeros; return a word over L, R, X that sorts v to (1, 2, ..., m, 0, ..., 0). L rotates the vector left (the first entry moves to the end), R rotates it right, and X swaps the first two entries. The trusted evaluator replays the word literally. Each call gets 0.2 s of CPU time (and module import 0.5 s); any state-space search (BFS, bidirectional BFS, IDA*, beam or A* search over vectors, or caching such search across calls) times out on almost every state, and a timeout counts as an unsorted state. Build the word directly from the structure of v. Score: fraction of development states sorted within T (primary), plus 0.5 times the worst per-r within-budget rate (so the program must work for every r, not only small r), plus a small term for low mean excess over the exact distance, minus the fraction not sorted. Stdlib only, at most 64 KiB, at most 1000 letters per word. Development states are m=9, r=1..5; the holdout has unseen states and unseen (m, r), so the program must work for any m and r. Misses prove nothing. Do not read files, the network, or environment variables. Exact facts at m=9, r=1..5 (complete BFS tables): the sorting radius equals T_9(n) = 45, 52, 59, 66, 73. The 15 states at distance T are near-reversals: 10 of 15 read 9,8,...,1 cyclically, e.g. (2,1,0^r,9,8,...,3) for r=1,2,3 and (0^r,9,8,...,1) for r=2,3. d(v) <= min_q d_q(v) + K with K = 14,15,17,18,20 for r=1..5, where d_q is the (8,r) distance after deleting label q; K is attained only near the root. No rotation, reflection or complement symmetry preserves d."
+        },
+        "search": {
+          "database": {
+            "fitness_key": "full_score",
+            "higher_is_better": {
+              "full_score": true,
+              "neg_mean_excess": true,
+              "within_rate": true,
+              "worst_r_rate": true
+            },
+            "pareto_objectives": [
+              "within_rate",
+              "worst_r_rate",
+              "neg_mean_excess"
+            ],
+            "pareto_objectives_weight": 0.0,
+            "random_seed": 1,
+            "use_paradigm_breakthrough": true
+          },
+          "num_context_programs": 2,
+          "share_llm": false,
+          "switch_interval": null,
+          "type": "adaevolve"
+        }
+      },
+      "verifier": {
+        "max_full_evals": 230,
+        "max_screen_evals": 230
+      },
+      "wall_seconds": 28800
+    },
+    "adaevolve/s2": {
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "reflection_max_requests": 20,
+      "seed": 2,
+      "sky": {
+        "checkpoint_interval": 1,
+        "diff_based_generation": true,
+        "evaluator": {
+          "cascade_evaluation": true,
+          "cascade_thresholds": [
+            1.1,
+            1.1
+          ],
+          "inject_evaluator_context": false,
+          "max_retries": 0,
+          "timeout": 900
+        },
+        "language": "python",
+        "llm": {
+          "api_base": "http://127.0.0.1:8898/v1",
+          "api_key": "local-broker",
+          "guide_models": [
+            {
+              "api_base": "http://127.0.0.1:8899/v1",
+              "api_key": "local-broker",
+              "max_tokens": 3000,
+              "name": "gemini-3.8-pro",
+              "reasoning_effort": "low",
+              "retries": 0,
+              "timeout": 510
+            }
+          ],
+          "max_tokens": 8192,
+          "models": [
+            {
+              "api_base": "http://127.0.0.1:8898/v1",
+              "api_key": "local-broker",
+              "name": "gemini-3.8-flash",
+              "weight": 1.0
+            }
+          ],
+          "reasoning_effort": "low",
+          "retries": 0,
+          "temperature": 0.7,
+          "timeout": 510
+        },
+        "log_level": "INFO",
+        "max_iterations": 200,
+        "max_parallel_iterations": 1,
+        "max_solution_length": 40000,
+        "monitor": {
+          "enabled": false
+        },
+        "prompt": {
+          "system_message": "Find a constructive, uniform LRX sorting procedure. Goal: an algorithm that is uniform in r (and ideally in m) and provably stays within the budget T_m(n) = m(m+1)/2 + (r-1)(m-2) (45 + 7(r-1) at m=9), with a route whose length can be bounded by an argument. Useful ingredients: sweep strategies that use zero blocks as buffers, comparison-transfer routes that carry one label through a block, cycle-based service of labels in cyclic order, choosing the final rotation. The candidate source must define sort_word(v) -> str. v is a list of length n = m + r holding labels 1..m once (m = max(v)) and r >= 1 zeros; return a word over L, R, X that sorts v to (1, 2, ..., m, 0, ..., 0). L rotates the vector left (the first entry moves to the end), R rotates it right, and X swaps the first two entries. The trusted evaluator replays the word literally. Each call gets 0.2 s of CPU time (and module import 0.5 s); any state-space search (BFS, bidirectional BFS, IDA*, beam or A* search over vectors, or caching such search across calls) times out on almost every state, and a timeout counts as an unsorted state. Build the word directly from the structure of v. Score: fraction of development states sorted within T (primary), plus 0.5 times the worst per-r within-budget rate (so the program must work for every r, not only small r), plus a small term for low mean excess over the exact distance, minus the fraction not sorted. Stdlib only, at most 64 KiB, at most 1000 letters per word. Development states are m=9, r=1..5; the holdout has unseen states and unseen (m, r), so the program must work for any m and r. Misses prove nothing. Do not read files, the network, or environment variables. Exact facts at m=9, r=1..5 (complete BFS tables): the sorting radius equals T_9(n) = 45, 52, 59, 66, 73. The 15 states at distance T are near-reversals: 10 of 15 read 9,8,...,1 cyclically, e.g. (2,1,0^r,9,8,...,3) for r=1,2,3 and (0^r,9,8,...,1) for r=2,3. d(v) <= min_q d_q(v) + K with K = 14,15,17,18,20 for r=1..5, where d_q is the (8,r) distance after deleting label q; K is attained only near the root. No rotation, reflection or complement symmetry preserves d."
+        },
+        "search": {
+          "database": {
+            "fitness_key": "full_score",
+            "higher_is_better": {
+              "full_score": true,
+              "neg_mean_excess": true,
+              "within_rate": true,
+              "worst_r_rate": true
+            },
+            "pareto_objectives": [
+              "within_rate",
+              "worst_r_rate",
+              "neg_mean_excess"
+            ],
+            "pareto_objectives_weight": 0.0,
+            "random_seed": 2,
+            "use_paradigm_breakthrough": true
+          },
+          "num_context_programs": 2,
+          "share_llm": false,
+          "switch_interval": null,
+          "type": "adaevolve"
+        }
+      },
+      "verifier": {
+        "max_full_evals": 230,
+        "max_screen_evals": 230
+      },
+      "wall_seconds": 28800
+    },
+    "adaevolve/s3": {
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "reflection_max_requests": 20,
+      "seed": 3,
+      "sky": {
+        "checkpoint_interval": 1,
+        "diff_based_generation": true,
+        "evaluator": {
+          "cascade_evaluation": true,
+          "cascade_thresholds": [
+            1.1,
+            1.1
+          ],
+          "inject_evaluator_context": false,
+          "max_retries": 0,
+          "timeout": 900
+        },
+        "language": "python",
+        "llm": {
+          "api_base": "http://127.0.0.1:8898/v1",
+          "api_key": "local-broker",
+          "guide_models": [
+            {
+              "api_base": "http://127.0.0.1:8899/v1",
+              "api_key": "local-broker",
+              "max_tokens": 3000,
+              "name": "gemini-3.8-pro",
+              "reasoning_effort": "low",
+              "retries": 0,
+              "timeout": 510
+            }
+          ],
+          "max_tokens": 8192,
+          "models": [
+            {
+              "api_base": "http://127.0.0.1:8898/v1",
+              "api_key": "local-broker",
+              "name": "gemini-3.8-flash",
+              "weight": 1.0
+            }
+          ],
+          "reasoning_effort": "low",
+          "retries": 0,
+          "temperature": 0.7,
+          "timeout": 510
+        },
+        "log_level": "INFO",
+        "max_iterations": 200,
+        "max_parallel_iterations": 1,
+        "max_solution_length": 40000,
+        "monitor": {
+          "enabled": false
+        },
+        "prompt": {
+          "system_message": "Find a constructive, uniform LRX sorting procedure. Goal: an algorithm that is uniform in r (and ideally in m) and provably stays within the budget T_m(n) = m(m+1)/2 + (r-1)(m-2) (45 + 7(r-1) at m=9), with a route whose length can be bounded by an argument. Useful ingredients: sweep strategies that use zero blocks as buffers, comparison-transfer routes that carry one label through a block, cycle-based service of labels in cyclic order, choosing the final rotation. The candidate source must define sort_word(v) -> str. v is a list of length n = m + r holding labels 1..m once (m = max(v)) and r >= 1 zeros; return a word over L, R, X that sorts v to (1, 2, ..., m, 0, ..., 0). L rotates the vector left (the first entry moves to the end), R rotates it right, and X swaps the first two entries. The trusted evaluator replays the word literally. Each call gets 0.2 s of CPU time (and module import 0.5 s); any state-space search (BFS, bidirectional BFS, IDA*, beam or A* search over vectors, or caching such search across calls) times out on almost every state, and a timeout counts as an unsorted state. Build the word directly from the structure of v. Score: fraction of development states sorted within T (primary), plus 0.5 times the worst per-r within-budget rate (so the program must work for every r, not only small r), plus a small term for low mean excess over the exact distance, minus the fraction not sorted. Stdlib only, at most 64 KiB, at most 1000 letters per word. Development states are m=9, r=1..5; the holdout has unseen states and unseen (m, r), so the program must work for any m and r. Misses prove nothing. Do not read files, the network, or environment variables. Exact facts at m=9, r=1..5 (complete BFS tables): the sorting radius equals T_9(n) = 45, 52, 59, 66, 73. The 15 states at distance T are near-reversals: 10 of 15 read 9,8,...,1 cyclically, e.g. (2,1,0^r,9,8,...,3) for r=1,2,3 and (0^r,9,8,...,1) for r=2,3. d(v) <= min_q d_q(v) + K with K = 14,15,17,18,20 for r=1..5, where d_q is the (8,r) distance after deleting label q; K is attained only near the root. No rotation, reflection or complement symmetry preserves d."
+        },
+        "search": {
+          "database": {
+            "fitness_key": "full_score",
+            "higher_is_better": {
+              "full_score": true,
+              "neg_mean_excess": true,
+              "within_rate": true,
+              "worst_r_rate": true
+            },
+            "pareto_objectives": [
+              "within_rate",
+              "worst_r_rate",
+              "neg_mean_excess"
+            ],
+            "pareto_objectives_weight": 0.0,
+            "random_seed": 3,
+            "use_paradigm_breakthrough": true
+          },
+          "num_context_programs": 2,
+          "share_llm": false,
+          "switch_interval": null,
+          "type": "adaevolve"
+        }
+      },
+      "verifier": {
+        "max_full_evals": 230,
+        "max_screen_evals": 230
+      },
+      "wall_seconds": 28800
+    },
+    "evox/s1": {
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "reflection_max_requests": 0,
+      "seed": 1,
+      "sky": {
+        "checkpoint_interval": 1,
+        "diff_based_generation": true,
+        "evaluator": {
+          "cascade_evaluation": true,
+          "cascade_thresholds": [
+            1.1,
+            1.1
+          ],
+          "inject_evaluator_context": false,
+          "max_retries": 0,
+          "timeout": 900
+        },
+        "language": "python",
+        "llm": {
+          "api_base": "http://127.0.0.1:8898/v1",
+          "api_key": "local-broker",
+          "max_tokens": 8192,
+          "models": [
+            {
+              "api_base": "http://127.0.0.1:8898/v1",
+              "api_key": "local-broker",
+              "name": "gemini-3.8-flash",
+              "weight": 1.0
+            }
+          ],
+          "reasoning_effort": "low",
+          "retries": 0,
+          "temperature": 0.7,
+          "timeout": 510
+        },
+        "log_level": "INFO",
+        "max_iterations": 200,
+        "max_parallel_iterations": 1,
+        "max_solution_length": 40000,
+        "monitor": {
+          "enabled": false
+        },
+        "prompt": {
+          "system_message": "Find a constructive, uniform LRX sorting procedure. Goal: an algorithm that is uniform in r (and ideally in m) and provably stays within the budget T_m(n) = m(m+1)/2 + (r-1)(m-2) (45 + 7(r-1) at m=9), with a route whose length can be bounded by an argument. Useful ingredients: sweep strategies that use zero blocks as buffers, comparison-transfer routes that carry one label through a block, cycle-based service of labels in cyclic order, choosing the final rotation. The candidate source must define sort_word(v) -> str. v is a list of length n = m + r holding labels 1..m once (m = max(v)) and r >= 1 zeros; return a word over L, R, X that sorts v to (1, 2, ..., m, 0, ..., 0). L rotates the vector left (the first entry moves to the end), R rotates it right, and X swaps the first two entries. The trusted evaluator replays the word literally. Each call gets 0.2 s of CPU time (and module import 0.5 s); any state-space search (BFS, bidirectional BFS, IDA*, beam or A* search over vectors, or caching such search across calls) times out on almost every state, and a timeout counts as an unsorted state. Build the word directly from the structure of v. Score: fraction of development states sorted within T (primary), plus 0.5 times the worst per-r within-budget rate (so the program must work for every r, not only small r), plus a small term for low mean excess over the exact distance, minus the fraction not sorted. Stdlib only, at most 64 KiB, at most 1000 letters per word. Development states are m=9, r=1..5; the holdout has unseen states and unseen (m, r), so the program must work for any m and r. Misses prove nothing. Do not read files, the network, or environment variables. Exact facts at m=9, r=1..5 (complete BFS tables): the sorting radius equals T_9(n) = 45, 52, 59, 66, 73. The 15 states at distance T are near-reversals: 10 of 15 read 9,8,...,1 cyclically, e.g. (2,1,0^r,9,8,...,3) for r=1,2,3 and (0^r,9,8,...,1) for r=2,3. d(v) <= min_q d_q(v) + K with K = 14,15,17,18,20 for r=1..5, where d_q is the (8,r) distance after deleting label q; K is attained only near the root. No rotation, reflection or complement symmetry preserves d."
+        },
+        "search": {
+          "database": {
+            "auto_generate_variation_operators": false,
+            "fitness_key": "full_score",
+            "higher_is_better": {
+              "full_score": true,
+              "neg_mean_excess": true,
+              "within_rate": true,
+              "worst_r_rate": true
+            },
+            "pareto_objectives": [
+              "within_rate",
+              "worst_r_rate",
+              "neg_mean_excess"
+            ],
+            "pareto_objectives_weight": 0.0,
+            "random_seed": 1
+          },
+          "num_context_programs": 2,
+          "share_llm": true,
+          "switch_interval": 201,
+          "type": "evox"
+        }
+      },
+      "verifier": {
+        "max_full_evals": 230,
+        "max_screen_evals": 230
+      },
+      "wall_seconds": 28800
+    },
+    "evox/s2": {
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "reflection_max_requests": 0,
+      "seed": 2,
+      "sky": {
+        "checkpoint_interval": 1,
+        "diff_based_generation": true,
+        "evaluator": {
+          "cascade_evaluation": true,
+          "cascade_thresholds": [
+            1.1,
+            1.1
+          ],
+          "inject_evaluator_context": false,
+          "max_retries": 0,
+          "timeout": 900
+        },
+        "language": "python",
+        "llm": {
+          "api_base": "http://127.0.0.1:8898/v1",
+          "api_key": "local-broker",
+          "max_tokens": 8192,
+          "models": [
+            {
+              "api_base": "http://127.0.0.1:8898/v1",
+              "api_key": "local-broker",
+              "name": "gemini-3.8-flash",
+              "weight": 1.0
+            }
+          ],
+          "reasoning_effort": "low",
+          "retries": 0,
+          "temperature": 0.7,
+          "timeout": 510
+        },
+        "log_level": "INFO",
+        "max_iterations": 200,
+        "max_parallel_iterations": 1,
+        "max_solution_length": 40000,
+        "monitor": {
+          "enabled": false
+        },
+        "prompt": {
+          "system_message": "Find a constructive, uniform LRX sorting procedure. Goal: an algorithm that is uniform in r (and ideally in m) and provably stays within the budget T_m(n) = m(m+1)/2 + (r-1)(m-2) (45 + 7(r-1) at m=9), with a route whose length can be bounded by an argument. Useful ingredients: sweep strategies that use zero blocks as buffers, comparison-transfer routes that carry one label through a block, cycle-based service of labels in cyclic order, choosing the final rotation. The candidate source must define sort_word(v) -> str. v is a list of length n = m + r holding labels 1..m once (m = max(v)) and r >= 1 zeros; return a word over L, R, X that sorts v to (1, 2, ..., m, 0, ..., 0). L rotates the vector left (the first entry moves to the end), R rotates it right, and X swaps the first two entries. The trusted evaluator replays the word literally. Each call gets 0.2 s of CPU time (and module import 0.5 s); any state-space search (BFS, bidirectional BFS, IDA*, beam or A* search over vectors, or caching such search across calls) times out on almost every state, and a timeout counts as an unsorted state. Build the word directly from the structure of v. Score: fraction of development states sorted within T (primary), plus 0.5 times the worst per-r within-budget rate (so the program must work for every r, not only small r), plus a small term for low mean excess over the exact distance, minus the fraction not sorted. Stdlib only, at most 64 KiB, at most 1000 letters per word. Development states are m=9, r=1..5; the holdout has unseen states and unseen (m, r), so the program must work for any m and r. Misses prove nothing. Do not read files, the network, or environment variables. Exact facts at m=9, r=1..5 (complete BFS tables): the sorting radius equals T_9(n) = 45, 52, 59, 66, 73. The 15 states at distance T are near-reversals: 10 of 15 read 9,8,...,1 cyclically, e.g. (2,1,0^r,9,8,...,3) for r=1,2,3 and (0^r,9,8,...,1) for r=2,3. d(v) <= min_q d_q(v) + K with K = 14,15,17,18,20 for r=1..5, where d_q is the (8,r) distance after deleting label q; K is attained only near the root. No rotation, reflection or complement symmetry preserves d."
+        },
+        "search": {
+          "database": {
+            "auto_generate_variation_operators": false,
+            "fitness_key": "full_score",
+            "higher_is_better": {
+              "full_score": true,
+              "neg_mean_excess": true,
+              "within_rate": true,
+              "worst_r_rate": true
+            },
+            "pareto_objectives": [
+              "within_rate",
+              "worst_r_rate",
+              "neg_mean_excess"
+            ],
+            "pareto_objectives_weight": 0.0,
+            "random_seed": 2
+          },
+          "num_context_programs": 2,
+          "share_llm": true,
+          "switch_interval": 201,
+          "type": "evox"
+        }
+      },
+      "verifier": {
+        "max_full_evals": 230,
+        "max_screen_evals": 230
+      },
+      "wall_seconds": 28800
+    },
+    "evox/s3": {
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "reflection_max_requests": 0,
+      "seed": 3,
+      "sky": {
+        "checkpoint_interval": 1,
+        "diff_based_generation": true,
+        "evaluator": {
+          "cascade_evaluation": true,
+          "cascade_thresholds": [
+            1.1,
+            1.1
+          ],
+          "inject_evaluator_context": false,
+          "max_retries": 0,
+          "timeout": 900
+        },
+        "language": "python",
+        "llm": {
+          "api_base": "http://127.0.0.1:8898/v1",
+          "api_key": "local-broker",
+          "max_tokens": 8192,
+          "models": [
+            {
+              "api_base": "http://127.0.0.1:8898/v1",
+              "api_key": "local-broker",
+              "name": "gemini-3.8-flash",
+              "weight": 1.0
+            }
+          ],
+          "reasoning_effort": "low",
+          "retries": 0,
+          "temperature": 0.7,
+          "timeout": 510
+        },
+        "log_level": "INFO",
+        "max_iterations": 200,
+        "max_parallel_iterations": 1,
+        "max_solution_length": 40000,
+        "monitor": {
+          "enabled": false
+        },
+        "prompt": {
+          "system_message": "Find a constructive, uniform LRX sorting procedure. Goal: an algorithm that is uniform in r (and ideally in m) and provably stays within the budget T_m(n) = m(m+1)/2 + (r-1)(m-2) (45 + 7(r-1) at m=9), with a route whose length can be bounded by an argument. Useful ingredients: sweep strategies that use zero blocks as buffers, comparison-transfer routes that carry one label through a block, cycle-based service of labels in cyclic order, choosing the final rotation. The candidate source must define sort_word(v) -> str. v is a list of length n = m + r holding labels 1..m once (m = max(v)) and r >= 1 zeros; return a word over L, R, X that sorts v to (1, 2, ..., m, 0, ..., 0). L rotates the vector left (the first entry moves to the end), R rotates it right, and X swaps the first two entries. The trusted evaluator replays the word literally. Each call gets 0.2 s of CPU time (and module import 0.5 s); any state-space search (BFS, bidirectional BFS, IDA*, beam or A* search over vectors, or caching such search across calls) times out on almost every state, and a timeout counts as an unsorted state. Build the word directly from the structure of v. Score: fraction of development states sorted within T (primary), plus 0.5 times the worst per-r within-budget rate (so the program must work for every r, not only small r), plus a small term for low mean excess over the exact distance, minus the fraction not sorted. Stdlib only, at most 64 KiB, at most 1000 letters per word. Development states are m=9, r=1..5; the holdout has unseen states and unseen (m, r), so the program must work for any m and r. Misses prove nothing. Do not read files, the network, or environment variables. Exact facts at m=9, r=1..5 (complete BFS tables): the sorting radius equals T_9(n) = 45, 52, 59, 66, 73. The 15 states at distance T are near-reversals: 10 of 15 read 9,8,...,1 cyclically, e.g. (2,1,0^r,9,8,...,3) for r=1,2,3 and (0^r,9,8,...,1) for r=2,3. d(v) <= min_q d_q(v) + K with K = 14,15,17,18,20 for r=1..5, where d_q is the (8,r) distance after deleting label q; K is attained only near the root. No rotation, reflection or complement symmetry preserves d."
+        },
+        "search": {
+          "database": {
+            "auto_generate_variation_operators": false,
+            "fitness_key": "full_score",
+            "higher_is_better": {
+              "full_score": true,
+              "neg_mean_excess": true,
+              "within_rate": true,
+              "worst_r_rate": true
+            },
+            "pareto_objectives": [
+              "within_rate",
+              "worst_r_rate",
+              "neg_mean_excess"
+            ],
+            "pareto_objectives_weight": 0.0,
+            "random_seed": 3
+          },
+          "num_context_programs": 2,
+          "share_llm": true,
+          "switch_interval": 201,
+          "type": "evox"
+        }
+      },
+      "verifier": {
+        "max_full_evals": 230,
+        "max_screen_evals": 230
+      },
+      "wall_seconds": 28800
+    },
+    "gepa/s1": {
+      "engine": {
+        "acceptance_criterion": "strict_improvement",
+        "cache_evaluation": false,
+        "candidate_selection_strategy": "pareto",
+        "frontier_type": "instance",
+        "max_candidate_proposals": 200,
+        "max_metric_calls": 7266,
+        "max_workers": 1,
+        "parallel": false,
+        "raise_on_exception": true,
+        "seed": 1,
+        "val_evaluation_policy": "full_eval"
+      },
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "merge": null,
+      "refiner": null,
+      "reflection": {
+        "batch_sampler": "epoch_shuffled",
+        "module_selector": "round_robin",
+        "reflection_minibatch_size": 3
+      },
+      "reflection_max_requests": 215,
+      "seed": 1,
+      "verifier": {
+        "max_requests": 7266,
+        "max_state_evals": 380000
+      },
+      "wall_seconds": 28800
+    },
+    "gepa/s2": {
+      "engine": {
+        "acceptance_criterion": "strict_improvement",
+        "cache_evaluation": false,
+        "candidate_selection_strategy": "pareto",
+        "frontier_type": "instance",
+        "max_candidate_proposals": 200,
+        "max_metric_calls": 7266,
+        "max_workers": 1,
+        "parallel": false,
+        "raise_on_exception": true,
+        "seed": 2,
+        "val_evaluation_policy": "full_eval"
+      },
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "merge": null,
+      "refiner": null,
+      "reflection": {
+        "batch_sampler": "epoch_shuffled",
+        "module_selector": "round_robin",
+        "reflection_minibatch_size": 3
+      },
+      "reflection_max_requests": 215,
+      "seed": 2,
+      "verifier": {
+        "max_requests": 7266,
+        "max_state_evals": 380000
+      },
+      "wall_seconds": 28800
+    },
+    "gepa/s3": {
+      "engine": {
+        "acceptance_criterion": "strict_improvement",
+        "cache_evaluation": false,
+        "candidate_selection_strategy": "pareto",
+        "frontier_type": "instance",
+        "max_candidate_proposals": 200,
+        "max_metric_calls": 7266,
+        "max_workers": 1,
+        "parallel": false,
+        "raise_on_exception": true,
+        "seed": 3,
+        "val_evaluation_policy": "full_eval"
+      },
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "merge": null,
+      "refiner": null,
+      "reflection": {
+        "batch_sampler": "epoch_shuffled",
+        "module_selector": "round_robin",
+        "reflection_minibatch_size": 3
+      },
+      "reflection_max_requests": 215,
+      "seed": 3,
+      "verifier": {
+        "max_requests": 7266,
+        "max_state_evals": 380000
+      },
+      "wall_seconds": 28800
+    },
+    "sequential/s1": {
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "provider_seed_field": null,
+      "reflection_max_requests": 215,
+      "screen_threshold": 1.1,
+      "seed": 1,
+      "verifier": {
+        "max_full_evals": 205,
+        "max_screen_evals": 205
+      },
+      "wall_seconds": 28800
+    },
+    "sequential/s2": {
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "provider_seed_field": null,
+      "reflection_max_requests": 215,
+      "screen_threshold": 1.1,
+      "seed": 2,
+      "verifier": {
+        "max_full_evals": 205,
+        "max_screen_evals": 205
+      },
+      "wall_seconds": 28800
+    },
+    "sequential/s3": {
+      "flash_max_requests": 215,
+      "iterations": 200,
+      "provider_seed_field": null,
+      "reflection_max_requests": 215,
+      "screen_threshold": 1.1,
+      "seed": 3,
+      "verifier": {
+        "max_full_evals": 205,
+        "max_screen_evals": 205
+      },
+      "wall_seconds": 28800
+    }
+  },
+  "engines": {
+    "gepa": {
+      "dist": "gepa-0.1.4.dist-info",
+      "files": {
+        "gepa/adapters/optimize_anything_adapter/optimize_anything_adapter.py": "36f27ae8fa7f96c550e1a298ba20d353fa846424cb457c727e2961a7aaf7e4d8",
+        "gepa/optimize_anything.py": "bd021ab277c44d5f988cf19a186127b9087b88d59656f560bb07e654524a7f26",
+        "gepa/proposer/reflective_mutation/reflection_lm.py": "a7357585f90b9cae52c9930805c8020d982119489e4aaee853c3366df67bff85"
+      }
+    },
+    "interpreter": "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "interpreter_realpath": "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/bin/python3.12",
+    "pyvenv_cfg": "home = /Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/bin\nimplementation = CPython\nuv = 0.7.16\nversion_info = 3.12.9\ninclude-system-site-packages = false\n",
+    "skydiscover": {
+      "dist": "skydiscover-0.2.0.dist-info",
+      "files": {
+        "skydiscover/optimize/config.py": "8cf0cf4303afcac77717f3da0a409795d01911e18b1f04dac709a4f334f46dcc",
+        "skydiscover/optimize/context_builder/adaevolve/builder.py": "6a97d252548b0f60ab0166af43863f29e8e96b771ba1123dbca4b8fbb9ad2198",
+        "skydiscover/optimize/context_builder/utils.py": "2a3d2e2c0d92d722e878e7ba50e43a4d06141d93f311f5a8262f848387867a20",
+        "skydiscover/optimize/evaluation/evaluator.py": "84471c1312e1789ccce2101d622ba0ccdb86ed4d765738de754158371b266dfa",
+        "skydiscover/optimize/search/adaevolve/controller.py": "160d622d55ddb9088ef7a60c09c41ab59ad57fdc84538ccab64b898a8d119933",
+        "skydiscover/optimize/search/adaevolve/database.py": "a27f3ccbf5814c97890797d6bcf1aa07184cc86297a38dff4d042b3871898262",
+        "skydiscover/optimize/search/base_database.py": "f82c351f1b9f2bc8dcfe67363ded244b712a6ebe014fc9cca566256b405f72f6",
+        "skydiscover/optimize/utils/metrics.py": "fe89ced4ce5525170c70fb5a598fbbfd8ae056e83c6f88ade1fb2090d5effb23",
+        "skydiscover/optimize/utils/pareto.py": "34a3dd6f34b9b21e5fd335cd3cf3c59bd7086adcf9c1bb56fd23c1197a973d7e"
+      }
+    }
+  },
+  "evaluator": {
+    "contract": "sort-contract-2: candidate defines sort_word(v) -> str over L,R,X (L rotates left, R rotates right, X swaps the first two entries). A state is valid iff the word has at most 1000 letters, the call used at most 0.2 s of CPU time and 1 s of wall time, and certificates.replay_visible(v, word) equals (1..m, 0^r). Module import may use 0.5 s of CPU. Batches hold 10 states; the kernel caps each batch process at 10*0.2 + 1.5 CPU seconds. Any state-space search (BFS, IDA*, beam search over LRX states) times out, and a timeout counts as invalid. within_budget iff valid and len(word) <= T_m(n) = m(m+1)/2 + (r-1)(m-2). excess = len(word) - d(v) with d(v) the exact BFS distance to the canonical root. Crash, non-str, bad letters, >1000 letters, a time limit or a killed batch count as invalid. combined_score = within/N + 0.5 * min over r of the per-r within rate + 0.25/(1 + mean excess over valid states) - invalid/N (third term 0 if no valid state).",
+    "hash": "a10dabd82fbb8e300104ca115d3f4f6e1a3edf723fbf2c708b8c67a853b79a61",
+    "version": "sort-eval-2"
+  },
+  "evox_note": "EvoX's outer loop writes and runs LLM-generated Python search strategies. AGENTS.md forbids executing generated code outside the evaluator sandbox, so it is disabled in every run. The EvoX arm is EvoX's solution-level search only.",
+  "first_prompts": {
+    "adaevolve/s1": {
+      "diagnosis": null,
+      "solution": "eff2e80b55b8fd2d3fbb610dbef12becd5ef5956d8421374d2f83cf65b006102"
+    },
+    "adaevolve/s2": {
+      "diagnosis": null,
+      "solution": "2b766fab3f6626380ceb0ec50a86176d6c0a6c9aae5dba25a7b0e58bc2427faf"
+    },
+    "adaevolve/s3": {
+      "diagnosis": null,
+      "solution": "eff2e80b55b8fd2d3fbb610dbef12becd5ef5956d8421374d2f83cf65b006102"
+    },
+    "evox/s1": {
+      "diagnosis": null,
+      "solution": "e817dbdbfb84ff7b6df3e5299448d9daa79dd0ba2d134a332e0151a6334a5c9a"
+    },
+    "evox/s2": {
+      "diagnosis": null,
+      "solution": "e817dbdbfb84ff7b6df3e5299448d9daa79dd0ba2d134a332e0151a6334a5c9a"
+    },
+    "evox/s3": {
+      "diagnosis": null,
+      "solution": "e817dbdbfb84ff7b6df3e5299448d9daa79dd0ba2d134a332e0151a6334a5c9a"
+    },
+    "gepa/s1": {
+      "diagnosis": "bb85de5c5b4b2c8ad609bddac3080be826d323022694c3f0b34f04ac20217e71",
+      "solution": "cf467ac3114647152c13c331661f8405866e184fda170765d600176f26d90d27"
+    },
+    "gepa/s2": {
+      "diagnosis": "e755120e157df200625a92d4e4e6e553b8924d970a1a0ebddca8f1bd2a783fbd",
+      "solution": "f2c967405cb40feda738a6582c927b86c4f04eac9a2141dc463a3a3d081f3a60"
+    },
+    "gepa/s3": {
+      "diagnosis": "c5420288e3cc467fda10ec52e78e7d54606768eafc4eaac3faa02bd0834c2f9c",
+      "solution": "d566087b19176220c516303241a6eecdf1acd04f3195075754f1ffcedb174ef0"
+    },
+    "sequential/s1": {
+      "diagnosis": "9d0653e0da5bf0511cca4f12e644b57f7cece8f0288720d343da2323bb90f156",
+      "solution": "7290e7a6a629c6da0faae5b41338c0c268a1ac455559a5ff676b4a89824865be"
+    },
+    "sequential/s2": {
+      "diagnosis": "9d0653e0da5bf0511cca4f12e644b57f7cece8f0288720d343da2323bb90f156",
+      "solution": "7290e7a6a629c6da0faae5b41338c0c268a1ac455559a5ff676b4a89824865be"
+    },
+    "sequential/s3": {
+      "diagnosis": "9d0653e0da5bf0511cca4f12e644b57f7cece8f0288720d343da2323bb90f156",
+      "solution": "7290e7a6a629c6da0faae5b41338c0c268a1ac455559a5ff676b4a89824865be"
+    }
+  },
+  "instance_score": "instance_score = within/N + 0.25/(1 + mean excess over valid states) - invalid/N; middle term 0 when no state is valid; no worst-r term (one r per instance)",
+  "packet_format": {
+    "instance_max_chars": 2500,
+    "key_max_chars": 2000,
+    "keys": [
+      "feedback",
+      "worst_states",
+      "worst_states_2"
+    ],
+    "marker": "SORT_PACKET_V2",
+    "optimal_words": "development only; distinct revealed states capped by reveal_optimal_max_states",
+    "reveal_optimal_max_states": 300,
+    "sequential_max_chars": 6000,
+    "word_elision": "above 160 letters: first 120 + '...' + last 30 + '(len N)'",
+    "worst_states": 5
+  },
+  "prompts": {
+    "diagnosis_append": "\n\nReviewer diagnosis (separate model; untrusted advice):\n",
+    "diagnosis_placeholder": "<DIAGNOSIS>",
+    "objective": "Improve this constructive Python sort_word(v) program (the seed is a cyclic-sweep sorter: it chooses a target rotation and a cyclic assignment of the interchangeable zeros, gives each entry a displacement on the universal cover, and sweeps the window swapping pairs that must cross). Return the entire replacement Python source in one fenced code block, with no prose and no docstring longer than a few lines. Raise the within-budget rate, first on the worst r, without search: each state has 0.2 s of CPU. Only development states are shown.",
+    "reflect_system": "Diagnose why the program fails on the listed states and propose concrete changes. Do not write code.",
+    "sky_evaluator_stub": "from pathlib import Path\nimport json\nfrom urllib.request import Request, urlopen\nfrom skydiscover.optimize.evaluation.evaluation_result import EvaluationResult\nURL = '<VERIFIER>/evaluate'\nFAILED = {'full_score': -2.0, 'combined_score': -2.0, 'stage': 0.0}\n\n\ndef _call(program_path, scope):\n    try:\n        source = Path(program_path).read_text(encoding='utf-8')\n        payload = json.dumps({'source': source, 'scope': scope}).encode('utf-8')\n        req = Request(URL, payload, {'Content-Type': 'application/json'})\n        with urlopen(req, timeout=870) as response:\n            out = json.load(response)\n        metrics = {k: float(v) for k, v in out['metrics'].items()}\n        return EvaluationResult(metrics=metrics, artifacts={k: str(v) for k, v in out['artifacts'].items()})\n    except Exception as exc:\n        return EvaluationResult(metrics=dict(FAILED), artifacts={\n            'feedback': 'evaluation failed: %s: %s' % (type(exc).__name__, str(exc)[:300])})\n\n\ndef evaluate_stage1(program_path):\n    return _call(program_path, 'screen')\n\n\ndef evaluate_stage2(program_path):\n    return _call(program_path, 'full')\n\n\ndef evaluate(program_path):\n    return evaluate_stage2(program_path)\n",
+    "system": "Find a constructive, uniform LRX sorting procedure. Goal: an algorithm that is uniform in r (and ideally in m) and provably stays within the budget T_m(n) = m(m+1)/2 + (r-1)(m-2) (45 + 7(r-1) at m=9), with a route whose length can be bounded by an argument. Useful ingredients: sweep strategies that use zero blocks as buffers, comparison-transfer routes that carry one label through a block, cycle-based service of labels in cyclic order, choosing the final rotation. The candidate source must define sort_word(v) -> str. v is a list of length n = m + r holding labels 1..m once (m = max(v)) and r >= 1 zeros; return a word over L, R, X that sorts v to (1, 2, ..., m, 0, ..., 0). L rotates the vector left (the first entry moves to the end), R rotates it right, and X swaps the first two entries. The trusted evaluator replays the word literally. Each call gets 0.2 s of CPU time (and module import 0.5 s); any state-space search (BFS, bidirectional BFS, IDA*, beam or A* search over vectors, or caching such search across calls) times out on almost every state, and a timeout counts as an unsorted state. Build the word directly from the structure of v. Score: fraction of development states sorted within T (primary), plus 0.5 times the worst per-r within-budget rate (so the program must work for every r, not only small r), plus a small term for low mean excess over the exact distance, minus the fraction not sorted. Stdlib only, at most 64 KiB, at most 1000 letters per word. Development states are m=9, r=1..5; the holdout has unseen states and unseen (m, r), so the program must work for any m and r. Misses prove nothing. Do not read files, the network, or environment variables. Exact facts at m=9, r=1..5 (complete BFS tables): the sorting radius equals T_9(n) = 45, 52, 59, 66, 73. The 15 states at distance T are near-reversals: 10 of 15 read 9,8,...,1 cyclically, e.g. (2,1,0^r,9,8,...,3) for r=1,2,3 and (0^r,9,8,...,1) for r=2,3. d(v) <= min_q d_q(v) + K with K = 14,15,17,18,20 for r=1..5, where d_q is the (8,r) distance after deleting label q; K is attained only near the root. No rotation, reflection or complement symmetry preserves d."
+  },
+  "reflection_broker_config": {
+    "api_key_env": "GEMINI_API_KEY",
+    "input_usd_per_million": 2.0,
+    "ledger": "autoresearch/sort-m9-v3-260925/broker-ledger-v3-reflection.json",
+    "max_prompt_bytes": 120000,
+    "max_tokens": 3000,
+    "max_usd_per_run": 25.0,
+    "max_usd_per_run_note": "PROPOSED, to confirm: 215 diagnosis calls at an assumed $0.07-0.10 is $15-21.5.",
+    "model": "gemini-3.8-pro",
+    "model_note": "PLACEHOLDER (O2): gemini-3.8-pro or grok-4.7; not verified.",
+    "note": "Reflection (diagnosis) broker for loop v3. UNVERIFIED: the model name, endpoint and prices are placeholders from SPEC-track1.md section 4 and must be checked against a live model listing and current pricing before approval (open decision O2; that check needs a live call, which is not authorized). The broker refuses any request whose model differs from this one, so reflection uses a second broker with its own ledger broker-ledger-v3-reflection.<engine>-s<S>.json (path recorded in the run manifest).",
+    "output_usd_per_million": 12.0,
+    "price_source": "ASSUMPTION (SPEC section 4: pro-class $2/M input, $12/M output); not verified.",
+    "reasoning_cap_tokens": 8000,
+    "reasoning_effort": "low",
+    "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+    "reservation_usd_per_request_conservative": 0.374048,
+    "run": "sort-m9-v3-260925-reflection",
+    "timeout": 480,
+    "upstream_stream": true,
+    "upstream_url": "https://generativelanguage.googleapis.com/v1beta/openai"
+  },
+  "screen_threshold": 1.1,
+  "seed_screen_score": 1.1886524822695037
+}

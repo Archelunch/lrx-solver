@@ -1,0 +1,32 @@
+{
+ "note": "Per-arm search limits for Track 3 (lean-loop-260925). Money, request, token and timeout caps live only in broker-config.json. Both configs, the prompts, the seed, lean.lock.json, the evaluator hash and the first-prompt hashes are covered by the approval hash (python -m integrations.lean_backends approval-hash). EvoX is excluded from this track (AGENTS.md: it runs generated Python strategies).",
+ "seed": "autoresearch/lean-loop-260925/seed.lean",
+ "python": ".venv-official/bin/python",
+ "eval_cache": "autoresearch/lean-loop-260925/eval-cache",
+ "broker_port": 8898,
+ "eval_timeout": 600,
+ "evaluation": "one Lean run per distinct body (stage A lean --json, B leanchecker, C lrxaudit), cached by body hash; GEPA's 11 instances (L1-L3, M1-M7, M9) share it; max_evals counts uncached runs",
+ "engines": {
+  "gepa": {
+   "iterations": 30,
+   "max_evals": 120,
+   "wall_seconds": 14400,
+   "max_requests": 35
+  },
+  "sequential": {
+   "iterations": 30,
+   "max_evals": 40,
+   "wall_seconds": 14400,
+   "max_requests": 35
+  },
+  "adaevolve": {
+   "iterations": 30,
+   "max_evals": 40,
+   "wall_seconds": 14400,
+   "max_requests": 35
+  }
+ },
+ "max_requests_note": "Per-arm sub-caps of broker-config.json's shared max_requests (108): iterations + 5 each (35/35/35 = 105 <= 108). Each arm has its own ledger (TRACE-AUDIT-260925 defect 2).",
+ "rules": "Pre-registered (SPEC-track3 section 6): success = an engine arm closes a target that the tactic-sweep control did not, confirmed by lean_finalize (fresh uncached re-evaluation, leanchecker --fresh) and a human read; comparator is not installed on this machine. Kill = no gain in closed targets plus milestones over the sweep control after 60 proposals in an arm.",
+ "order_note": "sequential and GEPA first at matched iteration counts, AdaEvolve after GEPA shows one productive cycle."
+}

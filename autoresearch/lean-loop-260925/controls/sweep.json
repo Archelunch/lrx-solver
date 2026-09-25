@@ -1,0 +1,95 @@
+{
+ "control": "tactic-sweep",
+ "evaluator_version": "lean-eval-1",
+ "lock_digest": "b0e013275e413995648fdb20263ce2b40499d5a492b652a30d553e207e15a78d",
+ "toolchain": "Lean (version 4.34.0, arm64-apple-darwin24.6.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)",
+ "tactics": [
+  {
+   "tactic": "rfl",
+   "status": "VALID",
+   "closed": [],
+   "combined_score": -0.05,
+   "seconds": 8.117,
+   "passes": 2
+  },
+  {
+   "tactic": "decide",
+   "status": "VALID",
+   "closed": [],
+   "combined_score": -0.05,
+   "seconds": 2.373,
+   "passes": 2
+  },
+  {
+   "tactic": "omega",
+   "status": "VALID",
+   "closed": [],
+   "combined_score": -0.05,
+   "seconds": 2.777,
+   "passes": 2
+  },
+  {
+   "tactic": "simp [exec, step, inv, rotL, rotR, swap12, freeReduce, push, proj, track, keep, rep, macroZL, macroLZ, root]",
+   "status": "VALID",
+   "closed": [
+    "M1"
+   ],
+   "combined_score": -0.025,
+   "seconds": 4.55,
+   "passes": 2
+  },
+  {
+   "tactic": "intros; simp_all [exec, List.foldl_append]",
+   "status": "VALID",
+   "closed": [
+    "M1"
+   ],
+   "combined_score": -0.025,
+   "seconds": 2.395,
+   "passes": 2
+  },
+  {
+   "tactic": "intro x\n  induction x <;> intros <;> simp_all [exec, step, inv, rotL, rotR, swap12, freeReduce, push, proj, track, keep, rep, macroZL, macroLZ, root, List.foldl_append]",
+   "status": "VALID",
+   "closed": [
+    "M1"
+   ],
+   "combined_score": -0.025,
+   "seconds": 8.236,
+   "passes": 2
+  },
+  {
+   "tactic": "grind",
+   "status": "VALID",
+   "closed": [],
+   "combined_score": -0.05,
+   "seconds": 3.639,
+   "passes": 2
+  },
+  {
+   "tactic": "grind [exec, step, inv, rotL, rotR, swap12, freeReduce, push, proj, track, keep, rep, macroZL, macroLZ, root, List.foldl_append]",
+   "status": "VALID",
+   "closed": [
+    "M1"
+   ],
+   "combined_score": -0.02,
+   "seconds": 17.812,
+   "passes": 2
+  },
+  {
+   "tactic": "exact?",
+   "status": "VALID",
+   "closed": [],
+   "combined_score": -0.05,
+   "seconds": 19.06,
+   "passes": 2
+  }
+ ],
+ "closed_union": [
+  "M1"
+ ],
+ "closed_targets": [],
+ "closed_milestones": [
+  "M1"
+ ]
+}

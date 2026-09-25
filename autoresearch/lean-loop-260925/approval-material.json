@@ -1,0 +1,116 @@
+{
+  "broker_config": {
+    "api_key_env": "GEMINI_API_KEY",
+    "chars_per_reasoning_token_assumption": 3,
+    "contact_ceiling_formula": "min(floor(max_usd / reservation_usd_per_request_conservative), 400) = min(floor(18 / 0.1666368), 400) = 108",
+    "contact_ceiling_raw": 108,
+    "input_usd_per_million": 0.825,
+    "ledger": "autoresearch/lean-loop-260925/broker-ledger-lean.json",
+    "max_prompt_bytes": 120000,
+    "max_requests": 108,
+    "max_tokens": 8192,
+    "max_usd": 18.0,
+    "model": "gemini-3.8-flash",
+    "model_note": "Copied unchanged from the applied broker-config.json; re-verify against a live /v1beta/openai/models listing and current pricing before use.",
+    "note": "Track 3 (Lean in the loop). Copied from autoresearch/sort-m9-260925/broker-config.json (gemini-3.8-flash, max_tokens 8192, same pricing/reasoning fields). Fresh ledger prefix broker-ledger-lean; per-arm ledgers are broker-ledger-lean.<engine>.json and none may exist before the first live run. max_usd 18; max_requests recomputed from the reservation formula. Pending human approval (payload-approved.sha256 does not exist).",
+    "output_usd_per_million": 4.125,
+    "price_source": "Copied unchanged from the applied broker-config.json.",
+    "price_source_date": "2026-09-24",
+    "reasoning_cap_chars_conservative": 24000,
+    "reasoning_cap_tokens": 8000,
+    "reasoning_effort": "low",
+    "reasoning_effort_note": "Copied unchanged from the applied broker-config.json.",
+    "reasoning_effort_support_confirmed": true,
+    "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+    "reservation_usd_per_request_conservative": 0.1666368,
+    "run": "lean-loop-260925",
+    "timeout": 480,
+    "upstream_stream": true,
+    "upstream_url": "https://generativelanguage.googleapis.com/v1beta/openai"
+  },
+  "campaign_config": {
+    "broker_port": 8898,
+    "engines": {
+      "adaevolve": {
+        "iterations": 30,
+        "max_evals": 40,
+        "max_requests": 35,
+        "wall_seconds": 14400
+      },
+      "gepa": {
+        "iterations": 30,
+        "max_evals": 120,
+        "max_requests": 35,
+        "wall_seconds": 14400
+      },
+      "sequential": {
+        "iterations": 30,
+        "max_evals": 40,
+        "max_requests": 35,
+        "wall_seconds": 14400
+      }
+    },
+    "eval_cache": "autoresearch/lean-loop-260925/eval-cache",
+    "eval_timeout": 600,
+    "evaluation": "one Lean run per distinct body (stage A lean --json, B leanchecker, C lrxaudit), cached by body hash; GEPA's 11 instances (L1-L3, M1-M7, M9) share it; max_evals counts uncached runs",
+    "max_requests_note": "Per-arm sub-caps of broker-config.json's shared max_requests (108): iterations + 5 each (35/35/35 = 105 <= 108). Each arm has its own ledger (TRACE-AUDIT-260925 defect 2).",
+    "note": "Per-arm search limits for Track 3 (lean-loop-260925). Money, request, token and timeout caps live only in broker-config.json. Both configs, the prompts, the seed, lean.lock.json, the evaluator hash and the first-prompt hashes are covered by the approval hash (python -m integrations.lean_backends approval-hash). EvoX is excluded from this track (AGENTS.md: it runs generated Python strategies).",
+    "order_note": "sequential and GEPA first at matched iteration counts, AdaEvolve after GEPA shows one productive cycle.",
+    "python": ".venv-official/bin/python",
+    "rules": "Pre-registered (SPEC-track3 section 6): success = an engine arm closes a target that the tactic-sweep control did not, confirmed by lean_finalize (fresh uncached re-evaluation, leanchecker --fresh) and a human read; comparator is not installed on this machine. Kill = no gain in closed targets plus milestones over the sweep control after 60 proposals in an arm.",
+    "seed": "autoresearch/lean-loop-260925/seed.lean"
+  },
+  "dry_run_payload": {
+    "max_completion_tokens": 8192,
+    "messages": [
+      {
+        "content": "<research_context placeholder; not sent by dry-run>",
+        "role": "system"
+      },
+      {
+        "content": "<gepa_reflection prompt placeholder; not sent by dry-run>",
+        "role": "user"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "low",
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  "evaluator": {
+    "contract": "body = last ```lean block or raw text; trusted header/footer; bans per lean_task.BANS; credit = audit closed and footer axioms within {propext, Classical.choice, Quot.sound}; score T + M/5 + A/20 - P; INVALID/INCOMPLETE = -1",
+    "hash": "6e664d5e2139b373c1efc518ad5b2532b78da9b111ff2b5001022c161c15b59f",
+    "version": "lean-eval-1"
+  },
+  "first_prompt_adaevolve_sha256": "1c24026c48630f5e6ed7ad2303f7a6fc36f2e5f20a2b453f9b68f1a520fe9d72",
+  "first_prompt_gepa_sha256": "bee53dede1cfe351a2e84823792956b5a941c70267502400817111dcc8afecf2",
+  "first_prompt_sequential_sha256": "fdb3edd4608b86bb160b79135ee78448bacc896e64721dfc916f28d618c7e053",
+  "lean_backends_sha256": "71c12092f828a8fd7411fe842c4994161482d158612cd49e5e09ce91b84e13a5",
+  "lean_lock": {
+    "files": {
+      ".lake/build/bin/lrxaudit": "743dd57b8028036636d7af2c4d96e5fdb863e3352d07d0049cc90867b2a5fba2",
+      ".lake/build/lib/lean/LrxLean/Defs.olean": "837ebd352eb8a7e1866a9aef99e26e7b1619834574d956c70ea180679a85b3c5",
+      "Audit.lean": "e6d2885842326e1faca56741ad8fa05295b4a7b7cf2547db6c800f95981652b3",
+      "LrxLean.lean": "48aa056c7b3c75c66f1a14da72721fcfd3d312997dd02254b7e4744c30180ca9",
+      "LrxLean/Conformance.lean": "6ea905c1493c56a412cd37a514ac13264c82f72d632d73368caeaddfdc235306",
+      "LrxLean/Defs.lean": "ece09088ef2d3fa4a8eb07b7b6988158a0101d6dacd26fb239b12f5ee184d078",
+      "lakefile.toml": "3a16c873e7cec4ecde0ef80d844e8e670335e0571d392d5c671dda3814a47cf0",
+      "lean-toolchain": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632"
+    },
+    "note": "sha256 of the locked Lean project (sources, Defs.olean, lrxaudit binary). Written by the Track 3 implementer on 2026-09-25; PENDING human review and re-lock.",
+    "toolchain": "leanprover/lean4:v4.34.0"
+  },
+  "lean_lock_digest": "bdc808a21e382e667867f19ab2381473290b8394d6f07622f08cd28275552ed3",
+  "lift_backends_sha256": "05ef38f705033eda93c179a6fd1c506b2bedeace945926473ebbbaa2236a0905",
+  "objective": "Improve this Lean body: close more of the targets L1, L2, L3 (and the milestones) with complete, sorry-free proofs, keeping every theorem that already closes. Return the entire replacement body in one ```lean block with no prose.",
+  "official_backends_sha256": "284ce1e6c6d8054c293d416574a8388ae6f85d5b3f489433e9b71602429649fe",
+  "packet_format": {
+    "marker": "LEAN_PACKET_V1",
+    "max_chars": 3000
+  },
+  "seed_sha256": "023a8b737d977efda8d13ea9a748a7acbe80e07ec47083d83c835acb1aeb171f",
+  "system_prompt": "You prove theorems in Lean 4 (v4.34.0, core library only: no Mathlib, no Batteries). The locked module LrxLean.Defs, shown below, defines the LRX model: a vector is a List Nat; L rotates left, R rotates right, X swaps the first two entries; `exec w v` applies the word w left to right. Prove the target Props LRX.Stmt.L1, LRX.Stmt.L2, LRX.Stmt.L3; the milestone Props M1..M7 and M9 earn partial credit. Your answer is one Lean body in a single ```lean block. The evaluator wraps it in a trusted header (import LrxLean.Defs, maxHeartbeats 400000, open LRX, then the scope Cand) and a trusted footer. State each result as `theorem L1 : Stmt.L1 := by ...`; the type must be literally Stmt.<id> (begin the proof with `unfold Stmt.L1` or `intro`). Helper theorems and defs are allowed; write `theorem`, not `lemma`. Outside comments, these whole words are rejected (so never use them as names either): import, axiom, implemented_by, extern, initialize, set_option, macro, macro_rules, syntax, elab, elab_rules, notation, infix, infixl, infixr, prefix, postfix, run_cmd, run_elab, run_meta, native_decide, ofReduceBool, trustCompiler, opaque, partial, namespace, section, end, csimp, _root_, bv_decide, mutual; also unsafe, builtin_, @[init, +native, debug., `open` of Lean/IO/System/Std, and identifiers starting with Lean., IO., System. or Std. Anywhere, comments included: any # command (#check, #eval, #print, ...) and a ``` fence inside the body. `sorry` is accepted but earns nothing. A declaration counts only if the kernel accepts it and it uses no axioms beyond propext, Classical.choice and Quot.sound. Blocks with errors are removed and the rest is re-checked. Score: closed targets / 3 + 0.2 x closed milestones / 8 + at most 0.05 for distinct helper theorems about the LRX definitions used by closed targets or milestones - 0.01 per error (at most 0.05). Lemma 1 (stretch macros) and Lemma 4 (deleting a zero atom) are the research group's results; these statements formalise them.\n\nLocked definitions (LrxLean/Defs.lean):\n```lean\n/-! LRX visible-vector model (locked module; candidates cannot edit it).\nVectors are `List Nat`: labels 1..m once, zeros for the r blank atoms.\nLetters act left to right, as in src/lrx/state.py (apply_L, apply_R, apply_X).\nLemma 1 (stretch macros) and Lemma 4 (deletion of one zero atom) are the\nresearch group's results (autoresearch/verify-m8-260924/package, sections 3\nand 6); the statements below formalise them and claim nothing about the open\nconjecture. -/\nnamespace LRX\n\ninductive Gen where\n  | L | R | X\n  deriving DecidableEq, Repr\n\n/-- L: (x0,x1,...,x_{n-1}) \u21a6 (x1,...,x_{n-1},x0) -/\ndef rotL : List Nat \u2192 List Nat\n  | [] => []\n  | a :: t => t ++ [a]\n\n/-- R: (x0,...,x_{n-1}) \u21a6 (x_{n-1},x0,...,x_{n-2}) -/\ndef rotR (v : List Nat) : List Nat :=\n  match v.getLast? with\n  | none => []\n  | some a => a :: v.dropLast\n\n/-- X: exchange the first two entries (identity on length < 2) -/\ndef swap12 : List Nat \u2192 List Nat\n  | a :: b :: t => b :: a :: t\n  | v => v\n\ndef step : Gen \u2192 List Nat \u2192 List Nat\n  | .L, v => rotL v\n  | .R, v => rotR v\n  | .X, v => swap12 v\n\n/-- `exec [g\u2081, g\u2082] v = step g\u2082 (step g\u2081 v)` -/\ndef exec (w : List Gen) (v : List Nat) : List Nat :=\n  w.foldl (fun u g => step g u) v\n\n/-- canonical root (1,...,m,0^r) -/\ndef root (m r : Nat) : List Nat :=\n  (List.range m).map (\u00b7 + 1) ++ List.replicate r 0\n\n/-! Free reduction (cancel LR, RL, XX) -/\ndef inv : Gen \u2192 Gen\n  | .L => .R\n  | .R => .L\n  | .X => .X\n\n/-- stack holds the reduced prefix reversed; top = last kept letter -/\ndef push (st : List Gen) (g : Gen) : List Gen :=\n  match st with\n  | h :: t => if h = inv g then t else g :: h :: t\n  | [] => [g]\n\ndef freeReduce (w : List Gen) : List Gen :=\n  (w.foldl push []).reverse\n\ndef Reduced : List Gen \u2192 Prop\n  | a :: b :: t => b \u2260 inv a \u2227 Reduced (b :: t)\n  | _ => True\n\n/-! Deletion of one marked atom at position j of a length-n vector\n(group's Lemma 4 rule; research/problem.md marked-zero table) -/\ndef track (n j : Nat) : Gen \u2192 Nat\n  | .L => if j = 0 then n - 1 else j - 1\n  | .R => if j = n - 1 then 0 else j + 1\n  | .X => if j < 2 then 1 - j else j\n\n/-- L kept iff first atom not deleted; R iff last not deleted; X iff both kept -/\ndef keep (n j : Nat) : Gen \u2192 Bool\n  | .L => j != 0\n  | .R => j != n - 1\n  | .X => decide (2 \u2264 j)\n\n/-- (projected word, final position of the marked atom) -/\ndef proj (n : Nat) : Nat \u2192 List Gen \u2192 List Gen \u00d7 Nat\n  | j, [] => ([], j)\n  | j, g :: w =>\n    let r := proj n (track n j g) w\n    (if keep n j g then g :: r.1 else r.1, r.2)\n\n/-! Stretch macros (group's Lemma 1 table) -/\ndef rep (w : List Gen) : Nat \u2192 List Gen\n  | 0 => []\n  | k + 1 => w ++ rep w k\n\n/-- X on (0^{1+z}, a)  \u21a6  L^z X (RX)^z -/\ndef macroZL (z : Nat) : List Gen := rep [.L] z ++ [.X] ++ rep [.R, .X] z\n/-- X on (a, 0^{1+z})  \u21a6  X (LX)^z R^z -/\ndef macroLZ (z : Nat) : List Gen := [.X] ++ rep [.L, .X] z ++ rep [.R] z\n\nnamespace Stmt\n/-! Targets. A candidate proves `theorem L1 : LRX.Stmt.L1` inside `namespace Cand`. -/\n\n/-- L1: free reduction preserves execution. -/\ndef L1 : Prop :=\n  \u2200 (w : List Gen) (v : List Nat), exec (freeReduce w) v = exec w v\n\n/-- L2: deleting one marked atom commutes with execution (group's Lemma 4, one atom). -/\ndef L2 : Prop :=\n  \u2200 (v : List Nat) (j : Nat) (w : List Gen), 2 \u2264 v.length \u2192 j < v.length \u2192\n    exec (proj v.length j w).1 (v.eraseIdx j) = (exec w v).eraseIdx (proj v.length j w).2\n\n/-- L3: group's Lemma 1 stretch macro for X on (0^{1+z}, a), all z. -/\ndef L3 : Prop :=\n  \u2200 (z a : Nat) (w : List Nat),\n    exec (macroZL z) (List.replicate (z + 1) 0 ++ a :: w) = a :: (List.replicate (z + 1) 0 ++ w)\n\n/-! Milestones (fixed partial-credit statements). -/\ndef M1 : Prop := \u2200 (p s : List Gen) (v : List Nat), exec (p ++ s) v = exec s (exec p v)\ndef M2 : Prop := \u2200 (g : Gen) (v : List Nat), step (inv g) (step g v) = v\ndef M3 : Prop := \u2200 (w : List Gen), Reduced (freeReduce w)\ndef M4 : Prop := \u2200 (w : List Gen) (v : List Nat), (exec w v).length = v.length\ndef M5 : Prop :=\n  \u2200 (v : List Nat) (j : Nat) (w : List Gen), 2 \u2264 v.length \u2192 j < v.length \u2192\n    (exec w v)[(proj v.length j w).2]? = v[j]?\ndef M6 : Prop := \u2200 (n j : Nat) (w : List Gen), (proj n j w).1.length \u2264 w.length\ndef M7 : Prop :=\n  \u2200 (m r j : Nat) (v : List Nat) (w : List Gen), 2 \u2264 m + r \u2192 v[j]? = some 0 \u2192\n    exec w v = root m r \u2192 exec (proj (m + r) j w).1 (v.eraseIdx j) = root m (r - 1)\ndef M9 : Prop :=\n  \u2200 (z a : Nat) (w : List Nat),\n    exec (macroLZ z) (a :: (List.replicate (z + 1) 0 ++ w)) = List.replicate (z + 1) 0 ++ a :: w\nend Stmt\nend LRX\n```",
+  "upstream_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+}

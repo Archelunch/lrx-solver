@@ -1,0 +1,77 @@
+{
+ "campaign": "sort-m9-v3-260925",
+ "note": "Loop v3 (autoresearch/loop-v3-260925/SPEC-track1.md). Every limit under engines applies to one run = one (arm, seed). Development set and holdout are the sort-m9-260925 frozen files, referenced by manifest and hash; frozen-v3 holds the 30-instance partition and the 100-state screen (build_instances.py). Covered by the approval hash: python -m integrations.sort_loop3 approval-hash.",
+ "seed_program": "integrations/sort_control_sweep.py",
+ "frozen_manifest": "autoresearch/sort-m9-260925/frozen/manifest.json",
+ "frozen_v3_manifest": "autoresearch/sort-m9-v3-260925/frozen-v3/manifest.json",
+ "python": ".venv-official/bin/python",
+ "eval_cache": "autoresearch/sort-m9-v3-260925/eval-cache",
+ "broker_port": 8898,
+ "eval_timeout": 900,
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "screen_threshold": 1.1,
+ "seed_screen_score": 1.1886524822695037,
+ "seed_screen_score_note": "Exact screen combined score of the seed, computed from the saved v2 per-state rows (controls/v2-sort_control_sweep-development.json); _setup_v3 re-evaluates the seed under Seatbelt without cache every run and aborts on a difference above 1e-9.",
+ "reveal_optimal_max_states": 300,
+ "packet": {
+  "marker": "SORT_PACKET_V2",
+  "worst_states": 5,
+  "key_max_chars": 2000,
+  "instance_max_chars": 2500,
+  "sequential_max_chars": 6000
+ },
+ "evox_strategy_evolution": false,
+ "campaign_max_usd": null,
+ "campaign_max_usd_note": "null until the scale (pilot vs full) and the reflection model (O2, O3) are decided; live refuses to start while null.",
+ "reflection": {
+  "enabled": true,
+  "broker_config": "broker-config-reflection.json",
+  "broker_port": 8899,
+  "max_requests": {
+   "gepa": 215,
+   "sequential": 215,
+   "adaevolve": 20,
+   "evox": 0
+  },
+  "diagnosis_max_chars": 4000,
+  "on_failure": "halt"
+ },
+ "engines": {
+  "gepa": {
+   "iterations": 200,
+   "max_metric_calls": 7266,
+   "max_state_evals": 380000,
+   "minibatch": 3,
+   "frontier_type": "instance",
+   "max_requests": 215,
+   "wall_seconds": 28800
+  },
+  "sequential": {
+   "iterations": 200,
+   "max_screen_evals": 205,
+   "max_full_evals": 205,
+   "max_requests": 215,
+   "wall_seconds": 28800
+  },
+  "adaevolve": {
+   "iterations": 200,
+   "max_screen_evals": 230,
+   "max_full_evals": 230,
+   "max_requests": 215,
+   "wall_seconds": 28800
+  },
+  "evox": {
+   "iterations": 200,
+   "max_screen_evals": 230,
+   "max_full_evals": 230,
+   "max_requests": 215,
+   "wall_seconds": 28800
+  }
+ },
+ "evox_note": "EvoX's outer loop writes and runs LLM-generated Python search strategies; AGENTS.md forbids executing generated code outside the evaluator sandbox, so it is disabled in every run (switch_interval = iterations + 1, variation operators off, post-run leak check).",
+ "sky_note": "inject_evaluator_context is false. AdaEvolve paradigm prompts still include the staged evaluator stub source (SkyDiscover 0.2.0 adaevolve/controller.py:80-112); the stub holds only the HTTP call."
+}

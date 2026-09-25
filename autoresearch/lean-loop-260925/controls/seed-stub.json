@@ -1,0 +1,285 @@
+{
+ "status": "VALID",
+ "reason": null,
+ "statuses": {
+  "L1": "sorry",
+  "L2": "sorry",
+  "L3": "sorry",
+  "M1": "sorry",
+  "M2": "sorry",
+  "M3": "sorry",
+  "M4": "sorry",
+  "M5": "sorry",
+  "M6": "sorry",
+  "M7": "sorry",
+  "M9": "sorry"
+ },
+ "axioms": {
+  "L1": [
+   "propext",
+   "sorryAx"
+  ],
+  "L2": [
+   "propext",
+   "sorryAx"
+  ],
+  "L3": [
+   "propext",
+   "sorryAx"
+  ],
+  "M1": [
+   "propext",
+   "sorryAx"
+  ],
+  "M2": [
+   "propext",
+   "sorryAx"
+  ],
+  "M3": [
+   "propext",
+   "sorryAx"
+  ],
+  "M4": [
+   "propext",
+   "sorryAx"
+  ],
+  "M5": [
+   "propext",
+   "sorryAx"
+  ],
+  "M6": [
+   "sorryAx"
+  ],
+  "M7": [
+   "propext",
+   "sorryAx"
+  ],
+  "M9": [
+   "propext",
+   "sorryAx"
+  ]
+ },
+ "aux": [],
+ "T": "0",
+ "M": "0",
+ "A": "0",
+ "P": "0",
+ "combined_exact": "0",
+ "combined_score": 0.0,
+ "closed_targets": [],
+ "closed_milestones": [],
+ "footer_axioms": {
+  "L1": [
+   "propext",
+   "sorryAx"
+  ],
+  "L2": [
+   "propext",
+   "sorryAx"
+  ],
+  "L3": [
+   "propext",
+   "sorryAx"
+  ],
+  "M1": [
+   "propext",
+   "sorryAx"
+  ],
+  "M2": [
+   "propext",
+   "sorryAx"
+  ],
+  "M3": [
+   "propext",
+   "sorryAx"
+  ],
+  "M4": [
+   "propext",
+   "sorryAx"
+  ],
+  "M5": [
+   "propext",
+   "sorryAx"
+  ],
+  "M6": [
+   "sorryAx"
+  ],
+  "M7": [
+   "propext",
+   "sorryAx"
+  ],
+  "M9": [
+   "propext",
+   "sorryAx"
+  ]
+ },
+ "verified_body": "-- Candidate body. The evaluator wraps it in a trusted header (LrxLean.Defs, open LRX,\n-- scope Cand) and footer. Prove each `theorem <id> : Stmt.<id>`; add helper theorems\n-- freely. Use `theorem` (not `lemma`); no imports, options, attributes on init, or # commands.\n\ntheorem L1 : Stmt.L1 := by\n  unfold Stmt.L1\n  sorry\n\ntheorem L2 : Stmt.L2 := by\n  unfold Stmt.L2\n  sorry\n\ntheorem L3 : Stmt.L3 := by\n  unfold Stmt.L3\n  sorry\n\ntheorem M1 : Stmt.M1 := by\n  unfold Stmt.M1\n  sorry\n\ntheorem M2 : Stmt.M2 := by\n  unfold Stmt.M2\n  sorry\n\ntheorem M3 : Stmt.M3 := by\n  unfold Stmt.M3\n  sorry\n\ntheorem M4 : Stmt.M4 := by\n  unfold Stmt.M4\n  sorry\n\ntheorem M5 : Stmt.M5 := by\n  unfold Stmt.M5\n  sorry\n\ntheorem M6 : Stmt.M6 := by\n  unfold Stmt.M6\n  sorry\n\ntheorem M7 : Stmt.M7 := by\n  unfold Stmt.M7\n  sorry\n\ntheorem M9 : Stmt.M9 := by\n  unfold Stmt.M9\n  sorry\n",
+ "messages": [
+  {
+   "severity": "warning",
+   "line": 5,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 9,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 13,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 17,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 21,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 25,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 29,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 33,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 37,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 41,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  },
+  {
+   "severity": "warning",
+   "line": 45,
+   "col": 8,
+   "text": "declaration uses `sorry`",
+   "in_body": true
+  }
+ ],
+ "blocks": [
+  {
+   "start": 1,
+   "end": 4,
+   "name": null
+  },
+  {
+   "start": 5,
+   "end": 8,
+   "name": "L1"
+  },
+  {
+   "start": 9,
+   "end": 12,
+   "name": "L2"
+  },
+  {
+   "start": 13,
+   "end": 16,
+   "name": "L3"
+  },
+  {
+   "start": 17,
+   "end": 20,
+   "name": "M1"
+  },
+  {
+   "start": 21,
+   "end": 24,
+   "name": "M2"
+  },
+  {
+   "start": 25,
+   "end": 28,
+   "name": "M3"
+  },
+  {
+   "start": 29,
+   "end": 32,
+   "name": "M4"
+  },
+  {
+   "start": 33,
+   "end": 36,
+   "name": "M5"
+  },
+  {
+   "start": 37,
+   "end": 40,
+   "name": "M6"
+  },
+  {
+   "start": 41,
+   "end": 44,
+   "name": "M7"
+  },
+  {
+   "start": 45,
+   "end": 48,
+   "name": "M9"
+  }
+ ],
+ "dropped_blocks": [],
+ "passes": [
+  {
+   "pass": 1,
+   "returncode": 0,
+   "seconds": 2.015,
+   "errors": 0,
+   "status": "ok"
+  }
+ ],
+ "stage_b": {
+  "returncode": 0,
+  "seconds": 0.648,
+  "status": "ok"
+ },
+ "stage_c": {
+  "returncode": 0,
+  "seconds": 0.262,
+  "status": "ok"
+ },
+ "body_sha256": "023a8b737d977efda8d13ea9a748a7acbe80e07ec47083d83c835acb1aeb171f",
+ "cache_key": "9a3bdcbc9b6f907cfc82eaebc8fce674b7f3b49735f5cfd7c95117450edc7507",
+ "cache_hit": false,
+ "evaluator_version": "lean-eval-1",
+ "lock_digest": "b0e013275e413995648fdb20263ce2b40499d5a492b652a30d553e207e15a78d",
+ "toolchain": "Lean (version 4.34.0, arm64-apple-darwin24.6.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)",
+ "seconds": 3.39
+}

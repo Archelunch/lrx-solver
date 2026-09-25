@@ -1,0 +1,39 @@
+{
+ "note": "Per-arm search limits for bound-m-260925 (Track 2). Money, request, token, reasoning and timeout caps live only in broker-config.json and are read at run time (model client timeout = broker timeout + 30 s). The development set path and SHA-256 are read at run time from frozen_manifest; the holdout (m = 9, 10, 11) is never loaded by an engine. Both configs, the prompts, the seed, the frozen hashes, the evaluator hash, the SkyDiscover settings and the first-prompt hashes are covered by the approval hash (python -m integrations.bound_backends approval-hash).",
+ "seed": "integrations/bound_control_sweep.py",
+ "frozen_manifest": "autoresearch/bound-m-260925/frozen/manifest.json",
+ "python": ".venv-official/bin/python",
+ "eval_cache": "autoresearch/bound-m-260925/eval-cache",
+ "broker_port": 8898,
+ "eval_timeout": 900,
+ "evaluation": "staged: SkyDiscover and sequential score each candidate on the 30-family screen (15 per m, in development.json 'screen'); a candidate valid on the whole screen that ties or beats the best screen score gets a full development evaluation (303 families). GEPA evaluates per family: trainset = development minus screen (273), valset = screen, reflection minibatch 3, so one proposal costs 2*3 + 30 = 36 metric calls. Every call runs the candidate under Seatbelt, 3 s CPU / 5 s wall per family.",
+ "engines": {
+  "gepa": {
+   "iterations": 40,
+   "max_evals": 1600,
+   "wall_seconds": 21600,
+   "max_requests": 45
+  },
+  "sequential": {
+   "iterations": 40,
+   "max_evals": 50,
+   "wall_seconds": 21600,
+   "max_requests": 45
+  },
+  "adaevolve": {
+   "iterations": 40,
+   "max_evals": 50,
+   "wall_seconds": 21600,
+   "max_requests": 45
+  },
+  "evox": {
+   "iterations": 40,
+   "max_evals": 50,
+   "wall_seconds": 21600,
+   "max_requests": 45
+  }
+ },
+ "max_requests_note": "Per-arm sub-caps of broker-config.json's shared max_requests (230 at max_usd 38.4 under the conservative reservation): each arm's iterations + 5 = 45, sum 180 <= 230. The user asked to keep usage within their limits, so this proposal is smaller than sort-m9 (60/60/50/40). GEPA max_evals covers 30 + 41 * 36 = 1506 metric calls plus final checks. Each arm has its own ledger (TRACE-AUDIT-260925 defect 2).",
+ "order_note": "GEPA and the sequential control first at matched iteration counts; AdaEvolve and EvoX only after GEPA shows one productive cycle. EvoX strategy evolution is disabled at every iteration count (it runs generated Python outside the sandbox).",
+ "claim_rule": "An engine claims progress only if its frozen finalist beats control (b) (integrations/bound_control_sweeplp.py, exact LP over the whole sweep pool) on the holdout; the campaign seed is (b16)."
+}

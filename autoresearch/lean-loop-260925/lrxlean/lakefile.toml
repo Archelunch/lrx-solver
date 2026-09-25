@@ -1,0 +1,10 @@
+name = "lrxlean"
+version = "0.1.0"
+defaultTargets = ["LrxLean", "lrxaudit"]
+
+[[lean_lib]]
+name = "LrxLean"
+
+[[lean_exe]]
+name = "lrxaudit"
+root = "Audit"

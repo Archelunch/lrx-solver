@@ -1,0 +1,29 @@
+{
+ "task": "lean-loop-260925",
+ "evaluator_version": "lean-eval-1",
+ "lock_digest": "b0e013275e413995648fdb20263ce2b40499d5a492b652a30d553e207e15a78d",
+ "toolchain": "Lean (version 4.34.0, arm64-apple-darwin24.6.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)",
+ "control": "autoresearch/lean-loop-260925/controls/sweep.json",
+ "control_closed_targets": [],
+ "arms": [
+  {
+   "run_dir": "autoresearch/lean-loop-260925/smoke-sequential",
+   "engine": "sequential",
+   "status": "COMPLETE",
+   "research_status": "MILESTONE_PROGRESS",
+   "best_sha256": "c0b7a213e04f2a2b250f6ae3ab483553f2a59455ad3e4a136a3fccee4bea7d8c",
+   "reaudit_status": "VALID",
+   "reaudit_score": 0.05,
+   "closed_targets": [],
+   "closed_milestones": [
+    "M1",
+    "M2"
+   ],
+   "matches_manifest": true,
+   "new_targets_vs_control": [],
+   "verdict": "NO_TARGET_BEYOND_CONTROL"
+  }
+ ],
+ "comparator": "not run: leanprover/comparator needs Linux landrun; the Seatbelt shim is not built",
+ "human_read": "required before any claim"
+}

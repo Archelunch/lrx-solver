@@ -1,0 +1,16 @@
+{
+ "schema": "lrx-sort-frozen-v3-manifest-v1",
+ "source_manifest": "autoresearch/sort-m9-260925/frozen/manifest.json",
+ "source_manifest_sha256": "c98fd6136f4df9038188f754c5e458758e989f0d83efc052349858145affca4e",
+ "development_sha256": "f4dd4752758b573c6ba246f612fbbef5340bae754c14e63438fcc945eabb3346",
+ "instances_sha256": "cf0cfcbaed44d245b05af07257db46d28414bb5925b95c41b852fbd2f8c3bb65",
+ "screen_sha256": "fa28017d1bef66aa14907a3c5f7ec479f6600cbfe6cc14a33658fc21218192b6",
+ "counts": {
+  "instances": 30,
+  "states_per_instance": [
+   50
+  ],
+  "screen": 100
+ },
+ "rule": "Instances: for each r in 1..5, sort that r's 300 development states by (d, id) and cut them into 6 consecutive groups of 50 named r{r}-s{k}, k=1 lowest d. Screen: for each r, every state at the table radius (d == budget), then evenly spaced picks from the remaining states in (d, id) order, index int(step*i + step/2) with step = len(rest)/need, up to 20 per r."
+}

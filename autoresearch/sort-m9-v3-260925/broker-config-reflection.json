@@ -1,0 +1,22 @@
+{
+  "run": "sort-m9-v3-260925-reflection",
+  "note": "Reflection (diagnosis) broker for loop v3. UNVERIFIED: the model name, endpoint and prices are placeholders from SPEC-track1.md section 4 and must be checked against a live model listing and current pricing before approval (open decision O2; that check needs a live call, which is not authorized). The broker refuses any request whose model differs from this one, so reflection uses a second broker with its own ledger broker-ledger-v3-reflection.<engine>-s<S>.json (path recorded in the run manifest).",
+  "upstream_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+  "model": "gemini-3.8-pro",
+  "model_note": "PLACEHOLDER (O2): gemini-3.8-pro or grok-4.7; not verified.",
+  "api_key_env": "GEMINI_API_KEY",
+  "ledger": "autoresearch/sort-m9-v3-260925/broker-ledger-v3-reflection.json",
+  "max_prompt_bytes": 120000,
+  "max_tokens": 3000,
+  "reasoning_effort": "low",
+  "reasoning_cap_tokens": 8000,
+  "timeout": 480,
+  "upstream_stream": true,
+  "input_usd_per_million": 2.0,
+  "output_usd_per_million": 12.0,
+  "price_source": "ASSUMPTION (SPEC section 4: pro-class $2/M input, $12/M output); not verified.",
+  "reservation_usd_per_request_conservative": 0.374048,
+  "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+  "max_usd_per_run": 25.0,
+  "max_usd_per_run_note": "PROPOSED, to confirm: 215 diagnosis calls at an assumed $0.07-0.10 is $15-21.5."
+}

@@ -1,0 +1,52 @@
+{
+ "autoresearch/bound-m-260925/controls/a-naive-development.json": {
+  "certified_claims": 0,
+  "agree": 0,
+  "disagreements": []
+ },
+ "autoresearch/bound-m-260925/controls/a-naive-edge.json": {
+  "certified_claims": 2,
+  "agree": 2,
+  "disagreements": []
+ },
+ "autoresearch/bound-m-260925/controls/a-naive-holdout.json": {
+  "certified_claims": 0,
+  "agree": 0,
+  "disagreements": []
+ },
+ "autoresearch/bound-m-260925/controls/b-sweeplp-development.json": {
+  "certified_claims": 151,
+  "agree": 151,
+  "disagreements": []
+ },
+ "autoresearch/bound-m-260925/controls/b-sweeplp-edge.json": {
+  "certified_claims": 12,
+  "agree": 12,
+  "disagreements": []
+ },
+ "autoresearch/bound-m-260925/controls/b-sweeplp-holdout.json": {
+  "certified_claims": 258,
+  "agree": 258,
+  "disagreements": []
+ },
+ "autoresearch/bound-m-260925/controls/b16-sweep16-development.json": {
+  "certified_claims": 111,
+  "agree": 111,
+  "disagreements": []
+ },
+ "autoresearch/bound-m-260925/controls/b16-sweep16-edge.json": {
+  "certified_claims": 12,
+  "agree": 12,
+  "disagreements": []
+ },
+ "autoresearch/bound-m-260925/controls/b16-sweep16-holdout.json": {
+  "certified_claims": 178,
+  "agree": 178,
+  "disagreements": []
+ },
+ "autoresearch/bound-m-260925/controls/c-sortprog-development.json": {
+  "certified_claims": 29,
+  "agree": 29,
+  "disagreements": []
+ }
+}

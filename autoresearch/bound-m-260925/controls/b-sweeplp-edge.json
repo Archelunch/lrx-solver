@@ -1,0 +1,1645 @@
+{
+ "families": 20,
+ "certified": 12,
+ "boundary": 0,
+ "valid": 20,
+ "invalid": 0,
+ "incomplete": 0,
+ "timeouts": 0,
+ "per_m": {
+  "9": {
+   "certified": 5,
+   "families": 10,
+   "pct": 50.0,
+   "boundary": 0,
+   "no_certificate": 5,
+   "invalid": 0,
+   "incomplete": 0,
+   "timeouts": 0,
+   "valid": 10,
+   "W": "7/2",
+   "W_complete": true,
+   "G": "131/96",
+   "per_k": {
+    "1": [
+     5,
+     10
+    ]
+   }
+  },
+  "10": {
+   "certified": 7,
+   "families": 10,
+   "pct": 70.0,
+   "boundary": 0,
+   "no_certificate": 3,
+   "invalid": 0,
+   "incomplete": 0,
+   "timeouts": 0,
+   "valid": 10,
+   "W": "3",
+   "W_complete": true,
+   "G": "7/10",
+   "per_k": {
+    "1": [
+     7,
+     10
+    ]
+   }
+  }
+ },
+ "worst_m": "9",
+ "max_W": "7/2",
+ "combined_score": 110.08809499402017,
+ "example_scores": {
+  "m9-mask4-labels219876543": 0.14285714285714285,
+  "m9-mask1-labels987654321": 0.16666666666666666,
+  "m9-mask16-labels413298765": 0.13114754098360656,
+  "m9-mask8-labels231987654": 0.1111111111111111,
+  "m9-mask8-labels321897654": 0.13043478260869565,
+  "m9-mask512-labels123456789": 1.0,
+  "m9-mask2-labels987654321": 1.0,
+  "m9-mask4-labels197865432": 1.0,
+  "m9-mask128-labels219876543": 1.0,
+  "m9-mask16-labels687492531": 1.0,
+  "m10-mask4-labels2.1.10.9.8.7.6.5.4.3": 0.125,
+  "m10-mask1024-labels10.9.8.7.6.5.4.3.2.1": 0.125,
+  "m10-mask1-labels10.9.8.7.6.5.4.3.2.1": 0.25,
+  "m10-mask1024-labels1.2.3.4.5.6.7.8.9.10": 1.0,
+  "m10-mask4-labels10.9.8.7.6.5.4.3.2.1": 1.0,
+  "m10-mask64-labels4.3.2.1.10.8.9.7.6.5": 1.0,
+  "m10-mask16-labels6.5.4.3.2.1.10.9.8.7": 1.0,
+  "m10-mask4-labels8.9.7.5.10.4.2.1.6.3": 1.0,
+  "m10-mask16-labels7.8.1.2.10.4.3.6.5.9": 1.0,
+  "m10-mask8-labels9.10.1.2.3.4.5.6.7.8": 1.0
+ },
+ "kind": "bound_trusted_control",
+ "control": "integrations.bound_control_sweeplp",
+ "evaluator_version": "bound-eval-1",
+ "evaluator_hash": "1356f06e7ba005c1de207380f003d8507c01163e07c7701fd2e4da5eff4be057",
+ "contract": "bound-contract-1: candidate defines certify(family) -> {\"words\": [...], \"weights\"?: [...], \"note\"?: str}; 1..32 words over L,R,X of at most 4000 letters; weights optional rational strings forming a probability vector (checked and reported, never trusted). INVALID_OUTPUT unless every word sorts the unit base with no zero-zero swap (lrx_m.Profile) and passes literal lifted execution at z=0, e_j, 2e_j, e_j+e_{j+1}, (1..1) with length F(z) <= B+beta.z. CERTIFIED iff the exact LP optimum (lift_evaluator.mixture_lp) has weighted base < T+1 and weighted slopes <= m-2, T = T_m(m+k). gap = lift_evaluator.gap_lp with strict T+1; BOUNDARY iff not certified and gap 0. Invalid and INCOMPLETE (timeout 3 s CPU / 5 s wall per family, crash, worker failure) get gap 4000. Per m: pct = 100 C/N, W = max gap, G = mean gap over valid. combined = mean_m pct + min_m pct + 0.06 V/N + 0.06/(1+max_m W) + 0.03/(1+mean_m G). Source guard: no L/R/X-only str constant >= 24 chars, no literal container > 64 elements, no bytes constant > 256 bytes.",
+ "family_set_hash": "d7edba8a6d7e27b14668ddc1f3df32b20de3bc884243c19be5ce452af333b995",
+ "isolation": "trusted_in_process",
+ "max_family_cpu": 0.0036390000000000033,
+ "families_over_candidate_cpu": 0,
+ "seconds": 0.8286791249993257,
+ "results": [
+  {
+   "id": "m9-mask4-labels219876543",
+   "m": 9,
+   "k": 1,
+   "mask": 4,
+   "class": "tight",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "5/2",
+   "trace": {
+    "slopes": [
+     {
+      "j": 0,
+      "gap_index": 2,
+      "slope": "19/2",
+      "excess": "5/2",
+      "tight": true
+     }
+    ]
+   },
+   "run": {
+    "seconds": 0.17981983296340331,
+    "cpu_seconds": 0.002377000000000004
+   },
+   "note": "pool frontier 3 cost vectors; LP base 51",
+   "words": [
+    {
+     "index": 0,
+     "length": 45,
+     "base": 45,
+     "beta": [
+      10
+     ],
+     "swaps": 20,
+     "A": [
+      4
+     ],
+     "rotation_passes": [
+      2
+     ],
+     "same_sign": true
+    },
+    {
+     "index": 1,
+     "length": 47,
+     "base": 47,
+     "beta": [
+      9
+     ],
+     "swaps": 20,
+     "A": [
+      4
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    },
+    {
+     "index": 2,
+     "length": 51,
+     "base": 51,
+     "beta": [
+      7
+     ],
+     "swaps": 21,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XLXRXRXLXLXLLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLXRR",
+    "XLXLXLXRXRXLXRRXLXLXLLLXLXLXLXRXRXLXRRXLXLXRRRR",
+    "XLXLXRXRXLXLLLXLXLXLXLXRXRXLXRRXLXLXRRRXLXLXLXLLLLL"
+   ],
+   "lp": {
+    "weights": [
+     "0",
+     "0",
+     "1"
+    ],
+    "base": "51",
+    "slopes": [
+     "7"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "NO_CERTIFICATE",
+   "gap_lp": {
+    "weights": [
+     "1/2",
+     "1/2",
+     "0"
+    ],
+    "base": "46",
+    "slopes": [
+     "19/2"
+    ],
+    "slope_excess": "5/2"
+   },
+   "bound": {
+    "const_excess": "1",
+    "slope_excess": "5/2",
+    "statement": "d(v) <= T_m(n) + floor((1) + 5/2*(r-k))"
+   }
+  },
+  {
+   "id": "m9-mask1-labels987654321",
+   "m": 9,
+   "k": 1,
+   "mask": 1,
+   "class": "tight",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "2",
+   "trace": {
+    "slopes": [
+     {
+      "j": 0,
+      "gap_index": 0,
+      "slope": "9",
+      "excess": "2",
+      "tight": true
+     }
+    ]
+   },
+   "run": {
+    "seconds": 0.014988999988418072,
+    "cpu_seconds": 0.0029799999999999965
+   },
+   "note": "pool frontier 2 cost vectors; LP base 49",
+   "words": [
+    {
+     "index": 0,
+     "length": 43,
+     "base": 43,
+     "beta": [
+      10
+     ],
+     "swaps": 20,
+     "A": [
+      4
+     ],
+     "rotation_passes": [
+      2
+     ],
+     "same_sign": true
+    },
+    {
+     "index": 1,
+     "length": 49,
+     "base": 49,
+     "beta": [
+      8
+     ],
+     "swaps": 21,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      2
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XLXRXRXLXLXLLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLX",
+    "XLXRXRXLXLXLLXLXLXLXLXRXRXLXRRXLXLXRRRXLXLXLXRRRR"
+   ],
+   "lp": {
+    "weights": [
+     "0",
+     "1"
+    ],
+    "base": "49",
+    "slopes": [
+     "8"
+    ],
+    "slope_excess": "1"
+   },
+   "status": "NO_CERTIFICATE",
+   "gap_lp": {
+    "weights": [
+     "1/2",
+     "1/2"
+    ],
+    "base": "46",
+    "slopes": [
+     "9"
+    ],
+    "slope_excess": "2"
+   },
+   "bound": {
+    "const_excess": "1",
+    "slope_excess": "2",
+    "statement": "d(v) <= T_m(n) + floor((1) + 2*(r-k))"
+   }
+  },
+  {
+   "id": "m9-mask16-labels413298765",
+   "m": 9,
+   "k": 1,
+   "mask": 16,
+   "class": "tight",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "45/16",
+   "trace": {
+    "slopes": [
+     {
+      "j": 0,
+      "gap_index": 4,
+      "slope": "157/16",
+      "excess": "45/16",
+      "tight": true
+     }
+    ]
+   },
+   "run": {
+    "seconds": 0.004064666980411857,
+    "cpu_seconds": 0.002489000000000005
+   },
+   "note": "pool frontier 6 cost vectors; LP base 61",
+   "words": [
+    {
+     "index": 0,
+     "length": 45,
+     "base": 45,
+     "beta": [
+      10
+     ],
+     "swaps": 19,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      4
+     ],
+     "same_sign": true
+    },
+    {
+     "index": 1,
+     "length": 61,
+     "base": 61,
+     "beta": [
+      7
+     ],
+     "swaps": 19,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XLXLXRXRRXLXLXLXLLXLXLXRXRXLXLLLXLXLXLXLXRRRR",
+    "XRXRXRRXRXRXRRXRXRXRXRRRXRXRRRXRXRXRRRRXRRRRXRXRRRRRRRRRXRRRR"
+   ],
+   "lp": {
+    "weights": [
+     "0",
+     "1"
+    ],
+    "base": "61",
+    "slopes": [
+     "7"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "NO_CERTIFICATE",
+   "gap_lp": {
+    "weights": [
+     "15/16",
+     "1/16"
+    ],
+    "base": "46",
+    "slopes": [
+     "157/16"
+    ],
+    "slope_excess": "45/16"
+   },
+   "bound": {
+    "const_excess": "1",
+    "slope_excess": "45/16",
+    "statement": "d(v) <= T_m(n) + floor((1) + 45/16*(r-k))"
+   }
+  },
+  {
+   "id": "m9-mask8-labels231987654",
+   "m": 9,
+   "k": 1,
+   "mask": 8,
+   "class": "tight",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "7/2",
+   "trace": {
+    "slopes": [
+     {
+      "j": 0,
+      "gap_index": 3,
+      "slope": "21/2",
+      "excess": "7/2",
+      "tight": true
+     }
+    ]
+   },
+   "run": {
+    "seconds": 0.002104207989759743,
+    "cpu_seconds": 0.0017120000000000052
+   },
+   "note": "pool frontier 4 cost vectors; LP base 51",
+   "words": [
+    {
+     "index": 0,
+     "length": 45,
+     "base": 45,
+     "beta": [
+      11
+     ],
+     "swaps": 20,
+     "A": [
+      5
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    },
+    {
+     "index": 1,
+     "length": 51,
+     "base": 51,
+     "beta": [
+      8
+     ],
+     "swaps": 20,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      2
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "LXLXLXLXRXRXLXRRXLXLXLLLXLXLXRXRXLXLLLXLXLXLX",
+    "RXLXLLXLXLXRXRXLXLLLXLXLXLXLXRRRXLXLXRRRXLXLXLXRRRR"
+   ],
+   "lp": {
+    "weights": [
+     "0",
+     "1"
+    ],
+    "base": "51",
+    "slopes": [
+     "8"
+    ],
+    "slope_excess": "1"
+   },
+   "status": "NO_CERTIFICATE",
+   "gap_lp": {
+    "weights": [
+     "5/6",
+     "1/6"
+    ],
+    "base": "46",
+    "slopes": [
+     "21/2"
+    ],
+    "slope_excess": "7/2"
+   },
+   "bound": {
+    "const_excess": "1",
+    "slope_excess": "7/2",
+    "statement": "d(v) <= T_m(n) + floor((1) + 7/2*(r-k))"
+   }
+  },
+  {
+   "id": "m9-mask8-labels321897654",
+   "m": 9,
+   "k": 1,
+   "mask": 8,
+   "class": "tight",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "17/6",
+   "trace": {
+    "slopes": [
+     {
+      "j": 0,
+      "gap_index": 3,
+      "slope": "59/6",
+      "excess": "17/6",
+      "tight": true
+     }
+    ]
+   },
+   "run": {
+    "seconds": 0.0022636670037172735,
+    "cpu_seconds": 0.001467999999999997
+   },
+   "note": "pool frontier 3 cost vectors; LP base 57",
+   "words": [
+    {
+     "index": 0,
+     "length": 45,
+     "base": 45,
+     "beta": [
+      10
+     ],
+     "swaps": 19,
+     "A": [
+      4
+     ],
+     "rotation_passes": [
+      2
+     ],
+     "same_sign": true
+    },
+    {
+     "index": 1,
+     "length": 57,
+     "base": 57,
+     "beta": [
+      8
+     ],
+     "swaps": 19,
+     "A": [
+      4
+     ],
+     "rotation_passes": [
+      0
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "LXLXLXLXLLXLXLXLXRXRXLXRRXLXLXLLLXLXLXRRXLXLL",
+    "XLXLXLLLXLXLXLLXLXLXLXLLXLXLXLLLXLXLLLLXLXLLLLXLLLLLXRRRR"
+   ],
+   "lp": {
+    "weights": [
+     "0",
+     "1"
+    ],
+    "base": "57",
+    "slopes": [
+     "8"
+    ],
+    "slope_excess": "1"
+   },
+   "status": "NO_CERTIFICATE",
+   "gap_lp": {
+    "weights": [
+     "11/12",
+     "1/12"
+    ],
+    "base": "46",
+    "slopes": [
+     "59/6"
+    ],
+    "slope_excess": "17/6"
+   },
+   "bound": {
+    "const_excess": "1",
+    "slope_excess": "17/6",
+    "statement": "d(v) <= T_m(n) + floor((1) + 17/6*(r-k))"
+   }
+  },
+  {
+   "id": "m9-mask512-labels123456789",
+   "m": 9,
+   "k": 1,
+   "mask": 512,
+   "class": "root",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.0020557919633574784,
+    "cpu_seconds": 0.0009649999999999936
+   },
+   "note": "pool frontier 1 cost vectors; LP base 0",
+   "words": [
+    {
+     "index": 0,
+     "length": 0,
+     "base": 0,
+     "beta": [
+      0
+     ],
+     "swaps": 0,
+     "A": [
+      0
+     ],
+     "rotation_passes": [
+      0
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    ""
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "0",
+    "slopes": [
+     "0"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "0",
+    "slopes": [
+     "0"
+    ],
+    "words": [
+     ""
+    ]
+   },
+   "bound": {
+    "const_excess": "-45",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-45) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m9-mask2-labels987654321",
+   "m": 9,
+   "k": 1,
+   "mask": 2,
+   "class": "rev_rot",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.006046083988621831,
+    "cpu_seconds": 0.0022109999999999908
+   },
+   "note": "pool frontier 2 cost vectors; LP base 42",
+   "words": [
+    {
+     "index": 0,
+     "length": 42,
+     "base": 42,
+     "beta": [
+      7
+     ],
+     "swaps": 19,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "LXRXRXLXLXLLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLX"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "42",
+    "slopes": [
+     "7"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "42",
+    "slopes": [
+     "7"
+    ],
+    "words": [
+     "LXRXRXLXLXLLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLX"
+    ]
+   },
+   "bound": {
+    "const_excess": "-3",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-3) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m9-mask4-labels197865432",
+   "m": 9,
+   "k": 1,
+   "mask": 4,
+   "class": "near_rev",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.009506208007223904,
+    "cpu_seconds": 0.0021749999999999964
+   },
+   "note": "pool frontier 2 cost vectors; LP base 42",
+   "words": [
+    {
+     "index": 0,
+     "length": 42,
+     "base": 42,
+     "beta": [
+      7
+     ],
+     "swaps": 18,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XLXRRXLXLXLLLXLXLXRXRXLXRRXLXLXLLLXLXLXLXR"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "42",
+    "slopes": [
+     "7"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "42",
+    "slopes": [
+     "7"
+    ],
+    "words": [
+     "XLXRRXLXLXLLLXLXLXRXRXLXRRXLXLXLLLXLXLXLXR"
+    ]
+   },
+   "bound": {
+    "const_excess": "-3",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-3) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m9-mask128-labels219876543",
+   "m": 9,
+   "k": 1,
+   "mask": 128,
+   "class": "refl",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.0034174580359831452,
+    "cpu_seconds": 0.0019470000000000043
+   },
+   "note": "pool frontier 1 cost vectors; LP base 38",
+   "words": [
+    {
+     "index": 0,
+     "length": 38,
+     "base": 38,
+     "beta": [
+      1
+     ],
+     "swaps": 16,
+     "A": [
+      0
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XRXLXLLXLXLXLXRXRXLXRRXLXLXLLLLXLXLXRR"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "38",
+    "slopes": [
+     "1"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "38",
+    "slopes": [
+     "1"
+    ],
+    "words": [
+     "XRXLXLLXLXLXLXRXRXLXRRXLXLXLLLLXLXLXRR"
+    ]
+   },
+   "bound": {
+    "const_excess": "-7",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-7) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m9-mask16-labels687492531",
+   "m": 9,
+   "k": 1,
+   "mask": 16,
+   "class": "high_inv",
+   "budget_unit": 45,
+   "slope_bound": 7,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.0028142500086687505,
+    "cpu_seconds": 0.0017429999999999946
+   },
+   "note": "pool frontier 1 cost vectors; LP base 26",
+   "words": [
+    {
+     "index": 0,
+     "length": 26,
+     "base": 26,
+     "beta": [
+      3
+     ],
+     "swaps": 10,
+     "A": [
+      1
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "LXLXRXRXRRXRXLXLXRRRXRRXLL"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "26",
+    "slopes": [
+     "3"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "26",
+    "slopes": [
+     "3"
+    ],
+    "words": [
+     "LXLXRXRXRRXRXLXLXRRRXRRXLL"
+    ]
+   },
+   "bound": {
+    "const_excess": "-19",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-19) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask4-labels2.1.10.9.8.7.6.5.4.3",
+   "m": 10,
+   "k": 1,
+   "mask": 4,
+   "class": "tight",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "3",
+   "trace": {
+    "slopes": [
+     {
+      "j": 0,
+      "gap_index": 2,
+      "slope": "11",
+      "excess": "3",
+      "tight": true
+     }
+    ]
+   },
+   "run": {
+    "seconds": 0.006489416002295911,
+    "cpu_seconds": 0.0036390000000000033
+   },
+   "note": "pool frontier 4 cost vectors; LP base 73",
+   "words": [
+    {
+     "index": 0,
+     "length": 56,
+     "base": 56,
+     "beta": [
+      11
+     ],
+     "swaps": 25,
+     "A": [
+      5
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    },
+    {
+     "index": 1,
+     "length": 73,
+     "base": 73,
+     "beta": [
+      8
+     ],
+     "swaps": 25,
+     "A": [
+      4
+     ],
+     "rotation_passes": [
+      0
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XLXLXLXRXRXLXRRXLXLXLLLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLXLXR",
+    "XRXRXRXRXRRXRXRXRXRRXRXRXRXRRRXRXRXRRRXRXRXRRRRXRXRRRRXRXRRRRRXRRRRRXRRRR"
+   ],
+   "lp": {
+    "weights": [
+     "0",
+     "1"
+    ],
+    "base": "73",
+    "slopes": [
+     "8"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "NO_CERTIFICATE",
+   "gap_lp": {
+    "weights": [
+     "1",
+     "0"
+    ],
+    "base": "56",
+    "slopes": [
+     "11"
+    ],
+    "slope_excess": "3"
+   },
+   "bound": {
+    "const_excess": "1",
+    "slope_excess": "3",
+    "statement": "d(v) <= T_m(n) + floor((1) + 3*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask1024-labels10.9.8.7.6.5.4.3.2.1",
+   "m": 10,
+   "k": 1,
+   "mask": 1024,
+   "class": "tight",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "3",
+   "trace": {
+    "slopes": [
+     {
+      "j": 0,
+      "gap_index": 10,
+      "slope": "10",
+      "excess": "2",
+      "tight": true
+     }
+    ]
+   },
+   "run": {
+    "seconds": 0.007149667013436556,
+    "cpu_seconds": 0.0024379999999999957
+   },
+   "note": "pool frontier 3 cost vectors; LP base 73",
+   "words": [
+    {
+     "index": 0,
+     "length": 57,
+     "base": 57,
+     "beta": [
+      10
+     ],
+     "swaps": 25,
+     "A": [
+      4
+     ],
+     "rotation_passes": [
+      2
+     ],
+     "same_sign": true
+    },
+    {
+     "index": 1,
+     "length": 73,
+     "base": 73,
+     "beta": [
+      8
+     ],
+     "swaps": 25,
+     "A": [
+      4
+     ],
+     "rotation_passes": [
+      0
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XRXLXLLXLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLXLLXLXLXLXLLLXLXLXL",
+    "XLXLXLXLXLLXLXLXLXLLXLXLXLXLLLXLXLXLLLXLXLXLLLLXLXLLLLXLXLLLLLXLLLLLXRRRR"
+   ],
+   "lp": {
+    "weights": [
+     "0",
+     "1"
+    ],
+    "base": "73",
+    "slopes": [
+     "8"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "NO_CERTIFICATE",
+   "gap_lp": {
+    "weights": [
+     "1",
+     "0"
+    ],
+    "base": "57",
+    "slopes": [
+     "10"
+    ],
+    "slope_excess": "2"
+   },
+   "bound": {
+    "const_excess": "2",
+    "slope_excess": "2",
+    "statement": "d(v) <= T_m(n) + floor((2) + 2*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask1-labels10.9.8.7.6.5.4.3.2.1",
+   "m": 10,
+   "k": 1,
+   "mask": 1,
+   "class": "tight",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "1",
+   "trace": {
+    "slopes": [
+     {
+      "j": 0,
+      "gap_index": 0,
+      "slope": "9",
+      "excess": "1",
+      "tight": true
+     }
+    ]
+   },
+   "run": {
+    "seconds": 0.0017282090266235173,
+    "cpu_seconds": 0.001698000000000005
+   },
+   "note": "pool frontier 2 cost vectors; LP base 56",
+   "words": [
+    {
+     "index": 0,
+     "length": 56,
+     "base": 56,
+     "beta": [
+      9
+     ],
+     "swaps": 25,
+     "A": [
+      4
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XRXLXLLXLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLXLLXLXLXLXLLLXLXLX"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "56",
+    "slopes": [
+     "9"
+    ],
+    "slope_excess": "1"
+   },
+   "status": "NO_CERTIFICATE",
+   "gap_lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "56",
+    "slopes": [
+     "9"
+    ],
+    "slope_excess": "1"
+   },
+   "bound": {
+    "const_excess": "1",
+    "slope_excess": "1",
+    "statement": "d(v) <= T_m(n) + floor((1) + 1*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask1024-labels1.2.3.4.5.6.7.8.9.10",
+   "m": 10,
+   "k": 1,
+   "mask": 1024,
+   "class": "root",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.14532708399929106,
+    "cpu_seconds": 0.0022649999999999892
+   },
+   "note": "pool frontier 1 cost vectors; LP base 0",
+   "words": [
+    {
+     "index": 0,
+     "length": 0,
+     "base": 0,
+     "beta": [
+      0
+     ],
+     "swaps": 0,
+     "A": [
+      0
+     ],
+     "rotation_passes": [
+      0
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    ""
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "0",
+    "slopes": [
+     "0"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "0",
+    "slopes": [
+     "0"
+    ],
+    "words": [
+     ""
+    ]
+   },
+   "bound": {
+    "const_excess": "-55",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-55) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask4-labels10.9.8.7.6.5.4.3.2.1",
+   "m": 10,
+   "k": 1,
+   "mask": 4,
+   "class": "rev_rot",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.001090999983716756,
+    "cpu_seconds": 0.0010819999999999996
+   },
+   "note": "pool frontier 2 cost vectors; LP base 51",
+   "words": [
+    {
+     "index": 0,
+     "length": 51,
+     "base": 51,
+     "beta": [
+      6
+     ],
+     "swaps": 23,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      0
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XRXLXLXLXRXRXRXRXLXLXLXLXLLXLXLXLXRXRXLXRRXLXLXRRRR"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "51",
+    "slopes": [
+     "6"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "51",
+    "slopes": [
+     "6"
+    ],
+    "words": [
+     "XRXLXLXLXRXRXRXRXLXLXLXLXLLXLXLXLXRXRXLXRRXLXLXRRRR"
+    ]
+   },
+   "bound": {
+    "const_excess": "-4",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-4) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask64-labels4.3.2.1.10.8.9.7.6.5",
+   "m": 10,
+   "k": 1,
+   "mask": 64,
+   "class": "near_rev",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.005923124961555004,
+    "cpu_seconds": 0.0020809999999999995
+   },
+   "note": "pool frontier 3 cost vectors; LP base 52",
+   "words": [
+    {
+     "index": 0,
+     "length": 52,
+     "base": 52,
+     "beta": [
+      8
+     ],
+     "swaps": 22,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      2
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XLXRXRXLXLXLLXLXLXLXLXRXRXLXRRXRXLXLXLLLLXLXLXLXRRRR"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "52",
+    "slopes": [
+     "8"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "52",
+    "slopes": [
+     "8"
+    ],
+    "words": [
+     "XLXRXRXLXLXLLXLXLXLXLXRXRXLXRRXRXLXLXLLLLXLXLXLXRRRR"
+    ]
+   },
+   "bound": {
+    "const_excess": "-3",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-3) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask16-labels6.5.4.3.2.1.10.9.8.7",
+   "m": 10,
+   "k": 1,
+   "mask": 16,
+   "class": "refl",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.15981316700344905,
+    "cpu_seconds": 0.002932000000000004
+   },
+   "note": "pool frontier 3 cost vectors; LP base 53",
+   "words": [
+    {
+     "index": 0,
+     "length": 52,
+     "base": 52,
+     "beta": [
+      9
+     ],
+     "swaps": 23,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      3
+     ],
+     "same_sign": true
+    },
+    {
+     "index": 1,
+     "length": 54,
+     "base": 54,
+     "beta": [
+      7
+     ],
+     "swaps": 23,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      1
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "XLXRXRXLXLXLLXLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLXLLXLXLL",
+    "LXLXLXLXLXRXRRXLXLXLLLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLXRR"
+   ],
+   "lp": {
+    "weights": [
+     "1/2",
+     "1/2"
+    ],
+    "base": "53",
+    "slopes": [
+     "8"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1/2",
+     "1/2"
+    ],
+    "base": "53",
+    "slopes": [
+     "8"
+    ],
+    "words": [
+     "XLXRXRXLXLXLLXLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLXLLXLXLL",
+     "LXLXLXLXLXRXRRXLXLXLLLXLXLXLXRXRXLXRRXLXLXLLLXLXLXLXRR"
+    ]
+   },
+   "bound": {
+    "const_excess": "-2",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-2) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask4-labels8.9.7.5.10.4.2.1.6.3",
+   "m": 10,
+   "k": 1,
+   "mask": 4,
+   "class": "high_inv",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.004703417012933642,
+    "cpu_seconds": 0.0027810000000000057
+   },
+   "note": "pool frontier 2 cost vectors; LP base 40",
+   "words": [
+    {
+     "index": 0,
+     "length": 40,
+     "base": 40,
+     "beta": [
+      6
+     ],
+     "swaps": 14,
+     "A": [
+      2
+     ],
+     "rotation_passes": [
+      2
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "LLXRXRXRRXRRXRXLXLXRRRRXLXLXLXLXRRRRRXLL"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "40",
+    "slopes": [
+     "6"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "40",
+    "slopes": [
+     "6"
+    ],
+    "words": [
+     "LLXRXRXRRXRRXRXLXLXRRRRXLXLXLXLXRRRRRXLL"
+    ]
+   },
+   "bound": {
+    "const_excess": "-15",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-15) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask16-labels7.8.1.2.10.4.3.6.5.9",
+   "m": 10,
+   "k": 1,
+   "mask": 16,
+   "class": "uniform",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.1557054159929976,
+    "cpu_seconds": 0.0027530000000000054
+   },
+   "note": "pool frontier 3 cost vectors; LP base 27",
+   "words": [
+    {
+     "index": 0,
+     "length": 27,
+     "base": 27,
+     "beta": [
+      6
+     ],
+     "swaps": 9,
+     "A": [
+      3
+     ],
+     "rotation_passes": [
+      0
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "RXLXLLLXLXRXRXLXLLLXLLXRRRR"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "27",
+    "slopes": [
+     "6"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "27",
+    "slopes": [
+     "6"
+    ],
+    "words": [
+     "RXLXLLLXLXRXRXLXLLLXLLXRRRR"
+    ]
+   },
+   "bound": {
+    "const_excess": "-28",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-28) + 0*(r-k))"
+   }
+  },
+  {
+   "id": "m10-mask8-labels9.10.1.2.3.4.5.6.7.8",
+   "m": 10,
+   "k": 1,
+   "mask": 8,
+   "class": "easy",
+   "budget_unit": 55,
+   "slope_bound": 8,
+   "valid": true,
+   "gap": "0",
+   "trace": {},
+   "run": {
+    "seconds": 0.004360999970231205,
+    "cpu_seconds": 0.002240999999999993
+   },
+   "note": "pool frontier 2 cost vectors; LP base 4",
+   "words": [
+    {
+     "index": 0,
+     "length": 4,
+     "base": 4,
+     "beta": [
+      2
+     ],
+     "swaps": 1,
+     "A": [
+      1
+     ],
+     "rotation_passes": [
+      0
+     ],
+     "same_sign": true
+    }
+   ],
+   "output_words": [
+    "LLXL"
+   ],
+   "lp": {
+    "weights": [
+     "1"
+    ],
+    "base": "4",
+    "slopes": [
+     "2"
+    ],
+    "slope_excess": "0"
+   },
+   "status": "CERTIFIED",
+   "certificate": {
+    "weights": [
+     "1"
+    ],
+    "base": "4",
+    "slopes": [
+     "2"
+    ],
+    "words": [
+     "LLXL"
+    ]
+   },
+   "bound": {
+    "const_excess": "-51",
+    "slope_excess": "0",
+    "statement": "d(v) <= T_m(n) + floor((-51) + 0*(r-k))"
+   }
+  }
+ ],
+ "cache_hit": false
+}

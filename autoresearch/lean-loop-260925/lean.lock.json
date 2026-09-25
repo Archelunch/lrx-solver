@@ -1,0 +1,14 @@
+{
+  "files": {
+    ".lake/build/bin/lrxaudit": "743dd57b8028036636d7af2c4d96e5fdb863e3352d07d0049cc90867b2a5fba2",
+    ".lake/build/lib/lean/LrxLean/Defs.olean": "837ebd352eb8a7e1866a9aef99e26e7b1619834574d956c70ea180679a85b3c5",
+    "Audit.lean": "e6d2885842326e1faca56741ad8fa05295b4a7b7cf2547db6c800f95981652b3",
+    "LrxLean.lean": "48aa056c7b3c75c66f1a14da72721fcfd3d312997dd02254b7e4744c30180ca9",
+    "LrxLean/Conformance.lean": "6ea905c1493c56a412cd37a514ac13264c82f72d632d73368caeaddfdc235306",
+    "LrxLean/Defs.lean": "ece09088ef2d3fa4a8eb07b7b6988158a0101d6dacd26fb239b12f5ee184d078",
+    "lakefile.toml": "3a16c873e7cec4ecde0ef80d844e8e670335e0571d392d5c671dda3814a47cf0",
+    "lean-toolchain": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632"
+  },
+  "note": "sha256 of the locked Lean project (sources, Defs.olean, lrxaudit binary). Written by the Track 3 implementer on 2026-09-25; PENDING human review and re-lock.",
+  "toolchain": "leanprover/lean4:v4.34.0"
+}

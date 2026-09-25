@@ -1,0 +1,14 @@
+eval-cache/
+*cache*/
+smoke-*/
+live-*/verified/evaluations/
+live-*/output/
+live-*/stage/
+first-prompt-capture*/
+*.receipts/
+*.sqlite
+*.npz
+*.bin
+finalists/raw/
+*.log
+superseded-*/
