@@ -1,0 +1,97 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.009632700000000001,
+      "id": 1,
+      "input_tokens": 2171,
+      "kind": "chat",
+      "output_tokens": 1901,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/broker-ledger-sort.gepa.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.0731742,
+      "role": "gepa_reflection",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.010420575000000001,
+      "id": 2,
+      "input_tokens": 3601,
+      "kind": "chat",
+      "output_tokens": 1806,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/broker-ledger-sort.gepa.json.receipts/attempt-0002.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076899075,
+      "role": "gepa_reflection",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.011745525,
+      "id": 3,
+      "input_tokens": 3332,
+      "kind": "chat",
+      "output_tokens": 2181,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/broker-ledger-sort.gepa.json.receipts/attempt-0003.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076791825,
+      "role": "gepa_reflection",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.015363149999999999,
+      "id": 4,
+      "input_tokens": 3332,
+      "kind": "chat",
+      "output_tokens": 3058,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/broker-ledger-sort.gepa.json.receipts/attempt-0004.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076791825,
+      "role": "gepa_reflection",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0127149,
+      "id": 5,
+      "input_tokens": 3332,
+      "kind": "chat",
+      "output_tokens": 2416,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/broker-ledger-sort.gepa.json.receipts/attempt-0005.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076791825,
+      "role": "gepa_reflection",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.00945615,
+      "id": 6,
+      "input_tokens": 3332,
+      "kind": "chat",
+      "output_tokens": 1626,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/broker-ledger-sort.gepa.json.receipts/attempt-0006.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076791825,
+      "role": "gepa_reflection",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0098274,
+      "id": 7,
+      "input_tokens": 3332,
+      "kind": "chat",
+      "output_tokens": 1716,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/broker-ledger-sort.gepa.json.receipts/attempt-0007.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076791825,
+      "role": "gepa_reflection",
+      "status": "ok"
+    }
+  ],
+  "consecutive_failures": 0,
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 0.825,
+    "max_requests": 65,
+    "max_usd": 38.4,
+    "output_rate": 4.125
+  },
+  "spent_usd": 0.07916039999999999
+}

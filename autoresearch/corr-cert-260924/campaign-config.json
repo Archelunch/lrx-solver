@@ -10,25 +10,30 @@
   "evaluation": "single pass: every candidate is scored once on the full frozen development set (m=4..12, 9 evaluations of coefficients(m) each), no screening stage",
   "engines": {
     "gepa": {
-      "iterations": 60,
+      "iterations": 30,
       "max_evals": 200,
-      "wall_seconds": 21600
+      "wall_seconds": 21600,
+      "max_requests": 35
     },
     "sequential": {
-      "iterations": 60,
+      "iterations": 30,
       "max_evals": 200,
-      "wall_seconds": 21600
+      "wall_seconds": 21600,
+      "max_requests": 35
     },
     "adaevolve": {
-      "iterations": 50,
+      "iterations": 25,
       "max_evals": 150,
-      "wall_seconds": 21600
+      "wall_seconds": 21600,
+      "max_requests": 30
     },
     "evox": {
-      "iterations": 40,
+      "iterations": 20,
       "max_evals": 150,
-      "wall_seconds": 21600
+      "wall_seconds": 21600,
+      "max_requests": 26
     }
   },
+  "max_requests_note": "Rerun (user-approved step 4, reduced size, 2026-09-25): iterations and per-arm sub-caps (35/35/30/26, sum 126) reduced from attempt 2's 60/60/50/40 and 42/42/35/28 to fit broker-config.json's new max_usd 21.0 pool (floor(21/0.1666368)=126). Each arm still gets its own ledger file (broker-ledger-corr-v2.<engine>.json) capped at min(its max_requests, what the shared pool has left after earlier arms' ledgers); the launcher refuses to start an arm whose sub-cap is 0 or whose remaining share of the shared pool is 0 (autoresearch/TRACE-AUDIT-260925.md defect 2). Attempts 1 (broker-ledger-corr.json, 4k max_tokens) and 2 (broker-ledger-corr-8k.json, 8k max_tokens, 147-request shared pool) remain on disk as evidence and are not reused by this rerun.",
   "order_note": "Mirrors the lift-m9-260924 campaign order: GEPA and sequential control first, matched iteration counts; AdaEvolve and EvoX start only after GEPA shows one productive cycle (valid proposal, selection, second proposal responding to feedback), per PROTOCOL.md's kill conditions and budget ceiling ($25, one day timebox)."
 }

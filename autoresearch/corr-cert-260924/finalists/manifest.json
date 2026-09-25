@@ -23,12 +23,12 @@
   ],
   "holdout_sha256": "37872712a0eca08e3e3ee00b1adef8214df5be4bb1f95a45f9a5261263ee83bb",
   "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
-  "frozen_manifest_sha256": "6f62647e4ff812bb603ed4fe46383be71799bb4611986035d94f314ad7ae48f1",
+  "frozen_manifest_sha256": "051e7e22816b95a1612659990819aa9bdaef7fabcbb86c8500d0c0cb2291fdef",
   "evaluator": {
     "version": "corr-eval-1",
     "contract": "corr-contract-1: candidate defines coefficients(m) -> JSON-safe cert dict (see integrations/corr_task.py encode_cert/decode_cert for the exact key encoding). For each m, decode and call corrcert.check_certificate(m, cert); pass iff ok==True and epsilon < 1. violation magnitude for a failing m = sum(-slack) over every violated (5)/(6) check plus max(0, epsilon-1); an invalid/crash/timeout output contributes the fixed penalty INVALID_GAP instead (never repaired, never partial credit). combined_score = passes + 0.5/(1+violation_sum), violation_sum summed over m that did not pass. Stdlib only, source <= 64 KiB, wall limit 10s per m."
   },
-  "created_utc": "2026-09-24T22:05:24.171359+00:00",
+  "created_utc": "2026-09-25T13:12:27.551419+00:00",
   "details": [
     {
       "arm": "adaevolve",

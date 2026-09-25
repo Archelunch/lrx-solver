@@ -164,21 +164,34 @@ def packet(result: dict, best: str) -> str:
 
 
 def preflight_source(content, finish_reason=None) -> str:
-    """One fenced Python block defining coefficients(m); checked before any evaluation."""
+    """A fenced Python block defining coefficients(m); checked before any evaluation.
+
+    Prose is allowed before/after the fence(s). With multiple fenced blocks, the
+    last one that defines coefficients(...) is used (models sometimes show scratch
+    work or an earlier draft first). Truncated output is never accepted or
+    repaired: that check runs first and short-circuits everything below.
+    """
     if finish_reason in ("length", "max_tokens"):
         raise ValueError("proposal was truncated by the model output limit")
     if not isinstance(content, str):
         raise ValueError("proposal had no text content")
-    match = re.search(r"```(?:python)?\s*\n(.*?)```", content, re.IGNORECASE | re.DOTALL)
-    if match is None or content[:match.start()].strip() or content[match.end():].strip():
-        raise ValueError("proposal must contain only one fenced Python source block")
-    source = match.group(1)
-    if len(source.encode()) > 65536:
+    fences = list(re.finditer(r"```(?:python)?\s*\n(.*?)```", content, re.IGNORECASE | re.DOTALL))
+    if not fences:
+        raise ValueError("proposal must contain a fenced Python source block defining coefficients(m)")
+    chosen = None
+    for m in fences:
+        candidate = m.group(1)
+        try:
+            tree = ast.parse(candidate)
+        except SyntaxError:
+            continue
+        if any(isinstance(node, ast.FunctionDef) and node.name == "coefficients" for node in tree.body):
+            chosen = candidate  # keep scanning; last matching fence wins
+    if chosen is None:
+        raise ValueError("proposal must define coefficients(m) in a fenced Python source block")
+    if len(chosen.encode()) > 65536:
         raise ValueError("proposal exceeds source size cap")
-    tree = ast.parse(source)
-    if not any(isinstance(node, ast.FunctionDef) and node.name == "coefficients" for node in tree.body):
-        raise ValueError("proposal must define coefficients(m)")
-    return source
+    return chosen
 
 
 # ------------------------------------------------------ trusted verifier side
@@ -226,6 +239,7 @@ class CorrVerifier:
             feedback = packet(res, self._best_text())
             summary = {"combined_score": res["combined_score"], "passes": res["passes"],
                        "violation_sum": res["violation_sum"], "m_values": res["m_values"],
+                       "passed_m": sorted(row["m"] for row in res["results"] if row["passed"]),
                        "invalid": res["invalid"], "timeouts": res["timeouts"],
                        "candidate_hash": digest, "cache_hit": res["cache_hit"],
                        "evaluation_cache_key": res["cache_key"], "feedback": feedback}
@@ -306,8 +320,71 @@ def development_from_manifest(manifest: Path) -> tuple[Path, str]:
     return path, digest
 
 
+def worked_examples_from_manifest(manifest: Path) -> list[int]:
+    """The m values SYSTEM already gives away verbatim as worked examples (WORKED_EXAMPLES).
+
+    A finalist "passing" one of these proves nothing: it can be had by copying
+    the prompt. Absent for other tasks' manifests, so this defaults to [].
+    """
+    return sorted(json.loads(Path(manifest).read_text()).get("worked_examples", []))
+
+
 def messages_sha256(messages) -> str:
     return _sha(_canonical(messages).encode())
+
+
+def first_prompt_mismatch(messages, expected_sha256) -> bool:
+    """True only when an expected hash was given and the messages don't match it.
+
+    No expected hash (not yet captured/approved) means nothing to check.
+    """
+    return bool(expected_sha256) and messages_sha256(messages) != expected_sha256
+
+
+def _is_corr_solution_request(messages) -> bool:
+    """A real coefficients(m) proposal request, not a bare connectivity probe.
+
+    ob._evox_call_kind only recognizes strategy/variation meta-search
+    positively and defaults everything else (including a probe like "ping" or
+    a downstream-context summary request, neither of which ask for a
+    program) to "solution" -- a real gap found while wiring this guard for
+    the sort task, whose own solution classifier requires its task's program
+    marker for the same reason. Every captured real corr solution_diff
+    request contains "coefficients" (corr's required candidate function
+    name, per SYSTEM); no probe does.
+    """
+    return ob._evox_call_kind(messages) == "solution" and \
+        "coefficients" in json.dumps(messages).lower()
+
+
+def verify_first_solution_prompt(ledger_path, expected_sha256):
+    """Compare AdaEvolve/EvoX's first solution-proposal prompt against an approved hash.
+
+    Unlike GEPA (CorrBrokerLM.__call__ checks the messages before sending),
+    SkyDiscover's own LLM client never passes through our Python client, so
+    there is no pre-send interception point; this checks the arm's own
+    broker ledger receipts after the run instead. Returns None when there is
+    nothing to check (no ledger or no expected hash given), else
+    (actual_sha256, matches: bool) for the first receipt that is a real
+    coefficients(m) proposal (_is_corr_solution_request), not meta-search or
+    a bare connectivity probe.
+    """
+    if not ledger_path or not expected_sha256:
+        return None
+    receipts_dir = Path(ledger_path).with_suffix(Path(ledger_path).suffix + ".receipts")
+    if not receipts_dir.is_dir():
+        return None
+    for path in sorted(receipts_dir.glob("attempt-*.json")):
+        try:
+            receipt = json.loads(path.read_text())
+        except (ValueError, OSError):
+            continue
+        payload = receipt.get("forwarded_request_payload") or receipt.get("request_payload") or {}
+        messages = payload.get("messages", [])
+        if messages and _is_corr_solution_request(messages):
+            actual = messages_sha256(messages)
+            return actual, actual == expected_sha256
+    return None
 
 
 def approval_material(broker_config: Path, campaign_config: Path) -> dict:
@@ -317,9 +394,16 @@ def approval_material(broker_config: Path, campaign_config: Path) -> dict:
 
     bc, cc = _load_config(broker_config), _load_config(campaign_config)
     _, development = development_from_manifest(ROOT / cc["frozen_manifest"])
-    first = broker_config.parent / "first-prompt.sha256"
+
+    def _hash_of(name):
+        path = broker_config.parent / name
+        return path.read_text().split()[0] if path.is_file() else None
+
     return {"broker_config": bc, "campaign_config": cc,
-            "first_prompt_sha256": first.read_text().split()[0] if first.is_file() else None,
+            "first_prompt_sha256": _hash_of("first-prompt.sha256"),
+            "first_prompt_sequential_sha256": _hash_of("first-prompt-sequential.sha256"),
+            "first_prompt_adaevolve_sha256": _hash_of("first-prompt-adaevolve.sha256"),
+            "first_prompt_evox_sha256": _hash_of("first-prompt-evox.sha256"),
             "upstream_endpoint": bc["upstream_url"].rstrip("/") + "/chat/completions",
             "dry_run_payload": _dry_run_payload(bc), "system_prompt": SYSTEM, "objective": OBJECTIVE,
             "packet_format": {"marker": PACKET_MARK, "max_chars": PACKET_MAX, "scope": "development only"},
@@ -349,6 +433,40 @@ def check_approval(broker_config: Path, campaign_config: Path) -> str:
 
 
 # ------------------------------------------------------------ official engines
+EVOX_STRATEGY_EVOLUTION_MIN_ITERATIONS = 100
+
+
+def evox_strategy_evolution_enabled(iterations, offline_no_auto_variation) -> bool:
+    """Whether EvoX's search-strategy meta-search should run at all.
+
+    On short runs it burns a large share of calls on strategy code that is
+    rarely adopted and has crashed on a bad generated program (an
+    AttributeError from a strategy's own broken database implementation,
+    autoresearch/TRACE-AUDIT-260925.md defect 9); below
+    EVOX_STRATEGY_EVOLUTION_MIN_ITERATIONS it is not worth the risk or cost.
+
+    Strategy evolution is gated by stagnation vs `switch_interval`
+    (skydiscover...evox/controller.py `_should_evolve_search`: it fires once
+    `_stagnant_count >= switch_interval`), not by
+    `auto_generate_variation_operators` (that only controls whether an
+    evolved strategy also gets custom variation operators) and not
+    reliably by `search.share_llm` either: two smoke runs confirmed strategy
+    calls kept happening with auto_generate_variation_operators=False and
+    with share_llm=False, because the launcher's sandboxed worker
+    environment (official_backends._worker_environment) sets
+    OPENAI_API_BASE/OPENAI_API_KEY to the same broker for the whole
+    subprocess, so SkyDiscover's meta-LLM pool stays reachable regardless of
+    share_llm. The lever that actually works is `switch_interval` itself:
+    when this function returns False, `_sky_config` sets switch_interval to
+    iterations + 1, which `_stagnant_count` can never reach within the run
+    (a smoke run with iterations=6 confirmed 0 strategy/variation calls
+    after this fix, vs 3 strategy + 2 variation calls before it).
+    `auto_generate_variation_operators` is kept tied to this function too,
+    as a secondary, harmless-if-inert precaution.
+    """
+    return not offline_no_auto_variation and iterations >= EVOX_STRATEGY_EVOLUTION_MIN_ITERATIONS
+
+
 def _sky_config(args, stage: Path) -> Path:
     config = {
         "max_iterations": args.iterations, "checkpoint_interval": 1, "log_level": "INFO",
@@ -357,9 +475,13 @@ def _sky_config(args, stage: Path) -> Path:
                 "api_key": "local-broker", "max_tokens": args.max_tokens, "temperature": 0.7,
                 "timeout": args.llm_timeout, "retries": 0, "reasoning_effort": args.reasoning_effort},
         "search": {"type": args.engine, "num_context_programs": 2,
-                   "database": {"auto_generate_variation_operators": not args.offline_no_auto_variation}
+                   "database": {"auto_generate_variation_operators":
+                                evox_strategy_evolution_enabled(args.iterations, args.offline_no_auto_variation)}
                    if args.engine == "evox" else {},
-                   "switch_interval": args.evox_switch_interval if args.engine == "evox" else None,
+                   "switch_interval": (args.evox_switch_interval
+                                       if evox_strategy_evolution_enabled(args.iterations,
+                                                                          args.offline_no_auto_variation)
+                                       else args.iterations + 1) if args.engine == "evox" else None,
                    "share_llm": args.engine == "evox"},
         "prompt": {"system_message": SYSTEM},
         "evaluator": {"timeout": args.eval_timeout, "max_retries": 0, "cascade_evaluation": False},
@@ -373,7 +495,8 @@ def _sky_config(args, stage: Path) -> Path:
 def _sky_evaluator(stage: Path, verifier_url: str, timeout: int) -> Path:
     path = stage / "evaluator.py"
     path.write_text(
-        "from pathlib import Path\nimport json\nfrom urllib.request import Request, urlopen\n"
+        "from fractions import Fraction\nfrom pathlib import Path\nimport json\n"
+        "from urllib.request import Request, urlopen\n"
         "from skydiscover.optimize.evaluation.evaluation_result import EvaluationResult\n"
         "def evaluate(program_path):\n"
         "    source = Path(program_path).read_text(encoding='utf-8')\n"
@@ -382,7 +505,7 @@ def _sky_evaluator(stage: Path, verifier_url: str, timeout: int) -> Path:
         f"    with urlopen(req, timeout={timeout}) as response:\n"
         "        out = json.load(response)\n"
         "    metrics = {'combined_score': float(out['combined_score']), 'passes': float(out['passes']),\n"
-        "               'violation_sum': float(out['violation_sum'])}\n"
+        "               'violation_sum': float(Fraction(out['violation_sum']))}\n"
         "    return EvaluationResult(metrics=metrics, artifacts={'feedback': out['feedback']})\n")
     return path
 
@@ -404,9 +527,29 @@ class CorrBrokerLM(ob.BrokerLM):
                 messages_sha256(messages) != self.expected_first_sha256:
             raise ob.BrokerHalted("first proposer prompt differs from the approved first-prompt.sha256")
         text = request if isinstance(request, str) else json.dumps(request)
-        self.receipts.append({"call": self.calls + 1, "packet_seen": PACKET_MARK in text,
-                              "request_sha256": _sha(text.encode()), "request_chars": len(text)})
-        return super().__call__(request)
+        receipt = {"call": self.calls + 1, "packet_seen": PACKET_MARK in text,
+                  "request_sha256": _sha(text.encode()), "request_chars": len(text)}
+        self.receipts.append(receipt)
+        try:
+            return super().__call__(request)
+        finally:
+            receipt["finish_reason"] = self.last_finish_reason
+
+
+def reflection_minibatch_size(train) -> int:
+    """GEPA's reflection minibatch, capped at the train set size (never oversample a small set).
+
+    The corr-cert task has exactly one "example" (a single global pass over the
+    whole development set), so this must be 1, not GEPA's library default of 3
+    (autoresearch/TRACE-AUDIT-260925.md defect 5: an unset minibatch silently
+    tripled every packet and metric-call cost).
+    """
+    return min(3, len(train))
+
+
+def gepa_metric_calls_per_proposal(minibatch, val) -> int:
+    """Metric calls one proposal costs: minibatch eval + reflection re-eval + valset eval."""
+    return 2 * minibatch + len(val)
 
 
 def _gepa_worker(args) -> dict:
@@ -433,7 +576,8 @@ def _gepa_worker(args) -> dict:
         return float(r["combined_score"]), {
             "passes": r["passes"], "violation_sum": r["violation_sum"], "feedback": r["feedback"]}
 
-    per_proposal = 3  # minibatch eval + reflection eval + valset eval, one example each
+    minibatch = reflection_minibatch_size(train)
+    per_proposal = gepa_metric_calls_per_proposal(minibatch, val)
     result = optimize_anything(
         seed_candidate=args.seed.read_text(), evaluator=evaluator, dataset=train, valset=val,
         objective=OBJECTIVE, background=SYSTEM,
@@ -442,7 +586,7 @@ def _gepa_worker(args) -> dict:
                                 max_candidate_proposals=args.proposals,
                                 max_metric_calls=len(val) + (args.proposals + 1) * per_proposal,
                                 max_workers=1, parallel=False),
-            reflection=ReflectionConfig(reflection_lm=lm)))
+            reflection=ReflectionConfig(reflection_lm=lm, reflection_minibatch_size=minibatch)))
     best = result.best_candidate
     if not isinstance(best, str):
         raise TypeError("GEPA returned a non-source candidate")
@@ -463,10 +607,16 @@ def _gepa_worker(args) -> dict:
     return summary
 
 
-def _research_status(seed_result, best_result, valid_proposals):
+def _research_status(seed_result, best_result, valid_proposals, worked_examples=()):
+    """NEW_CERTIFICATES requires an m the finalist passes that neither the seed nor
+    SYSTEM's worked examples (m=4, m=5, verbatim certificates) already give away
+    (autoresearch/TRACE-AUDIT-260925.md defect 8: every arm trivially passes m=4/5
+    by copying the prompt, which is not research progress).
+    """
     if best_result is None:
         return "INCOMPLETE"
-    if best_result["passes"] > seed_result["passes"]:
+    novel = set(best_result.get("passed_m", [])) - set(seed_result.get("passed_m", [])) - set(worked_examples)
+    if novel:
         return "NEW_CERTIFICATES"
     if best_result["passes"] == seed_result["passes"] and \
             Fr(best_result["violation_sum"]) < Fr(seed_result["violation_sum"]):
@@ -499,16 +649,20 @@ def _finish(manifest, run_dir, verifier, seed_eval, best_source: str):
     final = verifier.evaluate(best_source, final=True)
     seed_hash = seed_eval["candidate_hash"]
     st = verifier.state
+    worked_examples = worked_examples_from_manifest(manifest["frozen_manifest"]) \
+        if manifest.get("frozen_manifest") else []
     manifest.update({
         "candidate_evaluations": {k: st[k] for k in ("requests", "failures", "best", "m_values")},
         "evaluation_trace": st["evaluations"],
         "proposal_hashes": [h for h in st["distinct_source_hashes"] if h != seed_hash],
-        "seed_result": {k: seed_eval[k] for k in ("passes", "violation_sum", "combined_score")},
+        "seed_result": {k: seed_eval[k] for k in ("passes", "violation_sum", "combined_score", "passed_m")},
         "verified_best_hash": final["candidate_hash"],
-        "verified_best_result": {k: final[k] for k in ("passes", "violation_sum", "combined_score")},
+        "verified_best_result": {k: final[k] for k in
+                                 ("passes", "violation_sum", "combined_score", "passed_m")},
+        "worked_examples": worked_examples,
         "trusted_status_after": trusted_status()})
     manifest["research_status"] = _research_status(manifest["seed_result"], manifest["verified_best_result"],
-                                                   manifest["proposal_hashes"])
+                                                   manifest["proposal_hashes"], worked_examples)
     (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, default=str) + "\n")
     return manifest
 
@@ -580,12 +734,23 @@ def _launch(args) -> dict:
         server.server_close()
     manifest["returncode"] = returncode
     manifest["engine_seconds"] = time.monotonic() - start
-    manifest["mechanism_evidence"] = ob._mechanism_evidence(run_dir, args.engine, args.iterations)
+    manifest["mechanism_evidence"] = ob._mechanism_evidence(run_dir, args.engine, args.iterations,
+                                                             getattr(args, "ledger", None))
     if args.engine == "gepa" and (run_dir / "output" / "summary.json").is_file():
         s = json.loads((run_dir / "output" / "summary.json").read_text())
         manifest["mechanism_evidence"].update({"lineage": s["lineage"], "best_idx": s["best_idx"],
                                                "candidate_sha256": s["candidate_sha256"],
                                                "reflection_receipts": s["reflection_receipts"]})
+    if args.engine in ("adaevolve", "evox"):
+        check = verify_first_solution_prompt(getattr(args, "ledger", None),
+                                             getattr(args, "expected_first_prompt_sha256", None))
+        if check is not None:
+            actual, matches = check
+            manifest["first_solution_prompt_check"] = {"actual_sha256": actual, "matches": matches}
+            if not matches:
+                manifest["status"] = manifest["research_status"] = "FIRST_PROMPT_MISMATCH"
+                (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, default=str) + "\n")
+                raise RuntimeError("first solution prompt differs from the approved first-prompt.sha256")
     if returncode:
         manifest["status"] = manifest["research_status"] = "INCOMPLETE"
         (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, default=str) + "\n")
@@ -610,6 +775,19 @@ def _chat(broker_url, model, max_tokens, reasoning_effort, messages, timeout):
     return choice["message"]["content"], choice.get("finish_reason")
 
 
+def rejection_note(history, n=3) -> str:
+    """Render up to the last `n` rejected attempts (most recent last) for the next prompt.
+
+    Sequential refinement otherwise resends the same prompt verbatim after a
+    rejection, so the model gets no signal about what just failed.
+    """
+    if not history:
+        return ""
+    lines = ["Recent rejected attempts (most recent last; do not repeat these):"]
+    lines += [f"- step {h['step']}: {h['reason']}" for h in history[-n:]]
+    return "\n".join(lines) + "\n\n"
+
+
 def _sequential(args) -> dict:
     """Control arm: same broker, system prompt and packet; greedy accept on combined_score."""
     args.broker_url = ob._broker_url(args.broker_url)
@@ -621,23 +799,41 @@ def _sequential(args) -> dict:
                 "max_tokens": args.max_tokens, "reasoning_effort": args.reasoning_effort,
                 "max_evals": args.max_evals, "run_dir": str(run_dir)}
     status = "COMPLETE"
+    history, last_request_sha256 = [], None
     for step in range(1, args.iterations + 1):
-        user = (OBJECTIVE + "\n\nCurrent program:\n```python\n" + best_source + "\n```\n\n"
+        note = rejection_note(history)
+        user = (OBJECTIVE + "\n\n" + note + "Current program:\n```python\n" + best_source + "\n```\n\n"
                 + "Evaluator feedback:\n" + best["feedback"])
-        row = {"step": step, "packet_seen": PACKET_MARK in user, "request_sha256": _sha(user.encode())}
+        request_sha256 = _sha(user.encode())
+        messages = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
+        row = {"step": step, "packet_seen": PACKET_MARK in user, "request_sha256": request_sha256}
+        expected = getattr(args, "expected_first_prompt_sha256", None)
+        if step == 1 and first_prompt_mismatch(messages, expected):
+            row["outcome"] = "guard: first prompt differs from the approved first-prompt.sha256"
+            trace.append(row)
+            status = "FIRST_PROMPT_MISMATCH"
+            break
+        if request_sha256 == last_request_sha256:
+            row["outcome"] = "guard: refusing to resend an identical consecutive prompt"
+            trace.append(row)
+            status = "GUARD_STOPPED"
+            break
+        last_request_sha256 = request_sha256
         try:
             content, finish = _chat(args.broker_url, args.model, args.max_tokens, args.reasoning_effort,
-                                    [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}],
-                                    args.llm_timeout)
+                                    messages, args.llm_timeout)
         except (HTTPError, URLError, TimeoutError, OSError) as exc:
             row["outcome"] = f"broker stopped: {exc}"
             trace.append(row)
             status = "BROKER_STOPPED"
             break
+        row["finish_reason"] = finish
         try:
             source = preflight_source(content, finish)
         except (SyntaxError, ValueError) as exc:
-            row["outcome"] = f"invalid proposal: {exc}"
+            reason = f"invalid proposal: {exc}"
+            row["outcome"] = reason
+            history.append({"step": step, "reason": reason})
             trace.append(row)
             continue
         try:
@@ -652,47 +848,130 @@ def _sequential(args) -> dict:
                     "passes": result["passes"], "accepted": accepted})
         if accepted:
             best_source, best = source, result
+        else:
+            reason = (f"rejected: score {result['combined_score']:.4f} (passes {result['passes']}) "
+                      f"did not beat {best['combined_score']:.4f}")
+            row["outcome"] = reason
+            history.append({"step": step, "reason": reason})
         trace.append(row)
     (run_dir / "sequential-trace.jsonl").write_text("".join(json.dumps(r) + "\n" for r in trace))
     (run_dir / "verified").mkdir(exist_ok=True)
     (run_dir / "verified" / "best.py").write_text(best_source)
     manifest.update({"status": status, "steps": trace,
                      "mechanism_evidence": {"accepted_steps": [r["step"] for r in trace if r.get("accepted")],
-                                            "packet_seen_steps": [r["step"] for r in trace if r["packet_seen"]]}})
+                                            "packet_seen_steps": [r["step"] for r in trace if r["packet_seen"]],
+                                            "truncated_steps": [r["step"] for r in trace
+                                                                if r.get("finish_reason") in
+                                                                ("length", "max_tokens")]}})
     return _finish(manifest, run_dir, verifier, seed_eval, best_source)
 
 
-def write_first_prompt(capture_dir: Path, out_md: Path, run_dir: Path) -> str:
-    """Render the first captured GEPA reflection request verbatim for user approval."""
+def write_first_prompt(capture_dir: Path, out_md: Path, run_dir: Path, *,
+                       role: str = "gepa_reflection", label: str = "GEPA proposer",
+                       has_system_message: bool = False) -> str:
+    """Render the first captured request of `role` verbatim for user approval.
+
+    Used for GEPA (default) and, with role="sequential_refinement", the
+    sequential control arm -- both go through our own Python broker client,
+    so a pre-send hash guard (first_prompt_mismatch) is possible for them.
+    AdaEvolve/EvoX have no role header (SkyDiscover's own client); use
+    write_first_solution_prompt for those instead.
+    """
     for path in sorted(Path(capture_dir).glob("request-*.json")):
         item = json.loads(path.read_text())
-        if item["role"] == "gepa_reflection":
+        if item["role"] == role:
             break
     else:
-        raise FileNotFoundError("no captured GEPA reflection request")
+        raise FileNotFoundError(f"no captured {role} request")
     body = item["body"]
     messages = body["messages"]
     digest = messages_sha256(messages)
     fence = "`" * 6
-    lines = ["# First GEPA proposer prompt (corr-cert-260924)", "",
-             "This is the exact `messages` array the GEPA reflection client sends to the local "
+    system_note = ("A separate system message carries the fixed background." if has_system_message
+                   else f"{label.split()[0]} sends no separate system message; the system text is "
+                        "embedded in the user message.")
+    lines = [f"# First {label} prompt (corr-cert-260924)", "",
+             f"This is the exact `messages` array the {label} client sends to the local "
              "broker on iteration 1 for the seed program. The broker forwards it unchanged, "
              "adding only transport fields (see `broker-config.json` and the `--dry-run` payload). "
-             "It was captured offline from a zero-provider GEPA run with the frozen development set. "
+             "It was captured offline from a zero-provider run with the frozen development set. "
              "Only development data (m=4..12) appears; the holdout set (m=13..20) is never loaded.", "",
              f"- Messages SHA-256 (canonical JSON, sorted keys, no spaces): `{digest}`",
-             f"- Message roles: {[m['role'] for m in messages]}. GEPA sends no separate system "
-             "message; the system text is embedded in the user message as GEPA's background.",
+             f"- Message roles: {[m['role'] for m in messages]}. {system_note}",
              f"- Client request fields: model `{body.get('model')}`, max_tokens `{body.get('max_tokens')}`, "
              f"reasoning_effort `{body.get('reasoning_effort')}`",
              f"- Captured from: `{Path(run_dir).name}` ({path.name})",
-             "- A live GEPA run halts before its first model request if these messages hash differently.", ""]
+             f"- A live {label} run halts before its first model request if these messages hash differently.", ""]
     for i, m in enumerate(messages, 1):
         lines += [f"## Message {i}: {m['role']}", "", fence + "text", m["content"], fence, ""]
     out_md.write_text("\n".join(lines))
     out_md.with_suffix(".sha256").write_text(
         f"{digest}  messages of {out_md.name} (canonical JSON of the messages array)\n")
     return digest
+
+
+def write_first_solution_prompt(capture_dir: Path, out_md: Path, run_dir: Path, *, label: str) -> str:
+    """Render AdaEvolve/EvoX's first solution-proposal request verbatim for approval.
+
+    Classified by content (_is_corr_solution_request), not a role header:
+    SkyDiscover's own client never passes through our Python broker client,
+    so there is no role header and no pre-send interception point (see
+    verify_first_solution_prompt, checked after the run instead).
+    """
+    for path in sorted(Path(capture_dir).glob("request-*.json")):
+        item = json.loads(path.read_text())
+        messages = item["body"]["messages"]
+        if messages and _is_corr_solution_request(messages):
+            break
+    else:
+        raise FileNotFoundError(f"no captured {label} solution request")
+    body = item["body"]
+    messages = body["messages"]
+    digest = messages_sha256(messages)
+    fence = "`" * 6
+    lines = [f"# First {label} solution prompt (corr-cert-260924)", "",
+             f"The first request classified as a solution proposal (not strategy/variation/probe "
+             f"meta-search) that SkyDiscover's own client sent for {label}. Checked after the run "
+             "from the arm's broker ledger receipts (verify_first_solution_prompt), not before "
+             "sending -- SkyDiscover's client never passes through our Python broker client.", "",
+             f"- Messages SHA-256 (canonical JSON, sorted keys, no spaces): `{digest}`",
+             f"- Client request fields: model `{body.get('model')}`, max_tokens `{body.get('max_tokens')}`",
+             f"- Captured from: `{Path(run_dir).name}` ({path.name})", ""]
+    for i, m in enumerate(messages, 1):
+        lines += [f"## Message {i}: {m['role']}", "", fence + "text", m["content"], fence, ""]
+    out_md.write_text("\n".join(lines))
+    out_md.with_suffix(".sha256").write_text(
+        f"{digest}  messages of {out_md.name} (canonical JSON of the messages array)\n")
+    return digest
+
+
+def _arm_ledger_path(bc, engine) -> Path:
+    """This arm's own ledger, isolated from every other arm's ledger."""
+    base = Path(bc["ledger"])
+    return base.with_name(base.stem + f".{engine}" + base.suffix)
+
+
+def arm_contact_budget(bc, cc, engine) -> tuple[int, int]:
+    """(sub_cap, remaining) contacts this arm may use out of the shared pool.
+
+    Each arm gets its own ledger file, so one arm's calls can never drain
+    contacts reserved for another (autoresearch/TRACE-AUDIT-260925.md defect 2).
+    `remaining` is the shared campaign-config.json/broker-config.json pool
+    (bc["max_requests"]) minus whatever every OTHER arm's ledger has already
+    recorded; the caller refuses to start when either sub_cap or remaining is 0.
+    """
+    sub_cap = cc["engines"][engine].get("max_requests")
+    if not isinstance(sub_cap, int) or sub_cap < 0:
+        raise ValueError(f"campaign-config engines.{engine}.max_requests must be a non-negative integer")
+    used_elsewhere = 0
+    for other in cc["engines"]:
+        if other == engine:
+            continue
+        path = ROOT / _arm_ledger_path(bc, other)
+        if path.is_file():
+            used_elsewhere += len(json.loads(path.read_text()).get("attempts", []))
+    remaining = max(0, bc["max_requests"] - used_elsewhere)
+    return sub_cap, remaining
 
 
 # ------------------------------------------------------------- live wrapper
@@ -703,6 +982,11 @@ def _live(args):
     digest = check_approval(args.broker_config, args.campaign_config)
     bc, cc = _load_config(args.broker_config), _load_config(args.campaign_config)
     arm = cc["engines"][args.engine]
+    sub_cap, remaining = arm_contact_budget(bc, cc, args.engine)
+    if sub_cap == 0 or remaining == 0:
+        raise SystemExit(f"refusing to start arm {args.engine}: sub-cap {sub_cap} contacts, "
+                          f"{remaining} contacts remaining in the shared pool of {bc['max_requests']}")
+    arm_max_requests = min(sub_cap, remaining)
     stamp = time.strftime("%y%m%d-%H%M%S")
     run_dir = CORR_DIR / f"live-{args.engine}-{stamp}"
     broker_log = CORR_DIR / f"broker-{args.engine}-{stamp}.log"
@@ -711,7 +995,7 @@ def _live(args):
     port = cc["broker_port"]
     broker = [sys.executable, "-m", "integrations.research_budget", "serve",
               "--upstream-url", bc["upstream_url"], "--model", bc["model"], "--api-key-env", bc["api_key_env"],
-              "--ledger", str(ROOT / bc["ledger"]), "--max-requests", str(bc["max_requests"]),
+              "--ledger", str(ROOT / _arm_ledger_path(bc, args.engine)), "--max-requests", str(arm_max_requests),
               "--max-usd", str(bc["max_usd"]), "--input-usd-per-million", str(bc["input_usd_per_million"]),
               "--output-usd-per-million", str(bc["output_usd_per_million"]), "--port", str(port),
               "--max-tokens", str(bc["max_tokens"]), "--reasoning-reserve", str(bc["reasoning_cap_tokens"]),
@@ -737,10 +1021,15 @@ def _live(args):
                 "--iterations", str(arm["iterations"]), "--max-evals", str(arm["max_evals"]),
                 "--wall-seconds", str(arm["wall_seconds"]), "--llm-timeout", str(int(bc["timeout"]) + 30),
                 "--eval-timeout", str(cc["eval_timeout"]), "--cache-dir", str(ROOT / cc["eval_cache"]),
-                "--python", str(ROOT / cc["python"]), "--evox-switch-interval", str(cc["evox_switch_interval"])]
-        if args.engine == "gepa":
-            argv += ["--expected-first-prompt-sha256",
-                     (CORR_DIR / "first-prompt.sha256").read_text().split()[0]]
+                "--python", str(ROOT / cc["python"]), "--evox-switch-interval", str(cc["evox_switch_interval"]),
+                "--ledger", str(ROOT / _arm_ledger_path(bc, args.engine))]
+        first_prompt_hash_file = {"gepa": "first-prompt.sha256",
+                                  "sequential": "first-prompt-sequential.sha256",
+                                  "adaevolve": "first-prompt-adaevolve.sha256",
+                                  "evox": "first-prompt-evox.sha256"}[args.engine]
+        first_prompt_hash_path = CORR_DIR / first_prompt_hash_file
+        if first_prompt_hash_path.is_file():
+            argv += ["--expected-first-prompt-sha256", first_prompt_hash_path.read_text().split()[0]]
         if args.engine == "sequential":
             out = _sequential(_parser().parse_args(["sequential"] + argv))
         else:
@@ -778,6 +1067,8 @@ def _parser():
         p.add_argument("--jobs", type=int, default=4)
         p.add_argument("--evox-switch-interval", type=int, default=2)
         p.add_argument("--offline-no-auto-variation", action="store_true")
+        p.add_argument("--ledger", type=Path,
+                       help="this arm's broker ledger, for the EvoX meta-search share report")
         p.add_argument("--expected-first-prompt-sha256",
                        help="GEPA: halt before the first model request unless its messages hash matches")
     w = sub.add_parser("_gepa_worker")
@@ -793,6 +1084,7 @@ def _parser():
     fp.add_argument("--capture-dir", required=True, type=Path)
     fp.add_argument("--run-dir", required=True, type=Path)
     fp.add_argument("--output", type=Path, default=CORR_DIR / "first-prompt.md")
+    fp.add_argument("--engine", default="gepa", choices=ENGINES + ("sequential",))
     for name in ("approval-hash", "check-approval", "live"):
         p = sub.add_parser(name)
         p.add_argument("--broker-config", type=Path, default=CORR_DIR / "broker-config.json")
@@ -813,7 +1105,15 @@ def main(argv=None):
         print(approval_hash(args.broker_config, args.campaign_config))
         return
     if args.action == "first-prompt":
-        print(write_first_prompt(args.capture_dir, args.output, args.run_dir))
+        if args.engine == "gepa":
+            print(write_first_prompt(args.capture_dir, args.output, args.run_dir))
+        elif args.engine == "sequential":
+            print(write_first_prompt(args.capture_dir, args.output, args.run_dir,
+                                     role="sequential_refinement", label="sequential control",
+                                     has_system_message=True))
+        else:
+            print(write_first_solution_prompt(args.capture_dir, args.output, args.run_dir,
+                                              label=args.engine))
         return
     if args.action == "check-approval":
         print(check_approval(args.broker_config, args.campaign_config))

@@ -1,0 +1,40 @@
+{
+ "note": "Per-arm search limits for the sort-m9-260925 campaign. Money, request, token, reasoning and timeout caps live only in broker-config.json and are read at run time (model client timeout = broker timeout + 30 s). The development set path and SHA-256 are read at run time from frozen_manifest; holdout is never loaded. Both configs, the prompts, the seed, the frozen hashes, the evaluator hash and first-prompt.sha256 are covered by the approval hash (python -m integrations.sort_backends approval-hash).",
+ "seed": "integrations/sort_control_sweep.py",
+ "frozen_manifest": "autoresearch/sort-m9-260925/frozen/manifest.json",
+ "python": ".venv-official/bin/python",
+ "eval_cache": "autoresearch/sort-m9-260925/eval-cache",
+ "broker_port": 8897,
+ "eval_timeout": 900,
+ "evox_switch_interval": 2,
+ "evaluation": "single pass: every candidate is scored on all 1500 frozen development states (m=9, r=1..5, 300 each) under sort-contract-2: sandboxed batches of 10, 0.2 s CPU and 1 s wall per state, 0.5 s CPU for import, kernel CPU cap per batch; no screening stage",
+ "engines": {
+  "gepa": {
+   "iterations": 60,
+   "max_evals": 200,
+   "wall_seconds": 21600,
+   "max_requests": 65
+  },
+  "sequential": {
+   "iterations": 60,
+   "max_evals": 70,
+   "wall_seconds": 21600,
+   "max_requests": 65
+  },
+  "adaevolve": {
+   "iterations": 50,
+   "max_evals": 64,
+   "wall_seconds": 21600,
+   "max_requests": 55
+  },
+  "evox": {
+   "iterations": 40,
+   "max_evals": 52,
+   "wall_seconds": 21600,
+   "max_requests": 45
+  }
+ },
+ "max_requests_note": "Per-arm sub-caps of broker-config.json's shared max_requests (230 at max_usd 38.4 under the conservative reservation): each arm's iterations + 5 (65/65/55/45, sum 230 <= pool), a margin for retries and SkyDiscover connectivity probes, which also count as contacts. Each arm has its own ledger, so no arm can drain another arm's share (TRACE-AUDIT-260925 defect 2).",
+ "order_note": "Mirrors the lift/corr campaigns: GEPA and the sequential control first at matched iteration counts; AdaEvolve and EvoX only after GEPA shows one productive cycle. EvoX strategy evolution is off (40 < 100 iterations).",
+ "version_note": "v2 after attempt 1 (live-gepa-260925-120053) produced per-state search: seed is the cyclic-sweep control, live runs are live-v2-*, ledgers broker-ledger-sort-v2.<engine>.json, finalize reads only live-v2-*. v1 sources and approval files are preserved in v1/."
+}

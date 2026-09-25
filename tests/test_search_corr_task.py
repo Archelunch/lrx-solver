@@ -185,8 +185,10 @@ class PacketTest(unittest.TestCase):
             B.preflight_source("no fence here")
         with self.assertRaises(ValueError):
             B.preflight_source("```python\ndef other(m): return {}\n```")  # missing coefficients()
-        with self.assertRaises(ValueError):
-            B.preflight_source("text\n```python\ndef coefficients(m): return {}\n```")  # extra prose
+        # Defect 3 (autoresearch/TRACE-AUDIT-260925.md): prose before/after a
+        # fenced block is accepted now, not rejected.
+        self.assertIn('def coefficients',
+                      B.preflight_source("Here is my answer:\n" + good + "\nDone."))
         with self.assertRaises(ValueError):
             B.preflight_source("```python\ndef coefficients(m): return {}\n```", finish_reason='length')
 

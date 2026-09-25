@@ -13,23 +13,28 @@
     "gepa": {
       "iterations": 60,
       "max_evals": 1500,
-      "wall_seconds": 21600
+      "wall_seconds": 21600,
+      "max_requests": 90
     },
     "sequential": {
       "iterations": 60,
       "max_evals": 180,
-      "wall_seconds": 21600
+      "wall_seconds": 21600,
+      "max_requests": 70
     },
     "adaevolve": {
       "iterations": 50,
       "max_evals": 150,
-      "wall_seconds": 21600
+      "wall_seconds": 21600,
+      "max_requests": 70
     },
     "evox": {
       "iterations": 40,
       "max_evals": 150,
-      "wall_seconds": 21600
+      "wall_seconds": 21600,
+      "max_requests": 70
     }
   },
+  "max_requests_note": "Per-arm sub-caps of broker-config.json's shared max_requests (400), sized above each arm's observed call count (see autoresearch/TRACE-AUDIT-260925.md §1: 77/60/60/67) with headroom, summing to 300 of 400 so no single arm can drain the pool before a later arm starts (defect 2). Each arm gets its own ledger file (broker-ledger-gemini.<engine>.json) capped at min(its max_requests, what the shared pool has left after earlier arms' ledgers); the launcher refuses to start an arm whose sub-cap is 0 or whose remaining share of the shared pool is 0.",
   "order_note": "User decision 2026-09-24: GEPA and sequential control first, matched at 60 iterations; AdaEvolve and EvoX start only after GEPA shows one productive cycle. Total 210 contacts of the 332 ceiling; remainder reserved for finalist audit and reruns."
 }

@@ -1,0 +1,142 @@
+{
+  "engine": "adaevolve",
+  "task": "sort-m9-260925",
+  "upstream": "skydiscover==0.2.0@0d932b690670a7e544388ad362e9876c8bd256a0",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/frozen/manifest.json",
+  "frozen_manifest_sha256": "c98fd6136f4df9038188f754c5e458758e989f0d83efc052349858145affca4e",
+  "development_sha256": "f4dd4752758b573c6ba246f612fbbef5340bae754c14e63438fcc945eabb3346",
+  "seed_sha256": "65fbfc47f728f589189f839f77065220da74f8692df4632adecde2a999bf9906",
+  "seed_result": {
+    "combined_score": 1.4074851344974044,
+    "within_budget": 1356,
+    "min_r_within_rate": 0.83,
+    "valid": 1500,
+    "invalid": 0,
+    "timeouts": 0,
+    "mean_excess": 1.8253333333333333,
+    "per_r": {
+      "m9r1": {
+        "states": 300,
+        "within": 299,
+        "valid": 300,
+        "excess_sum": 334,
+        "timeouts": 0,
+        "within_rate": 0.9966666666666667,
+        "mean_excess": 1.1133333333333333
+      },
+      "m9r2": {
+        "states": 300,
+        "within": 288,
+        "valid": 300,
+        "excess_sum": 469,
+        "timeouts": 0,
+        "within_rate": 0.96,
+        "mean_excess": 1.5633333333333332
+      },
+      "m9r3": {
+        "states": 300,
+        "within": 268,
+        "valid": 300,
+        "excess_sum": 510,
+        "timeouts": 0,
+        "within_rate": 0.8933333333333333,
+        "mean_excess": 1.7
+      },
+      "m9r4": {
+        "states": 300,
+        "within": 252,
+        "valid": 300,
+        "excess_sum": 685,
+        "timeouts": 0,
+        "within_rate": 0.84,
+        "mean_excess": 2.283333333333333
+      },
+      "m9r5": {
+        "states": 300,
+        "within": 249,
+        "valid": 300,
+        "excess_sum": 740,
+        "timeouts": 0,
+        "within_rate": 0.83,
+        "mean_excess": 2.466666666666667
+      }
+    }
+  },
+  "broker_url": "http://127.0.0.1:8897/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 50,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "max_evals": 64,
+  "wall_seconds": 21600,
+  "verifier_url": "http://127.0.0.1:60239/evaluate",
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/stage/sky-config.yaml",
+    "--search",
+    "adaevolve",
+    "--iterations",
+    "50",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/stage/sky-config.yaml",
+    "--search",
+    "adaevolve",
+    "--iterations",
+    "50",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343",
+  "returncode": 0,
+  "engine_seconds": 1330.0645898340154,
+  "mechanism_evidence": {
+    "configured_iterations": 50,
+    "observed_iterations": 50,
+    "successful_generation_iterations": 46,
+    "ucb_island_visits": [
+      27,
+      22
+    ],
+    "ucb_min_visits": 3,
+    "ucb_min_visits_reached": true,
+    "migration_interval": 15,
+    "migration_opportunity": true,
+    "paradigm_window": 10,
+    "paradigms_tried": 10
+  },
+  "first_solution_prompt_check": {
+    "actual_sha256": "799905f23c2b8e853e4ec830a771c5f659f871f0fdadb5b2230e467cbeaccc18",
+    "matches": false
+  },
+  "status": "FIRST_PROMPT_MISMATCH",
+  "research_status": "FIRST_PROMPT_MISMATCH"
+}

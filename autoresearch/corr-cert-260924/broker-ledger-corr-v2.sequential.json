@@ -1,0 +1,48 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.025353900000000002,
+      "id": 1,
+      "input_tokens": 2992,
+      "kind": "chat",
+      "output_tokens": 5548,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/broker-ledger-corr-v2.sequential.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.07429455,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0367587,
+      "id": 2,
+      "input_tokens": 3616,
+      "kind": "chat",
+      "output_tokens": 8188,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/broker-ledger-corr-v2.sequential.json.receipts/attempt-0002.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.0753753,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.075496575,
+      "id": 3,
+      "input_tokens": null,
+      "kind": "chat",
+      "output_tokens": null,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/broker-ledger-corr-v2.sequential.json.receipts/attempt-0003.json",
+      "reserved_usd": 0.075496575,
+      "role": "unknown",
+      "status": "reserved"
+    }
+  ],
+  "consecutive_failures": 0,
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 0.825,
+    "max_requests": 35,
+    "max_usd": 21.0,
+    "output_rate": 4.125
+  },
+  "spent_usd": 0.137609175
+}

@@ -1,0 +1,388 @@
+{
+  "engine": "gepa",
+  "task": "corr-cert-260924",
+  "upstream": "gepa==0.1.4",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/frozen/manifest.json",
+  "frozen_manifest_sha256": "051e7e22816b95a1612659990819aa9bdaef7fabcbb86c8500d0c0cb2291fdef",
+  "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
+  "seed_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "seed_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06,
+    "passed_m": []
+  },
+  "broker_url": "http://127.0.0.1:8995/v1",
+  "model": "grok-4.7",
+  "iterations": 6,
+  "max_tokens": 4096,
+  "reasoning_effort": "low",
+  "max_evals": 200,
+  "wall_seconds": 200,
+  "verifier_url": "http://127.0.0.1:59413/evaluate",
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/stage/corr_official_worker.py",
+    "_gepa_worker",
+    "--seed",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/stage/initial_program.py",
+    "--dataset",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/stage/dataset.json",
+    "--run-dir",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/output",
+    "--broker-url",
+    "http://127.0.0.1:8995/v1",
+    "--model",
+    "grok-4.7",
+    "--verifier-url",
+    "http://127.0.0.1:59413/evaluate",
+    "--max-tokens",
+    "4096",
+    "--proposals",
+    "6",
+    "--llm-timeout",
+    "60",
+    "--eval-timeout",
+    "60",
+    "--reasoning-effort",
+    "low"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/stage/corr_official_worker.py",
+    "_gepa_worker",
+    "--seed",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/stage/initial_program.py",
+    "--dataset",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/stage/dataset.json",
+    "--run-dir",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/output",
+    "--broker-url",
+    "http://127.0.0.1:8995/v1",
+    "--model",
+    "grok-4.7",
+    "--verifier-url",
+    "http://127.0.0.1:59413/evaluate",
+    "--max-tokens",
+    "4096",
+    "--proposals",
+    "6",
+    "--llm-timeout",
+    "60",
+    "--eval-timeout",
+    "60",
+    "--reasoning-effort",
+    "low"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-gepa",
+  "returncode": 0,
+  "engine_seconds": 1.4129359999787994,
+  "mechanism_evidence": {
+    "reflection_batches": 7,
+    "mandatory_hard_case_ids": [],
+    "model_valid_responses": 6,
+    "model_preflight_failures": 1,
+    "lineage": {
+      "parents": [
+        [
+          null
+        ],
+        [
+          0
+        ]
+      ],
+      "val_aggregate_scores": [
+        2.136761268210548e-06,
+        1.1110864203017711e-05
+      ],
+      "discovery_eval_counts": [
+        0,
+        7
+      ],
+      "total_metric_calls": 14,
+      "num_full_val_evals": 2
+    },
+    "best_idx": 1,
+    "candidate_sha256": [
+      "edc20e7343b15deaf7fe87c6f6183eccc6478dad538febcfbdc6bfcd778e6089",
+      "a50886e630494e0cb86abc12d30d768666a6e0bb08bc0285434638f683a960f4"
+    ],
+    "reflection_receipts": [
+      {
+        "call": 1,
+        "packet_seen": true,
+        "request_sha256": "22314a275f47ebfbcaa0e2cd9f93688bca51965016d90577ccf4d333316cf934",
+        "request_chars": 9254,
+        "finish_reason": "stop"
+      },
+      {
+        "call": 2,
+        "packet_seen": true,
+        "request_sha256": "22314a275f47ebfbcaa0e2cd9f93688bca51965016d90577ccf4d333316cf934",
+        "request_chars": 9254,
+        "finish_reason": "stop"
+      },
+      {
+        "call": 3,
+        "packet_seen": true,
+        "request_sha256": "22314a275f47ebfbcaa0e2cd9f93688bca51965016d90577ccf4d333316cf934",
+        "request_chars": 9254,
+        "finish_reason": "stop"
+      },
+      {
+        "call": 4,
+        "packet_seen": true,
+        "request_sha256": "6dee89300b36c9b9f96f5c0b12b33028f6a6596ca7c6011001571b6fe641d5af",
+        "request_chars": 8653,
+        "finish_reason": "length"
+      },
+      {
+        "call": 5,
+        "packet_seen": true,
+        "request_sha256": "6dee89300b36c9b9f96f5c0b12b33028f6a6596ca7c6011001571b6fe641d5af",
+        "request_chars": 8653,
+        "finish_reason": "stop"
+      },
+      {
+        "call": 6,
+        "packet_seen": true,
+        "request_sha256": "6dee89300b36c9b9f96f5c0b12b33028f6a6596ca7c6011001571b6fe641d5af",
+        "request_chars": 8653,
+        "finish_reason": "stop"
+      },
+      {
+        "call": 7,
+        "packet_seen": true,
+        "request_sha256": "6dee89300b36c9b9f96f5c0b12b33028f6a6596ca7c6011001571b6fe641d5af",
+        "request_chars": 8653,
+        "finish_reason": "stop"
+      }
+    ]
+  },
+  "status": "COMPLETE",
+  "candidate_evaluations": {
+    "requests": 17,
+    "failures": 0,
+    "best": {
+      "combined_score": 1.1110864203017711e-05,
+      "passes": 0,
+      "violation_sum": "45000",
+      "source_sha256": "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e"
+    },
+    "m_values": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "evaluation_trace": [
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 1,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": true
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 2,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": false
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 3,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": false
+    },
+    {
+      "candidate_hash": "3cea75ee6151819602cfc3764518167c2628c2331013b523696b553c3a7f504e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 4,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 5,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": false
+    },
+    {
+      "candidate_hash": "3cea75ee6151819602cfc3764518167c2628c2331013b523696b553c3a7f504e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 6,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 7,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": false
+    },
+    {
+      "candidate_hash": "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e",
+      "combined_score": 1.1110864203017711e-05,
+      "passes": 0,
+      "invalid": 9,
+      "cache_hit": false,
+      "ordinal": 8,
+      "packet_sha256": "bbdb4e54adcc8acb00ef3eed484c31b0a10cd3fb4011a84a332517b72eff5c77",
+      "final": false
+    },
+    {
+      "candidate_hash": "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e",
+      "combined_score": 1.1110864203017711e-05,
+      "passes": 0,
+      "invalid": 9,
+      "cache_hit": true,
+      "ordinal": 9,
+      "packet_sha256": "bbdb4e54adcc8acb00ef3eed484c31b0a10cd3fb4011a84a332517b72eff5c77",
+      "final": false
+    },
+    {
+      "candidate_hash": "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e",
+      "combined_score": 1.1110864203017711e-05,
+      "passes": 0,
+      "invalid": 9,
+      "cache_hit": true,
+      "ordinal": 10,
+      "packet_sha256": "bbdb4e54adcc8acb00ef3eed484c31b0a10cd3fb4011a84a332517b72eff5c77",
+      "final": false
+    },
+    {
+      "candidate_hash": "a156d347f31a5a5725017481e85d78f589a940a618a84fb7311d48726c7fde31",
+      "combined_score": 2.061235174566007e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 11,
+      "packet_sha256": "04649fb8d3534e37ef45d4a3fb9d6b1ae89829a7b3e466cace3fa0a0bb7b69af",
+      "final": false
+    },
+    {
+      "candidate_hash": "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e",
+      "combined_score": 1.1110864203017711e-05,
+      "passes": 0,
+      "invalid": 9,
+      "cache_hit": true,
+      "ordinal": 12,
+      "packet_sha256": "bbdb4e54adcc8acb00ef3eed484c31b0a10cd3fb4011a84a332517b72eff5c77",
+      "final": false
+    },
+    {
+      "candidate_hash": "a156d347f31a5a5725017481e85d78f589a940a618a84fb7311d48726c7fde31",
+      "combined_score": 2.061235174566007e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 13,
+      "packet_sha256": "04649fb8d3534e37ef45d4a3fb9d6b1ae89829a7b3e466cace3fa0a0bb7b69af",
+      "final": false
+    },
+    {
+      "candidate_hash": "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e",
+      "combined_score": 1.1110864203017711e-05,
+      "passes": 0,
+      "invalid": 9,
+      "cache_hit": true,
+      "ordinal": 14,
+      "packet_sha256": "bbdb4e54adcc8acb00ef3eed484c31b0a10cd3fb4011a84a332517b72eff5c77",
+      "final": false
+    },
+    {
+      "candidate_hash": "5c28841f5be4247717b2d3dad7e15ab8ce68f836f1ef258bd192cddbd330a5bd",
+      "combined_score": 1.1110864203017711e-05,
+      "passes": 0,
+      "invalid": 9,
+      "cache_hit": false,
+      "ordinal": 15,
+      "packet_sha256": "bbdb4e54adcc8acb00ef3eed484c31b0a10cd3fb4011a84a332517b72eff5c77",
+      "final": false
+    },
+    {
+      "candidate_hash": "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e",
+      "combined_score": 1.1110864203017711e-05,
+      "passes": 0,
+      "invalid": 9,
+      "cache_hit": true,
+      "ordinal": 16,
+      "packet_sha256": "bbdb4e54adcc8acb00ef3eed484c31b0a10cd3fb4011a84a332517b72eff5c77",
+      "final": false
+    },
+    {
+      "candidate_hash": "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e",
+      "combined_score": 1.1110864203017711e-05,
+      "passes": 0,
+      "invalid": 9,
+      "cache_hit": true,
+      "ordinal": 17,
+      "packet_sha256": "bbdb4e54adcc8acb00ef3eed484c31b0a10cd3fb4011a84a332517b72eff5c77",
+      "final": true
+    }
+  ],
+  "proposal_hashes": [
+    "3cea75ee6151819602cfc3764518167c2628c2331013b523696b553c3a7f504e",
+    "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e",
+    "a156d347f31a5a5725017481e85d78f589a940a618a84fb7311d48726c7fde31",
+    "5c28841f5be4247717b2d3dad7e15ab8ce68f836f1ef258bd192cddbd330a5bd"
+  ],
+  "verified_best_hash": "8fe0062fb01fcbf196ddddb813c40de56cf483e1f576c8b64d37845bbf46348e",
+  "verified_best_result": {
+    "passes": 0,
+    "violation_sum": "45000",
+    "combined_score": 1.1110864203017711e-05,
+    "passed_m": []
+  },
+  "worked_examples": [
+    4,
+    5
+  ],
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "GRADED_PROGRESS"
+}

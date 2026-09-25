@@ -186,7 +186,65 @@ def _stop_gepa_after_new_certificate(result: dict, case_id: str | None,
     return True
 
 
-def _mechanism_evidence(run_dir: Path, engine: str, iterations: int) -> dict:
+def _evox_call_kind(messages) -> str:
+    """Classify one EvoX broker call as 'meta' (strategy-code or variation-operator
+    generation) or 'solution' (a program proposal), from message content.
+
+    SkyDiscover's own LLM client sets no role header we control (it is a
+    third-party library; X-LRX-Call-Role is only ever set by our own
+    BrokerLM/_chat clients), so this cannot classify by header. It reuses the
+    same content signals autoresearch/*/mock_api.py already scripts fixture
+    responses against ("EvolvedProgramDatabase"+"database"/"search algorithm"
+    for strategy-code requests, "variation operator"/"diverge" for variation
+    requests), which a captured real run's request texts confirm SkyDiscover
+    actually sends (autoresearch/lift-m9-260924/mock-requests.texts.jsonl).
+    """
+    text = json.dumps(messages).lower()
+    if "evolvedprogramdatabase" in text and ("database" in text or "search algorithm" in text):
+        return "meta"
+    if "variation operator" in text or "diverge" in text:
+        return "meta"
+    return "solution"
+
+
+def _evox_meta_search_share(ledger_path: Path | None) -> dict:
+    """Share of an EvoX arm's broker calls spent on strategy-code/variation-operator
+    meta-search vs solution proposals, read from the arm's own ledger receipts.
+
+    autoresearch/TRACE-AUDIT-260925.md found 40% of one EvoX run's calls went
+    to strategy-code/attempt/population meta-search that was never adopted
+    (and once crashed); reporting the share makes that visible in every
+    manifest. This is a LOWER BOUND on the audit's broader "meta-search"
+    category: it reliably counts strategy-code and variation-operator
+    generation calls (the two governed by evox_strategy_evolution_enabled,
+    defect 9) but cannot generically distinguish SkyDiscover's own
+    attempt/population-summary bookkeeping calls from a solution request
+    without deeper per-task prompt knowledge, so those count as "solution".
+    """
+    empty = {"evox_meta_search_calls": None, "evox_solution_calls": None, "evox_meta_search_share": None}
+    if not ledger_path:
+        return empty
+    receipts_dir = Path(ledger_path).with_suffix(Path(ledger_path).suffix + ".receipts")
+    if not receipts_dir.is_dir():
+        return empty
+    meta = solution = 0
+    for path in sorted(receipts_dir.glob("attempt-*.json")):
+        try:
+            receipt = json.loads(path.read_text())
+        except (ValueError, OSError):
+            continue
+        payload = receipt.get("forwarded_request_payload") or receipt.get("request_payload") or {}
+        messages = payload.get("messages", [])
+        if _evox_call_kind(messages) == "meta":
+            meta += 1
+        else:
+            solution += 1
+    total = meta + solution
+    return {"evox_meta_search_calls": meta, "evox_solution_calls": solution,
+            "evox_meta_search_share": (meta / total) if total else None}
+
+
+def _mechanism_evidence(run_dir: Path, engine: str, iterations: int, ledger_path: Path | None = None) -> dict:
     """Report observed framework mechanisms separately from configured names."""
     output = run_dir / "output"
     if engine == "gepa":
@@ -231,7 +289,8 @@ def _mechanism_evidence(run_dir: Path, engine: str, iterations: int) -> dict:
             "generated_strategy_artifacts": generated, "fallback_strategy_records": fallback,
             "strategy_adoption_log_observed": switch_logged,
             "strategy_adopted_confirmed": bool(generated and switch_logged),
-            "solution_diff_parse_failures": console.count("No valid diffs found in LLM response")}
+            "solution_diff_parse_failures": console.count("No valid diffs found in LLM response"),
+            **(_evox_meta_search_share(ledger_path) if engine == "evox" else {})}
 
 
 class HardCaseBatchSampler:
@@ -773,6 +832,7 @@ class BrokerLM:
         self.valid_responses = 0
         self.preflight_failures = 0
         self.context_receipts = []
+        self.last_finish_reason = None  # set on every completed HTTP call, for callers' receipts
 
     @staticmethod
     def _preflight(content: str, finish_reason: str | None) -> None:
@@ -794,8 +854,10 @@ class BrokerLM:
 
     def __call__(self, request):
         self.calls += 1
+        self.last_finish_reason = None  # reset; set again only on a completed HTTP response
         if self.offline_proposal:
             content = "```python\n" + self.offline_proposal.read_text() + "\n```"
+            self.last_finish_reason = "stop"
             self._preflight(content, "stop")
             self.valid_responses += 1
             return content
@@ -846,6 +908,7 @@ class BrokerLM:
             raise BrokerHalted("research broker connection failed") from exc
         choice = body["choices"][0]
         content = choice["message"]["content"]
+        self.last_finish_reason = choice.get("finish_reason")
         try:
             self._preflight(content, choice.get("finish_reason"))
         except (SyntaxError, ValueError):

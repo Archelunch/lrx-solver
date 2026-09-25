@@ -2,17 +2,17 @@
   "broker_config": {
     "api_key_env": "GEMINI_API_KEY",
     "chars_per_reasoning_token_assumption": 3,
-    "contact_ceiling_formula": "min(floor(max_usd / reservation_usd_per_request_conservative), 400) = min(floor(25 / 0.1497408), 400) = 166",
-    "contact_ceiling_raw": 147,
+    "contact_ceiling_formula": "min(floor(max_usd / reservation_usd_per_request_conservative), 400) = min(floor(21.0 / 0.1666368), 400) = 126",
+    "contact_ceiling_raw": 126,
     "input_usd_per_million": 0.825,
-    "ledger": "autoresearch/corr-cert-260924/broker-ledger-corr-8k.json",
+    "ledger": "autoresearch/corr-cert-260924/broker-ledger-corr-v2.json",
     "max_prompt_bytes": 120000,
-    "max_requests": 147,
+    "max_requests": 126,
     "max_tokens": 8192,
-    "max_usd": 24.6365,
+    "max_usd": 21.0,
     "model": "gemini-3.8-flash",
     "model_note": "Copied unchanged from the lift-m9-260924 campaign's applied config; re-verify against a live /v1beta/openai/models listing and current pricing before any live corr-cert run, since prices and model ids can change between campaigns.",
-    "note": "Template copied from autoresearch/lift-m9-260924/broker-config.json (same model/pricing/reasoning fields) for the corr-cert-260924 autoresearch scaffold. Ledger path and cap are fresh for this task; the ledger file must not exist before the first live run. No live call has been made under this config; it is scaffolding only, pending human approval (payload-approved.sha256). Attempt 1 (max_tokens 4096) stopped after 15 calls, 12 truncated, $0.3635 spent on broker-ledger-corr.json. Output raised to 8192, fresh ledger, cap reduced by the spend.",
+    "note": "Template copied from autoresearch/lift-m9-260924/broker-config.json (same model/pricing/reasoning fields) for the corr-cert-260924 autoresearch scaffold. No live call has been made under this config; it is scaffolding only, pending human approval (payload-approved.sha256). Attempt 1 (max_tokens 4096) stopped after 15 calls, 12 truncated, $0.3635 spent on broker-ledger-corr.json. Attempt 2 (max_tokens 8192, 147-request shared pool) is preserved on broker-ledger-corr-8k.json as evidence (autoresearch/TRACE-AUDIT-260925.md found its shared pool let gepa+sequential+adaevolve drain all 147 requests, leaving evox 0). This is attempt 3 (user-approved step 4, reduced size, 2026-09-25): fresh ledger, max_usd reduced to 21.0, campaign-config.json now gives every arm its own request sub-cap and its own derived ledger file so no arm can drain another's share; the ledger file must not exist before the first live run.",
     "output_usd_per_million": 4.125,
     "price_source": "Copied from lift-m9-260924/broker-config.json: https://ai.google.dev/gemini-api/docs/pricing, fetched 2026-09-24 for that campaign. Re-fetch before any live corr-cert run.",
     "price_source_date": "2026-09-24",
@@ -32,23 +32,27 @@
     "broker_port": 8895,
     "engines": {
       "adaevolve": {
-        "iterations": 50,
+        "iterations": 25,
         "max_evals": 150,
+        "max_requests": 30,
         "wall_seconds": 21600
       },
       "evox": {
-        "iterations": 40,
+        "iterations": 20,
         "max_evals": 150,
+        "max_requests": 26,
         "wall_seconds": 21600
       },
       "gepa": {
-        "iterations": 60,
+        "iterations": 30,
         "max_evals": 200,
+        "max_requests": 35,
         "wall_seconds": 21600
       },
       "sequential": {
-        "iterations": 60,
+        "iterations": 30,
         "max_evals": 200,
+        "max_requests": 35,
         "wall_seconds": 21600
       }
     },
@@ -57,12 +61,13 @@
     "evaluation": "single pass: every candidate is scored once on the full frozen development set (m=4..12, 9 evaluations of coefficients(m) each), no screening stage",
     "evox_switch_interval": 2,
     "frozen_manifest": "autoresearch/corr-cert-260924/frozen/manifest.json",
+    "max_requests_note": "Rerun (user-approved step 4, reduced size, 2026-09-25): iterations and per-arm sub-caps (35/35/30/26, sum 126) reduced from attempt 2's 60/60/50/40 and 42/42/35/28 to fit broker-config.json's new max_usd 21.0 pool (floor(21/0.1666368)=126). Each arm still gets its own ledger file (broker-ledger-corr-v2.<engine>.json) capped at min(its max_requests, what the shared pool has left after earlier arms' ledgers); the launcher refuses to start an arm whose sub-cap is 0 or whose remaining share of the shared pool is 0 (autoresearch/TRACE-AUDIT-260925.md defect 2). Attempts 1 (broker-ledger-corr.json, 4k max_tokens) and 2 (broker-ledger-corr-8k.json, 8k max_tokens, 147-request shared pool) remain on disk as evidence and are not reused by this rerun.",
     "note": "Per-arm search limits for the corr-cert campaign. Money, request, token, reasoning and timeout caps live only in broker-config.json and are read at run time (model client timeout = broker timeout + 30 s). The development m-set path and SHA-256 are read at run time from frozen_manifest (files['development.json'], next to the manifest); holdout is never loaded. Both configs, the prompts, the seed, the frozen hashes and first-prompt.sha256 are covered by the approval hash (python -m integrations.corr_backends approval-hash). Unlike the lift campaign, evaluating a candidate here is a single cheap pass over m=4..12 (well under a second, see TASK.md), so there is no staged screen/full split and no development-archive database (omitted; see TASK.md 'Evaluation cost note').",
     "order_note": "Mirrors the lift-m9-260924 campaign order: GEPA and sequential control first, matched iteration counts; AdaEvolve and EvoX start only after GEPA shows one productive cycle (valid proposal, selection, second proposal responding to feedback), per PROTOCOL.md's kill conditions and budget ceiling ($25, one day timebox).",
     "python": ".venv-official/bin/python",
     "seed": "integrations/corr_control_f1.py"
   },
-  "corr_backends_sha256": "e22119cc81d0448f0c0f79962462fa0013d6d050f8e94a74a339d904fecb1352",
+  "corr_backends_sha256": "54bb5c46585518a36919ff710d0b33359c56d396c8f66e37d201473ecd2cda08",
   "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
   "dry_run_payload": {
     "max_completion_tokens": 8192,
@@ -87,8 +92,11 @@
     "contract": "corr-contract-1: candidate defines coefficients(m) -> JSON-safe cert dict (see integrations/corr_task.py encode_cert/decode_cert for the exact key encoding). For each m, decode and call corrcert.check_certificate(m, cert); pass iff ok==True and epsilon < 1. violation magnitude for a failing m = sum(-slack) over every violated (5)/(6) check plus max(0, epsilon-1); an invalid/crash/timeout output contributes the fixed penalty INVALID_GAP instead (never repaired, never partial credit). combined_score = passes + 0.5/(1+violation_sum), violation_sum summed over m that did not pass. Stdlib only, source <= 64 KiB, wall limit 10s per m.",
     "version": "corr-eval-1"
   },
-  "first_prompt_sha256": "eea89e7b490a96ff8452d008ba8fca9dfe7e0908c7cc72def5f4e6da19b6ea5e",
-  "frozen_manifest_sha256": "6f62647e4ff812bb603ed4fe46383be71799bb4611986035d94f314ad7ae48f1",
+  "first_prompt_adaevolve_sha256": "03184b31ba782cd91af0d4efe879a919d6260f3a34b9913fa69dfc3dfe7389c9",
+  "first_prompt_evox_sha256": "17eb84bce6eb8817f5fccab1f2fa198ff7c72676984ad2e33ff35deb79733869",
+  "first_prompt_sequential_sha256": "9687177e0d54f6b009ad9f0981013a1891e57436aef7a50b8a3c1351b2653cfa",
+  "first_prompt_sha256": "9f5d79605c06a7c8e03aaec086c00d2abde6d287aafa023d591fbe5622ff24a5",
+  "frozen_manifest_sha256": "051e7e22816b95a1612659990819aa9bdaef7fabcbb86c8500d0c0cb2291fdef",
   "objective": "Improve this executable Python coefficients(m) program. Return the entire replacement Python source in one fenced code block. Maximize the number of development m in 4..12 that pass corrcert.check_certificate exactly, then reduce the exact violation magnitude on m that fail. Only development instances are shown; a program that is uniform in m is far more valuable than one hard-coded per m.",
   "packet_format": {
     "marker": "CORR_PACKET_V1",

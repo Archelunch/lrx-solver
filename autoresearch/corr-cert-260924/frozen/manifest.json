@@ -32,5 +32,10 @@
  ],
  "note": "Holdout m=13..20 is frozen here with its hash and is evaluated at most once, after finalist freeze, by a human-run offline check -- never by any engine, proposer, or automated smoke.",
  "schema": "lrx-corrcert-frozen-manifest-v1",
- "task": "corr-cert-260924"
+ "task": "corr-cert-260924",
+ "worked_examples": [
+  4,
+  5
+ ],
+ "worked_examples_note": "m values SYSTEM (integrations/corr_backends.py WORKED_EXAMPLES) already gives away as verbatim exact epsilon=0 certificates. A finalist passing only these proves nothing (autoresearch/TRACE-AUDIT-260925.md defect 8); research_status excludes them from NEW_CERTIFICATES."
 }

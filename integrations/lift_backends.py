@@ -128,21 +128,34 @@ def packet(result, instances, best, scope):
 
 
 def preflight_source(content, finish_reason=None) -> str:
-    """One fenced Python block defining lift(instance); checked before any evaluation."""
+    """A fenced Python block defining lift(instance); checked before any evaluation.
+
+    Prose is allowed before/after the fence(s). With multiple fenced blocks, the
+    last one that defines lift(...) is used (models sometimes show scratch work
+    or an earlier draft first). Truncated output is never accepted or repaired:
+    that check runs first and short-circuits everything below.
+    """
     if finish_reason in ("length", "max_tokens"):
         raise ValueError("proposal was truncated by the model output limit")
     if not isinstance(content, str):
         raise ValueError("proposal had no text content")
-    match = re.search(r"```(?:python)?\s*\n(.*?)```", content, re.IGNORECASE | re.DOTALL)
-    if match is None or content[:match.start()].strip() or content[match.end():].strip():
-        raise ValueError("proposal must contain only one fenced Python source block")
-    source = match.group(1)
-    if len(source.encode()) > 65536:
+    fences = list(re.finditer(r"```(?:python)?\s*\n(.*?)```", content, re.IGNORECASE | re.DOTALL))
+    if not fences:
+        raise ValueError("proposal must contain a fenced Python source block defining lift(instance)")
+    chosen = None
+    for m in fences:
+        candidate = m.group(1)
+        try:
+            tree = ast.parse(candidate)
+        except SyntaxError:
+            continue
+        if any(isinstance(node, ast.FunctionDef) and node.name == "lift" for node in tree.body):
+            chosen = candidate  # keep scanning; last matching fence wins
+    if chosen is None:
+        raise ValueError("proposal must define lift(instance) in a fenced Python source block")
+    if len(chosen.encode()) > 65536:
         raise ValueError("proposal exceeds source size cap")
-    tree = ast.parse(source)
-    if not any(isinstance(node, ast.FunctionDef) and node.name == "lift" for node in tree.body):
-        raise ValueError("proposal must define lift(instance)")
-    return source
+    return chosen
 
 
 # ------------------------------------------------------ trusted verifier side
@@ -174,10 +187,36 @@ class LiftVerifier:
                       "screen_parent_ids": self.screen_ids,
                       "screen_instances": len(self.screen)}
 
-    def _best_text(self):
-        b, f = self.state["best_screen"], self.state["best_full"]
-        return (f"screen {b['score']:.4f} ({b['certificates']}/{len(self.screen)} certificates)" if b else "none") + \
-               (f"; full development {f['certificates']}/{len(self.full)} certificates" if f else "")
+    def _current_best(self, extra=None):
+        """Best screen/full scores across every evaluation on record, all scopes.
+
+        Recomputed at packet-build time from the evaluation manifest (self.state
+        ["evaluations"]) rather than trusted to incrementally-maintained fields,
+        so a parent-scoped (GEPA) call that happens to carry a full-development
+        result (e.g. a final confirmation) is counted the same as a screen-scope
+        call (autoresearch/TRACE-AUDIT-260925.md defect 7). `extra`, if given, is
+        this call's own not-yet-appended row.
+        """
+        rows = self.state["evaluations"] + ([extra] if extra else [])
+        best_screen = None
+        for row in rows:
+            if row["scope"] == "screen" and row["valid"] == row["instances"]:
+                if best_screen is None or row["combined_score"] > best_screen["score"]:
+                    best_screen = {"score": row["combined_score"], "certificates": row["certificates"],
+                                   "source_sha256": row["candidate_hash"]}
+        best_full = None
+        for row in rows:
+            if row.get("full_valid") is not None and row["full_valid"] == row["full_instances"]:
+                if best_full is None or row["full_combined_score"] > best_full["score"]:
+                    best_full = {"score": row["full_combined_score"], "certificates": row["full_certificates"],
+                                 "gap_sum": row["full_gap_sum"], "source_sha256": row["candidate_hash"]}
+        return best_screen, best_full
+
+    def _best_text(self, best_screen, best_full):
+        return (f"screen {best_screen['score']:.4f} ({best_screen['certificates']}/{len(self.screen)} "
+                "certificates)" if best_screen else "none") + \
+               (f"; full development {best_full['certificates']}/{len(self.full)} certificates"
+                if best_full else "")
 
     def evaluate(self, source: str, parent_id=None, *, final=False) -> dict:
         from integrations import lift_evaluator as E
@@ -197,24 +236,32 @@ class LiftVerifier:
             res = E.evaluate(path, subset, timeout=self.timeout, jobs=self.jobs, cache_dir=self.cache_dir,
                              require_os_sandbox=self.require_os_sandbox)
             full = None
+            promising = False
             if parent_id is None:
                 n = res["instances"]
-                best = self.state["best_screen"]
-                promising = res["valid"] == n and (best is None or res["combined_score"] >= best["score"])
+                prior_best_screen, _ = self._current_best()
+                promising = res["valid"] == n and (prior_best_screen is None or
+                                                    res["combined_score"] >= prior_best_screen["score"])
                 if promising and digest not in self.state["screen_valid_source_hashes"]:
                     self.state["screen_valid_source_hashes"].append(digest)
-                if promising or final:
-                    full = E.evaluate(path, self.full, timeout=self.timeout, jobs=self.jobs,
-                                      cache_dir=self.cache_dir, require_os_sandbox=self.require_os_sandbox)
-                    self.state["full_evaluations"] += 1
-                    fb = self.state["best_full"]
-                    if full["valid"] == full["instances"] and (fb is None or full["combined_score"] > fb["score"]):
-                        self.state["best_full"] = {"score": full["combined_score"], "certificates": full["certificates"],
-                                                   "gap_sum": full["gap_sum"], "source_sha256": digest}
-                if res["valid"] == n and (best is None or res["combined_score"] > best["score"]):
-                    self.state["best_screen"] = {"score": res["combined_score"], "certificates": res["certificates"],
-                                                 "source_sha256": digest}
-            feedback = packet(res, [x for x, _ in subset], self._best_text(), scope)
+            # A full-development eval runs on any promising screen-scope candidate
+            # or any final confirmation, regardless of scope, so a parent-scoped
+            # finalist can also set best_full.
+            if promising or final:
+                full = E.evaluate(path, self.full, timeout=self.timeout, jobs=self.jobs,
+                                  cache_dir=self.cache_dir, require_os_sandbox=self.require_os_sandbox)
+                self.state["full_evaluations"] += 1
+            row = {"scope": scope, "candidate_hash": digest, "combined_score": res["combined_score"],
+                   "certificates": res["certificates"], "valid": res["valid"], "instances": res["instances"],
+                   "gap_sum_float": float(Fr(res["gap_sum"])), "cache_hit": res["cache_hit"],
+                   "full_certificates": full["certificates"] if full else None,
+                   "full_combined_score": full["combined_score"] if full else None,
+                   "full_valid": full["valid"] if full else None,
+                   "full_instances": full["instances"] if full else None,
+                   "full_gap_sum": full["gap_sum"] if full else None}
+            best_screen, best_full = self._current_best(extra=row)
+            self.state["best_screen"], self.state["best_full"] = best_screen, best_full
+            feedback = packet(res, [x for x, _ in subset], self._best_text(best_screen, best_full), scope)
             summary = {"combined_score": res["combined_score"], "certificates": res["certificates"],
                        "valid": res["valid"], "instances": res["instances"], "gap_sum": res["gap_sum"],
                        "gap_sum_float": float(Fr(res["gap_sum"])), "timeouts": res["timeouts"],
@@ -225,11 +272,8 @@ class LiftVerifier:
             artifact = self.evidence / f"result-{ordinal:04d}.json"
             artifact.write_text(json.dumps({"summary": summary, "stage": res, "full": full}, default=str) + "\n")
             summary["evaluation"] = str(artifact)
-            self.state["evaluations"].append({k: summary[k] for k in (
-                "scope", "candidate_hash", "combined_score", "certificates", "valid", "instances",
-                "gap_sum_float", "cache_hit")} | {"ordinal": ordinal, "full_certificates":
-                                                  full["certificates"] if full else None,
-                                                  "packet_sha256": _sha(feedback.encode())})
+            row.update(ordinal=ordinal, packet_sha256=_sha(feedback.encode()))
+            self.state["evaluations"].append(row)
             if self.archive_path:
                 from integrations.research_archive import DevelopmentArchive
                 archive = DevelopmentArchive(self.archive_path)
@@ -359,6 +403,40 @@ def check_approval(broker_config: Path, campaign_config: Path) -> str:
 
 
 # ------------------------------------------------------------ official engines
+EVOX_STRATEGY_EVOLUTION_MIN_ITERATIONS = 100
+
+
+def evox_strategy_evolution_enabled(iterations, offline_no_auto_variation) -> bool:
+    """Whether EvoX's search-strategy meta-search should run at all.
+
+    On short runs it burns a large share of calls on strategy code that is
+    rarely adopted and has crashed on a bad generated program (an
+    AttributeError from a strategy's own broken database implementation,
+    autoresearch/TRACE-AUDIT-260925.md defect 9); below
+    EVOX_STRATEGY_EVOLUTION_MIN_ITERATIONS it is not worth the risk or cost.
+
+    Strategy evolution is gated by stagnation vs `switch_interval`
+    (skydiscover...evox/controller.py `_should_evolve_search`: it fires once
+    `_stagnant_count >= switch_interval`), not by
+    `auto_generate_variation_operators` (that only controls whether an
+    evolved strategy also gets custom variation operators) and not
+    reliably by `search.share_llm` either: two smoke runs confirmed strategy
+    calls kept happening with auto_generate_variation_operators=False and
+    with share_llm=False, because the launcher's sandboxed worker
+    environment (official_backends._worker_environment) sets
+    OPENAI_API_BASE/OPENAI_API_KEY to the same broker for the whole
+    subprocess, so SkyDiscover's meta-LLM pool stays reachable regardless of
+    share_llm. The lever that actually works is `switch_interval` itself:
+    when this function returns False, `_sky_config` sets switch_interval to
+    iterations + 1, which `_stagnant_count` can never reach within the run
+    (a smoke run with iterations=6 confirmed 0 strategy/variation calls
+    after this fix, vs 3 strategy + 2 variation calls before it).
+    `auto_generate_variation_operators` is kept tied to this function too,
+    as a secondary, harmless-if-inert precaution.
+    """
+    return not offline_no_auto_variation and iterations >= EVOX_STRATEGY_EVOLUTION_MIN_ITERATIONS
+
+
 def _sky_config(args, stage: Path) -> Path:
     config = {
         "max_iterations": args.iterations, "checkpoint_interval": 1, "log_level": "INFO",
@@ -367,9 +445,13 @@ def _sky_config(args, stage: Path) -> Path:
                 "api_key": "local-broker", "max_tokens": args.max_tokens, "temperature": 0.7,
                 "timeout": args.llm_timeout, "retries": 0, "reasoning_effort": args.reasoning_effort},
         "search": {"type": args.engine, "num_context_programs": 2,
-                   "database": {"auto_generate_variation_operators": not args.offline_no_auto_variation}
+                   "database": {"auto_generate_variation_operators":
+                                evox_strategy_evolution_enabled(args.iterations, args.offline_no_auto_variation)}
                    if args.engine == "evox" else {},
-                   "switch_interval": args.evox_switch_interval if args.engine == "evox" else None,
+                   "switch_interval": (args.evox_switch_interval
+                                       if evox_strategy_evolution_enabled(args.iterations,
+                                                                          args.offline_no_auto_variation)
+                                       else args.iterations + 1) if args.engine == "evox" else None,
                    "share_llm": args.engine == "evox"},
         "prompt": {"system_message": SYSTEM},
         "evaluator": {"timeout": args.eval_timeout, "max_retries": 0, "cascade_evaluation": False},
@@ -417,9 +499,23 @@ class LiftBrokerLM(ob.BrokerLM):
                 messages_sha256(messages) != self.expected_first_sha256:
             raise ob.BrokerHalted("first proposer prompt differs from the approved first-prompt.sha256")
         text = request if isinstance(request, str) else json.dumps(request)
-        self.receipts.append({"call": self.calls + 1, "packet_seen": PACKET_MARK in text,
-                              "request_sha256": _sha(text.encode()), "request_chars": len(text)})
-        return super().__call__(request)
+        receipt = {"call": self.calls + 1, "packet_seen": PACKET_MARK in text,
+                  "request_sha256": _sha(text.encode()), "request_chars": len(text)}
+        self.receipts.append(receipt)
+        try:
+            return super().__call__(request)
+        finally:
+            receipt["finish_reason"] = self.last_finish_reason
+
+
+def reflection_minibatch_size(train) -> int:
+    """GEPA's reflection minibatch, capped at the train set size (never oversample a small set)."""
+    return min(3, len(train))
+
+
+def gepa_metric_calls_per_proposal(minibatch, val) -> int:
+    """Metric calls one proposal costs: minibatch eval + reflection re-eval + valset eval."""
+    return 2 * minibatch + len(val)
 
 
 def _gepa_worker(args) -> dict:
@@ -445,7 +541,8 @@ def _gepa_worker(args) -> dict:
             "parent_id": example["id"], "certificates": r["certificates"], "valid": r["valid"],
             "instances": r["instances"], "gap_sum": r["gap_sum_float"], "feedback": r["feedback"]}
 
-    per_proposal = 2 * 3 + len(val)
+    minibatch = reflection_minibatch_size(train)
+    per_proposal = gepa_metric_calls_per_proposal(minibatch, val)
     result = optimize_anything(
         seed_candidate=args.seed.read_text(), evaluator=evaluator, dataset=train, valset=val,
         objective=OBJECTIVE, background=SYSTEM,
@@ -454,7 +551,7 @@ def _gepa_worker(args) -> dict:
                                 max_candidate_proposals=args.proposals,
                                 max_metric_calls=len(val) + (args.proposals + 1) * per_proposal,
                                 max_workers=1, parallel=False),
-            reflection=ReflectionConfig(reflection_lm=lm)))
+            reflection=ReflectionConfig(reflection_lm=lm, reflection_minibatch_size=minibatch)))
     best = result.best_candidate
     if not isinstance(best, str):
         raise TypeError("GEPA returned a non-source candidate")
@@ -596,7 +693,8 @@ def _launch(args) -> dict:
         server.server_close()
     manifest["returncode"] = returncode
     manifest["engine_seconds"] = time.monotonic() - start
-    manifest["mechanism_evidence"] = ob._mechanism_evidence(run_dir, args.engine, args.iterations)
+    manifest["mechanism_evidence"] = ob._mechanism_evidence(run_dir, args.engine, args.iterations,
+                                                             getattr(args, "ledger", None))
     if args.engine == "gepa" and (run_dir / "output" / "summary.json").is_file():
         s = json.loads((run_dir / "output" / "summary.json").read_text())
         manifest["mechanism_evidence"].update({"lineage": s["lineage"], "best_idx": s["best_idx"],
@@ -626,6 +724,19 @@ def _chat(broker_url, model, max_tokens, reasoning_effort, messages, timeout):
     return choice["message"]["content"], choice.get("finish_reason")
 
 
+def rejection_note(history, n=3) -> str:
+    """Render up to the last `n` rejected attempts (most recent last) for the next prompt.
+
+    Sequential refinement otherwise resends the same prompt verbatim after a
+    rejection, so the model gets no signal about what just failed.
+    """
+    if not history:
+        return ""
+    lines = ["Recent rejected attempts (most recent last; do not repeat these):"]
+    lines += [f"- step {h['step']}: {h['reason']}" for h in history[-n:]]
+    return "\n".join(lines) + "\n\n"
+
+
 def _sequential(args) -> dict:
     """Control arm: same broker, system prompt and packet; greedy accept on screen score."""
     args.broker_url = ob._broker_url(args.broker_url)
@@ -637,10 +748,19 @@ def _sequential(args) -> dict:
                 "max_tokens": args.max_tokens, "reasoning_effort": args.reasoning_effort,
                 "max_evals": args.max_evals, "run_dir": str(run_dir)}
     status = "COMPLETE"
+    history, last_request_sha256 = [], None
     for step in range(1, args.iterations + 1):
-        user = (OBJECTIVE + "\n\nCurrent program:\n```python\n" + best_source + "\n```\n\n"
+        note = rejection_note(history)
+        user = (OBJECTIVE + "\n\n" + note + "Current program:\n```python\n" + best_source + "\n```\n\n"
                 + "Evaluator feedback:\n" + best["feedback"])
-        row = {"step": step, "packet_seen": PACKET_MARK in user, "request_sha256": _sha(user.encode())}
+        request_sha256 = _sha(user.encode())
+        row = {"step": step, "packet_seen": PACKET_MARK in user, "request_sha256": request_sha256}
+        if request_sha256 == last_request_sha256:
+            row["outcome"] = "guard: refusing to resend an identical consecutive prompt"
+            trace.append(row)
+            status = "GUARD_STOPPED"
+            break
+        last_request_sha256 = request_sha256
         try:
             content, finish = _chat(args.broker_url, args.model, args.max_tokens, args.reasoning_effort,
                                     [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}],
@@ -650,10 +770,13 @@ def _sequential(args) -> dict:
             trace.append(row)
             status = "BROKER_STOPPED"
             break
+        row["finish_reason"] = finish
         try:
             source = preflight_source(content, finish)
         except (SyntaxError, ValueError) as exc:
-            row["outcome"] = f"invalid proposal: {exc}"
+            reason = f"invalid proposal: {exc}"
+            row["outcome"] = reason
+            history.append({"step": step, "reason": reason})
             trace.append(row)
             continue
         try:
@@ -668,13 +791,21 @@ def _sequential(args) -> dict:
                     "screen_valid": result["valid"], "accepted": accepted})
         if accepted:
             best_source, best = source, result
+        else:
+            reason = (f"rejected: screen_score {result['combined_score']:.4f} (valid {result['valid']}/"
+                      f"{result['instances']}) did not beat {best['combined_score']:.4f}")
+            row["outcome"] = reason
+            history.append({"step": step, "reason": reason})
         trace.append(row)
     (run_dir / "sequential-trace.jsonl").write_text("".join(json.dumps(r) + "\n" for r in trace))
     (run_dir / "verified").mkdir(exist_ok=True)
     (run_dir / "verified" / "best.py").write_text(best_source)
     manifest.update({"status": status, "steps": trace,
                      "mechanism_evidence": {"accepted_steps": [r["step"] for r in trace if r.get("accepted")],
-                                            "packet_seen_steps": [r["step"] for r in trace if r["packet_seen"]]}})
+                                            "packet_seen_steps": [r["step"] for r in trace if r["packet_seen"]],
+                                            "truncated_steps": [r["step"] for r in trace
+                                                                if r.get("finish_reason") in
+                                                                ("length", "max_tokens")]}})
     return _finish(manifest, run_dir, verifier, seed_eval, best_source)
 
 
@@ -711,6 +842,35 @@ def write_first_prompt(capture_dir: Path, out_md: Path, run_dir: Path) -> str:
     return digest
 
 
+def _arm_ledger_path(bc, engine) -> Path:
+    """This arm's own ledger, isolated from every other arm's ledger."""
+    base = Path(bc["ledger"])
+    return base.with_name(base.stem + f".{engine}" + base.suffix)
+
+
+def arm_contact_budget(bc, cc, engine) -> tuple[int, int]:
+    """(sub_cap, remaining) contacts this arm may use out of the shared pool.
+
+    Each arm gets its own ledger file, so one arm's calls can never drain
+    contacts reserved for another (autoresearch/TRACE-AUDIT-260925.md defect 2).
+    `remaining` is the shared campaign-config.json/broker-config.json pool
+    (bc["max_requests"]) minus whatever every OTHER arm's ledger has already
+    recorded; the caller refuses to start when either sub_cap or remaining is 0.
+    """
+    sub_cap = cc["engines"][engine].get("max_requests")
+    if not isinstance(sub_cap, int) or sub_cap < 0:
+        raise ValueError(f"campaign-config engines.{engine}.max_requests must be a non-negative integer")
+    used_elsewhere = 0
+    for other in cc["engines"]:
+        if other == engine:
+            continue
+        path = ROOT / _arm_ledger_path(bc, other)
+        if path.is_file():
+            used_elsewhere += len(json.loads(path.read_text()).get("attempts", []))
+    remaining = max(0, bc["max_requests"] - used_elsewhere)
+    return sub_cap, remaining
+
+
 # ------------------------------------------------------------- live wrapper
 def _live(args):
     """Approval check, broker from broker-config.json, then one arm. No hard-coded caps."""
@@ -719,6 +879,11 @@ def _live(args):
     digest = check_approval(args.broker_config, args.campaign_config)
     bc, cc = _load_config(args.broker_config), _load_config(args.campaign_config)
     arm = cc["engines"][args.engine]
+    sub_cap, remaining = arm_contact_budget(bc, cc, args.engine)
+    if sub_cap == 0 or remaining == 0:
+        raise SystemExit(f"refusing to start arm {args.engine}: sub-cap {sub_cap} contacts, "
+                          f"{remaining} contacts remaining in the shared pool of {bc['max_requests']}")
+    arm_max_requests = min(sub_cap, remaining)
     stamp = time.strftime("%y%m%d-%H%M%S")
     run_dir = LIFT_DIR / f"live-{args.engine}-{stamp}"
     broker_log = LIFT_DIR / f"broker-{args.engine}-{stamp}.log"
@@ -727,7 +892,7 @@ def _live(args):
     port = cc["broker_port"]
     broker = [sys.executable, "-m", "integrations.research_budget", "serve",
               "--upstream-url", bc["upstream_url"], "--model", bc["model"], "--api-key-env", bc["api_key_env"],
-              "--ledger", str(ROOT / bc["ledger"]), "--max-requests", str(bc["max_requests"]),
+              "--ledger", str(ROOT / _arm_ledger_path(bc, args.engine)), "--max-requests", str(arm_max_requests),
               "--max-usd", str(bc["max_usd"]), "--input-usd-per-million", str(bc["input_usd_per_million"]),
               "--output-usd-per-million", str(bc["output_usd_per_million"]), "--port", str(port),
               "--max-tokens", str(bc["max_tokens"]), "--reasoning-reserve", str(bc["reasoning_cap_tokens"]),
@@ -754,7 +919,8 @@ def _live(args):
                 "--wall-seconds", str(arm["wall_seconds"]), "--llm-timeout", str(int(bc["timeout"]) + 30),
                 "--eval-timeout", str(cc["eval_timeout"]), "--cache-dir", str(ROOT / cc["eval_cache"]),
                 "--archive", str(ROOT / cc["archive"]), "--python", str(ROOT / cc["python"]),
-                "--evox-switch-interval", str(cc["evox_switch_interval"])]
+                "--evox-switch-interval", str(cc["evox_switch_interval"]),
+                "--ledger", str(ROOT / _arm_ledger_path(bc, args.engine))]
         if args.engine == "gepa":
             argv += ["--expected-first-prompt-sha256",
                      (LIFT_DIR / "first-prompt.sha256").read_text().split()[0]]
@@ -796,6 +962,8 @@ def _parser():
         p.add_argument("--jobs", type=int, default=8)
         p.add_argument("--evox-switch-interval", type=int, default=2)
         p.add_argument("--offline-no-auto-variation", action="store_true")
+        p.add_argument("--ledger", type=Path,
+                       help="this arm's broker ledger, for the EvoX meta-search share report")
         p.add_argument("--expected-first-prompt-sha256",
                        help="GEPA: halt before the first model request unless its messages hash matches")
     w = sub.add_parser("_gepa_worker")

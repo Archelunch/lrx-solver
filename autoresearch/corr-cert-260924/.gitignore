@@ -10,3 +10,9 @@ finalists/raw/
 lp-raw/
 mock-requests*.jsonl
 *.log
+smoke-fixed-*-cache/
+smoke-fixed-*/output/
+smoke-fixed-*/verified/
+smoke-fixed-*/stage/
+live-*/stage/
+finalists-attempt2/raw/

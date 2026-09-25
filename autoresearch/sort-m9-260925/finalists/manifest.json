@@ -1,0 +1,310 @@
+{
+  "finalists": [
+    {
+      "arm": "adaevolve",
+      "source_sha256": "d9ed36e3c5697722fd81b73d3f344b43312fa3fe51824e9325fc1a47fa158449"
+    },
+    {
+      "arm": "evox",
+      "source_sha256": "182e87945eec95f66a9d5fa74d4b6e48edde081c0d6378426f5a49af26df0dd5"
+    },
+    {
+      "arm": "gepa",
+      "source_sha256": "4e6cfc22622d85eb591da8fde617915bda31b3d84e4f6d17feb7bd948decf054"
+    },
+    {
+      "arm": "sequential",
+      "source_sha256": "41bf4c51fb14aacaf7f26dda9d8eb097b9b79c399a6f46cca9fdfdb17f9693a8"
+    },
+    {
+      "arm": "naive-control",
+      "source_sha256": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052"
+    },
+    {
+      "arm": "sweep-control",
+      "source_sha256": "65fbfc47f728f589189f839f77065220da74f8692df4632adecde2a999bf9906"
+    }
+  ],
+  "holdout_sha256": "c281643a330814d44d4df87a7fb71c0dd9567db55a2a00758f965ae2ca844565",
+  "development_sha256": "f4dd4752758b573c6ba246f612fbbef5340bae754c14e63438fcc945eabb3346",
+  "frozen_manifest_sha256": "c98fd6136f4df9038188f754c5e458758e989f0d83efc052349858145affca4e",
+  "evaluator": {
+    "version": "sort-eval-2",
+    "contract": "sort-contract-2: candidate defines sort_word(v) -> str over L,R,X (L rotates left, R rotates right, X swaps the first two entries). A state is valid iff the word has at most 1000 letters, the call used at most 0.2 s of CPU time and 1 s of wall time, and certificates.replay_visible(v, word) equals (1..m, 0^r). Module import may use 0.5 s of CPU. Batches hold 10 states; the kernel caps each batch process at 10*0.2 + 1.5 CPU seconds. Any state-space search (BFS, IDA*, beam search over LRX states) times out, and a timeout counts as invalid. within_budget iff valid and len(word) <= T_m(n) = m(m+1)/2 + (r-1)(m-2). excess = len(word) - d(v) with d(v) the exact BFS distance to the canonical root. Crash, non-str, bad letters, >1000 letters, a time limit or a killed batch count as invalid. combined_score = within/N + 0.5 * min over r of the per-r within rate + 0.25/(1 + mean excess over valid states) - invalid/N (third term 0 if no valid state).",
+    "hash": "a10dabd82fbb8e300104ca115d3f4f6e1a3edf723fbf2c708b8c67a853b79a61"
+  },
+  "created_utc": "2026-09-25T12:35:54.985723+00:00",
+  "details": [
+    {
+      "arm": "adaevolve",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/verified/evaluations/candidate-0038.py",
+      "source_sha256": "d9ed36e3c5697722fd81b73d3f344b43312fa3fe51824e9325fc1a47fa158449",
+      "development_claim": {
+        "combined_score": 1.6188148742643125,
+        "within_budget": 1480,
+        "min_r_within_rate": 0.9633333333333334,
+        "valid": 1500,
+        "invalid": 0,
+        "timeouts": 0,
+        "mean_excess": 0.6613333333333333,
+        "per_r": {
+          "m9r1": {
+            "states": 300,
+            "within": 300,
+            "valid": 300,
+            "excess_sum": 102,
+            "timeouts": 0,
+            "within_rate": 1.0,
+            "mean_excess": 0.34
+          },
+          "m9r2": {
+            "states": 300,
+            "within": 299,
+            "valid": 300,
+            "excess_sum": 171,
+            "timeouts": 0,
+            "within_rate": 0.9966666666666667,
+            "mean_excess": 0.57
+          },
+          "m9r3": {
+            "states": 300,
+            "within": 298,
+            "valid": 300,
+            "excess_sum": 172,
+            "timeouts": 0,
+            "within_rate": 0.9933333333333333,
+            "mean_excess": 0.5733333333333334
+          },
+          "m9r4": {
+            "states": 300,
+            "within": 294,
+            "valid": 300,
+            "excess_sum": 259,
+            "timeouts": 0,
+            "within_rate": 0.98,
+            "mean_excess": 0.8633333333333333
+          },
+          "m9r5": {
+            "states": 300,
+            "within": 289,
+            "valid": 300,
+            "excess_sum": 288,
+            "timeouts": 0,
+            "within_rate": 0.9633333333333334,
+            "mean_excess": 0.96
+          }
+        }
+      },
+      "admitted_with_prompt_mismatch": {
+        "rule": "only SkyDiscover's parent-selection mode-guidance block differs; system message, program and packet byte-identical (checked by sort_finalize.mode_only_difference)",
+        "live_sha256": "799905f23c2b8e853e4ec830a771c5f659f871f0fdadb5b2230e467cbeaccc18",
+        "captured_sha256": "fb0b7a84c6fb7c1bc8da7c816571f76bfc85c0648849f62d6c64ec0a272e6493",
+        "live_receipt": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/broker-ledger-sort-v2.adaevolve.json.receipts/attempt-0001.json",
+        "unified_diff": "message 1:\n--- captured\n+++ live\n@@ -176,9 +176,9 @@\n-This parent was selected through diversity-driven sampling to explore different regions.\n-\n-### EXPLORATION GUIDANCE\n-- Consider alternative algorithmic approaches\n-- Don't be constrained by the parent's approach\n-- Look for fundamentally different algorithms or novel techniques\n-- Balance creativity with correctness\n-\n-Your goal: Discover new approaches that might outperform current solutions.\n+This parent was selected from the archive of top-performing programs.\n+\n+### OPTIMIZATION GUIDANCE\n+- This solution works well, but meaningful improvements are still possible\n+- You may refine the existing approach OR introduce better algorithms\n+- Consider: algorithmic improvements, better data structures, efficient libraries\n+- Ensure correctness is maintained\n+\n+Your goal: Improve upon this solution.",
+        "best_evaluation_record": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-adaevolve-260925-135343/verified/evaluations/candidate-0038.py"
+      }
+    },
+    {
+      "arm": "evox",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-evox-260925-141558",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-evox-260925-141558/verified/best.py",
+      "source_sha256": "182e87945eec95f66a9d5fa74d4b6e48edde081c0d6378426f5a49af26df0dd5",
+      "development_claim": {
+        "combined_score": 1.597314990512334,
+        "within_budget": 1470,
+        "min_r_within_rate": 0.95,
+        "valid": 1500,
+        "invalid": 0,
+        "timeouts": 0,
+        "mean_excess": 0.7566666666666667,
+        "per_r": {
+          "m9r1": {
+            "states": 300,
+            "within": 300,
+            "valid": 300,
+            "excess_sum": 180,
+            "timeouts": 0,
+            "within_rate": 1.0,
+            "mean_excess": 0.6
+          },
+          "m9r2": {
+            "states": 300,
+            "within": 298,
+            "valid": 300,
+            "excess_sum": 199,
+            "timeouts": 0,
+            "within_rate": 0.9933333333333333,
+            "mean_excess": 0.6633333333333333
+          },
+          "m9r3": {
+            "states": 300,
+            "within": 289,
+            "valid": 300,
+            "excess_sum": 244,
+            "timeouts": 0,
+            "within_rate": 0.9633333333333334,
+            "mean_excess": 0.8133333333333334
+          },
+          "m9r4": {
+            "states": 300,
+            "within": 298,
+            "valid": 300,
+            "excess_sum": 238,
+            "timeouts": 0,
+            "within_rate": 0.9933333333333333,
+            "mean_excess": 0.7933333333333333
+          },
+          "m9r5": {
+            "states": 300,
+            "within": 285,
+            "valid": 300,
+            "excess_sum": 274,
+            "timeouts": 0,
+            "within_rate": 0.95,
+            "mean_excess": 0.9133333333333333
+          }
+        }
+      }
+    },
+    {
+      "arm": "gepa",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-gepa-260925-125146",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-gepa-260925-125146/verified/best.py",
+      "source_sha256": "4e6cfc22622d85eb591da8fde617915bda31b3d84e4f6d17feb7bd948decf054",
+      "development_claim": {
+        "combined_score": 1.66071696662052,
+        "within_budget": 1494,
+        "min_r_within_rate": 0.9833333333333333,
+        "valid": 1500,
+        "invalid": 0,
+        "timeouts": 0,
+        "mean_excess": 0.44466666666666665,
+        "per_r": {
+          "m9r1": {
+            "states": 300,
+            "within": 300,
+            "valid": 300,
+            "excess_sum": 74,
+            "timeouts": 0,
+            "within_rate": 1.0,
+            "mean_excess": 0.24666666666666667
+          },
+          "m9r2": {
+            "states": 300,
+            "within": 299,
+            "valid": 300,
+            "excess_sum": 117,
+            "timeouts": 0,
+            "within_rate": 0.9966666666666667,
+            "mean_excess": 0.39
+          },
+          "m9r3": {
+            "states": 300,
+            "within": 300,
+            "valid": 300,
+            "excess_sum": 139,
+            "timeouts": 0,
+            "within_rate": 1.0,
+            "mean_excess": 0.4633333333333333
+          },
+          "m9r4": {
+            "states": 300,
+            "within": 300,
+            "valid": 300,
+            "excess_sum": 157,
+            "timeouts": 0,
+            "within_rate": 1.0,
+            "mean_excess": 0.5233333333333333
+          },
+          "m9r5": {
+            "states": 300,
+            "within": 295,
+            "valid": 300,
+            "excess_sum": 180,
+            "timeouts": 0,
+            "within_rate": 0.9833333333333333,
+            "mean_excess": 0.6
+          }
+        }
+      }
+    },
+    {
+      "arm": "sequential",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-sequential-260925-131859",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/live-v2-sequential-260925-131859/verified/best.py",
+      "source_sha256": "41bf4c51fb14aacaf7f26dda9d8eb097b9b79c399a6f46cca9fdfdb17f9693a8",
+      "development_claim": {
+        "combined_score": 1.6433539675314823,
+        "within_budget": 1484,
+        "min_r_within_rate": 0.9666666666666667,
+        "valid": 1500,
+        "invalid": 0,
+        "timeouts": 0,
+        "mean_excess": 0.4646666666666667,
+        "per_r": {
+          "m9r1": {
+            "states": 300,
+            "within": 300,
+            "valid": 300,
+            "excess_sum": 68,
+            "timeouts": 0,
+            "within_rate": 1.0,
+            "mean_excess": 0.22666666666666666
+          },
+          "m9r2": {
+            "states": 300,
+            "within": 299,
+            "valid": 300,
+            "excess_sum": 135,
+            "timeouts": 0,
+            "within_rate": 0.9966666666666667,
+            "mean_excess": 0.45
+          },
+          "m9r3": {
+            "states": 300,
+            "within": 295,
+            "valid": 300,
+            "excess_sum": 138,
+            "timeouts": 0,
+            "within_rate": 0.9833333333333333,
+            "mean_excess": 0.46
+          },
+          "m9r4": {
+            "states": 300,
+            "within": 300,
+            "valid": 300,
+            "excess_sum": 156,
+            "timeouts": 0,
+            "within_rate": 1.0,
+            "mean_excess": 0.52
+          },
+          "m9r5": {
+            "states": 300,
+            "within": 290,
+            "valid": 300,
+            "excess_sum": 200,
+            "timeouts": 0,
+            "within_rate": 0.9666666666666667,
+            "mean_excess": 0.6666666666666666
+          }
+        }
+      }
+    },
+    {
+      "arm": "naive-control",
+      "run_dir": null,
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/sort_control_naive.py",
+      "source_sha256": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+      "development_claim": null
+    },
+    {
+      "arm": "sweep-control",
+      "run_dir": null,
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/sort_control_sweep.py",
+      "source_sha256": "65fbfc47f728f589189f839f77065220da74f8692df4632adecde2a999bf9906",
+      "development_claim": null
+    }
+  ],
+  "excluded_prompt_mismatch": {}
+}

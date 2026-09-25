@@ -1,0 +1,113 @@
+{
+  "broker_config": {
+    "api_key_env": "GEMINI_API_KEY",
+    "chars_per_reasoning_token_assumption": 3,
+    "contact_ceiling_formula": "min(floor(max_usd / reservation_usd_per_request_conservative), 400) = min(floor(38.4 / 0.1666368), 400) = 230",
+    "contact_ceiling_raw": 230,
+    "input_usd_per_million": 0.825,
+    "ledger": "autoresearch/sort-m9-260925/broker-ledger-sort-v2.json",
+    "max_prompt_bytes": 120000,
+    "max_requests": 230,
+    "max_tokens": 8192,
+    "max_usd": 38.4,
+    "model": "gemini-3.8-flash",
+    "model_note": "Copied unchanged from the applied broker-config.json; re-verify against a live /v1beta/openai/models listing and current pricing before use.",
+    "note": "Copied from autoresearch/lift-m9-260924/broker-config.next.json (gemini-3.8-flash, max_tokens 8192, same pricing/reasoning fields). Version 2 of the sort campaign (sort-contract-2, 0.2 s CPU per state) uses a fresh ledger prefix broker-ledger-sort-v2; per-arm ledgers are broker-ledger-sort-v2.<engine>.json and none may exist before the first v2 live run. The stopped attempt 1 ledger broker-ledger-sort.gepa.json is kept as is. max_usd 38.4 as set by the orchestrator; max_requests recomputed from the reservation formula. Pending human approval (payload-approved.sha256).",
+    "output_usd_per_million": 4.125,
+    "price_source": "Copied unchanged from the applied broker-config.json.",
+    "price_source_date": "2026-09-24",
+    "reasoning_cap_chars_conservative": 24000,
+    "reasoning_cap_tokens": 8000,
+    "reasoning_effort": "low",
+    "reasoning_effort_note": "Copied unchanged from the applied broker-config.json.",
+    "reasoning_effort_support_confirmed": true,
+    "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+    "reservation_usd_per_request_conservative": 0.1666368,
+    "run": "sort-m9-260925",
+    "timeout": 480,
+    "upstream_stream": true,
+    "upstream_url": "https://generativelanguage.googleapis.com/v1beta/openai"
+  },
+  "campaign_config": {
+    "broker_port": 8897,
+    "engines": {
+      "adaevolve": {
+        "iterations": 50,
+        "max_evals": 64,
+        "max_requests": 55,
+        "wall_seconds": 21600
+      },
+      "evox": {
+        "iterations": 40,
+        "max_evals": 52,
+        "max_requests": 45,
+        "wall_seconds": 21600
+      },
+      "gepa": {
+        "iterations": 60,
+        "max_evals": 200,
+        "max_requests": 65,
+        "wall_seconds": 21600
+      },
+      "sequential": {
+        "iterations": 60,
+        "max_evals": 70,
+        "max_requests": 65,
+        "wall_seconds": 21600
+      }
+    },
+    "eval_cache": "autoresearch/sort-m9-260925/eval-cache",
+    "eval_timeout": 900,
+    "evaluation": "single pass: every candidate is scored on all 1500 frozen development states (m=9, r=1..5, 300 each) under sort-contract-2: sandboxed batches of 10, 0.2 s CPU and 1 s wall per state, 0.5 s CPU for import, kernel CPU cap per batch; no screening stage",
+    "evox_switch_interval": 2,
+    "frozen_manifest": "autoresearch/sort-m9-260925/frozen/manifest.json",
+    "max_requests_note": "Per-arm sub-caps of broker-config.json's shared max_requests (230 at max_usd 38.4 under the conservative reservation): each arm's iterations + 5 (65/65/55/45, sum 230 <= pool), a margin for retries and SkyDiscover connectivity probes, which also count as contacts. Each arm has its own ledger, so no arm can drain another arm's share (TRACE-AUDIT-260925 defect 2).",
+    "note": "Per-arm search limits for the sort-m9-260925 campaign. Money, request, token, reasoning and timeout caps live only in broker-config.json and are read at run time (model client timeout = broker timeout + 30 s). The development set path and SHA-256 are read at run time from frozen_manifest; holdout is never loaded. Both configs, the prompts, the seed, the frozen hashes, the evaluator hash and first-prompt.sha256 are covered by the approval hash (python -m integrations.sort_backends approval-hash).",
+    "order_note": "Mirrors the lift/corr campaigns: GEPA and the sequential control first at matched iteration counts; AdaEvolve and EvoX only after GEPA shows one productive cycle. EvoX strategy evolution is off (40 < 100 iterations).",
+    "python": ".venv-official/bin/python",
+    "seed": "integrations/sort_control_sweep.py",
+    "version_note": "v2 after attempt 1 (live-gepa-260925-120053) produced per-state search: seed is the cyclic-sweep control, live runs are live-v2-*, ledgers broker-ledger-sort-v2.<engine>.json, finalize reads only live-v2-*. v1 sources and approval files are preserved in v1/."
+  },
+  "development_sha256": "f4dd4752758b573c6ba246f612fbbef5340bae754c14e63438fcc945eabb3346",
+  "dry_run_payload": {
+    "max_completion_tokens": 8192,
+    "messages": [
+      {
+        "content": "<research_context placeholder; not sent by dry-run>",
+        "role": "system"
+      },
+      {
+        "content": "<gepa_reflection prompt placeholder; not sent by dry-run>",
+        "role": "user"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "low",
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  "evaluator": {
+    "contract": "sort-contract-2: candidate defines sort_word(v) -> str over L,R,X (L rotates left, R rotates right, X swaps the first two entries). A state is valid iff the word has at most 1000 letters, the call used at most 0.2 s of CPU time and 1 s of wall time, and certificates.replay_visible(v, word) equals (1..m, 0^r). Module import may use 0.5 s of CPU. Batches hold 10 states; the kernel caps each batch process at 10*0.2 + 1.5 CPU seconds. Any state-space search (BFS, IDA*, beam search over LRX states) times out, and a timeout counts as invalid. within_budget iff valid and len(word) <= T_m(n) = m(m+1)/2 + (r-1)(m-2). excess = len(word) - d(v) with d(v) the exact BFS distance to the canonical root. Crash, non-str, bad letters, >1000 letters, a time limit or a killed batch count as invalid. combined_score = within/N + 0.5 * min over r of the per-r within rate + 0.25/(1 + mean excess over valid states) - invalid/N (third term 0 if no valid state).",
+    "hash": "a10dabd82fbb8e300104ca115d3f4f6e1a3edf723fbf2c708b8c67a853b79a61",
+    "version": "sort-eval-2"
+  },
+  "first_prompt_adaevolve_sha256": "fb0b7a84c6fb7c1bc8da7c816571f76bfc85c0648849f62d6c64ec0a272e6493",
+  "first_prompt_evox_sha256": "bc70f53188d856b5c5111e587c0b951be649c6dc2d3e08096014d1d03dfa20e6",
+  "first_prompt_sequential_sha256": "c0ec902d7ef3d5a4ec3e953b1df565bf0ffec0ed1d8630add5f4b2c7967552de",
+  "first_prompt_sha256": "7a8240ac327b5b1f85344974a831f330c345899a83a2b740add906efe2a2aa30",
+  "frozen_manifest_sha256": "c98fd6136f4df9038188f754c5e458758e989f0d83efc052349858145affca4e",
+  "lift_backends_sha256": "05ef38f705033eda93c179a6fd1c506b2bedeace945926473ebbbaa2236a0905",
+  "objective": "Improve this constructive Python sort_word(v) program (the seed is a cyclic-sweep sorter: it chooses a target rotation and a cyclic assignment of the interchangeable zeros, gives each entry a displacement on the universal cover, and sweeps the window swapping pairs that must cross). Return the entire replacement Python source in one fenced code block, with no prose and no docstring longer than a few lines. Raise the within-budget rate, first on the worst r, without search: each state has 0.2 s of CPU. Only development states are shown.",
+  "official_backends_sha256": "284ce1e6c6d8054c293d416574a8388ae6f85d5b3f489433e9b71602429649fe",
+  "packet_format": {
+    "marker": "SORT_PACKET_V1",
+    "max_chars": 2000,
+    "scope": "development only"
+  },
+  "seed_sha256": "65fbfc47f728f589189f839f77065220da74f8692df4632adecde2a999bf9906",
+  "sort_backends_sha256": "835c58b6f8d4ce2515060c94c67e815cfdba5a556847f3d3009252ab6318b417",
+  "system_prompt": "Find a constructive, uniform LRX sorting procedure. Goal: an algorithm that is uniform in r (and ideally in m) and provably stays within the budget T_m(n) = m(m+1)/2 + (r-1)(m-2) (45 + 7(r-1) at m=9), with a route whose length can be bounded by an argument. Useful ingredients: sweep strategies that use zero blocks as buffers, comparison-transfer routes that carry one label through a block, cycle-based service of labels in cyclic order, choosing the final rotation. The candidate source must define sort_word(v) -> str. v is a list of length n = m + r holding labels 1..m once (m = max(v)) and r >= 1 zeros; return a word over L, R, X that sorts v to (1, 2, ..., m, 0, ..., 0). L rotates the vector left (the first entry moves to the end), R rotates it right, and X swaps the first two entries. The trusted evaluator replays the word literally. Each call gets 0.2 s of CPU time (and module import 0.5 s); any state-space search (BFS, bidirectional BFS, IDA*, beam or A* search over vectors, or caching such search across calls) times out on almost every state, and a timeout counts as an unsorted state. Build the word directly from the structure of v. Score: fraction of development states sorted within T (primary), plus 0.5 times the worst per-r within-budget rate (so the program must work for every r, not only small r), plus a small term for low mean excess over the exact distance, minus the fraction not sorted. Stdlib only, at most 64 KiB, at most 1000 letters per word. Development states are m=9, r=1..5; the holdout has unseen states and unseen (m, r), so the program must work for any m and r. Misses prove nothing. Do not read files, the network, or environment variables. Exact facts at m=9, r=1..5 (complete BFS tables): the sorting radius equals T_9(n) = 45, 52, 59, 66, 73. The 15 states at distance T are near-reversals: 10 of 15 read 9,8,...,1 cyclically, e.g. (2,1,0^r,9,8,...,3) for r=1,2,3 and (0^r,9,8,...,1) for r=2,3. d(v) <= min_q d_q(v) + K with K = 14,15,17,18,20 for r=1..5, where d_q is the (8,r) distance after deleting label q; K is attained only near the root. No rotation, reflection or complement symmetry preserves d.",
+  "upstream_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+}

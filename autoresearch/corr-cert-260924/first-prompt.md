@@ -2,10 +2,10 @@
 
 This is the exact `messages` array the GEPA reflection client sends to the local broker on iteration 1 for the seed program. The broker forwards it unchanged, adding only transport fields (see `broker-config.json` and the `--dry-run` payload). It was captured offline from a zero-provider GEPA run with the frozen development set. Only development data (m=4..12) appears; the holdout set (m=13..20) is never loaded.
 
-- Messages SHA-256 (canonical JSON, sorted keys, no spaces): `eea89e7b490a96ff8452d008ba8fca9dfe7e0908c7cc72def5f4e6da19b6ea5e`
+- Messages SHA-256 (canonical JSON, sorted keys, no spaces): `9f5d79605c06a7c8e03aaec086c00d2abde6d287aafa023d591fbe5622ff24a5`
 - Message roles: ['user']. GEPA sends no separate system message; the system text is embedded in the user message as GEPA's background.
-- Client request fields: model `grok-4.7`, max_tokens `4096`, reasoning_effort `None`
-- Captured from: `corr-gepa-recapture2` (request-0001.json)
+- Client request fields: model `gemini-3.8-flash`, max_tokens `8192`, reasoning_effort `low`
+- Captured from: `run` (request-0001.json)
 - A live GEPA run halts before its first model request if these messages hash differently.
 
 ## Message 1: user
@@ -78,88 +78,6 @@ Performance data from evaluating the current component across test cases:
 
 ```
 # Example 1
-## passes
-0
-
-## violation_sum
-233998
-
-## feedback
-CORR_PACKET_V1 (development only; search signal, not proof)
-this candidate: 0/9 m passing, violation_sum 233998.000; best so far: 0/9 passing, violation_sum 233998
-- m=4 FAIL: epsilon=-22, failure=None
-  pair6 (a,b)=(2,3) gap=(b-a=1) q=1 slack=-36 kappa_ab(q)=-24
-  pair6 (a,b)=(2,3) gap=(b-a=1) q=3 slack=-36 kappa_ab(q)=-24
-  pair6 (a,b)=(1,3) gap=(b-a=2) q=1 slack=-32 kappa_ab(q)=-24
-- m=5 FAIL: epsilon=-48, failure=None
-  pair6 (a,b)=(3,4) gap=(b-a=1) q=4 slack=-64 kappa_ab(q)=-48
-  pair6 (a,b)=(3,4) gap=(b-a=1) q=1 slack=-58 kappa_ab(q)=-42
-  pair6 (a,b)=(2,3) gap=(b-a=1) q=4 slack=-56 kappa_ab(q)=-48
-- m=6 FAIL: epsilon=-90, failure=None
-  pair6 (a,b)=(3,4) gap=(b-a=1) q=5 slack=-104 kappa_ab(q)=-92
-  pair6 (a,b)=(4,5) gap=(b-a=1) q=5 slack=-100 kappa_ab(q)=-80
-  pair6 (a,b)=(3,5) gap=(b-a=2) q=1 slack=-84 kappa_ab(q)=-68
-- m=7 FAIL: epsilon=-152, failure=None
-  pair6 (a,b)=(4,5) gap=(b-a=1) q=6 slack=-164 kappa_ab(q)=-148
-  pair6 (a,b)=(5,6) gap=(b-a=1) q=6 slack=-144 kappa_ab(q)=-120
-  pair6 (a,b)=(3,4) gap=(b-a=1) q=6 slack=-128 kappa_ab(q)=-120
-- m=8 FAIL: epsilon=-238, failure=None
-  pair6 (a,b)=(5,6) gap=(b-a=1) q=7 slack=-236 kappa_ab(q)=-216
-  pair6 (a,b)=(4,5) gap=(b-a=1) q=7 slack=-196 kappa_ab(q)=-184
-  pair6 (a,b)=(6,7) gap=(b-a=1) q=7 slack=-196 kappa_ab(q)=-168
-- m=9 FAIL: epsilon=-352, failure=None
-  pair6 (a,b)=(6,7) gap=(b-a=1) q=8 slack=-320 kappa_ab(q)=-296
-  pair6 (a,b)=(5,6) gap=(b-a=1) q=8 slack=-276 kappa_ab(q)=-260
-  pair6 (a,b)=(7,8) gap=(b-a=1) q=8 slack=-256 kappa_ab(q)=-224
-- m=10 FAIL: epsilon=-498, failure=None
-  pair6 (a,b)=(7,8) gap=(b-a=1) q=9 slack=-416 kappa_ab(q)=-388
-  pair6 (a,b)=(6,7) gap=(b-a=1) q=9 slack=-368 kappa_ab(q)=-348
-LP optimum is 0 for every m; E=0 only at the reversal orders p_i = -i mod m; forced tight rows at q = m-(b-a) and triple rows at (m-(b-a), m-(c-b)); linear potentials alpha=xq+c1, beta=xt+c2, gamma=-xs+c3 satisfy (5) iff c1+c2+c3<=0 and c1+c2+c3+xm<=0.
-
-
-
-# Example 2
-## passes
-0
-
-## violation_sum
-233998
-
-## feedback
-CORR_PACKET_V1 (development only; search signal, not proof)
-this candidate: 0/9 m passing, violation_sum 233998.000; best so far: 0/9 passing, violation_sum 233998
-- m=4 FAIL: epsilon=-22, failure=None
-  pair6 (a,b)=(2,3) gap=(b-a=1) q=1 slack=-36 kappa_ab(q)=-24
-  pair6 (a,b)=(2,3) gap=(b-a=1) q=3 slack=-36 kappa_ab(q)=-24
-  pair6 (a,b)=(1,3) gap=(b-a=2) q=1 slack=-32 kappa_ab(q)=-24
-- m=5 FAIL: epsilon=-48, failure=None
-  pair6 (a,b)=(3,4) gap=(b-a=1) q=4 slack=-64 kappa_ab(q)=-48
-  pair6 (a,b)=(3,4) gap=(b-a=1) q=1 slack=-58 kappa_ab(q)=-42
-  pair6 (a,b)=(2,3) gap=(b-a=1) q=4 slack=-56 kappa_ab(q)=-48
-- m=6 FAIL: epsilon=-90, failure=None
-  pair6 (a,b)=(3,4) gap=(b-a=1) q=5 slack=-104 kappa_ab(q)=-92
-  pair6 (a,b)=(4,5) gap=(b-a=1) q=5 slack=-100 kappa_ab(q)=-80
-  pair6 (a,b)=(3,5) gap=(b-a=2) q=1 slack=-84 kappa_ab(q)=-68
-- m=7 FAIL: epsilon=-152, failure=None
-  pair6 (a,b)=(4,5) gap=(b-a=1) q=6 slack=-164 kappa_ab(q)=-148
-  pair6 (a,b)=(5,6) gap=(b-a=1) q=6 slack=-144 kappa_ab(q)=-120
-  pair6 (a,b)=(3,4) gap=(b-a=1) q=6 slack=-128 kappa_ab(q)=-120
-- m=8 FAIL: epsilon=-238, failure=None
-  pair6 (a,b)=(5,6) gap=(b-a=1) q=7 slack=-236 kappa_ab(q)=-216
-  pair6 (a,b)=(4,5) gap=(b-a=1) q=7 slack=-196 kappa_ab(q)=-184
-  pair6 (a,b)=(6,7) gap=(b-a=1) q=7 slack=-196 kappa_ab(q)=-168
-- m=9 FAIL: epsilon=-352, failure=None
-  pair6 (a,b)=(6,7) gap=(b-a=1) q=8 slack=-320 kappa_ab(q)=-296
-  pair6 (a,b)=(5,6) gap=(b-a=1) q=8 slack=-276 kappa_ab(q)=-260
-  pair6 (a,b)=(7,8) gap=(b-a=1) q=8 slack=-256 kappa_ab(q)=-224
-- m=10 FAIL: epsilon=-498, failure=None
-  pair6 (a,b)=(7,8) gap=(b-a=1) q=9 slack=-416 kappa_ab(q)=-388
-  pair6 (a,b)=(6,7) gap=(b-a=1) q=9 slack=-368 kappa_ab(q)=-348
-LP optimum is 0 for every m; E=0 only at the reversal orders p_i = -i mod m; forced tight rows at q = m-(b-a) and triple rows at (m-(b-a), m-(c-b)); linear potentials alpha=xq+c1, beta=xt+c2, gamma=-xs+c3 satisfy (5) iff c1+c2+c3<=0 and c1+c2+c3+xm<=0.
-
-
-
-# Example 3
 ## passes
 0
 

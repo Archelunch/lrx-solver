@@ -64,3 +64,31 @@ structure.py, kscan.py, tightface.py, certs*/, ansatz/, REPORT.md,
 STRUCTURE.md, STRUCTURE_tables.md, TASK.md, frozen/, live-*/, finalists/
 (manifest, holdout-results, audit, REPORT.md), broker ledgers and receipts,
 approval material. Nothing committed.
+
+## Correction (2026-09-25, after the trace audit)
+
+`autoresearch/TRACE-AUDIT-260925.md` shows this campaign was compromised by
+plumbing defects, so the engine result is NOT a clean negative: the
+AdaEvolve evaluator scored exact fractions with float() and discarded five
+valid candidates including its true best; EvoX made no call because the
+shared contact cap was exhausted; the fence parser rejected 41 of 60
+sequential responses that contained a runnable program; the sequential loop
+resent identical prompts; GEPA's minibatch of 3 over one example tripled the
+cost per proposal. The mathematical findings (reproduction, structure,
+negative ansatz results, conjecture) are unaffected: they came from the
+deterministic LP work.
+
+## Rerun with fixed plumbing (v3, 2026-09-25, hash bca29cd3)
+
+Arms 30/30/25/20, per-arm ledgers and prompt guards, 8192 output tokens.
+GEPA: 35 calls (its sub-cap), 14 truncated, best 2/9 (worked examples).
+Sequential: lost on its first call to a stale "reserved" attempt left in its
+ledger by an aborted earlier launch (orchestrator error; broker refused
+correctly). AdaEvolve: 25 iterations, post-run prompt guard fired on
+SkyDiscover's unseeded mode-guidance text, admitted by verified diff, best
+2/9. EvoX: same guard, finalist not admitted. Finalize selected the earlier
+complete runs as finalists (equal or better keys); no arm in any of the three
+correlation campaigns passes m >= 6. Spend v3: $5.72. Conclusion unchanged:
+LLM proposers do not solve this exact dual-feasibility target; the
+deterministic LP does. Fixes for next time: seed SkyDiscover random_seed,
+settle stale reservations before relaunch, cap truncation retries.

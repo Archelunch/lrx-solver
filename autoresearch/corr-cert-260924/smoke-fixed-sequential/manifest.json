@@ -1,0 +1,218 @@
+{
+  "engine": "sequential",
+  "task": "corr-cert-260924",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/frozen/manifest.json",
+  "frozen_manifest_sha256": "051e7e22816b95a1612659990819aa9bdaef7fabcbb86c8500d0c0cb2291fdef",
+  "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
+  "seed_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "broker_url": "http://127.0.0.1:8996/v1",
+  "model": "grok-4.7",
+  "iterations": 6,
+  "max_tokens": 4096,
+  "reasoning_effort": "low",
+  "max_evals": 200,
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-sequential",
+  "status": "COMPLETE",
+  "steps": [
+    {
+      "step": 1,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "finish_reason": "stop",
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "score": 2.098371663589055e-06,
+      "passes": 0,
+      "accepted": false,
+      "outcome": "rejected: score 0.0000 (passes 0) did not beat 0.0000"
+    },
+    {
+      "step": 2,
+      "packet_seen": true,
+      "request_sha256": "3c91a69b0943356311b30a57165642bb1af99773e8b166ebcabf536f8e636d89",
+      "finish_reason": "stop",
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "score": 2.098371663589055e-06,
+      "passes": 0,
+      "accepted": false,
+      "outcome": "rejected: score 0.0000 (passes 0) did not beat 0.0000"
+    },
+    {
+      "step": 3,
+      "packet_seen": true,
+      "request_sha256": "3a9fb2a19fe3d54ad1b788570e61222cff7a426a04a04e9114f6e5ce08839044",
+      "finish_reason": "stop",
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "score": 2.098371663589055e-06,
+      "passes": 0,
+      "accepted": false,
+      "outcome": "rejected: score 0.0000 (passes 0) did not beat 0.0000"
+    },
+    {
+      "step": 4,
+      "packet_seen": true,
+      "request_sha256": "c02ab4d55fb37f7cdd702b70d0da2e16a80125c4ce2c168eb5541aad0e866237",
+      "finish_reason": "length",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 5,
+      "packet_seen": true,
+      "request_sha256": "929365c8082b738778f333c597dc644f1cf8d36432075c2a41a517a6e96b9dac",
+      "finish_reason": "stop",
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "score": 2.098371663589055e-06,
+      "passes": 0,
+      "accepted": false,
+      "outcome": "rejected: score 0.0000 (passes 0) did not beat 0.0000"
+    },
+    {
+      "step": 6,
+      "packet_seen": true,
+      "request_sha256": "c023c198d4bc6c264993c575a3218c022483c5d2310dc94d87146a7e9ec01999",
+      "finish_reason": "stop",
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "score": 2.098371663589055e-06,
+      "passes": 0,
+      "accepted": false,
+      "outcome": "rejected: score 0.0000 (passes 0) did not beat 0.0000"
+    }
+  ],
+  "mechanism_evidence": {
+    "accepted_steps": [],
+    "packet_seen_steps": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "truncated_steps": [
+      4
+    ]
+  },
+  "candidate_evaluations": {
+    "requests": 7,
+    "failures": 0,
+    "best": {
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "violation_sum": "233998",
+      "source_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc"
+    },
+    "m_values": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "evaluation_trace": [
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 1,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": true
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 2,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 3,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 4,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 5,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 6,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 7,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": true
+    }
+  ],
+  "proposal_hashes": [
+    "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e"
+  ],
+  "seed_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06,
+    "passed_m": []
+  },
+  "verified_best_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "verified_best_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06,
+    "passed_m": []
+  },
+  "worked_examples": [
+    4,
+    5
+  ],
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "NO_GAIN"
+}

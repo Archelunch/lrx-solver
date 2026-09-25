@@ -1,0 +1,35 @@
+08:44:13 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:44:13 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:44:13 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:44:13 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:44:14 [controller] AdaEvolve: Running 4 iterations across 2 islands
+08:45:17 [controller] Iteration 1: Program 0175848c (parent: 42d47c93) completed in 62.84s (llm: 0.07s, eval: 62.76s)
+08:45:17 [controller] New best solution found at iteration 1
+08:45:17 [runner] Checkpoint 1: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:45:17 [controller] Iteration 2: Program 5372e382 (parent: 540de1c2) completed in 0.27s (llm: 0.02s, eval: 0.25s)
+08:45:17 [runner] Checkpoint 2: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:45:21 [controller] Iteration 3: Program c2961473 (parent: 0175848c) completed in 4.32s (llm: 0.01s, eval: 4.32s)
+08:45:21 [runner] Checkpoint 3: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:45:21 [controller] Iteration 4: Program 6b3dcbf4 (parent: 5372e382) completed in 0.03s (llm: 0.01s, eval: 0.02s)
+08:45:21 [runner] Checkpoint 4: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:45:21 [controller] AdaEvolve completed
+08:45:21 [runner] Checkpoint 4: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:45:22 [runner] Test evaluation for best program: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:45:22 [runner] Discovery completed. Best: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000, test_combined_score=57.6201, test_screen_certificates=57.0000, test_screen_valid=306.0000, test_screen_gap_sum=967.4527, test_full_certificates=286.0000
+Using search algorithm: adaevolve
+
+Discovery complete!
+Best program metrics:
+  combined_score: 57.6201
+  screen_certificates: 57.0000
+  screen_valid: 306.0000
+  screen_gap_sum: 967.4527
+  full_certificates: 286.0000
+  test_combined_score: 57.6201
+  test_screen_certificates: 57.0000
+  test_screen_valid: 306.0000
+  test_screen_gap_sum: 967.4527
+  test_full_certificates: 286.0000
+
+Latest checkpoint: /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-fixed-adaevolve/output/sky/checkpoints/checkpoint_4
+To resume: --checkpoint /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-fixed-adaevolve/output/sky/checkpoints/checkpoint_4

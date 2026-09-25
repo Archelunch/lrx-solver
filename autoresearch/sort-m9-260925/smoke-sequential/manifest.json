@@ -1,0 +1,249 @@
+{
+  "engine": "sequential",
+  "task": "sort-m9-260925",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/frozen/manifest.json",
+  "frozen_manifest_sha256": "c98fd6136f4df9038188f754c5e458758e989f0d83efc052349858145affca4e",
+  "development_sha256": "f4dd4752758b573c6ba246f612fbbef5340bae754c14e63438fcc945eabb3346",
+  "seed_sha256": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+  "broker_url": "http://127.0.0.1:8942/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 3,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "max_evals": 40,
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-sequential",
+  "status": "COMPLETE",
+  "steps": [
+    {
+      "step": 1,
+      "packet_seen": true,
+      "request_sha256": "be6d3ed9ba06d57e0f42f3a7b3f5b6fdf9a63f7a16d2a0203d5fc1a1d6f3cb68",
+      "finish_reason": "stop",
+      "candidate_hash": "6e93b44e6406395f12feb6f933597f4ca9463ee2c1c648ab465dcfef8d18563e",
+      "score": 1.0809702689948089,
+      "within_budget": 1356,
+      "accepted": true
+    },
+    {
+      "step": 2,
+      "packet_seen": true,
+      "request_sha256": "1bc4b53b65845ab62c477e9324c3a14ad56c9795b67063502f3e6ffe1cbf996d",
+      "finish_reason": "stop",
+      "candidate_hash": "33ba84bfca9ad66b7ab417fd3660e8d489c93e55edf76702913541599084032e",
+      "score": 0.09480374775866858,
+      "within_budget": 128,
+      "accepted": false,
+      "outcome": "rejected: combined 0.0948 (within 128, invalid 0) did not beat 1.0810"
+    },
+    {
+      "step": 3,
+      "packet_seen": true,
+      "request_sha256": "7e4ce4a726c2e60a06d351253a309ae6e70aec43b360972828773361f7ac8332",
+      "finish_reason": "stop",
+      "candidate_hash": "33ba84bfca9ad66b7ab417fd3660e8d489c93e55edf76702913541599084032e",
+      "score": 0.09480374775866858,
+      "within_budget": 128,
+      "accepted": false,
+      "outcome": "rejected: combined 0.0948 (within 128, invalid 0) did not beat 1.0810"
+    }
+  ],
+  "mechanism_evidence": {
+    "accepted_steps": [
+      1
+    ],
+    "packet_seen_steps": [
+      1,
+      2,
+      3
+    ],
+    "truncated_steps": []
+  },
+  "candidate_evaluations": {
+    "requests": 5,
+    "failures": 0,
+    "best": {
+      "combined_score": 1.0809702689948089,
+      "within_budget": 1356,
+      "valid": 1500,
+      "mean_excess": 1.8253333333333333,
+      "candidate_hash": "6e93b44e6406395f12feb6f933597f4ca9463ee2c1c648ab465dcfef8d18563e"
+    },
+    "states": 1500
+  },
+  "evaluation_trace": [
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+      "ordinal": 1,
+      "final": true,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 1.0809702689948089,
+      "within_budget": 1356,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 1.8253333333333333,
+      "cache_hit": false,
+      "candidate_hash": "6e93b44e6406395f12feb6f933597f4ca9463ee2c1c648ab465dcfef8d18563e",
+      "ordinal": 2,
+      "final": false,
+      "packet_sha256": "86c513cc435b84103d627248924f48d3fa75aa0623193b77847fd5d4f32aa5e8"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": false,
+      "candidate_hash": "33ba84bfca9ad66b7ab417fd3660e8d489c93e55edf76702913541599084032e",
+      "ordinal": 3,
+      "final": false,
+      "packet_sha256": "3b0584f66a18f21288092184c224e27d3408a0f366e47dc72c709eabcc87ed2d"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "33ba84bfca9ad66b7ab417fd3660e8d489c93e55edf76702913541599084032e",
+      "ordinal": 4,
+      "final": false,
+      "packet_sha256": "3b0584f66a18f21288092184c224e27d3408a0f366e47dc72c709eabcc87ed2d"
+    },
+    {
+      "combined_score": 1.0809702689948089,
+      "within_budget": 1356,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 1.8253333333333333,
+      "cache_hit": true,
+      "candidate_hash": "6e93b44e6406395f12feb6f933597f4ca9463ee2c1c648ab465dcfef8d18563e",
+      "ordinal": 5,
+      "final": true,
+      "packet_sha256": "86c513cc435b84103d627248924f48d3fa75aa0623193b77847fd5d4f32aa5e8"
+    }
+  ],
+  "proposal_hashes": [
+    "6e93b44e6406395f12feb6f933597f4ca9463ee2c1c648ab465dcfef8d18563e",
+    "33ba84bfca9ad66b7ab417fd3660e8d489c93e55edf76702913541599084032e"
+  ],
+  "seed_result": {
+    "combined_score": 0.09480374775866858,
+    "within_budget": 128,
+    "valid": 1500,
+    "invalid": 0,
+    "mean_excess": 51.796,
+    "per_r": {
+      "m9r1": {
+        "states": 300,
+        "within": 35,
+        "valid": 300,
+        "excess_sum": 9652,
+        "within_rate": 0.11666666666666667,
+        "mean_excess": 32.17333333333333
+      },
+      "m9r2": {
+        "states": 300,
+        "within": 26,
+        "valid": 300,
+        "excess_sum": 12883,
+        "within_rate": 0.08666666666666667,
+        "mean_excess": 42.943333333333335
+      },
+      "m9r3": {
+        "states": 300,
+        "within": 23,
+        "valid": 300,
+        "excess_sum": 15038,
+        "within_rate": 0.07666666666666666,
+        "mean_excess": 50.126666666666665
+      },
+      "m9r4": {
+        "states": 300,
+        "within": 24,
+        "valid": 300,
+        "excess_sum": 18399,
+        "within_rate": 0.08,
+        "mean_excess": 61.33
+      },
+      "m9r5": {
+        "states": 300,
+        "within": 20,
+        "valid": 300,
+        "excess_sum": 21722,
+        "within_rate": 0.06666666666666667,
+        "mean_excess": 72.40666666666667
+      }
+    }
+  },
+  "verified_best_hash": "6e93b44e6406395f12feb6f933597f4ca9463ee2c1c648ab465dcfef8d18563e",
+  "verified_best_result": {
+    "combined_score": 1.0809702689948089,
+    "within_budget": 1356,
+    "valid": 1500,
+    "invalid": 0,
+    "mean_excess": 1.8253333333333333,
+    "per_r": {
+      "m9r1": {
+        "states": 300,
+        "within": 299,
+        "valid": 300,
+        "excess_sum": 334,
+        "within_rate": 0.9966666666666667,
+        "mean_excess": 1.1133333333333333
+      },
+      "m9r2": {
+        "states": 300,
+        "within": 288,
+        "valid": 300,
+        "excess_sum": 469,
+        "within_rate": 0.96,
+        "mean_excess": 1.5633333333333332
+      },
+      "m9r3": {
+        "states": 300,
+        "within": 268,
+        "valid": 300,
+        "excess_sum": 510,
+        "within_rate": 0.8933333333333333,
+        "mean_excess": 1.7
+      },
+      "m9r4": {
+        "states": 300,
+        "within": 252,
+        "valid": 300,
+        "excess_sum": 685,
+        "within_rate": 0.84,
+        "mean_excess": 2.283333333333333
+      },
+      "m9r5": {
+        "states": 300,
+        "within": 249,
+        "valid": 300,
+        "excess_sum": 740,
+        "within_rate": 0.83,
+        "mean_excess": 2.466666666666667
+      }
+    }
+  },
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "MORE_WITHIN_BUDGET"
+}

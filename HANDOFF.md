@@ -2,6 +2,39 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Latest iteration: sort-m9 v2 campaign, engines beat controls on holdout (2026-09-25)
+
+Task `sort_word(v)` for m=9 with exact BFS scoring, 0.2 s CPU per state
+(search cannot pass), worst-r uniformity term, cyclic-sweep seed. Holdout 2100
+states incl. (9,6) and (10,3), once, audit 0 disagreements: naive 157, sweep
+control 1846, sequential control 1918 (collapsed to 136/300 on unseen r=6),
+EvoX 2053, AdaEvolve 2059, GEPA 2080. $4.58. Descriptive, one seed per arm.
+GEPA's best is a heuristic portfolio on the seed construction, no length bound
+(`autoresearch/sort-m9-260925/REPORT.md`, `BEST-GEPA-CONSTRUCTION.md`,
+`GUARD-NOTE.md`). New exact tables: (9,6) radius 79 < T=80 (first strict gap
+at m>=8), (10,3) radius 71 = T. Correlation rerun with fixed plumbing
+(hash bca29cd3) running after it. Next: seed SkyDiscover's random_seed,
+three seeds per arm, reward bounded constructions over portfolios.
+
+## Latest iteration: trace audit, plumbing fixes, exact m=9 tables (2026-09-25)
+
+A trace audit (`autoresearch/TRACE-AUDIT-260925.md`) found eight plumbing
+defects that compromised the correlation campaign (fraction scored by float,
+shared cap drained before EvoX, over-strict output parsing, repeated prompts,
+GEPA minibatch over one example, stale best-so-far, truncation, misleading
+status label). All fixed with 26 regression tests (452 tests OK); the
+"engines failed" statement for that campaign is withdrawn pending a rerun.
+Exact BFS tables now cover (9,4), (9,5), (8,5), (8,6): radii equal T_m(n).
+The group's outer-layer class at m=9 is 94-96 % of all states for r<=5, so
+their necessary condition barely restricts at small m; exact pointwise lifting
+constants K = 14..20 recorded (`autoresearch/outer-layer-260925/REPORT.md`,
+claims Session 13). Next candidate engine task: a uniform sorting program for
+m=9 scored by slack against exact distances (train r<=5, holdout r=6 and
+(10,3)); then an optional $5 rerun of the correlation campaign with fixed
+plumbing. Lift broker output limit for the next run is in
+`autoresearch/lift-m9-260924/broker-config.next.json` (8192). Nothing
+committed since 4aa3c62.
+
 ## Latest iteration: correlation certificate, reproduction and campaign (2026-09-25)
 
 Target: a universal coefficient formula for the group's Theorem 3 certificate

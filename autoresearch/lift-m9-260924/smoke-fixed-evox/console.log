@@ -1,0 +1,39 @@
+08:54:21 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:54:21 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:54:21 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:54:21 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+08:54:21 [controller] Meta-search LLM connectivity verified (guide: http://127.0.0.1:8994/v1, meta: http://127.0.0.1:8994/v1)
+08:55:23 [default_discovery_controller] Iteration 1: Program c6aa7d54-3551-4580-aa55-0150cc47b59c (parent: a3c4a12b-ba8d-4de9-b74a-f566baf34cd0) completed in 61.94s (llm: 0.01s, eval: 61.93s)
+08:55:23 [runner] Checkpoint 1: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:55:23 [default_discovery_controller] 🌟 New best solution found at iteration 1
+08:55:24 [default_discovery_controller] Iteration 2: Program 4a294449-39c4-4073-a73d-eabd5d3417cd (parent: a3c4a12b-ba8d-4de9-b74a-f566baf34cd0) completed in 0.25s (llm: 0.01s, eval: 0.24s)
+08:55:24 [runner] Checkpoint 2: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:55:27 [default_discovery_controller] Iteration 3: Program 0fdc531f-ff00-4d2b-a2ec-72cd8ab953bf (parent: c6aa7d54-3551-4580-aa55-0150cc47b59c) completed in 3.81s (llm: 0.01s, eval: 3.80s)
+08:55:27 [runner] Checkpoint 3: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:55:28 [default_discovery_controller] Iteration 4: Program 2e5086d8-12db-4b4d-b74d-3fbbbfd27728 (parent: a3c4a12b-ba8d-4de9-b74a-f566baf34cd0) completed in 0.28s (llm: 0.01s, eval: 0.27s)
+08:55:28 [runner] Checkpoint 4: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:55:28 [default_discovery_controller] Iteration 5: Program 75cd9213-73ce-47ef-ae35-b22c3cd0c482 (parent: c6aa7d54-3551-4580-aa55-0150cc47b59c) completed in 0.03s (llm: 0.01s, eval: 0.02s)
+08:55:28 [runner] Checkpoint 5: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:55:28 [default_discovery_controller] Iteration 6: Program 723c08cb-ce5d-4e15-8c8b-d03b2ef7bda4 (parent: a3c4a12b-ba8d-4de9-b74a-f566baf34cd0) completed in 0.26s (llm: 0.01s, eval: 0.25s)
+08:55:28 [runner] Checkpoint 6: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:55:28 [controller] [SOLUTION EVOLUTION] Evolution completed: evox
+08:55:28 [runner] Checkpoint 6: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:55:28 [runner] Test evaluation for best program: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+08:55:28 [runner] Discovery completed. Best: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000, test_combined_score=57.6201, test_screen_certificates=57.0000, test_screen_valid=306.0000, test_screen_gap_sum=967.4527, test_full_certificates=286.0000
+Using search algorithm: evox
+
+Discovery complete!
+Best program metrics:
+  combined_score: 57.6201
+  screen_certificates: 57.0000
+  screen_valid: 306.0000
+  screen_gap_sum: 967.4527
+  full_certificates: 286.0000
+  test_combined_score: 57.6201
+  test_screen_certificates: 57.0000
+  test_screen_valid: 306.0000
+  test_screen_gap_sum: 967.4527
+  test_full_certificates: 286.0000
+
+Latest checkpoint: /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-fixed-evox/output/sky/checkpoints/checkpoint_6
+To resume: --checkpoint /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-fixed-evox/output/sky/checkpoints/checkpoint_6

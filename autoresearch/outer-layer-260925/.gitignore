@@ -1,0 +1,17 @@
+eval-cache/
+live-*/verified/evaluations/
+live-*/output/
+live-*/stage/
+smoke-*/output/
+smoke-*/verified/
+smoke-*/stage/
+smoke-v2-*/
+first-prompt-capture*/
+*.receipts/
+*.sqlite
+*.npz
+*.bin
+finalists/raw/
+frames/
+*.log
+class_bitmap*

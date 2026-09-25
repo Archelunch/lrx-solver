@@ -470,3 +470,65 @@ A live campaign of GEPA / AdaEvolve / EvoX / sequential on the program
 (m = 4, 5) on development and none on holdout m = 13..20; $3.58 spent
 (`autoresearch/corr-cert-260924/REPORT-CAMPAIGN.md`). Engines do not solve
 exact dual feasibility; the deterministic LP did.
+Correction (2026-09-25): a trace audit (`autoresearch/TRACE-AUDIT-260925.md`)
+found plumbing defects that invalidate the engine comparison in the
+correlation campaign (fraction-to-float scoring bug, exhausted shared cap,
+over-strict output parsing, repeated prompts, stale packet line). The
+deterministic mathematical results stand; the "engines failed" statement is
+withdrawn pending a rerun with fixed plumbing.
+
+## Session 13: exact m=9 tables and the outer-layer class (2026-09-25)
+
+New exact radii by complete ranked BFS (`src/lrx/table_bfs.py`, tables under
+`datasets/generated/outer-layer-260925/`, sha256 recorded):
+(9,4) radius 66 on 259,459,200 states; (9,5) radius 73 on 726,485,760 states;
+(8,5) 60; (8,6) 66. All equal T_m(n). Together with the locked tables, the
+conjecture is verified at m=9 for r<=5 and at m=8 for r<=6.
+
+Against the group's note of 2026-09-25 (deletion criterion, Theorems 1-2,
+condition (6)): the class of m=9 states whose every single-label deletion lies
+in the outer layer P-c_p < d_q <= P contains 93.7 / 95.2 / 95.7 / 94.5 / 94.5 %
+of all states for r=1..5 (full enumeration, no sampling), because each (8,r)
+radius equals P. Theorem 2 alone proves the remaining 5-6 %, whose distances
+stay 20-29 below T. Every class member is within budget (class maximum equals
+the radius). Exact pointwise lifting constants: d(v) <= min_q d_q(v) + K with
+K = 14, 15, 17, 18, 20 for r=1..5, exceeding n-1 by 5..7. Distance-T states
+number 1, 2, 5, 1, 6; ten of fifteen have the label cycle exactly reversed.
+The note's example is confirmed: d(u)=34 (their upper bound is tight), d(v)=43.
+Cross-checks (independent BFS, rank checks, literal replay of extremal words):
+0 failures. Finite results for m=9, r<=5; patterns are observations.
+
+Addendum (2026-09-25, tables for the sort task): two further complete ranked
+BFS tables, built with the unmodified `table_bfs.build_table` and verified by
+an independent checker (sha256, layer sums, triangle consistency, literal
+replay of shortest words; `autoresearch/outer-layer-260925/INDEPENDENT-CHECK.md`):
+(10,3): 1,037,836,800 states, radius 71 = T_10(13), 4 states at the radius,
+sha256 6deed7ea4ad9ea199a12877fe8c50485207f39d35814b9ff591d2a4fa505285f.
+(9,6): 1,816,214,400 states, radius **79 < T_9(15) = 80**, 26 states at 79,
+no state at 80, sha256 4f8cc2c236511a5f0fe3f7462c8a32180050132edca41ec567d4c892ddcee6dd.
+This is the first computed case with m >= 8 where the visible sorting radius
+is strictly below T_m(n); the earlier statement "all m>=8 values equal
+T_m(n)" in the table above holds for the graphs listed there, not universally.
+The reversal (0^6,9,...,1) and the reflection image (2,1,0^6,9,...,3) have
+distance 73 at (9,6), not extremal. Tables live in `datasets/generated/`
+(gitignored); hashes above identify them.
+
+## Session 14: uniform sorting program for m=9, live campaign (2026-09-25)
+
+Task: evolve `sort_word(v)` for m=9 with exact scoring against complete BFS
+tables, 0.2 s CPU per state so state-space search cannot pass. Development
+1500 states (r=1..5), holdout 2100 states including (9,6) and (10,3),
+evaluated once; independent audit 0 disagreements
+(`autoresearch/sort-m9-260925/REPORT.md`). Holdout within-budget counts:
+naive 157, cyclic-sweep control 1846, sequential control 1918 (collapsed to
+136/300 on the unseen r=6), EvoX 2053, AdaEvolve 2059, GEPA 2080 of 2100;
+GEPA 290/300 on (9,6) and 295/300 on (10,3). Each within-budget word is an
+exact certificate for its one state. No program meets T on all sampled
+states; GEPA's best is a heuristic portfolio on the seed's construction with
+no length bound. One seed per arm: descriptive, not an engine ranking. The
+general conjecture is untouched.
+Correlation rerun with fixed plumbing (2026-09-25, v3): still no certificate
+beyond the worked examples m=4,5 in any arm; three campaigns now agree. The
+negative is specific to LLM proposers on exact dual feasibility; the
+mathematics from the deterministic LP work stands
+(`autoresearch/corr-cert-260924/REPORT-CAMPAIGN.md`).

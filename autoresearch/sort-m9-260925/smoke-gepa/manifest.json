@@ -1,0 +1,362 @@
+{
+  "engine": "gepa",
+  "task": "sort-m9-260925",
+  "upstream": "gepa==0.1.4",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/frozen/manifest.json",
+  "frozen_manifest_sha256": "c98fd6136f4df9038188f754c5e458758e989f0d83efc052349858145affca4e",
+  "development_sha256": "f4dd4752758b573c6ba246f612fbbef5340bae754c14e63438fcc945eabb3346",
+  "seed_sha256": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+  "seed_result": {
+    "combined_score": 0.09480374775866858,
+    "within_budget": 128,
+    "valid": 1500,
+    "invalid": 0,
+    "mean_excess": 51.796,
+    "per_r": {
+      "m9r1": {
+        "states": 300,
+        "within": 35,
+        "valid": 300,
+        "excess_sum": 9652,
+        "within_rate": 0.11666666666666667,
+        "mean_excess": 32.17333333333333
+      },
+      "m9r2": {
+        "states": 300,
+        "within": 26,
+        "valid": 300,
+        "excess_sum": 12883,
+        "within_rate": 0.08666666666666667,
+        "mean_excess": 42.943333333333335
+      },
+      "m9r3": {
+        "states": 300,
+        "within": 23,
+        "valid": 300,
+        "excess_sum": 15038,
+        "within_rate": 0.07666666666666666,
+        "mean_excess": 50.126666666666665
+      },
+      "m9r4": {
+        "states": 300,
+        "within": 24,
+        "valid": 300,
+        "excess_sum": 18399,
+        "within_rate": 0.08,
+        "mean_excess": 61.33
+      },
+      "m9r5": {
+        "states": 300,
+        "within": 20,
+        "valid": 300,
+        "excess_sum": 21722,
+        "within_rate": 0.06666666666666667,
+        "mean_excess": 72.40666666666667
+      }
+    }
+  },
+  "broker_url": "http://127.0.0.1:8942/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 2,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "max_evals": 40,
+  "wall_seconds": 1800,
+  "verifier_url": "http://127.0.0.1:60706/evaluate",
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/stage/sort_official_worker.py",
+    "_gepa_worker",
+    "--seed",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/stage/initial_program.py",
+    "--dataset",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/stage/dataset.json",
+    "--run-dir",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/output",
+    "--broker-url",
+    "http://127.0.0.1:8942/v1",
+    "--model",
+    "gemini-3.8-flash",
+    "--verifier-url",
+    "http://127.0.0.1:60706/evaluate",
+    "--max-tokens",
+    "8192",
+    "--proposals",
+    "2",
+    "--llm-timeout",
+    "60",
+    "--eval-timeout",
+    "900",
+    "--reasoning-effort",
+    "low"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/stage/sort_official_worker.py",
+    "_gepa_worker",
+    "--seed",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/stage/initial_program.py",
+    "--dataset",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/stage/dataset.json",
+    "--run-dir",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/output",
+    "--broker-url",
+    "http://127.0.0.1:8942/v1",
+    "--model",
+    "gemini-3.8-flash",
+    "--verifier-url",
+    "http://127.0.0.1:60706/evaluate",
+    "--max-tokens",
+    "8192",
+    "--proposals",
+    "2",
+    "--llm-timeout",
+    "60",
+    "--eval-timeout",
+    "900",
+    "--reasoning-effort",
+    "low"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-gepa",
+  "returncode": 0,
+  "engine_seconds": 2.0094973330269568,
+  "mechanism_evidence": {
+    "reflection_batches": 0,
+    "mandatory_hard_case_ids": [],
+    "model_valid_responses": 2,
+    "model_preflight_failures": 0,
+    "lineage": {
+      "parents": [
+        [
+          null
+        ],
+        [
+          0
+        ]
+      ],
+      "val_aggregate_scores": [
+        0.09480374775866858,
+        1.0809702689948089
+      ],
+      "discovery_eval_counts": [
+        0,
+        3
+      ],
+      "total_metric_calls": 6,
+      "num_full_val_evals": 2
+    },
+    "best_idx": 1,
+    "candidate_sha256": [
+      "e5649d17fe2ede837d4d5814a929445171ef4bf64056a70901993943c32bf1ab",
+      "46cc312fd7b21412f238c49d1e9e98f2ef9e2c73b572f673b86d8327ccc24980"
+    ],
+    "reflection_receipts": [
+      {
+        "call": 1,
+        "packet_seen": true,
+        "request_sha256": "ed4ec1eb684f56656082c232510129e49b293955c1d4330633b97147d54a2576",
+        "request_chars": 6409,
+        "finish_reason": "stop"
+      },
+      {
+        "call": 2,
+        "packet_seen": true,
+        "request_sha256": "651822b7e4af78bf9162bd0b9a8c67e6dcf7e664dd937c15f5384b56efaecb2e",
+        "request_chars": 9555,
+        "finish_reason": "stop"
+      }
+    ]
+  },
+  "status": "COMPLETE",
+  "candidate_evaluations": {
+    "requests": 9,
+    "failures": 0,
+    "best": {
+      "combined_score": 1.0809702689948089,
+      "within_budget": 1356,
+      "valid": 1500,
+      "mean_excess": 1.8253333333333333,
+      "candidate_hash": "9fb4905a921454f490ce2e4057d7acd4851297df214f9215c49f4d3c8a1aa7f6"
+    },
+    "states": 1500
+  },
+  "evaluation_trace": [
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+      "ordinal": 1,
+      "final": true,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+      "ordinal": 2,
+      "final": false,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+      "ordinal": 3,
+      "final": false,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 1.0809702689948089,
+      "within_budget": 1356,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 1.8253333333333333,
+      "cache_hit": false,
+      "candidate_hash": "9fb4905a921454f490ce2e4057d7acd4851297df214f9215c49f4d3c8a1aa7f6",
+      "ordinal": 4,
+      "final": false,
+      "packet_sha256": "86c513cc435b84103d627248924f48d3fa75aa0623193b77847fd5d4f32aa5e8"
+    },
+    {
+      "combined_score": 1.0809702689948089,
+      "within_budget": 1356,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 1.8253333333333333,
+      "cache_hit": true,
+      "candidate_hash": "9fb4905a921454f490ce2e4057d7acd4851297df214f9215c49f4d3c8a1aa7f6",
+      "ordinal": 5,
+      "final": false,
+      "packet_sha256": "86c513cc435b84103d627248924f48d3fa75aa0623193b77847fd5d4f32aa5e8"
+    },
+    {
+      "combined_score": 1.0809702689948089,
+      "within_budget": 1356,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 1.8253333333333333,
+      "cache_hit": true,
+      "candidate_hash": "9fb4905a921454f490ce2e4057d7acd4851297df214f9215c49f4d3c8a1aa7f6",
+      "ordinal": 6,
+      "final": false,
+      "packet_sha256": "86c513cc435b84103d627248924f48d3fa75aa0623193b77847fd5d4f32aa5e8"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": false,
+      "candidate_hash": "76fe5a7806235c141c874c4605dbfd281b78c7e3177f94647e3f0fe36d0aa534",
+      "ordinal": 7,
+      "final": false,
+      "packet_sha256": "3b0584f66a18f21288092184c224e27d3408a0f366e47dc72c709eabcc87ed2d"
+    },
+    {
+      "combined_score": 1.0809702689948089,
+      "within_budget": 1356,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 1.8253333333333333,
+      "cache_hit": true,
+      "candidate_hash": "9fb4905a921454f490ce2e4057d7acd4851297df214f9215c49f4d3c8a1aa7f6",
+      "ordinal": 8,
+      "final": false,
+      "packet_sha256": "86c513cc435b84103d627248924f48d3fa75aa0623193b77847fd5d4f32aa5e8"
+    },
+    {
+      "combined_score": 1.0809702689948089,
+      "within_budget": 1356,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 1.8253333333333333,
+      "cache_hit": true,
+      "candidate_hash": "9fb4905a921454f490ce2e4057d7acd4851297df214f9215c49f4d3c8a1aa7f6",
+      "ordinal": 9,
+      "final": true,
+      "packet_sha256": "86c513cc435b84103d627248924f48d3fa75aa0623193b77847fd5d4f32aa5e8"
+    }
+  ],
+  "proposal_hashes": [
+    "9fb4905a921454f490ce2e4057d7acd4851297df214f9215c49f4d3c8a1aa7f6",
+    "76fe5a7806235c141c874c4605dbfd281b78c7e3177f94647e3f0fe36d0aa534"
+  ],
+  "verified_best_hash": "9fb4905a921454f490ce2e4057d7acd4851297df214f9215c49f4d3c8a1aa7f6",
+  "verified_best_result": {
+    "combined_score": 1.0809702689948089,
+    "within_budget": 1356,
+    "valid": 1500,
+    "invalid": 0,
+    "mean_excess": 1.8253333333333333,
+    "per_r": {
+      "m9r1": {
+        "states": 300,
+        "within": 299,
+        "valid": 300,
+        "excess_sum": 334,
+        "within_rate": 0.9966666666666667,
+        "mean_excess": 1.1133333333333333
+      },
+      "m9r2": {
+        "states": 300,
+        "within": 288,
+        "valid": 300,
+        "excess_sum": 469,
+        "within_rate": 0.96,
+        "mean_excess": 1.5633333333333332
+      },
+      "m9r3": {
+        "states": 300,
+        "within": 268,
+        "valid": 300,
+        "excess_sum": 510,
+        "within_rate": 0.8933333333333333,
+        "mean_excess": 1.7
+      },
+      "m9r4": {
+        "states": 300,
+        "within": 252,
+        "valid": 300,
+        "excess_sum": 685,
+        "within_rate": 0.84,
+        "mean_excess": 2.283333333333333
+      },
+      "m9r5": {
+        "states": 300,
+        "within": 249,
+        "valid": 300,
+        "excess_sum": 740,
+        "within_rate": 0.83,
+        "mean_excess": 2.466666666666667
+      }
+    }
+  },
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "MORE_WITHIN_BUDGET"
+}

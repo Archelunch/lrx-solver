@@ -1,0 +1,104 @@
+{
+  "engine": "sequential",
+  "task": "corr-cert-260924",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/frozen/manifest.json",
+  "frozen_manifest_sha256": "051e7e22816b95a1612659990819aa9bdaef7fabcbb86c8500d0c0cb2291fdef",
+  "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
+  "seed_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "broker_url": "http://127.0.0.1:8895/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 30,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "max_evals": 200,
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/live-sequential-260925-145313",
+  "status": "BROKER_STOPPED",
+  "steps": [
+    {
+      "step": 1,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "broker stopped: HTTP Error 429: Too Many Requests"
+    }
+  ],
+  "mechanism_evidence": {
+    "accepted_steps": [],
+    "packet_seen_steps": [
+      1
+    ],
+    "truncated_steps": []
+  },
+  "candidate_evaluations": {
+    "requests": 2,
+    "failures": 0,
+    "best": {
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "violation_sum": "233998",
+      "source_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc"
+    },
+    "m_values": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "evaluation_trace": [
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 1,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": true
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 2,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": true
+    }
+  ],
+  "proposal_hashes": [],
+  "seed_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06,
+    "passed_m": []
+  },
+  "verified_best_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "verified_best_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06,
+    "passed_m": []
+  },
+  "worked_examples": [
+    4,
+    5
+  ],
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "NO_VALID_PROPOSAL",
+  "approved_payload_sha256": "bca29cd3d43fa9239f7c7d5e1c114e428f535a26f34980a2772cc6a6738ec125"
+}

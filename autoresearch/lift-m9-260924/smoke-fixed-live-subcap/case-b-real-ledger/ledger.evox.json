@@ -1,0 +1,49 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.00066,
+      "id": 1,
+      "input_tokens": 400,
+      "kind": "chat",
+      "output_tokens": 80,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-fixed-live-subcap/case-b-real-ledger/ledger.evox.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.0016698,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.00066,
+      "id": 2,
+      "input_tokens": 400,
+      "kind": "chat",
+      "output_tokens": 80,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-fixed-live-subcap/case-b-real-ledger/ledger.evox.json.receipts/attempt-0002.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.0016698,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.00066,
+      "id": 3,
+      "input_tokens": 400,
+      "kind": "chat",
+      "output_tokens": 80,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-fixed-live-subcap/case-b-real-ledger/ledger.evox.json.receipts/attempt-0003.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.0016698,
+      "role": "unknown",
+      "status": "ok"
+    }
+  ],
+  "consecutive_failures": 0,
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 0.825,
+    "max_requests": 5,
+    "max_usd": 1.0,
+    "output_rate": 4.125
+  },
+  "spent_usd": 0.00198
+}

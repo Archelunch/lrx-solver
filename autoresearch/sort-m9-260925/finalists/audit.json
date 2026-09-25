@@ -1,0 +1,80 @@
+{
+  "audit": {
+    "holdout": {
+      "adaevolve": {
+        "rows": 2100,
+        "checked_words": 2100,
+        "agree": 2100,
+        "disagree": []
+      },
+      "evox": {
+        "rows": 2100,
+        "checked_words": 2094,
+        "agree": 2100,
+        "disagree": []
+      },
+      "gepa": {
+        "rows": 2100,
+        "checked_words": 2100,
+        "agree": 2100,
+        "disagree": []
+      },
+      "sequential": {
+        "rows": 2100,
+        "checked_words": 1935,
+        "agree": 2100,
+        "disagree": []
+      },
+      "naive-control": {
+        "rows": 2100,
+        "checked_words": 2100,
+        "agree": 2100,
+        "disagree": []
+      },
+      "sweep-control": {
+        "rows": 2100,
+        "checked_words": 2100,
+        "agree": 2100,
+        "disagree": []
+      }
+    },
+    "development": {
+      "adaevolve": {
+        "rows": 1500,
+        "checked_words": 1500,
+        "agree": 1500,
+        "disagree": []
+      },
+      "evox": {
+        "rows": 1500,
+        "checked_words": 1500,
+        "agree": 1500,
+        "disagree": []
+      },
+      "gepa": {
+        "rows": 1500,
+        "checked_words": 1500,
+        "agree": 1500,
+        "disagree": []
+      },
+      "sequential": {
+        "rows": 1500,
+        "checked_words": 1500,
+        "agree": 1500,
+        "disagree": []
+      },
+      "naive-control": {
+        "rows": 1500,
+        "checked_words": 1500,
+        "agree": 1500,
+        "disagree": []
+      },
+      "sweep-control": {
+        "rows": 1500,
+        "checked_words": 1500,
+        "agree": 1500,
+        "disagree": []
+      }
+    }
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "engine": "evox",
+  "task": "sort-m9-260925",
+  "upstream": "skydiscover==0.2.0@0d932b690670a7e544388ad362e9876c8bd256a0",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/frozen/manifest.json",
+  "frozen_manifest_sha256": "c98fd6136f4df9038188f754c5e458758e989f0d83efc052349858145affca4e",
+  "development_sha256": "f4dd4752758b573c6ba246f612fbbef5340bae754c14e63438fcc945eabb3346",
+  "seed_sha256": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+  "seed_result": {
+    "combined_score": 0.09480374775866858,
+    "within_budget": 128,
+    "valid": 1500,
+    "invalid": 0,
+    "mean_excess": 51.796,
+    "per_r": {
+      "m9r1": {
+        "states": 300,
+        "within": 35,
+        "valid": 300,
+        "excess_sum": 9652,
+        "within_rate": 0.11666666666666667,
+        "mean_excess": 32.17333333333333
+      },
+      "m9r2": {
+        "states": 300,
+        "within": 26,
+        "valid": 300,
+        "excess_sum": 12883,
+        "within_rate": 0.08666666666666667,
+        "mean_excess": 42.943333333333335
+      },
+      "m9r3": {
+        "states": 300,
+        "within": 23,
+        "valid": 300,
+        "excess_sum": 15038,
+        "within_rate": 0.07666666666666666,
+        "mean_excess": 50.126666666666665
+      },
+      "m9r4": {
+        "states": 300,
+        "within": 24,
+        "valid": 300,
+        "excess_sum": 18399,
+        "within_rate": 0.08,
+        "mean_excess": 61.33
+      },
+      "m9r5": {
+        "states": 300,
+        "within": 20,
+        "valid": 300,
+        "excess_sum": 21722,
+        "within_rate": 0.06666666666666667,
+        "mean_excess": 72.40666666666667
+      }
+    }
+  },
+  "broker_url": "http://127.0.0.1:8942/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 3,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "max_evals": 40,
+  "wall_seconds": 1800,
+  "verifier_url": "http://127.0.0.1:60734/evaluate",
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/stage/sky-config.yaml",
+    "--search",
+    "evox",
+    "--iterations",
+    "3",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/stage/sky-config.yaml",
+    "--search",
+    "evox",
+    "--iterations",
+    "3",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/sort-m9-260925/smoke-evox",
+  "returncode": 0,
+  "engine_seconds": 1.6377670830115676,
+  "mechanism_evidence": {
+    "configured_solution_iterations": 3,
+    "generated_strategy_artifacts": [],
+    "fallback_strategy_records": [],
+    "strategy_adoption_log_observed": false,
+    "strategy_adopted_confirmed": false,
+    "solution_diff_parse_failures": 0,
+    "evox_meta_search_calls": null,
+    "evox_solution_calls": null,
+    "evox_meta_search_share": null
+  },
+  "status": "COMPLETE",
+  "candidate_evaluations": {
+    "requests": 7,
+    "failures": 0,
+    "best": {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "mean_excess": 51.796,
+      "candidate_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052"
+    },
+    "states": 1500
+  },
+  "evaluation_trace": [
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+      "ordinal": 1,
+      "final": true,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+      "ordinal": 2,
+      "final": false,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "e5b85468dc303b547fdfb560195f3fc32bb2527f14cbfbae0d89e16b0a9940b4",
+      "ordinal": 3,
+      "final": false,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "33ba84bfca9ad66b7ab417fd3660e8d489c93e55edf76702913541599084032e",
+      "ordinal": 4,
+      "final": false,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": false,
+      "candidate_hash": "b954b6f2efc5dac3b2462259d21bae5b9d72de9dcaf81cad9419b1ea55a2a0a5",
+      "ordinal": 5,
+      "final": false,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+      "ordinal": 6,
+      "final": false,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    },
+    {
+      "combined_score": 0.09480374775866858,
+      "within_budget": 128,
+      "valid": 1500,
+      "invalid": 0,
+      "mean_excess": 51.796,
+      "cache_hit": true,
+      "candidate_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+      "ordinal": 7,
+      "final": true,
+      "packet_sha256": "d099e596a81adb2ec2e3e9f5c1a3fa7538406889b1c266734d158e3ab84a193f"
+    }
+  ],
+  "proposal_hashes": [
+    "e5b85468dc303b547fdfb560195f3fc32bb2527f14cbfbae0d89e16b0a9940b4",
+    "33ba84bfca9ad66b7ab417fd3660e8d489c93e55edf76702913541599084032e",
+    "b954b6f2efc5dac3b2462259d21bae5b9d72de9dcaf81cad9419b1ea55a2a0a5"
+  ],
+  "verified_best_hash": "2b7979ee5892ad8ad0ef427f6bb9a2e2441f24457456dceac808056486d66052",
+  "verified_best_result": {
+    "combined_score": 0.09480374775866858,
+    "within_budget": 128,
+    "valid": 1500,
+    "invalid": 0,
+    "mean_excess": 51.796,
+    "per_r": {
+      "m9r1": {
+        "states": 300,
+        "within": 35,
+        "valid": 300,
+        "excess_sum": 9652,
+        "within_rate": 0.11666666666666667,
+        "mean_excess": 32.17333333333333
+      },
+      "m9r2": {
+        "states": 300,
+        "within": 26,
+        "valid": 300,
+        "excess_sum": 12883,
+        "within_rate": 0.08666666666666667,
+        "mean_excess": 42.943333333333335
+      },
+      "m9r3": {
+        "states": 300,
+        "within": 23,
+        "valid": 300,
+        "excess_sum": 15038,
+        "within_rate": 0.07666666666666666,
+        "mean_excess": 50.126666666666665
+      },
+      "m9r4": {
+        "states": 300,
+        "within": 24,
+        "valid": 300,
+        "excess_sum": 18399,
+        "within_rate": 0.08,
+        "mean_excess": 61.33
+      },
+      "m9r5": {
+        "states": 300,
+        "within": 20,
+        "valid": 300,
+        "excess_sum": 21722,
+        "within_rate": 0.06666666666666667,
+        "mean_excess": 72.40666666666667
+      }
+    }
+  },
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "NO_GAIN"
+}

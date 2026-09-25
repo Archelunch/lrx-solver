@@ -1,0 +1,58 @@
+{
+  "audit": {
+    "holdout": {
+      "adaevolve": {
+        "claimed": 0,
+        "agree": 0,
+        "disagree": []
+      },
+      "evox": {
+        "claimed": 0,
+        "agree": 0,
+        "disagree": []
+      },
+      "gepa": {
+        "claimed": 0,
+        "agree": 0,
+        "disagree": []
+      },
+      "sequential": {
+        "claimed": 0,
+        "agree": 0,
+        "disagree": []
+      },
+      "naive-control": {
+        "claimed": 0,
+        "agree": 0,
+        "disagree": []
+      }
+    },
+    "development": {
+      "adaevolve": {
+        "claimed": 2,
+        "agree": 2,
+        "disagree": []
+      },
+      "evox": {
+        "claimed": 0,
+        "agree": 0,
+        "disagree": []
+      },
+      "gepa": {
+        "claimed": 2,
+        "agree": 2,
+        "disagree": []
+      },
+      "sequential": {
+        "claimed": 2,
+        "agree": 2,
+        "disagree": []
+      },
+      "naive-control": {
+        "claimed": 0,
+        "agree": 0,
+        "disagree": []
+      }
+    }
+  }
+}

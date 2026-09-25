@@ -34,7 +34,10 @@ class LiftBackendsTest(unittest.TestCase):
     def test_preflight(self):
         good = "```python\ndef lift(instance):\n    return {'words': []}\n```"
         self.assertIn('def lift', B.preflight_source(good, 'stop'))
-        for bad, finish in ((good, 'length'), ('text\n' + good, 'stop'),
+        # Defect 3 (autoresearch/TRACE-AUDIT-260925.md): prose around a fenced
+        # block is accepted now, not rejected.
+        self.assertIn('def lift', B.preflight_source('Sure, here:\n' + good + '\nHope that helps.', 'stop'))
+        for bad, finish in ((good, 'length'),
                             ("```python\ndef propose_words(case):\n    return []\n```", 'stop')):
             with self.assertRaises((ValueError, SyntaxError)):
                 B.preflight_source(bad, finish)

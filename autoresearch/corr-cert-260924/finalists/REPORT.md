@@ -6,10 +6,10 @@ Evaluator `corr-eval-1`. Development sha256 `95fab8d7159cfc8f`, holdout sha256 `
 
 | Arm | Model attempts | Valid proposals / evaluated | Invalid / truncated | Accepted | Dev passes | Holdout passes | Min violation_sum on a miss (dev) | Audit agree (dev / holdout) | USD (ledger) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adaevolve | 56 | 21 / 40 | 19 / 25 | 5 | 2/9 | 0/8 | 1293.667 | 2/2 / 0/0 | 1.5230 |
-| evox | 0 | 0 / 0 | 0 / 0 | 0 | 0/9 | 0/8 | 264.000 | 0/0 / 0/0 | 0.0000 |
-| gepa | 31 | 30 / 30 | 1 / 1 | 5 | 2/9 | 0/8 | 184.667 | 2/2 / 0/0 | 0.6586 |
-| sequential | 60 | 1 / 1 | 59 / 14 | 1 | 2/9 | 0/8 | 1170.000 | 2/2 / 0/0 | 1.0666 |
+| adaevolve | 84 | 21 / 40 | 19 / 39 | 5 | 2/9 | 0/8 | 1293.667 | 2/2 / 0/0 | 2.3356 |
+| evox | 23 | 0 / 0 | 0 / 11 | 0 | 0/9 | 0/8 | 264.000 | 0/0 / 0/0 | 0.5131 |
+| gepa | 66 | 30 / 30 | 1 / 15 | 5 | 2/9 | 0/8 | 184.667 | 2/2 / 0/0 | 1.6671 |
+| sequential | 63 | 1 / 1 | 59 / 15 | 1 | 2/9 | 0/8 | 1170.000 | 2/2 / 0/0 | 1.2042 |
 | naive-control | 0 | - / - | - / 0 | - | 0/9 | 0/8 | 264.000 | 0/0 / 0/0 | 0.0000 |
 
 Development re-run versus arm claims: all agree.

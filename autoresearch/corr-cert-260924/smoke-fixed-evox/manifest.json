@@ -1,0 +1,227 @@
+{
+  "engine": "evox",
+  "task": "corr-cert-260924",
+  "upstream": "skydiscover==0.2.0@0d932b690670a7e544388ad362e9876c8bd256a0",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/frozen/manifest.json",
+  "frozen_manifest_sha256": "051e7e22816b95a1612659990819aa9bdaef7fabcbb86c8500d0c0cb2291fdef",
+  "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
+  "seed_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "seed_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06,
+    "passed_m": []
+  },
+  "broker_url": "http://127.0.0.1:8998/v1",
+  "model": "grok-4.7",
+  "iterations": 6,
+  "max_tokens": 4096,
+  "reasoning_effort": "low",
+  "max_evals": 200,
+  "wall_seconds": 200,
+  "verifier_url": "http://127.0.0.1:59544/evaluate",
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/stage/sky-config.yaml",
+    "--search",
+    "evox",
+    "--iterations",
+    "6",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/stage/sky-config.yaml",
+    "--search",
+    "evox",
+    "--iterations",
+    "6",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-fixed-evox",
+  "returncode": 0,
+  "engine_seconds": 1.8375644580228254,
+  "mechanism_evidence": {
+    "configured_solution_iterations": 6,
+    "generated_strategy_artifacts": [],
+    "fallback_strategy_records": [],
+    "strategy_adoption_log_observed": false,
+    "strategy_adopted_confirmed": false,
+    "solution_diff_parse_failures": 0,
+    "evox_meta_search_calls": null,
+    "evox_solution_calls": null,
+    "evox_meta_search_share": null
+  },
+  "status": "COMPLETE",
+  "candidate_evaluations": {
+    "requests": 10,
+    "failures": 0,
+    "best": {
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "violation_sum": "233998",
+      "source_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc"
+    },
+    "m_values": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "evaluation_trace": [
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 1,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": true
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 2,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 3,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 4,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "5b1222a00e5fb5876317a962289b5efc7ddc3ed875181433f5efc146fe9007bd",
+      "combined_score": 2.061235174566007e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 5,
+      "packet_sha256": "e4d30ed576e1e9a98fb25b1351927785872b9af045bd5118b1cbda4381196b50",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 6,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 7,
+      "packet_sha256": "2f47eafc018d9c58dc52e43cd8d7d78c8c412ac93c619e16d1ccbbd998fa5cc3",
+      "final": false
+    },
+    {
+      "candidate_hash": "5b1222a00e5fb5876317a962289b5efc7ddc3ed875181433f5efc146fe9007bd",
+      "combined_score": 2.061235174566007e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 8,
+      "packet_sha256": "e4d30ed576e1e9a98fb25b1351927785872b9af045bd5118b1cbda4381196b50",
+      "final": false
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 9,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": false
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 10,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": true
+    }
+  ],
+  "proposal_hashes": [
+    "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+    "5b1222a00e5fb5876317a962289b5efc7ddc3ed875181433f5efc146fe9007bd"
+  ],
+  "verified_best_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "verified_best_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06,
+    "passed_m": []
+  },
+  "worked_examples": [
+    4,
+    5
+  ],
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "NO_GAIN"
+}

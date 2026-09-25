@@ -15,3 +15,7 @@ frozen/development*.json
 frozen/holdout*.json
 frozen/parents_raw*.json
 mock-requests*.jsonl
+smoke-fixed-*-cache/
+smoke-fixed-*/output/
+smoke-fixed-*/verified/
+smoke-fixed-*/stage/
