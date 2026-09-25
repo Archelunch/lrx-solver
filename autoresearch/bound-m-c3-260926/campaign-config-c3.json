@@ -1,0 +1,73 @@
+{
+ "campaign": "bound-m-c3-260926",
+ "note": "Bound-m campaign 3 (TASK-c3.md): tree certificates (bound-eval-3, bound-contract-3). Every limit under engines applies to one run = one (arm, seed). Money, token, reasoning and timeout caps live in broker-config-c3.json. Development = campaign 1 frozen development.json by reference (hash in the c2 frozen/manifest.json); validation = c2 frozen/validation.json (m = 11, finalist selection and the kill check only); holdout = c2 frozen/holdout.json, never loaded by an engine, a prompt, the kill check or the seed check. Covered by the approval hash: python -m integrations.bound_c3 approval-hash.",
+ "seed_program": "autoresearch/bound-m-c3-260926/seed/c3-seed.py",
+ "seed_sha256": "6c780864eaedf453366f370411602bc9679dbfe592fefbeff844b6691fc844d5",
+ "seed_note": "Campaign-2 AdaEvolve-s2 finalist (autoresearch/bound-m-c2-260925/finalists/sources/adaevolve-s2.py) with a new module docstring, its code unchanged, plus a tree wrapper: the c2 word set as one unit-origin root leaf when a float LP passes criterion (7), else a table-free refined-origin staircase (origins min(l, 3) on one axis, lift-and-sweep words on the refined base, float LP for criterion (8)). Offline check: seed-eval/summary.json.",
+ "controls": {
+  "seed_c3": "autoresearch/bound-m-c3-260926/seed/c3-seed.py",
+  "adaevolve_s2_one_leaf": "autoresearch/bound-eval3-260926/adaevolve-s2-wrapped.py",
+  "revtree_table_fed": "integrations.bound3_control_revtree (trusted, in-process; exact tables; non-uniform reference, development m <= 10 only)"
+ },
+ "frozen_manifest": "autoresearch/bound-m-c2-260925/frozen/manifest.json",
+ "python": ".venv-official/bin/python",
+ "eval_cache": "autoresearch/bound-m-c3-260926/eval-cache",
+ "broker_port": 8895,
+ "eval_timeout": 900,
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "seed_semantics": "SkyDiscover search.database.random_seed and GEPA EngineConfig.seed = run seed. The sequential control records the seed; the provider request carries no seed field, so its seeds differ only by sampling.",
+ "engines": {
+  "gepa": {
+   "iterations": 30,
+   "max_requests": 30,
+   "max_evals": 1200,
+   "wall_seconds": 21600
+  },
+  "sequential": {
+   "iterations": 30,
+   "max_requests": 30,
+   "max_evals": 50,
+   "wall_seconds": 21600
+  },
+  "adaevolve": {
+   "iterations": 30,
+   "max_requests": 30,
+   "max_evals": 50,
+   "wall_seconds": 21600
+  },
+  "evox": {
+   "iterations": 30,
+   "max_requests": 30,
+   "max_evals": 50,
+   "wall_seconds": 21600
+  }
+ },
+ "max_requests_note": "Contact pool 360 (broker-config-c3.json contact_pool) = 12 runs x 30. The USD cap ($15 total, enforced by each run's broker at max_usd minus the other c3 ledgers) is the binding limit: at the projected $0.03-0.04 per call (REPORT-prep.md) 360 calls need about $11-14, so the last runs of seed 3 may stop early (BROKER_STOPPED). GEPA max_evals covers 30 + 31 * 36 = 1146 metric calls plus final checks.",
+ "evox_strategy_evolution": false,
+ "word_pool": {
+  "enabled": false,
+  "note": "No pool in campaign 3: tree leaves on refined bases do not pool across candidates."
+ },
+ "hint": {
+  "enabled": true,
+  "lines": [
+   "Hint (group's m=8 proof, REVERSAL-OBSTACLE.md section 2): 34 of 4088 m=8 reversal-orbit families needed piecewise tree certificates split on block lengths.",
+   "A table-fed control closed the m=9 reversal 9..1 with zeros in gaps 0 and 4 by a staircase on axis 0: leaves u0 in [1,2] (origins (1,1)), [3,4] (origins (3,1)), u0 >= 5 (origins (5,1)), one word each.",
+   "Far out on an axis, refine its block (origin o_j > 1) so the stretched zero sits where words cross it less; near the corner, finite boxes tolerate slope above m-2."
+  ],
+  "source": "autoresearch/bound-m-260925/REVERSAL-OBSTACLE.md (m=8) and autoresearch/bound-eval3-260926/control-b.jsonl (m=9 development family m9-mask17-labels987654321)",
+  "rule": "Development and m=8 facts only; nothing from the validation or holdout sets."
+ },
+ "kill_rule": "After the four seed-1 runs: python -m integrations.bound_c3 kill-check --seed 1. For each arm, the accepted candidates (full development evaluation) among its first 15 distinct proposals are evaluated on validation; if none certifies more validation families than the c3 seed (157/165 offline), the runner stops before seed 2 (exit 3).",
+ "finalize": {
+  "selection": "per (arm, seed): among accepted candidates (seed, every source with a full development evaluation, the verified best, GEPA's candidate pool), the finalist maximizes validation (certified, combined_score); ties by source sha256 ascending. Development scores are not used.",
+  "determinism": "two sandboxed bound-eval-3 runs on the first 20 screen families; raw tree outputs compared per family",
+  "holdout": "c2 frozen/holdout.json (165 m=12 + 60 m=11), evaluated once per frozen finalist by a human-run finalize; not built yet (REPORT-prep.md)",
+  "success_rule": "An arm succeeds iff (1) the mean over its 3 seed finalists of the certified share on the 165 m=12 holdout families is >= the c3 seed's m=12 share + 3 percentage points, AND (2) the mean over its finalists of the number certified among the 14 target families is >= 5. Target families: the m=12 holdout families not certified by any of AdaEvolve-s2, EvoX-s3, the c2 seed and control (b) (BEST-C2-CONSTRUCTION.md section 2), recomputed by finalize from the stored c2 holdout rows; finalize aborts unless there are exactly 14. Single-seed wins are reported, not claimed."
+ },
+ "order": "Seeds interleaved: s1 gepa, sequential, adaevolve, evox; kill check; then s2; then s3 (run-campaign-c3.sh). A HALT file, a refused start, a FIRST_PROMPT_MISMATCH, 2 runs ending INCOMPLETE/BROKER_STOPPED, or the kill check stop the runner."
+}
