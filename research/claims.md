@@ -561,3 +561,26 @@ families are certified at every m. No family class is proved for all m; the
 general conjecture remains open. One seed per arm; no engine ranking.
 Determinism caveat: the GEPA and EvoX finalists truncate a word union in
 set order; audited certificates are unaffected, reproducibility is not yet.
+
+## Session 16: bound-m campaign 2, three seeds, transfer to unseen m=12 (2026-09-25/26)
+
+Campaign `autoresearch/bound-m-c2-260925/`: development m=9,10 (303 families),
+validation = campaign-1 m=11 holdout (165, used only to pick each arm's
+finalist), holdout evaluated once = 165 fresh m=12 families plus 60 fresh
+m=11 families, all never seen by any engine. Seed program = campaign-1 EvoX
+finalist. Four arms x three seeds, 30 iterations each, gemini-3.8-flash,
+360 calls, about $7. Per-family word pool (development only) reported as a
+secondary metric; selection standalone.
+
+Holdout certified share, mean over seeds (SD): AdaEvolve 84.7 % (4.4),
+EvoX 83.1 % (0.8), GEPA 80.3 % (0.5), sequential 76.4 % (6.9); seed 80.0 %;
+sweep+LP control 59.6 %. Best single finalist: AdaEvolve seed 2 certifies
+148 of 165 m=12 families and 54 of 60 fresh m=11 families; the control
+certifies 95 and 39. Independent audit 0 disagreements; every finalist
+deterministic under PYTHONHASHSEED=0; no m-specific literals. Each
+certified family is a machine-checked bound d(v) <= T_12(n) for all block
+lengths of that family, conditional on the group's Lemma 1 and criterion
+(7) at general m. GEPA returned the seed unchanged in two of three seeds.
+This is the first multi-seed result where evolved constructions beat both
+the seed and the hand control on an m none of them saw. No family class is
+proved for all m; the general conjecture remains open.

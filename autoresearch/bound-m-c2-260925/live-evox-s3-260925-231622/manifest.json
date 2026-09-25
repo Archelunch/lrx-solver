@@ -1,0 +1,3374 @@
+{
+  "engine": "evox",
+  "seed": 3,
+  "task": "bound-m-c2-260925",
+  "upstream": "skydiscover==0.2.0@0d932b690670a7e544388ad362e9876c8bd256a0",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/frozen/manifest.json",
+  "frozen_manifest_sha256": "e65a06f52db9038597560ef93c1bd9d48babe15965b69326512ceb2fa0ac4c2e",
+  "development_sha256": "88567c75d13af24bca6c9cbdd5fa96bd665e4d0f5589a856a8a4382ff344908e",
+  "seed_sha256": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+  "c2_manifest_sha256": "c0388ae6e98a0655836f29c256ae4eef7230cdd970b9b628f648dabfce48169a",
+  "seed_full": {
+    "combined_score": 131.59183777974596,
+    "certified": 212,
+    "valid": 303,
+    "families": 303,
+    "max_W": "37/13",
+    "per_m_certified": {
+      "9": 94,
+      "10": 118
+    },
+    "per_m": {
+      "9": {
+        "certified": 94,
+        "families": 153,
+        "pct": 61.43790849673203,
+        "boundary": 2,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "37/13",
+        "W_complete": true,
+        "G": "292385505177291015966143231/1362953102208464273699253600",
+        "per_k": {
+          "2": [
+            7,
+            17
+          ],
+          "3": [
+            11,
+            17
+          ],
+          "4": [
+            11,
+            17
+          ],
+          "5": [
+            13,
+            17
+          ],
+          "6": [
+            7,
+            17
+          ],
+          "7": [
+            7,
+            17
+          ],
+          "8": [
+            12,
+            17
+          ],
+          "9": [
+            11,
+            17
+          ],
+          "10": [
+            15,
+            17
+          ]
+        }
+      },
+      "10": {
+        "certified": 118,
+        "families": 150,
+        "pct": 78.66666666666667,
+        "boundary": 1,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "7/4",
+        "W_complete": true,
+        "G": "211722571672395970167626027628295284780857/2366318383221114769955502497116432995176000",
+        "per_k": {
+          "2": [
+            11,
+            15
+          ],
+          "3": [
+            12,
+            15
+          ],
+          "4": [
+            14,
+            15
+          ],
+          "5": [
+            10,
+            15
+          ],
+          "6": [
+            11,
+            15
+          ],
+          "7": [
+            9,
+            15
+          ],
+          "8": [
+            13,
+            15
+          ],
+          "9": [
+            11,
+            15
+          ],
+          "10": [
+            13,
+            15
+          ],
+          "11": [
+            14,
+            15
+          ]
+        }
+      }
+    },
+    "cache_key": "19c049b1574c41148141c21c7d5c6d8a2a714495026cea8610251698959fa3d0",
+    "pool_certified": 0,
+    "pooled_certified": 212,
+    "pool_gain": 212
+  },
+  "broker_url": "http://127.0.0.1:8894/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 30,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "max_evals": 50,
+  "wall_seconds": 21600,
+  "verifier_url": "http://127.0.0.1:55440/evaluate",
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/stage/sky-config.yaml",
+    "--search",
+    "evox",
+    "--iterations",
+    "30",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/stage/sky-config.yaml",
+    "--search",
+    "evox",
+    "--iterations",
+    "30",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622",
+  "sky_random_seed": 3,
+  "gepa_seed": null,
+  "evox_strategy_evolution": false,
+  "returncode": 0,
+  "engine_seconds": 950.7227297080099,
+  "mechanism_evidence": {
+    "configured_solution_iterations": 30,
+    "generated_strategy_artifacts": [],
+    "fallback_strategy_records": [],
+    "strategy_adoption_log_observed": false,
+    "strategy_adopted_confirmed": false,
+    "solution_diff_parse_failures": 5,
+    "evox_meta_search_calls": 0,
+    "evox_solution_calls": 30,
+    "evox_meta_search_share": 0.0
+  },
+  "first_solution_prompt_check": {
+    "actual_sha256": "93d885049ec674171d83e9b68de2d971c88c8f61a48bc72cf7d77d08931b2049",
+    "matches": true
+  },
+  "status": "COMPLETE",
+  "candidate_evaluations": {
+    "requests": 27,
+    "full_evaluations": 19,
+    "failures": 0,
+    "best_screen": {
+      "score": 153.44171621008945,
+      "certified": 24,
+      "source_sha256": "e4995d8225fb96898c74f645d73a7b3dd02cf6b64781b76ab34e61736c413967"
+    },
+    "best_full": {
+      "score": 150.63584983480163,
+      "certified": 240,
+      "per_m": {
+        "9": 109,
+        "10": 131
+      },
+      "max_W": "11/5",
+      "source_sha256": "519cc2fc5055376ebe1d4eda44a2580899cbe15a1c0414f84d034a3a68d6e75d"
+    },
+    "screen_ids": [
+      "m9-mask132-labels765432198",
+      "m9-mask656-labels432198765",
+      "m9-mask801-labels432198765",
+      "m9-mask185-labels654321987",
+      "m9-mask571-labels982674315",
+      "m9-mask471-labels391865427",
+      "m9-mask1011-labels765432198",
+      "m9-mask895-labels987654321",
+      "m9-mask1023-labels875643219",
+      "m9-mask545-labels654321987",
+      "m9-mask591-labels654321987",
+      "m9-mask1023-labels654321987",
+      "m9-mask1014-labels432198756",
+      "m9-mask856-labels654321987",
+      "m9-mask112-labels543219876",
+      "m10-mask528-labels9.8.7.6.5.4.2.3.1.10",
+      "m10-mask1184-labels1.2.3.4.5.6.7.8.9.10",
+      "m10-mask579-labels7.6.5.4.3.1.2.10.9.8",
+      "m10-mask1053-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask791-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask1623-labels7.9.10.8.5.4.1.2.6.3",
+      "m10-mask1851-labels1.10.9.8.7.6.5.4.3.2",
+      "m10-mask1917-labels10.6.8.2.7.3.9.4.1.5",
+      "m10-mask1983-labels9.7.6.5.4.3.2.1.10.8",
+      "m10-mask2047-labels5.6.10.8.4.7.1.2.3.9",
+      "m10-mask1870-labels5.4.3.2.1.9.10.8.7.6",
+      "m10-mask536-labels6.4.3.2.1.10.9.8.7.5",
+      "m10-mask2029-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask1025-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask1796-labels8.7.6.5.3.4.2.1.10.9"
+    ],
+    "families": 303
+  },
+  "evaluation_trace": [
+    {
+      "scope": "screen",
+      "candidate_hash": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+      "combined_score": 120.10646306993874,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 131.59183777974596,
+        "certified": 212,
+        "valid": 303,
+        "families": 303,
+        "max_W": "37/13",
+        "per_m_certified": {
+          "9": 94,
+          "10": 118
+        },
+        "per_m": {
+          "9": {
+            "certified": 94,
+            "families": 153,
+            "pct": 61.43790849673203,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "37/13",
+            "W_complete": true,
+            "G": "292385505177291015966143231/1362953102208464273699253600",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                7,
+                17
+              ],
+              "7": [
+                7,
+                17
+              ],
+              "8": [
+                12,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 118,
+            "families": 150,
+            "pct": 78.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "211722571672395970167626027628295284780857/2366318383221114769955502497116432995176000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                12,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                9,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                11,
+                15
+              ],
+              "10": [
+                13,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "19c049b1574c41148141c21c7d5c6d8a2a714495026cea8610251698959fa3d0",
+        "pool_certified": 0,
+        "pooled_certified": 212,
+        "pool_gain": 212
+      },
+      "pool_certified": 0,
+      "pooled_certified": 20,
+      "pool_gain": 20,
+      "ordinal": 1,
+      "packet_sha256": "9d1c4ec3a9b9db7ab00a67102166e65a8000ea56a1bd06746c591ff7fec6be04"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+      "combined_score": 120.10646306993874,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 131.59183777974596,
+        "certified": 212,
+        "valid": 303,
+        "families": 303,
+        "max_W": "37/13",
+        "per_m_certified": {
+          "9": 94,
+          "10": 118
+        },
+        "per_m": {
+          "9": {
+            "certified": 94,
+            "families": 153,
+            "pct": 61.43790849673203,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "37/13",
+            "W_complete": true,
+            "G": "292385505177291015966143231/1362953102208464273699253600",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                7,
+                17
+              ],
+              "7": [
+                7,
+                17
+              ],
+              "8": [
+                12,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 118,
+            "families": 150,
+            "pct": 78.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "211722571672395970167626027628295284780857/2366318383221114769955502497116432995176000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                12,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                9,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                11,
+                15
+              ],
+              "10": [
+                13,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "19c049b1574c41148141c21c7d5c6d8a2a714495026cea8610251698959fa3d0",
+        "pool_certified": 212,
+        "pooled_certified": 212,
+        "pool_gain": 0
+      },
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 2,
+      "packet_sha256": "62941f523a8f663aa0408391d91bae6eed65e318c70ce02a48e7fd105cce72ff"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "e582c0edd0adc1a5f70d57b0901e33592090a839cf29787cef579175cb62b259",
+      "combined_score": 120.10646306993874,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 135.1997676877663,
+        "certified": 217,
+        "valid": 303,
+        "families": 303,
+        "max_W": "37/13",
+        "per_m_certified": {
+          "9": 97,
+          "10": 120
+        },
+        "per_m": {
+          "9": {
+            "certified": 97,
+            "families": 153,
+            "pct": 63.39869281045752,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "37/13",
+            "W_complete": true,
+            "G": "1325234765571239684934449/6339316754457973366043040",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                7,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                12,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 120,
+            "families": 150,
+            "pct": 80.0,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "45955236516445051283312672206167397767/526433455666543886530701334174957284800",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                12,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                10,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                11,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "8e7096ec074397f27783c0e2c62acfe0ea3fbbb2212a6c4622f4aebabd99f19d",
+        "pool_certified": 212,
+        "pooled_certified": 217,
+        "pool_gain": 5
+      },
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 3,
+      "packet_sha256": "30c452f95b69457fd958840e2f823ae2ed68dd33858a4eee21646c993ba25952"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "c6e45164582c27e458b1348f2600971a5231aed5b7f3096b0beaa3683a4bcff9",
+      "combined_score": 140.10782509066698,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 141.41626487195492,
+        "certified": 224,
+        "valid": 303,
+        "families": 303,
+        "max_W": "37/13",
+        "per_m_certified": {
+          "9": 103,
+          "10": 121
+        },
+        "per_m": {
+          "9": {
+            "certified": 103,
+            "families": 153,
+            "pct": 67.3202614379085,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "37/13",
+            "W_complete": true,
+            "G": "14316112137644282945297002476647/98262753462765262714151928319200",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                10,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                11,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 121,
+            "families": 150,
+            "pct": 80.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "291815422234742994513700275044052147106999/3579220014292989649895111596078360310232000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                10,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                11,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "81f0a3ba5ebc95fad7e2d59a32ab1503dee70977b7e4afb5677701a9ab18f034",
+        "pool_certified": 217,
+        "pooled_certified": 226,
+        "pool_gain": 9
+      },
+      "pool_certified": 20,
+      "pooled_certified": 22,
+      "pool_gain": 2,
+      "ordinal": 4,
+      "packet_sha256": "f9fef59b8f3dee2d4a795c735a916e3c8d7311ee1e7f118965012aa7557898fc"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "78d797f483bc6640f9a44925e6707cafac2f03e205364f5aedc2491f1869b53d",
+      "combined_score": 143.4415616480793,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 142.41964721106584,
+        "certified": 227,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 103,
+          "10": 124
+        },
+        "per_m": {
+          "9": {
+            "certified": 103,
+            "families": 153,
+            "pct": 67.3202614379085,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "21596356275915274469156345162459/155469188151979098828925526192160",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                11,
+                17
+              ],
+              "7": [
+                8,
+                17
+              ],
+              "8": [
+                11,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 124,
+            "families": 150,
+            "pct": 82.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "416799591168421156594202493099129847/6017264014163665756738462812880084800",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                11,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                12,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "6a60de549b79eb41968c729274351416e8abd07e744a894190f0195ee8784009",
+        "pool_certified": 226,
+        "pooled_certified": 230,
+        "pool_gain": 4
+      },
+      "pool_certified": 22,
+      "pooled_certified": 23,
+      "pool_gain": 1,
+      "ordinal": 5,
+      "packet_sha256": "d292f7db3198e844dc8f0c6ea532af2feca212e6a8b0698fcf041470fdd44ebc"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "8da7928b8789246030d7483fbbfe12d135287a3bae4bf51300b7db96c81b5ab2",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 150.29913203612966,
+        "certified": 239,
+        "valid": 303,
+        "families": 303,
+        "max_W": "37/13",
+        "per_m_certified": {
+          "9": 109,
+          "10": 130
+        },
+        "per_m": {
+          "9": {
+            "certified": 109,
+            "families": 153,
+            "pct": 71.24183006535948,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "37/13",
+            "W_complete": true,
+            "G": "181748269623849750187/1396753452698430546720",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                13,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 130,
+            "families": 150,
+            "pct": 86.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "180957772052201838010909327551617/3267364402622691041387089482648000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "16ced9181c62394c86b86da63dc74199e4c98755d59da47538d493a82f16abce",
+        "pool_certified": 230,
+        "pooled_certified": 239,
+        "pool_gain": 9
+      },
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 6,
+      "packet_sha256": "a1328a72a5ab86e1deca946af8ab62cbcfc553ba0ce723b2248d0700167b20a6"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6401290f775b9af882f7a37524c252af2c97bd42114a274833aa10d1a49b6b8f",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 150.30235422910727,
+        "certified": 239,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 109,
+          "10": 130
+        },
+        "per_m": {
+          "9": {
+            "certified": 109,
+            "families": 153,
+            "pct": 71.24183006535948,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "174753188509140275939/1396753452698430546720",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                13,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 130,
+            "families": 150,
+            "pct": 86.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "26923053504049003637018665319999611/492559478869732303451963589534024000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "6be24f6c431eae36c2e60755e39709461162e95ea4a1867a5872718944cb8283",
+        "pool_certified": 239,
+        "pooled_certified": 239,
+        "pool_gain": 0
+      },
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 7,
+      "packet_sha256": "25208791e42e8858b7bcb7bc2740615043b654201f6630d005001af158e71c2d"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6401290f775b9af882f7a37524c252af2c97bd42114a274833aa10d1a49b6b8f",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 150.30235422910727,
+        "certified": 239,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 109,
+          "10": 130
+        },
+        "per_m": {
+          "9": {
+            "certified": 109,
+            "families": 153,
+            "pct": 71.24183006535948,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "174753188509140275939/1396753452698430546720",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                13,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 130,
+            "families": 150,
+            "pct": 86.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "26923053504049003637018665319999611/492559478869732303451963589534024000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "6be24f6c431eae36c2e60755e39709461162e95ea4a1867a5872718944cb8283",
+        "pool_certified": 239,
+        "pooled_certified": 239,
+        "pool_gain": 0
+      },
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 8,
+      "packet_sha256": "25208791e42e8858b7bcb7bc2740615043b654201f6630d005001af158e71c2d"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6401290f775b9af882f7a37524c252af2c97bd42114a274833aa10d1a49b6b8f",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 150.30235422910727,
+        "certified": 239,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 109,
+          "10": 130
+        },
+        "per_m": {
+          "9": {
+            "certified": 109,
+            "families": 153,
+            "pct": 71.24183006535948,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "174753188509140275939/1396753452698430546720",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                13,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 130,
+            "families": 150,
+            "pct": 86.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "26923053504049003637018665319999611/492559478869732303451963589534024000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "6be24f6c431eae36c2e60755e39709461162e95ea4a1867a5872718944cb8283",
+        "pool_certified": 239,
+        "pooled_certified": 239,
+        "pool_gain": 0
+      },
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 9,
+      "packet_sha256": "25208791e42e8858b7bcb7bc2740615043b654201f6630d005001af158e71c2d"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "519cc2fc5055376ebe1d4eda44a2580899cbe15a1c0414f84d034a3a68d6e75d",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 150.63584983480163,
+        "certified": 240,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 109,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 109,
+            "families": 153,
+            "pct": 71.24183006535948,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "8262570928373269631/70721693807515470720",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                13,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "33167482377415566011121912498517/661153662912392353626796764475200",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "8b545aa9134292963265fb84ce0b28d3d4010747046d35a8733b485ca241fea5",
+        "pool_certified": 239,
+        "pooled_certified": 240,
+        "pool_gain": 1
+      },
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 10,
+      "packet_sha256": "7f38098610f9122adc7dd85b1594f9bdc1135746ae8af76c3ef898102d46ad88"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "3d9f2a1189d2d1aed19fe2333f4ce5732e70d40869f076d4e706f6ef83ecb63f",
+      "combined_score": 140.10782509066698,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 11,
+      "packet_sha256": "c161e6649583306dd58cf4fe8b58d9f77f20edc5e12dedddbdf7e876e38fe4ba"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "0cf495fa73e8b0ae78ea2f165ac8a8093db4505a6e971cfc5868c6cd89ad9ab8",
+      "combined_score": 133.44097032788366,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 12,
+      "packet_sha256": "25e995f85b6a2bbed64e4b72a262e13d059077fa19d376fb9c4842be32245c41"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "8d5511a7967f06a254a5031591fb8f17abbb342ebc68af28c86d153f8e40ec86",
+      "combined_score": 133.44146641188328,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 13,
+      "packet_sha256": "1caadd3f4ac6cc28c74e42dac662995dbad009a42b86971d5cc47714d59f1223"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6401290f775b9af882f7a37524c252af2c97bd42114a274833aa10d1a49b6b8f",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 150.30235422910727,
+        "certified": 239,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 109,
+          "10": 130
+        },
+        "per_m": {
+          "9": {
+            "certified": 109,
+            "families": 153,
+            "pct": 71.24183006535948,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "174753188509140275939/1396753452698430546720",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                13,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 130,
+            "families": 150,
+            "pct": 86.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "26923053504049003637018665319999611/492559478869732303451963589534024000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "6be24f6c431eae36c2e60755e39709461162e95ea4a1867a5872718944cb8283",
+        "pool_certified": 240,
+        "pooled_certified": 240,
+        "pool_gain": 0
+      },
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 14,
+      "packet_sha256": "7f38098610f9122adc7dd85b1594f9bdc1135746ae8af76c3ef898102d46ad88"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "001eaa1c7b10db5c2780cc84ea3f665cf8f70c56be6af1a41d93d6326d61fb3e",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 149.32212738755103,
+        "certified": 238,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 108,
+          "10": 130
+        },
+        "per_m": {
+          "9": {
+            "certified": 108,
+            "families": 153,
+            "pct": 70.58823529411765,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "5330475906238391977/45354129724384921440",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                12,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 130,
+            "families": 150,
+            "pct": 86.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "1510766008861310425960767675915013/30687895373814353201106347561787840",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "9f67a6cb142cd0d108b3b25701c487807e2521a11b569894ca83b397592dc518",
+        "pool_certified": 240,
+        "pooled_certified": 240,
+        "pool_gain": 0
+      },
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 15,
+      "packet_sha256": "7f38098610f9122adc7dd85b1594f9bdc1135746ae8af76c3ef898102d46ad88"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "fbaca00246f56c19ec790ebfb513f9206de257178abc89c7edbcbb5ce654e902",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 150.63584545539854,
+        "certified": 240,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 109,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 109,
+            "families": 153,
+            "pct": 71.24183006535948,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "9618244344810802417/82161967805790032160",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                13,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "6648117189917832523387793672531/132230732582478470725359352895040",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "d10241c8f9b444044c3950ee368aadef9e27cec87e0de551091b397645420ec3",
+        "pool_certified": 240,
+        "pooled_certified": 240,
+        "pool_gain": 0
+      },
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 16,
+      "packet_sha256": "7f38098610f9122adc7dd85b1594f9bdc1135746ae8af76c3ef898102d46ad88"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "3b2b69255d7663ce065181d494ed149d70f6c0f0b6c433bcbfc0f54074b99865",
+      "combined_score": 123.44010396062667,
+      "certified": 21,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 17,
+      "packet_sha256": "d29ba9b67a4808ebe7e6eee4cdf65efd71cf8796267d110958ec26940deec9b1"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6c545423f2a54524d78df6ace0d390527c88debbdb605bb80aec04a4ed33fbb9",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 150.30235422910727,
+        "certified": 239,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 109,
+          "10": 130
+        },
+        "per_m": {
+          "9": {
+            "certified": 109,
+            "families": 153,
+            "pct": 71.24183006535948,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "174753188509140275939/1396753452698430546720",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                12,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                13,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 130,
+            "families": 150,
+            "pct": 86.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "26923053504049003637018665319999611/492559478869732303451963589534024000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "8938965cf885f79f31e287afa17197fbf444eb3f98e76a33310272722589246b",
+        "pool_certified": 240,
+        "pooled_certified": 240,
+        "pool_gain": 0
+      },
+      "pool_certified": 23,
+      "pooled_certified": 23,
+      "pool_gain": 0,
+      "ordinal": 18,
+      "packet_sha256": "7f38098610f9122adc7dd85b1594f9bdc1135746ae8af76c3ef898102d46ad88"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "e4995d8225fb96898c74f645d73a7b3dd02cf6b64781b76ab34e61736c413967",
+      "combined_score": 153.44171621008945,
+      "certified": 24,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 146.06726286661888,
+        "certified": 236,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 104,
+          "10": 132
+        },
+        "per_m": {
+          "9": {
+            "certified": 104,
+            "families": 153,
+            "pct": 67.97385620915033,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "6768067434667913659041157/57839154677196911622571968",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                12,
+                17
+              ],
+              "7": [
+                10,
+                17
+              ],
+              "8": [
+                11,
+                17
+              ],
+              "9": [
+                13,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 132,
+            "families": 150,
+            "pct": 88.0,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "2887462491720105810361/61672617573172388244000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                12,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "0a8b2474d0477f6907efa8313336d15fe959b8676e62ab922aa32eb720218056",
+        "pool_certified": 240,
+        "pooled_certified": 249,
+        "pool_gain": 9
+      },
+      "pool_certified": 23,
+      "pooled_certified": 24,
+      "pool_gain": 1,
+      "ordinal": 19,
+      "packet_sha256": "238ec1f191a7f8554cb0cfe85a6ecb319ce28a963e5ce4f0bc492dfb89add06f"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "52142ea1a149649ab16eb3aa3eb84f91998755cab8e1b86969cc71fc203bdae8",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 24,
+      "pooled_certified": 24,
+      "pool_gain": 0,
+      "ordinal": 20,
+      "packet_sha256": "3486658e372f7195e4636c2889ec9f1fe82f42f191988a7046e9e145c80971b4"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "f4eddd1e3dcffd3373651cfbc51cfc748f5eaa99184cf01f5cdec9e9ab03d77d",
+      "combined_score": 153.44171621008945,
+      "certified": 24,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 145.73392576178824,
+        "certified": 235,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 104,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 104,
+            "families": 153,
+            "pct": 67.97385620915033,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "34190396702998228761841617073/292261248583875994428856154304",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                12,
+                17
+              ],
+              "7": [
+                10,
+                17
+              ],
+              "8": [
+                11,
+                17
+              ],
+              "9": [
+                13,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "304625320271791054165271/6461710181944794184716000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                12,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "e35743214f34d80ca8ded2dadd95bf898f302589142bd2b8b78bfbcd20e07608",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 24,
+      "pooled_certified": 24,
+      "pool_gain": 0,
+      "ordinal": 21,
+      "packet_sha256": "f4b19bfed21712c8dc5dc93041600fff776aee8b5d893d6ddbe10c372f19f7ce"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "8cfdbab45873fc6875c400f3622a052cadaa488665f3141de9ac6783733e42cc",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 24,
+      "pooled_certified": 24,
+      "pool_gain": 0,
+      "ordinal": 22,
+      "packet_sha256": "9405f80a862480a3c78c21b35c876e6d05dc7d63b40f278cdb40c3ce401825cc"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "2784c7b46e6cdd65aa66c67b290dbd7dc13d781411b00ec4b0e1b65f359526b9",
+      "combined_score": 120.10646306993874,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 24,
+      "pooled_certified": 24,
+      "pool_gain": 0,
+      "ordinal": 23,
+      "packet_sha256": "83f45333fc666ed45c460d9c4e7ee8a601ac9a0a3e3c5949b181ebdea9416c6e"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "ef18b5e3c847dd1cc921576f1c43fc3381de959e2d0c4822046f63b72ddbf575",
+      "combined_score": 143.44169840175758,
+      "certified": 23,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 24,
+      "pooled_certified": 24,
+      "pool_gain": 0,
+      "ordinal": 24,
+      "packet_sha256": "9405f80a862480a3c78c21b35c876e6d05dc7d63b40f278cdb40c3ce401825cc"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "a6e4a48849293ac5fe5dd310af1e4a614c8a1343049a9686879209f58bcc7e84",
+      "combined_score": 153.44171621008945,
+      "certified": 24,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 146.06726286661888,
+        "certified": 236,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 104,
+          "10": 132
+        },
+        "per_m": {
+          "9": {
+            "certified": 104,
+            "families": 153,
+            "pct": 67.97385620915033,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "6768067434667913659041157/57839154677196911622571968",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                12,
+                17
+              ],
+              "7": [
+                10,
+                17
+              ],
+              "8": [
+                11,
+                17
+              ],
+              "9": [
+                13,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 132,
+            "families": 150,
+            "pct": 88.0,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "2887462491720105810361/61672617573172388244000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                12,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "817d2246d96f793f15d8a3a55ab9a86439e4947974c436e23a44bb162691ddc4",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 24,
+      "pooled_certified": 24,
+      "pool_gain": 0,
+      "ordinal": 25,
+      "packet_sha256": "f4b19bfed21712c8dc5dc93041600fff776aee8b5d893d6ddbe10c372f19f7ce"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "e4995d8225fb96898c74f645d73a7b3dd02cf6b64781b76ab34e61736c413967",
+      "combined_score": 153.44171621008945,
+      "certified": 24,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 146.06726286661888,
+        "certified": 236,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 104,
+          "10": 132
+        },
+        "per_m": {
+          "9": {
+            "certified": 104,
+            "families": 153,
+            "pct": 67.97385620915033,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "6768067434667913659041157/57839154677196911622571968",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                12,
+                17
+              ],
+              "7": [
+                10,
+                17
+              ],
+              "8": [
+                11,
+                17
+              ],
+              "9": [
+                13,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 132,
+            "families": 150,
+            "pct": 88.0,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "2887462491720105810361/61672617573172388244000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                12,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "0a8b2474d0477f6907efa8313336d15fe959b8676e62ab922aa32eb720218056",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 24,
+      "pooled_certified": 24,
+      "pool_gain": 0,
+      "ordinal": 26,
+      "packet_sha256": "f4b19bfed21712c8dc5dc93041600fff776aee8b5d893d6ddbe10c372f19f7ce"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "e4995d8225fb96898c74f645d73a7b3dd02cf6b64781b76ab34e61736c413967",
+      "combined_score": 153.44171621008945,
+      "certified": 24,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 146.06726286661888,
+        "certified": 236,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 104,
+          "10": 132
+        },
+        "per_m": {
+          "9": {
+            "certified": 104,
+            "families": 153,
+            "pct": 67.97385620915033,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "6768067434667913659041157/57839154677196911622571968",
+            "per_k": {
+              "2": [
+                8,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                12,
+                17
+              ],
+              "7": [
+                10,
+                17
+              ],
+              "8": [
+                11,
+                17
+              ],
+              "9": [
+                13,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 132,
+            "families": 150,
+            "pct": 88.0,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "2887462491720105810361/61672617573172388244000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                12,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "0a8b2474d0477f6907efa8313336d15fe959b8676e62ab922aa32eb720218056",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 24,
+      "pooled_certified": 24,
+      "pool_gain": 0,
+      "ordinal": 27,
+      "packet_sha256": "f4b19bfed21712c8dc5dc93041600fff776aee8b5d893d6ddbe10c372f19f7ce"
+    }
+  ],
+  "proposal_hashes": [
+    "e582c0edd0adc1a5f70d57b0901e33592090a839cf29787cef579175cb62b259",
+    "c6e45164582c27e458b1348f2600971a5231aed5b7f3096b0beaa3683a4bcff9",
+    "78d797f483bc6640f9a44925e6707cafac2f03e205364f5aedc2491f1869b53d",
+    "8da7928b8789246030d7483fbbfe12d135287a3bae4bf51300b7db96c81b5ab2",
+    "6401290f775b9af882f7a37524c252af2c97bd42114a274833aa10d1a49b6b8f",
+    "519cc2fc5055376ebe1d4eda44a2580899cbe15a1c0414f84d034a3a68d6e75d",
+    "3d9f2a1189d2d1aed19fe2333f4ce5732e70d40869f076d4e706f6ef83ecb63f",
+    "0cf495fa73e8b0ae78ea2f165ac8a8093db4505a6e971cfc5868c6cd89ad9ab8",
+    "8d5511a7967f06a254a5031591fb8f17abbb342ebc68af28c86d153f8e40ec86",
+    "001eaa1c7b10db5c2780cc84ea3f665cf8f70c56be6af1a41d93d6326d61fb3e",
+    "fbaca00246f56c19ec790ebfb513f9206de257178abc89c7edbcbb5ce654e902",
+    "3b2b69255d7663ce065181d494ed149d70f6c0f0b6c433bcbfc0f54074b99865",
+    "6c545423f2a54524d78df6ace0d390527c88debbdb605bb80aec04a4ed33fbb9",
+    "e4995d8225fb96898c74f645d73a7b3dd02cf6b64781b76ab34e61736c413967",
+    "52142ea1a149649ab16eb3aa3eb84f91998755cab8e1b86969cc71fc203bdae8",
+    "f4eddd1e3dcffd3373651cfbc51cfc748f5eaa99184cf01f5cdec9e9ab03d77d",
+    "8cfdbab45873fc6875c400f3622a052cadaa488665f3141de9ac6783733e42cc",
+    "2784c7b46e6cdd65aa66c67b290dbd7dc13d781411b00ec4b0e1b65f359526b9",
+    "ef18b5e3c847dd1cc921576f1c43fc3381de959e2d0c4822046f63b72ddbf575",
+    "a6e4a48849293ac5fe5dd310af1e4a614c8a1343049a9686879209f58bcc7e84"
+  ],
+  "screen_valid_proposal_hashes": [
+    "e582c0edd0adc1a5f70d57b0901e33592090a839cf29787cef579175cb62b259",
+    "c6e45164582c27e458b1348f2600971a5231aed5b7f3096b0beaa3683a4bcff9",
+    "78d797f483bc6640f9a44925e6707cafac2f03e205364f5aedc2491f1869b53d",
+    "8da7928b8789246030d7483fbbfe12d135287a3bae4bf51300b7db96c81b5ab2",
+    "6401290f775b9af882f7a37524c252af2c97bd42114a274833aa10d1a49b6b8f",
+    "519cc2fc5055376ebe1d4eda44a2580899cbe15a1c0414f84d034a3a68d6e75d",
+    "001eaa1c7b10db5c2780cc84ea3f665cf8f70c56be6af1a41d93d6326d61fb3e",
+    "fbaca00246f56c19ec790ebfb513f9206de257178abc89c7edbcbb5ce654e902",
+    "6c545423f2a54524d78df6ace0d390527c88debbdb605bb80aec04a4ed33fbb9",
+    "e4995d8225fb96898c74f645d73a7b3dd02cf6b64781b76ab34e61736c413967",
+    "f4eddd1e3dcffd3373651cfbc51cfc748f5eaa99184cf01f5cdec9e9ab03d77d",
+    "a6e4a48849293ac5fe5dd310af1e4a614c8a1343049a9686879209f58bcc7e84"
+  ],
+  "verified_best_hash": "e4995d8225fb96898c74f645d73a7b3dd02cf6b64781b76ab34e61736c413967",
+  "verified_best_full": {
+    "combined_score": 146.06726286661888,
+    "certified": 236,
+    "valid": 303,
+    "families": 303,
+    "max_W": "11/5",
+    "per_m_certified": {
+      "9": 104,
+      "10": 132
+    },
+    "per_m": {
+      "9": {
+        "certified": 104,
+        "families": 153,
+        "pct": 67.97385620915033,
+        "boundary": 2,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "11/5",
+        "W_complete": true,
+        "G": "6768067434667913659041157/57839154677196911622571968",
+        "per_k": {
+          "2": [
+            8,
+            17
+          ],
+          "3": [
+            11,
+            17
+          ],
+          "4": [
+            11,
+            17
+          ],
+          "5": [
+            13,
+            17
+          ],
+          "6": [
+            12,
+            17
+          ],
+          "7": [
+            10,
+            17
+          ],
+          "8": [
+            11,
+            17
+          ],
+          "9": [
+            13,
+            17
+          ],
+          "10": [
+            15,
+            17
+          ]
+        }
+      },
+      "10": {
+        "certified": 132,
+        "families": 150,
+        "pct": 88.0,
+        "boundary": 1,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "7/4",
+        "W_complete": true,
+        "G": "2887462491720105810361/61672617573172388244000",
+        "per_k": {
+          "2": [
+            11,
+            15
+          ],
+          "3": [
+            14,
+            15
+          ],
+          "4": [
+            14,
+            15
+          ],
+          "5": [
+            11,
+            15
+          ],
+          "6": [
+            13,
+            15
+          ],
+          "7": [
+            14,
+            15
+          ],
+          "8": [
+            12,
+            15
+          ],
+          "9": [
+            13,
+            15
+          ],
+          "10": [
+            15,
+            15
+          ],
+          "11": [
+            15,
+            15
+          ]
+        }
+      }
+    },
+    "cache_key": "0a8b2474d0477f6907efa8313336d15fe959b8676e62ab922aa32eb720218056",
+    "pool_certified": 249,
+    "pooled_certified": 249,
+    "pool_gain": 0
+  },
+  "verified_best_screen_score": 153.44171621008945,
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "MORE_CERTIFIED",
+  "word_pool": {
+    "families": 303,
+    "words": 5618,
+    "certified": 249,
+    "certified_ids": [
+      "m10-mask1006-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask1014-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask1022-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask1023-labels4.5.6.7.8.9.10.1.2.3",
+      "m10-mask1023-labels9.8.10.7.6.4.3.5.1.2",
+      "m10-mask1026-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask1027-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask1032-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask1053-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask1066-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask11-labels5.4.3.2.1.10.9.8.6.7",
+      "m10-mask1133-labels1.10.9.7.8.6.5.4.3.2",
+      "m10-mask1136-labels8.6.5.4.3.2.1.10.9.7",
+      "m10-mask1169-labels7.10.9.3.5.8.2.6.4.1",
+      "m10-mask1184-labels1.2.3.4.5.6.7.8.9.10",
+      "m10-mask1233-labels5.4.10.3.9.1.7.8.2.6",
+      "m10-mask1238-labels2.3.4.5.6.7.8.9.10.1",
+      "m10-mask1242-labels8.9.10.7.2.6.4.5.3.1",
+      "m10-mask1269-labels4.5.6.7.8.9.10.1.2.3",
+      "m10-mask130-labels1.2.7.4.3.9.10.5.6.8",
+      "m10-mask131-labels4.9.8.1.10.6.3.7.2.5",
+      "m10-mask1318-labels9.10.5.8.2.7.3.6.1.4",
+      "m10-mask1345-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask1360-labels2.1.5.4.3.8.9.10.7.6",
+      "m10-mask1361-labels8.10.9.7.2.6.4.3.5.1",
+      "m10-mask140-labels9.8.7.5.6.4.3.2.1.10",
+      "m10-mask1411-labels9.8.7.6.5.4.2.3.1.10",
+      "m10-mask1439-labels10.9.8.1.4.7.5.6.2.3",
+      "m10-mask145-labels8.10.6.7.1.9.5.4.3.2",
+      "m10-mask1471-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask1479-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask1484-labels2.1.10.9.8.6.7.5.4.3",
+      "m10-mask1529-labels10.7.5.8.9.6.3.1.2.4",
+      "m10-mask1535-labels9.8.7.6.5.4.3.2.1.10",
+      "m10-mask1541-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask1542-labels4.8.3.2.6.1.5.9.10.7",
+      "m10-mask1589-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask1623-labels7.9.10.8.5.4.1.2.6.3",
+      "m10-mask1663-labels9.8.7.6.5.4.3.2.1.10",
+      "m10-mask172-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask1739-labels10.5.8.1.4.3.9.6.7.2",
+      "m10-mask1773-labels8.7.6.5.4.3.1.2.10.9",
+      "m10-mask1790-labels8.10.7.9.5.3.6.4.1.2",
+      "m10-mask1791-labels4.3.2.1.9.10.8.7.6.5",
+      "m10-mask1796-labels8.7.6.5.3.4.2.1.10.9",
+      "m10-mask1805-labels10.9.8.6.5.7.2.3.4.1",
+      "m10-mask1818-labels1.10.9.8.7.6.5.4.3.2",
+      "m10-mask1821-labels8.6.10.5.7.3.4.9.2.1",
+      "m10-mask1846-labels5.3.10.6.9.4.7.2.8.1",
+      "m10-mask1851-labels1.10.9.8.7.6.5.4.3.2",
+      "m10-mask1870-labels5.4.3.2.1.9.10.8.7.6",
+      "m10-mask1870-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask1917-labels10.6.8.2.7.3.9.4.1.5",
+      "m10-mask1919-labels6.5.4.3.2.1.10.8.9.7",
+      "m10-mask1919-labels9.8.6.5.2.3.1.7.10.4",
+      "m10-mask1966-labels10.6.9.7.1.8.4.5.2.3",
+      "m10-mask1983-labels10.7.9.8.3.2.6.5.4.1",
+      "m10-mask1983-labels9.7.6.5.4.3.2.1.10.8",
+      "m10-mask1986-labels4.3.6.9.7.1.10.2.8.5",
+      "m10-mask2005-labels5.4.3.2.1.9.10.8.7.6",
+      "m10-mask2007-labels9.1.6.5.8.3.7.10.2.4",
+      "m10-mask2011-labels10.4.9.6.8.3.7.2.1.5",
+      "m10-mask2015-labels10.6.5.9.7.4.2.8.3.1",
+      "m10-mask2015-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask2020-labels3.1.10.9.8.7.6.5.4.2",
+      "m10-mask2023-labels9.7.6.5.4.3.2.1.10.8",
+      "m10-mask2029-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask2030-labels9.8.7.6.5.4.3.2.1.10",
+      "m10-mask2031-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask2033-labels6.4.8.7.9.5.1.2.10.3",
+      "m10-mask2035-labels6.7.8.9.10.1.2.3.4.5",
+      "m10-mask2039-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask2039-labels6.5.4.3.2.1.10.9.8.7",
+      "m10-mask2040-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask2042-labels4.3.2.1.10.9.8.7.5.6",
+      "m10-mask2043-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask2045-labels8.6.9.4.1.10.7.2.3.5",
+      "m10-mask2047-labels1.3.5.4.8.6.2.10.7.9",
+      "m10-mask2047-labels10.8.7.6.5.4.3.2.1.9",
+      "m10-mask2047-labels10.9.7.4.2.8.1.6.5.3",
+      "m10-mask2047-labels2.1.10.8.9.7.6.5.4.3",
+      "m10-mask2047-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask2047-labels4.2.10.8.5.3.6.7.1.9",
+      "m10-mask2047-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask2047-labels5.6.10.8.4.7.1.2.3.9",
+      "m10-mask2047-labels6.5.4.3.2.1.10.9.8.7",
+      "m10-mask2047-labels6.9.7.8.3.10.5.4.2.1",
+      "m10-mask2047-labels7.10.9.8.4.2.1.6.5.3",
+      "m10-mask2047-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask2047-labels8.7.6.5.4.2.3.1.10.9",
+      "m10-mask2047-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask2047-labels9.8.7.6.5.4.3.2.1.10",
+      "m10-mask22-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask250-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask254-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask255-labels3.4.2.1.10.9.8.7.6.5",
+      "m10-mask264-labels1.10.9.8.6.7.5.4.3.2",
+      "m10-mask27-labels8.10.6.9.7.4.5.1.3.2",
+      "m10-mask352-labels10.7.3.4.2.8.1.5.9.6",
+      "m10-mask36-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask383-labels3.4.7.8.6.1.9.2.5.10",
+      "m10-mask419-labels8.2.6.5.7.3.10.4.1.9",
+      "m10-mask445-labels6.5.3.4.2.1.10.9.8.7",
+      "m10-mask48-labels10.8.3.5.6.9.1.4.7.2",
+      "m10-mask492-labels8.7.10.6.3.5.9.4.1.2",
+      "m10-mask502-labels9.6.5.8.7.10.3.2.4.1",
+      "m10-mask511-labels10.7.9.5.6.4.2.1.8.3",
+      "m10-mask52-labels8.10.6.7.9.5.3.4.1.2",
+      "m10-mask536-labels6.4.3.2.1.10.9.8.7.5",
+      "m10-mask544-labels9.8.10.6.7.5.1.2.3.4",
+      "m10-mask576-labels2.9.3.10.8.6.4.7.1.5",
+      "m10-mask579-labels7.6.5.4.3.1.2.10.9.8",
+      "m10-mask580-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask584-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask59-labels8.9.10.1.2.3.4.5.6.7",
+      "m10-mask6-labels3.2.1.9.10.8.7.6.5.4",
+      "m10-mask60-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask634-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask642-labels10.9.8.4.5.2.7.6.1.3",
+      "m10-mask678-labels6.5.4.3.2.1.10.9.8.7",
+      "m10-mask68-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask72-labels9.8.6.10.7.3.2.5.1.4",
+      "m10-mask737-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask745-labels2.1.9.10.8.7.6.5.4.3",
+      "m10-mask763-labels7.2.1.4.3.8.5.6.9.10",
+      "m10-mask771-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask779-labels3.1.2.10.9.8.7.6.5.4",
+      "m10-mask791-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask819-labels9.7.10.4.5.6.3.8.1.2",
+      "m10-mask840-labels2.4.6.1.9.3.5.7.10.8",
+      "m10-mask847-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask899-labels9.6.8.10.5.7.3.1.2.4",
+      "m10-mask954-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask98-labels7.6.5.4.3.2.1.10.9.8",
+      "m9-mask1005-labels314726958",
+      "m9-mask1007-labels869357142",
+      "m9-mask1007-labels876543219",
+      "m9-mask1011-labels765432198",
+      "m9-mask1014-labels432198756",
+      "m9-mask1015-labels321986754",
+      "m9-mask1017-labels794862315",
+      "m9-mask1019-labels643219875",
+      "m9-mask1021-labels321987654",
+      "m9-mask1021-labels357169284",
+      "m9-mask1021-labels542319876",
+      "m9-mask1021-labels769823541",
+      "m9-mask1022-labels876543219",
+      "m9-mask1023-labels198765432",
+      "m9-mask1023-labels321987654",
+      "m9-mask1023-labels325618794",
+      "m9-mask1023-labels328617945",
+      "m9-mask1023-labels431298765",
+      "m9-mask1023-labels432198765",
+      "m9-mask1023-labels543219876",
+      "m9-mask1023-labels637845291",
+      "m9-mask1023-labels654321987",
+      "m9-mask1023-labels678912345",
+      "m9-mask1023-labels689453721",
+      "m9-mask1023-labels875632941",
+      "m9-mask1023-labels875643219",
+      "m9-mask1023-labels876534219",
+      "m9-mask1023-labels876543219",
+      "m9-mask1023-labels964587312",
+      "m9-mask108-labels321987654",
+      "m9-mask112-labels543219876",
+      "m9-mask140-labels654231987",
+      "m9-mask162-labels172659843",
+      "m9-mask18-labels876543219",
+      "m9-mask185-labels654321987",
+      "m9-mask20-labels198765432",
+      "m9-mask200-labels947351826",
+      "m9-mask246-labels765432198",
+      "m9-mask259-labels865432197",
+      "m9-mask260-labels432189765",
+      "m9-mask269-labels675432198",
+      "m9-mask274-labels564321987",
+      "m9-mask314-labels964817532",
+      "m9-mask319-labels654321987",
+      "m9-mask326-labels543219876",
+      "m9-mask334-labels894576213",
+      "m9-mask340-labels298765431",
+      "m9-mask351-labels968471523",
+      "m9-mask354-labels978625431",
+      "m9-mask357-labels986723451",
+      "m9-mask362-labels678912345",
+      "m9-mask383-labels543219876",
+      "m9-mask386-labels124739856",
+      "m9-mask409-labels765432198",
+      "m9-mask424-labels654321897",
+      "m9-mask448-labels936785421",
+      "m9-mask449-labels528371694",
+      "m9-mask466-labels219876543",
+      "m9-mask471-labels391865427",
+      "m9-mask472-labels694758321",
+      "m9-mask479-labels219876543",
+      "m9-mask494-labels278596413",
+      "m9-mask495-labels198765432",
+      "m9-mask495-labels986425371",
+      "m9-mask509-labels729641358",
+      "m9-mask509-labels981364275",
+      "m9-mask510-labels765432198",
+      "m9-mask511-labels165243789",
+      "m9-mask511-labels321987654",
+      "m9-mask511-labels496571238",
+      "m9-mask529-labels321987654",
+      "m9-mask537-labels687954132",
+      "m9-mask540-labels498137562",
+      "m9-mask541-labels684275139",
+      "m9-mask544-labels876453219",
+      "m9-mask545-labels654321987",
+      "m9-mask571-labels982674315",
+      "m9-mask573-labels974835621",
+      "m9-mask578-labels876543219",
+      "m9-mask591-labels654321987",
+      "m9-mask65-labels876543129",
+      "m9-mask666-labels198675432",
+      "m9-mask68-labels432198765",
+      "m9-mask687-labels143285697",
+      "m9-mask727-labels984571632",
+      "m9-mask740-labels416893725",
+      "m9-mask747-labels978461253",
+      "m9-mask765-labels472583619",
+      "m9-mask771-labels891234567",
+      "m9-mask775-labels432198765",
+      "m9-mask778-labels689534271",
+      "m9-mask801-labels432198765",
+      "m9-mask805-labels654321897",
+      "m9-mask822-labels876543219",
+      "m9-mask854-labels421635798",
+      "m9-mask856-labels219876543",
+      "m9-mask870-labels869714523",
+      "m9-mask879-labels946578321",
+      "m9-mask893-labels543219876",
+      "m9-mask895-labels876543219",
+      "m9-mask895-labels963754821",
+      "m9-mask915-labels765432198",
+      "m9-mask927-labels321987564",
+      "m9-mask935-labels485196372",
+      "m9-mask944-labels532198764",
+      "m9-mask95-labels318926547",
+      "m9-mask955-labels986754321",
+      "m9-mask96-labels567891234",
+      "m9-mask96-labels987654321",
+      "m9-mask965-labels218976543",
+      "m9-mask974-labels198765432",
+      "m9-mask985-labels342198765",
+      "m9-mask993-labels196824375",
+      "m9-mask994-labels675248319",
+      "m9-mask996-labels876543129"
+    ],
+    "path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/pool.json",
+    "note": "development only; pooled certificates are not a uniform program"
+  },
+  "approved_payload_sha256": "4630c76fa6ef761efb569d283b910377eb22f353658a0b318d788b0f9d7004ed",
+  "ledger": "autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.evox-s3.json",
+  "contacts_allowed": 30,
+  "usd_allowed": 53.505574
+}

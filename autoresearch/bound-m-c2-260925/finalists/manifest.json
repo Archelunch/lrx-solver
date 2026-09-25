@@ -1,0 +1,33 @@
+{
+ "frozen_sources": {
+  "adaevolve-s1": "246384798a6c3e9d38b84efcc38fb6b98e96d277dad2508e441c995aced35d0e",
+  "adaevolve-s2": "375f6f3fbb2b9a613d2b7b7e734aa11229232cf0d71bcf773cc962f06b9c402a",
+  "adaevolve-s3": "dcc5993e9e52cceb827a2d3325c8d947adcd36cc4e592e4265b724d7fa86f3fb",
+  "evox-s1": "3201964e1d2360e5305ca4a276ff53841cba110670b5b973995eb551a2611f3c",
+  "evox-s2": "40b7224981b7b978d5acf807da61db15ba3a6697aed8f8f18e98ae074e13b438",
+  "evox-s3": "fbaca00246f56c19ec790ebfb513f9206de257178abc89c7edbcbb5ce654e902",
+  "gepa-s1": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+  "gepa-s2": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+  "gepa-s3": "e27e79fd3a6da0131b22edaf7ea1ab6e2c2ff4b0c06fda8118aa95c344570b0f",
+  "sequential-s1": "a943b58dcf2ab09f4329f8acddb5aabad592812d4156b511a4a15a4f724b94c3",
+  "sequential-s2": "8986b401d80909b31dd57dcc7b102a4861c71c06e300e4facba2c56608b85c91",
+  "sequential-s3": "4bb117169dd6d1189b8dc5bfe4e8b1f087c288282c22507b1dbcf8878342a387"
+ },
+ "controls": {
+  "naive": "f95223410af211d87738db54db52931b3178b2c09d2a12d9a24b20b7d32d21fc",
+  "sweeplp-b": "integrations.bound_control_sweeplp",
+  "gepa-c1": "7d55f269bbf1c5ff73582ff30e9dfb394c06618bbba2758d498ed5da2e27be87",
+  "seed-evox-c1": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225"
+ },
+ "files": {
+  "development": "88567c75d13af24bca6c9cbdd5fa96bd665e4d0f5589a856a8a4382ff344908e",
+  "validation": "1409e1bbf1093cccb24f20e7dd86394ca1d4e632d84c8ca6553eb28933bcec59",
+  "holdout": "5057971a8262983dac65c0785495d60ec3a64ceffc220642fb8fca94fc282b6a"
+ },
+ "evaluator": {
+  "version": "bound-eval-2",
+  "contract": "bound-contract-2: candidate defines certify(family) -> {\"words\": [...], \"weights\"?: [...], \"note\"?: str}; 1..32 words over L,R,X of at most 4000 letters; weights optional strings p or p/q (at most 40 digits each) or ints below 10**40 forming a probability vector (checked and reported, never trusted). INVALID_OUTPUT unless every word sorts the unit base with no zero-zero swap (lrx_m.Profile) and passes literal lifted execution at z=0, e_j, 2e_j, e_j+e_{j+1}, (1..1) with length F(z) <= B+beta.z. CERTIFIED iff the exact LP optimum (lift_evaluator.mixture_lp) has weighted base < T+1 and weighted slopes <= m-2, T = T_m(m+k). gap = lift_evaluator.gap_lp with strict T+1; BOUNDARY iff not certified and gap 0. Invalid and INCOMPLETE (timeout 3 s CPU / 5 s wall per family, crash, worker failure; one process per family, no fork; a family whose parent-measured process CPU exceeds 5 s or its reported time by more than 2 s import/startup is INCOMPLETE) get gap 4000. Per m: pct = 100 C/N, W = max gap, G = mean gap over valid. combined = mean_m pct + min_m pct + 0.06 V/N + 0.06/(1+max_m W) + 0.03/(1+mean_m G). Source guard (a screen, not a guarantee): no str constant or constant concatenation (a + b, sep.join([...])) >= 24 chars that is >= 90% L/R/X/l/r/x, at most 512 such characters in all str constants, at most 4096 characters of non-docstring str constants, no literal container > 64 elements, at most 256 constant elements in all literal containers, no int constant >= 10**40, no bytes constant > 256 bytes.",
+  "hash": "ba83a49681f0bfa2169312db61424537414576e366f501158d758bb1fa6f5333"
+ },
+ "created_utc": "2026-09-25T22:06:13Z"
+}

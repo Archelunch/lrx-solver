@@ -1,0 +1,3099 @@
+{
+  "engine": "adaevolve",
+  "seed": 1,
+  "task": "bound-m-c2-260925",
+  "upstream": "skydiscover==0.2.0@0d932b690670a7e544388ad362e9876c8bd256a0",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/frozen/manifest.json",
+  "frozen_manifest_sha256": "e65a06f52db9038597560ef93c1bd9d48babe15965b69326512ceb2fa0ac4c2e",
+  "development_sha256": "88567c75d13af24bca6c9cbdd5fa96bd665e4d0f5589a856a8a4382ff344908e",
+  "seed_sha256": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+  "c2_manifest_sha256": "c0388ae6e98a0655836f29c256ae4eef7230cdd970b9b628f648dabfce48169a",
+  "seed_full": {
+    "combined_score": 131.59183777974596,
+    "certified": 212,
+    "valid": 303,
+    "families": 303,
+    "max_W": "37/13",
+    "per_m_certified": {
+      "9": 94,
+      "10": 118
+    },
+    "per_m": {
+      "9": {
+        "certified": 94,
+        "families": 153,
+        "pct": 61.43790849673203,
+        "boundary": 2,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "37/13",
+        "W_complete": true,
+        "G": "292385505177291015966143231/1362953102208464273699253600",
+        "per_k": {
+          "2": [
+            7,
+            17
+          ],
+          "3": [
+            11,
+            17
+          ],
+          "4": [
+            11,
+            17
+          ],
+          "5": [
+            13,
+            17
+          ],
+          "6": [
+            7,
+            17
+          ],
+          "7": [
+            7,
+            17
+          ],
+          "8": [
+            12,
+            17
+          ],
+          "9": [
+            11,
+            17
+          ],
+          "10": [
+            15,
+            17
+          ]
+        }
+      },
+      "10": {
+        "certified": 118,
+        "families": 150,
+        "pct": 78.66666666666667,
+        "boundary": 1,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "7/4",
+        "W_complete": true,
+        "G": "211722571672395970167626027628295284780857/2366318383221114769955502497116432995176000",
+        "per_k": {
+          "2": [
+            11,
+            15
+          ],
+          "3": [
+            12,
+            15
+          ],
+          "4": [
+            14,
+            15
+          ],
+          "5": [
+            10,
+            15
+          ],
+          "6": [
+            11,
+            15
+          ],
+          "7": [
+            9,
+            15
+          ],
+          "8": [
+            13,
+            15
+          ],
+          "9": [
+            11,
+            15
+          ],
+          "10": [
+            13,
+            15
+          ],
+          "11": [
+            14,
+            15
+          ]
+        }
+      }
+    },
+    "cache_key": "19c049b1574c41148141c21c7d5c6d8a2a714495026cea8610251698959fa3d0",
+    "pool_certified": 0,
+    "pooled_certified": 212,
+    "pool_gain": 212
+  },
+  "broker_url": "http://127.0.0.1:8894/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 30,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "max_evals": 50,
+  "wall_seconds": 21600,
+  "verifier_url": "http://127.0.0.1:59123/evaluate",
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/stage/sky-config.yaml",
+    "--search",
+    "adaevolve",
+    "--iterations",
+    "30",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/stage/sky-config.yaml",
+    "--search",
+    "adaevolve",
+    "--iterations",
+    "30",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017",
+  "sky_random_seed": 1,
+  "gepa_seed": null,
+  "evox_strategy_evolution": null,
+  "returncode": 0,
+  "engine_seconds": 1019.9449274580111,
+  "mechanism_evidence": {
+    "configured_iterations": 30,
+    "observed_iterations": 30,
+    "successful_generation_iterations": 28,
+    "ucb_island_visits": [
+      17,
+      16
+    ],
+    "ucb_min_visits": 3,
+    "ucb_min_visits_reached": true,
+    "migration_interval": 15,
+    "migration_opportunity": true,
+    "paradigm_window": 10,
+    "paradigms_tried": 3
+  },
+  "first_solution_prompt_check": {
+    "actual_sha256": "39d31030edd252bf57de6952417be1018e228d030cddd234f6a45f0c08e55bd5",
+    "matches": true
+  },
+  "status": "COMPLETE",
+  "candidate_evaluations": {
+    "requests": 32,
+    "full_evaluations": 16,
+    "failures": 0,
+    "best_screen": {
+      "score": 133.4443282192332,
+      "certified": 22,
+      "source_sha256": "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab"
+    },
+    "best_full": {
+      "score": 153.5768696372315,
+      "certified": 243,
+      "per_m": {
+        "9": 112,
+        "10": 131
+      },
+      "max_W": "11/5",
+      "source_sha256": "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab"
+    },
+    "screen_ids": [
+      "m9-mask132-labels765432198",
+      "m9-mask656-labels432198765",
+      "m9-mask801-labels432198765",
+      "m9-mask185-labels654321987",
+      "m9-mask571-labels982674315",
+      "m9-mask471-labels391865427",
+      "m9-mask1011-labels765432198",
+      "m9-mask895-labels987654321",
+      "m9-mask1023-labels875643219",
+      "m9-mask545-labels654321987",
+      "m9-mask591-labels654321987",
+      "m9-mask1023-labels654321987",
+      "m9-mask1014-labels432198756",
+      "m9-mask856-labels654321987",
+      "m9-mask112-labels543219876",
+      "m10-mask528-labels9.8.7.6.5.4.2.3.1.10",
+      "m10-mask1184-labels1.2.3.4.5.6.7.8.9.10",
+      "m10-mask579-labels7.6.5.4.3.1.2.10.9.8",
+      "m10-mask1053-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask791-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask1623-labels7.9.10.8.5.4.1.2.6.3",
+      "m10-mask1851-labels1.10.9.8.7.6.5.4.3.2",
+      "m10-mask1917-labels10.6.8.2.7.3.9.4.1.5",
+      "m10-mask1983-labels9.7.6.5.4.3.2.1.10.8",
+      "m10-mask2047-labels5.6.10.8.4.7.1.2.3.9",
+      "m10-mask1870-labels5.4.3.2.1.9.10.8.7.6",
+      "m10-mask536-labels6.4.3.2.1.10.9.8.7.5",
+      "m10-mask2029-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask1025-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask1796-labels8.7.6.5.3.4.2.1.10.9"
+    ],
+    "families": 303
+  },
+  "evaluation_trace": [
+    {
+      "scope": "screen",
+      "candidate_hash": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+      "combined_score": 120.10646306993874,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 131.59183777974596,
+        "certified": 212,
+        "valid": 303,
+        "families": 303,
+        "max_W": "37/13",
+        "per_m_certified": {
+          "9": 94,
+          "10": 118
+        },
+        "per_m": {
+          "9": {
+            "certified": 94,
+            "families": 153,
+            "pct": 61.43790849673203,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "37/13",
+            "W_complete": true,
+            "G": "292385505177291015966143231/1362953102208464273699253600",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                7,
+                17
+              ],
+              "7": [
+                7,
+                17
+              ],
+              "8": [
+                12,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 118,
+            "families": 150,
+            "pct": 78.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "211722571672395970167626027628295284780857/2366318383221114769955502497116432995176000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                12,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                9,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                11,
+                15
+              ],
+              "10": [
+                13,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "19c049b1574c41148141c21c7d5c6d8a2a714495026cea8610251698959fa3d0",
+        "pool_certified": 0,
+        "pooled_certified": 212,
+        "pool_gain": 212
+      },
+      "pool_certified": 0,
+      "pooled_certified": 20,
+      "pool_gain": 20,
+      "ordinal": 1,
+      "packet_sha256": "9d1c4ec3a9b9db7ab00a67102166e65a8000ea56a1bd06746c591ff7fec6be04"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+      "combined_score": 120.10646306993874,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 131.59183777974596,
+        "certified": 212,
+        "valid": 303,
+        "families": 303,
+        "max_W": "37/13",
+        "per_m_certified": {
+          "9": 94,
+          "10": 118
+        },
+        "per_m": {
+          "9": {
+            "certified": 94,
+            "families": 153,
+            "pct": 61.43790849673203,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "37/13",
+            "W_complete": true,
+            "G": "292385505177291015966143231/1362953102208464273699253600",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                7,
+                17
+              ],
+              "7": [
+                7,
+                17
+              ],
+              "8": [
+                12,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 118,
+            "families": 150,
+            "pct": 78.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "211722571672395970167626027628295284780857/2366318383221114769955502497116432995176000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                12,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                9,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                11,
+                15
+              ],
+              "10": [
+                13,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "19c049b1574c41148141c21c7d5c6d8a2a714495026cea8610251698959fa3d0",
+        "pool_certified": 212,
+        "pooled_certified": 212,
+        "pool_gain": 0
+      },
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 2,
+      "packet_sha256": "62941f523a8f663aa0408391d91bae6eed65e318c70ce02a48e7fd105cce72ff"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "d08bedbebbda322633d350edc49f324af81830b7137ab52dd1bf109823287aca",
+      "combined_score": 120.10677374408881,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 137.4974275423943,
+        "certified": 220,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 99,
+          "10": 121
+        },
+        "per_m": {
+          "9": {
+            "certified": 99,
+            "families": 153,
+            "pct": 64.70588235294117,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "1588845890128140307505/8693157875996557539576",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                8,
+                17
+              ],
+              "7": [
+                8,
+                17
+              ],
+              "8": [
+                12,
+                17
+              ],
+              "9": [
+                14,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 121,
+            "families": 150,
+            "pct": 80.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "136487614982231649737970721922095233049/1714329214375655949993368619090331140000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                12,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                10,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                12,
+                15
+              ],
+              "10": [
+                13,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "41b8c123863d2eaca654aac9b03dda8b73d5888fba6b7002f631e3a71fd0d698",
+        "pool_certified": 212,
+        "pooled_certified": 220,
+        "pool_gain": 8
+      },
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 3,
+      "packet_sha256": "00c745f662aa29bdcd532aafefeb2e4393953b01d50e9b75fcf5ead75530d378"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "28b56999a0d530511e931bce44063bbbdca2bdc23c466b849934f60e115715a2",
+      "combined_score": 120.10677374408881,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 142.4388748446724,
+        "certified": 229,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 102,
+          "10": 127
+        },
+        "per_m": {
+          "9": {
+            "certified": 102,
+            "families": 153,
+            "pct": 66.66666666666667,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "4084083519120032527347847/23993115737750498809229760",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                13,
+                17
+              ],
+              "9": [
+                14,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 127,
+            "families": 150,
+            "pct": 84.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "319828587561129478318903197343/4615374643959926613547560780000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                12,
+                15
+              ],
+              "7": [
+                11,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "409458363ac624080e2a08e9622595d604d8fbaf2e86f4200e6361ae7629f068",
+        "pool_certified": 220,
+        "pooled_certified": 229,
+        "pool_gain": 9
+      },
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 4,
+      "packet_sha256": "dcd7b0840ae021a28c93367e5bcff430a14d0d489abd16d6fbb5afc0868468a8"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "e37595119b0038f40e46b7f7f13a922620694d471d444b17092440a385f54c07",
+      "combined_score": 120.1051308662158,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 5,
+      "packet_sha256": "9e4fcc64788a89afa8ac9e4b8bbb3b6460045e85b7cacccd4cb151a9d45ab889"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6d1c2f5ec60d66a1fa8d809ca2cf90d8f63493e2e9c910c8f97a71eaf819ba51",
+      "combined_score": 120.10630168655725,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 6,
+      "packet_sha256": "46514a3d54fa9794e92b2c0f3d3d145513cc0af4e5ee8c5a483e00f737e45979"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "82be89b4c65a0e519b5db4b73be60363f0ea64f0ec419e23a510195cb70d9e05",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 7,
+      "packet_sha256": "101f8072a2b14043ecaeec6d489ea0d1dfe52f41f3e85e12e9c4d8087ae914e3"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "a06e88331d55548102d3652159de2a6230c200e2a57edec1d487c401281a35ad",
+      "combined_score": 120.10691677254417,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 143.41928570509302,
+        "certified": 230,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 103,
+          "10": 127
+        },
+        "per_m": {
+          "9": {
+            "certified": 103,
+            "families": 153,
+            "pct": 67.3202614379085,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "239968896021040083095351/1411359749279441106425280",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                13,
+                17
+              ],
+              "9": [
+                14,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 127,
+            "families": 150,
+            "pct": 84.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "1818328964017216090760647261591/26769172934967574358575852524000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                12,
+                15
+              ],
+              "7": [
+                11,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "05a4bea19b265e1d10c9b5a1e005806304b4b6c3a251ac0799af0c829ed8a270",
+        "pool_certified": 229,
+        "pooled_certified": 230,
+        "pool_gain": 1
+      },
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 8,
+      "packet_sha256": "f823699353d67c87a6c33661b0d7aac975f074c27671560902ffac7a972c5481"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "e0b4f1b9abcc7fddbd99700548c922c454d2824d5052967d3f64cd02c418caca",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 9,
+      "packet_sha256": "860e7deb5f92668a9dab49fb1e9789983cac6ed0abebf4dd426f2b6354838939"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "7e0850934e8a1f126c4f0060d37431f22f2e333732e5ba3270c1b66fd7119312",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 10,
+      "packet_sha256": "12ebaff624e820da8e0b851f4f537247599d523fb352d828428302f121ef9a4f"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "71badbd005f6df8ee48e932e0f6ad0434954af73792e60f5ba6a51500b088c34",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 11,
+      "packet_sha256": "025456d3975f0c66a09e68cc165b843cd2d18c81ee5db37ea483cdcb121ac7d4"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "b9e36c24fe8dc18351c184887589008469f58d6cc16d22548d898c019436127c",
+      "combined_score": 120.10646306993874,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 12,
+      "packet_sha256": "4e51cff2a244e4c86d37b78bd87f951aeedc90082ecdf7ed3f6ddd9fc1f31302"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "958386cfa4d78649f9d154c1b61216f69dd345d227c4be8d63de9f4ffab26efb",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 13,
+      "packet_sha256": "7bd5a3fde73296dc92310f916bb74b5119ed69c5a9af2173d313bd45c9f008f0"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "a06e88331d55548102d3652159de2a6230c200e2a57edec1d487c401281a35ad",
+      "combined_score": 120.10691677254417,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 143.41928570509302,
+        "certified": 230,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 103,
+          "10": 127
+        },
+        "per_m": {
+          "9": {
+            "certified": 103,
+            "families": 153,
+            "pct": 67.3202614379085,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "239968896021040083095351/1411359749279441106425280",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                13,
+                17
+              ],
+              "9": [
+                14,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 127,
+            "families": 150,
+            "pct": 84.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "1818328964017216090760647261591/26769172934967574358575852524000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                12,
+                15
+              ],
+              "7": [
+                11,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "05a4bea19b265e1d10c9b5a1e005806304b4b6c3a251ac0799af0c829ed8a270",
+        "pool_certified": 230,
+        "pooled_certified": 230,
+        "pool_gain": 0
+      },
+      "pool_certified": 20,
+      "pooled_certified": 20,
+      "pool_gain": 0,
+      "ordinal": 14,
+      "packet_sha256": "f823699353d67c87a6c33661b0d7aac975f074c27671560902ffac7a972c5481"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "5dae5c57d01e6d85b0c41526b6e05b3551c72c521371ad4d878ad735baa7d91d",
+      "combined_score": 123.4404993633855,
+      "certified": 21,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 144.73316107235289,
+        "certified": 232,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 104,
+          "10": 128
+        },
+        "per_m": {
+          "9": {
+            "certified": 104,
+            "families": 153,
+            "pct": 67.97385620915033,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "779416775932813307/4692720643695564480",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                10,
+                17
+              ],
+              "8": [
+                13,
+                17
+              ],
+              "9": [
+                14,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 128,
+            "families": 150,
+            "pct": 85.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "110116339548048764976638971/1853152185701353175777080800",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                12,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                12,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "2e8689a4a98b6fe4936b7de56a8414e5673c9b9a87a715d7378714e76c59dcbf",
+        "pool_certified": 230,
+        "pooled_certified": 234,
+        "pool_gain": 4
+      },
+      "pool_certified": 20,
+      "pooled_certified": 21,
+      "pool_gain": 1,
+      "ordinal": 15,
+      "packet_sha256": "c4bbf724b352022fd94763192df9382137d09c573273a55131028821a17601ab"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "3c19bb24bbe2d0fa8113bf79079cdcfd320342cf2b9558ea44b313cd1b1152ab",
+      "combined_score": 123.4404993633855,
+      "certified": 21,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 144.73316107235289,
+        "certified": 232,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 104,
+          "10": 128
+        },
+        "per_m": {
+          "9": {
+            "certified": 104,
+            "families": 153,
+            "pct": 67.97385620915033,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "779416775932813307/4692720643695564480",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                10,
+                17
+              ],
+              "8": [
+                13,
+                17
+              ],
+              "9": [
+                14,
+                17
+              ],
+              "10": [
+                16,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 128,
+            "families": 150,
+            "pct": 85.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "110116339548048764976638971/1853152185701353175777080800",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                12,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                12,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "ca19a4e588000a0b0ee5a2fcfe5ed3f859d0333284b104bb380cda3e2d10439d",
+        "pool_certified": 234,
+        "pooled_certified": 234,
+        "pool_gain": 0
+      },
+      "pool_certified": 21,
+      "pooled_certified": 21,
+      "pool_gain": 0,
+      "ordinal": 16,
+      "packet_sha256": "4968dbb4ff1c86c0ad0edd66e6dee3d1a11c31339f4a0bba5ba3775a761e8475"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "8212ee9fc031d60e448a152ef0f06fe1801aba1f014f1afce99a865090b6e34f",
+      "combined_score": 120.10708198767794,
+      "certified": 20,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 21,
+      "pooled_certified": 21,
+      "pool_gain": 0,
+      "ordinal": 17,
+      "packet_sha256": "0ba53e0fb56cfbf2039e4ff28f0daa3791d5bbfb78770d811222852613d71900"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "246384798a6c3e9d38b84efcc38fb6b98e96d277dad2508e441c995aced35d0e",
+      "combined_score": 130.10717405156996,
+      "certified": 21,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 150.28219020931292,
+        "certified": 237,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 110,
+          "10": 127
+        },
+        "per_m": {
+          "9": {
+            "certified": 110,
+            "families": 153,
+            "pct": 71.89542483660131,
+            "boundary": 3,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "300885305773649/1857485701431360",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                10,
+                17
+              ],
+              "7": [
+                12,
+                17
+              ],
+              "8": [
+                14,
+                17
+              ],
+              "9": [
+                15,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 127,
+            "families": 150,
+            "pct": 84.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "2170637275956320302364977711/34597287116203184043279055200",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                14,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "58b51ddcc50267b936abdef08a62eb3a297097b3d5b0f5519659889099f5257d",
+        "pool_certified": 234,
+        "pooled_certified": 244,
+        "pool_gain": 10
+      },
+      "pool_certified": 21,
+      "pooled_certified": 22,
+      "pool_gain": 1,
+      "ordinal": 18,
+      "packet_sha256": "757d6547b3fe44bde728b7911d90cc7185064f691b7d09f0d3bf6f718b582a44"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "06316d17e0651e6ffa31a2986a7e8eb72fd47f44f7d1c9c38739b54b613ced83",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 19,
+      "packet_sha256": "c38df16172a76f3771f83579bde9d2c24a4acfc7f5590d63d00806e86cfa646b"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab",
+      "combined_score": 133.4443282192332,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 153.5768696372315,
+        "certified": 243,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 112,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 112,
+            "families": 153,
+            "pct": 73.20261437908496,
+            "boundary": 3,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "1220369161247887814487869/9398867489783919079732800",
+            "per_k": {
+              "2": [
+                9,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                12,
+                17
+              ],
+              "8": [
+                15,
+                17
+              ],
+              "9": [
+                15,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "32/23",
+            "W_complete": true,
+            "G": "4531468860849406430987677/91567985299224891428400000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "c9e1cef37aa64577bcf2b81fefeeb3616055da610831c8bcaae517c27decba41",
+        "pool_certified": 244,
+        "pooled_certified": 249,
+        "pool_gain": 5
+      },
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 20,
+      "packet_sha256": "20a76c504c1640a9b55d076418eee34a77bb5efd6d6fe7e7685e0baf7587374c"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6c1702302d371b9348605488cf3bfc5f9886892b5bede93520356eaa6b78ae12",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 21,
+      "packet_sha256": "1a1fc474185ec8532cb93ff438cf1582fbfe0f97851d7cd9e3eb5ad6885bd2fe"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "a896cf509230e923094adae27ef534e4fb17c889f7f6ce0cd85988650d051147",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 22,
+      "packet_sha256": "1e540c7413e2bd84120f5662a53b13dbfc6bff9b986e001d9de2fc67e05569ad"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "b752d20df1674dfad0b0d7fa33dfd90ad6bfc2fb60ed6386dfc4cf7dd5b84c6b",
+      "combined_score": 133.4443282192332,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 153.5768696372315,
+        "certified": 243,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 112,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 112,
+            "families": 153,
+            "pct": 73.20261437908496,
+            "boundary": 3,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "1220369161247887814487869/9398867489783919079732800",
+            "per_k": {
+              "2": [
+                9,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                12,
+                17
+              ],
+              "8": [
+                15,
+                17
+              ],
+              "9": [
+                15,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "32/23",
+            "W_complete": true,
+            "G": "4531468860849406430987677/91567985299224891428400000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "7da30c6b1f7a42f0ad1f36e0b5b611f19521f900b5eec84b61eee9ad8c028910",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 23,
+      "packet_sha256": "20a76c504c1640a9b55d076418eee34a77bb5efd6d6fe7e7685e0baf7587374c"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "4c6472c5cc90a038bb8ce0bf4f47c8dcdbff2fb3930c228d706243231db6fcfd",
+      "combined_score": 133.44050917026732,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 22,
+      "pooled_certified": 23,
+      "pool_gain": 1,
+      "ordinal": 24,
+      "packet_sha256": "9b9a65f4bdd7b0f125727a250b1423f8492c3942df3eee7106b378bd11b12bee"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "abf3c193cc41273f5618c5cf6066ee3bcdcc6990330c63e3dccaec25822868a4",
+      "combined_score": 133.4443282192332,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 153.5768696372315,
+        "certified": 243,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 112,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 112,
+            "families": 153,
+            "pct": 73.20261437908496,
+            "boundary": 3,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "1220369161247887814487869/9398867489783919079732800",
+            "per_k": {
+              "2": [
+                9,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                12,
+                17
+              ],
+              "8": [
+                15,
+                17
+              ],
+              "9": [
+                15,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "32/23",
+            "W_complete": true,
+            "G": "4531468860849406430987677/91567985299224891428400000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "f20919b4438708b6b2d024cd54ad282af9d4c9beebfa6aa83f87875569c23f2d",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 25,
+      "packet_sha256": "20a76c504c1640a9b55d076418eee34a77bb5efd6d6fe7e7685e0baf7587374c"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "7c30d6cea5c9f70587d3a32c856ae645d68bd0ec2101ef016b83a8a5a197613c",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 26,
+      "packet_sha256": "44dca6ac9c8b57d35f23184a702ab32628fde9c0bf00ea51906ffa61f734941a"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "5e4cd175161adbb28e3fc1a0e8947b31818ed76d929bc3b77509b1d4bcf0262c",
+      "combined_score": 133.4443282192332,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 153.5768696372315,
+        "certified": 243,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 112,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 112,
+            "families": 153,
+            "pct": 73.20261437908496,
+            "boundary": 3,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "1220369161247887814487869/9398867489783919079732800",
+            "per_k": {
+              "2": [
+                9,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                12,
+                17
+              ],
+              "8": [
+                15,
+                17
+              ],
+              "9": [
+                15,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "32/23",
+            "W_complete": true,
+            "G": "4531468860849406430987677/91567985299224891428400000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "b487c8e5ecde73ea739082fb8cb5892cd1fdfdf0657d0e806678128069c5348c",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 27,
+      "packet_sha256": "20a76c504c1640a9b55d076418eee34a77bb5efd6d6fe7e7685e0baf7587374c"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "2cd385c694f06a61874cd6f2f7c03567cf59c1d528a0a11406739d674023e9cc",
+      "combined_score": 123.4404993633855,
+      "certified": 21,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 28,
+      "packet_sha256": "28dbdf01d46298c740ea4ade4f22d75ab8b70cf2ca980cb742e8a3507c825e74"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "960519d7a18544c8b2597913fd6467e10770540781d5cdc93ed284834333e8f7",
+      "combined_score": 133.4443282192332,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 153.5768696372315,
+        "certified": 243,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 112,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 112,
+            "families": 153,
+            "pct": 73.20261437908496,
+            "boundary": 3,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "1220369161247887814487869/9398867489783919079732800",
+            "per_k": {
+              "2": [
+                9,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                12,
+                17
+              ],
+              "8": [
+                15,
+                17
+              ],
+              "9": [
+                15,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "32/23",
+            "W_complete": true,
+            "G": "4531468860849406430987677/91567985299224891428400000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "988f2852ec8c4efa8d18469586ce41c07a28cfd274f58441faf2d223d384a6fe",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 29,
+      "packet_sha256": "20a76c504c1640a9b55d076418eee34a77bb5efd6d6fe7e7685e0baf7587374c"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "ce90ea0f11214bf6334f99c0f70d4afc4177da25ac47a04e4962ce16a77e5a3d",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 30,
+      "packet_sha256": "c0e2cc0d8b50bdc6e1d5121f861d808a1e11f42e13c26c0f6cc849247c7f0dfa"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab",
+      "combined_score": 133.4443282192332,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 153.5768696372315,
+        "certified": 243,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 112,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 112,
+            "families": 153,
+            "pct": 73.20261437908496,
+            "boundary": 3,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "1220369161247887814487869/9398867489783919079732800",
+            "per_k": {
+              "2": [
+                9,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                12,
+                17
+              ],
+              "8": [
+                15,
+                17
+              ],
+              "9": [
+                15,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "32/23",
+            "W_complete": true,
+            "G": "4531468860849406430987677/91567985299224891428400000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "c9e1cef37aa64577bcf2b81fefeeb3616055da610831c8bcaae517c27decba41",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 31,
+      "packet_sha256": "20a76c504c1640a9b55d076418eee34a77bb5efd6d6fe7e7685e0baf7587374c"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab",
+      "combined_score": 133.4443282192332,
+      "certified": 22,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 153.5768696372315,
+        "certified": 243,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/5",
+        "per_m_certified": {
+          "9": 112,
+          "10": 131
+        },
+        "per_m": {
+          "9": {
+            "certified": 112,
+            "families": 153,
+            "pct": 73.20261437908496,
+            "boundary": 3,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/5",
+            "W_complete": true,
+            "G": "1220369161247887814487869/9398867489783919079732800",
+            "per_k": {
+              "2": [
+                9,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                9,
+                17
+              ],
+              "7": [
+                12,
+                17
+              ],
+              "8": [
+                15,
+                17
+              ],
+              "9": [
+                15,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 131,
+            "families": 150,
+            "pct": 87.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "32/23",
+            "W_complete": true,
+            "G": "4531468860849406430987677/91567985299224891428400000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                14,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                12,
+                15
+              ],
+              "8": [
+                14,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "c9e1cef37aa64577bcf2b81fefeeb3616055da610831c8bcaae517c27decba41",
+        "pool_certified": 249,
+        "pooled_certified": 249,
+        "pool_gain": 0
+      },
+      "pool_certified": 22,
+      "pooled_certified": 22,
+      "pool_gain": 0,
+      "ordinal": 32,
+      "packet_sha256": "20a76c504c1640a9b55d076418eee34a77bb5efd6d6fe7e7685e0baf7587374c"
+    }
+  ],
+  "proposal_hashes": [
+    "d08bedbebbda322633d350edc49f324af81830b7137ab52dd1bf109823287aca",
+    "28b56999a0d530511e931bce44063bbbdca2bdc23c466b849934f60e115715a2",
+    "e37595119b0038f40e46b7f7f13a922620694d471d444b17092440a385f54c07",
+    "6d1c2f5ec60d66a1fa8d809ca2cf90d8f63493e2e9c910c8f97a71eaf819ba51",
+    "82be89b4c65a0e519b5db4b73be60363f0ea64f0ec419e23a510195cb70d9e05",
+    "a06e88331d55548102d3652159de2a6230c200e2a57edec1d487c401281a35ad",
+    "e0b4f1b9abcc7fddbd99700548c922c454d2824d5052967d3f64cd02c418caca",
+    "7e0850934e8a1f126c4f0060d37431f22f2e333732e5ba3270c1b66fd7119312",
+    "71badbd005f6df8ee48e932e0f6ad0434954af73792e60f5ba6a51500b088c34",
+    "b9e36c24fe8dc18351c184887589008469f58d6cc16d22548d898c019436127c",
+    "958386cfa4d78649f9d154c1b61216f69dd345d227c4be8d63de9f4ffab26efb",
+    "5dae5c57d01e6d85b0c41526b6e05b3551c72c521371ad4d878ad735baa7d91d",
+    "3c19bb24bbe2d0fa8113bf79079cdcfd320342cf2b9558ea44b313cd1b1152ab",
+    "8212ee9fc031d60e448a152ef0f06fe1801aba1f014f1afce99a865090b6e34f",
+    "246384798a6c3e9d38b84efcc38fb6b98e96d277dad2508e441c995aced35d0e",
+    "06316d17e0651e6ffa31a2986a7e8eb72fd47f44f7d1c9c38739b54b613ced83",
+    "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab",
+    "6c1702302d371b9348605488cf3bfc5f9886892b5bede93520356eaa6b78ae12",
+    "a896cf509230e923094adae27ef534e4fb17c889f7f6ce0cd85988650d051147",
+    "b752d20df1674dfad0b0d7fa33dfd90ad6bfc2fb60ed6386dfc4cf7dd5b84c6b",
+    "4c6472c5cc90a038bb8ce0bf4f47c8dcdbff2fb3930c228d706243231db6fcfd",
+    "abf3c193cc41273f5618c5cf6066ee3bcdcc6990330c63e3dccaec25822868a4",
+    "7c30d6cea5c9f70587d3a32c856ae645d68bd0ec2101ef016b83a8a5a197613c",
+    "5e4cd175161adbb28e3fc1a0e8947b31818ed76d929bc3b77509b1d4bcf0262c",
+    "2cd385c694f06a61874cd6f2f7c03567cf59c1d528a0a11406739d674023e9cc",
+    "960519d7a18544c8b2597913fd6467e10770540781d5cdc93ed284834333e8f7",
+    "ce90ea0f11214bf6334f99c0f70d4afc4177da25ac47a04e4962ce16a77e5a3d"
+  ],
+  "screen_valid_proposal_hashes": [
+    "d08bedbebbda322633d350edc49f324af81830b7137ab52dd1bf109823287aca",
+    "28b56999a0d530511e931bce44063bbbdca2bdc23c466b849934f60e115715a2",
+    "a06e88331d55548102d3652159de2a6230c200e2a57edec1d487c401281a35ad",
+    "5dae5c57d01e6d85b0c41526b6e05b3551c72c521371ad4d878ad735baa7d91d",
+    "3c19bb24bbe2d0fa8113bf79079cdcfd320342cf2b9558ea44b313cd1b1152ab",
+    "246384798a6c3e9d38b84efcc38fb6b98e96d277dad2508e441c995aced35d0e",
+    "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab",
+    "b752d20df1674dfad0b0d7fa33dfd90ad6bfc2fb60ed6386dfc4cf7dd5b84c6b",
+    "abf3c193cc41273f5618c5cf6066ee3bcdcc6990330c63e3dccaec25822868a4",
+    "5e4cd175161adbb28e3fc1a0e8947b31818ed76d929bc3b77509b1d4bcf0262c",
+    "960519d7a18544c8b2597913fd6467e10770540781d5cdc93ed284834333e8f7"
+  ],
+  "verified_best_hash": "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab",
+  "verified_best_full": {
+    "combined_score": 153.5768696372315,
+    "certified": 243,
+    "valid": 303,
+    "families": 303,
+    "max_W": "11/5",
+    "per_m_certified": {
+      "9": 112,
+      "10": 131
+    },
+    "per_m": {
+      "9": {
+        "certified": 112,
+        "families": 153,
+        "pct": 73.20261437908496,
+        "boundary": 3,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "11/5",
+        "W_complete": true,
+        "G": "1220369161247887814487869/9398867489783919079732800",
+        "per_k": {
+          "2": [
+            9,
+            17
+          ],
+          "3": [
+            11,
+            17
+          ],
+          "4": [
+            11,
+            17
+          ],
+          "5": [
+            13,
+            17
+          ],
+          "6": [
+            9,
+            17
+          ],
+          "7": [
+            12,
+            17
+          ],
+          "8": [
+            15,
+            17
+          ],
+          "9": [
+            15,
+            17
+          ],
+          "10": [
+            17,
+            17
+          ]
+        }
+      },
+      "10": {
+        "certified": 131,
+        "families": 150,
+        "pct": 87.33333333333333,
+        "boundary": 1,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "32/23",
+        "W_complete": true,
+        "G": "4531468860849406430987677/91567985299224891428400000",
+        "per_k": {
+          "2": [
+            11,
+            15
+          ],
+          "3": [
+            14,
+            15
+          ],
+          "4": [
+            14,
+            15
+          ],
+          "5": [
+            10,
+            15
+          ],
+          "6": [
+            13,
+            15
+          ],
+          "7": [
+            12,
+            15
+          ],
+          "8": [
+            14,
+            15
+          ],
+          "9": [
+            13,
+            15
+          ],
+          "10": [
+            15,
+            15
+          ],
+          "11": [
+            15,
+            15
+          ]
+        }
+      }
+    },
+    "cache_key": "c9e1cef37aa64577bcf2b81fefeeb3616055da610831c8bcaae517c27decba41",
+    "pool_certified": 249,
+    "pooled_certified": 249,
+    "pool_gain": 0
+  },
+  "verified_best_screen_score": 133.4443282192332,
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "MORE_CERTIFIED",
+  "word_pool": {
+    "families": 303,
+    "words": 5075,
+    "certified": 249,
+    "certified_ids": [
+      "m10-mask1006-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask1014-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask1022-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask1023-labels4.5.6.7.8.9.10.1.2.3",
+      "m10-mask1023-labels9.8.10.7.6.4.3.5.1.2",
+      "m10-mask1026-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask1027-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask1032-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask1053-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask1066-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask11-labels5.4.3.2.1.10.9.8.6.7",
+      "m10-mask1133-labels1.10.9.7.8.6.5.4.3.2",
+      "m10-mask1136-labels8.6.5.4.3.2.1.10.9.7",
+      "m10-mask1169-labels7.10.9.3.5.8.2.6.4.1",
+      "m10-mask1184-labels1.2.3.4.5.6.7.8.9.10",
+      "m10-mask1233-labels5.4.10.3.9.1.7.8.2.6",
+      "m10-mask1238-labels2.3.4.5.6.7.8.9.10.1",
+      "m10-mask1242-labels8.9.10.7.2.6.4.5.3.1",
+      "m10-mask1269-labels4.5.6.7.8.9.10.1.2.3",
+      "m10-mask130-labels1.2.7.4.3.9.10.5.6.8",
+      "m10-mask131-labels4.9.8.1.10.6.3.7.2.5",
+      "m10-mask1318-labels9.10.5.8.2.7.3.6.1.4",
+      "m10-mask1345-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask1360-labels2.1.5.4.3.8.9.10.7.6",
+      "m10-mask1361-labels8.10.9.7.2.6.4.3.5.1",
+      "m10-mask140-labels9.8.7.5.6.4.3.2.1.10",
+      "m10-mask1411-labels9.8.7.6.5.4.2.3.1.10",
+      "m10-mask1439-labels10.9.8.1.4.7.5.6.2.3",
+      "m10-mask145-labels8.10.6.7.1.9.5.4.3.2",
+      "m10-mask1471-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask1479-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask1487-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask1529-labels10.7.5.8.9.6.3.1.2.4",
+      "m10-mask1535-labels9.8.7.6.5.4.3.2.1.10",
+      "m10-mask1541-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask1542-labels4.8.3.2.6.1.5.9.10.7",
+      "m10-mask1589-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask1623-labels7.9.10.8.5.4.1.2.6.3",
+      "m10-mask1663-labels9.8.7.6.5.4.3.2.1.10",
+      "m10-mask172-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask1739-labels10.5.8.1.4.3.9.6.7.2",
+      "m10-mask1773-labels8.7.6.5.4.3.1.2.10.9",
+      "m10-mask1790-labels8.10.7.9.5.3.6.4.1.2",
+      "m10-mask1791-labels4.3.2.1.9.10.8.7.6.5",
+      "m10-mask1796-labels8.7.6.5.3.4.2.1.10.9",
+      "m10-mask1805-labels10.9.8.6.5.7.2.3.4.1",
+      "m10-mask1818-labels1.10.9.8.7.6.5.4.3.2",
+      "m10-mask1821-labels8.6.10.5.7.3.4.9.2.1",
+      "m10-mask1846-labels5.3.10.6.9.4.7.2.8.1",
+      "m10-mask1851-labels1.10.9.8.7.6.5.4.3.2",
+      "m10-mask1870-labels5.4.3.2.1.9.10.8.7.6",
+      "m10-mask1870-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask1917-labels10.6.8.2.7.3.9.4.1.5",
+      "m10-mask1919-labels6.5.4.3.2.1.10.8.9.7",
+      "m10-mask1919-labels9.8.6.5.2.3.1.7.10.4",
+      "m10-mask1966-labels10.6.9.7.1.8.4.5.2.3",
+      "m10-mask1983-labels10.7.9.8.3.2.6.5.4.1",
+      "m10-mask1983-labels9.7.6.5.4.3.2.1.10.8",
+      "m10-mask1986-labels4.3.6.9.7.1.10.2.8.5",
+      "m10-mask2005-labels5.4.3.2.1.9.10.8.7.6",
+      "m10-mask2007-labels9.1.6.5.8.3.7.10.2.4",
+      "m10-mask2011-labels10.4.9.6.8.3.7.2.1.5",
+      "m10-mask2015-labels10.6.5.9.7.4.2.8.3.1",
+      "m10-mask2015-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask2020-labels3.1.10.9.8.7.6.5.4.2",
+      "m10-mask2023-labels9.7.6.5.4.3.2.1.10.8",
+      "m10-mask2029-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask2030-labels9.8.7.6.5.4.3.2.1.10",
+      "m10-mask2031-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask2033-labels6.4.8.7.9.5.1.2.10.3",
+      "m10-mask2035-labels6.7.8.9.10.1.2.3.4.5",
+      "m10-mask2039-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask2039-labels6.5.4.3.2.1.10.9.8.7",
+      "m10-mask2040-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask2042-labels4.3.2.1.10.9.8.7.5.6",
+      "m10-mask2043-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask2045-labels8.6.9.4.1.10.7.2.3.5",
+      "m10-mask2047-labels1.3.5.4.8.6.2.10.7.9",
+      "m10-mask2047-labels10.8.7.6.5.4.3.2.1.9",
+      "m10-mask2047-labels10.9.7.4.2.8.1.6.5.3",
+      "m10-mask2047-labels2.1.10.8.9.7.6.5.4.3",
+      "m10-mask2047-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask2047-labels4.2.10.8.5.3.6.7.1.9",
+      "m10-mask2047-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask2047-labels5.6.10.8.4.7.1.2.3.9",
+      "m10-mask2047-labels6.5.4.3.2.1.10.9.8.7",
+      "m10-mask2047-labels6.9.7.8.3.10.5.4.2.1",
+      "m10-mask2047-labels7.10.9.8.4.2.1.6.5.3",
+      "m10-mask2047-labels7.6.5.4.3.2.1.10.9.8",
+      "m10-mask2047-labels8.7.6.5.4.2.3.1.10.9",
+      "m10-mask2047-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask2047-labels9.8.7.6.5.4.3.2.1.10",
+      "m10-mask22-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask250-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask254-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask255-labels3.4.2.1.10.9.8.7.6.5",
+      "m10-mask264-labels1.10.9.8.6.7.5.4.3.2",
+      "m10-mask27-labels8.10.6.9.7.4.5.1.3.2",
+      "m10-mask352-labels10.7.3.4.2.8.1.5.9.6",
+      "m10-mask36-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask383-labels3.4.7.8.6.1.9.2.5.10",
+      "m10-mask419-labels8.2.6.5.7.3.10.4.1.9",
+      "m10-mask445-labels6.5.3.4.2.1.10.9.8.7",
+      "m10-mask48-labels10.8.3.5.6.9.1.4.7.2",
+      "m10-mask492-labels8.7.10.6.3.5.9.4.1.2",
+      "m10-mask502-labels9.6.5.8.7.10.3.2.4.1",
+      "m10-mask511-labels10.7.9.5.6.4.2.1.8.3",
+      "m10-mask52-labels8.10.6.7.9.5.3.4.1.2",
+      "m10-mask536-labels6.4.3.2.1.10.9.8.7.5",
+      "m10-mask544-labels9.8.10.6.7.5.1.2.3.4",
+      "m10-mask576-labels2.9.3.10.8.6.4.7.1.5",
+      "m10-mask579-labels7.6.5.4.3.1.2.10.9.8",
+      "m10-mask580-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask584-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask59-labels8.9.10.1.2.3.4.5.6.7",
+      "m10-mask6-labels3.2.1.9.10.8.7.6.5.4",
+      "m10-mask60-labels3.2.1.10.9.8.7.6.5.4",
+      "m10-mask634-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask642-labels10.9.8.4.5.2.7.6.1.3",
+      "m10-mask678-labels6.5.4.3.2.1.10.9.8.7",
+      "m10-mask68-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask72-labels9.8.6.10.7.3.2.5.1.4",
+      "m10-mask737-labels8.7.6.5.4.3.2.1.10.9",
+      "m10-mask745-labels2.1.9.10.8.7.6.5.4.3",
+      "m10-mask763-labels7.2.1.4.3.8.5.6.9.10",
+      "m10-mask771-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask779-labels3.1.2.10.9.8.7.6.5.4",
+      "m10-mask791-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask819-labels9.7.10.4.5.6.3.8.1.2",
+      "m10-mask840-labels2.4.6.1.9.3.5.7.10.8",
+      "m10-mask847-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask899-labels9.6.8.10.5.7.3.1.2.4",
+      "m10-mask954-labels2.1.10.9.8.7.6.5.4.3",
+      "m10-mask955-labels4.3.2.1.10.9.8.7.6.5",
+      "m10-mask98-labels7.6.5.4.3.2.1.10.9.8",
+      "m9-mask1005-labels314726958",
+      "m9-mask1007-labels869357142",
+      "m9-mask1007-labels876543219",
+      "m9-mask1011-labels765432198",
+      "m9-mask1014-labels432198756",
+      "m9-mask1015-labels321986754",
+      "m9-mask1017-labels794862315",
+      "m9-mask1019-labels643219875",
+      "m9-mask1021-labels321987654",
+      "m9-mask1021-labels357169284",
+      "m9-mask1021-labels542319876",
+      "m9-mask1021-labels769823541",
+      "m9-mask1022-labels876543219",
+      "m9-mask1023-labels198765432",
+      "m9-mask1023-labels321987654",
+      "m9-mask1023-labels325618794",
+      "m9-mask1023-labels328617945",
+      "m9-mask1023-labels431298765",
+      "m9-mask1023-labels432198765",
+      "m9-mask1023-labels543219876",
+      "m9-mask1023-labels637845291",
+      "m9-mask1023-labels654321987",
+      "m9-mask1023-labels678912345",
+      "m9-mask1023-labels689453721",
+      "m9-mask1023-labels875632941",
+      "m9-mask1023-labels875643219",
+      "m9-mask1023-labels876534219",
+      "m9-mask1023-labels876543219",
+      "m9-mask1023-labels964587312",
+      "m9-mask1023-labels987654321",
+      "m9-mask108-labels321987654",
+      "m9-mask112-labels543219876",
+      "m9-mask140-labels654231987",
+      "m9-mask162-labels172659843",
+      "m9-mask18-labels876543219",
+      "m9-mask185-labels654321987",
+      "m9-mask192-labels765432198",
+      "m9-mask20-labels198765432",
+      "m9-mask200-labels947351826",
+      "m9-mask259-labels865432197",
+      "m9-mask260-labels432189765",
+      "m9-mask269-labels675432198",
+      "m9-mask274-labels564321987",
+      "m9-mask314-labels964817532",
+      "m9-mask319-labels654321987",
+      "m9-mask326-labels543219876",
+      "m9-mask334-labels894576213",
+      "m9-mask340-labels298765431",
+      "m9-mask351-labels968471523",
+      "m9-mask354-labels978625431",
+      "m9-mask357-labels986723451",
+      "m9-mask362-labels678912345",
+      "m9-mask383-labels543219876",
+      "m9-mask386-labels124739856",
+      "m9-mask424-labels654321897",
+      "m9-mask448-labels936785421",
+      "m9-mask449-labels528371694",
+      "m9-mask466-labels219876543",
+      "m9-mask471-labels391865427",
+      "m9-mask472-labels694758321",
+      "m9-mask479-labels219876543",
+      "m9-mask494-labels278596413",
+      "m9-mask495-labels986425371",
+      "m9-mask509-labels729641358",
+      "m9-mask509-labels981364275",
+      "m9-mask510-labels765432198",
+      "m9-mask511-labels165243789",
+      "m9-mask511-labels321987654",
+      "m9-mask511-labels496571238",
+      "m9-mask529-labels321987654",
+      "m9-mask540-labels498137562",
+      "m9-mask541-labels684275139",
+      "m9-mask544-labels876453219",
+      "m9-mask545-labels654321987",
+      "m9-mask573-labels974835621",
+      "m9-mask578-labels876543219",
+      "m9-mask607-labels321897654",
+      "m9-mask65-labels876543129",
+      "m9-mask666-labels198675432",
+      "m9-mask68-labels432198765",
+      "m9-mask687-labels143285697",
+      "m9-mask727-labels984571632",
+      "m9-mask740-labels416893725",
+      "m9-mask747-labels978461253",
+      "m9-mask765-labels472583619",
+      "m9-mask767-labels654321987",
+      "m9-mask771-labels891234567",
+      "m9-mask775-labels432198765",
+      "m9-mask778-labels689534271",
+      "m9-mask801-labels432198765",
+      "m9-mask805-labels654321897",
+      "m9-mask822-labels876543219",
+      "m9-mask854-labels421635798",
+      "m9-mask856-labels219876543",
+      "m9-mask870-labels869714523",
+      "m9-mask879-labels946578321",
+      "m9-mask892-labels321987654",
+      "m9-mask893-labels543219876",
+      "m9-mask895-labels876543219",
+      "m9-mask895-labels963754821",
+      "m9-mask915-labels765432198",
+      "m9-mask927-labels321987564",
+      "m9-mask935-labels485196372",
+      "m9-mask95-labels318926547",
+      "m9-mask955-labels986754321",
+      "m9-mask96-labels567891234",
+      "m9-mask96-labels987654321",
+      "m9-mask965-labels218976543",
+      "m9-mask974-labels198765432",
+      "m9-mask985-labels342198765",
+      "m9-mask991-labels716294853",
+      "m9-mask993-labels196824375",
+      "m9-mask994-labels675248319",
+      "m9-mask996-labels876543129"
+    ],
+    "path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/pool.json",
+    "note": "development only; pooled certificates are not a uniform program"
+  },
+  "approved_payload_sha256": "4630c76fa6ef761efb569d283b910377eb22f353658a0b318d788b0f9d7004ed",
+  "ledger": "autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.adaevolve-s1.json",
+  "contacts_allowed": 30,
+  "usd_allowed": 59.19933
+}

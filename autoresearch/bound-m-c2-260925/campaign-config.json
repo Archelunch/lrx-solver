@@ -1,0 +1,77 @@
+{
+ "campaign": "bound-m-c2-260925",
+ "note": "Bound-m campaign 2 (TASK-c2.md). Every limit under engines applies to one run = one (arm, seed). Money, token, reasoning and timeout caps live in broker-config.json. Development = campaign 1 frozen development.json by reference (hash in frozen/manifest.json); validation (c1 holdout m=11) and holdout (m=12 + fresh m=11) are never loaded by an engine. Covered by the approval hash: python -m integrations.bound_c2 approval-hash.",
+ "seed_program": "autoresearch/bound-m-c2-260925/seed/evox-c1-seed.py",
+ "seed_sha256": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+ "seed_note": "Campaign 1 EvoX finalist (finalists/sources/evox.py, sha256 1031149e48768fd67907350b9f7fc1ef207a7eb33533fedbdb1466d2618d2e9a) with only its module docstring rewritten to describe its own construction (BEST-GEPA-CONSTRUCTION.md section 6); the code after the docstring is AST-identical.",
+ "controls": {
+  "naive": "integrations/bound_control_naive.py",
+  "sweeplp_b": "integrations.bound_control_sweeplp (trusted, in-process)",
+  "gepa_c1": "autoresearch/bound-m-260925/finalists/sources/gepa.py",
+  "seed_evox_c1": "autoresearch/bound-m-c2-260925/seed/evox-c1-seed.py"
+ },
+ "frozen_manifest": "autoresearch/bound-m-c2-260925/frozen/manifest.json",
+ "python": ".venv-official/bin/python",
+ "eval_cache": "autoresearch/bound-m-c2-260925/eval-cache",
+ "broker_port": 8894,
+ "eval_timeout": 900,
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "seed_semantics": "SkyDiscover search.database.random_seed and GEPA EngineConfig.seed = run seed. The sequential control records the seed; the provider request carries no seed field, so its seeds differ only by sampling.",
+ "engines": {
+  "gepa": {
+   "iterations": 30,
+   "max_requests": 30,
+   "max_evals": 1200,
+   "wall_seconds": 21600
+  },
+  "sequential": {
+   "iterations": 30,
+   "max_requests": 30,
+   "max_evals": 50,
+   "wall_seconds": 21600
+  },
+  "adaevolve": {
+   "iterations": 30,
+   "max_requests": 30,
+   "max_evals": 50,
+   "wall_seconds": 21600
+  },
+  "evox": {
+   "iterations": 30,
+   "max_requests": 30,
+   "max_evals": 50,
+   "wall_seconds": 21600
+  }
+ },
+ "max_requests_note": "Pool = 360 contacts (broker-config contact_ceiling_formula at max_usd 60). Sub-cap 30 per run, 12 x 30 = 360 <= 360. Iterations 30 per run = sub-cap, so a run can make 30 proposals (EvoX spends about 2 contacts on startup probes). GEPA max_evals covers 30 + 31 * 36 = 1146 metric calls plus final checks.",
+ "evox_strategy_evolution": false,
+ "reversal_hint": {
+  "enabled": true,
+  "lines": [
+   "Hint (research group's m=8 proof, REVERSAL-OBSTACLE.md section 2): of the 4088 reversal-orbit families (rotations of 8..1, all masks), 4054 closed with one mixture (criterion 7) and 34 needed piecewise tree certificates split on block lengths.",
+   "The m=8 analogue of the reversal with zeros in the leading and trailing gap closed with two words weighted 1/2: B 43 with slopes (5,4) and B 41 with slopes (7,6).",
+   "This contract scores one mixture only, so return complementary words whose average keeps every slope <= m-2 (mirrored crossing profiles), not many near-copies of one best word."
+  ],
+  "source": "autoresearch/bound-m-260925/REVERSAL-OBSTACLE.md",
+  "source_sha256": "02bb7c337695b445add59d3d08dbc4fa1182c6be219a2aae4732c69582e02368",
+  "rule": "Enabled because REVERSAL-OBSTACLE.md exists and states (section 2) that 34 of 4088 m=8 reversal-orbit families needed piecewise tree certificates. Every hint fact comes from m=8 data; nothing from the validation or holdout sets. Re-checked after the 2026-09-25 addendum (deferred (11,2) table): section 2 unchanged, hint text unchanged."
+ },
+ "finalize": {
+  "selection": "per (arm, seed): among accepted candidates (seed, every source with a full development evaluation in the run's evaluation trace, the verified best, and for GEPA its candidate pool), the finalist maximizes validation (certified, combined_score); ties by source sha256 ascending. Development scores are not used.",
+  "determinism": "bound_evaluator.determinism_check on the first 20 screen families for every finalist",
+  "claim_rule": "An engine claims progress only if its finalists' mean holdout certified count beats control (b) and the seed across seeds; single-seed wins are reported, not claimed."
+ },
+ "order": "Seeds interleaved: s1 gepa, sequential, adaevolve, evox; then s2; then s3 (run-campaign-c2.sh). A HALT file in this directory, a refused start, a FIRST_PROMPT_MISMATCH, or 2 runs ending INCOMPLETE/BROKER_STOPPED stop the runner.",
+ "word_pool": {
+  "enabled": true,
+  "scope": "development families only; persisted as <run>/verified/pool.json",
+  "admission": "valid words of the seed and of every candidate that receives a full development evaluation (promising or final); for GEPA, of every candidate once it has been evaluated on all 30 screen (valset) families",
+  "pruning": "Pareto on (B, beta_0..beta_{k-1}); dominated words never lower an LP optimum",
+  "pool_gain": "families certified by the exact LP over pool + candidate words minus those certified by the pool alone, over the evaluated families (bound_evaluator.classify)",
+  "selection": "standalone certified counts only; the pool is packet and report information"
+ }
+}

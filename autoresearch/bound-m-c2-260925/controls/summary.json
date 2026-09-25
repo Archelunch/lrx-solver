@@ -1,0 +1,58 @@
+{
+ "naive/development": {
+  "certified": 0,
+  "families": 303,
+  "incomplete": 0,
+  "max_W": "251",
+  "combined": 0.0605
+ },
+ "naive/validation": {
+  "certified": 0,
+  "families": 165,
+  "incomplete": 0,
+  "max_W": "319",
+  "combined": 0.0604
+ },
+ "sweeplp-b/development": {
+  "certified": 151,
+  "families": 303,
+  "incomplete": 0,
+  "max_W": "4",
+  "combined": 93.1312
+ },
+ "sweeplp-b/validation": {
+  "certified": 98,
+  "families": 165,
+  "incomplete": 0,
+  "max_W": "7",
+  "combined": 118.875
+ },
+ "gepa-c1/development": {
+  "certified": 205,
+  "families": 303,
+  "incomplete": 0,
+  "max_W": "11/4",
+  "combined": 126.6698
+ },
+ "gepa-c1/validation": {
+  "certified": 123,
+  "families": 165,
+  "incomplete": 0,
+  "max_W": "4",
+  "combined": 149.1876
+ },
+ "seed-evox-c1/development": {
+  "certified": 212,
+  "families": 303,
+  "incomplete": 0,
+  "max_W": "37/13",
+  "combined": 131.5918
+ },
+ "seed-evox-c1/validation": {
+  "certified": 129,
+  "families": 165,
+  "incomplete": 0,
+  "max_W": "4",
+  "combined": 156.4611
+ }
+}

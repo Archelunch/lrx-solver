@@ -1,0 +1,267 @@
+"""Lift-and-sweep certifier with zero-shift diversity and LP slope balancing."""
+
+import itertools
+import random
+
+KEEP = 32
+
+
+def _reduce(word):
+    out = []
+    for ch in word:
+        if out and out[-1] + ch in ('LR', 'RL', 'XX'):
+            out.pop()
+        else:
+            out.append(ch)
+    return ''.join(out)
+
+
+def _lifts(v, t, perm, m, r, shift_bias=0):
+    n = len(v)
+    zeros = [p for p in range(n) if v[p] == 0]
+    target = [0] * n
+    for p in range(n):
+        if v[p]:
+            target[p] = (t + v[p] - 1) % n
+    for i in range(r):
+        target[zeros[i]] = (t + m + perm[i]) % n
+    rem = [((target[p] - p + n // 2) % n) - n // 2 for p in range(n)]
+    q = sum(rem) // n
+    if shift_bias > 0:
+        order = sorted(range(n), key=lambda p: (rem[p], p), reverse=True)
+    elif shift_bias < 0:
+        order = sorted(range(n), key=lambda p: (rem[p], -p), reverse=False)
+    else:
+        order = sorted(range(n), key=lambda p: rem[p], reverse=q > 0)
+    for p in order[:abs(q)]:
+        rem[p] -= n if q > 0 else -n
+    return rem
+
+
+def _sweep(v, rem, t, mode, limit=4000):
+    n = len(v)
+    a, rem = list(v), list(rem)
+    out, c = [], 0
+
+    def must_cross(x):
+        return rem[x] - rem[(x + 1) % n] >= 2
+
+    def cross(x):
+        y = (x + 1) % n
+        rx, ry = rem[x], rem[y]
+        if a[x] or a[y]:
+            out.append('X')
+            a[x], a[y] = a[y], a[x]
+        rem[x], rem[y] = ry + 1, rx - 1
+
+    while any(rem) and len(out) < limit:
+        if mode.startswith('greedy'):
+            dirs = (1, -1) if mode == 'greedy' else (-1, 1)
+            for dist in range(n):
+                found = False
+                for sgn in dirs:
+                    pos = (c + sgn * dist) % n
+                    if must_cross(pos):
+                        out.append(('L' if sgn == 1 else 'R') * dist)
+                        c = pos
+                        found = True
+                        break
+                if found:
+                    break
+            else:
+                return None
+            cross(c)
+            continue
+        if must_cross(c):
+            cross(c)
+            if not any(rem):
+                break
+        out.append(mode)
+        c = (c + (1 if mode == 'L' else -1)) % n
+
+    if any(rem):
+        return None
+    d = (t - c) % n
+    out.append('L' * d if d <= n - d else 'R' * (n - d))
+    return ''.join(out)
+
+
+def price(v, word):
+    n, k = len(v), sum(1 for x in v if x == 0)
+    a, j = [], 0
+    for x in v:
+        if x:
+            a.append(x)
+        else:
+            j += 1
+            a.append(-j)
+    segs, A, q, d, cz, c = [], [0] * k, 0, 0, [0] * k, 0
+    for ch in word:
+        if ch == 'L':
+            d += 1
+            if a[c] < 0:
+                cz[-a[c] - 1] += 1
+            c = (c + 1) % n
+        elif ch == 'R':
+            c = (c - 1) % n
+            d -= 1
+            if a[c] < 0:
+                cz[-a[c] - 1] -= 1
+        else:
+            c2 = (c + 1) % n
+            x, y = a[c], a[c2]
+            if x < 0 and y < 0:
+                return None
+            q += 1
+            nxt = [0] * k
+            if x < 0:
+                cz[-x - 1] += 1
+                A[-x - 1] += 1
+            elif y < 0:
+                A[-y - 1] += 1
+                nxt[-y - 1] = -1
+            segs.append((d, cz))
+            d, cz = 0, nxt
+            a[c], a[c2] = y, x
+    segs.append((d, cz))
+    fin = a[c:] + a[:c]
+    m = n - k
+    if fin[:m] != list(range(1, m + 1)):
+        return None
+    B = q + sum(abs(s) for s, _ in segs)
+    beta = [2 * A[i] + sum(abs(z[i]) for _, z in segs) for i in range(k)]
+    return B, beta
+
+
+def pool(v):
+    n, m = len(v), max(v)
+    r = n - m
+    words = {}
+
+    if r <= 4:
+        perms = list(itertools.permutations(range(r)))
+    else:
+        perms = [[(s + i) % r for i in range(r)] for s in range(r)] + [
+            [(s + r - 1 - i) % r for i in range(r)] for s in range(r)
+        ]
+
+    biases = (-1, 0, 1) if r <= 5 else (0,)
+    modes = ('L', 'R', 'greedy', 'greedy_R')
+    for t in range(n):
+        for perm in perms:
+            for bias in biases:
+                rem = _lifts(v, t, perm, m, r, bias)
+                for mode in modes:
+                    w = _sweep(v, rem, t, mode)
+                    if w is None:
+                        continue
+                    w = _reduce(w)
+                    if w not in words and len(w) <= 4000:
+                        cost = price(v, w)
+                        if cost is not None:
+                            words[w] = cost
+    return words
+
+
+def certify(family):
+    v = family['unit_base']
+    words = pool(v)
+    if not words:
+        return {'words': []}
+
+    word_list = list(words.keys())
+    m = max(v)
+    k = sum(1 for x in v if x == 0)
+    T = m * (m + 1) // 2 + (k - 1) * (m - 2)
+
+    costs = []
+    for w in word_list:
+        B, beta = words[w]
+        costs.append([B - T] + [b - (m - 2) for b in beta])
+
+    n_words = len(word_list)
+    dim = k + 1
+
+    selected_idx = set()
+
+    for d in range(dim):
+        best_idx = min(range(n_words), key=lambda i: (costs[i][d], max(costs[i])))
+        selected_idx.add(best_idx)
+
+    starts = [
+        min(range(n_words), key=lambda i: (max(costs[i]), sum(costs[i]))),
+        min(range(n_words), key=lambda i: (sum(costs[i]), max(costs[i])))
+    ]
+    for d in range(dim):
+        starts.append(min(range(n_words), key=lambda i: (costs[i][d], max(costs[i]))))
+
+    for init_idx in starts:
+        selected_idx.add(init_idx)
+        cur_val = list(costs[init_idx])
+        for it in range(1, 45):
+            worst_dim = max(range(dim), key=lambda d: cur_val[d] * (1.5 if d > 0 else 0.8))
+            best_w_idx = min(range(n_words), key=lambda i: (costs[i][worst_dim], max(costs[i])))
+            selected_idx.add(best_w_idx)
+            gamma = 2.0 / (it + 2)
+            for d in range(dim):
+                cur_val[d] = (1.0 - gamma) * cur_val[d] + gamma * costs[best_w_idx][d]
+
+    rng = random.Random(42)
+    for _ in range(60):
+        weights = [rng.expovariate(1.5) if d == 0 else rng.expovariate(0.3) for d in range(dim)]
+        idx = min(range(n_words), key=lambda i: sum(weights[d] * costs[i][d] for d in range(dim)))
+        selected_idx.add(idx)
+
+    cand_list = sorted(selected_idx, key=lambda i: max(costs[i]))[:80]
+    pair_candidates = []
+    for i in range(len(cand_list)):
+        idx1 = cand_list[i]
+        c1 = costs[idx1]
+        for j in range(i, len(cand_list)):
+            idx2 = cand_list[j]
+            c2 = costs[idx2]
+            avg_max = max(c1[d] + c2[d] for d in range(dim))
+            avg_sum = sum(c1[d] + c2[d] for d in range(dim))
+            pair_candidates.append((avg_max, avg_sum, idx1, idx2))
+    pair_candidates.sort()
+    for _, _, idx1, idx2 in pair_candidates[:30]:
+        selected_idx.add(idx1)
+        selected_idx.add(idx2)
+
+    by_max = sorted(range(n_words), key=lambda i: (max(costs[i]), costs[i][0]))
+    for idx in by_max:
+        if len(selected_idx) >= 120:
+            break
+        selected_idx.add(idx)
+
+    # Active mixture greedy selection targeting LP feasibility
+    chosen = []
+    avail = list(selected_idx)
+    init_cand = min(avail, key=lambda i: (max(costs[i]), costs[i][0]))
+    chosen.append(init_cand)
+    avail.remove(init_cand)
+
+    cur_sum = list(costs[init_cand])
+    while len(chosen) < KEEP and avail:
+        L = len(chosen) + 1
+        best_cand = None
+        best_metric = (float('inf'), float('inf'), float('inf'))
+        for cand in avail:
+            c = costs[cand]
+            max_v = max((cur_sum[d] + c[d]) / L for d in range(dim))
+            viol = sum(max(0.0, (cur_sum[d] + c[d]) / L) for d in range(dim))
+            b_val = (cur_sum[0] + c[0]) / L
+            metric = (viol, max_v, b_val)
+            if metric < best_metric:
+                best_metric = metric
+                best_cand = cand
+        if best_cand is not None:
+            chosen.append(best_cand)
+            for d in range(dim):
+                cur_sum[d] += costs[best_cand][d]
+            avail.remove(best_cand)
+        else:
+            chosen.append(avail.pop(0))
+
+    res = [word_list[i] for i in chosen[:KEEP]]
+    return {'words': res}

@@ -1,0 +1,13 @@
+live-*/verified/evaluations/
+live-*/output/
+live-*/stage/
+*.receipts/
+smoke-*/
+first-prompt-capture/
+eval-cache/
+*.log
+finalists/raw/
+first-prompt-capture*/
+finalists/holdout-arms/
+finalists/development-arms/
+finalists/validation-arms/

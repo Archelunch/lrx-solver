@@ -2,6 +2,23 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Latest iteration: bound-m campaign 2, three seeds, unseen m=12 (2026-09-26)
+
+Validation split at m=11 for finalist selection, fresh holdout at m=12 plus
+m=11, EvoX c1 finalist as seed, three seeds per arm, per-family word pool
+as a secondary metric, determinism enforced. Holdout mean certified share:
+AdaEvolve 84.7 %, EvoX 83.1 %, GEPA 80.3 %, sequential 76.4 %, seed 80.0 %,
+control 59.6 %; best finalist AdaEvolve s2 148/165 at m=12. Audit clean,
+about $7. Reversal-type families remain the obstacle (REVERSAL-OBSTACLE.md:
+plain m=11 reversal is base-bound at gap 4; the group's m=8 proof needed
+tree certificates for 34 reversal families). A low-memory BFS builder
+(`tools/table_bfs_lowmem.py`, byte-identical on (9,4),(8,4)) is computing
+the exact (11,2) table to settle whether a length-75 word exists for that
+family. Next: tree certificates in the evaluator (bound-eval-3), pooled
+column generation as the primary objective for the reversal orbit, a 5xx
+retry in the broker, and a human proof attempt on the fully certified
+classes. Claims Session 16.
+
 ## Latest iteration: bound-m campaign, transfer to unseen m=11 (2026-09-25)
 
 Four arms on the proof-shaped bound task, then one-shot holdout with all 165

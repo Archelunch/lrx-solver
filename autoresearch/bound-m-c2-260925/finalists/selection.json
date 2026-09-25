@@ -1,0 +1,830 @@
+{
+ "adaevolve-s1": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017",
+  "engine": "adaevolve",
+  "seed": 1,
+  "status": "COMPLETE",
+  "candidates": {
+   "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0020.py",
+   "246384798a6c3e9d38b84efcc38fb6b98e96d277dad2508e441c995aced35d0e": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0018.py",
+   "28b56999a0d530511e931bce44063bbbdca2bdc23c466b849934f60e115715a2": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0004.py",
+   "3c19bb24bbe2d0fa8113bf79079cdcfd320342cf2b9558ea44b313cd1b1152ab": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0016.py",
+   "5dae5c57d01e6d85b0c41526b6e05b3551c72c521371ad4d878ad735baa7d91d": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0015.py",
+   "5e4cd175161adbb28e3fc1a0e8947b31818ed76d929bc3b77509b1d4bcf0262c": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0027.py",
+   "960519d7a18544c8b2597913fd6467e10770540781d5cdc93ed284834333e8f7": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0029.py",
+   "a06e88331d55548102d3652159de2a6230c200e2a57edec1d487c401281a35ad": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0008.py",
+   "abf3c193cc41273f5618c5cf6066ee3bcdcc6990330c63e3dccaec25822868a4": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0025.py",
+   "b752d20df1674dfad0b0d7fa33dfd90ad6bfc2fb60ed6386dfc4cf7dd5b84c6b": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0023.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0001.py",
+   "d08bedbebbda322633d350edc49f324af81830b7137ab52dd1bf109823287aca": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s1-260925-210017/verified/evaluations/candidate-0003.py"
+  },
+  "validation": {
+   "18245f030d5dfad7939838900801828a3b339e5021bf19bb7129c95df91d6aab": {
+    "certified": 133,
+    "combined_score": 161.2938529702634,
+    "incomplete": 15,
+    "families": 165
+   },
+   "246384798a6c3e9d38b84efcc38fb6b98e96d277dad2508e441c995aced35d0e": {
+    "certified": 142,
+    "combined_score": 172.21996707277046,
+    "incomplete": 0,
+    "families": 165
+   },
+   "28b56999a0d530511e931bce44063bbbdca2bdc23c466b849934f60e115715a2": {
+    "certified": 134,
+    "combined_score": 162.52289502066446,
+    "incomplete": 0,
+    "families": 165
+   },
+   "3c19bb24bbe2d0fa8113bf79079cdcfd320342cf2b9558ea44b313cd1b1152ab": {
+    "certified": 140,
+    "combined_score": 169.79578511742176,
+    "incomplete": 0,
+    "families": 165
+   },
+   "5dae5c57d01e6d85b0c41526b6e05b3551c72c521371ad4d878ad735baa7d91d": {
+    "certified": 140,
+    "combined_score": 169.79578511742176,
+    "incomplete": 0,
+    "families": 165
+   },
+   "5e4cd175161adbb28e3fc1a0e8947b31818ed76d929bc3b77509b1d4bcf0262c": {
+    "certified": 132,
+    "combined_score": 160.0813509381834,
+    "incomplete": 16,
+    "families": 165
+   },
+   "960519d7a18544c8b2597913fd6467e10770540781d5cdc93ed284834333e8f7": {
+    "certified": 134,
+    "combined_score": 162.5063547960774,
+    "incomplete": 14,
+    "families": 165
+   },
+   "a06e88331d55548102d3652159de2a6230c200e2a57edec1d487c401281a35ad": {
+    "certified": 136,
+    "combined_score": 164.94717512049877,
+    "incomplete": 0,
+    "families": 165
+   },
+   "abf3c193cc41273f5618c5cf6066ee3bcdcc6990330c63e3dccaec25822868a4": {
+    "certified": 132,
+    "combined_score": 160.0813509381834,
+    "incomplete": 16,
+    "families": 165
+   },
+   "b752d20df1674dfad0b0d7fa33dfd90ad6bfc2fb60ed6386dfc4cf7dd5b84c6b": {
+    "certified": 129,
+    "combined_score": 156.44384356605917,
+    "incomplete": 19,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "d08bedbebbda322633d350edc49f324af81830b7137ab52dd1bf109823287aca": {
+    "certified": 133,
+    "combined_score": 161.31052235287748,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "246384798a6c3e9d38b84efcc38fb6b98e96d277dad2508e441c995aced35d0e",
+  "finalist_is_seed": false,
+  "word_pool_certified": 249
+ },
+ "adaevolve-s2": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719",
+  "engine": "adaevolve",
+  "seed": 2,
+  "status": "COMPLETE",
+  "candidates": {
+   "1b5d9cd24e4ae7294ac486050aed24d64b4acaf23cb13fe610f3c1f5057f75a4": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0023.py",
+   "1e20963a34c15f58eb16fbf4a40e3a3f4d40978e9eb51fd765aa3cb7842d5381": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0029.py",
+   "375f6f3fbb2b9a613d2b7b7e734aa11229232cf0d71bcf773cc962f06b9c402a": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0020.py",
+   "592c2f464c17c573ced1ddeda2b48ed767e30c91447b52a68d9224c7c6372395": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0025.py",
+   "78ee4a0ebe9b5303c3813c620a58ced252a4cce905a903a6babd17e7f2d49ab5": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0026.py",
+   "8e8967a199674681b33d940f6896fcb51934dcf2dc69364e71f0a9d5539e4dde": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0007.py",
+   "b29038708702daf957cb8f6c50ba172ad12af19f8a3bba74f40139ad0fe26033": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0008.py",
+   "bdab6774bcd0372a566f9f4de14520b4c6607ebf78b0131e7509bd8ee0da576f": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0003.py",
+   "c8181897ef23f9a19e137980ea11025d949b14dbbab656d18319320987d6c537": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0028.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s2-260925-215719/verified/evaluations/candidate-0001.py"
+  },
+  "validation": {
+   "1b5d9cd24e4ae7294ac486050aed24d64b4acaf23cb13fe610f3c1f5057f75a4": {
+    "certified": 146,
+    "combined_score": 177.0552921883505,
+    "incomplete": 5,
+    "families": 165
+   },
+   "1e20963a34c15f58eb16fbf4a40e3a3f4d40978e9eb51fd765aa3cb7842d5381": {
+    "certified": 140,
+    "combined_score": 169.77955138774422,
+    "incomplete": 13,
+    "families": 165
+   },
+   "375f6f3fbb2b9a613d2b7b7e734aa11229232cf0d71bcf773cc962f06b9c402a": {
+    "certified": 151,
+    "combined_score": 183.12977253872197,
+    "incomplete": 0,
+    "families": 165
+   },
+   "592c2f464c17c573ced1ddeda2b48ed767e30c91447b52a68d9224c7c6372395": {
+    "certified": 151,
+    "combined_score": 183.12977253872197,
+    "incomplete": 0,
+    "families": 165
+   },
+   "78ee4a0ebe9b5303c3813c620a58ced252a4cce905a903a6babd17e7f2d49ab5": {
+    "certified": 151,
+    "combined_score": 183.12977253872197,
+    "incomplete": 0,
+    "families": 165
+   },
+   "8e8967a199674681b33d940f6896fcb51934dcf2dc69364e71f0a9d5539e4dde": {
+    "certified": 114,
+    "combined_score": 138.25737395469864,
+    "incomplete": 30,
+    "families": 165
+   },
+   "b29038708702daf957cb8f6c50ba172ad12af19f8a3bba74f40139ad0fe26033": {
+    "certified": 147,
+    "combined_score": 178.28103935752387,
+    "incomplete": 0,
+    "families": 165
+   },
+   "bdab6774bcd0372a566f9f4de14520b4c6607ebf78b0131e7509bd8ee0da576f": {
+    "certified": 142,
+    "combined_score": 172.2202046165208,
+    "incomplete": 0,
+    "families": 165
+   },
+   "c8181897ef23f9a19e137980ea11025d949b14dbbab656d18319320987d6c537": {
+    "certified": 129,
+    "combined_score": 156.44202732985167,
+    "incomplete": 24,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "375f6f3fbb2b9a613d2b7b7e734aa11229232cf0d71bcf773cc962f06b9c402a",
+  "finalist_is_seed": false,
+  "word_pool_certified": 263
+ },
+ "adaevolve-s3": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s3-260925-230003",
+  "engine": "adaevolve",
+  "seed": 3,
+  "status": "COMPLETE",
+  "candidates": {
+   "7cac549c0b59566c7a78c5bcc0f910f7836c139ac9fab6646238b46f1f678c03": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s3-260925-230003/verified/evaluations/candidate-0011.py",
+   "bc0abf23d2a6a7f8d3bcf4e6d9d234319796318d2724e6f5c40a1570d5b6420f": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s3-260925-230003/verified/evaluations/candidate-0004.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s3-260925-230003/verified/evaluations/candidate-0001.py",
+   "dcc5993e9e52cceb827a2d3325c8d947adcd36cc4e592e4265b724d7fa86f3fb": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-adaevolve-s3-260925-230003/verified/evaluations/candidate-0015.py"
+  },
+  "validation": {
+   "7cac549c0b59566c7a78c5bcc0f910f7836c139ac9fab6646238b46f1f678c03": {
+    "certified": 108,
+    "combined_score": 130.98363693121212,
+    "incomplete": 30,
+    "families": 165
+   },
+   "bc0abf23d2a6a7f8d3bcf4e6d9d234319796318d2724e6f5c40a1570d5b6420f": {
+    "certified": 137,
+    "combined_score": 166.15852354334072,
+    "incomplete": 0,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "dcc5993e9e52cceb827a2d3325c8d947adcd36cc4e592e4265b724d7fa86f3fb": {
+    "certified": 139,
+    "combined_score": 168.58352207648488,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "dcc5993e9e52cceb827a2d3325c8d947adcd36cc4e592e4265b724d7fa86f3fb",
+  "finalist_is_seed": false,
+  "word_pool_certified": 234
+ },
+ "evox-s1": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722",
+  "engine": "evox",
+  "seed": 1,
+  "status": "COMPLETE",
+  "candidates": {
+   "09bcfe93e73bd925ec5566e1e2132a03db168cc396522987465dd910ae010b6a": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0010.py",
+   "0fcf90ab9c74fedbfd816f44b72116b64539485af1e13b9216866ae4c3b54dcd": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0016.py",
+   "13e68f25d7257f9db735c4f565ca9051b703e0cb6b2b8c12b44d6fed6f169707": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0011.py",
+   "3201964e1d2360e5305ca4a276ff53841cba110670b5b973995eb551a2611f3c": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0017.py",
+   "387326ec0daab65d317bfc6e8769e571f9c0fd640bf8a96fccebf956961067e8": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0012.py",
+   "4df7b4029585222c672eb6f2ee6ab3c3184cf240d7c4535c96734ab8da57b47e": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0004.py",
+   "57601c787fe74f827c61d16203478caff890a2bc3522b493ba70f1a616ee0d56": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0005.py",
+   "a06444e8bd58612fb468cc3905bf3a2a9e3cdfe5c57212161725dc1954fa0bbd": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0015.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0001.py",
+   "ce4087e8f75bd069a9781272354ca0560135929e24a1ae20b1e5ea3e3600dd98": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0008.py",
+   "dad5ee4615312cecf72bd7f8d6f13cc50dc8df18f8cc8b01c9794f02330bcd6e": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0006.py",
+   "eeb9fa53a0d6c3da40528e44bdc3a8583423f1cd88b58d5825ac9a32a2c21cf8": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s1-260925-211722/verified/evaluations/candidate-0003.py"
+  },
+  "validation": {
+   "09bcfe93e73bd925ec5566e1e2132a03db168cc396522987465dd910ae010b6a": {
+    "certified": 137,
+    "combined_score": 166.1463680675461,
+    "incomplete": 1,
+    "families": 165
+   },
+   "0fcf90ab9c74fedbfd816f44b72116b64539485af1e13b9216866ae4c3b54dcd": {
+    "certified": 142,
+    "combined_score": 172.2202046165208,
+    "incomplete": 0,
+    "families": 165
+   },
+   "13e68f25d7257f9db735c4f565ca9051b703e0cb6b2b8c12b44d6fed6f169707": {
+    "certified": 132,
+    "combined_score": 160.08383780711281,
+    "incomplete": 6,
+    "families": 165
+   },
+   "3201964e1d2360e5305ca4a276ff53841cba110670b5b973995eb551a2611f3c": {
+    "certified": 142,
+    "combined_score": 172.220205001339,
+    "incomplete": 0,
+    "families": 165
+   },
+   "387326ec0daab65d317bfc6e8769e571f9c0fd640bf8a96fccebf956961067e8": {
+    "certified": 120,
+    "combined_score": 145.53357773618663,
+    "incomplete": 20,
+    "families": 165
+   },
+   "4df7b4029585222c672eb6f2ee6ab3c3184cf240d7c4535c96734ab8da57b47e": {
+    "certified": 137,
+    "combined_score": 166.15846531328503,
+    "incomplete": 0,
+    "families": 165
+   },
+   "57601c787fe74f827c61d16203478caff890a2bc3522b493ba70f1a616ee0d56": {
+    "certified": 137,
+    "combined_score": 166.15851158578408,
+    "incomplete": 0,
+    "families": 165
+   },
+   "a06444e8bd58612fb468cc3905bf3a2a9e3cdfe5c57212161725dc1954fa0bbd": {
+    "certified": 138,
+    "combined_score": 167.37089214052438,
+    "incomplete": 0,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "ce4087e8f75bd069a9781272354ca0560135929e24a1ae20b1e5ea3e3600dd98": {
+    "certified": 138,
+    "combined_score": 167.3708584517756,
+    "incomplete": 0,
+    "families": 165
+   },
+   "dad5ee4615312cecf72bd7f8d6f13cc50dc8df18f8cc8b01c9794f02330bcd6e": {
+    "certified": 137,
+    "combined_score": 166.15852354334072,
+    "incomplete": 0,
+    "families": 165
+   },
+   "eeb9fa53a0d6c3da40528e44bdc3a8583423f1cd88b58d5825ac9a32a2c21cf8": {
+    "certified": 137,
+    "combined_score": 166.15851158578408,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "3201964e1d2360e5305ca4a276ff53841cba110670b5b973995eb551a2611f3c",
+  "finalist_is_seed": false,
+  "word_pool_certified": 240
+ },
+ "evox-s2": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s2-260925-221356",
+  "engine": "evox",
+  "seed": 2,
+  "status": "COMPLETE",
+  "candidates": {
+   "01dfee3e355bfabaf2f1d09db0dfd5f91fc304a4e4953433411dcc3aa7d823f7": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s2-260925-221356/verified/evaluations/candidate-0020.py",
+   "40b7224981b7b978d5acf807da61db15ba3a6697aed8f8f18e98ae074e13b438": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s2-260925-221356/verified/evaluations/candidate-0008.py",
+   "7a21728b77a63719fad83017e3f6c2b3f9f083f138fd4190860e2bceb2bd2b0c": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s2-260925-221356/verified/evaluations/candidate-0016.py",
+   "ada3857863bfa1809658aafb6896b2e072e42f8b60287fca97eb58f655d49213": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s2-260925-221356/verified/evaluations/candidate-0012.py",
+   "b72d1bfd8844236b55a0bbf6a35076d3295af822684ced2e80215bab62b973f5": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s2-260925-221356/verified/evaluations/candidate-0025.py",
+   "c15e0d2af902be4a2e2db7aee355ac920faaf766fa9437df358be6fd1b1329e0": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s2-260925-221356/verified/evaluations/candidate-0009.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s2-260925-221356/verified/evaluations/candidate-0001.py",
+   "cf44c1b7a2627e55ea00deb39644e9a9ef19da9e4afd7cdb3dca13f94945434f": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s2-260925-221356/verified/evaluations/candidate-0004.py"
+  },
+  "validation": {
+   "01dfee3e355bfabaf2f1d09db0dfd5f91fc304a4e4953433411dcc3aa7d823f7": {
+    "certified": 132,
+    "combined_score": 160.09766085684103,
+    "incomplete": 0,
+    "families": 165
+   },
+   "40b7224981b7b978d5acf807da61db15ba3a6697aed8f8f18e98ae074e13b438": {
+    "certified": 140,
+    "combined_score": 169.79586733968227,
+    "incomplete": 0,
+    "families": 165
+   },
+   "7a21728b77a63719fad83017e3f6c2b3f9f083f138fd4190860e2bceb2bd2b0c": {
+    "certified": 131,
+    "combined_score": 158.88544948926827,
+    "incomplete": 0,
+    "families": 165
+   },
+   "ada3857863bfa1809658aafb6896b2e072e42f8b60287fca97eb58f655d49213": {
+    "certified": 134,
+    "combined_score": 162.5220874991248,
+    "incomplete": 0,
+    "families": 165
+   },
+   "b72d1bfd8844236b55a0bbf6a35076d3295af822684ced2e80215bab62b973f5": {
+    "certified": 134,
+    "combined_score": 162.52296436451525,
+    "incomplete": 0,
+    "families": 165
+   },
+   "c15e0d2af902be4a2e2db7aee355ac920faaf766fa9437df358be6fd1b1329e0": {
+    "certified": 140,
+    "combined_score": 169.79582842055225,
+    "incomplete": 0,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "cf44c1b7a2627e55ea00deb39644e9a9ef19da9e4afd7cdb3dca13f94945434f": {
+    "certified": 131,
+    "combined_score": 158.88551758722625,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "40b7224981b7b978d5acf807da61db15ba3a6697aed8f8f18e98ae074e13b438",
+  "finalist_is_seed": false,
+  "word_pool_certified": 236
+ },
+ "evox-s3": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622",
+  "engine": "evox",
+  "seed": 3,
+  "status": "COMPLETE",
+  "candidates": {
+   "001eaa1c7b10db5c2780cc84ea3f665cf8f70c56be6af1a41d93d6326d61fb3e": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0015.py",
+   "519cc2fc5055376ebe1d4eda44a2580899cbe15a1c0414f84d034a3a68d6e75d": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0010.py",
+   "6401290f775b9af882f7a37524c252af2c97bd42114a274833aa10d1a49b6b8f": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0007.py",
+   "6c545423f2a54524d78df6ace0d390527c88debbdb605bb80aec04a4ed33fbb9": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0018.py",
+   "78d797f483bc6640f9a44925e6707cafac2f03e205364f5aedc2491f1869b53d": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0005.py",
+   "8da7928b8789246030d7483fbbfe12d135287a3bae4bf51300b7db96c81b5ab2": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0006.py",
+   "a6e4a48849293ac5fe5dd310af1e4a614c8a1343049a9686879209f58bcc7e84": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0025.py",
+   "c6e45164582c27e458b1348f2600971a5231aed5b7f3096b0beaa3683a4bcff9": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0004.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0001.py",
+   "e4995d8225fb96898c74f645d73a7b3dd02cf6b64781b76ab34e61736c413967": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0019.py",
+   "e582c0edd0adc1a5f70d57b0901e33592090a839cf29787cef579175cb62b259": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0003.py",
+   "f4eddd1e3dcffd3373651cfbc51cfc748f5eaa99184cf01f5cdec9e9ab03d77d": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0021.py",
+   "fbaca00246f56c19ec790ebfb513f9206de257178abc89c7edbcbb5ce654e902": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-evox-s3-260925-231622/verified/evaluations/candidate-0016.py"
+  },
+  "validation": {
+   "001eaa1c7b10db5c2780cc84ea3f665cf8f70c56be6af1a41d93d6326d61fb3e": {
+    "certified": 147,
+    "combined_score": 178.28107108157135,
+    "incomplete": 0,
+    "families": 165
+   },
+   "519cc2fc5055376ebe1d4eda44a2580899cbe15a1c0414f84d034a3a68d6e75d": {
+    "certified": 147,
+    "combined_score": 178.28107108157135,
+    "incomplete": 0,
+    "families": 165
+   },
+   "6401290f775b9af882f7a37524c252af2c97bd42114a274833aa10d1a49b6b8f": {
+    "certified": 147,
+    "combined_score": 178.28075063762086,
+    "incomplete": 0,
+    "families": 165
+   },
+   "6c545423f2a54524d78df6ace0d390527c88debbdb605bb80aec04a4ed33fbb9": {
+    "certified": 147,
+    "combined_score": 178.28075063762086,
+    "incomplete": 0,
+    "families": 165
+   },
+   "78d797f483bc6640f9a44925e6707cafac2f03e205364f5aedc2491f1869b53d": {
+    "certified": 140,
+    "combined_score": 169.79567674986984,
+    "incomplete": 0,
+    "families": 165
+   },
+   "8da7928b8789246030d7483fbbfe12d135287a3bae4bf51300b7db96c81b5ab2": {
+    "certified": 147,
+    "combined_score": 178.28053561576172,
+    "incomplete": 0,
+    "families": 165
+   },
+   "a6e4a48849293ac5fe5dd310af1e4a614c8a1343049a9686879209f58bcc7e84": {
+    "certified": 145,
+    "combined_score": 175.85687685430003,
+    "incomplete": 0,
+    "families": 165
+   },
+   "c6e45164582c27e458b1348f2600971a5231aed5b7f3096b0beaa3683a4bcff9": {
+    "certified": 136,
+    "combined_score": 164.94679470349945,
+    "incomplete": 0,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "e4995d8225fb96898c74f645d73a7b3dd02cf6b64781b76ab34e61736c413967": {
+    "certified": 145,
+    "combined_score": 175.85687685430003,
+    "incomplete": 0,
+    "families": 165
+   },
+   "e582c0edd0adc1a5f70d57b0901e33592090a839cf29787cef579175cb62b259": {
+    "certified": 129,
+    "combined_score": 156.46122263039453,
+    "incomplete": 0,
+    "families": 165
+   },
+   "f4eddd1e3dcffd3373651cfbc51cfc748f5eaa99184cf01f5cdec9e9ab03d77d": {
+    "certified": 145,
+    "combined_score": 175.85687685430003,
+    "incomplete": 0,
+    "families": 165
+   },
+   "fbaca00246f56c19ec790ebfb513f9206de257178abc89c7edbcbb5ce654e902": {
+    "certified": 147,
+    "combined_score": 178.2810886769499,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "fbaca00246f56c19ec790ebfb513f9206de257178abc89c7edbcbb5ce654e902",
+  "finalist_is_seed": false,
+  "word_pool_certified": 249
+ },
+ "gepa-s1": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-gepa-s1-260925-203735",
+  "engine": "gepa",
+  "seed": 1,
+  "status": "COMPLETE",
+  "candidates": {
+   "6c596971160db6158ddaa7573faaad8289087c380832a5ae1250d54ba0b4d61b": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-gepa-s1-260925-203735/verified/evaluations/candidate-0395.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-gepa-s1-260925-203735/verified/evaluations/candidate-0001.py"
+  },
+  "validation": {
+   "6c596971160db6158ddaa7573faaad8289087c380832a5ae1250d54ba0b4d61b": {
+    "certified": 126,
+    "combined_score": 152.80935926218655,
+    "incomplete": 11,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+  "finalist_is_seed": true,
+  "word_pool_certified": 244
+ },
+ "gepa-s2": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-gepa-s2-260925-213341",
+  "engine": "gepa",
+  "seed": 2,
+  "status": "COMPLETE",
+  "candidates": {
+   "22f0eb83fc5c4cff054dec13b0588c091750045b7bc511665c8b40963ae9f20f": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-gepa-s2-260925-213341/verified/evaluations/candidate-0215.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-gepa-s2-260925-213341/verified/evaluations/candidate-0001.py"
+  },
+  "validation": {
+   "22f0eb83fc5c4cff054dec13b0588c091750045b7bc511665c8b40963ae9f20f": {
+    "certified": 107,
+    "combined_score": 129.7698523030122,
+    "incomplete": 34,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225",
+  "finalist_is_seed": true,
+  "word_pool_certified": 242
+ },
+ "gepa-s3": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-gepa-s3-260925-222616",
+  "engine": "gepa",
+  "seed": 3,
+  "status": "COMPLETE",
+  "candidates": {
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-gepa-s3-260925-222616/verified/evaluations/candidate-0001.py",
+   "e27e79fd3a6da0131b22edaf7ea1ab6e2c2ff4b0c06fda8118aa95c344570b0f": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-gepa-s3-260925-222616/verified/evaluations/candidate-0281.py"
+  },
+  "validation": {
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "e27e79fd3a6da0131b22edaf7ea1ab6e2c2ff4b0c06fda8118aa95c344570b0f": {
+    "certified": 139,
+    "combined_score": 168.5834509063303,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "e27e79fd3a6da0131b22edaf7ea1ab6e2c2ff4b0c06fda8118aa95c344570b0f",
+  "finalist_is_seed": false,
+  "word_pool_certified": 229
+ },
+ "sequential-s1": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037",
+  "engine": "sequential",
+  "seed": 1,
+  "status": "BROKER_STOPPED",
+  "candidates": {
+   "2173a264d75f2b02dae6e56dfc608f9ca3bcdba579594439894e8a3bb8491a5f": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037/verified/evaluations/candidate-0003.py",
+   "8654895b64da1e2b75655b5bb2ab5e7bb7e21ca56bad5cb0709d5a829d6cfaed": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037/verified/evaluations/candidate-0012.py",
+   "9c8d30348d7e933aa96b3e593bf46c5daffa73c6f2f82839f4c9687457cc2650": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037/verified/evaluations/candidate-0004.py",
+   "9e0ccc39a7db9b2d2d87b48c63740d89ef95588e7562975b426854911bbf12e2": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037/verified/evaluations/candidate-0008.py",
+   "a943b58dcf2ab09f4329f8acddb5aabad592812d4156b511a4a15a4f724b94c3": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037/verified/evaluations/candidate-0002.py",
+   "b0d1252fc49e0d8da9fed856b07a140f856f2847a2706c3bca620ea3bad296e4": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037/verified/evaluations/candidate-0006.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037/verified/evaluations/candidate-0001.py",
+   "d59dda61c81beec7afba2a1c5a905b698281f6c6ec5e25d3c5ba01e29f1039ab": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037/verified/evaluations/candidate-0011.py",
+   "d848fef57a882b655af7732c8b3153ccc2e6ce4eaf3aadfb0e9942b8e17b4c15": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s1-260925-205037/verified/evaluations/candidate-0005.py"
+  },
+  "validation": {
+   "2173a264d75f2b02dae6e56dfc608f9ca3bcdba579594439894e8a3bb8491a5f": {
+    "certified": 135,
+    "combined_score": 163.71921869610318,
+    "incomplete": 10,
+    "families": 165
+   },
+   "8654895b64da1e2b75655b5bb2ab5e7bb7e21ca56bad5cb0709d5a829d6cfaed": {
+    "certified": 134,
+    "combined_score": 162.50552374524975,
+    "incomplete": 15,
+    "families": 165
+   },
+   "9c8d30348d7e933aa96b3e593bf46c5daffa73c6f2f82839f4c9687457cc2650": {
+    "certified": 125,
+    "combined_score": 151.59362646019642,
+    "incomplete": 22,
+    "families": 165
+   },
+   "9e0ccc39a7db9b2d2d87b48c63740d89ef95588e7562975b426854911bbf12e2": {
+    "certified": 124,
+    "combined_score": 150.38075489192053,
+    "incomplete": 24,
+    "families": 165
+   },
+   "a943b58dcf2ab09f4329f8acddb5aabad592812d4156b511a4a15a4f724b94c3": {
+    "certified": 135,
+    "combined_score": 163.73426008478228,
+    "incomplete": 0,
+    "families": 165
+   },
+   "b0d1252fc49e0d8da9fed856b07a140f856f2847a2706c3bca620ea3bad296e4": {
+    "certified": 130,
+    "combined_score": 157.65617696870697,
+    "incomplete": 17,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "d59dda61c81beec7afba2a1c5a905b698281f6c6ec5e25d3c5ba01e29f1039ab": {
+    "certified": 126,
+    "combined_score": 152.80577260056472,
+    "incomplete": 22,
+    "families": 165
+   },
+   "d848fef57a882b655af7732c8b3153ccc2e6ce4eaf3aadfb0e9942b8e17b4c15": {
+    "certified": 134,
+    "combined_score": 162.50619621547548,
+    "incomplete": 13,
+    "families": 165
+   }
+  },
+  "finalist": "a943b58dcf2ab09f4329f8acddb5aabad592812d4156b511a4a15a4f724b94c3",
+  "finalist_is_seed": false,
+  "word_pool_certified": 257
+ },
+ "sequential-s2": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s2-260925-214458",
+  "engine": "sequential",
+  "seed": 2,
+  "status": "COMPLETE",
+  "candidates": {
+   "0fd1b97ce173be2d7e4284a05a640850486c0e3d9e3a588eaf2edf8a024cf15d": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s2-260925-214458/verified/evaluations/candidate-0012.py",
+   "1f555f1ac93367cb50904252e8e3fd9ab8a2c52f6e6d8bcc4747e091955ef5fe": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s2-260925-214458/verified/evaluations/candidate-0019.py",
+   "664678fde48638440607736b8cee7e372b6c99b780232ac3a6f41a7cccd2c81e": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s2-260925-214458/verified/evaluations/candidate-0014.py",
+   "8986b401d80909b31dd57dcc7b102a4861c71c06e300e4facba2c56608b85c91": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s2-260925-214458/verified/evaluations/candidate-0026.py",
+   "b11fbf8caa6ba2298e2ceaf44eda8e81011a28d0976ad0e1429bd093f44d5e1d": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s2-260925-214458/verified/evaluations/candidate-0004.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s2-260925-214458/verified/evaluations/candidate-0001.py",
+   "cdfa9a46a29093c15ef86c9795b8a5af9c140ef0cccca05f0153d6f654229086": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s2-260925-214458/verified/evaluations/candidate-0002.py"
+  },
+  "validation": {
+   "0fd1b97ce173be2d7e4284a05a640850486c0e3d9e3a588eaf2edf8a024cf15d": {
+    "certified": 135,
+    "combined_score": 163.73416913151274,
+    "incomplete": 0,
+    "families": 165
+   },
+   "1f555f1ac93367cb50904252e8e3fd9ab8a2c52f6e6d8bcc4747e091955ef5fe": {
+    "certified": 135,
+    "combined_score": 163.7342535591447,
+    "incomplete": 0,
+    "families": 165
+   },
+   "664678fde48638440607736b8cee7e372b6c99b780232ac3a6f41a7cccd2c81e": {
+    "certified": 137,
+    "combined_score": 166.1584568425134,
+    "incomplete": 0,
+    "families": 165
+   },
+   "8986b401d80909b31dd57dcc7b102a4861c71c06e300e4facba2c56608b85c91": {
+    "certified": 140,
+    "combined_score": 169.79500154507585,
+    "incomplete": 0,
+    "families": 165
+   },
+   "b11fbf8caa6ba2298e2ceaf44eda8e81011a28d0976ad0e1429bd093f44d5e1d": {
+    "certified": 137,
+    "combined_score": 166.1584836960022,
+    "incomplete": 0,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "cdfa9a46a29093c15ef86c9795b8a5af9c140ef0cccca05f0153d6f654229086": {
+    "certified": 136,
+    "combined_score": 164.94636634334927,
+    "incomplete": 0,
+    "families": 165
+   }
+  },
+  "finalist": "8986b401d80909b31dd57dcc7b102a4861c71c06e300e4facba2c56608b85c91",
+  "finalist_is_seed": false,
+  "word_pool_certified": 237
+ },
+ "sequential-s3": {
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437",
+  "engine": "sequential",
+  "seed": 3,
+  "status": "COMPLETE",
+  "candidates": {
+   "082c46422aabf958516af20fc44079540be8402afe5b884dd1b2475bd785ef3b": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0010.py",
+   "2c42d8a3fcbba092f939722c48327749a62d964a6c631505239d72e96fd06d65": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0028.py",
+   "4770490002b105831a0e496aba3af9e98e7b02e3cda716ec1aa1b1816829f6bb": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0025.py",
+   "4bb117169dd6d1189b8dc5bfe4e8b1f087c288282c22507b1dbcf8878342a387": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0020.py",
+   "56275def1780ff393617645ce37bc28dc826d1a61a9898e8acbac0278aabda4b": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0018.py",
+   "7dd1af6f7b78e78df3bd6ee9017c708a13a4ab1dbdbf37600e85a8b75e1e25b6": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0023.py",
+   "854261730b8714ad15d375a5c02925a516de06ce1150a2870485262833ead51f": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0014.py",
+   "8c3c1c658898ebb993ef77c49adf8f4025982e94e42b2e6e53b256086c016112": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0002.py",
+   "9deb7a6416852f6366e2b09b6d9f43342716a566244386868f017474efd21542": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0011.py",
+   "a0ab85e115f9b574b572d3b0c6a9652b79314de2c33dedbfaa1b5e4c3f005cbe": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0004.py",
+   "a295a7148ceba6ef3e2f85a9eb84b32ff13ba5a3aca1b7f87ac5a15b83562c1e": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0009.py",
+   "a35e5b0478372baf1e8667632702d437b03e3f4ad97d4be5228f75423d6a1c51": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0013.py",
+   "b168ba5e7ba37967b2e913769eef4185a0fb3fed00452849c3a3f2bbc91480cf": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0007.py",
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0001.py",
+   "e4554bfb8fd3a3db589fe37e1e3f7a83af4b8ee173ac0e7f37929e70443ea5e7": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/live-sequential-s3-260925-223437/verified/evaluations/candidate-0019.py"
+  },
+  "validation": {
+   "082c46422aabf958516af20fc44079540be8402afe5b884dd1b2475bd785ef3b": {
+    "certified": 127,
+    "combined_score": 154.02143107331668,
+    "incomplete": 10,
+    "families": 165
+   },
+   "2c42d8a3fcbba092f939722c48327749a62d964a6c631505239d72e96fd06d65": {
+    "certified": 115,
+    "combined_score": 139.46970434291498,
+    "incomplete": 28,
+    "families": 165
+   },
+   "4770490002b105831a0e496aba3af9e98e7b02e3cda716ec1aa1b1816829f6bb": {
+    "certified": 122,
+    "combined_score": 147.95951894269376,
+    "incomplete": 12,
+    "families": 165
+   },
+   "4bb117169dd6d1189b8dc5bfe4e8b1f087c288282c22507b1dbcf8878342a387": {
+    "certified": 132,
+    "combined_score": 160.0851353292289,
+    "incomplete": 2,
+    "families": 165
+   },
+   "56275def1780ff393617645ce37bc28dc826d1a61a9898e8acbac0278aabda4b": {
+    "certified": 119,
+    "combined_score": 144.3220507569439,
+    "incomplete": 16,
+    "families": 165
+   },
+   "7dd1af6f7b78e78df3bd6ee9017c708a13a4ab1dbdbf37600e85a8b75e1e25b6": {
+    "certified": 101,
+    "combined_score": 122.49761600264527,
+    "incomplete": 31,
+    "families": 165
+   },
+   "854261730b8714ad15d375a5c02925a516de06ce1150a2870485262833ead51f": {
+    "certified": 112,
+    "combined_score": 135.83558675906337,
+    "incomplete": 18,
+    "families": 165
+   },
+   "8c3c1c658898ebb993ef77c49adf8f4025982e94e42b2e6e53b256086c016112": {
+    "certified": 130,
+    "combined_score": 157.67338571478692,
+    "incomplete": 0,
+    "families": 165
+   },
+   "9deb7a6416852f6366e2b09b6d9f43342716a566244386868f017474efd21542": {
+    "certified": 107,
+    "combined_score": 129.77124274570727,
+    "incomplete": 30,
+    "families": 165
+   },
+   "a0ab85e115f9b574b572d3b0c6a9652b79314de2c33dedbfaa1b5e4c3f005cbe": {
+    "certified": 131,
+    "combined_score": 158.8855669285349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "a295a7148ceba6ef3e2f85a9eb84b32ff13ba5a3aca1b7f87ac5a15b83562c1e": {
+    "certified": 92,
+    "combined_score": 111.58381864965061,
+    "incomplete": 44,
+    "families": 165
+   },
+   "a35e5b0478372baf1e8667632702d437b03e3f4ad97d4be5228f75423d6a1c51": {
+    "certified": 125,
+    "combined_score": 151.59639615705441,
+    "incomplete": 12,
+    "families": 165
+   },
+   "b168ba5e7ba37967b2e913769eef4185a0fb3fed00452849c3a3f2bbc91480cf": {
+    "certified": 96,
+    "combined_score": 116.43450691342345,
+    "incomplete": 37,
+    "families": 165
+   },
+   "cae3cefbe2209f0c28ed67962907ed1e091ebc82101f56bc9a29102754101225": {
+    "certified": 129,
+    "combined_score": 156.4611470727349,
+    "incomplete": 0,
+    "families": 165
+   },
+   "e4554bfb8fd3a3db589fe37e1e3f7a83af4b8ee173ac0e7f37929e70443ea5e7": {
+    "certified": 123,
+    "combined_score": 149.17141053957837,
+    "incomplete": 14,
+    "families": 165
+   }
+  },
+  "finalist": "4bb117169dd6d1189b8dc5bfe4e8b1f087c288282c22507b1dbcf8878342a387",
+  "finalist_is_seed": false,
+  "word_pool_certified": 245
+ }
+}

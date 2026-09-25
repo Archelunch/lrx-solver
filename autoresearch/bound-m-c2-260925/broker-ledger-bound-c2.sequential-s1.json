@@ -1,0 +1,157 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.0179157,
+      "id": 1,
+      "input_tokens": 5406,
+      "kind": "chat",
+      "output_tokens": 3262,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.080961375,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0170082,
+      "id": 2,
+      "input_tokens": 5196,
+      "kind": "chat",
+      "output_tokens": 3084,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0002.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.08016855,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.017592299999999998,
+      "id": 3,
+      "input_tokens": 5019,
+      "kind": "chat",
+      "output_tokens": 3261,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0003.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.079586925,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.018886725,
+      "id": 4,
+      "input_tokens": 5198,
+      "kind": "chat",
+      "output_tokens": 3539,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0004.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.080113275,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.019599525000000003,
+      "id": 5,
+      "input_tokens": 5477,
+      "kind": "chat",
+      "output_tokens": 3656,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0005.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.08094405,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.020328825000000002,
+      "id": 6,
+      "input_tokens": 5536,
+      "kind": "chat",
+      "output_tokens": 3821,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0006.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.081080175,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.019322325,
+      "id": 7,
+      "input_tokens": 5581,
+      "kind": "chat",
+      "output_tokens": 3568,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0007.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.081159375,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.019219200000000002,
+      "id": 8,
+      "input_tokens": 5626,
+      "kind": "chat",
+      "output_tokens": 3534,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0008.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.081238575,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.019656450000000002,
+      "id": 9,
+      "input_tokens": 5626,
+      "kind": "chat",
+      "output_tokens": 3640,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0009.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.081238575,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0203544,
+      "id": 10,
+      "input_tokens": 5622,
+      "kind": "chat",
+      "output_tokens": 3810,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0010.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.081235275,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.020656349999999997,
+      "id": 11,
+      "input_tokens": 5623,
+      "kind": "chat",
+      "output_tokens": 3883,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0011.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.0812361,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.081236925,
+      "id": 12,
+      "input_tokens": null,
+      "kind": "chat",
+      "output_tokens": null,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c2-260925/broker-ledger-bound-c2.sequential-s1.json.receipts/attempt-0012.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.081236925,
+      "role": "unknown",
+      "status": "upstream_error"
+    }
+  ],
+  "consecutive_failures": 1,
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 0.825,
+    "max_requests": 30,
+    "max_usd": 59.491107,
+    "output_rate": 4.125
+  },
+  "spent_usd": 0.29177692499999996
+}
