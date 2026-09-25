@@ -1,0 +1,578 @@
+{
+  "status": "PASS",
+  "working_directory": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package",
+  "first_step": "nine",
+  "last_step": "completion",
+  "steps": [
+    {
+      "step": "nine",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_nine_gap_cover.py",
+        "--bundle-input",
+        "literature/multiset_nine_gap_complete_certificates_20260924.json",
+        "--output",
+        "dependency_nine.json"
+      ],
+      "status": "PASS",
+      "seconds": 8.919,
+      "log": "m8_replay_logs/nine.log",
+      "log_sha256": "eed0efa687aa31206d7bdde757a031386524a1e02982005e78a28ef96be3fd66"
+    },
+    {
+      "step": "compile_nine",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "scripts/verify_multiset_projection_table.cpp",
+        "-o",
+        "projection_nine"
+      ],
+      "status": "PASS",
+      "seconds": 0.811,
+      "log": "m8_replay_logs/compile_nine.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "nine_projection",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_nine_gap_projections.py",
+        "--binary",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/projection_nine",
+        "--output",
+        "dependency_nine_projection.json"
+      ],
+      "status": "PASS",
+      "seconds": 7.851,
+      "log": "m8_replay_logs/nine_projection.log",
+      "log_sha256": "66962eda4123bbe804620117055bdf571d809764cb8416b91750c21482eb7b10"
+    },
+    {
+      "step": "eight",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_projected_reweighting.py",
+        "--input",
+        "literature/multiset_eight_gap_complement_certificates_20260924.json",
+        "--nine-audit",
+        "dependency_nine.json",
+        "--projection-audit",
+        "dependency_nine_projection.json",
+        "--output",
+        "dependency_eight.json"
+      ],
+      "status": "PASS",
+      "seconds": 6.36,
+      "log": "m8_replay_logs/eight.log",
+      "log_sha256": "cd8d036827422d2808ff49481ebd29496178801b768aa1ebaece00ae3302e69b"
+    },
+    {
+      "step": "compile_small",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "scripts/multiset_small_projection_resource.cpp",
+        "-o",
+        "projection_small"
+      ],
+      "status": "PASS",
+      "seconds": 0.944,
+      "log": "m8_replay_logs/compile_small.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "compile_check",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "scripts/verify_multiset_small_projections.cpp",
+        "-o",
+        "projection_small_check"
+      ],
+      "status": "PASS",
+      "seconds": 0.335,
+      "log": "m8_replay_logs/compile_check.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "eight_projection",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_eight_gap_projections.py",
+        "--eight-audit",
+        "dependency_eight.json",
+        "--generator",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/projection_small",
+        "--verifier",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/projection_small_check",
+        "--output",
+        "dependency_eight_projection.json"
+      ],
+      "status": "PASS",
+      "seconds": 13.838,
+      "log": "m8_replay_logs/eight_projection.log",
+      "log_sha256": "e7f75c4c97727617ce1e387c933aba94a68543224e75471b14188b56c22ee3c4"
+    },
+    {
+      "step": "reverse",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_reverse_complete.py",
+        "--bundle-input",
+        "literature/multiset_reverse_m8_complete_certificates_20260923.json",
+        "--output",
+        "dependency_reverse.json"
+      ],
+      "status": "PASS",
+      "seconds": 3.949,
+      "log": "m8_replay_logs/reverse.log",
+      "log_sha256": "527a2396a4eddd7c99b5b9baaef8bbc693d68f9b1cf2f5aafc85ec71b14f62c3"
+    },
+    {
+      "step": "seven",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_seven_gap_cover.py",
+        "--input",
+        "literature/multiset_seven_gap_complement_certificates_20260924.json",
+        "--nine-audit",
+        "dependency_nine.json",
+        "--eight-audit",
+        "dependency_eight.json",
+        "--projection",
+        "dependency_eight_projection.npz",
+        "--projection-audit",
+        "dependency_eight_projection.json",
+        "--reverse-audit",
+        "dependency_reverse.json",
+        "--output",
+        "dependency_seven.json"
+      ],
+      "status": "PASS",
+      "seconds": 30.813,
+      "log": "m8_replay_logs/seven.log",
+      "log_sha256": "e472a41a56c21b3e419d43c509379cc2deec013c0fa616dced213375cb63286b"
+    },
+    {
+      "step": "seven_projection",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_downward_projections.py",
+        "--bundle",
+        "literature/multiset_seven_gap_complement_certificates_20260924.json",
+        "--parent-audit",
+        "dependency_seven.json",
+        "--previous",
+        "dependency_eight_projection.npz",
+        "--generator",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/projection_small",
+        "--verifier",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/projection_small_check",
+        "--output",
+        "dependency_seven_projection.json"
+      ],
+      "status": "PASS",
+      "seconds": 33.932,
+      "log": "m8_replay_logs/seven_projection.log",
+      "log_sha256": "5fcc3cfb5d7b5b88c3f0d4e356d07643b2b75f9cf23ea63095e0e5d00c2cd052"
+    },
+    {
+      "step": "large_n",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_optimal_block.py",
+        "--random-cases",
+        "1000"
+      ],
+      "status": "PASS",
+      "seconds": 5.318,
+      "log": "m8_replay_logs/large_n.log",
+      "log_sha256": "67afe0493d9028c3d0f408dad845db3eeaef20a7a9608ba93299320263f72d77"
+    },
+    {
+      "step": "six",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_six_gap_bounded.py",
+        "--input",
+        "literature/multiset_six_gap_bounded_search_20260924.json",
+        "--repairs",
+        "literature/multiset_six_gap_bounded_repairs_final_20260924.json",
+        "--projection",
+        "dependency_seven_projection.npz",
+        "--projection-audit",
+        "dependency_seven_projection.json",
+        "--output",
+        "dependency_six.json"
+      ],
+      "status": "PASS",
+      "seconds": 75.505,
+      "log": "m8_replay_logs/six.log",
+      "log_sha256": "7a046174df09a71c9bc92745b342f4f367f6fa320ea58ab439925b292ac9d675"
+    },
+    {
+      "step": "six_unbounded",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_six_gap_unbounded.py",
+        "--audit",
+        "dependency_six.json",
+        "--previous",
+        "dependency_seven_projection.npz",
+        "--bundle-output",
+        "dependency_six_complement.json",
+        "--coverage-output",
+        "dependency_six_unbounded.npz",
+        "--output",
+        "dependency_six_unbounded.json"
+      ],
+      "status": "PASS",
+      "seconds": 11.266,
+      "log": "m8_replay_logs/six_unbounded.log",
+      "log_sha256": "95d57c7a944c8ae227ef4510667917fd6bbe663819a3320e2af502dc1b4772b9"
+    },
+    {
+      "step": "six_interface",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/adapt_multiset_projection_parent.py",
+        "--source",
+        "dependency_six_unbounded.json",
+        "--coverage",
+        "dependency_six_unbounded.npz",
+        "--output",
+        "dependency_six_parent.json"
+      ],
+      "status": "PASS",
+      "seconds": 0.222,
+      "log": "m8_replay_logs/six_interface.log",
+      "log_sha256": "7ff2b88e0e96c7335e3d87f35a399750e6ca9ac76cfbc87140c8f915620ca658"
+    },
+    {
+      "step": "six_projection",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_downward_projections.py",
+        "--bundle",
+        "dependency_six_complement.json",
+        "--parent-audit",
+        "dependency_six_parent.json",
+        "--previous",
+        "dependency_six_unbounded.npz",
+        "--generator",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/projection_small",
+        "--verifier",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/projection_small_check",
+        "--output",
+        "dependency_six_projection.json"
+      ],
+      "status": "PASS",
+      "seconds": 51.956,
+      "log": "m8_replay_logs/six_projection.log",
+      "log_sha256": "30a86bbbffeaf22136c9aea0bd538c7b926e244bcab4645d0fe815241942095b"
+    },
+    {
+      "step": "five",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_five_gap_bounded.py",
+        "--input",
+        "literature/multiset_five_gap_bounded_search_20260924.json",
+        "--repairs",
+        "literature/multiset_five_gap_bounded_repairs_final_20260924.json",
+        "--projection",
+        "dependency_six_projection.npz",
+        "--projection-audit",
+        "dependency_six_projection.json",
+        "--output",
+        "five_gap_audit.json"
+      ],
+      "status": "PASS",
+      "seconds": 88.957,
+      "log": "m8_replay_logs/five.log",
+      "log_sha256": "bcca912b053b7c0566a9d9ca2a354a34f1b94fa9e14c9499e0c584b2c5b5d05d"
+    },
+    {
+      "step": "five_unbounded",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_five_gap_unbounded.py",
+        "--audit",
+        "five_gap_audit.json",
+        "--previous",
+        "dependency_six_projection.npz",
+        "--bundle-output",
+        "five_gap_complement.json",
+        "--coverage-output",
+        "five_gap_unbounded.npz",
+        "--output",
+        "five_gap_unbounded_audit.json"
+      ],
+      "status": "PASS",
+      "seconds": 15.141,
+      "log": "m8_replay_logs/five_unbounded.log",
+      "log_sha256": "42eeb06d6ae8ee0e8e84b264608b923d8d44c1a1bdbce91c439e1e467e6ca62b"
+    },
+    {
+      "step": "five_projection",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_downward_projections.py",
+        "--bundle",
+        "five_gap_complement.json",
+        "--parent-audit",
+        "five_gap_unbounded_audit.json",
+        "--previous",
+        "five_gap_unbounded.npz",
+        "--generator",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/projection_small",
+        "--verifier",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/projection_small_check",
+        "--output",
+        "five_gap_projection.json"
+      ],
+      "status": "PASS",
+      "seconds": 50.234,
+      "log": "m8_replay_logs/five_projection.log",
+      "log_sha256": "269af53b9fd41058a5dedc6c24bdd29cd6b29c2d76354c64c4804a9f0d87065f"
+    },
+    {
+      "step": "compile_low_resource",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "scripts/multiset_multi_zero_resource.cpp",
+        "-o",
+        "low_resource"
+      ],
+      "status": "PASS",
+      "seconds": 0.798,
+      "log": "m8_replay_logs/compile_low_resource.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "compile_low_two",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "scripts/multiset_two_zero_resource_reference.cpp",
+        "-o",
+        "low_two"
+      ],
+      "status": "PASS",
+      "seconds": 0.327,
+      "log": "m8_replay_logs/compile_low_two.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "compile_low_pareto",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "scripts/multiset_resource_pareto.cpp",
+        "-o",
+        "low_pareto"
+      ],
+      "status": "PASS",
+      "seconds": 0.361,
+      "log": "m8_replay_logs/compile_low_pareto.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "compile_low_tagged",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "scripts/multiset_resource_tagged_reference.cpp",
+        "-o",
+        "low_tagged"
+      ],
+      "status": "PASS",
+      "seconds": 0.379,
+      "log": "m8_replay_logs/compile_low_tagged.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "compile_low_quotient",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "scripts/multiset_resource_quotient.cpp",
+        "-o",
+        "low_quotient"
+      ],
+      "status": "PASS",
+      "seconds": 0.411,
+      "log": "m8_replay_logs/compile_low_quotient.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "low_resources",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_resource_pareto.py",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/low_pareto",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/low_tagged",
+        "--two-reference",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/low_two",
+        "--three-quotient",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/low_quotient",
+        "--output",
+        "low_resource_audit.json",
+        "--three-raw",
+        "low_three_array.bin"
+      ],
+      "status": "PASS",
+      "seconds": 425.194,
+      "log": "m8_replay_logs/low_resources.log",
+      "log_sha256": "8be729571f4a227be83576041dcfc1776e098f3d70ec89d4754fb257c7d64b62"
+    },
+    {
+      "step": "low_one_two",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_two_zero_union.py",
+        "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/verify-m8-260924/package/low_resource",
+        "literature/multiset_two_zero_full_cycle_batch_20260920.jsonl",
+        "literature/multiset_two_zero_refinement_round1_20260920.jsonl",
+        "literature/multiset_two_zero_refinement_round2_20260920.jsonl",
+        "literature/multiset_two_zero_refinement_round3_20260920.jsonl",
+        "literature/multiset_two_zero_refinement_round4_20260920.jsonl",
+        "literature/multiset_two_zero_refinement_round5_20260920.jsonl",
+        "literature/multiset_two_zero_refinement_round6_20260920.jsonl",
+        "literature/multiset_two_zero_refinement_round7_20260920.jsonl",
+        "literature/multiset_two_zero_refinement_round8_20260920.jsonl",
+        "--verify-one-block",
+        "--output",
+        "low_two_audit.json"
+      ],
+      "status": "PASS",
+      "seconds": 23.748,
+      "log": "m8_replay_logs/low_one_two.log",
+      "log_sha256": "f59158ef2d398eb6ba36311027d4ac2d436f8178c1fe4caec7c7fbbcaf90410f"
+    },
+    {
+      "step": "low_three",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_three_zero_batch.py",
+        "low_three_array.bin",
+        "literature/multiset_three_zero_full_native_batch_20260920.jsonl",
+        "literature/multiset_three_zero_refinement_follow1_20260920.jsonl",
+        "literature/multiset_three_zero_refinement_follow2_20260920.jsonl",
+        "literature/multiset_three_zero_last_family_20260920.jsonl",
+        "--output",
+        "low_three_audit.json"
+      ],
+      "status": "PASS",
+      "seconds": 82.033,
+      "log": "m8_replay_logs/low_three.log",
+      "log_sha256": "6678c7b74df169574e5777c43e61f38f426f94c8c6307f8f034780aa5ac34e83"
+    },
+    {
+      "step": "transfer",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_bruhat_transfer.py",
+        "--output",
+        "transfer_audit.json"
+      ],
+      "status": "PASS",
+      "seconds": 2.377,
+      "log": "m8_replay_logs/transfer.log",
+      "log_sha256": "74e82dc6f4e04034cde29359ef87aa292c2aef0c87f18febacde0d06e8ee17d8"
+    },
+    {
+      "step": "four",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_four_gap_bounded.py",
+        "--input",
+        "literature/multiset_four_gap_bounded_search_20260924.json",
+        "--repairs",
+        "literature/multiset_four_gap_bounded_repairs_final_20260924.json",
+        "--projection",
+        "five_gap_projection.npz",
+        "--projection-audit",
+        "five_gap_projection.json",
+        "--output",
+        "four_gap_audit.json",
+        "--coverage-output",
+        "four_gap_coverage.npz"
+      ],
+      "status": "PASS",
+      "seconds": 57.255,
+      "log": "m8_replay_logs/four.log",
+      "log_sha256": "67d8e29e01e20b8e68515d427157df00e31836d86c8d7751018136d6c23bff70"
+    },
+    {
+      "step": "four_unbounded",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_four_gap_unbounded.py",
+        "--audit",
+        "four_gap_audit.json",
+        "--previous",
+        "five_gap_projection.npz",
+        "--bundle-output",
+        "four_gap_unbounded_certificates.json",
+        "--coverage-output",
+        "four_gap_unbounded_coverage.npz",
+        "--output",
+        "four_gap_unbounded_audit.json"
+      ],
+      "status": "PASS",
+      "seconds": 9.9,
+      "log": "m8_replay_logs/four_unbounded.log",
+      "log_sha256": "f747f2bfe2a381095b76c6fd51baa77414a62e147e2139e774fbe1165ab7b828"
+    },
+    {
+      "step": "completion",
+      "command": [
+        "/Users/pavluhin/miniconda3/bin/python3",
+        "scripts/audit_multiset_m8_completion.py",
+        "--four-audit",
+        "four_gap_audit.json",
+        "--coverage",
+        "four_gap_coverage.npz",
+        "--resource-audit",
+        "low_resource_audit.json",
+        "--two-audit",
+        "low_two_audit.json",
+        "--three-audit",
+        "low_three_audit.json",
+        "--three-array",
+        "low_three_array.bin",
+        "--transfer-audit",
+        "transfer_audit.json",
+        "--output",
+        "m8_completion.json"
+      ],
+      "status": "PASS",
+      "seconds": 0.435,
+      "log": "m8_replay_logs/completion.log",
+      "log_sha256": "f96ee3ebe9362efacb6552241a86b105ac7cd88a408f4c437bf486dc50c02e1d"
+    }
+  ],
+  "full_conjecture_proved": false,
+  "seconds": 1009.579,
+  "runner_sha256": "1de63caa5a1b606ee33c3ad834c1388db9c7f414fe1f4c590455b86bcefb0978"
+}

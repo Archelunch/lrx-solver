@@ -32,16 +32,86 @@ class BudgetTests(unittest.TestCase):
                              ["ok", "reserved"])
             resumed.close()
 
-    def test_error_and_unknown_usage_halt_restarted_ledger(self):
-        for failure in ("upstream_error", "missing_usage"):
-            with self.subTest(failure=failure), tempfile.TemporaryDirectory() as folder:
-                path = Path(folder) / "ledger.json"
-                ledger = self.budget(path)
+    def test_unknown_usage_halts_restarted_ledger_immediately(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "ledger.json"
+            ledger = self.budget(path)
+            call = ledger.reserve(10, 10)
+            ledger.settle(call, status="missing_usage")
+            ledger.close()
+            with self.assertRaises(BudgetExceeded):
+                self.budget(path).reserve(10, 10)
+
+    def test_single_upstream_error_is_retried_not_halted(self):
+        # A wall-timeout cancel or connection error is charged at the
+        # reservation and does not itself stop the run; only 3 in a row do.
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "ledger.json"
+            ledger = self.budget(path, max_requests=5)
+            call = ledger.reserve(10, 10)
+            ledger.settle(call, status="upstream_error")
+            self.assertIsNone(ledger.snapshot()["halted_reason"])
+            second = ledger.reserve(10, 10)
+            self.assertEqual(second, 2)
+            ledger.close()
+
+    def test_three_consecutive_upstream_errors_halt_restarted_ledger(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "ledger.json"
+            ledger = self.budget(path, max_requests=5)
+            for _ in range(3):
                 call = ledger.reserve(10, 10)
-                ledger.settle(call, status=failure)
-                ledger.close()
-                with self.assertRaises(BudgetExceeded):
-                    self.budget(path).reserve(10, 10)
+                ledger.settle(call, status="upstream_error")
+            self.assertIsNotNone(ledger.snapshot()["halted_reason"])
+            ledger.close()
+            with self.assertRaises(BudgetExceeded):
+                self.budget(path, max_requests=5).reserve(10, 10)
+
+    def test_success_between_upstream_errors_resets_consecutive_count(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "ledger.json"
+            ledger = self.budget(path, max_requests=6)
+            for _ in range(2):
+                call = ledger.reserve(10, 10)
+                ledger.settle(call, status="upstream_error")
+            ok_call = ledger.reserve(10, 10)
+            ledger.settle(ok_call, usage={"prompt_tokens": 10, "completion_tokens": 10})
+            self.assertEqual(ledger.snapshot()["consecutive_failures"], 0)
+            for _ in range(2):
+                call = ledger.reserve(10, 10)
+                ledger.settle(call, status="upstream_error")
+            self.assertIsNone(ledger.snapshot()["halted_reason"])
+            ledger.close()
+
+    def test_resume_clears_halt_with_audit_entry_and_keeps_spend(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "ledger.json"
+            ledger = self.budget(path)
+            call = ledger.reserve(10, 10)
+            ledger.settle(call, status="missing_usage")
+            spent_before = ledger.snapshot()["spent_usd"]
+            entry = ledger.resume(note="reclassified per approval", who="orchestrator")
+            self.assertEqual(entry["cleared_halted_reason"], "missing_usage")
+            state = ledger.snapshot()
+            self.assertIsNone(state["halted_reason"])
+            self.assertEqual(state["spent_usd"], spent_before)
+            self.assertEqual(len(state["resume_log"]), 1)
+            self.assertEqual([a["status"] for a in state["attempts"]], ["missing_usage"])
+            second = ledger.reserve(10, 10)
+            self.assertEqual(second, 2)
+            ledger.close()
+
+    def test_resume_requires_note_and_an_actual_halt(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "ledger.json"
+            ledger = self.budget(path)
+            with self.assertRaisesRegex(ValueError, "not halted"):
+                ledger.resume(note="premature")
+            call = ledger.reserve(10, 10)
+            ledger.settle(call, status="missing_usage")
+            with self.assertRaisesRegex(ValueError, "non-empty note"):
+                ledger.resume(note="")
+            ledger.close()
 
     def test_missing_usage_halts_and_live_second_owner_rejected(self):
         with tempfile.TemporaryDirectory() as folder:

@@ -1,0 +1,6 @@
+ACCEPTED original
+rejected weight changed -> weights not a probability vector
+rejected crossed cut -> cut 0 is crossed by a swap
+rejected single worst row weight 1 -> criterion (7) fails: Bbar=90 beta=['9', '6', '3', '0', '3', '6', '9', '12'] budget<79
+rejected truncated reference word -> word does not sort the state
+rejected wrong labels (reversed order) -> P is not <= Q in prefix order (9)

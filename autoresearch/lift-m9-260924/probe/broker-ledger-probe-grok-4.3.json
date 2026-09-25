@@ -1,0 +1,25 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.011334125,
+      "id": 1,
+      "input_tokens": 4875,
+      "kind": "chat",
+      "output_tokens": 1684,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/probe/broker-ledger-probe-grok-4.3.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.08663875,
+      "role": "gepa_reflection",
+      "status": "ok"
+    }
+  ],
+  "consecutive_failures": 0,
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 1.375,
+    "max_requests": 2,
+    "max_usd": 2.0,
+    "output_rate": 2.75
+  },
+  "spent_usd": 0.011334125
+}

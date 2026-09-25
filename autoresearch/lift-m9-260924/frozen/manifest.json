@@ -1,0 +1,61 @@
+{
+ "counts_per_k": {
+  "4": {
+   "direct_mixture": 25,
+   "direct_tree": 3,
+   "projection_from_5": 2,
+   "projection_from_6": 4,
+   "projection_from_7": 2,
+   "projection_from_9": 17,
+   "reverse_tree_transfer": 3
+  },
+  "5": {
+   "direct_mixture": 25,
+   "direct_tree": 2,
+   "projection_from_6": 4,
+   "projection_from_7": 4,
+   "projection_from_9": 17,
+   "reverse_tree_transfer": 3
+  },
+  "6": {
+   "direct_mixture": 25,
+   "direct_tree": 1,
+   "projection_from_7": 6,
+   "projection_from_8": 1,
+   "projection_from_9": 18,
+   "reverse_tree_transfer": 2
+  },
+  "7": {
+   "direct_mixture": 25,
+   "direct_tree": 1,
+   "projection_from_9": 25
+  },
+  "8": {
+   "direct_mixture": 25,
+   "projection_from_9": 25
+  },
+  "9": {
+   "direct_mixture": 50
+  }
+ },
+ "development_instances": 4588,
+ "development_parents": 210,
+ "files": {
+  "development.json": "949f7489769ad6f0a78d83d4ac2b708d3e64172e8c30575122a7d2fa6b77e068",
+  "holdout.json": "d50a7aef53c3fb5fa8239e0d9a622969c78422bc72dda19e34c1f0f5c9f1f714",
+  "parents_raw.json": "4ff4e9fcb3f7ddc5b2125eccf7da1a9e54d151c7eda1364efab27dbd588259d6"
+ },
+ "holdout_instances": 2295,
+ "holdout_parents": 105,
+ "m_child": 9,
+ "m_parent": 8,
+ "routes_included": [
+  "direct_mixture",
+  "projection_from_N",
+  "direct_tree",
+  "reverse_tree_transfer"
+ ],
+ "seed": 20260924,
+ "tree_stratum_note": "15 tree-route parents added on top of the 300 mixture-route parents (10 -> development, 5 -> holdout): 7 direct_tree, 8 reverse_tree_transfer. Their certificate.kind is \"tree\" with weights_placeholder=true and every row weight forced to \"0\": the evaluator solves its own exact LP over the words the candidate program returns (parent weights are never used by scoring), so these stored weights carry no information and must not be read as real mixture coefficients. Only unit-origin (all-1 block length) leaf rows are included, since only those are literal words that sort the parent UNIT base directly; non-unit-origin leaf rows were used to verify criterion (8) here but are not emitted.",
+ "v1_note": "development.v1.json / holdout.v1.json / manifest.v1.json / parents_raw.v1.json are the pre-tree-stratum freeze, kept for the record."
+}

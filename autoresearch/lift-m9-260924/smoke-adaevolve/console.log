@@ -1,0 +1,31 @@
+16:25:48 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:25:48 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:25:48 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:25:48 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:25:48 [controller] AdaEvolve: Running 2 iterations across 2 islands
+16:26:52 [controller] Iteration 1: Program e2f6bd1c (parent: 63ef1588) completed in 63.51s (llm: 0.06s, eval: 63.45s)
+16:26:52 [controller] New best solution found at iteration 1
+16:26:52 [runner] Checkpoint 1: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:26:52 [controller] Iteration 2: Program 8d4239fc (parent: a1b988ea) completed in 0.03s (llm: 0.02s, eval: 0.02s)
+16:26:52 [runner] Checkpoint 2: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:26:52 [controller] AdaEvolve completed
+16:26:52 [runner] Checkpoint 2: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:26:52 [runner] Test evaluation for best program: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:26:52 [runner] Discovery completed. Best: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000, test_combined_score=57.6201, test_screen_certificates=57.0000, test_screen_valid=306.0000, test_screen_gap_sum=967.4527, test_full_certificates=286.0000
+Using search algorithm: adaevolve
+
+Discovery complete!
+Best program metrics:
+  combined_score: 57.6201
+  screen_certificates: 57.0000
+  screen_valid: 306.0000
+  screen_gap_sum: 967.4527
+  full_certificates: 286.0000
+  test_combined_score: 57.6201
+  test_screen_certificates: 57.0000
+  test_screen_valid: 306.0000
+  test_screen_gap_sum: 967.4527
+  test_full_certificates: 286.0000
+
+Latest checkpoint: /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-adaevolve/output/sky/checkpoints/checkpoint_2
+To resume: --checkpoint /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-adaevolve/output/sky/checkpoints/checkpoint_2

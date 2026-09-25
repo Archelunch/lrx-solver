@@ -1,0 +1,51 @@
+{
+ "stage": "six",
+ "mode": "full",
+ "seed": null,
+ "sample_size": null,
+ "chosen_indices": null,
+ "z_samples_per_k": "z=0, e_j, 2e_j (all j), e_i+e_{i+1} (i<3)",
+ "meta": {
+  "files": [
+   "multiset_six_gap_bounded_search_20260924.json",
+   "multiset_six_gap_bounded_repairs_final_20260924.json"
+  ],
+  "unused_repairs": [],
+  "declared_counts": {
+   "native_calls": 2306,
+   "tested": 228966,
+   "certified": 228964,
+   "unresolved": 2,
+   "finite_only_coefficients": 0
+  },
+  "target_total": 228966
+ },
+ "structure": {
+  "items": 228966,
+  "distinct_families": 228966,
+  "masks": 84,
+  "wrong_popcount": 0
+ },
+ "counts": {
+  "families": 228966,
+  "passed": 228966,
+  "failed": 0,
+  "mixture_rows": 760672,
+  "tree_rows": 18,
+  "tree_leaves": 5,
+  "reference_words": 381857,
+  "reference_letters_literal": 459687925,
+  "literal_transfer_letters": 885874691,
+  "same_sign_violations": 0,
+  "claim_mismatches": 0,
+  "by_kind": {
+   "mix": 228964,
+   "tree:repair": 2
+  }
+ },
+ "failures": [],
+ "claim_mismatches": [],
+ "seconds_load": 3.0,
+ "seconds_total": 188.1,
+ "workers": 6
+}

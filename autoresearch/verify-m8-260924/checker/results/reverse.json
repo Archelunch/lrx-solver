@@ -1,0 +1,39 @@
+{
+ "stage": "reverse",
+ "mode": "full",
+ "seed": null,
+ "sample_size": null,
+ "chosen_indices": null,
+ "z_samples_per_k": "z=0, e_j, 2e_j (all j), e_i+e_{i+1} (i<3)",
+ "meta": {
+  "files": [
+   "multiset_reverse_m8_complete_certificates_20260923.json"
+  ]
+ },
+ "structure": {
+  "items": 4088,
+  "distinct_families": 4088,
+  "masks": 511
+ },
+ "counts": {
+  "families": 4088,
+  "passed": 4088,
+  "failed": 0,
+  "mixture_rows": 0,
+  "tree_rows": 11356,
+  "tree_leaves": 4227,
+  "reference_words": 0,
+  "reference_letters_literal": 10991387,
+  "literal_transfer_letters": 0,
+  "same_sign_violations": 0,
+  "claim_mismatches": 0,
+  "by_kind": {
+   "tree:reverse": 4088
+  }
+ },
+ "failures": [],
+ "claim_mismatches": [],
+ "seconds_load": 0.0,
+ "seconds_total": 5.1,
+ "workers": 1
+}

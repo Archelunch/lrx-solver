@@ -1,0 +1,53 @@
+{
+  "CORRECTED_CONCLUSION": "Direct search for a literal (mask=302, order_index=15713) record in the five/six-gap files found none (see fields below, kept as-is). That search missed the package's actual coverage route: downward Lemma-4 projection from the seven-gap complement bundle. The coverage npz files under package/ (produced by the in-progress replay) show projected_covered[order_index=15713, mask=302] = True as of dependency_seven_projection.npz (witness_record=37688 in multiset_seven_gap_complement_certificates_20260924.json, record mask=446, order_index=15713, labels match ours). Independently replaying that record's 4-term mixture via project_deleting_zeros + compare_word + certificate (package/scripts, deterministic library code, no C++ binaries needed) reproduces a literal sorting word for OUR exact target state (4,0,1,0,7,0,8,5,0,6,3,2,0) for every mixture term, and the weighted criterion (7) check passes: mean_base = 121/2 = 60.5 < 61, mean_beta = [6, 63/11, 6, 6, 6] all <= 6. This DOES certify the family for all positive block lengths via the reviewed comparison/stretching lemmas. See replay-projection-result.json for full numbers.",
+  "complete_audit_claims": {
+    "complete_five_gap_proved": true,
+    "full_m8_proved": false,
+    "references_missing_coverage_npz": true,
+    "source_input": "literature/multiset_five_gap_bounded_search_20260924.json",
+    "status": "PASS"
+  },
+  "coverage_npz_present": false,
+  "five_gap_bounded_search": {
+    "file": "literature/multiset_five_gap_bounded_search_20260924.json",
+    "found_order15713": false,
+    "offset": null,
+    "total_mask302_records": 3275
+  },
+  "multiset_eight_gap_complement_certificates_20260924.json": {
+    "order_index_15713_occurrences": 0
+  },
+  "multiset_five_gap_bounded_repairs_final_20260924.json": {
+    "order_index_15713_occurrences": 0
+  },
+  "multiset_five_gap_control_seed_20260924.jsonl": {
+    "order_index_15713_occurrences": 0
+  },
+  "multiset_five_gap_repairs_final_audit_20260924.json": {
+    "order_index_15713_occurrences": 0
+  },
+  "multiset_seven_gap_complement_certificates_20260924.json": {
+    "order_index_15713_occurrences": 1
+  },
+  "multiset_six_gap_bounded_repair_prefix2_20260924.json": {
+    "order_index_15713_occurrences": 0
+  },
+  "multiset_six_gap_bounded_repair_prefix_20260924.json": {
+    "order_index_15713_occurrences": 0
+  },
+  "multiset_six_gap_bounded_repairs_final_20260924.json": {
+    "order_index_15713_occurrences": 0
+  },
+  "six_gap_bounded_search": {
+    "file": "literature/multiset_six_gap_bounded_search_20260924.json",
+    "masks_that_are_bit_supersets_of_302": [],
+    "order15713_masks": [
+      189,
+      222,
+      252,
+      441,
+      476,
+      504
+    ]
+  }
+}

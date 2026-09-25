@@ -1,0 +1,68 @@
+/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/core/engine.py:742: UserWarning: cloudpickle is not installed; falling back to standard pickle. Install it with: pip install gepa[full]  or  pip install cloudpickle
+  state.save(self.run_dir, use_cloudpickle=self.use_cloudpickle)
+Iteration 0: Base program full valset score: 4.669182256339206 over 14 / 14 examples
+Iteration 1: Selected program 0 score: 4.669182256339206
+Traceback (most recent call last):
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-gepa-260924-184057/stage/official_backends.py", line 839, in __call__
+    with urlopen(req, timeout=self.timeout) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/pavluhin/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 502: Bad Gateway
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-gepa-260924-184057/stage/lift_official_worker.py", line 847, in <module>
+    main()
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-gepa-260924-184057/stage/lift_official_worker.py", line 840, in main
+    result = actions[args.action](args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-gepa-260924-184057/stage/lift_official_worker.py", line 449, in _gepa_worker
+    result = optimize_anything(
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/optimize_anything.py", line 1692, in optimize_anything
+    state = engine.run()
+            ^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/core/engine.py", line 846, in run
+    proposals = self.reflective_proposer.propose(state)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 457, in propose
+    batch_texts = iter(self._propose_texts_batch_safe(jobs))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 214, in _propose_texts_batch_safe
+    return list(self._propose_texts_batch(jobs))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflective_mutation.py", line 184, in _propose_texts_batch
+    results = list(reflect_many(jobs))
+                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 168, in reflect_many
+    raw_outputs = self._batch_complete([r[2] for r in rendered], [r[3] for r in rendered])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/proposer/reflective_mutation/reflection_lm.py", line 139, in _batch_complete
+    return [self.lm(prompts[0])]
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/gepa/lm.py", line 231, in __call__
+    result = self._fn(prompt)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-gepa-260924-184057/stage/lift_official_worker.py", line 422, in __call__
+    return super().__call__(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-gepa-260924-184057/stage/official_backends.py", line 843, in __call__
+    raise BrokerHalted(f"research broker stopped: HTTP {exc.code}") from exc
+official_backends.BrokerHalted: research broker stopped: HTTP 502

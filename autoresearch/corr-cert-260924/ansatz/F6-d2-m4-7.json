@@ -1,0 +1,27 @@
+{
+ "family": "F6",
+ "deg": 2,
+ "train": [
+  4,
+  7
+ ],
+ "n_params": 946,
+ "status": 0,
+ "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+ "t_star": 3.972218109993264e-11,
+ "lp_seconds": 6.4,
+ "forced_tightness_max_slack": {
+  "4": [
+   2.4942892196122557e-09,
+   4.858847546529432e-09
+  ],
+  "7": [
+   3.7623976822942495e-08,
+   8.489723768434487e-08
+  ]
+ },
+ "l1_status": 0,
+ "l1_nonzero": 499,
+ "rational_D": null,
+ "total_seconds": 10.7
+}

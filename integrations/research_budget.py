@@ -34,6 +34,37 @@ _SECRET_KEYS = frozenset(("api_key", "access_token", "authorization", "secret", 
 _CALL_ROLES = frozenset(("gepa_reflection", "gepa_preflight", "sky_solution",
                          "sky_meta", "sky_variation", "unknown"))
 
+# xAI docs (developers/model-capabilities/text/reasoning, fetched 2026-09-24)
+# document `reasoning_effort` for grok-4.7 as one of these levels; there is no
+# documented numeric reasoning-token cap parameter. See
+# autoresearch/lift-m9-260924/transport-notes.md.
+_REASONING_EFFORTS = frozenset(("low", "medium", "high", "xhigh"))
+
+# No per-chunk reasoning token count is available from the SSE delta stream,
+# only cumulative reasoning characters. This ratio is a deliberately
+# conservative (small) chars-per-token estimate so the local abort fires at
+# or before the configured reasoning_cap_tokens is actually reached; it is
+# not a provider-documented figure. See transport-notes.md.
+_CONSERVATIVE_CHARS_PER_REASONING_TOKEN = 3
+
+# A wall-timeout cancel or upstream connection error is charged at the full
+# reservation (never above it) and is retried up to this many times in a
+# row before the broker halts; a reservation overrun or a post-response
+# billing/credential/receipt problem still halts on the first occurrence.
+_RETRYABLE_FAILURE = "upstream_error"
+_MAX_CONSECUTIVE_FAILURES = 3
+
+
+def _append_jsonl(path, record):
+    """Append one durable record; survives a hard kill mid-stream (fsync)."""
+    line = (json.dumps(record, sort_keys=True, ensure_ascii=False) + "\n").encode()
+    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_APPEND, 0o600)
+    try:
+        os.write(fd, line)
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+
 
 def _sanitize(value, credential):
     """Retain complete audit text while removing credential-shaped substrings."""
@@ -57,22 +88,40 @@ def _stream_snapshot(progress):
     """Copy fixed fields without iterating a reader-mutated mapping or list."""
     keys = ("headers_seconds", "first_event_seconds", "first_reasoning_seconds",
             "first_content_seconds", "done_seconds", "cancelled_seconds",
-            "response_bytes", "event_count", "reasoning_chars", "content_chars")
+            "reasoning_cap_exceeded_seconds", "response_bytes", "event_count",
+            "reasoning_chars", "content_chars")
     snapshot = {key: progress.get(key) for key in keys}
     snapshot["events"] = list(progress["events"])
     return snapshot
 
 
-def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress):
+def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress,
+                        reasoning_char_cap=None, jsonl_path=None):
     """Read xAI SSE to a chat JSON response with a hard total wall deadline.
 
     The fetch runs in a daemon thread so a stalled header or SSE read cannot
     extend the budgeted attempt past the deadline. The broker fail-stops if a
     complete stream and its final usage are unavailable.
+
+    If `reasoning_char_cap` is given, the read aborts as soon as cumulative
+    reasoning characters exceed it (a conservative proxy for a reasoning
+    token cap, since no provider-reported running token count exists
+    mid-stream); the caller charges the reservation on abort, so no single
+    request's actual spend can exceed what was reserved for it. If
+    `jsonl_path` is given, timing/count milestones are appended durably
+    (fsynced) as they happen, so a hard process kill mid-stream still leaves
+    an audit trail.
     """
     outcome = {}
     stop = threading.Event()
     active_response = []
+
+    def _mark(event, **fields):
+        if jsonl_path is not None:
+            record = {"event": event, "elapsed_seconds": time.monotonic() - started,
+                      "chunk_count": progress["event_count"]}
+            record.update(fields)
+            _append_jsonl(jsonl_path, record)
 
     def read():
         try:
@@ -82,6 +131,7 @@ def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress
                 if stop.is_set():
                     return
                 progress["headers_seconds"] = time.monotonic() - started
+                _mark("headers")
                 data_lines = []
                 content = []
                 role = "assistant"
@@ -102,6 +152,7 @@ def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress
                     if value == "[DONE]":
                         done = True
                         progress["done_seconds"] = time.monotonic() - started
+                        _mark("done")
                         return
                     event = json.loads(value)
                     if not isinstance(event, dict):
@@ -110,6 +161,7 @@ def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress
                     progress["event_count"] += 1
                     if progress.get("first_event_seconds") is None:
                         progress["first_event_seconds"] = time.monotonic() - started
+                        _mark("first_event")
                     for key in ("id", "model", "created", "system_fingerprint"):
                         if key in event and key not in identity:
                             identity[key] = event[key]
@@ -132,12 +184,22 @@ def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress
                         progress["reasoning_chars"] += len(reasoning)
                         if progress.get("first_reasoning_seconds") is None:
                             progress["first_reasoning_seconds"] = time.monotonic() - started
+                            _mark("first_reasoning")
+                        if (reasoning_char_cap is not None and
+                                progress["reasoning_chars"] > reasoning_char_cap):
+                            progress["reasoning_cap_exceeded_seconds"] = time.monotonic() - started
+                            _mark("reasoning_cap_exceeded",
+                                 reasoning_chars=progress["reasoning_chars"],
+                                 reasoning_char_cap=reasoning_char_cap)
+                            raise ValueError(
+                                "reasoning cap exceeded; stream aborted before completion")
                     text = delta.get("content")
                     if isinstance(text, str) and text:
                         content.append(text)
                         progress["content_chars"] += len(text)
                         if progress.get("first_content_seconds") is None:
                             progress["first_content_seconds"] = time.monotonic() - started
+                            _mark("first_content")
                     if first.get("finish_reason") is not None:
                         finish_reason = first["finish_reason"]
 
@@ -156,6 +218,11 @@ def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress
                         data_lines.append(stripped[5:].lstrip())
                     elif not stripped:
                         accept_event()
+                if stop.is_set():
+                    # Cancelled by the caller's wall deadline; that path
+                    # already records "cancelled" and raises TimeoutError in
+                    # the main thread. Do not race it with a second error.
+                    return
                 if not done:
                     raise ValueError("stream ended without [DONE]")
                 if not last_event_had_usage or not isinstance(usage, dict):
@@ -167,8 +234,11 @@ def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress
                                                                      "content": "".join(content)},
                                                   "finish_reason": finish_reason}],
                                      "usage": usage}
+                _mark("terminal_usage", finish_reason=finish_reason, usage=usage)
         except BaseException as exc:
             outcome["error"] = exc
+            if not stop.is_set():
+                _mark("error", error_type=type(exc).__name__)
 
     worker = threading.Thread(target=read, daemon=True)
     worker.start()
@@ -187,6 +257,7 @@ def _buffer_chat_stream(fetch, *, deadline_seconds, max_bytes, started, progress
                 pass
         worker.join(0.1)
         progress["cancelled_seconds"] = time.monotonic() - started
+        _mark("cancelled")
         raise TimeoutError("stream total wall deadline exceeded")
     if "error" in outcome:
         raise outcome["error"]
@@ -223,7 +294,7 @@ class DurableBudget:
                 raise ValueError("ledger limits changed; use a fresh ledger path")
         else:
             self.state = dict(limits=self.limits, attempts=[], spent_usd=0.0,
-                              halted_reason=None)
+                              halted_reason=None, consecutive_failures=0)
             self._save()
 
     def close(self):
@@ -320,11 +391,51 @@ class DurableBudget:
             attempt["charged_usd"] = actual
             attempt["reservation_overrun"] = actual > attempt["reserved_usd"]
             self.state["spent_usd"] += actual - attempt["reserved_usd"]
-            if status != "ok" or attempt["reservation_overrun"]:
-                self.state["halted_reason"] = (
-                    "reservation overrun" if attempt["reservation_overrun"] else status)
+            if attempt["reservation_overrun"]:
+                # Actual cost exceeded what was reserved: halt immediately,
+                # regardless of status; billing trust is broken.
+                self.state["halted_reason"] = "reservation overrun"
+            elif status == "ok":
+                self.state["consecutive_failures"] = 0
+            elif status == _RETRYABLE_FAILURE:
+                # A single wall-timeout cancel or upstream connection error
+                # (already charged at the reservation, never above it) is
+                # not itself fatal: GEPA/AdaEvolve/EvoX can try again. Only
+                # halt after 3 in a row, so one slow provider response does
+                # not kill the whole arm.
+                self.state["consecutive_failures"] = self.state.get("consecutive_failures", 0) + 1
+                if self.state["consecutive_failures"] >= _MAX_CONSECUTIVE_FAILURES:
+                    self.state["halted_reason"] = (
+                        f"{_MAX_CONSECUTIVE_FAILURES} consecutive {status} attempts")
+            else:
+                # missing_usage (billing became untrustworthy after a
+                # response was actually received), missing_credential, and
+                # receipt_error are not retried; halt immediately as before.
+                self.state["halted_reason"] = status
             self._save()
             return attempt.copy()
+
+    def resume(self, *, note, who="orchestrator"):
+        """Clear a halt with an appended, permanent audit entry.
+
+        Never hand-edit the ledger file: this is the only sanctioned way to
+        un-halt it, and it can never touch attempts or spent_usd — a halted
+        ledger's charged history is permanent.
+        """
+        if not note or not isinstance(note, str):
+            raise ValueError("resume requires a non-empty note")
+        with self.lock:
+            if not self.state.get("halted_reason"):
+                raise ValueError("ledger is not halted")
+            entry = {"at_utc": _utc_now(), "who": who, "note": note,
+                     "cleared_halted_reason": self.state["halted_reason"],
+                     "consecutive_failures_before": self.state.get("consecutive_failures", 0),
+                     "spent_usd_at_resume": self.state["spent_usd"]}
+            self.state.setdefault("resume_log", []).append(entry)
+            self.state["halted_reason"] = None
+            self.state["consecutive_failures"] = 0
+            self._save()
+            return entry
 
     def snapshot(self):
         with self.lock:
@@ -335,7 +446,8 @@ class Broker(HTTPServer):
     def __init__(self, address, *, upstream_url, model, api_key_env, ledger,
                  max_prompt_bytes=120_000, max_response_bytes=8_000_000,
                  max_tokens=4000, reasoning_reserve=20_000, timeout=180,
-                 upstream_stream=False):
+                 upstream_stream=False, reasoning_effort=None,
+                 reasoning_cap_tokens=None):
         _validate_https_url(upstream_url)
         if not model or not api_key_env.isidentifier():
             raise ValueError("invalid model or credential variable")
@@ -344,12 +456,27 @@ class Broker(HTTPServer):
             raise ValueError("invalid positive limit")
         if type(reasoning_reserve) is not int or reasoning_reserve < 0:
             raise ValueError("invalid reasoning reserve")
+        if reasoning_effort is not None and reasoning_effort not in _REASONING_EFFORTS:
+            raise ValueError("invalid reasoning_effort")
+        if reasoning_cap_tokens is not None and (
+                type(reasoning_cap_tokens) is not int or reasoning_cap_tokens < 1):
+            raise ValueError("invalid reasoning_cap_tokens")
         if address[0] not in ("127.0.0.1", "localhost", "::1"):
             raise ValueError("broker may bind only to loopback")
         self.upstream_url = upstream_url.rstrip("/")
         self.model = model
         self.api_key_env = api_key_env
         self.ledger = ledger
+        # `reasoning_effort` is the only documented xAI knob and is enforced
+        # (forced into every forwarded request, overriding any client
+        # value); it is a hint, not a guaranteed numeric cap. When
+        # `reasoning_cap_tokens` is set, the broker also aborts an
+        # upstream-stream request in real time once cumulative reasoning
+        # characters cross a conservative token-to-char estimate of that cap
+        # (see transport-notes.md), which bounds actual charge at the
+        # reservation regardless of what the provider ultimately reasons.
+        self.reasoning_effort = reasoning_effort
+        self.reasoning_cap_tokens = reasoning_cap_tokens
         self.max_prompt_bytes = max_prompt_bytes
         self.max_response_bytes = max_response_bytes
         self.max_tokens = max_tokens
@@ -430,6 +557,12 @@ class BrokerHandler(BaseHTTPRequestHandler):
                 raise ValueError("request model does not match broker model")
             streaming = self.server.upstream_stream
             wire_payload = dict(payload)
+            if self.server.reasoning_effort is not None:
+                # ENFORCED: overrides whatever reasoning_effort (if any) the
+                # client requested. This is the only documented enforceable
+                # xAI knob; it is a hint the provider may not obey exactly,
+                # never a guaranteed numeric cap (see transport-notes.md).
+                wire_payload["reasoning_effort"] = self.server.reasoning_effort
             if self.server.upstream_stream:
                 # GEPA still sends and receives ordinary JSON. Only the
                 # broker/provider leg streams, exposing timing and partial
@@ -438,7 +571,8 @@ class BrokerHandler(BaseHTTPRequestHandler):
                     wire_payload["max_completion_tokens"] = wire_payload.pop("max_tokens")
                 wire_payload["stream"] = True
                 wire_payload["stream_options"] = {"include_usage": True}
-            wire_body = json.dumps(wire_payload).encode() if self.server.upstream_stream else body
+            changed = wire_payload != payload
+            wire_body = json.dumps(wire_payload).encode() if changed else body
             if len(wire_body) > self.server.max_prompt_bytes:
                 raise ValueError("forwarded request byte cap exceeded")
             attempt_id = self.server.ledger.reserve(
@@ -488,14 +622,20 @@ class BrokerHandler(BaseHTTPRequestHandler):
             if streaming:
                 stream_progress = {"headers_seconds": None, "first_event_seconds": None,
                                    "first_reasoning_seconds": None, "first_content_seconds": None,
-                                   "done_seconds": None, "response_bytes": 0,
+                                   "done_seconds": None, "cancelled_seconds": None,
+                                   "reasoning_cap_exceeded_seconds": None, "response_bytes": 0,
                                    "event_count": 0, "reasoning_chars": 0,
                                    "content_chars": 0, "events": []}
+                reasoning_char_cap = (
+                    self.server.reasoning_cap_tokens * _CONSERVATIVE_CHARS_PER_REASONING_TOKEN
+                    if self.server.reasoning_cap_tokens is not None else None)
+                jsonl_path = self.server.ledger.receipts_dir / f"attempt-{attempt_id:04d}.jsonl"
                 result = _buffer_chat_stream(
                     lambda: opener.open(request, timeout=self.server.timeout),
                     deadline_seconds=self.server.timeout,
                     max_bytes=self.server.max_response_bytes,
-                    started=request_started, progress=stream_progress)
+                    started=request_started, progress=stream_progress,
+                    reasoning_char_cap=reasoning_char_cap, jsonl_path=jsonl_path)
                 raw = json.dumps(result).encode()
             else:
                 with opener.open(request, timeout=self.server.timeout) as response:
@@ -562,30 +702,110 @@ class BrokerHandler(BaseHTTPRequestHandler):
                 receipt["stream_progress"] = _sanitize(_stream_snapshot(stream_progress), key)
             self.server.ledger.write_receipt(attempt_id, receipt)
             self.server.ledger.settle(attempt_id, status="upstream_error")
-            self.server.shutdown_requested = True
+            # A single upstream failure (timeout cancel, connection error) is
+            # charged at the reservation and retried; the ledger only halts
+            # after _MAX_CONSECUTIVE_FAILURES in a row, or immediately for a
+            # reservation overrun. Only stop serving once actually halted.
+            if self.server.ledger.snapshot().get("halted_reason"):
+                self.server.shutdown_requested = True
             code = exc.code if isinstance(exc, urllib.error.HTTPError) else 502
             self._json(code, {"error": {"message": "upstream request failed", "type": "upstream_error"}})
 
 
+def _dry_run_payload(config):
+    """Build the exact would-be forwarded chat payload without sending it."""
+    payload = {"model": config["model"],
+               "messages": [{"role": "system",
+                             "content": "<research_context placeholder; not sent by dry-run>"},
+                            {"role": "user",
+                             "content": "<gepa_reflection prompt placeholder; not sent by dry-run>"}],
+               "max_completion_tokens": config["max_tokens"]}
+    if config.get("reasoning_effort") is not None:
+        payload["reasoning_effort"] = config["reasoning_effort"]
+    if config.get("upstream_stream", True):
+        payload["stream"] = True
+        payload["stream_options"] = {"include_usage": True}
+    return payload
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("serve", choices=["serve"])
-    parser.add_argument("--upstream-url", required=True)
-    parser.add_argument("--model", required=True)
+    parser.add_argument("serve", choices=["serve"], nargs="?")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="print the exact payload a run would send, without sending it")
+    parser.add_argument("--run", help="run name; with --dry-run, reads "
+                        "autoresearch/<run>/broker-config.json")
+    parser.add_argument("--upstream-url")
+    parser.add_argument("--model")
     parser.add_argument("--api-key-env", default="XAI_API_KEY")
-    parser.add_argument("--ledger", required=True)
-    parser.add_argument("--max-requests", type=int, required=True)
-    parser.add_argument("--max-usd", type=float, required=True)
-    parser.add_argument("--input-usd-per-million", type=float, required=True)
-    parser.add_argument("--output-usd-per-million", type=float, required=True)
+    parser.add_argument("--ledger")
+    parser.add_argument("--max-requests", type=int)
+    parser.add_argument("--max-usd", type=float)
+    parser.add_argument("--input-usd-per-million", type=float)
+    parser.add_argument("--output-usd-per-million", type=float)
     parser.add_argument("--port", type=int, default=8877)
     parser.add_argument("--max-tokens", type=int, default=4000)
     parser.add_argument("--reasoning-reserve", type=int, default=20_000)
+    parser.add_argument("--reasoning-effort", choices=sorted(_REASONING_EFFORTS),
+                        help="ENFORCED: overrides any client-requested value "
+                        "(see transport-notes.md; not a guaranteed numeric cap)")
+    parser.add_argument("--reasoning-cap-tokens", type=int,
+                        help="abort an upstream-stream request once cumulative "
+                        "reasoning characters cross a conservative estimate of "
+                        "this many tokens; bounds actual charge at the reservation")
     parser.add_argument("--timeout", type=int, default=180,
                         help="upstream request timeout in seconds")
     parser.add_argument("--upstream-stream", action="store_true",
                         help="buffer upstream SSE into JSON for ordinary clients")
+    parser.add_argument("--resume", action="store_true",
+                        help="clear a halted ledger's halted_reason with a "
+                        "permanent audit entry; requires --ledger and --note. "
+                        "Never hand-edit the ledger file to do this.")
+    parser.add_argument("--note", help="--resume: required audit note explaining why")
+    parser.add_argument("--who", default="orchestrator",
+                        help="--resume: audit entry attribution (default: orchestrator)")
     args = parser.parse_args()
+
+    if args.resume:
+        if not args.ledger:
+            raise SystemExit("--resume requires --ledger <path>")
+        if not args.note:
+            raise SystemExit("--resume requires --note \"<why>\"")
+        ledger_path = Path(args.ledger)
+        existing = json.loads(ledger_path.read_text())
+        limits = existing["limits"]
+        ledger = DurableBudget(ledger_path, max_requests=limits["max_requests"],
+                               max_usd=limits["max_usd"], input_rate=limits["input_rate"],
+                               output_rate=limits["output_rate"])
+        try:
+            entry = ledger.resume(note=args.note, who=args.who)
+        finally:
+            ledger.close()
+        print(json.dumps({"resumed": True, "ledger": args.ledger, "entry": entry}, indent=2))
+        return
+
+    if args.dry_run:
+        if not args.run:
+            raise SystemExit("--dry-run requires --run <name>")
+        config_path = Path("autoresearch") / args.run / "broker-config.json"
+        config = json.loads(config_path.read_text())
+        print(json.dumps({
+            "run": args.run,
+            "upstream_endpoint": config["upstream_url"].rstrip("/") + "/chat/completions",
+            "would_send_payload": _dry_run_payload(config),
+            "reservation_usd_per_request_conservative": config["reservation_usd_per_request_conservative"],
+            "max_requests": config["max_requests"], "max_usd": config["max_usd"],
+        }, indent=2))
+        return
+
+    missing = [flag for flag, value in (
+        ("--upstream-url", args.upstream_url), ("--model", args.model),
+        ("--ledger", args.ledger), ("--max-requests", args.max_requests),
+        ("--max-usd", args.max_usd), ("--input-usd-per-million", args.input_usd_per_million),
+        ("--output-usd-per-million", args.output_usd_per_million)) if value is None]
+    if args.serve != "serve" or missing:
+        raise SystemExit("serve mode requires: serve " + " ".join(missing))
+
     ledger = DurableBudget(args.ledger, max_requests=args.max_requests,
                            max_usd=args.max_usd,
                            input_rate=args.input_usd_per_million,
@@ -593,7 +813,9 @@ def main():
     broker = Broker(("127.0.0.1", args.port), upstream_url=args.upstream_url,
                     model=args.model, api_key_env=args.api_key_env, ledger=ledger,
                     max_tokens=args.max_tokens, reasoning_reserve=args.reasoning_reserve,
-                    timeout=args.timeout, upstream_stream=args.upstream_stream)
+                    timeout=args.timeout, upstream_stream=args.upstream_stream,
+                    reasoning_effort=args.reasoning_effort,
+                    reasoning_cap_tokens=args.reasoning_cap_tokens)
     print(json.dumps({"base_url": "http://127.0.0.1:%d/v1" % broker.server_port,
                       "model": args.model, "ledger": args.ledger}), flush=True)
     try:

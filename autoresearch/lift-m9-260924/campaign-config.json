@@ -1,0 +1,35 @@
+{
+  "note": "Per-arm search limits for the live lift campaign. Money, request, token, reasoning and timeout caps live only in broker-config.json and are read at run time (model client timeout = broker timeout + 30 s). The development set path and SHA-256 are read at run time from frozen_manifest (files['development.json'], next to the manifest); holdout is never loaded. Both configs, the prompts, the seed, the frozen hashes and first-prompt.sha256 are covered by the approval hash (python -m integrations.lift_backends approval-hash).",
+  "seed": "integrations/lift_control_naive.py",
+  "frozen_manifest": "autoresearch/lift-m9-260924/frozen/manifest.json",
+  "python": ".venv-official/bin/python",
+  "archive": "autoresearch/lift-m9-260924/development-archive.sqlite",
+  "eval_cache": "autoresearch/lift-m9-260924/eval-cache",
+  "broker_port": 8877,
+  "eval_timeout": 400,
+  "evox_switch_interval": 2,
+  "evaluation": "staged: GEPA minibatch = 3 parents (~66 instances); screen = 14 stratified parents (306 instances, ~5 s) for selection; full development (4588 instances, ~60 s) only when screen-valid and >= best screen score, and for every finalist",
+  "engines": {
+    "gepa": {
+      "iterations": 60,
+      "max_evals": 1500,
+      "wall_seconds": 21600
+    },
+    "sequential": {
+      "iterations": 60,
+      "max_evals": 180,
+      "wall_seconds": 21600
+    },
+    "adaevolve": {
+      "iterations": 50,
+      "max_evals": 150,
+      "wall_seconds": 21600
+    },
+    "evox": {
+      "iterations": 40,
+      "max_evals": 150,
+      "wall_seconds": 21600
+    }
+  },
+  "order_note": "User decision 2026-09-24: GEPA and sequential control first, matched at 60 iterations; AdaEvolve and EvoX start only after GEPA shows one productive cycle. Total 210 contacts of the 332 ceiling; remainder reserved for finalist audit and reruns."
+}

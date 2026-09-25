@@ -1,0 +1,25 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.01157805,
+      "id": 1,
+      "input_tokens": 5329,
+      "kind": "chat",
+      "output_tokens": 1741,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/probe/broker-ledger-probe-gemini-3.8-flash.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.11162745,
+      "role": "gepa_reflection",
+      "status": "ok"
+    }
+  ],
+  "consecutive_failures": 0,
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 0.825,
+    "max_requests": 2,
+    "max_usd": 2.0,
+    "output_rate": 4.125
+  },
+  "spent_usd": 0.011578049999999993
+}

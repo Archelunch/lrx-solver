@@ -1,0 +1,34 @@
+{
+  "note": "Per-arm search limits for the corr-cert campaign. Money, request, token, reasoning and timeout caps live only in broker-config.json and are read at run time (model client timeout = broker timeout + 30 s). The development m-set path and SHA-256 are read at run time from frozen_manifest (files['development.json'], next to the manifest); holdout is never loaded. Both configs, the prompts, the seed, the frozen hashes and first-prompt.sha256 are covered by the approval hash (python -m integrations.corr_backends approval-hash). Unlike the lift campaign, evaluating a candidate here is a single cheap pass over m=4..12 (well under a second, see TASK.md), so there is no staged screen/full split and no development-archive database (omitted; see TASK.md 'Evaluation cost note').",
+  "seed": "integrations/corr_control_f1.py",
+  "frozen_manifest": "autoresearch/corr-cert-260924/frozen/manifest.json",
+  "python": ".venv-official/bin/python",
+  "eval_cache": "autoresearch/corr-cert-260924/eval-cache",
+  "broker_port": 8895,
+  "eval_timeout": 60,
+  "evox_switch_interval": 2,
+  "evaluation": "single pass: every candidate is scored once on the full frozen development set (m=4..12, 9 evaluations of coefficients(m) each), no screening stage",
+  "engines": {
+    "gepa": {
+      "iterations": 60,
+      "max_evals": 200,
+      "wall_seconds": 21600
+    },
+    "sequential": {
+      "iterations": 60,
+      "max_evals": 200,
+      "wall_seconds": 21600
+    },
+    "adaevolve": {
+      "iterations": 50,
+      "max_evals": 150,
+      "wall_seconds": 21600
+    },
+    "evox": {
+      "iterations": 40,
+      "max_evals": 150,
+      "wall_seconds": 21600
+    }
+  },
+  "order_note": "Mirrors the lift-m9-260924 campaign order: GEPA and sequential control first, matched iteration counts; AdaEvolve and EvoX start only after GEPA shows one productive cycle (valid proposal, selection, second proposal responding to feedback), per PROTOCOL.md's kill conditions and budget ceiling ($25, one day timebox)."
+}

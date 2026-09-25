@@ -1,0 +1,35 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.21803319999999998,
+      "id": 1,
+      "input_tokens": null,
+      "kind": "chat",
+      "output_tokens": null,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/broker-ledger.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.21803319999999998,
+      "role": "gepa_reflection",
+      "status": "upstream_error"
+    }
+  ],
+  "consecutive_failures": 0,
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 2.2,
+    "max_requests": 332,
+    "max_usd": 150.0,
+    "output_rate": 6.6
+  },
+  "resume_log": [
+    {
+      "at_utc": "2026-09-24T17:22:48.051425+00:00",
+      "cleared_halted_reason": "upstream_error",
+      "consecutive_failures_before": 0,
+      "note": "wall-timeout cancel reclassified as failed attempt per user-approved probe; attempt 1 remains charged",
+      "spent_usd_at_resume": 0.21803319999999998,
+      "who": "orchestrator"
+    }
+  ],
+  "spent_usd": 0.21803319999999998
+}

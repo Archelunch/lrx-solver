@@ -1,0 +1,1 @@
+{"model": "gemini-3.8-flash", "status": 200, "seconds": 6.488, "usage": {"completion_tokens": 1741, "prompt_tokens": 5329, "total_tokens": 7070}, "finish_reason": "stop", "code_blocks": 1, "eval_returncode": 0, "eval": {"certificates": 317, "valid": 4588, "timeouts": 0, "seconds": 79.17817104101414}}

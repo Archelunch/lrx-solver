@@ -1,0 +1,14 @@
+{
+ "family": "F6",
+ "deg": 2,
+ "train": [
+  4,
+  10
+ ],
+ "n_params": 946,
+ "status": 0,
+ "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+ "t_star": 52.51353874453891,
+ "lp_seconds": 79.3,
+ "total_seconds": 79.3
+}

@@ -1,0 +1,126 @@
+18:22:20 [controller] AdaEvolve: Running 50 iterations across 2 islands
+18:23:16 [controller] Iteration 1: Program 909a7fb1 (parent: d8ceb807) completed in 56.15s (llm: 5.88s, eval: 50.27s)
+18:23:16 [controller] New best solution found at iteration 1
+18:23:16 [runner] Checkpoint 1: best=combined_score=64.6216, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=952.6783, full_certificates=328.0000
+18:23:39 [controller] Iteration 2: Program da7675d0 (parent: 909a7fb1) completed in 22.89s (llm: 20.20s, eval: 2.69s)
+18:23:39 [runner] Checkpoint 2: best=combined_score=64.6216, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=952.6783, full_certificates=328.0000
+18:23:45 [controller] Iteration 3: Program b61e6766 (parent: 0c3ea60c) completed in 5.68s (llm: 5.33s, eval: 0.35s)
+18:23:45 [runner] Checkpoint 3: best=combined_score=64.6216, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=952.6783, full_certificates=328.0000
+18:24:06 [controller] Iteration 4: Program 39f3b5bd (parent: b61e6766) completed in 21.46s (llm: 18.85s, eval: 2.61s)
+18:24:06 [runner] Checkpoint 4: best=combined_score=64.6216, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=952.6783, full_certificates=328.0000
+18:25:03 [controller] Iteration 5: Program e83458b8 (parent: 39f3b5bd) completed in 57.35s (llm: 7.74s, eval: 49.61s)
+18:25:03 [runner] Checkpoint 5: best=combined_score=64.6216, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=952.6783, full_certificates=328.0000
+18:25:27 [controller] Iteration 6: Program c8205391 (parent: 909a7fb1) completed in 23.35s (llm: 18.65s, eval: 4.70s)
+18:25:27 [runner] Checkpoint 6: best=combined_score=64.6216, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=952.6783, full_certificates=328.0000
+18:26:41 [controller] Iteration 7: Program 4c5d8ed6 (parent: da7675d0) completed in 74.48s (llm: 6.91s, eval: 67.57s)
+18:26:41 [runner] Checkpoint 7: best=combined_score=64.6216, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=952.6783, full_certificates=328.0000
+18:28:26 [controller] Iteration 8: Program faff5995 (parent: b61e6766) completed in 105.24s (llm: 16.45s, eval: 88.79s)
+18:28:26 [controller] New best solution found at iteration 8
+18:28:26 [runner] Checkpoint 8: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:30:16 [controller] Iteration 9: Program 0cf35e2c (parent: da7675d0) completed in 94.70s (llm: 6.70s, eval: 88.00s)
+18:30:16 [runner] Checkpoint 9: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:30:40 [controller] Iteration 10: Program b3bf56c7 (parent: faff5995) completed in 23.81s (llm: 20.09s, eval: 3.72s)
+18:30:40 [runner] Checkpoint 10: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:31:02 [controller] Iteration 11: Program 62ca7218 (parent: 0cf35e2c) completed in 21.77s (llm: 18.14s, eval: 3.63s)
+18:31:02 [runner] Checkpoint 11: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:31:28 [controller] Iteration 12: Program 4c1824d9 (parent: faff5995) completed in 21.05s (llm: 17.31s, eval: 3.73s)
+18:31:28 [runner] Checkpoint 12: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:31:45 [controller] Iteration 13: Program bf4c468b (parent: faff5995) completed in 16.61s (llm: 11.76s, eval: 4.85s)
+18:31:45 [runner] Checkpoint 13: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:32:07 [controller] Iteration 14: Program 812ada65 (parent: faff5995) completed in 22.00s (llm: 18.63s, eval: 3.38s)
+18:32:07 [runner] Checkpoint 14: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:32:26 [controller] Iteration 15: Program ce324e8b (parent: faff5995) completed in 18.90s (llm: 15.36s, eval: 3.54s)
+18:32:26 [runner] Checkpoint 15: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:32:47 [controller] Iteration 16: Program 5a62d38f (parent: faff5995) completed in 21.20s (llm: 17.64s, eval: 3.56s)
+18:32:47 [runner] Checkpoint 16: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:33:06 [controller] Iteration 17: Program 6abbce63 (parent: faff5995) completed in 18.88s (llm: 14.17s, eval: 4.72s)
+18:33:06 [runner] Checkpoint 17: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:33:35 [controller] Iteration 18: Program bf00ca92 (parent: faff5995) completed in 22.65s (llm: 19.07s, eval: 3.58s)
+18:33:35 [runner] Checkpoint 18: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:33:54 [controller] Iteration 19: Program 804adcc1 (parent: faff5995) completed in 19.40s (llm: 16.13s, eval: 3.26s)
+18:33:54 [runner] Checkpoint 19: best=combined_score=64.6232, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=935.8443, full_certificates=336.0000
+18:35:30 [controller] Iteration 20: Program 30255914 (parent: faff5995) completed in 95.96s (llm: 5.76s, eval: 90.20s)
+18:35:30 [controller] New best solution found at iteration 20
+18:35:30 [runner] Checkpoint 20: best=combined_score=64.6233, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.5818, full_certificates=337.0000
+18:35:56 [controller] Iteration 21: Program 2dce9581 (parent: 30255914) completed in 14.84s (llm: 9.63s, eval: 5.21s)
+18:35:56 [runner] Checkpoint 21: best=combined_score=64.6233, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.5818, full_certificates=337.0000
+18:36:14 [controller] Iteration 22: Program 4f77c028 (parent: 30255914) completed in 17.78s (llm: 11.68s, eval: 6.10s)
+18:36:14 [runner] Checkpoint 22: best=combined_score=64.6233, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.5818, full_certificates=337.0000
+18:36:44 [controller] Iteration 23: Program 8fbf5404 (parent: 30255914) completed in 24.42s (llm: 18.64s, eval: 5.77s)
+18:36:44 [runner] Checkpoint 23: best=combined_score=64.6233, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.5818, full_certificates=337.0000
+18:37:02 [controller] Iteration 24: Program 393375d8 (parent: 30255914) completed in 17.94s (llm: 11.98s, eval: 5.96s)
+18:37:02 [runner] Checkpoint 24: best=combined_score=64.6233, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.5818, full_certificates=337.0000
+18:37:11 [controller] Iteration 25: Program fb97a9e2 (parent: 30255914) completed in 8.65s (llm: 3.68s, eval: 4.97s)
+18:37:11 [runner] Checkpoint 25: best=combined_score=64.6233, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.5818, full_certificates=337.0000
+18:37:29 [controller] Iteration 26: Program 66c4a1b8 (parent: 30255914) completed in 18.45s (llm: 14.79s, eval: 3.66s)
+18:37:29 [runner] Checkpoint 26: best=combined_score=64.6233, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.5818, full_certificates=337.0000
+18:39:03 [controller] Iteration 27: Program 4e9c8dfa (parent: 30255914) completed in 93.50s (llm: 8.02s, eval: 85.48s)
+18:39:03 [controller] New best solution found at iteration 27
+18:39:03 [runner] Checkpoint 27: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:39:28 [controller] Iteration 28: Program b907ac8e (parent: 0cf35e2c) completed in 10.44s (llm: 6.57s, eval: 3.87s)
+18:39:28 [runner] Checkpoint 28: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:39:51 [controller] Iteration 29: Program 4241714c (parent: faff5995) completed in 22.22s (llm: 18.57s, eval: 3.65s)
+18:39:51 [runner] Checkpoint 29: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:41:26 [controller] Iteration 30: Program 37c41d86 (parent: 909a7fb1) completed in 94.85s (llm: 9.06s, eval: 85.78s)
+18:41:26 [runner] Checkpoint 30: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:41:55 [controller] Iteration 31: Program 06b4d60e (parent: 4e9c8dfa) completed in 21.92s (llm: 15.31s, eval: 6.61s)
+18:41:55 [runner] Checkpoint 31: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:42:14 [controller] Iteration 32: Program 7cccfcbd (parent: 4e9c8dfa) completed in 18.47s (llm: 11.81s, eval: 6.65s)
+18:42:14 [runner] Checkpoint 32: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:42:33 [controller] Iteration 33: Program 8555b783 (parent: 4e9c8dfa) completed in 19.13s (llm: 13.36s, eval: 5.77s)
+18:42:33 [runner] Checkpoint 33: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:42:49 [controller] Iteration 34: Program f01c7be5 (parent: 4e9c8dfa) completed in 15.90s (llm: 15.45s, eval: 0.45s)
+18:42:49 [runner] Checkpoint 34: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:43:00 [controller] Iteration 35: Program e49b3f25 (parent: 4e9c8dfa) completed in 10.69s (llm: 6.80s, eval: 3.89s)
+18:43:00 [runner] Checkpoint 35: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:43:13 [controller] Iteration 36: Program 683b9ff4 (parent: 4e9c8dfa) completed in 13.20s (llm: 7.21s, eval: 5.99s)
+18:43:13 [runner] Checkpoint 36: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:43:38 [controller] Iteration 37: Program 1d402c09 (parent: 4e9c8dfa) completed in 20.03s (llm: 13.80s, eval: 6.23s)
+18:43:38 [runner] Checkpoint 37: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:43:54 [controller] Iteration 38: Program d2242ec6 (parent: 4e9c8dfa) completed in 16.28s (llm: 12.46s, eval: 3.82s)
+18:43:54 [runner] Checkpoint 38: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:44:05 [controller] Iteration 39: Program d3823aaf (parent: 4e9c8dfa) completed in 10.46s (llm: 10.05s, eval: 0.41s)
+18:44:05 [runner] Checkpoint 39: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:44:16 [controller] Iteration 40: Program 036cbc16 (parent: 4e9c8dfa) completed in 10.78s (llm: 10.39s, eval: 0.39s)
+18:44:16 [runner] Checkpoint 40: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:44:32 [controller] Iteration 41: Program 966ac1eb (parent: 4e9c8dfa) completed in 15.39s (llm: 11.85s, eval: 3.53s)
+18:44:32 [runner] Checkpoint 41: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:44:53 [controller] Iteration 42: Program dbd8af73 (parent: 4e9c8dfa) completed in 21.10s (llm: 17.50s, eval: 3.61s)
+18:44:53 [runner] Checkpoint 42: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:45:06 [controller] Iteration 43: Program a3c987b6 (parent: 4e9c8dfa) completed in 7.33s (llm: 6.91s, eval: 0.42s)
+18:45:06 [runner] Checkpoint 43: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:45:19 [controller] Iteration 44: Program 137d372f (parent: 4e9c8dfa) completed in 12.00s (llm: 11.61s, eval: 0.39s)
+18:45:19 [runner] Checkpoint 44: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:45:41 [controller] Iteration 45: Program ed16f614 (parent: 4e9c8dfa) completed in 21.66s (llm: 18.11s, eval: 3.55s)
+18:45:41 [runner] Checkpoint 45: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:45:54 [controller] Iteration 46: Program 03a0b7ef (parent: 4e9c8dfa) completed in 13.10s (llm: 6.99s, eval: 6.11s)
+18:45:54 [runner] Checkpoint 46: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:46:11 [controller] Iteration 47: Program 4926ef44 (parent: 4e9c8dfa) completed in 17.01s (llm: 10.85s, eval: 6.17s)
+18:46:11 [runner] Checkpoint 47: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:46:32 [controller] Iteration 48: Program f844ab69 (parent: 4e9c8dfa) completed in 21.06s (llm: 17.46s, eval: 3.60s)
+18:46:32 [runner] Checkpoint 48: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:46:59 [controller] Iteration 49: Program ecbdf00d (parent: 4e9c8dfa) completed in 20.35s (llm: 16.85s, eval: 3.50s)
+18:46:59 [runner] Checkpoint 49: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:47:14 [controller] Iteration 50: Program de64d50f (parent: 4e9c8dfa) completed in 15.10s (llm: 11.45s, eval: 3.65s)
+18:47:14 [runner] Checkpoint 50: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:47:14 [controller] AdaEvolve completed
+18:47:14 [runner] Checkpoint 50: best=combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:47:15 [runner] Test evaluation for best program: combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000
+18:47:15 [runner] Discovery completed. Best: combined_score=64.6234, screen_certificates=64.0000, screen_valid=306.0000, screen_gap_sum=934.1384, full_certificates=337.0000, test_combined_score=64.6234, test_screen_certificates=64.0000, test_screen_valid=306.0000, test_screen_gap_sum=934.1384, test_full_certificates=337.0000
+Using search algorithm: adaevolve
+
+Discovery complete!
+Best program metrics:
+  combined_score: 64.6234
+  screen_certificates: 64.0000
+  screen_valid: 306.0000
+  screen_gap_sum: 934.1384
+  full_certificates: 337.0000
+  test_combined_score: 64.6234
+  test_screen_certificates: 64.0000
+  test_screen_valid: 306.0000
+  test_screen_gap_sum: 934.1384
+  test_full_certificates: 337.0000
+
+Latest checkpoint: /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-adaevolve-260924-202218/output/sky/checkpoints/checkpoint_50
+To resume: --checkpoint /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-adaevolve-260924-202218/output/sky/checkpoints/checkpoint_50

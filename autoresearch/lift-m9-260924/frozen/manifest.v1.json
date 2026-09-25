@@ -1,0 +1,55 @@
+{
+ "counts_per_k": {
+  "4": {
+   "direct_mixture": 25,
+   "projection_from_5": 2,
+   "projection_from_6": 4,
+   "projection_from_7": 2,
+   "projection_from_9": 17
+  },
+  "5": {
+   "direct_mixture": 25,
+   "projection_from_6": 4,
+   "projection_from_7": 4,
+   "projection_from_9": 17
+  },
+  "6": {
+   "direct_mixture": 25,
+   "projection_from_7": 6,
+   "projection_from_8": 1,
+   "projection_from_9": 18
+  },
+  "7": {
+   "direct_mixture": 25,
+   "projection_from_9": 25
+  },
+  "8": {
+   "direct_mixture": 25,
+   "projection_from_9": 25
+  },
+  "9": {
+   "direct_mixture": 50
+  }
+ },
+ "development_instances": 4398,
+ "development_parents": 200,
+ "files": {
+  "development.json": "9b370705e593f646fb7fbb04c04063f65ba26946cd714e4f41779d67a3eafdee",
+  "holdout.json": "f90136f7a754b9a25b4f6f1f165b9f9e54bfef6a46a2c046f85ea80f91afeca5",
+  "parents_raw.json": "74b170b2ff9a3251bfa71e854d39493ecacc7f222a17c6ac110e9b0f1692bcd6"
+ },
+ "holdout_instances": 2202,
+ "holdout_parents": 100,
+ "m_child": 9,
+ "m_parent": 8,
+ "routes_excluded": [
+  "direct_tree",
+  "reverse_tree_transfer"
+ ],
+ "routes_excluded_reason": "integrations/lift_task.check_instance and integrations/lift_evaluator.py read parent.certificate.rows as a flat list unconditionally; tree/leaf certificates cannot be flattened into one mixture without losing their per-box conditional weights, so they are not evaluator-usable yet.",
+ "routes_included": [
+  "direct_mixture",
+  "projection_from_N"
+ ],
+ "seed": 20260924
+}

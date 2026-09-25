@@ -2,6 +2,54 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Latest iteration: correlation certificate, reproduction and campaign (2026-09-25)
+
+Target: a universal coefficient formula for the group's Theorem 3 certificate
+proving C <= 4K + 2H (their numeric certificates stop at m = 16). Done offline:
+independent reproduction for m = 4..16, exact epsilon = 0 certificates for
+m = 4..9, LP optimum exactly 0 at every m tested, and two negative structural
+results (no degree <= 3 polynomial-plus-threshold formula beyond m = 8; no
+label-local support, the gap width grows with m). Live campaign of all four
+arms on `coefficients(m)`: 2/9 development (the worked examples only), 0/8
+holdout, $3.58, kill rule met; independent audit 0 disagreements. Conjecture
+recorded: the triple LP relaxation is exact for every m. See
+`autoresearch/corr-cert-260924/REPORT-CAMPAIGN.md`, `REPORT.md`, `STRUCTURE.md`.
+Remaining approved caps: lift $145.59, corr $21.42. Nothing committed or pushed.
+
+## Latest iteration: live lift campaign, m=8 -> m=9 (2026-09-24)
+
+Plumbing built and used: m-parametric exact evaluator (`integrations/lrx_m.py`,
+`lift_task.py`, `lift_evaluator.py`), Gemini/xAI budget broker with local
+reasoning abort and durable receipts (`integrations/research_budget.py`),
+frozen lift sets, native GEPA/AdaEvolve/EvoX adapters (`integrations/lift_backends.py`),
+finalize with one-shot holdout and independent audit (`integrations/lift_finalize.py`,
+`lift_audit.py`). All four arms ran live on gemini-3.8-flash: development
+336/337/337/334 vs naive 285, holdout 190 for every arm vs naive 158, 84 new
+audited m=9 family certificates, 0 audit disagreements, $4.41 spent of $150.
+No engine ranking; no lemma. See `autoresearch/lift-m9-260924/REPORT.md` and
+`finalists/REPORT.md`. Next: reward new word constructions rather than
+re-ranking, raise the output limit to 8k or use diff proposals for GEPA, fix
+the stale best-so-far packet line, then a second campaign with repeated seeds.
+Remaining cap: $145.59 of the approved $150 (ledgers under `autoresearch/lift-m9-260924/`).
+Nothing committed or pushed.
+
+## Latest iteration: independent replication of the external full m=8 package (2026-09-24)
+
+The research group's package `lrx_m8_complete_verification` claims
+E_(n-8)(n) <= 6n-18 for all n >= 9 with zero uncovered families. Both its own
+replay (30 stages PASS, 1010 s) and an independent stdlib checker written from
+the theorem text (every k=4..9 file in full, k>=4 union rebuilt with 0
+uncovered, all low-block exception mixtures and trees) pass here. The k<=3
+single-word search is replicated in full for k=1 and by seeded samples for
+k=2,3 with 0 mismatches; full k=2,3 enumeration is not. The
+previously open development family `k5-mask302-order15713` is certified in the
+package by projection (base 121/2 < 61) and reproduced by our evaluator. The
+m=8 search target is therefore closed by attribution; the optimizer target
+moves to a frozen m=9 development set. Cap approved for that pilot: $8 / 20
+contacts; no call was made and transport is still unfixed. See
+`autoresearch/verify-m8-260924/REPORT.md`, `checker-report.md`, and
+`research/claims.md` (Session 10). No commit or push was made.
+
 ## Next session pointer (2026-09-24)
 
 The [short restart handoff](.handoffs/codex-s04-budgeted-evox-20260924T1331Z.md) and [proof-oriented optimizer plan](autoresearch/next-optimizer-session.md) specify a bounded native GEPA/AdaEvolve/EvoX pilot, matched controls, exact certificate gates, holdout exclusions, and budget reconciliation. No new experiment or paid call was run while preparing them. Preserve the existing evidence below.

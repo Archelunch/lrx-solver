@@ -1,0 +1,12 @@
+eval-cache/
+live-*/verified/evaluations/
+live-*/output/
+smoke-*/output/
+smoke-*/verified/
+smoke-*/stage/
+*.npz
+finalists/raw/
+*.receipts/
+lp-raw/
+mock-requests*.jsonl
+*.log

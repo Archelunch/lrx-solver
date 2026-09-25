@@ -1,0 +1,188 @@
+{
+  "engine": "evox",
+  "task": "corr-cert-260924",
+  "upstream": "skydiscover==0.2.0@0d932b690670a7e544388ad362e9876c8bd256a0",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/frozen/manifest.json",
+  "frozen_manifest_sha256": "6f62647e4ff812bb603ed4fe46383be71799bb4611986035d94f314ad7ae48f1",
+  "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
+  "seed_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "seed_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06
+  },
+  "broker_url": "http://127.0.0.1:8931/v1",
+  "model": "grok-4.7",
+  "iterations": 3,
+  "max_tokens": 4096,
+  "reasoning_effort": null,
+  "max_evals": 40,
+  "wall_seconds": 200,
+  "verifier_url": "http://127.0.0.1:54796/evaluate",
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/stage/sky-config.yaml",
+    "--search",
+    "evox",
+    "--iterations",
+    "3",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/stage/sky-config.yaml",
+    "--search",
+    "evox",
+    "--iterations",
+    "3",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-evox",
+  "returncode": 0,
+  "engine_seconds": 1.3742739580047783,
+  "mechanism_evidence": {
+    "configured_solution_iterations": 3,
+    "generated_strategy_artifacts": [],
+    "fallback_strategy_records": [],
+    "strategy_adoption_log_observed": false,
+    "strategy_adopted_confirmed": false,
+    "solution_diff_parse_failures": 0
+  },
+  "status": "COMPLETE",
+  "candidate_evaluations": {
+    "requests": 7,
+    "failures": 0,
+    "best": {
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "violation_sum": "233998",
+      "source_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc"
+    },
+    "m_values": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "evaluation_trace": [
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 1,
+      "packet_sha256": "ab8177bf53aadd7fbb592a46e6a80553eeedaf7447cf91adef6bd5bf70da20a5",
+      "final": true
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 2,
+      "packet_sha256": "ab8177bf53aadd7fbb592a46e6a80553eeedaf7447cf91adef6bd5bf70da20a5",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 3,
+      "packet_sha256": "40b538d0947598cde9d7a99d4ea47af7de2d21590b5fb6fb2d534901cd11d303",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 4,
+      "packet_sha256": "40b538d0947598cde9d7a99d4ea47af7de2d21590b5fb6fb2d534901cd11d303",
+      "final": false
+    },
+    {
+      "candidate_hash": "5b1222a00e5fb5876317a962289b5efc7ddc3ed875181433f5efc146fe9007bd",
+      "combined_score": 2.061235174566007e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 5,
+      "packet_sha256": "278117a695d33f92c35a321f6d0b27f0cde875291e639d6fb25d2e37f1ecab1f",
+      "final": false
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 6,
+      "packet_sha256": "ab8177bf53aadd7fbb592a46e6a80553eeedaf7447cf91adef6bd5bf70da20a5",
+      "final": false
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 7,
+      "packet_sha256": "ab8177bf53aadd7fbb592a46e6a80553eeedaf7447cf91adef6bd5bf70da20a5",
+      "final": true
+    }
+  ],
+  "proposal_hashes": [
+    "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+    "5b1222a00e5fb5876317a962289b5efc7ddc3ed875181433f5efc146fe9007bd"
+  ],
+  "verified_best_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "verified_best_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06
+  },
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "NO_GAIN"
+}

@@ -1,0 +1,36 @@
+{
+ "development_m": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "files": {
+  "development.json": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
+  "holdout.json": "37872712a0eca08e3e3ee00b1adef8214df5be4bb1f95a45f9a5261263ee83bb"
+ },
+ "holdout_m": [
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20
+ ],
+ "holdout_never_loaded_by": [
+  "engines",
+  "proposers",
+  "sequential control",
+  "smoke tests"
+ ],
+ "note": "Holdout m=13..20 is frozen here with its hash and is evaluated at most once, after finalist freeze, by a human-run offline check -- never by any engine, proposer, or automated smoke.",
+ "schema": "lrx-corrcert-frozen-manifest-v1",
+ "task": "corr-cert-260924"
+}

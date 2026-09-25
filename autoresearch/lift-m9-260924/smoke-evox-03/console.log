@@ -1,0 +1,39 @@
+16:30:07 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:30:07 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:30:07 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:30:07 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:30:07 [controller] Meta-search LLM connectivity verified (guide: http://127.0.0.1:8791/v1, meta: http://127.0.0.1:8791/v1)
+16:30:07 WARNING [variation_operator_generator] Could not read pyproject.toml (pyproject.toml not found at /Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/pyproject.toml), falling back to uv pip list
+16:30:08 WARNING [variation_operator_generator] Could not fetch package list: Command '['uv', 'pip', 'list', '--format', 'json']' returned non-zero exit status 2.
+16:30:08 [default_discovery_controller] Iteration 1: Program d909d98e-a048-4a13-ab53-ad799b212d0c (parent: e5cd77da-7a2e-43a4-99f9-37530a81162e) completed in 0.24s (llm: 0.00s, eval: 0.24s)
+16:30:08 [runner] Checkpoint 1: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:08 [default_discovery_controller] 🌟 New best solution found at iteration 1
+16:30:08 [default_discovery_controller] Iteration 2: Program b5b8601d-ad2b-46b7-ac04-effe07a67275 (parent: e5cd77da-7a2e-43a4-99f9-37530a81162e) completed in 0.34s (llm: 0.00s, eval: 0.34s)
+16:30:08 [runner] Checkpoint 2: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:08 WARNING [default_discovery_controller] Diff blocks found but none matched parent solution (iteration=3, attempt 1/3).
+16:30:08 WARNING [default_discovery_controller] Diff blocks found but none matched parent solution (iteration=3, attempt 2/3).
+16:30:08 WARNING [default_discovery_controller] Diff blocks found but none matched parent solution (iteration=3, attempt 3/3).
+16:30:08 ERROR [default_discovery_controller] All 3 retry attempts failed due to parse/validation error: Diff SEARCH blocks did not match parent solution - no changes applied
+16:30:08 WARNING [controller] Iteration 3 failed (used 3 attempts): Diff SEARCH blocks did not match parent solution - no changes applied (after 3 attempts)
+16:30:08 [controller] [SOLUTION EVOLUTION] Evolution completed: evox
+16:30:08 [runner] Checkpoint 5: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:08 [runner] Test evaluation for best program: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:08 [runner] Discovery completed. Best: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000, test_combined_score=57.6201, test_screen_certificates=57.0000, test_screen_valid=306.0000, test_screen_gap_sum=967.4527, test_full_certificates=286.0000
+Using search algorithm: evox
+MOCK_STRATEGY_SAMPLE_USED
+
+Discovery complete!
+Best program metrics:
+  combined_score: 57.6201
+  screen_certificates: 57.0000
+  screen_valid: 306.0000
+  screen_gap_sum: 967.4527
+  full_certificates: 286.0000
+  test_combined_score: 57.6201
+  test_screen_certificates: 57.0000
+  test_screen_valid: 306.0000
+  test_screen_gap_sum: 967.4527
+  test_full_certificates: 286.0000
+
+Latest checkpoint: /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-evox-03/output/sky/checkpoints/checkpoint_5
+To resume: --checkpoint /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-evox-03/output/sky/checkpoints/checkpoint_5

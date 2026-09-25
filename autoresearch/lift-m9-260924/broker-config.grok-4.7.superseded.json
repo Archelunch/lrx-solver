@@ -1,0 +1,30 @@
+{
+  "run": "lift-m9-260924",
+  "note": "Dry-run/reservation config for the m=9 lift pilot (autoresearch/lift-m9-260924/TASK.md). No live call has been made. See transport-notes.md and budget-ledger-notes.md. User decision 2026-09-24: reasoning cap raised from 8000 to 24000 local tokens and timeout from 180 s to 480 s, because the provider offers no numeric cap and the earlier low-effort call produced 43,919 reasoning tokens.",
+  "upstream_url": "https://api.x.ai/v1",
+  "model": "grok-4.7",
+  "api_key_env": "XAI_API_KEY",
+  "ledger": "autoresearch/lift-m9-260924/broker-ledger.json",
+  "max_prompt_bytes": 120000,
+  "max_tokens": 4096,
+  "reasoning_effort": "low",
+  "reasoning_cap_tokens": 24000,
+  "reasoning_cap_chars_conservative": 72000,
+  "chars_per_reasoning_token_assumption": 3,
+  "timeout": 480,
+  "upstream_stream": true,
+  "input_usd_per_million": 2.2,
+  "output_usd_per_million": 6.6,
+  "max_usd": 150.0,
+  "reservation_usd_per_request_conservative": 0.4516864,
+  "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+  "contact_ceiling_raw": 332,
+  "max_requests": 332,
+  "contact_ceiling_formula": "min(floor(max_usd / reservation_usd_per_request_conservative), 400)",
+  "price_source": "https://docs.x.ai/developers/models lists grok-4.7 (prompts <200k tokens) at $2.00 input / $6.00 output per million tokens, fetched 2026-09-24. This config keeps the repo's existing 2.2/6.6 rates (autoresearch/loop-260924-protocol/broker-ledger-stream-focused-01.json limits), a 10% conservative markup over the documented base price used consistently across the prior 2026-09-24 session's ledgers, so the reservation and contact ceiling here are not tighter than the ones already reconciled in budget-ledger-notes.md.",
+  "price_source_date": "2026-09-24",
+  "price_source_documented_base_usd_per_million": {
+    "input": 2.0,
+    "output": 6.0
+  }
+}

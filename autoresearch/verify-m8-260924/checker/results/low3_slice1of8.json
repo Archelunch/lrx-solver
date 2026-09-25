@@ -1,0 +1,47 @@
+{
+ "stage": "low3",
+ "mode": "slice 1/8",
+ "seed": null,
+ "sample_size": null,
+ "chosen_indices": null,
+ "z_samples_per_k": "z=0, e_j, 2e_j (all j), e_i+e_{i+1} (i<3)",
+ "meta": {
+  "files": [
+   "multiset_three_zero_full_native_batch_20260920.jsonl",
+   "multiset_three_zero_refinement_follow1_20260920.jsonl",
+   "multiset_three_zero_refinement_follow2_20260920.jsonl",
+   "multiset_three_zero_last_family_20260920.jsonl"
+  ],
+  "case_lines": 639832,
+  "certified_case_lines": 639357,
+  "sampled_from_certified_lines": true
+ },
+ "structure": {
+  "items": 79920,
+  "distinct_families": 79920,
+  "masks": 84
+ },
+ "counts": {
+  "families": 79920,
+  "passed": 79920,
+  "failed": 0,
+  "mixture_rows": 0,
+  "tree_rows": 244916,
+  "tree_leaves": 79993,
+  "reference_words": 0,
+  "reference_letters_literal": 116178049,
+  "literal_transfer_letters": 0,
+  "same_sign_violations": 0,
+  "claim_mismatches": 0,
+  "by_kind": {
+   "tree:multiset_three_zero_full_native_batch_20260920.jsonl": 79861,
+   "tree:multiset_three_zero_refinement_follow1_20260920.jsonl": 58,
+   "tree:multiset_three_zero_refinement_follow2_20260920.jsonl": 1
+  }
+ },
+ "failures": [],
+ "claim_mismatches": [],
+ "seconds_load": 1.6,
+ "seconds_total": 11.8,
+ "workers": 6
+}

@@ -5,12 +5,23 @@ finite evidence suggests, or an engineering task that would make the search or
 the checks stronger. Evidence for each item is in `research/claims.md` and
 `autoresearch/`.
 
-## Immediate priority: exact mixtures after projection
+## Immediate priority: general m after the external m=8 closure
+
+Update 2026-09-24: the research group's package claims the full m=8 bound
+E_(n-8)(n) <= 6n-18 for all n >= 9, and this repo replicated it (their replay
+PASS; independent checker on every k=4..9 file and a rebuilt k>=4 union with
+0 uncovered; k<=3 single-word certificates not replicated). See
+`research/claims.md` Session 10. Items 1-5 below are historical m=8 targets
+and are superseded. The first live m=9 lift campaign ran on 2026-09-24 (`autoresearch/lift-m9-260924/`):
+all three engines plus a sequential control tie at 190/2295 holdout certificates
+against 158 for the fixed gadget, 84 new audited m=9 families, no lemma.
+Next campaign: reward new word constructions (not re-ranking), 8k output or
+diff proposals, repeated seeds for a comparison, and search for a gadget that
+is uniform in m. Keep the general conjecture open.
 
 The supplied nine-gap m=8 theorem has independently checked certificate
 premises for all 40,320 label orders and arbitrary positive block lengths.
-The full m=8 case and the general conjecture remain open. Projection coverage
-and its union with earlier results are not yet independently reconstructed.
+The general conjecture remains open.
 
 1. Extend the selected-case projection baseline toward a full auditable
    inventory. Session 08 certified 76 named families with 4–8 blocks, checking

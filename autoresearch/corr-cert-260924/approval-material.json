@@ -1,0 +1,101 @@
+{
+  "broker_config": {
+    "api_key_env": "GEMINI_API_KEY",
+    "chars_per_reasoning_token_assumption": 3,
+    "contact_ceiling_formula": "min(floor(max_usd / reservation_usd_per_request_conservative), 400) = min(floor(25 / 0.1497408), 400) = 166",
+    "contact_ceiling_raw": 147,
+    "input_usd_per_million": 0.825,
+    "ledger": "autoresearch/corr-cert-260924/broker-ledger-corr-8k.json",
+    "max_prompt_bytes": 120000,
+    "max_requests": 147,
+    "max_tokens": 8192,
+    "max_usd": 24.6365,
+    "model": "gemini-3.8-flash",
+    "model_note": "Copied unchanged from the lift-m9-260924 campaign's applied config; re-verify against a live /v1beta/openai/models listing and current pricing before any live corr-cert run, since prices and model ids can change between campaigns.",
+    "note": "Template copied from autoresearch/lift-m9-260924/broker-config.json (same model/pricing/reasoning fields) for the corr-cert-260924 autoresearch scaffold. Ledger path and cap are fresh for this task; the ledger file must not exist before the first live run. No live call has been made under this config; it is scaffolding only, pending human approval (payload-approved.sha256). Attempt 1 (max_tokens 4096) stopped after 15 calls, 12 truncated, $0.3635 spent on broker-ledger-corr.json. Output raised to 8192, fresh ledger, cap reduced by the spend.",
+    "output_usd_per_million": 4.125,
+    "price_source": "Copied from lift-m9-260924/broker-config.json: https://ai.google.dev/gemini-api/docs/pricing, fetched 2026-09-24 for that campaign. Re-fetch before any live corr-cert run.",
+    "price_source_date": "2026-09-24",
+    "reasoning_cap_chars_conservative": 24000,
+    "reasoning_cap_tokens": 8000,
+    "reasoning_effort": "low",
+    "reasoning_effort_note": "Copied from lift-m9-260924/broker-config.json: https://ai.google.dev/gemini-api/docs/openai, fetched 2026-09-24, documents a top-level reasoning_effort field on the OpenAI-compat endpoint that the broker already forces into every request.",
+    "reasoning_effort_support_confirmed": true,
+    "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+    "reservation_usd_per_request_conservative": 0.1666368,
+    "run": "corr-cert-260924",
+    "timeout": 480,
+    "upstream_stream": true,
+    "upstream_url": "https://generativelanguage.googleapis.com/v1beta/openai"
+  },
+  "campaign_config": {
+    "broker_port": 8895,
+    "engines": {
+      "adaevolve": {
+        "iterations": 50,
+        "max_evals": 150,
+        "wall_seconds": 21600
+      },
+      "evox": {
+        "iterations": 40,
+        "max_evals": 150,
+        "wall_seconds": 21600
+      },
+      "gepa": {
+        "iterations": 60,
+        "max_evals": 200,
+        "wall_seconds": 21600
+      },
+      "sequential": {
+        "iterations": 60,
+        "max_evals": 200,
+        "wall_seconds": 21600
+      }
+    },
+    "eval_cache": "autoresearch/corr-cert-260924/eval-cache",
+    "eval_timeout": 60,
+    "evaluation": "single pass: every candidate is scored once on the full frozen development set (m=4..12, 9 evaluations of coefficients(m) each), no screening stage",
+    "evox_switch_interval": 2,
+    "frozen_manifest": "autoresearch/corr-cert-260924/frozen/manifest.json",
+    "note": "Per-arm search limits for the corr-cert campaign. Money, request, token, reasoning and timeout caps live only in broker-config.json and are read at run time (model client timeout = broker timeout + 30 s). The development m-set path and SHA-256 are read at run time from frozen_manifest (files['development.json'], next to the manifest); holdout is never loaded. Both configs, the prompts, the seed, the frozen hashes and first-prompt.sha256 are covered by the approval hash (python -m integrations.corr_backends approval-hash). Unlike the lift campaign, evaluating a candidate here is a single cheap pass over m=4..12 (well under a second, see TASK.md), so there is no staged screen/full split and no development-archive database (omitted; see TASK.md 'Evaluation cost note').",
+    "order_note": "Mirrors the lift-m9-260924 campaign order: GEPA and sequential control first, matched iteration counts; AdaEvolve and EvoX start only after GEPA shows one productive cycle (valid proposal, selection, second proposal responding to feedback), per PROTOCOL.md's kill conditions and budget ceiling ($25, one day timebox).",
+    "python": ".venv-official/bin/python",
+    "seed": "integrations/corr_control_f1.py"
+  },
+  "corr_backends_sha256": "e22119cc81d0448f0c0f79962462fa0013d6d050f8e94a74a339d904fecb1352",
+  "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
+  "dry_run_payload": {
+    "max_completion_tokens": 8192,
+    "messages": [
+      {
+        "content": "<research_context placeholder; not sent by dry-run>",
+        "role": "system"
+      },
+      {
+        "content": "<gepa_reflection prompt placeholder; not sent by dry-run>",
+        "role": "user"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "low",
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  "evaluator": {
+    "contract": "corr-contract-1: candidate defines coefficients(m) -> JSON-safe cert dict (see integrations/corr_task.py encode_cert/decode_cert for the exact key encoding). For each m, decode and call corrcert.check_certificate(m, cert); pass iff ok==True and epsilon < 1. violation magnitude for a failing m = sum(-slack) over every violated (5)/(6) check plus max(0, epsilon-1); an invalid/crash/timeout output contributes the fixed penalty INVALID_GAP instead (never repaired, never partial credit). combined_score = passes + 0.5/(1+violation_sum), violation_sum summed over m that did not pass. Stdlib only, source <= 64 KiB, wall limit 10s per m.",
+    "version": "corr-eval-1"
+  },
+  "first_prompt_sha256": "eea89e7b490a96ff8452d008ba8fca9dfe7e0908c7cc72def5f4e6da19b6ea5e",
+  "frozen_manifest_sha256": "6f62647e4ff812bb603ed4fe46383be71799bb4611986035d94f314ad7ae48f1",
+  "objective": "Improve this executable Python coefficients(m) program. Return the entire replacement Python source in one fenced code block. Maximize the number of development m in 4..12 that pass corrcert.check_certificate exactly, then reduce the exact violation magnitude on m that fail. Only development instances are shown; a program that is uniform in m is far more valuable than one hard-coded per m.",
+  "packet_format": {
+    "marker": "CORR_PACKET_V1",
+    "max_chars": 2000,
+    "scope": "development only"
+  },
+  "seed_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "system_prompt": "Find universal coefficients for the Theorem 3 correlation certificate (THEOREM.md). The candidate source must define coefficients(m) -> dict returning the JSON-safe encoding: {'m': m, 'Q': positive int, 'lambda': {'a,b': int}, 'mu': {'a': [int]*(m-1)}, 'alpha'/'beta'/'gamma': {'a,b,c': [int]*(m-1)}} with comma-joined decimal keys, a<b or a<b<c, and mu[a] indexed q=1..m-1. All values must be exact Python ints. The source must be at most 64 KiB, use the standard library only, and finish each m within 10 seconds. The trusted evaluator decodes this into corrcert.py's cert dict and calls corrcert.check_certificate(m, cert) exactly: it passes iff every triple condition (5) and pair condition (6) holds and epsilon < 1. Misses prove nothing about any m. LP optimum is 0 for every m; E=0 only at the reversal orders p_i = -i mod m; forced tight rows at q = m-(b-a) and triple rows at (m-(b-a), m-(c-b)); linear potentials alpha=xq+c1, beta=xt+c2, gamma=-xs+c3 satisfy (5) iff c1+c2+c3<=0 and c1+c2+c3+xm<=0.\nTwo exact epsilon=0 certificates, printed compactly (indices a<b<...<m-1; mu_a and alpha/beta/gamma[a,b,c] are lists over q=1..m-1; a triple/pair not listed is all zero):\nm=4, Q=1: lambda (0,1)=12 (0,2)=4 (0,3)=0 (1,2)=-24 (1,3)=-12 (2,3)=-20; mu_0=[-8,-4,0] mu_1=[-4,0,4] mu_2=[4,0,-4] mu_3=[0,-4,-8]; all alpha/beta/gamma=0 (pure linear potentials, no triple terms needed at m=4).\nm=5, Q=1: lambda (0,1)=25 (0,2)=20 (0,3)=15 (0,4)=0 (1,2)=-15 (1,3)=0 (1,4)=-5 (2,3)=-35 (2,4)=-20 (3,4)=-35; mu_0=[-14,-18,3,4] mu_1=[-17,-9,-16,2] mu_2=[-10,0,0,-10] mu_3=[2,-16,-9,-17] mu_4=[4,3,-18,-14]; nonzero triples (16 nonzero entries, all +-5, each a width-2 run of consecutive q): (0,1,2) alpha=[0,-5,-5,0] beta=[0,0,0,5] gamma=[0,0,-5,0]; (0,1,4) alpha=[-5,-5,0,0] beta=[0,0,0,-5] gamma=[0,0,5,0]; (0,3,4) alpha=[0,0,0,-5] beta=[-5,-5,0,0] gamma=[0,0,5,0]; (2,3,4) alpha=[0,0,0,5] beta=[0,-5,-5,0] gamma=[0,0,-5,0].\nA deterministic control already tried polynomial coefficients: degree<=3 polynomials in (a,b,c,m) plus step/indicator terms at the kappa thresholds, and q times those steps, fit m=4..8 exactly but failed at the first untried m=9 (about 1200 violated rows). The bottleneck is triples with a unit gap (b-a==1 or c-b==1); freeing only those triples' coefficients from the polynomial made the fit exact through m=10, so unit-gap triples need dependence the low-degree polynomials could not express. In the infeasibility structure, about 60% of the violation mass sits on wrapping rows (q+t>m) and about a third at the equality-order row q=m-(b-a); the heaviest gap classes are (b-a,c-b) in {(1,1),(1,2),(2,1),(1,3)}. This does not prescribe a fix; possibilities worth exploring include triple potentials depending on min/max of the gaps, floor/mod expressions, or piecewise definitions with breakpoints tied to both q and m-q. Every known epsilon=0 certificate is tight at the reversal-order rows q=m-(b-a) and (m-(b-a), m-(c-b)). coefficients(m) may compute its output algorithmically for the given m (loops, or a small exact linear solve restricted to the known-tight rows, are fine); it must stay standard-library and finish within 10 seconds per m regardless of method. A construction with a human-checkable argument for why it holds for every m is worth more than a lookup table over development m; the holdout set tests m your program has never seen. Do not read files, the network, or environment variables.",
+  "upstream_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+}

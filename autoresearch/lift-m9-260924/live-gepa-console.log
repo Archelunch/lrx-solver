@@ -1,0 +1,15 @@
+4391c2efac0d3e4800cbd41fe481e02597877916dfb61e414b294dffcbdfba44
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/lift_backends.py", line 847, in <module>
+    main()
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/lift_backends.py", line 840, in main
+    result = actions[args.action](args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/lift_backends.py", line 764, in _live
+    out = _launch(_parser().parse_args(["run", "--engine", args.engine] + argv))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/lift_backends.py", line 608, in _launch
+    raise RuntimeError(f"official {args.engine} exited {returncode}; see {run_dir / 'console.log'}")
+RuntimeError: official gepa exited 1; see /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-gepa-260924-184057/console.log

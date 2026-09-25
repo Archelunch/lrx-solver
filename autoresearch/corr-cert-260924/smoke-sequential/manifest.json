@@ -1,0 +1,151 @@
+{
+  "engine": "sequential",
+  "task": "corr-cert-260924",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/frozen/manifest.json",
+  "frozen_manifest_sha256": "6f62647e4ff812bb603ed4fe46383be71799bb4611986035d94f314ad7ae48f1",
+  "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
+  "seed_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "broker_url": "http://127.0.0.1:8931/v1",
+  "model": "grok-4.7",
+  "iterations": 3,
+  "max_tokens": 4096,
+  "reasoning_effort": null,
+  "max_evals": 30,
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/smoke-sequential",
+  "status": "COMPLETE",
+  "steps": [
+    {
+      "step": 1,
+      "packet_seen": true,
+      "request_sha256": "cebc62c44aaa66042ce8989acf1ff948ef051fc74dddf11f97a43b455fc443b0",
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "score": 2.098371663589055e-06,
+      "passes": 0,
+      "accepted": false
+    },
+    {
+      "step": 2,
+      "packet_seen": true,
+      "request_sha256": "cebc62c44aaa66042ce8989acf1ff948ef051fc74dddf11f97a43b455fc443b0",
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "score": 2.098371663589055e-06,
+      "passes": 0,
+      "accepted": false
+    },
+    {
+      "step": 3,
+      "packet_seen": true,
+      "request_sha256": "cebc62c44aaa66042ce8989acf1ff948ef051fc74dddf11f97a43b455fc443b0",
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "score": 2.098371663589055e-06,
+      "passes": 0,
+      "accepted": false
+    }
+  ],
+  "mechanism_evidence": {
+    "accepted_steps": [],
+    "packet_seen_steps": [
+      1,
+      2,
+      3
+    ]
+  },
+  "candidate_evaluations": {
+    "requests": 5,
+    "failures": 0,
+    "best": {
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "violation_sum": "233998",
+      "source_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc"
+    },
+    "m_values": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "evaluation_trace": [
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 1,
+      "packet_sha256": "ab8177bf53aadd7fbb592a46e6a80553eeedaf7447cf91adef6bd5bf70da20a5",
+      "final": true
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 2,
+      "packet_sha256": "40b538d0947598cde9d7a99d4ea47af7de2d21590b5fb6fb2d534901cd11d303",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 3,
+      "packet_sha256": "40b538d0947598cde9d7a99d4ea47af7de2d21590b5fb6fb2d534901cd11d303",
+      "final": false
+    },
+    {
+      "candidate_hash": "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e",
+      "combined_score": 2.098371663589055e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 4,
+      "packet_sha256": "40b538d0947598cde9d7a99d4ea47af7de2d21590b5fb6fb2d534901cd11d303",
+      "final": false
+    },
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 5,
+      "packet_sha256": "ab8177bf53aadd7fbb592a46e6a80553eeedaf7447cf91adef6bd5bf70da20a5",
+      "final": true
+    }
+  ],
+  "proposal_hashes": [
+    "fa08a4334628d940da857ba71194ac55d356513e231b944afbee84a54321c64e"
+  ],
+  "seed_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06
+  },
+  "verified_best_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "verified_best_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06
+  },
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "NO_GAIN"
+}

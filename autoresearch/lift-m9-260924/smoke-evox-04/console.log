@@ -1,0 +1,42 @@
+16:30:35 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:30:35 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:30:35 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:30:35 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:30:36 [controller] Meta-search LLM connectivity verified (guide: http://127.0.0.1:8791/v1, meta: http://127.0.0.1:8791/v1)
+16:30:36 WARNING [variation_operator_generator] Could not read pyproject.toml (pyproject.toml not found at /Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/pyproject.toml), falling back to uv pip list
+16:30:36 WARNING [variation_operator_generator] Could not fetch package list: Command '['uv', 'pip', 'list', '--format', 'json']' returned non-zero exit status 2.
+16:30:36 [default_discovery_controller] Iteration 1: Program d414a963-c6cd-44a1-bb54-0a3bfcb5af94 (parent: 08257fc7-701b-4295-b981-9799ba4162f8) completed in 0.24s (llm: 0.00s, eval: 0.24s)
+16:30:36 [runner] Checkpoint 1: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:36 [default_discovery_controller] 🌟 New best solution found at iteration 1
+16:30:41 [default_discovery_controller] Iteration 2: Program b818942c-2d25-4af4-bbe8-17aa0a77e3ce (parent: d414a963-c6cd-44a1-bb54-0a3bfcb5af94) completed in 5.08s (llm: 0.00s, eval: 5.08s)
+16:30:41 [runner] Checkpoint 2: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:41 [default_discovery_controller] Iteration 3: Program 48aa2ca6-b06b-4a4c-8b50-466476cb3b7e (parent: d414a963-c6cd-44a1-bb54-0a3bfcb5af94) completed in 0.02s (llm: 0.00s, eval: 0.02s)
+16:30:41 [runner] Checkpoint 3: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:41 [default_discovery_controller] Iteration 4: Program f978032f-8d74-41dd-839c-8a1c9a8a9621 (parent: d414a963-c6cd-44a1-bb54-0a3bfcb5af94) completed in 0.02s (llm: 0.00s, eval: 0.02s)
+16:30:41 [runner] Checkpoint 4: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:41 [default_discovery_controller] Iteration 5: Program 5bbc41bf-ae3c-4b3d-b1c6-af939ec3a846 (parent: d414a963-c6cd-44a1-bb54-0a3bfcb5af94) completed in 0.02s (llm: 0.00s, eval: 0.02s)
+16:30:41 [runner] Checkpoint 5: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:41 [controller] [SOLUTION EVOLUTION] Evolution completed: evox
+16:30:41 [runner] Checkpoint 5: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:42 [runner] Test evaluation for best program: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:30:42 [runner] Discovery completed. Best: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000, test_combined_score=57.6201, test_screen_certificates=57.0000, test_screen_valid=306.0000, test_screen_gap_sum=967.4527, test_full_certificates=286.0000
+Using search algorithm: evox
+MOCK_STRATEGY_SAMPLE_USED
+MOCK_STRATEGY_SAMPLE_USED
+MOCK_STRATEGY_SAMPLE_USED
+
+Discovery complete!
+Best program metrics:
+  combined_score: 57.6201
+  screen_certificates: 57.0000
+  screen_valid: 306.0000
+  screen_gap_sum: 967.4527
+  full_certificates: 286.0000
+  test_combined_score: 57.6201
+  test_screen_certificates: 57.0000
+  test_screen_valid: 306.0000
+  test_screen_gap_sum: 967.4527
+  test_full_certificates: 286.0000
+
+Latest checkpoint: /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-evox-04/output/sky/checkpoints/checkpoint_5
+To resume: --checkpoint /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-evox-04/output/sky/checkpoints/checkpoint_5

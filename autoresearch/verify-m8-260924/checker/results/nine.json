@@ -1,0 +1,43 @@
+{
+ "stage": "nine",
+ "mode": "full",
+ "seed": null,
+ "sample_size": null,
+ "chosen_indices": null,
+ "z_samples_per_k": "z=0, e_j, 2e_j (all j), e_i+e_{i+1} (i<3)",
+ "meta": {
+  "files": [
+   "multiset_nine_gap_complete_certificates_20260924.json"
+  ],
+  "unused_repairs": [],
+  "declared_counts": null,
+  "target_total": null
+ },
+ "structure": {
+  "items": 40320,
+  "distinct_families": 40320,
+  "masks": 1,
+  "wrong_popcount": 0
+ },
+ "counts": {
+  "families": 40320,
+  "passed": 40320,
+  "failed": 0,
+  "mixture_rows": 152937,
+  "tree_rows": 0,
+  "tree_leaves": 0,
+  "reference_words": 11080,
+  "reference_letters_literal": 22213180,
+  "literal_transfer_letters": 298325041,
+  "same_sign_violations": 0,
+  "claim_mismatches": 0,
+  "by_kind": {
+   "mix": 40320
+  }
+ },
+ "failures": [],
+ "claim_mismatches": [],
+ "seconds_load": 0.2,
+ "seconds_total": 53.3,
+ "workers": 6
+}

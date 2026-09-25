@@ -1,0 +1,14 @@
+{
+  "our_id": "k5-mask302-order15713",
+  "source": "autoresearch/official-integration-260924/frozen/development.json (item with id k5-mask302-order15713)",
+  "m": 8,
+  "blocks": 5,
+  "mask": 302,
+  "order_index": 15713,
+  "labels": [4, 1, 7, 8, 5, 6, 3, 2],
+  "mapping_code": "autoresearch/official-integration-260924/prepare.py:59 (id template), integrations/mixture_policy.py:13 (ORDERS = permutations(range(1,9))), integrations/projected_mixtures.py:9 state_for(labels, mask)",
+  "mask_to_gaps": "state_for(labels, mask): for j in range(9): if mask has bit j set, emit a 0 atom; if j<8 also emit labels[j]. Bit j is the gap immediately before label position j+1 (j=0..7); bit 8 is the trailing boundary gap after the last label.",
+  "mask_302_binary_lsb_first_bits_set": [1, 2, 3, 5, 8],
+  "unit_block_state_vector": [4, 0, 1, 0, 7, 0, 8, 5, 0, 6, 3, 2, 0],
+  "note": "13 symbols: 8 labels + 5 zero (unit) blocks at gap positions 1,2,3,5,8. This is the a=1 unit-block base state for the k5-mask302-order15713 family referenced by the team lead."
+}

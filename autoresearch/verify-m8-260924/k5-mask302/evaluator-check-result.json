@@ -1,0 +1,16 @@
+{
+  "profiles_built": 4,
+  "errors": [],
+  "verify_mixture": {
+    "base": "121/2",
+    "gamma": [
+      "6",
+      "63/11",
+      "6",
+      "6",
+      "6"
+    ],
+    "margin": "1/2"
+  },
+  "accepted_by_our_evaluator": true
+}

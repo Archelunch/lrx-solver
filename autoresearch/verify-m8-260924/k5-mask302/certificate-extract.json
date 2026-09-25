@@ -1,0 +1,20 @@
+{
+  "note": "No verbatim certificate row exists in the package for (mask=302, order_index=15713). This file records the negative search evidence instead of an extracted certificate.",
+  "searched": [
+    "package/literature/multiset_five_gap_bounded_search_20260924.json (166MB, all 3275 mask=302 records checked, none has order_index=15713)",
+    "package/literature/multiset_five_gap_bounded_repairs_final_20260924.json (4 records total: masks 55, and 3 others; none is order_index=15713)",
+    "package/literature/multiset_five_gap_repairs_final_audit_20260924.json (summary only, no order_index=15713 mention)",
+    "package/literature/multiset_five_gap_control_seed_20260924.jsonl (no mention)",
+    "package/literature/multiset_six_gap_bounded_search_20260924.json (order_index=15713 appears for masks 189,222,252,441,476,504; none is a bit-superset of 302, so none projects onto our family)",
+    "package/literature/multiset_six_gap_bounded_repairs_final_20260924.json and both prefix repair files (no mention)",
+    "package/literature/multiset_seven_gap_complement_certificates_20260924.json (one hit, but it is order_index=15713 used only as a 'source' id inside a mixture for an unrelated family with order_index=14521, mask=367 -- not our family)",
+    "package/literature/multiset_eight_gap_complement_certificates_20260924.json (no mention)"
+  ],
+  "structural_gap": {
+    "audit_file": "package/literature/multiset_five_gap_complete_audit_20260924.json",
+    "claims": "status PASS, complete_five_gap_proved: true, seen_records 337965, unresolved []",
+    "declared_dependency": "literature/multiset_five_gap_complete_coverage_20260924.npz",
+    "dependency_present_in_package": false,
+    "consequence": "the completeness claim for the five-gap case rests on a boolean coverage bitset (analogous to package/literature/multiset_nine_gap_projection_search_20260924.npz used elsewhere in the package) that is not included in this package, so it cannot be independently checked whether family (mask=302, order_index=15713) is one of the 337965 'seen' records or one of the 789642 'remaining' (unresolved outside the five-gap projected scope)."
+  }
+}

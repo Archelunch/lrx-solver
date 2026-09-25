@@ -1,0 +1,38 @@
+16:28:37 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:28:37 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:28:37 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:28:37 WARNING [config] Unknown model 'grok-4.7': no provider matched. Use 'provider/model' format (e.g. 'openai/my-model') or set api_base explicitly.
+16:28:37 [controller] Meta-search LLM connectivity verified (guide: http://127.0.0.1:8791/v1, meta: http://127.0.0.1:8791/v1)
+16:28:37 WARNING [variation_operator_generator] Could not read pyproject.toml (pyproject.toml not found at /Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/lib/python3.12/site-packages/pyproject.toml), falling back to uv pip list
+16:28:37 WARNING [variation_operator_generator] Could not fetch package list: Command '['uv', 'pip', 'list', '--format', 'json']' returned non-zero exit status 2.
+16:28:38 [default_discovery_controller] Iteration 1: Program 659f7457-f4ca-4fce-beed-4f4d35f4b41d (parent: 6597ff1b-6fe7-4e44-837d-e3c283021bf7) completed in 0.45s (llm: 0.00s, eval: 0.45s)
+16:28:38 [runner] Checkpoint 1: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:28:38 [default_discovery_controller] 🌟 New best solution found at iteration 1
+16:28:38 [default_discovery_controller] Iteration 2: Program 7f049403-e07d-41bc-81b6-fa5b8228a30c (parent: 6597ff1b-6fe7-4e44-837d-e3c283021bf7) completed in 0.33s (llm: 0.00s, eval: 0.32s)
+16:28:38 [runner] Checkpoint 2: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:28:38 WARNING [default_discovery_controller] Diff blocks found but none matched parent solution (iteration=3, attempt 1/3).
+16:28:38 WARNING [default_discovery_controller] Diff blocks found but none matched parent solution (iteration=3, attempt 2/3).
+16:28:38 WARNING [default_discovery_controller] Diff blocks found but none matched parent solution (iteration=3, attempt 3/3).
+16:28:38 ERROR [default_discovery_controller] All 3 retry attempts failed due to parse/validation error: Diff SEARCH blocks did not match parent solution - no changes applied
+16:28:38 WARNING [controller] Iteration 3 failed (used 3 attempts): Diff SEARCH blocks did not match parent solution - no changes applied (after 3 attempts)
+16:28:38 [controller] [SOLUTION EVOLUTION] Evolution completed: evox
+16:28:38 [runner] Checkpoint 3: best=combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:28:38 [runner] Test evaluation for best program: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000
+16:28:38 [runner] Discovery completed. Best: combined_score=57.6201, screen_certificates=57.0000, screen_valid=306.0000, screen_gap_sum=967.4527, full_certificates=286.0000, test_combined_score=57.6201, test_screen_certificates=57.0000, test_screen_valid=306.0000, test_screen_gap_sum=967.4527, test_full_certificates=286.0000
+Using search algorithm: evox
+
+Discovery complete!
+Best program metrics:
+  combined_score: 57.6201
+  screen_certificates: 57.0000
+  screen_valid: 306.0000
+  screen_gap_sum: 967.4527
+  full_certificates: 286.0000
+  test_combined_score: 57.6201
+  test_screen_certificates: 57.0000
+  test_screen_valid: 306.0000
+  test_screen_gap_sum: 967.4527
+  test_full_certificates: 286.0000
+
+Latest checkpoint: /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-evox/output/sky/checkpoints/checkpoint_3
+To resume: --checkpoint /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/smoke-evox/output/sky/checkpoints/checkpoint_3

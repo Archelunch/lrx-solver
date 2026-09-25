@@ -1,0 +1,52 @@
+{
+ "stage": "four",
+ "mode": "full",
+ "seed": null,
+ "sample_size": null,
+ "chosen_indices": null,
+ "z_samples_per_k": "z=0, e_j, 2e_j (all j), e_i+e_{i+1} (i<3)",
+ "meta": {
+  "files": [
+   "multiset_four_gap_bounded_search_20260924.json",
+   "multiset_four_gap_bounded_repairs_final_20260924.json"
+  ],
+  "unused_repairs": [],
+  "declared_counts": {
+   "restored": 2997,
+   "tested": 262513,
+   "certified": 262499,
+   "unresolved": 14,
+   "finite_only_coefficients": 0,
+   "native_calls": 261
+  },
+  "target_total": 262513
+ },
+ "structure": {
+  "items": 262513,
+  "distinct_families": 262513,
+  "masks": 126,
+  "wrong_popcount": 0
+ },
+ "counts": {
+  "families": 262513,
+  "passed": 262513,
+  "failed": 0,
+  "mixture_rows": 675106,
+  "tree_rows": 83,
+  "tree_leaves": 34,
+  "reference_words": 387201,
+  "reference_letters_literal": 287920266,
+  "literal_transfer_letters": 477368284,
+  "same_sign_violations": 0,
+  "claim_mismatches": 0,
+  "by_kind": {
+   "mix": 262499,
+   "tree:repair": 14
+  }
+ },
+ "failures": [],
+ "claim_mismatches": [],
+ "seconds_load": 4.5,
+ "seconds_total": 235.6,
+ "workers": 6
+}

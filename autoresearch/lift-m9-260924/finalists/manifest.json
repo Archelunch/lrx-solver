@@ -1,0 +1,97 @@
+{
+  "finalists": [
+    {
+      "arm": "adaevolve",
+      "source_sha256": "4d4391eafcbaa414a636bd77569cb96958128f170ce3d92429802a702e09de65"
+    },
+    {
+      "arm": "evox",
+      "source_sha256": "89ec1da13067485fa23aa642c49bd56870ffe7778fa3788647907386d95bc199"
+    },
+    {
+      "arm": "gepa",
+      "source_sha256": "100be658ae2edd1adcb08718636471096b0e3a0a7a9de11ba6f6e266769aa255"
+    },
+    {
+      "arm": "sequential",
+      "source_sha256": "ed6c8626e4d18a7053932bb1f227acebed5c81ddb607708ad26daa6670968fb2"
+    },
+    {
+      "arm": "naive-control",
+      "source_sha256": "3bbb7594f04732c76cdd43f2736127a6dcd4060f54176703a475c2704d779fd2"
+    }
+  ],
+  "holdout_sha256": "d50a7aef53c3fb5fa8239e0d9a622969c78422bc72dda19e34c1f0f5c9f1f714",
+  "development_sha256": "949f7489769ad6f0a78d83d4ac2b708d3e64172e8c30575122a7d2fa6b77e068",
+  "frozen_manifest_sha256": "43ec41bba7233a44909ce88bf3270883bfd3df8ddbf24fe4a39d64cc739d8414",
+  "evaluator": {
+    "version": "lift-eval-2",
+    "contract": "lift-contract-2: certificate iff every returned word sorts the child unit base (no zero-zero swap), <=16 words, <=4000 letters, and the exact LP optimum over the words (weights>=0, sum 1, weighted Lemma-1 slopes <= slope_bound) has weighted base < budget_unit+1. gap = min over mixtures of max(0, B - (budget_unit+1)) + max(0, max_j slope_j - slope_bound) (exact LP; never grows when words are added) for valid misses, 4000 for invalid/crash/timeout. combined_score = certificates + 0.5*valid/N + 0.5/(1+gap_sum/N)."
+  },
+  "created_utc": "2026-09-24T19:04:48.641603+00:00",
+  "details": [
+    {
+      "arm": "adaevolve",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-adaevolve-260924-202218",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-adaevolve-260924-202218/verified/best.py",
+      "source_sha256": "4d4391eafcbaa414a636bd77569cb96958128f170ce3d92429802a702e09de65",
+      "development_claim": {
+        "certificates": 337,
+        "valid": 4588,
+        "instances": 4588,
+        "gap_sum": "17289846566413352742848354456260261534084764984945893415795160099283457459667791634050201428972586792104614150477/852429710537008890956330896582747358586267130659561602106042752121228972283818962029913988390084304282608000",
+        "combined_score": 337.5922358732765,
+        "cache_key": "72446b198cd69df036eed9fd39b2bffba7b716d0cbb1d65375007269631c0025"
+      }
+    },
+    {
+      "arm": "evox",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-evox-260924-204716",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-evox-260924-204716/verified/best.py",
+      "source_sha256": "89ec1da13067485fa23aa642c49bd56870ffe7778fa3788647907386d95bc199",
+      "development_claim": {
+        "certificates": 337,
+        "valid": 4588,
+        "instances": 4588,
+        "gap_sum": "29209624263570119759017352965891363283199555413122401496815301062789871644324181959659422363048168619799419674792608555120977929/1442309053810440069829807582562126937341941210714948044305335769154496476384423642372436424270395389166420818108142801092000",
+        "combined_score": 337.5923510948869,
+        "cache_key": "487883240cbb7f06bd1387cb692ff665ed7cf058d5c5b0e900425d7528fdc49c"
+      }
+    },
+    {
+      "arm": "gepa",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-gepa-260924-193513",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-gepa-260924-193513/verified/best.py",
+      "source_sha256": "100be658ae2edd1adcb08718636471096b0e3a0a7a9de11ba6f6e266769aa255",
+      "development_claim": {
+        "certificates": 336,
+        "valid": 4588,
+        "instances": 4588,
+        "gap_sum": "252213885379427634273377961857258497425007917900572144580240069484998889501857204029701918473869297516893752470836453424465256001/12462930879063341047405198165424963031492406681835199340430269948914053699927929589488258783205249066206665759922290341118000",
+        "combined_score": 336.59240638404634,
+        "cache_key": "9530f2a3690b7ef1ed174ce8f8550c62312b8eb781e4b0a618de6089a1950eee"
+      }
+    },
+    {
+      "arm": "sequential",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-sequential-260924-200000",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lift-m9-260924/live-sequential-260924-200000/verified/best.py",
+      "source_sha256": "ed6c8626e4d18a7053932bb1f227acebed5c81ddb607708ad26daa6670968fb2",
+      "development_claim": {
+        "certificates": 334,
+        "valid": 4588,
+        "instances": 4588,
+        "gap_sum": "41336621058720364057919892712814019155511576476926229954028738548515045501765018556426238973191865638603089113182949/2037437677494926180627671345952119345137822707322654219090405009248997088577100112335878776114071365134237776000",
+        "combined_score": 334.5922154233661,
+        "cache_key": "d93e2177aeab181daa516fdde9a6695f4182057a5035c2b0636b09e0fe528d2f"
+      }
+    },
+    {
+      "arm": "naive-control",
+      "run_dir": null,
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/lift_control_naive.py",
+      "source_sha256": "3bbb7594f04732c76cdd43f2736127a6dcd4060f54176703a475c2704d779fd2",
+      "development_claim": null
+    }
+  ]
+}

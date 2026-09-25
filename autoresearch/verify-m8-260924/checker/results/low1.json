@@ -1,0 +1,40 @@
+{
+ "stage": "low1",
+ "mode": "full",
+ "seed": null,
+ "sample_size": null,
+ "chosen_indices": null,
+ "z_samples_per_k": "z=0, e_j, 2e_j (all j), e_i+e_{i+1} (i<3)",
+ "meta": {
+  "files": [
+   "multiset_single_zero_mixture_certificates_20260919.json"
+  ]
+ },
+ "structure": {
+  "items": 338,
+  "distinct_families": 338,
+  "masks": 9,
+  "wrong_popcount": 0
+ },
+ "counts": {
+  "families": 338,
+  "passed": 338,
+  "failed": 0,
+  "mixture_rows": 676,
+  "tree_rows": 0,
+  "tree_leaves": 0,
+  "reference_words": 0,
+  "reference_letters_literal": 81228,
+  "literal_transfer_letters": 0,
+  "same_sign_violations": 0,
+  "claim_mismatches": 0,
+  "by_kind": {
+   "lowmix": 338
+  }
+ },
+ "failures": [],
+ "claim_mismatches": [],
+ "seconds_load": 0.0,
+ "seconds_total": 0.0,
+ "workers": 1
+}

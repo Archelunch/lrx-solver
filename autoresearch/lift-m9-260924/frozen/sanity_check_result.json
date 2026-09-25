@@ -1,0 +1,32 @@
+{
+ "sample_size": 25,
+ "failures": [],
+ "ok": true,
+ "sample_ids": [
+  "lift-k9-mask511-order39510-i5-right",
+  "lift-k7-mask478-order27658-i3-left",
+  "lift-k5-mask179-order11303-i8-none",
+  "lift-k4-mask75-order6919-i7-none",
+  "lift-k5-mask143-order23036-i5-none",
+  "lift-k9-mask511-order9247-i0-right",
+  "lift-k9-mask511-order33779-i8-right",
+  "lift-k9-mask511-order31764-i6-both",
+  "lift-k5-mask433-order35996-i4-right",
+  "lift-k9-mask511-order5967-i7-both",
+  "lift-k6-mask473-order28153-i8-both",
+  "lift-k7-mask501-order36489-i6-left",
+  "lift-k6-mask462-order38637-i5-none",
+  "lift-k9-mask511-order5866-i5-right",
+  "lift-k6-mask462-order38637-i1-right",
+  "lift-k5-mask286-order37922-i3-both",
+  "lift-k6-mask473-order28153-i3-left",
+  "lift-k6-mask374-order18732-i6-both",
+  "lift-k6-mask126-order5207-i4-both",
+  "lift-k7-mask431-order23519-i4-none",
+  "lift-k6-mask349-order717-i2-left",
+  "lift-k5-mask47-order17429-i3-both",
+  "lift-k4-mask270-order32809-i7-none",
+  "lift-k4-mask30-order15231-i7-none",
+  "lift-k4-mask270-order32809-i8-right"
+ ]
+}

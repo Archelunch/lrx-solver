@@ -1,0 +1,24 @@
+Replicate external m=8 proof, run lift and correlation-certificate campaigns
+
+Independent replication of the group's full m=8 package (their replay PASS;
+stdlib checker on every k=4..9 certificate file, rebuilt union with zero
+uncovered, low-block search replicated in full for k=1 and sampled for
+k=2,3). Certified k5-mask302-order15713 via their projection certificate.
+
+New search plumbing: m-parametric exact evaluator and lift task, Gemini/xAI
+budget broker with local reasoning abort, durable receipts and audited
+resume, frozen m=8->m=9 lift sets, native GEPA/AdaEvolve/EvoX adapters,
+finalize with one-shot holdout and evaluator-independent audit. Live lift
+campaign: all arms 190/2295 holdout vs naive 158, 84 new audited m=9 family
+certificates, no engine ranking, $4.41.
+
+Correlation certificate C <= 4K+2H: independent reproduction for m=4..16,
+exact epsilon=0 certificates m=4..9, LP optimum exactly 0; negative results
+for polynomial-plus-threshold and label-local formulas; exactness conjecture
+recorded. Engine campaign on coefficients(m): 2/9 development, 0/8 holdout,
+kill rule met, $3.58.
+
+Claims register Sessions 10-12, HANDOFF and ROADMAP updated. Eval caches,
+per-candidate dumps and the 834 MB package copy are gitignored.
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>

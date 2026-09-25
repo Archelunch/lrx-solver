@@ -1,0 +1,102 @@
+{
+  "broker_config": {
+    "api_key_env": "GEMINI_API_KEY",
+    "chars_per_reasoning_token_assumption": 3,
+    "contact_ceiling_formula": "min(floor(max_usd / reservation_usd_per_request_conservative), 400)",
+    "contact_ceiling_raw": 1000,
+    "input_usd_per_million": 0.825,
+    "ledger": "autoresearch/lift-m9-260924/broker-ledger-gemini.json",
+    "max_prompt_bytes": 120000,
+    "max_requests": 400,
+    "max_tokens": 4096,
+    "max_usd": 149.782,
+    "model": "gemini-3.8-flash",
+    "model_note": "The user said 'Gemini 3.8 Flash'; confirmed as the newest Flash model id via https://ai.google.dev/gemini-api/docs/pricing, fetched 2026-09-24. Re-verify against a live /v1beta/openai/models listing before the probe, since this was not itself queried live.",
+    "note": "Applied 2026-09-24 after live probes: gemini-3.8-flash 6.5 s, $0.0116, 317/4588 certificates on the development set from the naive seed prompt; grok-4.3 10.1 s, 286; grok-4.7 cancelled at 480 s with no answer. User instructed the orchestrator to choose the model. Previous config kept as broker-config.grok-4.7.superseded.json. Cap $150, campaign ledger continues (attempt 1, $0.218, resumed with audit entry). Ledger moved to broker-ledger-gemini.json because ledger limits changed with the model; cap set to 150 - 0.2180332 already spent on broker-ledger.json. Probe ledgers ($0.0229 total) are separate under probe/.",
+    "output_usd_per_million": 4.125,
+    "price_source": "https://ai.google.dev/gemini-api/docs/pricing, fetched 2026-09-24: gemini-3.8-flash standard paid tier is $0.75 input / $3.75 output per million tokens through 2026-12-31 (rises to $1.50/$7.50 on 2027-01-01); thinking tokens are billed as output tokens, already included in that output price (no separate reasoning rate). This proposal applies the same 10% conservative markup used elsewhere in this run (0.75*1.1=0.825, 3.75*1.1=4.125).",
+    "price_source_date": "2026-09-24",
+    "reasoning_cap_chars_conservative": 24000,
+    "reasoning_cap_tokens": 8000,
+    "reasoning_effort": "low",
+    "reasoning_effort_note": "https://ai.google.dev/gemini-api/docs/openai, fetched 2026-09-24: the OpenAI-compat endpoint accepts a top-level reasoning_effort ('minimal'|'low'|'medium'|'high'|'none' for 2.5-class models) using the SAME field name the broker already forces into every request. A separate extra_body.google.thinking_config.thinking_level/include_thoughts path also exists for thought summaries, but docs say it and reasoning_effort 'can't be used at the same time' \u2014 not used here since reasoning_effort alone is sufficient and needs no broker payload-schema change.",
+    "reasoning_effort_support_confirmed": true,
+    "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+    "reservation_usd_per_request_conservative": 0.1497408,
+    "run": "lift-m9-260924",
+    "timeout": 480,
+    "upstream_stream": true,
+    "upstream_url": "https://generativelanguage.googleapis.com/v1beta/openai"
+  },
+  "campaign_config": {
+    "archive": "autoresearch/lift-m9-260924/development-archive.sqlite",
+    "broker_port": 8877,
+    "engines": {
+      "adaevolve": {
+        "iterations": 50,
+        "max_evals": 150,
+        "wall_seconds": 21600
+      },
+      "evox": {
+        "iterations": 40,
+        "max_evals": 150,
+        "wall_seconds": 21600
+      },
+      "gepa": {
+        "iterations": 60,
+        "max_evals": 1500,
+        "wall_seconds": 21600
+      },
+      "sequential": {
+        "iterations": 60,
+        "max_evals": 180,
+        "wall_seconds": 21600
+      }
+    },
+    "eval_cache": "autoresearch/lift-m9-260924/eval-cache",
+    "eval_timeout": 400,
+    "evaluation": "staged: GEPA minibatch = 3 parents (~66 instances); screen = 14 stratified parents (306 instances, ~5 s) for selection; full development (4588 instances, ~60 s) only when screen-valid and >= best screen score, and for every finalist",
+    "evox_switch_interval": 2,
+    "frozen_manifest": "autoresearch/lift-m9-260924/frozen/manifest.json",
+    "note": "Per-arm search limits for the live lift campaign. Money, request, token, reasoning and timeout caps live only in broker-config.json and are read at run time (model client timeout = broker timeout + 30 s). The development set path and SHA-256 are read at run time from frozen_manifest (files['development.json'], next to the manifest); holdout is never loaded. Both configs, the prompts, the seed, the frozen hashes and first-prompt.sha256 are covered by the approval hash (python -m integrations.lift_backends approval-hash).",
+    "order_note": "User decision 2026-09-24: GEPA and sequential control first, matched at 60 iterations; AdaEvolve and EvoX start only after GEPA shows one productive cycle. Total 210 contacts of the 332 ceiling; remainder reserved for finalist audit and reruns.",
+    "python": ".venv-official/bin/python",
+    "seed": "integrations/lift_control_naive.py"
+  },
+  "development_sha256": "949f7489769ad6f0a78d83d4ac2b708d3e64172e8c30575122a7d2fa6b77e068",
+  "dry_run_payload": {
+    "max_completion_tokens": 4096,
+    "messages": [
+      {
+        "content": "<research_context placeholder; not sent by dry-run>",
+        "role": "system"
+      },
+      {
+        "content": "<gepa_reflection prompt placeholder; not sent by dry-run>",
+        "role": "user"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "low",
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  "evaluator": {
+    "contract": "lift-contract-2: certificate iff every returned word sorts the child unit base (no zero-zero swap), <=16 words, <=4000 letters, and the exact LP optimum over the words (weights>=0, sum 1, weighted Lemma-1 slopes <= slope_bound) has weighted base < budget_unit+1. gap = min over mixtures of max(0, B - (budget_unit+1)) + max(0, max_j slope_j - slope_bound) (exact LP; never grows when words are added) for valid misses, 4000 for invalid/crash/timeout. combined_score = certificates + 0.5*valid/N + 0.5/(1+gap_sum/N).",
+    "version": "lift-eval-2"
+  },
+  "first_prompt_sha256": "6afea585ee3f8cdf9edd66e26f8d2690a4fe2232d5cf809a0b6fa1d1e3b5c48b",
+  "frozen_manifest_sha256": "43ec41bba7233a44909ce88bf3270883bfd3df8ddbf24fe4a39d64cc739d8414",
+  "lift_backends_sha256": "fc2b696df4c6dc587048630d1507008545995aa547976044adbedafab3e6a8b8",
+  "objective": "Improve this executable Python lift(instance) gadget. Return the entire replacement Python source in one fenced code block. Maximize exact m=9 family certificates, then reduce the exact LP gap on misses. Only development instances are shown.",
+  "packet_format": {
+    "marker": "LIFT_PACKET_V1",
+    "max_chars": 2000,
+    "scope": "development only"
+  },
+  "seed_sha256": "3bbb7594f04732c76cdd43f2736127a6dcd4060f54176703a475c2704d779fd2",
+  "system_prompt": "Find a label-insertion gadget for LRX sorting. The candidate source must define lift(instance) and return {'words': [...], 'weights': optional rational strings, 'note': optional}: at most 16 strings over L,R,X, each at most 4000 letters, and each sorting the child unit base to (1..9, 0^k). L rotates the vector left, R rotates it right, and X swaps its first two entries. The source must be at most 64 KiB, use the standard library only, and finish each instance within 10 seconds. The instance is {m: 8, parent: {id, labels, mask, unit_base, certificate: {kind, rows: [{weight, word, base, slopes}]}}, insert: {label: 9, position, split}, child: {id, labels, mask, unit_base, k, budget_unit, slope_bound}}. Parent rows are certified m=8 words on the parent unit base, with exact Lemma 1 base and one slope per zero block. The trusted evaluator replays every word, recomputes base and slopes, and solves the exact LP. A certificate needs weighted base < budget_unit+1 = 39+7k and every weighted slope <= 7. A uniform gadget adds at most n letters and raises each slope by at most 1. Misses prove nothing. Do not read files, the network, or environment variables.",
+  "upstream_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+}

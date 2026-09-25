@@ -1,0 +1,17 @@
+eval-cache/
+live-*/verified/evaluations/
+live-*/output/
+smoke-*/output/
+smoke-*/verified/
+smoke-*/stage/
+*.npz
+live-*/stage/
+finalists/raw/
+probe/*-eval.json
+controls/*.json
+*.receipts/
+*.sqlite
+frozen/development*.json
+frozen/holdout*.json
+frozen/parents_raw*.json
+mock-requests*.jsonl

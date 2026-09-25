@@ -1,0 +1,4 @@
+package/
+*.npz
+*.bin
+checker/results/*.log

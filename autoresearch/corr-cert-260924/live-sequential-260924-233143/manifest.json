@@ -1,0 +1,527 @@
+{
+  "engine": "sequential",
+  "task": "corr-cert-260924",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/frozen/manifest.json",
+  "frozen_manifest_sha256": "6f62647e4ff812bb603ed4fe46383be71799bb4611986035d94f314ad7ae48f1",
+  "development_sha256": "95fab8d7159cfc8fa91d50db1535ccc2bb9e4c4a888c27fbc6f1439d88f7823a",
+  "seed_sha256": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+  "broker_url": "http://127.0.0.1:8895/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 60,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "max_evals": 200,
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/corr-cert-260924/live-sequential-260924-233143",
+  "status": "COMPLETE",
+  "steps": [
+    {
+      "step": 1,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 2,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 3,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 4,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 5,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 6,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 7,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 8,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 9,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 10,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 11,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 12,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 13,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 14,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 15,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 16,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 17,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 18,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 19,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 20,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 21,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 22,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 23,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 24,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 25,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 26,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 27,
+      "packet_seen": true,
+      "request_sha256": "7bc3f75efdb977a33374f83149fa138527d1e20d1ebc8dbe5ccf2c5fc38b1cd8",
+      "candidate_hash": "ff6e9786f46eb84d93c1c9744e33aaadc3183088c8244a65fcdd1aafca356de5",
+      "score": 2.000008347762475,
+      "passes": 2,
+      "accepted": true
+    },
+    {
+      "step": 28,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 29,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 30,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 31,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 32,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 33,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 34,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 35,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 36,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 37,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 38,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 39,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 40,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 41,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 42,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 43,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 44,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 45,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 46,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 47,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 48,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 49,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 50,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 51,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 52,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 53,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 54,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 55,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 56,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 57,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    },
+    {
+      "step": 58,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 59,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal was truncated by the model output limit"
+    },
+    {
+      "step": 60,
+      "packet_seen": true,
+      "request_sha256": "6cce3953dcf433c93341558270bf217278809592643642a8a7c41b05e2ad2c01",
+      "outcome": "invalid proposal: proposal must contain only one fenced Python source block"
+    }
+  ],
+  "mechanism_evidence": {
+    "accepted_steps": [
+      27
+    ],
+    "packet_seen_steps": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ]
+  },
+  "candidate_evaluations": {
+    "requests": 3,
+    "failures": 0,
+    "best": {
+      "combined_score": 2.000008347762475,
+      "passes": 2,
+      "violation_sum": "207537179/3465",
+      "source_sha256": "ff6e9786f46eb84d93c1c9744e33aaadc3183088c8244a65fcdd1aafca356de5"
+    },
+    "m_values": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "evaluation_trace": [
+    {
+      "candidate_hash": "afefbf0d6b8f848fb51e74b0687ffb65d27eea7e5f3c439a00397f2a266084bc",
+      "combined_score": 2.136761268210548e-06,
+      "passes": 0,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 1,
+      "packet_sha256": "369de08fc5fe48e3bc59fdeb6c7b011066964f2b1b7aebc3d480bf4fc32ad45d",
+      "final": true
+    },
+    {
+      "candidate_hash": "ff6e9786f46eb84d93c1c9744e33aaadc3183088c8244a65fcdd1aafca356de5",
+      "combined_score": 2.000008347762475,
+      "passes": 2,
+      "invalid": 0,
+      "cache_hit": false,
+      "ordinal": 2,
+      "packet_sha256": "7cf4ad5e357b5b1fbb9d3869150650d1ffa6eccaffe48933e4cfd93f63a65b83",
+      "final": false
+    },
+    {
+      "candidate_hash": "ff6e9786f46eb84d93c1c9744e33aaadc3183088c8244a65fcdd1aafca356de5",
+      "combined_score": 2.000008347762475,
+      "passes": 2,
+      "invalid": 0,
+      "cache_hit": true,
+      "ordinal": 3,
+      "packet_sha256": "7cf4ad5e357b5b1fbb9d3869150650d1ffa6eccaffe48933e4cfd93f63a65b83",
+      "final": true
+    }
+  ],
+  "proposal_hashes": [
+    "ff6e9786f46eb84d93c1c9744e33aaadc3183088c8244a65fcdd1aafca356de5"
+  ],
+  "seed_result": {
+    "passes": 0,
+    "violation_sum": "233998",
+    "combined_score": 2.136761268210548e-06
+  },
+  "verified_best_hash": "ff6e9786f46eb84d93c1c9744e33aaadc3183088c8244a65fcdd1aafca356de5",
+  "verified_best_result": {
+    "passes": 2,
+    "violation_sum": "207537179/3465",
+    "combined_score": 2.000008347762475
+  },
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "NEW_CERTIFICATES",
+  "approved_payload_sha256": "4b678b51ae91c64266df817ebfc8e3da8f78c80438192e4d76644b0c15df693a"
+}

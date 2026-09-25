@@ -17,6 +17,7 @@
 | Radius formula (m-2)n-(m^2-3m-4)/2 for m>=8 | Matches the five m>=8 tables above (n<=12); finite evidence only |
 | v2 candidate scores | Probe-based finite evidence. "feasible" means no failure on probes, not a certificate. `certify` checks one whole graph only |
 | Potential bound d(v) <= phi_ba656(v), all m, r >= 1 | Short argument below (model-written, checked by the orchestrator, not peer-reviewed); exhaustive `certify` agrees on every table run. Implies E_r(n) <= (floor(n/2)+1)(C(m-1,2)+(m-1)r) + floor(n/2), which is cubic and weaker than E_r(n) <= C(n,2) from the manuscript. Says nothing about T |
+| Full m=8 bound E_(n-8)(n) <= 6n-18, n>=9 (external group package, 2026-09-24) | External computer-assisted claim. Replicated here on 2026-09-24: package replay PASS (30 stages, 1010 s); independent stdlib checker verifies every k=4..9 certificate file in full, rebuilds the k>=4 union with 0 uncovered, and verifies all low-block exception mixtures and trees. Low-block single-word search replicated in full for k=1 and by seeded samples for k=2,3 with 0 mismatches (see `autoresearch/verify-m8-260924/checker-report.md`). Lemmas hand-checked, not formalised. Attributed to the group; no priority claim |
 | Pure LRX lower bound D_n >= C(n,2) (Antiufeev, arXiv:2601.08715v3) | External claim, not checked here. An external audit (cayleypy_experiments handoff, 2026-09-23) reports its values correct (BFS n <= 12) but its optimality step unproven. Not used by any claim above; statements that rely on it (`misc/LRX_multiset_progress.md` §1 "D_n = N", Prop. 4.3) are conditional beyond BFS range |
 
 The small exhaustive DP cases are **outside m>=8** and test machinery only.
@@ -367,3 +368,105 @@ One seed per arm does not establish engine ranking. EvoX's sole strategy rewrite
 brought no improvement. Misses do not prove infeasibility. General m and full m=8
 remain open; global coverage counts were not reconstructed. API cost $0.336410;
 331 tests and trusted-core hashes pass. No controller lead was changed.
+
+## Session 10: independent replication of the external full m=8 package
+
+On 2026-09-24 the research group supplied `lrx_m8_complete_verification`
+(834 MB, 147 manifest entries, all SHA-256 verified), claiming
+E_(n-8)(n) <= 6n-18 for every n >= 9 with all 20,603,520 (a,S) families
+covered. This is the group's theorem, not ours. Two replications ran here,
+recorded under `autoresearch/verify-m8-260924/`:
+
+1. **Their pipeline, our machine.** `scripts/replay_multiset_m8_package.py`
+   unchanged: 30 stages PASS in 1009.6 s, completion audit reports 0 remaining
+   families and rejects 5 negative controls (`replay-full.json`).
+2. **Our checker, written from the theorem text.** Stdlib and exact Fractions,
+   no package script imported (`checker/`). Every k=4..9 certificate file
+   verified in full by Lemma 3 transfer, formula (11), and criteria (7)/(8),
+   with literal stretched execution at z = 0, e_j, 2e_j and adjacent pairs:
+   four 262,513 / five 337,965 / six 228,966 / seven 74,614 / eight 10,278 /
+   nine 40,320 families, 0 failures, 0 stored-claim mismatches. The k>=4
+   union was rebuilt over all 8! x 382 masks without any package coverage
+   table: 0 uncovered, per-k counts equal to the package table. All 338
+   one-block exception mixtures, 37,323 two-block trees and 639,357
+   three-block trees pass. Five corrupted records were rejected.
+
+The repo's hardest development family `k5-mask302-order15713` (unit block
+a=1, our pool optimum 1223/20) is certified in the package by Lemma 4
+projection from seven-gap record 37688 (mask 446): weights 3/44, 5/11, 9/44,
+3/11, weighted base 121/2 < 61, slopes (6, 63/11, 6, 6, 6). Reproduced by a
+stdlib replay and by `integrations/projected_mixtures.py`
+(`autoresearch/verify-m8-260924/k5-mask302/REPORT.md`).
+
+Low-block single-word certificates were partly replicated by an independent
+bounded search from the section 7 resource table: k=1 in full (362,542 words,
+the 338 exceptions match exactly); k=2 and k=3 by seeded samples of 5,000
+bases plus listed exceptions, 0 mismatches. Not independently replicated: the
+full k=2 and k=3 enumerations (1.81M and 6.65M bases), the unlisted
+fewer-block exception counts (290, 65+36,888), the Lean files, the
+C++ programs, and the n>=130 theorem (unneeded, since the unbounded criteria
+were checked). Lemmas 1-4 were read and re-derived, not formalised. The
+general conjecture for arbitrary m remains open. No optimizer was involved
+and no provider call was made; optimizer contribution this session is zero.
+
+## Session 11: live three-engine campaign on the m=8 -> m=9 lift task
+
+After the m=8 replication, the search target moved to a label-insertion
+gadget: a program lifting certified m=8 family certificates to m=9 children
+(budget T_9(n) = 7n-25; unit-base criterion weighted base < 39+7k, slopes
+<= 7). Frozen sets: 210 development parents / 4588 instances, 105 holdout
+parents / 2295 instances. Model gemini-3.8-flash through the budget broker,
+after a grok-4.7 attempt hit the 480 s wall with no answer.
+
+Exact finite results, all independently audited with 0 disagreements
+(`autoresearch/lift-m9-260924/finalists/`): the naive fixed gadget certifies
+285 development and 158 holdout m=9 families; GEPA 336 / 190, sequential
+refinement control 334 (337 intermediate) / 190, AdaEvolve 337 / 190, EvoX
+337 / 190. The union adds **84 audited m=9 family certificates** (52
+development, 32 holdout) beyond the control, each an exact bound for all
+positive block lengths of that family. Cost $4.41 of the $150 cap over 264
+calls.
+
+Operational success: all three native engines ran live end to end with
+mechanism traces. Mathematical: finite certificates only; no label-insertion
+lemma and no progress on the general conjecture. Comparative: not
+established; one seed per arm, all arms tie the sequential control on
+holdout. Proposals mostly re-ranked the same constructed words; the
+constructor itself rarely changed. Misses prove nothing.
+
+## Session 12: correlation certificate C <= 4K + 2H, reproduction and ansatz search
+
+The group's note (2026-09-24) proves C <= 4K + 2H for 4 <= m <= 16 via a
+general certificate criterion (their Theorem 3) plus numeric LP certificates,
+and states that a universal coefficient formula is missing. Their coefficient
+files were not available. Here (`autoresearch/corr-cert-260924/`):
+
+- Definitions and Lemma 2 identities re-derived and validated by full
+  enumeration for m = 4..8 and seeded samples for m = 9, 10; no failures.
+  Max E = C - 4K - 2H is 0, attained only at the reversal orders p_i = -i.
+- Certificates regenerated independently by LP (system scipy, search side
+  only) and re-checked by a stdlib exact checker for every m = 4..16; all
+  epsilon < 1, corruptions rejected. New facts: the LP optimum is exactly 0
+  at every m tested (positive epsilons are rounding), and exact epsilon = 0
+  certificates exist for m = 4..7 with Q = 1, 1, 2, 596. This reproduces
+  their Theorem 1 for m <= 16 with independent code and is not a priority claim.
+- Negative result: coefficient formulas polynomial of degree <= 3 in
+  (a, b, c, m) with step terms at the kappa thresholds (and q times steps)
+  fit m = 4..8 but fail exactly at m = 9; no such family reaches m = 12.
+  The obstruction concentrates on triples with a unit gap and on wrap rows
+  q + t > m (dual certificates stored). So a universal formula, if it
+  exists, is not of that polynomial-plus-threshold form.
+The general conjecture is untouched. Misses prove nothing beyond the stated
+ansatz classes.
+
+Addendum (2026-09-25): the structure hunt (`STRUCTURE.md`) shows certificates
+supported on adjacent-label triples exist only for m <= 10, and the needed
+gap width grows with m (2 for m = 11..14, then 3, 4, 5, 6 at m = 15..18), so
+no label-local universal formula exists. Exact epsilon = 0 certificates are
+now verified for m = 4..9. Conjecture (not proved): the triple LP relaxation
+is exact, optimum 0, for every m; proved m <= 9, float evidence to m = 18.
+A live campaign of GEPA / AdaEvolve / EvoX / sequential on the program
+`coefficients(m)` produced no certificate beyond the two worked examples
+(m = 4, 5) on development and none on holdout m = 13..20; $3.58 spent
+(`autoresearch/corr-cert-260924/REPORT-CAMPAIGN.md`). Engines do not solve
+exact dual feasibility; the deterministic LP did.

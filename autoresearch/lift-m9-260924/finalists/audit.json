@@ -1,0 +1,841 @@
+{
+  "audit": {
+    "holdout": {
+      "adaevolve": {
+        "claimed": 190,
+        "agree": 190,
+        "disagree": []
+      },
+      "evox": {
+        "claimed": 190,
+        "agree": 190,
+        "disagree": []
+      },
+      "gepa": {
+        "claimed": 190,
+        "agree": 190,
+        "disagree": []
+      },
+      "sequential": {
+        "claimed": 190,
+        "agree": 190,
+        "disagree": []
+      },
+      "naive-control": {
+        "claimed": 158,
+        "agree": 158,
+        "disagree": []
+      }
+    },
+    "development": {
+      "adaevolve": {
+        "claimed": 337,
+        "agree": 337,
+        "disagree": []
+      },
+      "evox": {
+        "claimed": 337,
+        "agree": 337,
+        "disagree": []
+      },
+      "gepa": {
+        "claimed": 336,
+        "agree": 336,
+        "disagree": []
+      },
+      "sequential": {
+        "claimed": 334,
+        "agree": 334,
+        "disagree": []
+      },
+      "naive-control": {
+        "claimed": 285,
+        "agree": 285,
+        "disagree": []
+      }
+    }
+  },
+  "families": {
+    "holdout": {
+      "naive": 158,
+      "union_of_finalists": 190,
+      "union_with_naive": 190,
+      "not_certified_by_naive": [
+        {
+          "child_id": "m9-mask1001-labels148967532",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1002-labels927364158",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1006-labels974261538",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1018-labels973512648",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1021-labels735126489",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1022-labels926417538",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1022-labels942137568",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask135-labels127964853",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask397-labels975164238",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask399-labels975164238",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask431-labels267891543",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask485-labels183647529",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask501-labels273641589",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask503-labels742615389",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask509-labels735126489",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask511-labels264175389",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask511-labels421375689",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask534-labels745931286",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask534-labels749531286",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask875-labels859241763",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask875-labels895241763",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask879-labels895241763",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask932-labels589637241",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask940-labels589637241",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask965-labels183964752",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask965-labels189364752",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask970-labels918364752",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask971-labels918364752",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask973-labels189364752",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask980-labels389672541",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask988-labels389672541",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask992-labels961432578",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        }
+      ],
+      "per_arm_distinct": {
+        "adaevolve": 190,
+        "evox": 190,
+        "gepa": 190,
+        "sequential": 190,
+        "naive-control": 158
+      }
+    },
+    "development": {
+      "naive": 285,
+      "union_of_finalists": 337,
+      "union_with_naive": 337,
+      "not_certified_by_naive": [
+        {
+          "child_id": "m9-mask1003-labels895374261",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1007-labels895374261",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1014-labels926154738",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1022-labels963745128",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask1022-labels973165248",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask170-labels892756431",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask174-labels892756431",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask201-labels972361548",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask203-labels972361548",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask299-labels675413289",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask303-labels721654389",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask340-labels684712359",
+          "arms": [
+            "adaevolve",
+            "evox"
+          ]
+        },
+        {
+          "child_id": "m9-mask349-labels514376289",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask359-labels712564389",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask367-labels146897532",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask377-labels632547189",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask431-labels716894352",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask471-labels425176389",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask479-labels714536289",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask507-labels261547389",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask509-labels395716428",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask509-labels935716428",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask511-labels637451289",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask511-labels731652489",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask511-labels935716428",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask54-labels614952783",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask598-labels967541328",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask606-labels972165438",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask609-labels185697324",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask610-labels918567324",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask623-labels136897452",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask680-labels968471235",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa"
+          ]
+        },
+        {
+          "child_id": "m9-mask698-labels951437628",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask718-labels971256438",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask748-labels947126358",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask754-labels963254718",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask811-labels675413289",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask847-labels564897321",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask850-labels423689175",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask861-labels514376289",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask922-labels897452631",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask926-labels897452631",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask942-labels942517638",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask958-labels971453628",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask981-labels489637125",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask983-labels425176389",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask987-labels893412657",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask989-labels489637125",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask991-labels714536289",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask991-labels893412657",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask994-labels895214763",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        },
+        {
+          "child_id": "m9-mask998-labels895214763",
+          "arms": [
+            "adaevolve",
+            "evox",
+            "gepa",
+            "sequential"
+          ]
+        }
+      ],
+      "per_arm_distinct": {
+        "adaevolve": 337,
+        "evox": 337,
+        "gepa": 336,
+        "sequential": 334,
+        "naive-control": 285
+      }
+    }
+  }
+}

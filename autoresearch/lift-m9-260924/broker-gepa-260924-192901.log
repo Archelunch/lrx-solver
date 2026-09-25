@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/research_budget.py", line 830, in <module>
+    main()
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/research_budget.py", line 809, in main
+    ledger = DurableBudget(args.ledger, max_requests=args.max_requests,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/research_budget.py", line 294, in __init__
+    raise ValueError("ledger limits changed; use a fresh ledger path")
+ValueError: ledger limits changed; use a fresh ledger path

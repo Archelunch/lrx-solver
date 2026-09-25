@@ -1,0 +1,61 @@
+{'starting': 'nine'}
+{'finished': 'nine', 'seconds': 8.919}
+{'starting': 'compile_nine'}
+{'finished': 'compile_nine', 'seconds': 0.811}
+{'starting': 'nine_projection'}
+{'finished': 'nine_projection', 'seconds': 7.851}
+{'starting': 'eight'}
+{'finished': 'eight', 'seconds': 6.36}
+{'starting': 'compile_small'}
+{'finished': 'compile_small', 'seconds': 0.944}
+{'starting': 'compile_check'}
+{'finished': 'compile_check', 'seconds': 0.335}
+{'starting': 'eight_projection'}
+{'finished': 'eight_projection', 'seconds': 13.838}
+{'starting': 'reverse'}
+{'finished': 'reverse', 'seconds': 3.949}
+{'starting': 'seven'}
+{'finished': 'seven', 'seconds': 30.813}
+{'starting': 'seven_projection'}
+{'finished': 'seven_projection', 'seconds': 33.932}
+{'starting': 'large_n'}
+{'finished': 'large_n', 'seconds': 5.318}
+{'starting': 'six'}
+{'finished': 'six', 'seconds': 75.505}
+{'starting': 'six_unbounded'}
+{'finished': 'six_unbounded', 'seconds': 11.266}
+{'starting': 'six_interface'}
+{'finished': 'six_interface', 'seconds': 0.222}
+{'starting': 'six_projection'}
+{'finished': 'six_projection', 'seconds': 51.956}
+{'starting': 'five'}
+{'finished': 'five', 'seconds': 88.957}
+{'starting': 'five_unbounded'}
+{'finished': 'five_unbounded', 'seconds': 15.141}
+{'starting': 'five_projection'}
+{'finished': 'five_projection', 'seconds': 50.234}
+{'starting': 'compile_low_resource'}
+{'finished': 'compile_low_resource', 'seconds': 0.798}
+{'starting': 'compile_low_two'}
+{'finished': 'compile_low_two', 'seconds': 0.327}
+{'starting': 'compile_low_pareto'}
+{'finished': 'compile_low_pareto', 'seconds': 0.361}
+{'starting': 'compile_low_tagged'}
+{'finished': 'compile_low_tagged', 'seconds': 0.379}
+{'starting': 'compile_low_quotient'}
+{'finished': 'compile_low_quotient', 'seconds': 0.411}
+{'starting': 'low_resources'}
+{'finished': 'low_resources', 'seconds': 425.194}
+{'starting': 'low_one_two'}
+{'finished': 'low_one_two', 'seconds': 23.748}
+{'starting': 'low_three'}
+{'finished': 'low_three', 'seconds': 82.033}
+{'starting': 'transfer'}
+{'finished': 'transfer', 'seconds': 2.377}
+{'starting': 'four'}
+{'finished': 'four', 'seconds': 57.255}
+{'starting': 'four_unbounded'}
+{'finished': 'four_unbounded', 'seconds': 9.9}
+{'starting': 'completion'}
+{'finished': 'completion', 'seconds': 0.435}
+{'status': 'PASS', 'steps': 30, 'seconds': 1009.579}
