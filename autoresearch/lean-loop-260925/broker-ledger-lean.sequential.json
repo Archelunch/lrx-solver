@@ -1,0 +1,133 @@
+{
+  "attempts": [
+    {
+      "charged_usd": 0.006602475,
+      "id": 1,
+      "input_tokens": 2933,
+      "kind": "chat",
+      "output_tokens": 1014,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0001.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.07489844999999999,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.005506049999999999,
+      "id": 2,
+      "input_tokens": 2979,
+      "kind": "chat",
+      "output_tokens": 739,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0002.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.075021375,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.007255875,
+      "id": 3,
+      "input_tokens": 3530,
+      "kind": "chat",
+      "output_tokens": 1053,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0003.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076296825,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.00872025,
+      "id": 4,
+      "input_tokens": 3930,
+      "kind": "chat",
+      "output_tokens": 1328,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0004.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.0772827,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0086229,
+      "id": 5,
+      "input_tokens": 3962,
+      "kind": "chat",
+      "output_tokens": 1298,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0005.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.077347875,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.008471925,
+      "id": 6,
+      "input_tokens": 3994,
+      "kind": "chat",
+      "output_tokens": 1255,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0006.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.07741305,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.007424174999999999,
+      "id": 7,
+      "input_tokens": 3994,
+      "kind": "chat",
+      "output_tokens": 1001,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0007.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.077412225,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.008242575,
+      "id": 8,
+      "input_tokens": 3876,
+      "kind": "chat",
+      "output_tokens": 1223,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0008.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076976625,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.0070257,
+      "id": 9,
+      "input_tokens": 3876,
+      "kind": "chat",
+      "output_tokens": 928,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0009.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076976625,
+      "role": "unknown",
+      "status": "ok"
+    },
+    {
+      "charged_usd": 0.008246700000000001,
+      "id": 10,
+      "input_tokens": 3876,
+      "kind": "chat",
+      "output_tokens": 1224,
+      "receipt_path": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/broker-ledger-lean.sequential.json.receipts/attempt-0010.json",
+      "reservation_overrun": false,
+      "reserved_usd": 0.076976625,
+      "role": "unknown",
+      "status": "ok"
+    }
+  ],
+  "consecutive_failures": 0,
+  "halted_reason": null,
+  "limits": {
+    "input_rate": 0.825,
+    "max_requests": 14,
+    "max_usd": 3.0,
+    "output_rate": 4.125
+  },
+  "spent_usd": 0.07611862500000001
+}

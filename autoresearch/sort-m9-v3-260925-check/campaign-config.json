@@ -1,0 +1,81 @@
+{
+  "campaign": "sort-m9-v3-260925",
+  "note": "CHECK campaign (reduced live probe, offline-prepared 2026-09-25, no live call made). Same frozen data, seed program, packet format and reveal cap as the production sort-m9-v3-260925 campaign (referenced by ROOT-relative path, unaffected by this directory). Only engines.gepa (iterations, max_metric_calls, max_state_evals, max_requests), reflection.max_requests.gepa and campaign_max_usd are reduced, for a single gepa seed=1, 20-iteration wiring/cost check via `python -m integrations.sort_loop3 live --engine gepa --seed 1 --campaign-dir autoresearch/sort-m9-v3-260925-check`. Covered by its own approval hash: `python -m integrations.sort_loop3 approval-hash --campaign-dir autoresearch/sort-m9-v3-260925-check`.",
+  "seed_program": "integrations/sort_control_sweep.py",
+  "frozen_manifest": "autoresearch/sort-m9-260925/frozen/manifest.json",
+  "frozen_v3_manifest": "autoresearch/sort-m9-v3-260925/frozen-v3/manifest.json",
+  "python": ".venv-official/bin/python",
+  "eval_cache": "autoresearch/sort-m9-v3-260925/eval-cache",
+  "broker_port": 8898,
+  "eval_timeout": 900,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "screen_threshold": 1.1,
+  "seed_screen_score": 1.1886524822695037,
+  "seed_screen_score_note": "Exact screen combined score of the seed, computed from the saved v2 per-state rows (controls/v2-sort_control_sweep-development.json); _setup_v3 re-evaluates the seed under Seatbelt without cache every run and aborts on a difference above 1e-9.",
+  "reveal_optimal_max_states": 300,
+  "packet": {
+    "marker": "SORT_PACKET_V2",
+    "worst_states": 5,
+    "key_max_chars": 2000,
+    "instance_max_chars": 2500,
+    "sequential_max_chars": 6000
+  },
+  "evox_strategy_evolution": false,
+  "campaign_max_usd": 14.0,
+  "campaign_max_usd_note": "CHECK: flash 6.0 + reflection 8.0",
+  "reflection": {
+    "enabled": true,
+    "broker_config": "broker-config-reflection.json",
+    "broker_port": 8899,
+    "max_requests": {
+      "gepa": 16,
+      "sequential": 215,
+      "adaevolve": 20,
+      "evox": 0
+    },
+    "diagnosis_max_chars": 4000,
+    "on_failure": "halt",
+    "max_requests_note": "gepa set to the reflection broker's own contact ceiling: floor(8.0 / 0.47998720000000006) = 16 (max_usd_per_run 8.0, max_tokens 8192 in broker-config-reflection.json, fixed 2026-09-25 after the first check run's BROKER_STOPPED at iteration 8 -- see integrations/sort_loop3.py's ReflectThenWriteLM retry-then-fallback fix for the actual root cause)."
+  },
+  "engines": {
+    "gepa": {
+      "iterations": 20,
+      "max_metric_calls": 786,
+      "max_metric_calls_note": "python -c \"from integrations import sort_loop3 as s3; print(s3.gepa_metric_calls(30, 3, 20))\" -> 786 (30 instances, minibatch 3).",
+      "max_state_evals": 41200,
+      "max_state_evals_note": "Production value 380000 scaled by the same ratio as max_metric_calls (786/7266 of the 200-iteration production max_metric_calls), rounded up.",
+      "minibatch": 3,
+      "frontier_type": "instance",
+      "max_requests": 36,
+      "max_requests_note": "Flash contact ceiling via broker-config.json's own formula: floor(max_usd_per_run / reservation_usd_per_request_conservative) = floor(6 / 0.1666368) = 36.",
+      "wall_seconds": 3600
+    },
+    "sequential": {
+      "iterations": 200,
+      "max_screen_evals": 205,
+      "max_full_evals": 205,
+      "max_requests": 215,
+      "wall_seconds": 28800
+    },
+    "adaevolve": {
+      "iterations": 200,
+      "max_screen_evals": 230,
+      "max_full_evals": 230,
+      "max_requests": 215,
+      "wall_seconds": 28800
+    },
+    "evox": {
+      "iterations": 200,
+      "max_screen_evals": 230,
+      "max_full_evals": 230,
+      "max_requests": 215,
+      "wall_seconds": 28800
+    }
+  },
+  "evox_note": "EvoX's outer loop writes and runs LLM-generated Python search strategies; AGENTS.md forbids executing generated code outside the evaluator sandbox, so it is disabled in every run (switch_interval = iterations + 1, variation operators off, post-run leak check).",
+  "sky_note": "inject_evaluator_context is false. AdaEvolve paradigm prompts still include the staged evaluator stub source (SkyDiscover 0.2.0 adaevolve/controller.py:80-112); the stub holds only the HTTP call."
+}

@@ -1,0 +1,40 @@
+{
+  "note": "CHECK config (reduced live probe, offline-prepared 2026-09-25, no live call made). Same frozen data, seed and evaluator as campaign-config.json. Only engines.sequential (iterations, max_evals, max_requests sub-cap) is reduced, for a single sequential 20-iteration wiring/cost check via `python -m integrations.bound_backends live --engine sequential --broker-config broker-config-check.json --campaign-config campaign-config-check.json`.",
+  "seed": "integrations/bound_control_sweep.py",
+  "frozen_manifest": "autoresearch/bound-m-260925/frozen/manifest.json",
+  "python": ".venv-official/bin/python",
+  "eval_cache": "autoresearch/bound-m-260925/eval-cache",
+  "broker_port": 8898,
+  "eval_timeout": 900,
+  "evaluation": "staged: SkyDiscover and sequential score each candidate on the 30-family screen (15 per m, in development.json 'screen'); a candidate valid on the whole screen that ties or beats the best screen score gets a full development evaluation (303 families). GEPA evaluates per family: trainset = development minus screen (273), valset = screen, reflection minibatch 3, so one proposal costs 2*3 + 30 = 36 metric calls. Every call runs the candidate under Seatbelt, 3 s CPU / 5 s wall per family.",
+  "engines": {
+    "gepa": {
+      "iterations": 40,
+      "max_evals": 1600,
+      "wall_seconds": 21600,
+      "max_requests": 45
+    },
+    "sequential": {
+      "iterations": 20,
+      "max_evals": 25,
+      "max_evals_note": "Halved from the production 50 (screen+full staged evaluation over up to 303 families per candidate, but only failing/changed families need re-certification) for a 20-iteration check.",
+      "wall_seconds": 21600,
+      "max_requests": 25
+    },
+    "adaevolve": {
+      "iterations": 40,
+      "max_evals": 50,
+      "wall_seconds": 21600,
+      "max_requests": 45
+    },
+    "evox": {
+      "iterations": 40,
+      "max_evals": 50,
+      "wall_seconds": 21600,
+      "max_requests": 45
+    }
+  },
+  "max_requests_note": "CHECK: engines.sequential.max_requests is the requested sub-cap of 25 (the sub-cap requested for this check; the shared pool broker-config-check.json.max_requests is set to 25 to match it explicitly, one below the 24 the config's own contact_ceiling_formula would derive from max_usd 4 -- flagged, not resolved by reducing the sub-cap below what was asked).",
+  "order_note": "GEPA and the sequential control first at matched iteration counts; AdaEvolve and EvoX only after GEPA shows one productive cycle. EvoX strategy evolution is disabled at every iteration count (it runs generated Python outside the sandbox).",
+  "claim_rule": "An engine claims progress only if its frozen finalist beats control (b) (integrations/bound_control_sweeplp.py, exact LP over the whole sweep pool) on the holdout; the campaign seed is (b16)."
+}

@@ -1,0 +1,22 @@
+{
+  "run": "sort-m9-v3-260925-reflection",
+  "note": "CHECK config (reduced live probe, offline-prepared 2026-09-25): reflection (diagnosis) broker for the same check run. UNVERIFIED placeholder model/price carried over unchanged from broker-config-reflection.json (gemini-3.8-pro is not confirmed live in this pass; see autoresearch/lift-m9-260924/transport-notes.md). Its own ledger is broker-ledger-v3-reflection.gepa-s1.json. 2026-09-25 check: model set to gemini-3.1-pro-preview (gemini-3.8-pro does not exist per the authenticated model listing); prices are conservative placeholders (pro tier not on the fetched pricing page), reservation-limited.",
+  "upstream_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+  "model": "gemini-3.1-pro-preview",
+  "model_note": "PLACEHOLDER (O2): gemini-3.8-pro or grok-4.7; not verified.",
+  "api_key_env": "GEMINI_API_KEY",
+  "ledger": "autoresearch/sort-m9-v3-260925/broker-ledger-v3-reflection.json",
+  "max_prompt_bytes": 120000,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "reasoning_cap_tokens": 8000,
+  "timeout": 480,
+  "upstream_stream": true,
+  "input_usd_per_million": 2.2,
+  "output_usd_per_million": 13.2,
+  "price_source": "ASSUMPTION (SPEC section 4: pro-class $2/M input, $12/M output); not verified.",
+  "reservation_usd_per_request_conservative": 0.47998720000000006,
+  "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+  "max_usd_per_run": 8.0,
+  "max_usd_per_run_note": "2026-09-25 fix: max_tokens raised 3000 -> 8192 (gemini-3.1-pro-preview spends output tokens on thinking before the visible diagnosis, so 3000 truncated even short diagnoses -- see diagnosis_fallback in sort_loop3.py, added this session as defense in depth). max_usd_per_run raised 3.0 -> 8.0 (this is the field _broker_command actually reads for --max-usd; the stray 'max_usd'/'contact_ceiling_raw'/'max_requests' keys a prior edit added here were NOT read by the code and are removed). Contact ceiling via the config's own formula: floor(8.0 / 0.47998720000000006) = 16. campaign-config.json's reflection.max_requests.gepa is set to match. This is still below the worst case of the new retry-then-fallback diagnosis handling (up to 2 diagnosis calls/iteration x 20 iterations = 40), so a run of many consecutive truncations could still hit this cap and halt BROKER_STOPPED before 20 iterations -- a real budget limit, not the retry-storm bug this fix removes."
+}

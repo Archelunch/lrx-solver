@@ -306,3 +306,27 @@ packet, only the single proof-state packet per call.
 No live calls were made to produce these estimates; they are derived from the offline smoke
 timing/size evidence cited above, not from a live broker's actual pricing. Get a real quote from
 each broker before authorizing a paid run.
+
+## Live checks run (2026-09-25, user-approved, reduced size)
+
+Chain `autoresearch/run-live-checks-260925.sh`, each track gated on its own
+approval hash; configs under `*-check*` files. Model gemini-3.8-flash;
+reflection model for track 1 corrected to `gemini-3.1-pro-preview` after an
+authenticated model listing showed `gemini-3.8-pro` does not exist.
+
+| Track | Arm | Calls | USD | Result |
+|---|---|---:|---:|---|
+| bound-m (b) | sequential, 20 iterations | 20 | 0.46 | COMPLETE, MORE_CERTIFIED: 7 accepted steps; best certifies 164/303 development families (m=9 74/153, m=10 90/150), worst gap W=4, vs the sweep+LP seed 151/303. Screen 11/30. |
+| lean-loop (c) | sequential, 10 iterations | 10 | 0.08 | COMPLETE, MILESTONE_PROGRESS: 3 accepted steps; best 0.06 with helper milestones M1, M4, M6 closed, no target theorem closed. Pipeline (sandboxed Lean build, axiom/sorry checks, packet) works end to end. |
+| sort-m9-v3 (a) | gepa seed 1, 20 iterations | see below | | Attempt 1 crashed writing the manifest (relative ledger path; fixed). Attempt 2 stopped at iteration 8: reflection diagnosis truncated at 3000 tokens, GEPA's own retries exhausted the reflection sub-cap (429). Fixed: diagnosis retry-once-then-fallback, reflection max_tokens 8192, ceiling 16. Attempt 3 result appended below. |
+
+Attempts 1 and 2 of track (a) cost $0.40 and $0.40 and reached 1.144 and
+1.069 on the 30-instance valset from a seed of 1.004 before stopping.
+
+Track (a) attempt 3 (after the fixes): 17 of 20 iterations, then the
+reflection ledger's 16-call ceiling stopped the run (genuine budget
+exhaustion, correctly labelled BROKER_STOPPED); 3 valset improvements
+(1.004 to 1.069 on the 30-instance metric), 16 flash + 16 reflection calls,
+$0.90. Both brokers, the per-instance Pareto path, cascade, rich packets and
+the reflection route ran end to end. For the full campaign the reflection
+ceiling must be at least 2x iterations. Total live spend for all checks: $2.24.

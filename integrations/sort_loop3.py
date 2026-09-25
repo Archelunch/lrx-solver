@@ -790,10 +790,29 @@ class ReflectThenWriteLM:
         if self.diagnose.calls == 0 and self.expected_diagnosis_sha256 and \
                 lb.messages_sha256(d_messages) != self.expected_diagnosis_sha256:
             raise FirstPromptMismatch("first diagnosis prompt differs from the approved hash")
-        diagnosis = self.diagnose(d_messages)
-        receipt = {"call": len(self.receipts) + 1, "diagnosis_sha256": _sha(diagnosis.encode()),
-                   "diagnosis_chars": len(diagnosis), "diagnosis_finish_reason": self.diagnose.last_finish_reason}
+        # A truncated or otherwise invalid diagnosis (SyntaxError/ValueError from DiagnosisLM._preflight,
+        # e.g. hit max_tokens) is retried once, then the proposal falls back to no diagnosis, rather than
+        # letting the exception reach GEPA's own per-task retry (which burns extra, unbounded broker
+        # requests -- the actual cause of a reflection-budget BROKER_STOPPED seen in practice). A genuine
+        # broker halt (ob.BrokerHalted: HTTP 429/5xx or a connection failure) always propagates immediately;
+        # only a bad-response preflight failure gets the retry-then-fallback treatment.
+        diagnosis, fallback_reason = None, None
+        for attempt in (1, 2):
+            try:
+                diagnosis = self.diagnose(d_messages)
+                break
+            except (SyntaxError, ValueError) as exc:
+                fallback_reason = f"attempt {attempt}: {exc}"
+                if attempt == 2:
+                    diagnosis = None
+        receipt = {"call": len(self.receipts) + 1,
+                   "diagnosis_sha256": _sha(diagnosis.encode()) if diagnosis is not None else None,
+                   "diagnosis_chars": len(diagnosis) if diagnosis is not None else 0,
+                   "diagnosis_finish_reason": self.diagnose.last_finish_reason,
+                   "diagnosis_fallback": fallback_reason}
         self.receipts.append(receipt)
+        if diagnosis is None:
+            return self.writer(messages)
         full = with_diagnosis(messages, diagnosis)
         return self.writer(full, guard_messages=with_diagnosis(messages, DIAGNOSIS_PLACEHOLDER))
 
@@ -882,10 +901,13 @@ def _gepa_worker_v3(args) -> dict:
         summary.update(status="EVAL_BUDGET", reason=str(exc))
         code = 5
     writer = lm.writer if isinstance(lm, ReflectThenWriteLM) else lm
+    d_receipts = lm.receipts if isinstance(lm, ReflectThenWriteLM) else []
     summary.update(reflection_calls=writer.calls, model_valid_responses=writer.valid_responses,
                    model_preflight_failures=writer.preflight_failures, reflection_receipts=writer.receipts,
                    diagnosis_calls=lm.diagnose.calls if isinstance(lm, ReflectThenWriteLM) else 0,
-                   diagnosis_receipts=lm.receipts if isinstance(lm, ReflectThenWriteLM) else [])
+                   diagnosis_receipts=d_receipts,
+                   diagnosis_fallback_count=sum(1 for r in d_receipts if r.get("diagnosis_fallback")),
+                   diagnosis_missing_count=sum(1 for r in d_receipts if r.get("diagnosis_sha256") is None))
     (args.run_dir / "summary.json").write_text(json.dumps(summary, indent=2, default=str) + "\n")
     if code:
         sys.exit(code)
@@ -1424,7 +1446,7 @@ def _wait_ready(port):
 
 
 def _live_v3(args):
-    camp = CAMP
+    camp = getattr(args, "campaign_dir", None) or CAMP
     cc = _load(camp / "campaign-config.json")
     if cc.get("evox_strategy_evolution") is not False:
         raise SystemExit("refusing: evox_strategy_evolution must be false")
@@ -1478,8 +1500,8 @@ def _live_v3(args):
         out = _sequential_v3(run_args) if args.engine == "sequential" else _launch_v3(run_args)
         out["approved_payload_sha256"] = digest
         # finalize reads the ledgers from here (paths relative to the repository root)
-        out.update(ledger=str(ledger.relative_to(ROOT)),
-                   reflection_ledger=str(rledger.relative_to(ROOT)) if cap else None)
+        out.update(ledger=str(Path(ledger).resolve().relative_to(ROOT.resolve())),
+                   reflection_ledger=str(Path(rledger).resolve().relative_to(ROOT.resolve())) if cap else None)
         _write(run_dir, out)
         return out
     finally:
@@ -1532,11 +1554,18 @@ def _parser():
                     help="write first-prompt-ENGINE-sSEED.{md,sha256} into the campaign directory")
     for name in ("approval-hash", "check-approval", "campaign-spend"):
         a = sub.add_parser(name)
+        a.add_argument("--campaign-dir", type=Path, default=CAMP,
+                       help="directory holding campaign-config.json/broker-config.json (default: the "
+                            "production sort-m9-v3-260925 campaign)")
         if name == "approval-hash":
             a.add_argument("--write-material", type=Path)
     lv = sub.add_parser("live")
     lv.add_argument("--engine", required=True, choices=ARMS)
     lv.add_argument("--seed", required=True, type=int)
+    lv.add_argument("--campaign-dir", type=Path, default=CAMP,
+                    help="directory holding campaign-config.json/broker-config.json/broker-config-reflection.json "
+                         "(default: the production sort-m9-v3-260925 campaign); the approval hash is computed "
+                         "from this same directory, so a reduced check config here is covered by its own hash")
     return parser
 
 
@@ -1544,14 +1573,16 @@ def main(argv=None):
     args = _parser().parse_args(argv)
     if args.action == "approval-hash":
         if args.write_material:
-            args.write_material.write_text(json.dumps(approval_material_v3(), indent=2, sort_keys=True) + "\n")
-        print(approval_hash_v3())
+            args.write_material.write_text(
+                json.dumps(approval_material_v3(args.campaign_dir), indent=2, sort_keys=True) + "\n")
+        print(approval_hash_v3(args.campaign_dir))
         return
     if args.action == "check-approval":
-        print(check_approval_v3())
+        print(check_approval_v3(args.campaign_dir))
         return
     if args.action == "campaign-spend":
-        print(json.dumps({"charged_usd": campaign_spend(), "ledgers": [p.name for p in v3_ledgers()]}))
+        print(json.dumps({"charged_usd": campaign_spend(args.campaign_dir),
+                          "ledgers": [p.name for p in v3_ledgers(args.campaign_dir)]}))
         return
     if args.action == "first-prompt":
         out = captured_first_prompts(args.capture_dir, args.reflection_capture_dir)

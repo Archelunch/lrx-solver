@@ -1,0 +1,33 @@
+{
+  "note": "CHECK config (reduced live probe, offline-prepared 2026-09-25, no live call made). Same seed, lean.lock.json and evaluator as campaign-config.json. lean_task.py/lean_backends.py have no milestone/target-scoping CLI flag: GEPA's dataset is the fixed 11 instances (L1-L3, M1-M7, M9) every run, so 'target L1' below means this check is aimed at L1 as the priority/simplest target via the existing combined score and per-target closed_targets, not a run that scopes evaluation to L1 alone. Only engines.sequential (iterations, max_evals, max_requests sub-cap) is reduced, for a single sequential 10-iteration wiring/cost check via `python -m integrations.lean_backends live --engine sequential --broker-config broker-config-check.json --campaign-config campaign-config-check.json`.",
+  "seed": "autoresearch/lean-loop-260925/seed.lean",
+  "python": ".venv-official/bin/python",
+  "eval_cache": "autoresearch/lean-loop-260925/eval-cache",
+  "broker_port": 8898,
+  "eval_timeout": 600,
+  "evaluation": "one Lean run per distinct body (stage A lean --json, B leanchecker, C lrxaudit), cached by body hash; GEPA's 11 instances (L1-L3, M1-M7, M9) share it; max_evals counts uncached runs",
+  "engines": {
+    "gepa": {
+      "iterations": 30,
+      "max_evals": 120,
+      "wall_seconds": 14400,
+      "max_requests": 35
+    },
+    "sequential": {
+      "iterations": 10,
+      "max_evals": 14,
+      "max_evals_note": "iterations + 4 (production used iterations + 10 for the 30-iteration arm), for a 10-iteration check; each candidate needs at most one uncached Lean run (cached by body hash) across the 11 fixed instances.",
+      "wall_seconds": 14400,
+      "max_requests": 14
+    },
+    "adaevolve": {
+      "iterations": 30,
+      "max_evals": 40,
+      "wall_seconds": 14400,
+      "max_requests": 35
+    }
+  },
+  "max_requests_note": "CHECK: engines.sequential.max_requests is the requested sub-cap of 14 (iterations + 4). The shared pool broker-config-check.json.max_requests is set to 14 to match, matching the config's own contact_ceiling_formula from max_usd 3 (see that file).",
+  "rules": "Pre-registered (SPEC-track3 section 6): success = an engine arm closes a target that the tactic-sweep control did not, confirmed by lean_finalize (fresh uncached re-evaluation, leanchecker --fresh) and a human read; comparator is not installed on this machine. Kill = no gain in closed targets plus milestones over the sweep control after 60 proposals in an arm.",
+  "order_note": "sequential and GEPA first at matched iteration counts, AdaEvolve after GEPA shows one productive cycle."
+}

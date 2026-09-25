@@ -1,0 +1,7 @@
+attempt*-ledgers/
+*.receipts/
+live-*/verified/evaluations/
+live-*/output/
+live-*/stage/
+*.log
+eval-cache/

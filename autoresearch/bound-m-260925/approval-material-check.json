@@ -1,0 +1,122 @@
+{
+  "bound_backends_sha256": "257ba45e5549b25b555a80d306bcda57ec05d26f888a63ca131acce2cb402fc3",
+  "broker_config": {
+    "api_key_env": "GEMINI_API_KEY",
+    "chars_per_reasoning_token_assumption": 3,
+    "contact_ceiling_formula": "min(floor(max_usd / reservation_usd_per_request_conservative), 400) = min(floor(4 / 0.1666368), 400) = 24; max_requests is set to the requested sub-cap 25, ONE ABOVE this formula ceiling of 24 -- flagged below, not silently resolved.",
+    "contact_ceiling_raw": 24,
+    "input_usd_per_million": 0.825,
+    "ledger": "autoresearch/bound-m-260925/broker-ledger-bound.json",
+    "max_prompt_bytes": 120000,
+    "max_requests": 25,
+    "max_tokens": 8192,
+    "max_usd": 4.0,
+    "model": "gemini-3.8-flash",
+    "model_note": "Copied unchanged from sort-m9-260925; re-verify against a live /v1beta/openai/models listing and current pricing before use.",
+    "note": "CHECK config (reduced live probe, offline-prepared 2026-09-25): broker for a single bound-m sequential, 20-iteration wiring/cost check. Same model/pricing/reasoning fields as broker-config.json; only max_usd and max_requests are reduced. Ledger: broker-ledger-bound.sequential.json (shared name with a production sequential run -- do not run this check after/alongside a production sequential run without renaming).",
+    "output_usd_per_million": 4.125,
+    "price_source": "Copied unchanged from the applied broker-config.json.",
+    "price_source_date": "2026-09-24",
+    "reasoning_cap_chars_conservative": 24000,
+    "reasoning_cap_tokens": 8000,
+    "reasoning_effort": "low",
+    "reasoning_effort_note": "Copied unchanged from the applied broker-config.json.",
+    "reasoning_effort_support_confirmed": true,
+    "reservation_formula": "((max_prompt_bytes + 1024) * input_usd_per_million + (max_tokens + reasoning_cap_tokens) * output_usd_per_million) / 1e6",
+    "reservation_usd_per_request_conservative": 0.1666368,
+    "run": "bound-m-260925",
+    "timeout": 480,
+    "upstream_stream": true,
+    "upstream_url": "https://generativelanguage.googleapis.com/v1beta/openai"
+  },
+  "campaign_config": {
+    "broker_port": 8898,
+    "claim_rule": "An engine claims progress only if its frozen finalist beats control (b) (integrations/bound_control_sweeplp.py, exact LP over the whole sweep pool) on the holdout; the campaign seed is (b16).",
+    "engines": {
+      "adaevolve": {
+        "iterations": 40,
+        "max_evals": 50,
+        "max_requests": 45,
+        "wall_seconds": 21600
+      },
+      "evox": {
+        "iterations": 40,
+        "max_evals": 50,
+        "max_requests": 45,
+        "wall_seconds": 21600
+      },
+      "gepa": {
+        "iterations": 40,
+        "max_evals": 1600,
+        "max_requests": 45,
+        "wall_seconds": 21600
+      },
+      "sequential": {
+        "iterations": 20,
+        "max_evals": 25,
+        "max_evals_note": "Halved from the production 50 (screen+full staged evaluation over up to 303 families per candidate, but only failing/changed families need re-certification) for a 20-iteration check.",
+        "max_requests": 25,
+        "wall_seconds": 21600
+      }
+    },
+    "eval_cache": "autoresearch/bound-m-260925/eval-cache",
+    "eval_timeout": 900,
+    "evaluation": "staged: SkyDiscover and sequential score each candidate on the 30-family screen (15 per m, in development.json 'screen'); a candidate valid on the whole screen that ties or beats the best screen score gets a full development evaluation (303 families). GEPA evaluates per family: trainset = development minus screen (273), valset = screen, reflection minibatch 3, so one proposal costs 2*3 + 30 = 36 metric calls. Every call runs the candidate under Seatbelt, 3 s CPU / 5 s wall per family.",
+    "frozen_manifest": "autoresearch/bound-m-260925/frozen/manifest.json",
+    "max_requests_note": "CHECK: engines.sequential.max_requests is the requested sub-cap of 25 (the sub-cap requested for this check; the shared pool broker-config-check.json.max_requests is set to 25 to match it explicitly, one below the 24 the config's own contact_ceiling_formula would derive from max_usd 4 -- flagged, not resolved by reducing the sub-cap below what was asked).",
+    "note": "CHECK config (reduced live probe, offline-prepared 2026-09-25, no live call made). Same frozen data, seed and evaluator as campaign-config.json. Only engines.sequential (iterations, max_evals, max_requests sub-cap) is reduced, for a single sequential 20-iteration wiring/cost check via `python -m integrations.bound_backends live --engine sequential --broker-config broker-config-check.json --campaign-config campaign-config-check.json`.",
+    "order_note": "GEPA and the sequential control first at matched iteration counts; AdaEvolve and EvoX only after GEPA shows one productive cycle. EvoX strategy evolution is disabled at every iteration count (it runs generated Python outside the sandbox).",
+    "python": ".venv-official/bin/python",
+    "seed": "integrations/bound_control_sweep.py"
+  },
+  "development_sha256": "88567c75d13af24bca6c9cbdd5fa96bd665e4d0f5589a856a8a4382ff344908e",
+  "dry_run_payload": {
+    "max_completion_tokens": 8192,
+    "messages": [
+      {
+        "content": "<research_context placeholder; not sent by dry-run>",
+        "role": "system"
+      },
+      {
+        "content": "<gepa_reflection prompt placeholder; not sent by dry-run>",
+        "role": "user"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "low",
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  "evaluator": {
+    "contract": "bound-contract-2: candidate defines certify(family) -> {\"words\": [...], \"weights\"?: [...], \"note\"?: str}; 1..32 words over L,R,X of at most 4000 letters; weights optional strings p or p/q (at most 40 digits each) or ints below 10**40 forming a probability vector (checked and reported, never trusted). INVALID_OUTPUT unless every word sorts the unit base with no zero-zero swap (lrx_m.Profile) and passes literal lifted execution at z=0, e_j, 2e_j, e_j+e_{j+1}, (1..1) with length F(z) <= B+beta.z. CERTIFIED iff the exact LP optimum (lift_evaluator.mixture_lp) has weighted base < T+1 and weighted slopes <= m-2, T = T_m(m+k). gap = lift_evaluator.gap_lp with strict T+1; BOUNDARY iff not certified and gap 0. Invalid and INCOMPLETE (timeout 3 s CPU / 5 s wall per family, crash, worker failure; one process per family, no fork; a family whose parent-measured process CPU exceeds 5 s or its reported time by more than 2 s import/startup is INCOMPLETE) get gap 4000. Per m: pct = 100 C/N, W = max gap, G = mean gap over valid. combined = mean_m pct + min_m pct + 0.06 V/N + 0.06/(1+max_m W) + 0.03/(1+mean_m G). Source guard (a screen, not a guarantee): no str constant or constant concatenation (a + b, sep.join([...])) >= 24 chars that is >= 90% L/R/X/l/r/x, at most 512 such characters in all str constants, at most 4096 characters of non-docstring str constants, no literal container > 64 elements, at most 256 constant elements in all literal containers, no int constant >= 10**40, no bytes constant > 256 bytes.",
+    "hash": "d79ff01251baae2b9830d49d622f74973c18dfdf4d6dd428c991e10829a78f16",
+    "version": "bound-eval-2"
+  },
+  "first_prompt_adaevolve_sha256": "a0d78137c762596871b192211e2798e9456a33e965c1fa720e7cdbcf9a09aa7a",
+  "first_prompt_evox_sha256": "2909ad6adab4930e2cfb13203831b254c70af0b41648be6c2cd99738c12c1aa8",
+  "first_prompt_gepa_sha256": "573d5559f747bfdee2d0885f6173aa181e2f076960b67e8094f044770f6b260c",
+  "first_prompt_sequential_sha256": "c33daded2be1a775ac4639396128548767ce6fed20c495dd90a08dec217a7f90",
+  "frozen_manifest_sha256": "e65a06f52db9038597560ef93c1bd9d48babe15965b69326512ceb2fa0ac4c2e",
+  "lift_backends_sha256": "05ef38f705033eda93c179a6fd1c506b2bedeace945926473ebbbaa2236a0905",
+  "objective": "Improve this Python certify(family) program (the seed builds a pool of cyclic-sweep sorting words: every target rotation, cyclic assignment of the zeros and sweep direction, prices each word by the Lemma 1 cost, and returns the 16 with the lowest (max slope, base)). Return the entire replacement Python source in one fenced code block, with no prose and no docstring longer than a few lines. Raise the number of certified families, first on the worst m, by constructing words whose slopes beta_j stay at most m-2 (fewer X letters touching each zero block, fewer rotation passes across it) and by choosing the returned word set well. Only development families are shown.",
+  "official_backends_sha256": "284ce1e6c6d8054c293d416574a8388ae6f85d5b3f489433e9b71602429649fe",
+  "packet_format": {
+    "artifact_max": 2000,
+    "marker": "BOUND_PACKET_V1",
+    "max_chars": 3000,
+    "scope": "development only"
+  },
+  "seed_sha256": "455c1f8ebfb42a050d75227efc6b553f9ae4dd0fc9387306c0be0b33afc076fc",
+  "sky_settings": {
+    "adaevolve_diff_example_removed": true,
+    "cascade_evaluation": false,
+    "evox_strategy_evolution": false,
+    "inject_evaluator_context": false,
+    "num_context_programs": 1,
+    "random_seed": 260925
+  },
+  "system_prompt": "Find a uniform construction of LRX sorting words whose length is provably bounded for a whole family of states. L rotates the vector left (first entry to the end), R rotates right, X swaps the first two entries. A family (a, S) is a label order a (a permutation of 1..m) and a set S of nonempty gaps (gap g lies after the first g labels; g = 0 leading, g = m trailing); its states have l_j >= 1 zeros in the j-th gap of S, and its unit base has exactly one zero per gap. The candidate source must define certify(family) -> {'words': [...]} returning 1..32 words over L, R, X (at most 4000 letters each) that sort the unit base to (1, ..., m, 0, ..., 0) and never swap two zeros; optional 'weights' (rational strings) and 'note' are only reported. The trusted evaluator prices each word with the research group's Lemma 1 (exact, the same for every m): a word stretches to every block length, |W(z)| <= B + sum_j beta_j z_j with z_j = l_j - 1, B = (number of X) + sum over segments of |net rotation|, beta_j = 2 * (X letters touching block j) + sum over segments of |signed crossings of block j|, where a segment ends at every X. It then solves an exact LP over your words: the family is CERTIFIED when some mixture has weighted B < T + 1 and every weighted beta_j <= m - 2, with T = m(m+1)/2 + (k-1)(m-2) and k = |S|. That proves d(v) <= T_m(n) for every state of the family at every number of zeros. The binding constraint is usually the slope: sweeps cross zero blocks too often. Each family gets 3 s of CPU (module import 1 s); exact LP or search over a few hundred candidate words per family fits. Score per m: percentage of families certified (the worst m counts twice), plus small terms for valid output and a small gap. Development families are m = 9 and 10, reversal-type orders oversampled; the holdout has unseen families and an unseen m, so the program must work for any m with no tables: string constants over L/R/X of 24+ characters, literal containers with more than 64 elements and bytes constants over 256 bytes are rejected. Stdlib only, at most 64 KiB. Do not read files, the network, or environment variables. Misses prove nothing.",
+  "upstream_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+}

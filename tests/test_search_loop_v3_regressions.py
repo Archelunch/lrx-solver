@@ -4,10 +4,11 @@ from pathlib import Path
 import tempfile
 import unittest
 
+from integrations import official_backends as ob
 from integrations import sort_control_naive as naive
 from integrations import sort_loop3 as L
 from integrations import sort_loop3_finalize as F
-from tests.test_search_loop_v3 import NAIVE, SWEEP, VENV, scored, tables42, venv_json
+from tests.test_search_loop_v3 import NAIVE, SWEEP, VENV, Server, chat, scored, tables42, venv_json
 from tests.test_search_sort_task import small_states, write_set
 
 EMPTY = "def sort_word(v):\n    return ''\n"  # test-authored seed: NOT_SORTED everywhere
@@ -202,6 +203,84 @@ class LedgerStatsTest(unittest.TestCase):
             missing = F.ledger_stats(Path(d), "gepa", 2)
             self.assertIsNone(missing["flash_usd"])
             self.assertIsNone(missing["reflection_calls"])
+
+class DiagnosisFallbackTest(unittest.TestCase):
+    """A truncated/invalid diagnosis (live 2026-09-25 sort-m9-v3-check: gemini-3.1-pro-preview truncated at
+    max_tokens 3000, GEPA's own per-task retry burned the reflection sub-cap, BROKER_STOPPED on HTTP 429) must
+    be retried once by ReflectThenWriteLM itself, then fall back to proposing without a diagnosis -- never
+    reach GEPA's own retry, and never raise. A genuine broker halt (429/5xx) must still propagate immediately,
+    uncaught and unretried, so BROKER_STOPPED still only means an actual broker halt."""
+
+    def setUp(self):
+        self.diag_calls, self.diag_finish = 0, "length"  # "length" == truncated every call, by default
+
+        def diag(path, body):
+            self.diag_calls += 1
+            if self.diag_finish == 429:
+                return 429, {"error": "stop"}
+            return chat("A diagnosis.\n```python\nimport os\n```\nmore.", finish=self.diag_finish)
+
+        def write(path, body):
+            return chat("```python\ndef sort_word(v):\n    return ''\n```")
+        self.d, self.w = Server(diag), Server(write)
+
+    def tearDown(self):
+        self.d.close()
+        self.w.close()
+
+    def lm(self):
+        return L.make_lm(self.w.url, "flash", 100, 10, None, reflection_url=self.d.url, reflection_model="pro",
+                         reflection_max_tokens=50, reflection_timeout=10)
+
+    def test_truncated_diagnosis_retries_once_then_falls_back_without_raising(self):
+        lm = self.lm()
+        out = lm([{"role": "system", "content": "S"}, {"role": "user", "content": "U"}])
+        self.assertIn("def sort_word", out)  # the proposal still completes
+        self.assertEqual(self.diag_calls, 2)  # one retry, not GEPA's own unbounded per-task retries
+        sent = self.w.requests[0][1]["messages"]
+        self.assertNotIn(L.DIAGNOSIS_APPEND, sent[-1]["content"])  # writer never saw a diagnosis
+        receipt = lm.receipts[0]
+        self.assertIsNone(receipt["diagnosis_sha256"])
+        self.assertIsNotNone(receipt["diagnosis_fallback"])
+
+    def test_diagnosis_recovers_on_the_retry(self):
+        seq = iter(["length", "stop"])
+        self.diag_finish = "length"
+
+        def diag(path, body):
+            self.diag_calls += 1
+            return chat("A diagnosis.", finish=next(seq))
+        self.d.close()
+        self.d = Server(diag)
+        lm = self.lm()
+        out = lm([{"role": "user", "content": "U"}])
+        self.assertIn("def sort_word", out)
+        self.assertEqual(self.diag_calls, 2)
+        sent = self.w.requests[0][1]["messages"]
+        self.assertIn(L.DIAGNOSIS_APPEND, sent[-1]["content"])  # the second, successful diagnosis was used
+        receipt = lm.receipts[0]
+        self.assertIsNotNone(receipt["diagnosis_sha256"])  # recovered
+        self.assertIsNotNone(receipt["diagnosis_fallback"])  # but the first attempt is still on record
+
+    def test_genuine_broker_halt_is_not_retried_or_turned_into_a_fallback(self):
+        self.diag_finish = 429
+        lm = self.lm()
+        with self.assertRaises(ob.BrokerHalted):
+            lm([{"role": "user", "content": "U"}])
+        self.assertEqual(self.diag_calls, 1)  # no retry burn on a genuine halt
+        self.assertEqual(len(self.w.requests), 0)  # the writer (flash) was never called either
+
+    def test_gepa_worker_records_fallback_counts_in_the_summary(self):
+        with tempfile.TemporaryDirectory() as d:
+            writer = L.SortBrokerLMv3(self.w.url, "flash", 100, None, 10, None)
+            diag = L.DiagnosisLM(self.d.url, "pro", 50, None, 10, None)
+            lm = L.ReflectThenWriteLM(diag, writer)
+            lm([{"role": "user", "content": "U"}])
+            lm([{"role": "user", "content": "V"}])
+            self.assertEqual(self.diag_calls, 4)  # two proposals x (1 try + 1 retry) each
+            self.assertEqual(sum(1 for r in lm.receipts if r["diagnosis_fallback"]), 2)
+            self.assertEqual(sum(1 for r in lm.receipts if r["diagnosis_sha256"] is None), 2)
+
 
 if __name__ == "__main__":
     unittest.main()

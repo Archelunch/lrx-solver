@@ -1,0 +1,397 @@
+{
+  "engine": "sequential",
+  "task": "lean-loop-260925",
+  "seed_sha256": "023a8b737d977efda8d13ea9a748a7acbe80e07ec47083d83c835acb1aeb171f",
+  "lean_lock_digest": "bdc808a21e382e667867f19ab2381473290b8394d6f07622f08cd28275552ed3",
+  "broker_url": "http://127.0.0.1:8898/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 10,
+  "max_tokens": 8192,
+  "reasoning_effort": "low",
+  "max_evals": 14,
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/lean-loop-260925/live-sequential-260925-175002",
+  "status": "COMPLETE",
+  "steps": [
+    {
+      "step": 1,
+      "packet_seen": true,
+      "request_sha256": "dcf265e19d5dda1bc565d534e16ab8d933021c328a565ffc8fc2e291e5eeb8c1",
+      "finish_reason": "stop",
+      "candidate_hash": "15bac01c19d9577662a7e67dc8e593f03f15e9742ef898862dce0d80fb232a85",
+      "score": -0.015,
+      "closed_targets": [],
+      "accepted": false,
+      "outcome": "rejected: combined -0.0150 (VALID, targets none) did not beat 0.0000"
+    },
+    {
+      "step": 2,
+      "packet_seen": true,
+      "request_sha256": "86f9b57c327994a82086dcd30446fe6e68a8cb745b93b1b529979556ea02cf64",
+      "finish_reason": "stop",
+      "candidate_hash": "a691a362b1c4c2cdd88e5b61a1681a771cd9b9eed53793b553a49da5eaf05565",
+      "score": 0.045,
+      "closed_targets": [],
+      "accepted": true
+    },
+    {
+      "step": 3,
+      "packet_seen": true,
+      "request_sha256": "cb08c4fa4c30149c38801d2a1bb84b240d0cca96caf93d8f5728e852cb71ea74",
+      "finish_reason": "stop",
+      "candidate_hash": "1adcb23e5ea698162d46a0821d008fd0bb3a44d9ca0609cbb8ec12cf15129db7",
+      "score": 0.05,
+      "closed_targets": [],
+      "accepted": true
+    },
+    {
+      "step": 4,
+      "packet_seen": true,
+      "request_sha256": "e85953b5f48d761c318a941407eeefff262f88aeb982264fa1d3f707de0f0f77",
+      "finish_reason": "stop",
+      "candidate_hash": "24ae99e3ed64b42a13b1ce30096a70dfeb395e992fd424633cddafc7ad191939",
+      "score": 0.03,
+      "closed_targets": [],
+      "accepted": false,
+      "outcome": "rejected: combined 0.0300 (VALID, targets none) did not beat 0.0500"
+    },
+    {
+      "step": 5,
+      "packet_seen": true,
+      "request_sha256": "f419fba1a1c65b142c4df4ff0f6511790b7025771f3d34b7a95e13557242d448",
+      "finish_reason": "stop",
+      "candidate_hash": "99f6044dd54ac4efccc67b75a4b6eee8693942afca404e639c123416aaa633b3",
+      "score": 0.03,
+      "closed_targets": [],
+      "accepted": false,
+      "outcome": "rejected: combined 0.0300 (VALID, targets none) did not beat 0.0500"
+    },
+    {
+      "step": 6,
+      "packet_seen": true,
+      "request_sha256": "a3d2b41c6bbe9077062fdbe91f0f41f8a49d0a37de70ba335e966f026f80cadb",
+      "finish_reason": "stop",
+      "candidate_hash": "4ed26306577b7d6426e17ad099bf42f2bfc7587fec3fd4b872d00e2328add27e",
+      "score": 0.05,
+      "closed_targets": [],
+      "accepted": false,
+      "outcome": "rejected: combined 0.0500 (VALID, targets none) did not beat 0.0500"
+    },
+    {
+      "step": 7,
+      "packet_seen": true,
+      "request_sha256": "5b9c5b3477aedb62fa230b138e9fad3d0f363cbaa9b02d341b9beb35aef83dee",
+      "finish_reason": "stop",
+      "candidate_hash": "e16564858f910a071dc1ace319fa861d7ceae70b54642f0442d44bd96bfd60d7",
+      "score": 0.06,
+      "closed_targets": [],
+      "accepted": true
+    },
+    {
+      "step": 8,
+      "packet_seen": true,
+      "request_sha256": "23458491a4a0da8181c1d51ec0686d900cedd753cc9959a1774709b8c2b96576",
+      "finish_reason": "stop",
+      "candidate_hash": "30047a2f9be1a9a6f4b316d72ad26e95c0baef9140c003aa6a7fe736cd570c60",
+      "score": 0.03,
+      "closed_targets": [],
+      "accepted": false,
+      "outcome": "rejected: combined 0.0300 (VALID, targets none) did not beat 0.0600"
+    },
+    {
+      "step": 9,
+      "packet_seen": true,
+      "request_sha256": "7f2acb7b6ee5bb99a4227083ee3d92a5ee4f7af6c103dfcf5cb4608ec664fc40",
+      "finish_reason": "stop",
+      "candidate_hash": "12766522420b111887ceeba67120b8479839a3f05778db72fe062ef6da9fb09d",
+      "score": 0.06,
+      "closed_targets": [],
+      "accepted": false,
+      "outcome": "rejected: combined 0.0600 (VALID, targets none) did not beat 0.0600"
+    },
+    {
+      "step": 10,
+      "packet_seen": true,
+      "request_sha256": "72cb192af9a9425edf17c5361ce82d513a078dbe1781f3b8cbcdbc3d38b4e345",
+      "finish_reason": "stop",
+      "candidate_hash": "7dbb6e459c090e6878355aeae44a09da2720743e828e30279b3413c79c2dce07",
+      "score": 0.03,
+      "closed_targets": [],
+      "accepted": false,
+      "outcome": "rejected: combined 0.0300 (VALID, targets none) did not beat 0.0600"
+    }
+  ],
+  "mechanism_evidence": {
+    "accepted_steps": [
+      2,
+      3,
+      7
+    ],
+    "packet_seen_steps": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "truncated_steps": []
+  },
+  "candidate_evaluations": {
+    "requests": 12,
+    "failures": 0,
+    "best": {
+      "combined_score": 0.06,
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "e16564858f910a071dc1ace319fa861d7ceae70b54642f0442d44bd96bfd60d7"
+    },
+    "memo_hits": 0
+  },
+  "evaluation_trace": [
+    {
+      "combined_score": 0.0,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [],
+      "candidate_hash": "023a8b737d977efda8d13ea9a748a7acbe80e07ec47083d83c835acb1aeb171f",
+      "ordinal": 1,
+      "final": true,
+      "cache_hit": false,
+      "packet_sha256": "5a3b892615a4a46b757ee941f2fd9b3edf99b488e1e1fb51a2100e57547227b6"
+    },
+    {
+      "combined_score": -0.015,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1"
+      ],
+      "candidate_hash": "15bac01c19d9577662a7e67dc8e593f03f15e9742ef898862dce0d80fb232a85",
+      "ordinal": 2,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "ca69acf67eed66438f9a746d2cafa52053fc7f51f3cb7a52e6f23550551e145f"
+    },
+    {
+      "combined_score": 0.045,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "a691a362b1c4c2cdd88e5b61a1681a771cd9b9eed53793b553a49da5eaf05565",
+      "ordinal": 3,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "e787a115ee104e22bc818840a0fd0f18405fc5e82010962760db749782092b57"
+    },
+    {
+      "combined_score": 0.05,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "1adcb23e5ea698162d46a0821d008fd0bb3a44d9ca0609cbb8ec12cf15129db7",
+      "ordinal": 4,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "b51f780642ca670c7b35c17094ae6b41a09a7016cc49779cfe6dff73313164dc"
+    },
+    {
+      "combined_score": 0.03,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "24ae99e3ed64b42a13b1ce30096a70dfeb395e992fd424633cddafc7ad191939",
+      "ordinal": 5,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "f4ccdd23d4b8f6c3c5af340c567ee2447b8a7225cd35c1c98add2d210f1ff7ba"
+    },
+    {
+      "combined_score": 0.03,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "99f6044dd54ac4efccc67b75a4b6eee8693942afca404e639c123416aaa633b3",
+      "ordinal": 6,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "0a6c229522fbee9a71dc5fb960e7b71a0f40cdad725cf762f75d1b8fa89cc5be"
+    },
+    {
+      "combined_score": 0.05,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "4ed26306577b7d6426e17ad099bf42f2bfc7587fec3fd4b872d00e2328add27e",
+      "ordinal": 7,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "e308ecc7835482fe6b209141cd8ee0cbe014b244c0347d31c1b7655b21b415af"
+    },
+    {
+      "combined_score": 0.06,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "e16564858f910a071dc1ace319fa861d7ceae70b54642f0442d44bd96bfd60d7",
+      "ordinal": 8,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "b92f20ce65d0816c277c51710abddcdacb903dbd4ad3286f725a70a8f6f88843"
+    },
+    {
+      "combined_score": 0.03,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "30047a2f9be1a9a6f4b316d72ad26e95c0baef9140c003aa6a7fe736cd570c60",
+      "ordinal": 9,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "1ffe953eef0365bcede29ada9adf8e12f9b4cf1f9234b6b8e02228e5e1bc6567"
+    },
+    {
+      "combined_score": 0.06,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "12766522420b111887ceeba67120b8479839a3f05778db72fe062ef6da9fb09d",
+      "ordinal": 10,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "5532ec3df196f892beeee778ff6f37daeb79c42fa9e551505428ba8da2a7ecba"
+    },
+    {
+      "combined_score": 0.03,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "7dbb6e459c090e6878355aeae44a09da2720743e828e30279b3413c79c2dce07",
+      "ordinal": 11,
+      "final": false,
+      "cache_hit": false,
+      "packet_sha256": "2f8ed7129bb99425e45a08b1283f4b830b223e5fdbd590fafbfbd7a5e36bec42"
+    },
+    {
+      "combined_score": 0.06,
+      "status": "VALID",
+      "closed_targets": [],
+      "closed_milestones": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "candidate_hash": "e16564858f910a071dc1ace319fa861d7ceae70b54642f0442d44bd96bfd60d7",
+      "ordinal": 12,
+      "final": true,
+      "cache_hit": false,
+      "packet_sha256": "b92f20ce65d0816c277c51710abddcdacb903dbd4ad3286f725a70a8f6f88843"
+    }
+  ],
+  "proposal_hashes": [
+    "15bac01c19d9577662a7e67dc8e593f03f15e9742ef898862dce0d80fb232a85",
+    "a691a362b1c4c2cdd88e5b61a1681a771cd9b9eed53793b553a49da5eaf05565",
+    "1adcb23e5ea698162d46a0821d008fd0bb3a44d9ca0609cbb8ec12cf15129db7",
+    "24ae99e3ed64b42a13b1ce30096a70dfeb395e992fd424633cddafc7ad191939",
+    "99f6044dd54ac4efccc67b75a4b6eee8693942afca404e639c123416aaa633b3",
+    "4ed26306577b7d6426e17ad099bf42f2bfc7587fec3fd4b872d00e2328add27e",
+    "e16564858f910a071dc1ace319fa861d7ceae70b54642f0442d44bd96bfd60d7",
+    "30047a2f9be1a9a6f4b316d72ad26e95c0baef9140c003aa6a7fe736cd570c60",
+    "12766522420b111887ceeba67120b8479839a3f05778db72fe062ef6da9fb09d",
+    "7dbb6e459c090e6878355aeae44a09da2720743e828e30279b3413c79c2dce07"
+  ],
+  "seed_result": {
+    "combined_score": 0.0,
+    "status": "VALID",
+    "statuses": {
+      "L1": "sorry",
+      "L2": "sorry",
+      "L3": "sorry",
+      "M1": "sorry",
+      "M2": "sorry",
+      "M3": "sorry",
+      "M4": "sorry",
+      "M5": "sorry",
+      "M6": "sorry",
+      "M7": "sorry",
+      "M9": "sorry"
+    },
+    "closed_targets": [],
+    "closed_milestones": [],
+    "aux_count": 0
+  },
+  "verified_best_hash": "e16564858f910a071dc1ace319fa861d7ceae70b54642f0442d44bd96bfd60d7",
+  "verified_best_result": {
+    "combined_score": 0.06,
+    "status": "VALID",
+    "statuses": {
+      "L1": "sorry",
+      "L2": "sorry",
+      "L3": "sorry",
+      "M1": "closed",
+      "M2": "error",
+      "M3": "sorry",
+      "M4": "closed",
+      "M5": "sorry",
+      "M6": "closed",
+      "M7": "sorry",
+      "M9": "sorry"
+    },
+    "closed_targets": [],
+    "closed_milestones": [
+      "M1",
+      "M4",
+      "M6"
+    ],
+    "aux_count": 1
+  },
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "MILESTONE_PROGRESS",
+  "approved_payload_sha256": "e77362616b1581dfa798682a31f413693955ac0a8f197f06fa09963fd8de1271"
+}

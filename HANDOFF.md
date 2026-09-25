@@ -2,6 +2,25 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Latest iteration: loop v3, bounded-construction and Lean tracks built and live-checked (2026-09-25)
+
+Ultracode workflow (35 agents, Opus/Sonnet) built three tracks as new files:
+`integrations/sort_loop3*.py` (seeds, 30-instance GEPA Pareto, SkyDiscover
+pareto_objectives + cascade, rich packets with optimal words, reflection on a
+second model/ledger, 200 iterations, 3-seed runner), `integrations/bound_*.py`
+(proof-shaped objective: certify(family) scored by exact Lemma 1 lift costs and
+LP; worst gap to T over frozen family sets at m=9,10, holdout m=11) and
+`integrations/lean_*.py` + `autoresearch/lean-loop-260925/lrxlean` (Lean 4.34
+project, locked statements L1-L3, evaluator forbidding sorry/axioms/unsafe).
+Adversarial review fixed 14 issues with regression tests; 571 tests pass.
+Reduced live checks: bound sequential 20 iterations certified 164/303 vs seed
+151 ($0.46); Lean sequential closed helper milestones only ($0.08); sort v3
+GEPA needed two fixes (manifest path, reflection truncation fallback) before a
+clean run. Reports: `autoresearch/LOOP-V3-REPORT-260925.md`,
+`LIVE-CHECKS-260925.md`. Commits `fa678e5` and later. Next: full campaigns
+(3 seeds per arm) on sort v3 and bound-m within the approved caps; Lean needs
+a stronger proposer or a smaller first target.
+
 ## Latest iteration: sort-m9 v2 campaign, engines beat controls on holdout (2026-09-25)
 
 Task `sort_word(v)` for m=9 with exact BFS scoring, 0.2 s CPU per state
