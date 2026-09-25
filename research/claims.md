@@ -601,7 +601,8 @@ Tree control (`bound3_control_revtree.py`, words taken from exact tables, so
 not m-uniform): the m=9 reversal (9..1){0,4} is CERTIFIED with three leaves
 (u0 in [1,2], [3,4], >= 5), where every campaign-2 arm had gap 15/7 or 9/5;
 the m=8 analogue reproduces the group's 3-leaf tree; the m=10 tight family
-{0,10} is CERTIFIED. Of the 43 development families AdaEvolve-s2 misses, the
+{0,10} is CERTIFIED; the m=10 reversal {0,4} is not (gap 47/20: certified up
+to u0 = 4, but u0 >= 5 needs origins above 2 and no (10, r>=4) table exists). Of the 43 development families AdaEvolve-s2 misses, the
 tree control certifies 19 (16 at m=9, 3 at m=10; 8 rev_rot, 7 tight, 2 refl,
 1 high_inv, 1 uniform). Nothing at m=11: no (11,r) table yet, so the limit is
 word supply, not the certificate shape. Conditional on Lemma 1 with
