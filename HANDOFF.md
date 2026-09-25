@@ -15,10 +15,12 @@ campaign-2 gain (lift variants at every k plus Frank-Wolfe selection: +19
 families at m=12, 0 lost; all arms miss the same 14, worst the plain
 reversal with two zeros at gap 5). Broker retries transient 5xx/429 in-slot
 (4 mock tests). Suite 604 OK. The (11,2) exact table is still building
-(layer 52, low-memory builder). Next: campaign 3 on bound-eval-3 with the
-tree contract and an m-uniform refined-origin word generator for the
-reversal orbit; validation m=11, holdout m=12; first prompt and hash shown
-before any paid launch. Claims Session 17.
+(layer 52, low-memory builder). Campaign 3 is prepared offline in
+`autoresearch/bound-m-c3-260926/` (REPORT-prep.md): tree-contract driver
+`bound_c3.py`, finalize, m-uniform refined-origin seed (dev 283/303,
+validation 157/165, vs 260 and 151 for AdaEvolve-s2 as one leaf), 12 captured
+first prompts, $15 cap, pre-registered success and kill rules; approval hash
+`ebac59b3...` awaits the human, no call made. Claims Session 17.
 
 ## Latest iteration: bound-m campaign 2, three seeds, unseen m=12 (2026-09-26)
 
