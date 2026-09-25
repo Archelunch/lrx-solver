@@ -54,6 +54,17 @@ _CONSERVATIVE_CHARS_PER_REASONING_TOKEN = 3
 _RETRYABLE_FAILURE = "upstream_error"
 _MAX_CONSECUTIVE_FAILURES = 3
 
+# Bounded in-slot retry for a transient upstream failure (502/503/504, or
+# 429 with a Retry-After header): up to this many tries, all inside the one
+# reservation and receipt already made for the call, charging only the
+# final settled usage. A 4xx other than 429, a timeout, or any HTTPError
+# received after streamed answer bytes already arrived (non-idempotent) is
+# never retried here; it falls through to the existing single-shot
+# consecutive-failure handling below.
+_TRANSIENT_HTTP_CODES = (502, 503, 504)
+_MAX_TRANSIENT_TRIES = 3
+_TRANSIENT_BACKOFF_SECONDS = (2, 4, 8)
+
 
 def _append_jsonl(path, record):
     """Append one durable record; survives a hard kill mid-stream (fsync)."""
@@ -447,7 +458,7 @@ class Broker(HTTPServer):
                  max_prompt_bytes=120_000, max_response_bytes=8_000_000,
                  max_tokens=4000, reasoning_reserve=20_000, timeout=180,
                  upstream_stream=False, reasoning_effort=None,
-                 reasoning_cap_tokens=None):
+                 reasoning_cap_tokens=None, retry_transient=True):
         _validate_https_url(upstream_url)
         if not model or not api_key_env.isidentifier():
             raise ValueError("invalid model or credential variable")
@@ -483,6 +494,9 @@ class Broker(HTTPServer):
         self.reasoning_reserve = reasoning_reserve
         self.timeout = timeout
         self.upstream_stream = upstream_stream
+        # Covered by the existing reservation formula unchanged: retries
+        # happen inside one already-reserved slot, never add a reservation.
+        self.retry_transient = bool(retry_transient)
         super().__init__(address, BrokerHandler)
 
 
@@ -618,33 +632,68 @@ class BrokerHandler(BaseHTTPRequestHandler):
         settled = False
         raw = None
         stream_progress = None
+        retry_log = []
         try:
-            if streaming:
-                stream_progress = {"headers_seconds": None, "first_event_seconds": None,
-                                   "first_reasoning_seconds": None, "first_content_seconds": None,
-                                   "done_seconds": None, "cancelled_seconds": None,
-                                   "reasoning_cap_exceeded_seconds": None, "response_bytes": 0,
-                                   "event_count": 0, "reasoning_chars": 0,
-                                   "content_chars": 0, "events": []}
-                reasoning_char_cap = (
-                    self.server.reasoning_cap_tokens * _CONSERVATIVE_CHARS_PER_REASONING_TOKEN
-                    if self.server.reasoning_cap_tokens is not None else None)
-                jsonl_path = self.server.ledger.receipts_dir / f"attempt-{attempt_id:04d}.jsonl"
-                result = _buffer_chat_stream(
-                    lambda: opener.open(request, timeout=self.server.timeout),
-                    deadline_seconds=self.server.timeout,
-                    max_bytes=self.server.max_response_bytes,
-                    started=request_started, progress=stream_progress,
-                    reasoning_char_cap=reasoning_char_cap, jsonl_path=jsonl_path)
-                raw = json.dumps(result).encode()
-            else:
-                with opener.open(request, timeout=self.server.timeout) as response:
-                    raw = response.read(self.server.max_response_bytes + 1)
-                    if len(raw) > self.server.max_response_bytes:
-                        raise ValueError("upstream response byte cap exceeded")
-                    result = json.loads(raw)
-                    if not isinstance(result, dict):
-                        raise ValueError("invalid upstream response")
+            try_index = 0
+            while True:
+                try_index += 1
+                try_started = time.monotonic()
+                try:
+                    if streaming:
+                        stream_progress = {"headers_seconds": None, "first_event_seconds": None,
+                                           "first_reasoning_seconds": None, "first_content_seconds": None,
+                                           "done_seconds": None, "cancelled_seconds": None,
+                                           "reasoning_cap_exceeded_seconds": None, "response_bytes": 0,
+                                           "event_count": 0, "reasoning_chars": 0,
+                                           "content_chars": 0, "events": []}
+                        reasoning_char_cap = (
+                            self.server.reasoning_cap_tokens * _CONSERVATIVE_CHARS_PER_REASONING_TOKEN
+                            if self.server.reasoning_cap_tokens is not None else None)
+                        jsonl_path = self.server.ledger.receipts_dir / f"attempt-{attempt_id:04d}.jsonl"
+                        result = _buffer_chat_stream(
+                            lambda: opener.open(request, timeout=self.server.timeout),
+                            deadline_seconds=self.server.timeout,
+                            max_bytes=self.server.max_response_bytes,
+                            started=request_started, progress=stream_progress,
+                            reasoning_char_cap=reasoning_char_cap, jsonl_path=jsonl_path)
+                        raw = json.dumps(result).encode()
+                    else:
+                        with opener.open(request, timeout=self.server.timeout) as response:
+                            raw = response.read(self.server.max_response_bytes + 1)
+                            if len(raw) > self.server.max_response_bytes:
+                                raise ValueError("upstream response byte cap exceeded")
+                            result = json.loads(raw)
+                            if not isinstance(result, dict):
+                                raise ValueError("invalid upstream response")
+                    retry_log.append({"try": try_index, "outcome": "ok",
+                                      "elapsed_seconds": time.monotonic() - try_started})
+                    break
+                except urllib.error.HTTPError as exc:
+                    retry_after = None
+                    if exc.headers is not None:
+                        retry_after = exc.headers.get("Retry-After")
+                    transient = (exc.code in _TRANSIENT_HTTP_CODES or
+                                (exc.code == 429 and retry_after is not None))
+                    # Any bytes of a streamed answer already received makes
+                    # a retry non-idempotent; never retry that case.
+                    partial_stream = (streaming and stream_progress is not None and
+                                      stream_progress.get("response_bytes", 0) > 0)
+                    can_retry = (self.server.retry_transient and transient and
+                                not partial_stream and try_index < _MAX_TRANSIENT_TRIES)
+                    retry_log.append({"try": try_index, "outcome": exc.code,
+                                      "retry_after": retry_after, "partial_stream": partial_stream,
+                                      "elapsed_seconds": time.monotonic() - try_started,
+                                      "will_retry": can_retry})
+                    if not can_retry:
+                        raise
+                    delay = _TRANSIENT_BACKOFF_SECONDS[try_index - 1]
+                    if retry_after is not None:
+                        try:
+                            delay = max(delay, float(retry_after))
+                        except ValueError:
+                            pass
+                    time.sleep(delay)
+                    continue
             choices = result.get("choices")
             first = choices[0] if isinstance(choices, list) and choices and isinstance(choices[0], dict) else {}
             message = first.get("message") if isinstance(first.get("message"), dict) else {}
@@ -652,7 +701,7 @@ class BrokerHandler(BaseHTTPRequestHandler):
                            response_bytes=len(raw), response_payload=_sanitize(result, key),
                            latency_seconds=time.monotonic() - request_started,
                            finish_reason=first.get("finish_reason"),
-                           response_role=message.get("role"))
+                           response_role=message.get("role"), retry_attempts=retry_log)
             if stream_progress is not None:
                 receipt["stream_progress"] = _sanitize(_stream_snapshot(stream_progress), key)
             self.server.ledger.write_receipt(attempt_id, receipt)
@@ -697,7 +746,7 @@ class BrokerHandler(BaseHTTPRequestHandler):
                            response_status=exc.code if isinstance(exc, urllib.error.HTTPError) else 502,
                            response_payload=_sanitize(response_body, key),
                            latency_seconds=time.monotonic() - request_started,
-                           error_type=type(exc).__name__)
+                           error_type=type(exc).__name__, retry_attempts=retry_log)
             if stream_progress is not None:
                 receipt["stream_progress"] = _sanitize(_stream_snapshot(stream_progress), key)
             self.server.ledger.write_receipt(attempt_id, receipt)
@@ -757,6 +806,11 @@ def main():
                         help="upstream request timeout in seconds")
     parser.add_argument("--upstream-stream", action="store_true",
                         help="buffer upstream SSE into JSON for ordinary clients")
+    parser.add_argument("--retry-transient", action=argparse.BooleanOptionalAction,
+                        default=True,
+                        help="retry a transient upstream 502/503/504 or "
+                        "429-with-Retry-After up to 3 times within the same "
+                        "reserved slot before settling (default: true)")
     parser.add_argument("--resume", action="store_true",
                         help="clear a halted ledger's halted_reason with a "
                         "permanent audit entry; requires --ledger and --note. "
@@ -815,7 +869,8 @@ def main():
                     max_tokens=args.max_tokens, reasoning_reserve=args.reasoning_reserve,
                     timeout=args.timeout, upstream_stream=args.upstream_stream,
                     reasoning_effort=args.reasoning_effort,
-                    reasoning_cap_tokens=args.reasoning_cap_tokens)
+                    reasoning_cap_tokens=args.reasoning_cap_tokens,
+                    retry_transient=args.retry_transient)
     print(json.dumps({"base_url": "http://127.0.0.1:%d/v1" % broker.server_port,
                       "model": args.model, "ledger": args.ledger}), flush=True)
     try:

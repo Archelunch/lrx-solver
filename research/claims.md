@@ -584,3 +584,40 @@ lengths of that family, conditional on the group's Lemma 1 and criterion
 This is the first multi-seed result where evolved constructions beat both
 the seed and the hand control on an m none of them saw. No family class is
 proved for all m; the general conjecture remains open.
+
+## Session 17: tree certificates (bound-eval-3), construction note, broker retry (2026-09-26)
+
+Evaluator `integrations/bound3_*.py` (new files; `bound_evaluator.py` and
+TRUSTED untouched) accepts a tree of box splits with leaves of words and
+decides the group's criterion (8) per leaf by exact LP, re-checked by
+`lrx_m.leaf_criterion`, plus a literal lift at sampled block lengths. Limits:
+depth <= 6, <= 32 leaves, <= 32 words per leaf. A plain word list scores
+byte-identically to bound-eval-2 (20 development families, every status,
+gap and score equal). Audit `bound3_audit.py` reuses `lrxm8` through an exact
+affine change of the m=8 criterion; it agrees with the evaluator on 411/411
+stored campaign-2 rows and 24/24 new tree certificates.
+
+Tree control (`bound3_control_revtree.py`, words taken from exact tables, so
+not m-uniform): the m=9 reversal (9..1){0,4} is CERTIFIED with three leaves
+(u0 in [1,2], [3,4], >= 5), where every campaign-2 arm had gap 15/7 or 9/5;
+the m=8 analogue reproduces the group's 3-leaf tree; the m=10 tight family
+{0,10} is CERTIFIED. Of the 43 development families AdaEvolve-s2 misses, the
+tree control certifies 19 (16 at m=9, 3 at m=10; 8 rev_rot, 7 tight, 2 refl,
+1 high_inv, 1 uniform). Nothing at m=11: no (11,r) table yet, so the limit is
+word supply, not the certificate shape. Conditional on Lemma 1 with
+refinement.
+
+Construction note `bound-m-c2-260925/BEST-C2-CONSTRUCTION.md` (read-only):
+AdaEvolve-s2 keeps the seed's routings and Lemma 1 price and adds lift
+variants at every k (second window for even n, reversed tie-break in the
+sum-0 normalization), rotated cursor start, two sweep modes, and a
+hull/Frank-Wolfe word selection. It certifies 19 m=12 families the seed
+misses and loses none; EvoX-s3 (variants only for k <= 4) gets 5 of those.
+All arms miss the same 14 m=12 families, worst the plain reversal with two
+zeros at gap 5. Observations only: identity rotations 23/23 and the easy
+class 45/45 across m=9..12 in every arm.
+
+Broker: bounded in-slot retry for 502/503/504 and 429 with Retry-After (3
+tries, backoff 2/4/8 s, never after a partial stream), receipts record each
+try; 4 mock tests. Suite 604 tests OK. No provider calls this session.
+The (11,2) exact table (low-memory builder) is at layer 52 of about 75.

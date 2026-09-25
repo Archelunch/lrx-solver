@@ -1,0 +1,58 @@
+{
+ "rescore/development": {
+  "certified": 260,
+  "stored_certified": 260,
+  "families": 303,
+  "boundary": 2,
+  "stored_boundary": 2,
+  "max_W": "15/7",
+  "stored_max_W": "15/7",
+  "status_or_gap_mismatches": []
+ },
+ "rescore/validation": {
+  "certified": 151,
+  "stored_certified": 151,
+  "families": 165,
+  "boundary": 0,
+  "stored_boundary": 0,
+  "max_W": "4",
+  "stored_max_W": "4",
+  "status_or_gap_mismatches": []
+ },
+ "rescore/holdout": {
+  "certified": 202,
+  "stored_certified": 202,
+  "families": 225,
+  "boundary": 2,
+  "stored_boundary": 2,
+  "max_W": "5",
+  "stored_max_W": "5",
+  "status_or_gap_mismatches": []
+ },
+ "sandbox/development": {
+  "certified": 260,
+  "stored_certified": 260,
+  "combined": 166.3619775877904,
+  "stored_combined": 166.3619775877904,
+  "incomplete": 0,
+  "isolation": "macos_seatbelt",
+  "status_or_gap_mismatches": [],
+  "audit": {
+   "certified_claims": 260,
+   "agree": 260
+  }
+ },
+ "sandbox/validation": {
+  "certified": 151,
+  "stored_certified": 151,
+  "combined": 183.12977253872197,
+  "stored_combined": 183.12977253872197,
+  "incomplete": 0,
+  "isolation": "macos_seatbelt",
+  "status_or_gap_mismatches": [],
+  "audit": {
+   "certified_claims": 151,
+   "agree": 151
+  }
+ }
+}

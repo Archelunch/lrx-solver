@@ -2,6 +2,24 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Latest iteration: tree certificates, construction note, broker retry (2026-09-26)
+
+Offline. bound-eval-3 (`integrations/bound3_*.py`, `tests/test_search_bound3.py`,
+evidence `autoresearch/bound-eval3-260926/`) scores tree certificates
+(criterion (8) per leaf by exact LP) and is byte-compatible with bound-eval-2
+on plain word lists; audit agrees on 411/411 campaign-2 rows and 24/24 new
+trees. A table-fed tree control certifies the m=9 reversal {0,4} (three
+leaves) and 19 of the 43 development families AdaEvolve-s2 misses, but
+nothing at m=11 for lack of a table. `BEST-C2-CONSTRUCTION.md` explains the
+campaign-2 gain (lift variants at every k plus Frank-Wolfe selection: +19
+families at m=12, 0 lost; all arms miss the same 14, worst the plain
+reversal with two zeros at gap 5). Broker retries transient 5xx/429 in-slot
+(4 mock tests). Suite 604 OK. The (11,2) exact table is still building
+(layer 52, low-memory builder). Next: campaign 3 on bound-eval-3 with the
+tree contract and an m-uniform refined-origin word generator for the
+reversal orbit; validation m=11, holdout m=12; first prompt and hash shown
+before any paid launch. Claims Session 17.
+
 ## Latest iteration: bound-m campaign 2, three seeds, unseen m=12 (2026-09-26)
 
 Validation split at m=11 for finalist selection, fresh holdout at m=12 plus
