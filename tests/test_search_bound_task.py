@@ -190,6 +190,25 @@ class Evaluator(unittest.TestCase):
             res = E.evaluate(table, fams, require_os_sandbox=SANDBOX, jobs=1)
             self.assertEqual({r['status'] for r in res['results']}, {'INVALID_OUTPUT'})
 
+    def test_set_order_candidate_is_deterministic_across_sandbox_runs(self):
+        # A candidate that truncates a word union with `list(set(...))[:32]` (the BEST-GEPA
+        # construction pattern) must return the same words on every run: the worker command fixes
+        # PYTHONHASHSEED so str/set hashing, and so set iteration order, is not randomized per
+        # process. Each E.evaluate call below spawns a brand-new sandboxed process (no cache_dir).
+        fam = make_family(list(range(1, 10)), 1 << 9)
+        with tempfile.TemporaryDirectory() as d:
+            prog = Path(d) / 'setorder.py'
+            prog.write_text(
+                "def certify(family):\n"
+                "    pool = {'L' * i + 'R' * i for i in range(1, 40)}\n"
+                "    return {'words': list(pool)[:32]}\n")
+            first = E.evaluate(prog, [fam], require_os_sandbox=SANDBOX, jobs=1)['results'][0]['output_words']
+            second = E.evaluate(prog, [fam], require_os_sandbox=SANDBOX, jobs=1)['results'][0]['output_words']
+            self.assertIsNotNone(first)
+            self.assertEqual(first, second)
+            self.assertEqual(E.determinism_check(prog, [fam], require_os_sandbox=SANDBOX, jobs=1),
+                             {'deterministic': True, 'mismatches': []})
+
 
 class Controls(unittest.TestCase):
     def test_sweep_pricing_matches_profile(self):

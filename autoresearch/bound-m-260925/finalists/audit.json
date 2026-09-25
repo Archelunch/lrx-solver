@@ -1,0 +1,76 @@
+{
+  "holdout": {
+    "adaevolve": {
+      "certified_claims": 338,
+      "agree": 338,
+      "disagreements": []
+    },
+    "evox": {
+      "certified_claims": 356,
+      "agree": 356,
+      "disagreements": []
+    },
+    "gepa": {
+      "certified_claims": 321,
+      "agree": 321,
+      "disagreements": []
+    },
+    "sequential": {
+      "certified_claims": 347,
+      "agree": 347,
+      "disagreements": []
+    },
+    "naive-control": {
+      "certified_claims": 0,
+      "agree": 0,
+      "disagreements": []
+    },
+    "sweep16-control": {
+      "certified_claims": 178,
+      "agree": 178,
+      "disagreements": []
+    },
+    "sweeplp-control-b": {
+      "certified_claims": 258,
+      "agree": 258,
+      "disagreements": []
+    }
+  },
+  "development": {
+    "adaevolve": {
+      "certified_claims": 233,
+      "agree": 233,
+      "disagreements": []
+    },
+    "evox": {
+      "certified_claims": 212,
+      "agree": 212,
+      "disagreements": []
+    },
+    "gepa": {
+      "certified_claims": 201,
+      "agree": 201,
+      "disagreements": []
+    },
+    "sequential": {
+      "certified_claims": 230,
+      "agree": 230,
+      "disagreements": []
+    },
+    "naive-control": {
+      "certified_claims": 0,
+      "agree": 0,
+      "disagreements": []
+    },
+    "sweep16-control": {
+      "certified_claims": 111,
+      "agree": 111,
+      "disagreements": []
+    },
+    "sweeplp-control-b": {
+      "certified_claims": 151,
+      "agree": 151,
+      "disagreements": []
+    }
+  }
+}

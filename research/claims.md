@@ -532,3 +532,32 @@ beyond the worked examples m=4,5 in any arm; three campaigns now agree. The
 negative is specific to LLM proposers on exact dual feasibility; the
 mathematics from the deterministic LP work stands
 (`autoresearch/corr-cert-260924/REPORT-CAMPAIGN.md`).
+
+## Session 15: bounded-construction campaign, evolved certifiers transfer to m=11 (2026-09-25)
+
+Task (`autoresearch/bound-m-260925/TASK.md`): a program certify(family) emits
+words for the unit base of an m-label family (a,S); the evaluator recomputes
+exact Lemma 1 lift costs, solves an exact LP, and certifies the family for all
+positive block lengths iff weighted base < T_m(unit)+1 and all slopes <= m-2
+(the group's criterion (7) with m as a parameter). Development: 303 families
+at m=9,10; holdout evaluated once: 468 families including all 165 at m=11
+(never seen by any engine). Model gemini-3.8-flash, 168 calls, $3.45.
+
+Holdout certified (m=9/10/11 of 153/150/165) and worst gap at m=11:
+EvoX 108/119/**129**, gap 4; GEPA 91/105/**125**, gap 4; sweep+LP control
+76/84/98, gap 7; AdaEvolve 127/111/100 and sequential 124/114/109 with
+invalid outputs at m=10,11 (bound broken off-distribution). Independent
+audit (`integrations/bound_audit.py`, lrxm8 checker with M=m): 0
+disagreements. Each certified family is a machine-checked theorem
+d(v) <= T_m(n) for every block-length vector of that family, conditional on
+the group's Lemma 1 and criterion (7).
+
+New: two evolved, m-parametric constructions (no m-specific data) certify
+125-129 of 165 unseen m=11 families with sound worst-case gap 4, against 98
+for the best hand-written control. The constructions are bubble sorts on the
+universal cover with new cursor routings and per-zero complementary word
+selection (`BEST-GEPA-CONSTRUCTION.md`). Conjecture only: identity-rotation
+families are certified at every m. No family class is proved for all m; the
+general conjecture remains open. One seed per arm; no engine ranking.
+Determinism caveat: the GEPA and EvoX finalists truncate a word union in
+set order; audited certificates are unaffected, reproducibility is not yet.

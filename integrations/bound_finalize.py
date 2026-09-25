@@ -152,16 +152,18 @@ def finalize(args):
         audit[name] = {a: bound_audit.audit_result(fams, {"results": v["rows"]}) for a, v in results[name]["arms"].items()}
     (out / "audit.json").write_text(json.dumps(audit, indent=2) + "\n")
     screen_ids = set(json.loads(development.read_text())["screen"])
-    screen = [f for f in sets["development"][1] if f["id"] in screen_ids]
-    determinism, literals = {}, {}
+    screen = [f for f in sets["development"][1] if f["id"] in screen_ids][:20]
+    determinism, determinism_mismatches, literals = {}, {}, {}
     for f in finalists:
-        runs2 = [E.evaluate(srcs[f["arm"]], screen, require_os_sandbox=True, jobs=args.jobs) for _ in range(2)]
-        determinism[f["arm"]] = [r.get("output_words") for r in runs2[0]["results"]] == \
-                                [r.get("output_words") for r in runs2[1]["results"]]
+        dc = E.determinism_check(srcs[f["arm"]], screen, require_os_sandbox=True, jobs=args.jobs)
+        determinism[f["arm"]] = dc["deterministic"]
+        determinism_mismatches[f["arm"]] = dc["mismatches"]
         literals[f["arm"]] = m_literals(srcs[f["arm"]].read_text())
+    (out / "determinism.json").write_text(json.dumps(determinism_mismatches, indent=2) + "\n")
     (out / "REPORT.md").write_text(report(results, audit, determinism, literals))
     return {"holdout_certified": {a: v["certified"] for a, v in results["holdout"]["arms"].items()},
-            "audit_disagreements": {n: {a: len(v["disagreements"]) for a, v in d.items()} for n, d in audit.items()}}
+            "audit_disagreements": {n: {a: len(v["disagreements"]) for a, v in d.items()} for n, d in audit.items()},
+            "determinism_mismatches": {a: v for a, v in determinism_mismatches.items() if v}}
 
 
 def report(results, audit, determinism, literals):

@@ -10,10 +10,17 @@ recorded times are only reports: the parent measures the process CPU with
 os.wait4 and rejects a batch that disagrees, the kernel RLIMIT_CPU bounds the
 whole batch, fork is denied, and nothing here is accepted as proof: the trusted
 parent (bound_evaluator.py) replays and prices every word.
+
+The launch command (bound_evaluator.run_batch) fixes PYTHONHASHSEED so a
+candidate's `set(...)` iterates in the same order on every run; random.seed(0)
+below covers a candidate that draws from `random` without seeding it. Neither
+changes what a word means, only whether the same candidate returns the same
+words twice.
 """
 import importlib.util
 import json
 import os
+import random
 import signal
 import sys
 import time
@@ -53,6 +60,7 @@ def main():
     signal.signal(signal.SIGPROF, _cpu_limit)
     signal.signal(signal.SIGALRM, _wall_limit)
     signal.signal(signal.SIGXFSZ, signal.SIG_IGN)
+    random.seed(0)  # a candidate that calls random.* without seeding must still be reproducible
     try:
         _arm(import_cpu, import_cpu * 5)
         spec = importlib.util.spec_from_file_location('generated_candidate', program)

@@ -2,6 +2,17 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Latest iteration: bound-m campaign, transfer to unseen m=11 (2026-09-25)
+
+Four arms on the proof-shaped bound task, then one-shot holdout with all 165
+m=11 families: EvoX 129 and GEPA 125 certified with worst gap 4 vs the best
+hand control 98 (gap 7); AdaEvolve and sequential overfit (invalid outputs
+at m=10,11). Audit 0 disagreements, $3.45. Details in
+`autoresearch/bound-m-260925/finalists/REPORT.md`, `BEST-GEPA-CONSTRUCTION.md`,
+claims Session 15. Next: fix set-order nondeterminism in the worker
+(PYTHONHASHSEED), three seeds per arm, extend holdout to m=12, and hand the
+identity-rotation conjecture with its construction to a human for proof.
+
 ## Latest iteration: loop v3, bounded-construction and Lean tracks built and live-checked (2026-09-25)
 
 Ultracode workflow (35 agents, Opus/Sonnet) built three tracks as new files:

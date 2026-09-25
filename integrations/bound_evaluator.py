@@ -77,6 +77,17 @@ GUARD_STR_TOTAL, GUARD_LITERAL_TOTAL, GUARD_INT = 4096, 256, 10 ** 40
 STATUSES = ('CERTIFIED', 'BOUNDARY', 'NO_CERTIFICATE', 'INVALID_OUTPUT', 'INCOMPLETE')
 _SOURCES = ('bound_evaluator.py', 'bound_task.py', 'bound_worker.py', 'lrx_m.py', 'lift_evaluator.py',
             'lift_task.py', 'program_sandbox.py', 'program_evaluator.py')
+# -I (isolated mode) also ignores PYTHONHASHSEED, so string/set hashing (and therefore the
+# iteration order of a candidate's `set(...)`) is randomized per process and a set truncated with
+# `list(set(...))[:32]` becomes nondeterministic. -P (safe sys.path) + -s (no user site) drop the
+# env-ignoring behavior while keeping the same isolation properties `env` already relies on (the
+# child only ever receives the fixed minimal `env` dict below, never the real environment).
+# -P was added in Python 3.11; older interpreters fall back to -I and keep the pre-existing
+# (nondeterministic) behavior.
+if sys.version_info >= (3, 11):
+    _WORKER_FLAGS, _WORKER_ENV = ['-P', '-s', '-S'], {'PYTHONHASHSEED': '0'}
+else:
+    _WORKER_FLAGS, _WORKER_ENV = ['-I', '-S'], {}
 
 
 def _sha(data):
@@ -255,7 +266,7 @@ def run_batch(source, families, per_family=PER_FAMILY_CPU, require_os_sandbox=Tr
         (scratch / 'case.json').write_text(json.dumps({'families': families, 'per_family_cpu': per_family,
                                                        'per_family_wall': per_family_wall,
                                                        'import_cpu': IMPORT_CPU}))
-        command = [sys.executable, '-I', '-S', str(scratch / 'worker.py'), str(scratch / 'candidate.py'),
+        command = [sys.executable, *_WORKER_FLAGS, str(scratch / 'worker.py'), str(scratch / 'candidate.py'),
                    str(scratch / 'case.json'), str(scratch)]
         isolation = 'process_only'
         if require_os_sandbox:
@@ -265,7 +276,8 @@ def run_batch(source, families, per_family=PER_FAMILY_CPU, require_os_sandbox=Tr
             command = sandbox_command(command, scratch / 'sandbox.sb')
             isolation = 'macos_seatbelt'
         env = {'PATH': '/usr/bin:/bin', 'HOME': str(scratch), 'TMPDIR': str(scratch),
-               'PYTHONNOUSERSITE': '1', 'PYTHONDONTWRITEBYTECODE': '1', 'LANG': 'C', 'LC_ALL': 'C'}
+               'PYTHONNOUSERSITE': '1', 'PYTHONDONTWRITEBYTECODE': '1', 'LANG': 'C', 'LC_ALL': 'C',
+               **_WORKER_ENV}
         start = time.monotonic()
         with (scratch / 'stdout').open('wb') as so, (scratch / 'stderr').open('wb') as se:
             proc = subprocess.Popen(command, cwd=scratch, env=env, stdin=subprocess.DEVNULL, stdout=so,
@@ -576,6 +588,21 @@ def evaluate(program_path, families, *, require_os_sandbox=True, jobs=8, cache_d
         cache.parent.mkdir(parents=True, exist_ok=True)
         cache.write_text(json.dumps(result))
     return dict(result, cache_hit=False)
+
+
+def determinism_check(program_path, families, *, require_os_sandbox=True, jobs=8,
+                       per_family=PER_FAMILY_CPU, per_family_wall=PER_FAMILY_WALL, batch=BATCH):
+    """Evaluate `families` twice, in two fresh sandboxed processes each (no cache_dir), and compare
+    the raw output words per family. This is the regression check for set-order nondeterminism
+    (a candidate truncating a word union with `list(set(...))[:32]`): with PYTHONHASHSEED fixed
+    (see the worker command in run_batch) the same candidate on the same family must produce the
+    same words both times. -> {"deterministic": bool, "mismatches": [family id, ...]}."""
+    runs = [evaluate(program_path, families, require_os_sandbox=require_os_sandbox, jobs=jobs,
+                     per_family=per_family, per_family_wall=per_family_wall, batch=batch) for _ in range(2)]
+    first = {r['id']: r.get('output_words') for r in runs[0]['results']}
+    second = {r['id']: r.get('output_words') for r in runs[1]['results']}
+    mismatches = sorted(fid for fid in first if first[fid] != second.get(fid))
+    return {'deterministic': not mismatches, 'mismatches': mismatches}
 
 
 def _trusted_item(args):

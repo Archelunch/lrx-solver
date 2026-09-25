@@ -1,0 +1,531 @@
+{
+  "frozen_sources": {
+    "adaevolve": "bd625c71e78e0d9631bf6c5d0f7365c346947c6a10181c9a9e114eb5e5e5a910",
+    "evox": "1031149e48768fd67907350b9f7fc1ef207a7eb33533fedbdb1466d2618d2e9a",
+    "gepa": "7d55f269bbf1c5ff73582ff30e9dfb394c06618bbba2758d498ed5da2e27be87",
+    "sequential": "351794bc002146f74442bb07709c55cb06a3716396405075d8c4d1870b5f418a",
+    "naive-control": "f95223410af211d87738db54db52931b3178b2c09d2a12d9a24b20b7d32d21fc",
+    "sweep16-control": "455c1f8ebfb42a050d75227efc6b553f9ae4dd0fc9387306c0be0b33afc076fc"
+  },
+  "holdout_sha256": "524979ca579f6a52f4cf9c9c80133bd01bf27513309773e899c8d08fbef39779",
+  "development_sha256": "88567c75d13af24bca6c9cbdd5fa96bd665e4d0f5589a856a8a4382ff344908e",
+  "frozen_manifest_sha256": "e65a06f52db9038597560ef93c1bd9d48babe15965b69326512ceb2fa0ac4c2e",
+  "evaluator": {
+    "version": "bound-eval-2",
+    "contract": "bound-contract-2: candidate defines certify(family) -> {\"words\": [...], \"weights\"?: [...], \"note\"?: str}; 1..32 words over L,R,X of at most 4000 letters; weights optional strings p or p/q (at most 40 digits each) or ints below 10**40 forming a probability vector (checked and reported, never trusted). INVALID_OUTPUT unless every word sorts the unit base with no zero-zero swap (lrx_m.Profile) and passes literal lifted execution at z=0, e_j, 2e_j, e_j+e_{j+1}, (1..1) with length F(z) <= B+beta.z. CERTIFIED iff the exact LP optimum (lift_evaluator.mixture_lp) has weighted base < T+1 and weighted slopes <= m-2, T = T_m(m+k). gap = lift_evaluator.gap_lp with strict T+1; BOUNDARY iff not certified and gap 0. Invalid and INCOMPLETE (timeout 3 s CPU / 5 s wall per family, crash, worker failure; one process per family, no fork; a family whose parent-measured process CPU exceeds 5 s or its reported time by more than 2 s import/startup is INCOMPLETE) get gap 4000. Per m: pct = 100 C/N, W = max gap, G = mean gap over valid. combined = mean_m pct + min_m pct + 0.06 V/N + 0.06/(1+max_m W) + 0.03/(1+mean_m G). Source guard (a screen, not a guarantee): no str constant or constant concatenation (a + b, sep.join([...])) >= 24 chars that is >= 90% L/R/X/l/r/x, at most 512 such characters in all str constants, at most 4096 characters of non-docstring str constants, no literal container > 64 elements, at most 256 constant elements in all literal containers, no int constant >= 10**40, no bytes constant > 256 bytes.",
+    "hash": "d79ff01251baae2b9830d49d622f74973c18dfdf4d6dd428c991e10829a78f16"
+  },
+  "created_utc": "2026-09-25T17:23:04Z",
+  "details": [
+    {
+      "arm": "adaevolve",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/live-adaevolve-260925-184928",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/live-adaevolve-260925-184928/verified/best.py",
+      "source_sha256": "bd625c71e78e0d9631bf6c5d0f7365c346947c6a10181c9a9e114eb5e5e5a910",
+      "development_claim": {
+        "combined_score": 151.51531976025498,
+        "certified": 233,
+        "valid": 286,
+        "families": 303,
+        "max_W": "4000",
+        "per_m_certified": {
+          "9": 114,
+          "10": 119
+        },
+        "per_m": {
+          "9": {
+            "certified": 114,
+            "families": 153,
+            "pct": 74.50980392156863,
+            "boundary": 4,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "37/13",
+            "W_complete": true,
+            "G": "5775799178737702682/38831728646088332955",
+            "per_k": {
+              "2": [
+                9,
+                17
+              ],
+              "3": [
+                13,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                14,
+                17
+              ],
+              "6": [
+                11,
+                17
+              ],
+              "7": [
+                11,
+                17
+              ],
+              "8": [
+                15,
+                17
+              ],
+              "9": [
+                13,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 119,
+            "families": 150,
+            "pct": 79.33333333333333,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 17,
+            "timeouts": 17,
+            "W": "4000",
+            "W_complete": false,
+            "G": "817696562612456161/16626731190526101645",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                13,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                11,
+                15
+              ],
+              "6": [
+                14,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                14,
+                15
+              ],
+              "10": [
+                10,
+                15
+              ],
+              "11": [
+                3,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "b955a9d3b2b142fabdc3c57035dcad60dbfa4f32d482726da69734b84f22a2ca"
+      }
+    },
+    {
+      "arm": "evox",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/live-evox-260925-190638",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/live-evox-260925-190638/verified/best.py",
+      "source_sha256": "1031149e48768fd67907350b9f7fc1ef207a7eb33533fedbdb1466d2618d2e9a",
+      "development_claim": {
+        "combined_score": 131.59183777974596,
+        "certified": 212,
+        "valid": 303,
+        "families": 303,
+        "max_W": "37/13",
+        "per_m_certified": {
+          "9": 94,
+          "10": 118
+        },
+        "per_m": {
+          "9": {
+            "certified": 94,
+            "families": 153,
+            "pct": 61.43790849673203,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "37/13",
+            "W_complete": true,
+            "G": "292385505177291015966143231/1362953102208464273699253600",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                13,
+                17
+              ],
+              "6": [
+                7,
+                17
+              ],
+              "7": [
+                7,
+                17
+              ],
+              "8": [
+                12,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                15,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 118,
+            "families": 150,
+            "pct": 78.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "7/4",
+            "W_complete": true,
+            "G": "211722571672395970167626027628295284780857/2366318383221114769955502497116432995176000",
+            "per_k": {
+              "2": [
+                11,
+                15
+              ],
+              "3": [
+                12,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                9,
+                15
+              ],
+              "8": [
+                13,
+                15
+              ],
+              "9": [
+                11,
+                15
+              ],
+              "10": [
+                13,
+                15
+              ],
+              "11": [
+                14,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "745bee904bfa8e99267384aefd3b271a4f2cf41fb678adabeea999218833ebb9"
+      }
+    },
+    {
+      "arm": "gepa",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/live-gepa-260925-182207",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/live-gepa-260925-182207/verified/best.py",
+      "source_sha256": "7d55f269bbf1c5ff73582ff30e9dfb394c06618bbba2758d498ed5da2e27be87",
+      "development_claim": {
+        "combined_score": 126.98337007385673,
+        "certified": 204,
+        "valid": 303,
+        "families": 303,
+        "max_W": "11/4",
+        "per_m_certified": {
+          "9": 91,
+          "10": 113
+        },
+        "per_m": {
+          "9": {
+            "certified": 91,
+            "families": 153,
+            "pct": 59.47712418300654,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "11/4",
+            "W_complete": true,
+            "G": "21688876394156143622560832938129/75414327121566556249299219446400",
+            "per_k": {
+              "2": [
+                7,
+                17
+              ],
+              "3": [
+                11,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                14,
+                17
+              ],
+              "6": [
+                8,
+                17
+              ],
+              "7": [
+                9,
+                17
+              ],
+              "8": [
+                10,
+                17
+              ],
+              "9": [
+                9,
+                17
+              ],
+              "10": [
+                12,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 113,
+            "families": 150,
+            "pct": 75.33333333333333,
+            "boundary": 0,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "8/5",
+            "W_complete": true,
+            "G": "715246344652659624975116997090385309605236707/6457614091454176359938882451412459518127455000",
+            "per_k": {
+              "2": [
+                13,
+                15
+              ],
+              "3": [
+                12,
+                15
+              ],
+              "4": [
+                13,
+                15
+              ],
+              "5": [
+                10,
+                15
+              ],
+              "6": [
+                11,
+                15
+              ],
+              "7": [
+                11,
+                15
+              ],
+              "8": [
+                12,
+                15
+              ],
+              "9": [
+                10,
+                15
+              ],
+              "10": [
+                10,
+                15
+              ],
+              "11": [
+                11,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "d96b19da616c4bf4d0ca317ffd1785ec73a0da0cf7b38ddc49b4f3713bb96b7c"
+      }
+    },
+    {
+      "arm": "sequential",
+      "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/live-sequential-260925-183156",
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/live-sequential-260925-183156/verified/best.py",
+      "source_sha256": "351794bc002146f74442bb07709c55cb06a3716396405075d8c4d1870b5f418a",
+      "development_claim": {
+        "combined_score": 147.2813903197155,
+        "certified": 230,
+        "valid": 293,
+        "families": 303,
+        "max_W": "4000",
+        "per_m_certified": {
+          "9": 109,
+          "10": 121
+        },
+        "per_m": {
+          "9": {
+            "certified": 109,
+            "families": 153,
+            "pct": 71.24183006535948,
+            "boundary": 2,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "27/13",
+            "W_complete": true,
+            "G": "116030406511486880679179/816901512339026139225200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                11,
+                17
+              ],
+              "5": [
+                15,
+                17
+              ],
+              "6": [
+                12,
+                17
+              ],
+              "7": [
+                11,
+                17
+              ],
+              "8": [
+                11,
+                17
+              ],
+              "9": [
+                11,
+                17
+              ],
+              "10": [
+                13,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 121,
+            "families": 150,
+            "pct": 80.66666666666667,
+            "boundary": 0,
+            "invalid": 0,
+            "incomplete": 10,
+            "timeouts": 10,
+            "W": "4000",
+            "W_complete": false,
+            "G": "1393205621344386932564171625049/24183014196575151881550638251200",
+            "per_k": {
+              "2": [
+                13,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                14,
+                15
+              ],
+              "5": [
+                12,
+                15
+              ],
+              "6": [
+                13,
+                15
+              ],
+              "7": [
+                11,
+                15
+              ],
+              "8": [
+                12,
+                15
+              ],
+              "9": [
+                13,
+                15
+              ],
+              "10": [
+                13,
+                15
+              ],
+              "11": [
+                5,
+                15
+              ]
+            }
+          }
+        },
+        "cache_key": "bb0379109ee8ce0e8b631b0907e4a2505b48ea63846323beb0ed04469f029722"
+      }
+    },
+    {
+      "arm": "naive-control",
+      "run_dir": null,
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/bound_control_naive.py",
+      "source_sha256": "f95223410af211d87738db54db52931b3178b2c09d2a12d9a24b20b7d32d21fc",
+      "development_claim": null
+    },
+    {
+      "arm": "sweep16-control",
+      "run_dir": null,
+      "source": "/Users/pavluhin/Documents/Projects/lrx-lab/integrations/bound_control_sweep.py",
+      "source_sha256": "455c1f8ebfb42a050d75227efc6b553f9ae4dd0fc9387306c0be0b33afc076fc",
+      "development_claim": null
+    }
+  ]
+}
