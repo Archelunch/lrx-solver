@@ -1,0 +1,59 @@
+{
+ "rev_outer_0_11": {
+  "state": [
+   0,
+   11,
+   10,
+   9,
+   8,
+   7,
+   6,
+   5,
+   4,
+   3,
+   2,
+   1,
+   0
+  ],
+  "distance": 74,
+  "word": "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXLXLXRX"
+ },
+ "rev_adjacent_0_1": {
+  "state": [
+   0,
+   0,
+   11,
+   10,
+   9,
+   8,
+   7,
+   6,
+   5,
+   4,
+   3,
+   2,
+   1
+  ],
+  "distance": 75,
+  "word": "LLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXLXLXRX"
+ },
+ "rot_2_1_0_0": {
+  "state": [
+   2,
+   1,
+   0,
+   0,
+   11,
+   10,
+   9,
+   8,
+   7,
+   6,
+   5,
+   4,
+   3
+  ],
+  "distance": 75,
+  "word": "LXRRXRXLXLXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXRXLXLXLXLXRXRXRX"
+ }
+}

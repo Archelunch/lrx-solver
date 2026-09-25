@@ -174,3 +174,14 @@ the m=11 reversal with two outer zeros (unit base n=13, T=75). The build
 estimate is 15.6 GB (3.1e9 states plus frontier), above this machine's safe
 limit while campaigns run; deferred. Until then the base-bound gap 4 for that
 family is a construction limit, not a proved obstruction.
+
+## Addendum 2 (orchestrator, 2026-09-26): the (11,2) table settles the unit corner
+
+The exact (11,2) table (claims Session 18) gives d((0,11,...,1,0)) = 74 =
+T_11(13) - 1. A shortest word (74 letters, verified by replay) is in
+`checks/m11-r2-reversal-words.json`. The gap-4 verdict above was therefore a
+construction limit: no arm's generator produced a word of length <= 75 at
+the unit corner, although one exists with slack 1. The radius of (11,2) is
+75 = T, attained only by (0,0,11,...,1) and one rotation. What remains open
+for the family is the block-length lift (slopes <= m-2 = 9 from a base with
+slack 1), not the base.

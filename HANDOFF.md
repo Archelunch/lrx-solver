@@ -14,8 +14,8 @@ nothing at m=11 for lack of a table. `BEST-C2-CONSTRUCTION.md` explains the
 campaign-2 gain (lift variants at every k plus Frank-Wolfe selection: +19
 families at m=12, 0 lost; all arms miss the same 14, worst the plain
 reversal with two zeros at gap 5). Broker retries transient 5xx/429 in-slot
-(4 mock tests). Suite 604 OK. The (11,2) exact table is still building
-(layer 52, low-memory builder). Campaign 3 is prepared offline in
+(4 mock tests). Suite 604 OK. The exact (11,2) table is done (radius 75 = T;
+reversal with two outer zeros at 74, claims Session 18). Campaign 3 is prepared offline in
 `autoresearch/bound-m-c3-260926/` (REPORT-prep.md): tree-contract driver
 `bound_c3.py`, finalize, m-uniform refined-origin seed (dev 283/303,
 validation 157/165, vs 260 and 151 for AdaEvolve-s2 as one leaf), 12 captured

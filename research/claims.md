@@ -622,3 +622,23 @@ Broker: bounded in-slot retry for 502/503/504 and 429 with Retry-After (3
 tries, backoff 2/4/8 s, never after a partial stream), receipts record each
 try; 4 mock tests. Suite 604 tests OK. No provider calls this session.
 The (11,2) exact table (low-memory builder) is at layer 52 of about 75.
+
+## Session 18: exact (11,2) table, reversal with two outer zeros has distance 74 (2026-09-26)
+
+Complete ranked BFS of (m,r)=(11,2), n=13, 3,113,510,400 states, by the
+low-memory builder (`tools/table_bfs_lowmem.py`, 4 workers, 3.2 h, table
+sha256 `1c3f4915f4bea4e856d2eaed66f1c58caa4c7f43d896ae25e63475bc83192325`,
+`datasets/generated/m11-260925/`, gitignored). Checks: layer sizes equal the
+byte histogram, no unreached state, triangle inequality on 20,000 random
+states under L, R, X, and literal replay of the extracted words.
+
+Radius 75 = T_11(13). Exactly two states at 75: (0,0,11,10,...,1) and its
+rotation (2,1,0,0,11,...,3); eight states at 74. The reversal with two outer
+zeros, (0,11,10,...,1,0) (family 11..1 {0,11}, mask 2049), has exact
+distance 74 = T-1; a shortest word is stored in
+`autoresearch/bound-m-260925/checks/m11-r2-reversal-words.json`. So the
+base-bound gap 4 recorded for that family in REVERSAL-OBSTACLE.md was a
+limit of the word generators, not an obstruction: a unit-corner word of
+length T-1 exists. The rotations of that state have distances
+74,73,72,71,71,71,72,73,74,74,75,74,75. Family 5.4.3.2.1.11..6 {5,10} has
+unit distance 64. The conjecture E_2(13) <= T_11(13) holds with equality.
