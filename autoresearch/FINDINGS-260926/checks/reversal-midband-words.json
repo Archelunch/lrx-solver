@@ -1,0 +1,3960 @@
+{
+ "schema": "lrx-reversal-midband-v1",
+ "date": "2026-09-26",
+ "semantics": "family (m..1){0,g}: unit base (0, m..m-g+1, 0, m-g..1); refined origin (o0,o1) puts o0 zeros in gap 0 and o1 in gap g; words sort to (1..m,0..0) under lrx_m.run_naive; picks = first atom of each block",
+ "conditionality": "certificates are conditional on the research group's Lemma 1 (with refinement) and criteria (7)/(8) with m as a parameter (bound3_evaluator); exact negatives are about criterion (8) leaves priced by Lemma 1, computed by the exact oracle in reversal_midband_search/mb.py",
+ "tables": {
+  "9,2": {
+   "path": "datasets/generated/dist_m9_r2.bin",
+   "table_sha256": "8148ceab1f053d8e7431d4db188717ba30773cd9b6ea3e697eee57d9e337befd",
+   "radius": 52
+  },
+  "9,3": {
+   "path": "datasets/generated/dist_m9_r3.bin",
+   "table_sha256": "1f3a24f5d85fb295adfb9020416eaa43f5488115067f63da3286c631932daf1d",
+   "radius": 59
+  },
+  "9,4": {
+   "path": "datasets/generated/outer-layer-260925/dist_m9_r4.bin",
+   "table_sha256": "fc31a30e284298887425b73d9ebe714e1111f6001a8a5ce6672811bd12de8789",
+   "radius": 66
+  },
+  "9,5": {
+   "path": "datasets/generated/outer-layer-260925/dist_m9_r5.bin",
+   "table_sha256": "f3465b5f24c9e997b72529c8341346bc310a205b35beefa6fda3de6d1d8a58cb",
+   "radius": 73
+  },
+  "9,6": {
+   "path": "datasets/generated/sort-m9-260925/dist_m9_r6.bin",
+   "table_sha256": "4f8cc2c236511a5f0fe3f7462c8a32180050132edca41ec567d4c892ddcee6dd",
+   "radius": 79
+  },
+  "10,2": {
+   "path": "datasets/generated/m10-r2-260926/dist_m10_r2.bin",
+   "table_sha256": "3f9ad500d390e7e264a26f9bcbdba13c2bd90ca500352e8d4cd4d9ae6ea4563b",
+   "radius": 63
+  },
+  "10,3": {
+   "path": "datasets/generated/sort-m9-260925/dist_m10_r3.bin",
+   "table_sha256": "6deed7ea4ad9ea199a12877fe8c50485207f39d35814b9ff591d2a4fa505285f",
+   "radius": 71
+  },
+  "11,2": {
+   "path": "datasets/generated/m11-260925/dist_m11_r2.bin",
+   "table_sha256": "1c3f4915f4bea4e856d2eaed66f1c58caa4c7f43d896ae25e63475bc83192325",
+   "radius": 75
+  }
+ },
+ "exact_distances": [
+  {
+   "m": 9,
+   "g": 3,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 45,
+   "T": 52,
+   "dist_minus_T": -7,
+   "n_shortest": 72,
+   "sampled": 72,
+   "shortest_beta_front": [
+    [
+     9,
+     0
+    ]
+   ],
+   "example": "LXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 3,
+   "origin": [
+    2,
+    1
+   ],
+   "dist": 52,
+   "T": 59,
+   "dist_minus_T": -7,
+   "n_shortest": 36,
+   "sampled": 36,
+   "shortest_beta_front": [
+    [
+     9,
+     0
+    ]
+   ],
+   "example": "LXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 3,
+   "origin": [
+    1,
+    2
+   ],
+   "dist": 45,
+   "T": 59,
+   "dist_minus_T": -14,
+   "n_shortest": 48,
+   "sampled": 48,
+   "shortest_beta_front": [
+    [
+     9,
+     0
+    ]
+   ],
+   "example": "LXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 3,
+   "origin": [
+    3,
+    1
+   ],
+   "dist": 61,
+   "T": 66,
+   "dist_minus_T": -5,
+   "n_shortest": 432,
+   "sampled": 432,
+   "shortest_beta_front": [
+    [
+     9,
+     0
+    ]
+   ],
+   "example": "LLXLXLXRRRXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 3,
+   "origin": [
+    1,
+    3
+   ],
+   "dist": 45,
+   "T": 66,
+   "dist_minus_T": -21,
+   "n_shortest": 48,
+   "sampled": 48,
+   "shortest_beta_front": [
+    [
+     9,
+     0
+    ]
+   ],
+   "example": "LXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 3,
+   "origin": [
+    2,
+    2
+   ],
+   "dist": 52,
+   "T": 66,
+   "dist_minus_T": -14,
+   "n_shortest": 36,
+   "sampled": 36,
+   "shortest_beta_front": [
+    [
+     9,
+     0
+    ]
+   ],
+   "example": "LXLXLXRRXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 43,
+   "T": 52,
+   "dist_minus_T": -9,
+   "n_shortest": 48,
+   "sampled": 48,
+   "shortest_beta_front": [
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LXLXRXRXLXLXLXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    2,
+    1
+   ],
+   "dist": 53,
+   "T": 59,
+   "dist_minus_T": -6,
+   "n_shortest": 336,
+   "sampled": 336,
+   "shortest_beta_front": [
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    1,
+    2
+   ],
+   "dist": 43,
+   "T": 59,
+   "dist_minus_T": -16,
+   "n_shortest": 48,
+   "sampled": 48,
+   "shortest_beta_front": [
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LXLXRXRXLXLXLXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    3,
+    1
+   ],
+   "dist": 63,
+   "T": 66,
+   "dist_minus_T": -3,
+   "n_shortest": 728,
+   "sampled": 728,
+   "shortest_beta_front": [
+    [
+     10,
+     2
+    ],
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LLXLXLXRRXRXLXLXRXRXRXLXLXLLLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    1,
+    3
+   ],
+   "dist": 43,
+   "T": 66,
+   "dist_minus_T": -23,
+   "n_shortest": 48,
+   "sampled": 48,
+   "shortest_beta_front": [
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LXLXRXRXLXLXLXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    2,
+    2
+   ],
+   "dist": 53,
+   "T": 66,
+   "dist_minus_T": -13,
+   "n_shortest": 312,
+   "sampled": 312,
+   "shortest_beta_front": [
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 5,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 43,
+   "T": 52,
+   "dist_minus_T": -9,
+   "n_shortest": 24,
+   "sampled": 24,
+   "shortest_beta_front": [
+    [
+     13,
+     0
+    ]
+   ],
+   "example": "LLXLXRXRXLXLXLXRXRXRXRRXRRXLXRXRXLXLXLXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 5,
+   "origin": [
+    2,
+    1
+   ],
+   "dist": 52,
+   "T": 59,
+   "dist_minus_T": -7,
+   "n_shortest": 12,
+   "sampled": 12,
+   "shortest_beta_front": [
+    [
+     11,
+     0
+    ]
+   ],
+   "example": "RXRXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX"
+  },
+  {
+   "m": 9,
+   "g": 5,
+   "origin": [
+    1,
+    2
+   ],
+   "dist": 43,
+   "T": 59,
+   "dist_minus_T": -16,
+   "n_shortest": 24,
+   "sampled": 24,
+   "shortest_beta_front": [
+    [
+     13,
+     0
+    ]
+   ],
+   "example": "LLXLXRXRXLXLXLXRXRXRXRRXRRXLXRXRXLXLXLXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 5,
+   "origin": [
+    3,
+    1
+   ],
+   "dist": 61,
+   "T": 66,
+   "dist_minus_T": -5,
+   "n_shortest": 56,
+   "sampled": 56,
+   "shortest_beta_front": [
+    [
+     9,
+     2
+    ],
+    [
+     11,
+     0
+    ]
+   ],
+   "example": "RXRXRXLXLXLXRXRXRRRXRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX"
+  },
+  {
+   "m": 9,
+   "g": 5,
+   "origin": [
+    1,
+    3
+   ],
+   "dist": 43,
+   "T": 66,
+   "dist_minus_T": -23,
+   "n_shortest": 24,
+   "sampled": 24,
+   "shortest_beta_front": [
+    [
+     13,
+     0
+    ]
+   ],
+   "example": "LLXLXRXRXLXLXLXRXRXRXRRXRRXLXRXRXLXLXLXRXRX"
+  },
+  {
+   "m": 9,
+   "g": 5,
+   "origin": [
+    2,
+    2
+   ],
+   "dist": 52,
+   "T": 66,
+   "dist_minus_T": -14,
+   "n_shortest": 12,
+   "sampled": 12,
+   "shortest_beta_front": [
+    [
+     11,
+     0
+    ]
+   ],
+   "example": "RXRXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRRXRXRXRXLXLXRX"
+  },
+  {
+   "m": 9,
+   "g": 6,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 45,
+   "T": 52,
+   "dist_minus_T": -7,
+   "n_shortest": 56,
+   "sampled": 56,
+   "shortest_beta_front": [
+    [
+     10,
+     0
+    ]
+   ],
+   "example": "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLXLXRX"
+  },
+  {
+   "m": 9,
+   "g": 6,
+   "origin": [
+    2,
+    1
+   ],
+   "dist": 53,
+   "T": 59,
+   "dist_minus_T": -6,
+   "n_shortest": 108,
+   "sampled": 108,
+   "shortest_beta_front": [
+    [
+     8,
+     0
+    ]
+   ],
+   "example": "RXRXRXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX"
+  },
+  {
+   "m": 9,
+   "g": 6,
+   "origin": [
+    1,
+    2
+   ],
+   "dist": 45,
+   "T": 59,
+   "dist_minus_T": -14,
+   "n_shortest": 32,
+   "sampled": 32,
+   "shortest_beta_front": [
+    [
+     10,
+     0
+    ]
+   ],
+   "example": "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLXLXRX"
+  },
+  {
+   "m": 9,
+   "g": 6,
+   "origin": [
+    3,
+    1
+   ],
+   "dist": 60,
+   "T": 66,
+   "dist_minus_T": -6,
+   "n_shortest": 24,
+   "sampled": 24,
+   "shortest_beta_front": [
+    [
+     9,
+     1
+    ]
+   ],
+   "example": "RXRXRXLXLXLXRXRXRRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX"
+  },
+  {
+   "m": 9,
+   "g": 6,
+   "origin": [
+    1,
+    3
+   ],
+   "dist": 45,
+   "T": 66,
+   "dist_minus_T": -21,
+   "n_shortest": 32,
+   "sampled": 32,
+   "shortest_beta_front": [
+    [
+     10,
+     0
+    ]
+   ],
+   "example": "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLXLXRX"
+  },
+  {
+   "m": 9,
+   "g": 6,
+   "origin": [
+    2,
+    2
+   ],
+   "dist": 53,
+   "T": 66,
+   "dist_minus_T": -13,
+   "n_shortest": 96,
+   "sampled": 96,
+   "shortest_beta_front": [
+    [
+     8,
+     0
+    ]
+   ],
+   "example": "RXRXRXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLX"
+  },
+  {
+   "m": 10,
+   "g": 3,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 56,
+   "T": 63,
+   "dist_minus_T": -7,
+   "n_shortest": 264,
+   "sampled": 264,
+   "shortest_beta_front": [
+    [
+     10,
+     3
+    ],
+    [
+     11,
+     2
+    ]
+   ],
+   "example": "XLXRXRXLXLXLXLXRRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXR"
+  },
+  {
+   "m": 10,
+   "g": 3,
+   "origin": [
+    2,
+    1
+   ],
+   "dist": 65,
+   "T": 71,
+   "dist_minus_T": -6,
+   "n_shortest": 520,
+   "sampled": 520,
+   "shortest_beta_front": [
+    [
+     9,
+     0
+    ]
+   ],
+   "example": "LXLXLXRRXRXLXLXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRX"
+  },
+  {
+   "m": 10,
+   "g": 3,
+   "origin": [
+    1,
+    2
+   ],
+   "dist": 58,
+   "T": 71,
+   "dist_minus_T": -13,
+   "n_shortest": 672,
+   "sampled": 672,
+   "shortest_beta_front": [
+    [
+     9,
+     0
+    ]
+   ],
+   "example": "LXRXLXLXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRX"
+  },
+  {
+   "m": 10,
+   "g": 4,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 53,
+   "T": 63,
+   "dist_minus_T": -10,
+   "n_shortest": 48,
+   "sampled": 48,
+   "shortest_beta_front": [
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LXLXRXRXLXLXLXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 10,
+   "g": 4,
+   "origin": [
+    2,
+    1
+   ],
+   "dist": 63,
+   "T": 71,
+   "dist_minus_T": -8,
+   "n_shortest": 288,
+   "sampled": 288,
+   "shortest_beta_front": [
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LLXRXLXLXLXRRXRXRXLXLXLXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 10,
+   "g": 4,
+   "origin": [
+    1,
+    2
+   ],
+   "dist": 53,
+   "T": 71,
+   "dist_minus_T": -18,
+   "n_shortest": 48,
+   "sampled": 48,
+   "shortest_beta_front": [
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LXLXRXRXLXLXLXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 10,
+   "g": 5,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 53,
+   "T": 63,
+   "dist_minus_T": -10,
+   "n_shortest": 24,
+   "sampled": 24,
+   "shortest_beta_front": [
+    [
+     16,
+     0
+    ]
+   ],
+   "example": "LLXLXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX"
+  },
+  {
+   "m": 10,
+   "g": 5,
+   "origin": [
+    2,
+    1
+   ],
+   "dist": 64,
+   "T": 71,
+   "dist_minus_T": -7,
+   "n_shortest": 192,
+   "sampled": 192,
+   "shortest_beta_front": [
+    [
+     16,
+     0
+    ]
+   ],
+   "example": "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX"
+  },
+  {
+   "m": 10,
+   "g": 5,
+   "origin": [
+    1,
+    2
+   ],
+   "dist": 53,
+   "T": 71,
+   "dist_minus_T": -18,
+   "n_shortest": 24,
+   "sampled": 24,
+   "shortest_beta_front": [
+    [
+     16,
+     0
+    ]
+   ],
+   "example": "LLXLXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX"
+  },
+  {
+   "m": 10,
+   "g": 6,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 54,
+   "T": 63,
+   "dist_minus_T": -9,
+   "n_shortest": 204,
+   "sampled": 204,
+   "shortest_beta_front": [
+    [
+     12,
+     1
+    ],
+    [
+     13,
+     0
+    ]
+   ],
+   "example": "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXRXRXRXLXLXRX"
+  },
+  {
+   "m": 10,
+   "g": 6,
+   "origin": [
+    2,
+    1
+   ],
+   "dist": 63,
+   "T": 71,
+   "dist_minus_T": -8,
+   "n_shortest": 96,
+   "sampled": 96,
+   "shortest_beta_front": [
+    [
+     11,
+     0
+    ]
+   ],
+   "example": "RXRXRXRXLXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXLXLXRX"
+  },
+  {
+   "m": 10,
+   "g": 6,
+   "origin": [
+    1,
+    2
+   ],
+   "dist": 54,
+   "T": 71,
+   "dist_minus_T": -17,
+   "n_shortest": 192,
+   "sampled": 192,
+   "shortest_beta_front": [
+    [
+     13,
+     0
+    ]
+   ],
+   "example": "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRRXLXRXRXLXLXLXRXRX"
+  },
+  {
+   "m": 10,
+   "g": 7,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 55,
+   "T": 63,
+   "dist_minus_T": -8,
+   "n_shortest": 24,
+   "sampled": 24,
+   "shortest_beta_front": [
+    [
+     12,
+     2
+    ]
+   ],
+   "example": "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXLXLXLXLXRXRXRXLXLXRX"
+  },
+  {
+   "m": 10,
+   "g": 7,
+   "origin": [
+    2,
+    1
+   ],
+   "dist": 65,
+   "T": 71,
+   "dist_minus_T": -6,
+   "n_shortest": 228,
+   "sampled": 228,
+   "shortest_beta_front": [
+    [
+     8,
+     0
+    ]
+   ],
+   "example": "RXRXRXLXLXLLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRXRXRXLX"
+  },
+  {
+   "m": 10,
+   "g": 7,
+   "origin": [
+    1,
+    2
+   ],
+   "dist": 57,
+   "T": 71,
+   "dist_minus_T": -14,
+   "n_shortest": 56,
+   "sampled": 56,
+   "shortest_beta_front": [
+    [
+     10,
+     0
+    ]
+   ],
+   "example": "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRXRXRXLXLXRX"
+  },
+  {
+   "m": 11,
+   "g": 3,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 68,
+   "T": 75,
+   "dist_minus_T": -7,
+   "n_shortest": null,
+   "sampled": 200,
+   "shortest_beta_front": [
+    [
+     11,
+     2
+    ]
+   ],
+   "example": "LXRXLXLXRXRXRXLXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXR"
+  },
+  {
+   "m": 11,
+   "g": 4,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 66,
+   "T": 75,
+   "dist_minus_T": -9,
+   "n_shortest": null,
+   "sampled": 200,
+   "shortest_beta_front": [
+    [
+     12,
+     0
+    ]
+   ],
+   "example": "LXLXRXRXLXLXLXRXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRX"
+  },
+  {
+   "m": 11,
+   "g": 5,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 64,
+   "T": 75,
+   "dist_minus_T": -11,
+   "n_shortest": null,
+   "sampled": 200,
+   "shortest_beta_front": [
+    [
+     15,
+     0
+    ]
+   ],
+   "example": "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+  },
+  {
+   "m": 11,
+   "g": 6,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 64,
+   "T": 75,
+   "dist_minus_T": -11,
+   "n_shortest": null,
+   "sampled": 192,
+   "shortest_beta_front": [
+    [
+     16,
+     0
+    ]
+   ],
+   "example": "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX"
+  },
+  {
+   "m": 11,
+   "g": 7,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 66,
+   "T": 75,
+   "dist_minus_T": -9,
+   "n_shortest": null,
+   "sampled": 200,
+   "shortest_beta_front": [
+    [
+     13,
+     0
+    ]
+   ],
+   "example": "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRXRRXLXRXRXLXLXLXRXRX"
+  },
+  {
+   "m": 11,
+   "g": 8,
+   "origin": [
+    1,
+    1
+   ],
+   "dist": 68,
+   "T": 75,
+   "dist_minus_T": -7,
+   "n_shortest": null,
+   "sampled": 200,
+   "shortest_beta_front": [
+    [
+     12,
+     2
+    ]
+   ],
+   "example": "LLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLLXLXLXLXLXRXRXRXLXLXRX"
+  }
+ ],
+ "axis0_dist_minus_T": [
+  {
+   "m": 9,
+   "g": 3,
+   "origins": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     5,
+     1
+    ]
+   ],
+   "dist_minus_T": [
+    -7,
+    -7,
+    -5,
+    -3,
+    -3
+   ]
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origins": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     5,
+     1
+    ]
+   ],
+   "dist_minus_T": [
+    -9,
+    -6,
+    -3,
+    0,
+    -1
+   ]
+  },
+  {
+   "m": 9,
+   "g": 5,
+   "origins": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     5,
+     1
+    ]
+   ],
+   "dist_minus_T": [
+    -9,
+    -7,
+    -5,
+    -3,
+    -4
+   ]
+  },
+  {
+   "m": 9,
+   "g": 6,
+   "origins": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     5,
+     1
+    ]
+   ],
+   "dist_minus_T": [
+    -7,
+    -6,
+    -6,
+    -4,
+    -7
+   ]
+  },
+  {
+   "m": 10,
+   "g": 3,
+   "origins": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "dist_minus_T": [
+    -7,
+    -6
+   ]
+  },
+  {
+   "m": 10,
+   "g": 4,
+   "origins": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "dist_minus_T": [
+    -10,
+    -8
+   ]
+  },
+  {
+   "m": 10,
+   "g": 5,
+   "origins": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "dist_minus_T": [
+    -10,
+    -7
+   ]
+  },
+  {
+   "m": 10,
+   "g": 6,
+   "origins": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "dist_minus_T": [
+    -9,
+    -8
+   ]
+  },
+  {
+   "m": 10,
+   "g": 7,
+   "origins": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "dist_minus_T": [
+    -8,
+    -6
+   ]
+  }
+ ],
+ "exact_leaf_lp": [
+  {
+   "m": 9,
+   "g": 6,
+   "origin": [
+    1,
+    1
+   ],
+   "width0": -1,
+   "dist": 45,
+   "T": 52,
+   "value_pool": "-4",
+   "lower_bound": "-4",
+   "exact": true,
+   "lam": [
+    "3",
+    "0"
+   ],
+   "nodes": 3257,
+   "cpu": 2.0,
+   "front": [
+    [
+     45,
+     [
+      10,
+      0
+     ],
+     "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLXLXRX"
+    ],
+    [
+     48,
+     [
+      7,
+      1
+     ],
+     "RXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXRRXLX"
+    ],
+    [
+     48,
+     [
+      9,
+      1
+     ],
+     "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXRXLLXRXRXL"
+    ],
+    [
+     49,
+     [
+      8,
+      0
+     ],
+     "RRXLXRXRXLXLXLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRR"
+    ],
+    [
+     54,
+     [
+      7,
+      5
+     ],
+     "RRXLXRXLLXRXRXRRXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRR"
+    ],
+    [
+     57,
+     [
+      4,
+      4
+     ],
+     "RXLLLLLXRXLXLXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLX"
+    ],
+    [
+     57,
+     [
+      6,
+      2
+     ],
+     "RRXLXRXRRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRR"
+    ],
+    [
+     60,
+     [
+      5,
+      3
+     ],
+     "RRXRRXLLLXRXLLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRR"
+    ],
+    [
+     67,
+     [
+      4,
+      18
+     ],
+     "RXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL"
+    ],
+    [
+     69,
+     [
+      4,
+      10
+     ],
+     "RXLXRXRRRRRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRRRRRRRR"
+    ],
+    [
+     71,
+     [
+      2,
+      6
+     ],
+     "RXLLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXR"
+    ],
+    [
+     72,
+     [
+      3,
+      5
+     ],
+     "RRRXLLXRRRXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLXRXRXRXRXRXRR"
+    ],
+    [
+     84,
+     [
+      1,
+      9
+     ],
+     "LLLLXLXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRX"
+    ],
+    [
+     85,
+     [
+      0,
+      8
+     ],
+     "RRRXRXLXLXRXRXRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRR"
+    ]
+   ]
+  },
+  {
+   "m": 9,
+   "g": 3,
+   "origin": [
+    1,
+    1
+   ],
+   "width0": -1,
+   "dist": 45,
+   "T": 52,
+   "value_pool": "-1",
+   "lower_bound": "-1",
+   "exact": true,
+   "lam": [
+    "3",
+    "0"
+   ],
+   "nodes": 3234,
+   "cpu": 2.0,
+   "front": [
+    [
+     45,
+     [
+      9,
+      0
+     ],
+     "LXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     52,
+     [
+      8,
+      1
+     ],
+     "RRRRRXLXRXRXLXLXLXRXRXRXRRRXRXLXRRXLXLXRRRRXRXRXRXRX"
+    ],
+    [
+     53,
+     [
+      7,
+      2
+     ],
+     "LXRXLXLLXLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRX"
+    ],
+    [
+     56,
+     [
+      6,
+      3
+     ],
+     "XLXRXRRRRRXRXLXLXRXRXLLLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX"
+    ],
+    [
+     57,
+     [
+      5,
+      4
+     ],
+     "XRRXRRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRXRXRRXRXRXRXRXR"
+    ],
+    [
+     61,
+     [
+      5,
+      10
+     ],
+     "XRXLXLLLLLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL"
+    ],
+    [
+     62,
+     [
+      4,
+      9
+     ],
+     "RXLXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL"
+    ],
+    [
+     67,
+     [
+      5,
+      4
+     ],
+     "RRRRRXRXLXLXRXRXLLLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRRXRXLXRRRRRRRR"
+    ],
+    [
+     68,
+     [
+      4,
+      7
+     ],
+     "XLLLLLXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX"
+    ],
+    [
+     69,
+     [
+      3,
+      6
+     ],
+     "LLXLXRXRRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRX"
+    ],
+    [
+     70,
+     [
+      4,
+      5
+     ],
+     "LLXRRXLLLXRXLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRX"
+    ],
+    [
+     74,
+     [
+      2,
+      7
+     ],
+     "RRRRRXRXLXLXRXRXRRXLXLXLXRRRRXLXLXLXLXLXRXLLXRXRXRXRXRXRRRXRRXRXRXRXRXRXRX"
+    ],
+    [
+     83,
+     [
+      1,
+      8
+     ],
+     "LLXLXRXRXLXLXLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLLLXRXRXRXRXRXRXRX"
+    ],
+    [
+     86,
+     [
+      0,
+      9
+     ],
+     "RRRRRXRXLXRRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ]
+   ]
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    1,
+    1
+   ],
+   "width0": -1,
+   "dist": 43,
+   "T": 52,
+   "value_pool": "2",
+   "lower_bound": "2",
+   "exact": true,
+   "lam": [
+    "3",
+    "0"
+   ],
+   "nodes": 1422753,
+   "cpu": 30.8,
+   "front": [
+    [
+     43,
+     [
+      12,
+      0
+     ],
+     "LXLXRXRXLXLXLXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+    ],
+    [
+     48,
+     [
+      9,
+      3
+     ],
+     "XLXLXRXRXLXRRRXRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXR"
+    ],
+    [
+     49,
+     [
+      10,
+      2
+     ],
+     "LLXRXLXRRXLXLXLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     50,
+     [
+      9,
+      3
+     ],
+     "LXRXLXLXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     52,
+     [
+      11,
+      1
+     ],
+     "RRRRXLXRXRXLXLXLXRXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRRRRR"
+    ],
+    [
+     54,
+     [
+      7,
+      9
+     ],
+     "XRXLXLXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL"
+    ],
+    [
+     55,
+     [
+      8,
+      4
+     ],
+     "RRRRRXLXRXRRXLXLXLXLXRXRXRXRRRXRXLXRRXLXLXRRRRXRXRXRXRX"
+    ],
+    [
+     57,
+     [
+      6,
+      6
+     ],
+     "XLXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX"
+    ],
+    [
+     60,
+     [
+      7,
+      5
+     ],
+     "LXLLXRRRXLXLLLXRXLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXRXRXRXRXRX"
+    ],
+    [
+     62,
+     [
+      5,
+      7
+     ],
+     "RRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRXRXLXRRRXRXRXRXRXRX"
+    ],
+    [
+     70,
+     [
+      3,
+      9
+     ],
+     "XRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX"
+    ],
+    [
+     75,
+     [
+      4,
+      8
+     ],
+     "LLXLXRXRRXLLLLXRXRXLLLLXRXLXLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLLLXRXRXRXRXRXRX"
+    ],
+    [
+     77,
+     [
+      2,
+      10
+     ],
+     "RRRRRXLXRXRRXLXRRXLXLXLXRXRRRXLXLXLXLXLXRXRXLLLXRXRXRXRXRXRRRXRRXRXRXRXRXRXRX"
+    ],
+    [
+     86,
+     [
+      1,
+      11
+     ],
+     "LLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ],
+    [
+     89,
+     [
+      0,
+      12
+     ],
+     "RRRRRXRRXLXLXRRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ]
+   ]
+  },
+  {
+   "m": 9,
+   "g": 5,
+   "origin": [
+    1,
+    1
+   ],
+   "width0": -1,
+   "dist": 43,
+   "T": 52,
+   "value_pool": "-1",
+   "lower_bound": "-1",
+   "exact": true,
+   "lam": [
+    "3",
+    "0"
+   ],
+   "nodes": 7537765,
+   "cpu": 192.2,
+   "front": [
+    [
+     43,
+     [
+      13,
+      0
+     ],
+     "LLXLXRXRXLXLXLXRXRXRXRRXRRXLXRXRXLXLXLXRXRX"
+    ],
+    [
+     46,
+     [
+      12,
+      1
+     ],
+     "LLLXRXLXLXRXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXL"
+    ],
+    [
+     47,
+     [
+      11,
+      0
+     ],
+     "RRXRXLXLXRXRXRXLXLXLXLLLXLXRXRXLXLXLXRXRXRXRRRR"
+    ],
+    [
+     51,
+     [
+      7,
+      4
+     ],
+     "RXLLLLXLXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLLXLXLXRRXLX"
+    ],
+    [
+     51,
+     [
+      9,
+      6
+     ],
+     "LXRXLXLXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     52,
+     [
+      10,
+      3
+     ],
+     "LLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRRRXRXLXLXRXRXL"
+    ],
+    [
+     53,
+     [
+      9,
+      2
+     ],
+     "RRRXLXRXLLXRXRXRRXRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRR"
+    ],
+    [
+     54,
+     [
+      8,
+      3
+     ],
+     "RRXLXRXRXLXLXLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRRR"
+    ],
+    [
+     57,
+     [
+      7,
+      10
+     ],
+     "RXLXRXRXLXLXLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXLLL"
+    ],
+    [
+     59,
+     [
+      7,
+      6
+     ],
+     "LLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRXRXLX"
+    ],
+    [
+     60,
+     [
+      4,
+      7
+     ],
+     "RXLLLXLXLXLLXRXRXRXRXLXLXRXLLLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLX"
+    ],
+    [
+     60,
+     [
+      6,
+      7
+     ],
+     "LLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLXRXL"
+    ],
+    [
+     61,
+     [
+      5,
+      6
+     ],
+     "RXRXLXLLLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRR"
+    ],
+    [
+     64,
+     [
+      6,
+      5
+     ],
+     "RRXRRXLLLXRXRRRXLXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRRR"
+    ],
+    [
+     66,
+     [
+      4,
+      15
+     ],
+     "RXLXRXRRRRRXRXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL"
+    ],
+    [
+     70,
+     [
+      4,
+      11
+     ],
+     "RXLXRXRRRRXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRRRRRRRR"
+    ],
+    [
+     72,
+     [
+      2,
+      9
+     ],
+     "RXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXR"
+    ],
+    [
+     77,
+     [
+      3,
+      8
+     ],
+     "RRRXRXLXLLXRRRRXLXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRRR"
+    ],
+    [
+     87,
+     [
+      1,
+      12
+     ],
+     "LLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRX"
+    ],
+    [
+     88,
+     [
+      0,
+      11
+     ],
+     "RRRRRXRXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRX"
+    ]
+   ]
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    1,
+    1
+   ],
+   "width0": 1,
+   "dist": 43,
+   "T": 52,
+   "value_pool": "-4",
+   "lower_bound": "-4",
+   "exact": true,
+   "lam": [
+    "1",
+    "0"
+   ],
+   "nodes": 278,
+   "cpu": 2.0,
+   "front": [
+    [
+     43,
+     [
+      12,
+      0
+     ],
+     "LXLXRXRXLXLXLXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+    ],
+    [
+     49,
+     [
+      10,
+      2
+     ],
+     "LLXRXLXRRXLXLXLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     50,
+     [
+      9,
+      3
+     ],
+     "LXRXLXLXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     52,
+     [
+      11,
+      1
+     ],
+     "RRRRXLXRXRXLXLXLXRXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRRRRR"
+    ],
+    [
+     54,
+     [
+      7,
+      9
+     ],
+     "XRXLXLXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL"
+    ],
+    [
+     55,
+     [
+      8,
+      4
+     ],
+     "RRRRRXLXRXRRXLXLXLXLXRXRXRXRRRXRXLXRRXLXLXRRRRXRXRXRXRX"
+    ],
+    [
+     57,
+     [
+      6,
+      6
+     ],
+     "XLXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX"
+    ],
+    [
+     60,
+     [
+      7,
+      5
+     ],
+     "LXLLXRRRXLXLLLXRXLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXRXRXRXRXRX"
+    ],
+    [
+     62,
+     [
+      5,
+      7
+     ],
+     "RRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRXRXLXRRRXRXRXRXRXRX"
+    ],
+    [
+     70,
+     [
+      3,
+      9
+     ],
+     "XRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX"
+    ],
+    [
+     75,
+     [
+      4,
+      8
+     ],
+     "LLXLXRXRRXLLLLXRXRXLLLLXRXLXLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLLLXRXRXRXRXRXRX"
+    ],
+    [
+     77,
+     [
+      2,
+      10
+     ],
+     "RRRRRXLXRXRRXLXRRXLXLXLXRXRRRXLXLXLXLXLXRXRXLLLXRXRXRXRXRXRRRXRRXRXRXRXRXRXRX"
+    ],
+    [
+     86,
+     [
+      1,
+      11
+     ],
+     "LLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ],
+    [
+     89,
+     [
+      0,
+      12
+     ],
+     "RRRRRXRRXLXLXRRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ]
+   ]
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    2,
+    1
+   ],
+   "width0": -1,
+   "dist": 53,
+   "T": 59,
+   "value_pool": "4/5",
+   "lower_bound": "4/5",
+   "exact": true,
+   "lam": [
+    "12/5",
+    "0"
+   ],
+   "nodes": 5787,
+   "cpu": 3.0,
+   "front": [
+    [
+     53,
+     [
+      12,
+      0
+     ],
+     "LLXRXLXLXRXRXRXLXLXLLXRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+    ],
+    [
+     55,
+     [
+      9,
+      3
+     ],
+     "LXLXLXRXRXRXLXLXRXRRRRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     57,
+     [
+      9,
+      3
+     ],
+     "LXLXRXRXLXLLXRXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     57,
+     [
+      10,
+      2
+     ],
+     "LLXLXRXRXLXLXRRRXLXLXLLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     61,
+     [
+      7,
+      9
+     ],
+     "LXRXRXLXLXLXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL"
+    ],
+    [
+     61,
+     [
+      8,
+      6
+     ],
+     "RXRXLXLXRXRRXLXLXLXLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRRR"
+    ],
+    [
+     61,
+     [
+      11,
+      1
+     ],
+     "RRRRXLXRXRXLXLXLXRXRXRXRRRRRXRXLXLXRXRXRXLXLXLLXRXRXRXRXRRRRR"
+    ],
+    [
+     63,
+     [
+      6,
+      6
+     ],
+     "LXRXLLXRXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX"
+    ],
+    [
+     63,
+     [
+      8,
+      4
+     ],
+     "RRRRRXLXRXRRXLXLXLXLXRXRXRXRRRXRXLXRRXLXLXRRRXLXLXRRRRXRXRXRXRX"
+    ],
+    [
+     67,
+     [
+      4,
+      10
+     ],
+     "RXLXLLLLLLXLXLXRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLX"
+    ],
+    [
+     67,
+     [
+      5,
+      7
+     ],
+     "RRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRXRXLXRRXLXRRRXRXRXRXRXRX"
+    ],
+    [
+     67,
+     [
+      7,
+      5
+     ],
+     "LXLXRXRXLXLLLLXLXLXRXRRXLXLXLXLXRXRXRXLLLLXRXRXRXRXLLLLLXRXRXRXRXRX"
+    ],
+    [
+     73,
+     [
+      3,
+      9
+     ],
+     "LXRXRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX"
+    ],
+    [
+     77,
+     [
+      2,
+      12
+     ],
+     "RXLXLLLLLLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXR"
+    ],
+    [
+     77,
+     [
+      4,
+      8
+     ],
+     "LXRXLLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXRX"
+    ],
+    [
+     83,
+     [
+      2,
+      10
+     ],
+     "RRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRXRRRXRXRRRRRRRR"
+    ],
+    [
+     87,
+     [
+      1,
+      11
+     ],
+     "LLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ],
+    [
+     89,
+     [
+      0,
+      12
+     ],
+     "RRRRRXRRXLXLXRRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ]
+   ]
+  },
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    3,
+    1
+   ],
+   "width0": -1,
+   "dist": 63,
+   "T": 66,
+   "value_pool": "4/5",
+   "lower_bound": "4/5",
+   "exact": true,
+   "lam": [
+    "7/5",
+    "0"
+   ],
+   "nodes": 8781,
+   "cpu": 4.3,
+   "front": [
+    [
+     63,
+     [
+      10,
+      2
+     ],
+     "LLXLXLXRRXRXLXLXRXRXRXLXLXLLLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     63,
+     [
+      12,
+      0
+     ],
+     "LLXLXRXRXLXLLXRXRXRXRXLXLXLLLXRXRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+    ],
+    [
+     64,
+     [
+      9,
+      3
+     ],
+     "LLXLXRXRXLXLLXRXRXRXRXLXLXRRRRRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     65,
+     [
+      10,
+      2
+     ],
+     "LLLXRXLXLXRXRXRXLXLXRRRXLXLXLLLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     66,
+     [
+      9,
+      3
+     ],
+     "LLXRXLLXRXRXRXLXLLLXRXRXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     68,
+     [
+      7,
+      9
+     ],
+     "LLXRXRXRXLXLXLXLXRXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL"
+    ],
+    [
+     69,
+     [
+      6,
+      6
+     ],
+     "LLXRXLLXRXRXRXLXRRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX"
+    ],
+    [
+     71,
+     [
+      4,
+      10
+     ],
+     "RXLXLXLLLLLLXLXLXRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLXLX"
+    ],
+    [
+     71,
+     [
+      8,
+      4
+     ],
+     "RRRRRXLXRXRRXLXLXLXLXRXRXRXRRRXRXLXRRXLXLXRRRXLXLXRRRXLXLXRRRRXRXRXRXRX"
+    ],
+    [
+     72,
+     [
+      5,
+      7
+     ],
+     "RRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRXRXLXRRXLXRRXLXRRRXRXRXRXRXRX"
+    ],
+    [
+     72,
+     [
+      11,
+      1
+     ],
+     "LLXRXRXLLLXRXRXRXLLLLXRXRXRXRXRRXRRRRRRXRXRXRXRXRXRRRRXLXRXRXLXLXLXRXRXR"
+    ],
+    [
+     73,
+     [
+      4,
+      12
+     ],
+     "RXLXLXLXRXRXRXRRRRRRXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL"
+    ],
+    [
+     74,
+     [
+      7,
+      5
+     ],
+     "LLXRXLLXRXRXRXLXLLLLLXLXLXRXRRXLXLXLXLXRXRXRXLLLLXRXRXRXRXLLLLLXRXRXRXRXRX"
+    ],
+    [
+     76,
+     [
+      3,
+      9
+     ],
+     "LLXRXRXRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX"
+    ],
+    [
+     79,
+     [
+      2,
+      12
+     ],
+     "RXLXLXLLLLLLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXR"
+    ],
+    [
+     81,
+     [
+      4,
+      8
+     ],
+     "LLXRXRXLLLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXRX"
+    ],
+    [
+     85,
+     [
+      2,
+      10
+     ],
+     "RRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRXRRRXRXRXRRRRRRRR"
+    ],
+    [
+     88,
+     [
+      1,
+      11
+     ],
+     "LLLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ],
+    [
+     89,
+     [
+      0,
+      12
+     ],
+     "RRRRRXRRXLXLXRRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ]
+   ]
+  },
+  {
+   "m": 10,
+   "g": 6,
+   "origin": [
+    1,
+    1
+   ],
+   "width0": 1,
+   "dist": 54,
+   "T": 63,
+   "value_pool": "-5",
+   "lower_bound": "-5",
+   "exact": true,
+   "lam": [
+    "1",
+    "0"
+   ],
+   "nodes": 3166,
+   "cpu": 4.3,
+   "front": [
+    [
+     54,
+     [
+      12,
+      1
+     ],
+     "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXRXRXRXLXLXRX"
+    ],
+    [
+     54,
+     [
+      13,
+      0
+     ],
+     "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRRXLXRXRXLXLXLXRXRX"
+    ],
+    [
+     58,
+     [
+      11,
+      0
+     ],
+     "RRXRXLXLXRXRXRXLXLXLXLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRR"
+    ],
+    [
+     64,
+     [
+      10,
+      5
+     ],
+     "RRXRXLXLXRXRXLLLXRXRXRXRRXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRR"
+    ],
+    [
+     66,
+     [
+      9,
+      2
+     ],
+     "RRRXLXRXLLXRXRXRRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRR"
+    ],
+    [
+     68,
+     [
+      8,
+      3
+     ],
+     "RRXLXRXRXLXLXLLLLLXRXLXLXRXRXRXLXLXLXRRRRXLXLXLXLXLLXRXRXRXRXRXRXRRR"
+    ],
+    [
+     70,
+     [
+      7,
+      10
+     ],
+     "RXLXRXRXLXLXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXLLL"
+    ],
+    [
+     74,
+     [
+      7,
+      6
+     ],
+     "LLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRRXRXLX"
+    ],
+    [
+     76,
+     [
+      5,
+      6
+     ],
+     "RXRXLXLLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRR"
+    ],
+    [
+     78,
+     [
+      6,
+      5
+     ],
+     "RRXRRXLLLXRXRRRXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLXRXRXRXRXRXRRR"
+    ],
+    [
+     88,
+     [
+      4,
+      13
+     ],
+     "RXLXRXRRXRRRRXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRRXLXLXLXLXLXLXLLXRRRRRRRRR"
+    ],
+    [
+     90,
+     [
+      2,
+      9
+     ],
+     "RXLLLLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXR"
+    ],
+    [
+     94,
+     [
+      3,
+      8
+     ],
+     "RRRXRXLXLLXRRRRXLXLXRRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRRR"
+    ],
+    [
+     106,
+     [
+      1,
+      12
+     ],
+     "LLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXRX"
+    ],
+    [
+     108,
+     [
+      0,
+      11
+     ],
+     "RRRRRXRRXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXRX"
+    ]
+   ]
+  },
+  {
+   "m": 10,
+   "g": 5,
+   "origin": [
+    1,
+    1
+   ],
+   "width0": 1,
+   "dist": 53,
+   "T": 63,
+   "value_pool": "-3",
+   "lower_bound": "-3",
+   "exact": true,
+   "lam": [
+    "1",
+    "0"
+   ],
+   "nodes": 6786,
+   "cpu": 4.2,
+   "front": [
+    [
+     53,
+     [
+      16,
+      0
+     ],
+     "LLXLXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX"
+    ],
+    [
+     54,
+     [
+      15,
+      0
+     ],
+     "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+    ],
+    [
+     56,
+     [
+      12,
+      3
+     ],
+     "LXLXRXRXLXLXLXRXRXRXRRRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     58,
+     [
+      12,
+      3
+     ],
+     "LXLXRXRXLXLXLXRXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     58,
+     [
+      13,
+      2
+     ],
+     "LLXLXRXRXLXLXRRRXLXLXLXLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     59,
+     [
+      14,
+      0
+     ],
+     "RRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXRXRXLXLXLXRXRXRXRRRRR"
+    ],
+    [
+     62,
+     [
+      10,
+      9
+     ],
+     "XLXRXRXLXLXLXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL"
+    ],
+    [
+     63,
+     [
+      11,
+      3
+     ],
+     "RRXRXLXLXRXRXRXLXLXLXLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRRRR"
+    ],
+    [
+     63,
+     [
+      12,
+      2
+     ],
+     "RRRXRXLXLXRXRXLLLXRXRXRXRRXRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRR"
+    ],
+    [
+     63,
+     [
+      13,
+      1
+     ],
+     "RRXRXLXLXRXRXRXLXLXLXLLXLXRXLLXRXRXLLLXRXRXRXLLLLLLXLXLXLXLXRRR"
+    ],
+    [
+     64,
+     [
+      9,
+      6
+     ],
+     "LXRXLXLXRXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX"
+    ],
+    [
+     68,
+     [
+      8,
+      11
+     ],
+     "XLXRXRXLXLXLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL"
+    ],
+    [
+     68,
+     [
+      10,
+      5
+     ],
+     "LXLXRXRXLXLXLLLXLXLXRXRRXLXLXLXLXRXRXRXLLLLXRXRXRXRXLLLLLXRXRXRXRXRX"
+    ],
+    [
+     69,
+     [
+      8,
+      6
+     ],
+     "RRXLXRXRXLXLXLLLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRR"
+    ],
+    [
+     73,
+     [
+      7,
+      13
+     ],
+     "RXLXRXRXLXLXLLLLLLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXLLL"
+    ],
+    [
+     73,
+     [
+      9,
+      5
+     ],
+     "RRRXLXRXRRXLLLLXRXRXRRRXLXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRRRR"
+    ],
+    [
+     74,
+     [
+      6,
+      9
+     ],
+     "XLXRXRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX"
+    ],
+    [
+     77,
+     [
+      5,
+      9
+     ],
+     "RXRXLXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRR"
+    ],
+    [
+     78,
+     [
+      7,
+      8
+     ],
+     "LXRXLXLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXRX"
+    ],
+    [
+     87,
+     [
+      6,
+      8
+     ],
+     "RRRRXLLXRRRXLXLLLXRXRRRRXLXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRRRR"
+    ],
+    [
+     88,
+     [
+      4,
+      11
+     ],
+     "XLLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ],
+    [
+     91,
+     [
+      2,
+      12
+     ],
+     "RXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXR"
+    ],
+    [
+     97,
+     [
+      3,
+      11
+     ],
+     "RXRRRRRXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXRRRRRRRR"
+    ],
+    [
+     108,
+     [
+      1,
+      14
+     ],
+     "LLLLLXLXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRXRX"
+    ],
+    [
+     109,
+     [
+      0,
+      14
+     ],
+     "RRRRRXRXRXRXLXLLXRXRXRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXRX"
+    ]
+   ]
+  },
+  {
+   "m": 10,
+   "g": 6,
+   "origin": [
+    2,
+    1
+   ],
+   "width0": -1,
+   "dist": 63,
+   "T": 71,
+   "value_pool": "1",
+   "lower_bound": null,
+   "exact": false,
+   "lam": [
+    "3",
+    "0"
+   ],
+   "nodes": 1500000,
+   "cpu": 21.3,
+   "front": [
+    [
+     63,
+     [
+      11,
+      0
+     ],
+     "RXRXRXRXLXLXLXLLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXRXLXLXRX"
+    ],
+    [
+     72,
+     [
+      10,
+      5
+     ],
+     "RRXLXRXRXLXLXLXRXRXLLLXRXRXRXRXRRXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRR"
+    ],
+    [
+     73,
+     [
+      9,
+      2
+     ],
+     "RRXRXLXLXRXRXLLLXRXRXRRRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRR"
+    ],
+    [
+     74,
+     [
+      8,
+      3
+     ],
+     "RXRXLXLXRXRRXLXLXLXLLLLLXRXLXLXRXRXRXLXLXLXRRRRXLXLXLXLXLLXRXRXRXRXRXRXRRR"
+    ],
+    [
+     77,
+     [
+      7,
+      10
+     ],
+     "RXLXLXRXRXRXLXLXLXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXLLLL"
+    ],
+    [
+     81,
+     [
+      5,
+      6
+     ],
+     "RXLXRRXLXLXLLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRR"
+    ],
+    [
+     87,
+     [
+      4,
+      18
+     ],
+     "RXLXLXRXRXRRRRRRXLXRXRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRXRRXL"
+    ],
+    [
+     92,
+     [
+      2,
+      9
+     ],
+     "RXLXLLLLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXR"
+    ],
+    [
+     94,
+     [
+      6,
+      5
+     ],
+     "RXRXLXLXRXRRRRXRXRXLXLLXRXRXRXRXLXLXLXRRRRXLXLXLXLXRRRRRXLXLXLXLXLXRRRRRRXLXLXLXLXLXLXRRRRRRRR"
+    ],
+    [
+     107,
+     [
+      1,
+      12
+     ],
+     "LLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXRX"
+    ],
+    [
+     108,
+     [
+      0,
+      11
+     ],
+     "RRRRRXRRXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXRX"
+    ],
+    [
+     112,
+     [
+      3,
+      8
+     ],
+     "RRRXRXLXLLXRRRRXLXLXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRRR"
+    ]
+   ]
+  },
+  {
+   "m": 10,
+   "g": 5,
+   "origin": [
+    2,
+    1
+   ],
+   "width0": -1,
+   "dist": 64,
+   "T": 71,
+   "value_pool": "11/4",
+   "lower_bound": null,
+   "exact": false,
+   "lam": [
+    "11/4",
+    "0"
+   ],
+   "nodes": 1500000,
+   "cpu": 21.9,
+   "front": [
+    [
+     64,
+     [
+      16,
+      0
+     ],
+     "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX"
+    ],
+    [
+     65,
+     [
+      15,
+      0
+     ],
+     "LLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+    ],
+    [
+     67,
+     [
+      13,
+      4
+     ],
+     "LLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLLLLXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     68,
+     [
+      12,
+      3
+     ],
+     "LLXRXLXLXRXRXRXLXLXLLXRXRXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     69,
+     [
+      13,
+      2
+     ],
+     "LLLXRXLXLXRXRXRXLXLXLXRRRRXLXLXLXLLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     69,
+     [
+      14,
+      0
+     ],
+     "RRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLLLXLXRXRXLXLXLXRXRXRXRRRRR"
+    ],
+    [
+     71,
+     [
+      9,
+      6
+     ],
+     "LXLXRXRXLXLLXRXRXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX"
+    ],
+    [
+     72,
+     [
+      11,
+      3
+     ],
+     "RRXLXRXRXLXLXLXRXRXRRXLXLXLXLXLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRRRR"
+    ],
+    [
+     73,
+     [
+      12,
+      2
+     ],
+     "RRRXLXRXRXLXLXLXRXRXRXLLLLXRXRXRXRRRXRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRR"
+    ],
+    [
+     74,
+     [
+      13,
+      1
+     ],
+     "RRXLXRXRXLXLXLXRXRXRRXLXLXLXLXLLXLXRXLLXRXRXLLLXRXRXRXLLLLLLXLXLXLXLXLXRRR"
+    ],
+    [
+     75,
+     [
+      8,
+      6
+     ],
+     "RXRXLXLXRXRRXLXLXLXLLLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRR"
+    ],
+    [
+     76,
+     [
+      10,
+      5
+     ],
+     "LLXRXLXLXRXRXRXLXLXLLLLXLXLXRXRRXLXLXLXLXRXRXRXLLLLXRXRXRXRXLLLLLXRXRXRXRXRX"
+    ],
+    [
+     77,
+     [
+      7,
+      12
+     ],
+     "LXRXRXLXLXLXRXRXRXRRRRRRXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL"
+    ],
+    [
+     80,
+     [
+      6,
+      9
+     ],
+     "LXRXLLXRXRXRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX"
+    ],
+    [
+     82,
+     [
+      5,
+      9
+     ],
+     "RXLXRRXLXLXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRR"
+    ],
+    [
+     83,
+     [
+      7,
+      8
+     ],
+     "LXLXRXRXLXLLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXRX"
+    ],
+    [
+     84,
+     [
+      9,
+      5
+     ],
+     "RRXLXRXRXLXLXLXRXRXRRRRXRXRXLXLLXRXRXRXRXLXLXLXRRRRXLXLXLXLXRRRRRXLXLXLXLXLXRRRRRRRR"
+    ],
+    [
+     86,
+     [
+      4,
+      15
+     ],
+     "RXLXLXRXRXRRRRRRXLXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRXRRXL"
+    ],
+    [
+     91,
+     [
+      6,
+      8
+     ],
+     "RXRXLXLXRXRRRRRXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXRRRRRRXLXLXLXLXLXLXRRRRRRRR"
+    ],
+    [
+     92,
+     [
+      4,
+      11
+     ],
+     "LXRXLLLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ],
+    [
+     93,
+     [
+      2,
+      12
+     ],
+     "RXLXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXR"
+    ],
+    [
+     100,
+     [
+      3,
+      11
+     ],
+     "RXLXRRRRRRXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXRRRRRRRR"
+    ],
+    [
+     109,
+     [
+      0,
+      14
+     ],
+     "RRRRRRXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXRX"
+    ],
+    [
+     120,
+     [
+      1,
+      13
+     ],
+     "RRRRRRXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRRRRRXRXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLXRRRRRRRR"
+    ]
+   ]
+  },
+  {
+   "m": 10,
+   "g": 6,
+   "origin": [
+    1,
+    1
+   ],
+   "width0": -1,
+   "dist": 54,
+   "T": 63,
+   "value_pool": "25/7",
+   "lower_bound": null,
+   "exact": false,
+   "lam": [
+    "22/7",
+    "0"
+   ],
+   "nodes": 1500000,
+   "cpu": 32.6,
+   "front": [
+    [
+     54,
+     [
+      12,
+      1
+     ],
+     "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXLXRXRXRXLXLXRX"
+    ],
+    [
+     54,
+     [
+      13,
+      0
+     ],
+     "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRRXLXRXRXLXLXLXRXRX"
+    ],
+    [
+     58,
+     [
+      11,
+      0
+     ],
+     "RRXRXLXLXRXRXRXLXLXLXLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRR"
+    ],
+    [
+     64,
+     [
+      10,
+      5
+     ],
+     "RRXRXLXLXRXRXLLLXRXRXRXRRXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRR"
+    ],
+    [
+     66,
+     [
+      9,
+      2
+     ],
+     "RRRXLXRXLLXRXRXRRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRR"
+    ],
+    [
+     68,
+     [
+      8,
+      3
+     ],
+     "RRXLXRXRXLXLXLLLLLXRXLXLXRXRXRXLXLXLXRRRRXLXLXLXLXLLXRXRXRXRXRXRXRRR"
+    ],
+    [
+     70,
+     [
+      7,
+      10
+     ],
+     "RXLXRXRXLXLXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXLLL"
+    ],
+    [
+     74,
+     [
+      7,
+      6
+     ],
+     "LLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRRXRXLX"
+    ],
+    [
+     76,
+     [
+      5,
+      6
+     ],
+     "RXRXLXLLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRR"
+    ],
+    [
+     78,
+     [
+      6,
+      5
+     ],
+     "RRXRRXLLLXRXRRRXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLXRXRXRXRXRXRRR"
+    ],
+    [
+     88,
+     [
+      4,
+      13
+     ],
+     "RXLXRXRRXRRRRXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRRXLXLXLXLXLXLXLLXRRRRRRRRR"
+    ],
+    [
+     90,
+     [
+      2,
+      9
+     ],
+     "RXLLLLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXR"
+    ],
+    [
+     94,
+     [
+      3,
+      8
+     ],
+     "RRRXRXLXLLXRRRRXLXLXRRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRRR"
+    ],
+    [
+     106,
+     [
+      1,
+      12
+     ],
+     "LLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXRX"
+    ],
+    [
+     108,
+     [
+      0,
+      11
+     ],
+     "RRRRRXRRXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXRX"
+    ]
+   ]
+  },
+  {
+   "m": 10,
+   "g": 5,
+   "origin": [
+    1,
+    1
+   ],
+   "width0": -1,
+   "dist": 53,
+   "T": 63,
+   "value_pool": "17/4",
+   "lower_bound": null,
+   "exact": false,
+   "lam": [
+    "13/4",
+    "0"
+   ],
+   "nodes": 1500000,
+   "cpu": 32.9,
+   "front": [
+    [
+     53,
+     [
+      16,
+      0
+     ],
+     "LLXLXRXRXLXLXLXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX"
+    ],
+    [
+     54,
+     [
+      15,
+      0
+     ],
+     "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX"
+    ],
+    [
+     58,
+     [
+      12,
+      3
+     ],
+     "LXLXRXRXLXLXLXRXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     58,
+     [
+      13,
+      2
+     ],
+     "LLXLXRXRXLXLXRRRXLXLXLXLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX"
+    ],
+    [
+     59,
+     [
+      14,
+      0
+     ],
+     "RRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXRXRXLXLXLXRXRXRXRRRRR"
+    ],
+    [
+     62,
+     [
+      10,
+      9
+     ],
+     "XLXRXRXLXLXLXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL"
+    ],
+    [
+     63,
+     [
+      11,
+      3
+     ],
+     "RRXRXLXLXRXRXRXLXLXLXLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRRRR"
+    ],
+    [
+     63,
+     [
+      12,
+      2
+     ],
+     "RRRXRXLXLXRXRXLLLXRXRXRXRRXRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRR"
+    ],
+    [
+     63,
+     [
+      13,
+      1
+     ],
+     "RRXRXLXLXRXRXRXLXLXLXLLXLXRXLLXRXRXLLLXRXRXRXLLLLLLXLXLXLXLXRRR"
+    ],
+    [
+     64,
+     [
+      9,
+      6
+     ],
+     "LXRXLXLXRXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX"
+    ],
+    [
+     68,
+     [
+      8,
+      11
+     ],
+     "XLXRXRXLXLXLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL"
+    ],
+    [
+     68,
+     [
+      10,
+      5
+     ],
+     "LXLXRXRXLXLXLLLXLXLXRXRRXLXLXLXLXRXRXRXLLLLXRXRXRXRXLLLLLXRXRXRXRXRX"
+    ],
+    [
+     69,
+     [
+      8,
+      6
+     ],
+     "RRXLXRXRXLXLXLLLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRR"
+    ],
+    [
+     73,
+     [
+      7,
+      13
+     ],
+     "RXLXRXRXLXLXLLLLLLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXLLL"
+    ],
+    [
+     73,
+     [
+      9,
+      5
+     ],
+     "RRRXLXRXRRXLLLLXRXRXRRRXLXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRRRR"
+    ],
+    [
+     74,
+     [
+      6,
+      9
+     ],
+     "XLXRXRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX"
+    ],
+    [
+     77,
+     [
+      5,
+      9
+     ],
+     "RXRXLXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRR"
+    ],
+    [
+     78,
+     [
+      7,
+      8
+     ],
+     "LXRXLXLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXRX"
+    ],
+    [
+     87,
+     [
+      6,
+      8
+     ],
+     "RRRRXLLXRRRXLXLLLXRXRRRRXLXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRRRR"
+    ],
+    [
+     88,
+     [
+      4,
+      11
+     ],
+     "XLLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ],
+    [
+     91,
+     [
+      2,
+      12
+     ],
+     "RXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXR"
+    ],
+    [
+     97,
+     [
+      3,
+      11
+     ],
+     "RXRRRRRXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXRRRRRRRR"
+    ],
+    [
+     108,
+     [
+      1,
+      14
+     ],
+     "LLLLLXLXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRXRX"
+    ],
+    [
+     109,
+     [
+      0,
+      14
+     ],
+     "RRRRRXRXRXRXLXLLXRXRXRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXRX"
+    ]
+   ]
+  }
+ ],
+ "dual_certificates": [
+  {
+   "m": 9,
+   "g": 4,
+   "origin": [
+    1,
+    1
+   ],
+   "leaf": "root, box [1,inf)^2",
+   "weights": {
+    "base": 1,
+    "beta0": 3,
+    "beta1": 0
+   },
+   "min_over_all_words": 75,
+   "witness_word": "RXLLLLXLLXLXRRXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXRRXLX",
+   "bound_needed": "T+1+3s = 52+1+21 = 74",
+   "conclusion": "every word w sorting the unit base has B(w)+3 beta_0(w) >= 75; a mixture with Bbar < 53 and betabar_0 <= 7 would give < 74. No root-leaf certificate exists (any words, any weights). Exact root optimum of criterion (8) LHS = 2."
+  }
+ ],
+ "certified": [
+  {
+   "source": "exact-lp words, root",
+   "m": 9,
+   "g": 3,
+   "mask": 9,
+   "output": {
+    "words": [
+     "LXRXLXLXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+     "RRRRRXLXRXRXLXLXLXRXRXRXRRRXRXLXRRXLXLXRRRRXRXRXRXRX",
+     "LXRXLXLLXLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRX",
+     "XLXRXRRRRRXRXLXLXRXRXLLLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX",
+     "XRRXRRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRXRXRRXRXRXRXRXR",
+     "XRXLXLLLLLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL",
+     "RXLXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL",
+     "RRRRRXRXLXLXRXRXLLLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRRXRXLXRRRRRRRR",
+     "XLLLLLXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX",
+     "LLXLXRXRRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRX",
+     "LLXRRXLLLXRXLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRX",
+     "RRRRRXRXLXLXRXRXRRXLXLXLXRRRRXLXLXLXLXLXRXLLXRXRXRXRXRXRRRXRRXRXRXRXRXRXRX",
+     "LLXLXRXRXLXLXLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLLLXRXRXRXRXRXRXRX",
+     "RRRRRXRXLXRRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+    ]
+   }
+  },
+  {
+   "source": "exact-lp words, root",
+   "m": 9,
+   "g": 5,
+   "mask": 33,
+   "output": {
+    "words": [
+     "LLXLXRXRXLXLXLXRXRXRXRRXRRXLXRXRXLXLXLXRXRX",
+     "LLLXRXLXLXRXRXRXLXLXLXLLLLXLXRXRXLXLXLXRXRXRXL",
+     "RRXRXLXLXRXRXRXLXLXLXLLLXLXRXRXLXLXLXRXRXRXRRRR",
+     "RXLLLLXLXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLLXLXLXRRXLX",
+     "LXRXLXLXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRX",
+     "LLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRRRXRXLXLXRXRXL",
+     "RRRXLXRXLLXRXRXRRXRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRR",
+     "RRXLXRXRXLXLXLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRRR",
+     "RXLXRXRXLXLXLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXLLL",
+     "LLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRXRXLX",
+     "RXLLLXLXLXLLXRXRXRXRXLXLXRXLLLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLX",
+     "LLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLXRXL",
+     "RXRXLXLLLLLXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRR",
+     "RRXRRXLLLXRXRRRXLXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRRR",
+     "RXLXRXRRRRRXRXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL",
+     "RXLXRXRRRRXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRRRRRRRR",
+     "RXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXR",
+     "RRRXRXLXLLXRRRRXLXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRRR",
+     "LLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRX",
+     "RRRRRXRXRXLXRRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRX"
+    ]
+   }
+  },
+  {
+   "source": "exact-lp words, root",
+   "m": 9,
+   "g": 6,
+   "mask": 65,
+   "output": {
+    "words": [
+     "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRXRXLXLXRX",
+     "RXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXRRXLX",
+     "LLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXRXLLXRXRXL",
+     "RRXLXRXRXLXLXLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRR",
+     "RRXLXRXLLXRXRXRRXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRR",
+     "RXLLLLLXRXLXLXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLX",
+     "RRXLXRXRRXRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRR",
+     "RRXRRXLLLXRXLLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRR",
+     "RXLXRXRRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXL",
+     "RXLXRXRRRRRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRRRRRRRR",
+     "RXLLLLLXLXRXRXLXLXRRRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXR",
+     "RRRXLLXRRRXLXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLXRXRXRXRXRXRR",
+     "LLLLXLXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLXRXRXRXRXRXRXRXRX",
+     "RRRXRXLXLXRXRXRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRR"
+    ]
+   }
+  },
+  {
+   "source": "exact-lp words, 2-leaf tree",
+   "m": 9,
+   "g": 4,
+   "mask": 17,
+   "output": {
+    "tree": {
+     "j": 0,
+     "t": 1,
+     "le": {
+      "words": [
+       "LXLXRXRXLXLXLXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX",
+       "LLXRXLXRRXLXLXLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+       "LXRXLXLXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX",
+       "RRRRXLXRXRXLXLXLXRXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRRRRR",
+       "XRXLXLXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL",
+       "RRRRRXLXRXRRXLXLXLXLXRXRXRXRRRXRXLXRRXLXLXRRRRXRXRXRXRX",
+       "XLXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX",
+       "LXLLXRRRXLXLLLXRXLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLLXRXRXRXRXRX",
+       "RRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRXRXLXRRRXRXRXRXRXRX",
+       "XRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX",
+       "LLXLXRXRRXLLLLXRXRXLLLLXRXLXLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLLLXRXRXRXRXRXRX",
+       "RRRRRXLXRXRRXLXRRXLXLXLXRXRRRXLXLXLXLXLXRXRXLLLXRXRXRXRXRXRRRXRRXRXRXRXRXRXRX",
+       "LLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX",
+       "RRRRRXRRXLXLXRRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+      ],
+      "origins": [
+       1,
+       1
+      ]
+     },
+     "ge": {
+      "words": [
+       "LLXRXLXLXRXRXRXLXLXLLXRXRXRXRXRRRRXLXRXRXLXLXLXRXRXRX",
+       "LXLXLXRXRXRXLXLXRXRRRRRXRXLXLXRXRXRRXLXLXLXLXLXRXRXRXRX",
+       "LXLXRXRXLXLLXRXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX",
+       "LLXLXRXRXLXLXRRRXLXLXLLLXLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+       "LXRXRXLXLXLXRXRXRXRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXL",
+       "RXRXLXLXRXRRXLXLXLXLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRRR",
+       "RRRRXLXRXRXLXLXLXRXRXRXRRRRRXRXLXLXRXRXRXLXLXLLXRXRXRXRXRRRRR",
+       "LXRXLLXRXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX",
+       "RRRRRXLXRXRRXLXLXLXLXRXRXRXRRRXRXLXRRXLXLXRRRXLXLXRRRRXRXRXRXRX",
+       "RXLXLLLLLLXLXLXRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLX",
+       "RRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRRXRXLXRRXLXRRRXRXRXRXRXRX",
+       "LXLXRXRXLXLLLLXLXLXRXRRXLXLXLXLXRXRXRXLLLLXRXRXRXRXLLLLLXRXRXRXRXRX",
+       "LXRXRRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX",
+       "RXLXLLLLLLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXR",
+       "LXRXLLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXLLLLLLXRXRXRXRXRXRX",
+       "RRRRRXRRXLXLXLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRXRRRXRXRRRRRRRR",
+       "LLLLLXLXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX",
+       "RRRRRXRRXLXLXRRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRXRRXLXLXLXLXLXLXLXLXRXRXRXRXRXRXRX"
+      ],
+      "origins": [
+       2,
+       1
+      ]
+     }
+    }
+   }
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 9,
+   "g": 5,
+   "mask": 33,
+   "output": {
+    "words": [
+     "RXLLLLXLXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLLXLXRXLLXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     3,
+     2,
+     "rrlrrl",
+     "L"
+    ]
+   ]
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 9,
+   "g": 6,
+   "mask": 65,
+   "output": {
+    "words": [
+     "RXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXRXLLXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     3,
+     2,
+     "rrlrlr",
+     "L"
+    ]
+   ]
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 10,
+   "g": 6,
+   "mask": 65,
+   "output": {
+    "words": [
+     "RXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRX",
+     "RXLLLLXLXRXLLXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLXRXLLXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     4,
+     2,
+     "rrlrlr",
+     "L"
+    ],
+    [
+     3,
+     2,
+     "rrrlrrl",
+     "L"
+    ]
+   ]
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 10,
+   "g": 7,
+   "mask": 129,
+   "output": {
+    "words": [
+     "RXLLLLXLXRXLLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXRXLLXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     3,
+     2,
+     "rrrlrlr",
+     "L"
+    ]
+   ]
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 11,
+   "g": 7,
+   "mask": 129,
+   "output": {
+    "words": [
+     "RXLLLLXLXRXLLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRX",
+     "RXLLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     4,
+     2,
+     "rrrlrlr",
+     "L"
+    ],
+    [
+     3,
+     3,
+     "rrlrlrrl",
+     "L"
+    ]
+   ]
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 11,
+   "g": 8,
+   "mask": 257,
+   "output": {
+    "words": [
+     "RXLLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     3,
+     3,
+     "rrlrlrlr",
+     "L"
+    ]
+   ]
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 12,
+   "g": 7,
+   "mask": 129,
+   "output": {
+    "words": [
+     "RXLLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     4,
+     3,
+     "rrlrlrrl",
+     "L"
+    ]
+   ]
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 12,
+   "g": 8,
+   "mask": 257,
+   "output": {
+    "words": [
+     "RXLLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     4,
+     3,
+     "rrlrlrlr",
+     "L"
+    ]
+   ]
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 13,
+   "g": 8,
+   "mask": 257,
+   "output": {
+    "words": [
+     "RXLLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRXRXLLLLXRXRXRX",
+     "RXLLLLLXLXRXLLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     5,
+     3,
+     "rrlrlrlr",
+     "L"
+    ],
+    [
+     4,
+     3,
+     "rrrlrlrrl",
+     "L"
+    ]
+   ]
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 13,
+   "g": 9,
+   "mask": 513,
+   "output": {
+    "words": [
+     "RXLLLLLXLXRXLLXRXRXRXLXLXLXLXRXRXRXRXRXLXLXLXLXLXLXRXRXRXRXRXRXRXLXLXLXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRX"
+    ]
+   },
+   "word_S_params": [
+    [
+     4,
+     3,
+     "rrrlrlrlr",
+     "L"
+    ]
+   ]
+  }
+ ],
+ "not_certified": [
+  {
+   "source": "word_S pool, root",
+   "m": 9,
+   "g": 3,
+   "gap": "4",
+   "lhs": "2"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 9,
+   "g": 4,
+   "gap": "1",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 10,
+   "g": 3,
+   "gap": "5",
+   "lhs": "4"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 10,
+   "g": 4,
+   "gap": "2",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 10,
+   "g": 5,
+   "gap": "1/2",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 11,
+   "g": 3,
+   "gap": "7",
+   "lhs": "11/2"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 11,
+   "g": 4,
+   "gap": "5",
+   "lhs": "2"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 11,
+   "g": 5,
+   "gap": "2",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 11,
+   "g": 6,
+   "gap": "1/7",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 12,
+   "g": 4,
+   "gap": "7",
+   "lhs": "5"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 12,
+   "g": 5,
+   "gap": "4",
+   "lhs": "2"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 12,
+   "g": 6,
+   "gap": "3/2",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 13,
+   "g": 4,
+   "gap": "9",
+   "lhs": "8"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 13,
+   "g": 5,
+   "gap": "6",
+   "lhs": "5"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 13,
+   "g": 6,
+   "gap": "3",
+   "lhs": "2"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 13,
+   "g": 7,
+   "gap": "8/7",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 14,
+   "g": 4,
+   "gap": "12",
+   "lhs": "9"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 14,
+   "g": 5,
+   "gap": "9",
+   "lhs": "6"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 14,
+   "g": 6,
+   "gap": "6",
+   "lhs": "3"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 14,
+   "g": 7,
+   "gap": "13/4",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 14,
+   "g": 8,
+   "gap": "1",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 14,
+   "g": 9,
+   "gap": "1/10",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 14,
+   "g": 10,
+   "gap": "4",
+   "lhs": "5"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 15,
+   "g": 4,
+   "gap": "15",
+   "lhs": "13"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 15,
+   "g": 5,
+   "gap": "12",
+   "lhs": "10"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 15,
+   "g": 6,
+   "gap": "9",
+   "lhs": "7"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 15,
+   "g": 7,
+   "gap": "6",
+   "lhs": "4"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 15,
+   "g": 8,
+   "gap": "3",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 15,
+   "g": 9,
+   "gap": "12/7",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 15,
+   "g": 10,
+   "gap": "1",
+   "lhs": "2"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 16,
+   "g": 5,
+   "gap": "16",
+   "lhs": "12"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 16,
+   "g": 6,
+   "gap": "13",
+   "lhs": "9"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 16,
+   "g": 7,
+   "gap": "10",
+   "lhs": "6"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 16,
+   "g": 8,
+   "gap": "7",
+   "lhs": "3"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 16,
+   "g": 9,
+   "gap": "17/4",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 16,
+   "g": 10,
+   "gap": "2",
+   "lhs": "1"
+  },
+  {
+   "source": "word_S pool, root",
+   "m": 16,
+   "g": 11,
+   "gap": "7",
+   "lhs": "8"
+  },
+  {
+   "source": "staircase trees (exact-lp + word_S + shortest words, origins (1,1)..(4,1))",
+   "m": 10,
+   "g": 5,
+   "note": "leaves u0 in [1,2] and u0>=5 pass; single-value leaves u0=3 and u0=4 fail with the available words; no (10,4),(10,5) table"
+  },
+  {
+   "source": "capped exact pricing (1.5M nodes)",
+   "m": 10,
+   "g": 5,
+   "note": "root pool value 17/4, (2,1) leaf 11/4; pricing hit node limit, optimum not proven"
+  },
+  {
+   "source": "capped exact pricing (1.5M nodes)",
+   "m": 10,
+   "g": 6,
+   "note": "root 25/7, (2,1) leaf 1 in the capped run; root later CERTIFIED by word_S"
+  }
+ ]
+}
