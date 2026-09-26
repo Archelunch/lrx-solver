@@ -969,3 +969,29 @@ step, for the odd-m single word and the even-m 1/2-1/2 mixture. Both
 proofs were written by models and mechanically checked; neither has been
 reviewed by a human mathematician. Until that review, the repository
 records it as "proof written, unreviewed", not as a theorem.
+
+## Session 28: proof of word_R1; exact closed-form hypotheses for word_G (2026-09-26)
+
+`autoresearch/bound-m-260925/WORDR1-PROOF.md` (about 8,000 words, same
+structure as WORDC-PROOF.md) proves for all m >= 9 that word_R1(m) sorts
+the unit base of (m..1){1,m} with B = length and, for m = 4u + rho: rho = 0:
+length T-2, slopes (m-4, m-2); rho = 1: T-2, (m-5, m-3); rho = 2: T,
+(m-6, m-4); rho = 3: T-2, (m-5, m-3); m = 9, 10 are instances, not
+exceptions. Key lemma P: core_word never makes a partial carry here
+(every step is a full carry or empty), so the word_C sweep lemmas apply
+verbatim; every cz term is 0. With Session 27, (m..1){1,m} for all
+m >= 9 has a complete written proof chain (model-written, unreviewed).
+Mechanical check `checks/wordr1_proof_check.py` (orchestrator re-ran):
+m = 9..60, 0 mismatches over Lemmas P, A-E, theorem, corollary; worker
+also m = 9..200, 0; three mutations caught.
+
+word_G is not proved. Section 11 states what a proof needs (a
+partial-carry version of the sweep lemma: 1,509 of 1,600 words have a
+partial core-1 carry) and `checks/wordg_formula_check.py` tests exact
+closed-form hypotheses in (m, g) at m = 9..80 (1,600 rows, orchestrator
+re-ran): all 28 rule-row hypotheses hold with 0 exceptions; C2 (2 <= g <=
+j-2: length - T = 2-g, slopes (m-2, m-2-g-2[m even])), C4 (1 <= r <=
+j-2: 1-r, (m-2, m-3-r)), C6 (B = length), C7 (B <= T, slopes <= m-2) hold
+with 0 exceptions; the deliberately coarse C1, C3, C5 fail (35, 54, 107).
+Out of sample at m = 81..120 (2,010 rows) the 26 nonempty hypotheses hold
+with 0 exceptions.
