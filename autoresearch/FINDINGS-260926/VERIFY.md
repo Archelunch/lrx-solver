@@ -2,7 +2,7 @@
 
 No network, no provider calls, no generated code. This package is committed in the repository `lrx-lab` at commit
 `f99d129`; FINDINGS.md, MANIFEST.md and this file all refer to that commit. Observed on 2026-09-26, macOS,
-Python 3.12.8, on the working tree at `719ad17` plus this package's changes, which `f99d129` commits.
+Python 3.12.8, on the working tree at `1d588a1` plus this package's changes, which `f99d129` commits.
 
 ## 1. Self-contained re-checks (no repository, no tables, no numpy)
 
@@ -16,7 +16,7 @@ python run_checks.py    # same steps, for Windows
 ```
 
 Both set `PYTHONPATH` to `<package>/vendor` only and disable bytecode writes, so the package is left unchanged. They
-run seven scripts in place, and none of them writes a file:
+run eleven scripts in place, and none of them writes a file:
 - `checks/reversal_k2.py` and `checks/reversal_midband.py` (no tables) re-check the stored rows;
 - `checks/wordc_proof_check.py` checks every intermediate claim of `WORDC-PROOF.md` against the literal execution
   of word_C at m = 9..40;
@@ -28,7 +28,15 @@ run seven scripts in place, and none of them writes a file:
 - `checks/reversal_carry.py` re-checks the 59 stored carry-across certificates of `REVERSAL-CARRY.md` and the word_M
   closed form to m = 60;
 - `negcert/negcert_check.py negcert/negcert-m9-04.json`, run with `python -I`, is the portable negative
-  certificate for m = 9 {0,4}. It uses the stdlib only and reads no tables.
+  certificate for m = 9 {0,4}. It uses the stdlib only and reads no tables;
+- `checks/reversal_k3.py` re-checks the 455 stored k=3 class-survey certificates of `REVERSAL-K3.md` and the
+  word_W closed form to m = 40;
+- `checks/reversal_interior.py` re-checks the interior-mask root certificates of `REVERSAL-INTERIOR.md`
+  (k = 2, 3, 4) and the completeness of every (k, m) cell;
+- `checks/midband_trees.py` re-checks the middle-band tree certificates of `MIDBAND-TREES-M12.md` (without
+  `--refutations`, so the C-oracle leaf refutations are not re-run here; see section 3a);
+- `negcert/midband_positive_check.py` re-checks the two positive root certificates of `MIDBAND-LOWERBOUND.md`
+  found by exact-oracle column generation.
 
 Then `reversal_m13.py` and `reversal_orbit.py`
 rebuild their JSON and refuse to overwrite it, so the runners copy `checks/` to a temporary `a/b/checks/`, delete
@@ -41,10 +49,10 @@ Observed: the package was copied to a temporary directory outside the repository
 unset (`cp -R autoresearch/FINDINGS-260926 $TMP/ && cd $TMP/FINDINGS-260926 && env -u PYTHONPATH sh run_checks.sh`):
 
 ```
-package /private/tmp/claude-502/.../scratchpad/final3/FINDINGS-260926
+package /private/tmp/claude-502/.../scratchpad/verify-v4/run2/FINDINGS-260926
 python 3.12.8
 $ python checks/reversal_k2.py
-  re-checked 390 word_G rows and 150 stored rows in 1.9 s; problems: none
+  re-checked 390 word_G rows and 150 stored rows in 2.0 s; problems: none
   exit 0
 $ python checks/reversal_midband.py
   dual certificate m=9 {0,4}: witness B=54 beta=[7, 7], B+3beta0=75 (stored min 75)
@@ -70,15 +78,31 @@ $ python checks/reversal_carry.py
   exit 0
 $ python -I negcert/negcert_check.py negcert/negcert-m9-04.json
   root mixture needs Bbar < T+1 = 53 and betabar_0 <= s = 7, so Bbar + 3 betabar_0 < 74; every word, hence every mixture, has >= 75: NO ROOT-LEAF CERTIFICATE
-  total 16.4 s
+  total 18.6 s
   VERIFIED
+  exit 0
+$ python checks/reversal_k3.py
+  word_W rows: 122 by evaluator+audit+replay (m <= 24), 728 by replay+criterion (7) (m = 25..40)
+  stored certified rows re-checked: 455; misses stored: 50
+  problems: none wall 1.9
+  exit 0
+$ python checks/reversal_interior.py
+   4 10   118 / 126  [1, 2, 6, 9]: 2318/341, 0; [1, 3, 6, 8]: 638/195, 0; [1, 3, 6, 9]: 1678/269, 49/538; [1, 3, 7, 9]: 49/16, 0; [1, 4, 6, 9]: 5/3, 0; [1, 4, 7, 9]: 2600/313, 53/626; [1, 4, 8, 9]: 435/91, 0; [2, 4, 7, 9]: 9/7, 0
+  stored certified rows re-checked: 837; misses stored: 14
+  problems: none wall 2.1
+  exit 0
+$ python checks/midband_trees.py
+  ALL OK
+  exit 0
+$ python negcert/midband_positive_check.py
+  problems: none
   exit 0
 $ python a/b/checks/reversal_m13.py
   closed forms m=9..200 failures: []
-  wrote a/b/checks/reversal-m13-words.json 2.0 s
+  wrote a/b/checks/reversal-m13-words.json 2.3 s
   exit 0
 $ python a/b/checks/reversal_orbit.py
-  wrote a/b/checks/reversal-orbit-words.json 2.4 s
+  wrote a/b/checks/reversal-orbit-words.json 2.7 s
   exit 0
 reversal-m13-words.json identical
 reversal-orbit-words.json identical
@@ -100,6 +124,13 @@ expected last lines (timings vary):
   root mixture needs Bbar < T+1 = 53 and betabar_0 <= s = 7, ...: NO ROOT-LEAF CERTIFICATE
   total 16.5 s
   VERIFIED
+  word_W rows: 122 by evaluator+audit+replay (m <= 24), 728 by replay+criterion (7) (m = 25..40)
+  stored certified rows re-checked: 455; misses stored: 50
+  problems: none wall 1.9
+  stored certified rows re-checked: 837; misses stored: 14
+  problems: none wall 2.1
+  ALL OK
+  problems: none
   closed forms m=9..200 failures: []
   wrote a/b/checks/reversal-m13-words.json 2.2 s
   wrote a/b/checks/reversal-orbit-words.json 2.4 s
@@ -108,10 +139,12 @@ expected last lines (timings vary):
 ALL CHECKS PASSED
 ```
 
-`run_checks.sh` exited 0 in 27.7 s wall time, and `run_checks.py` in the same copy exited 0 with the same nine
-steps passing. No `__pycache__` was left in the copy. In the previous version, the same `run_checks.sh` also exited 0
-under a fresh virtual environment without numpy, and the four scripts other than `wordc_proof_check.py` passed under
-macOS `/usr/bin/python3` 3.9.6; those two runs were not repeated for this version.
+`run_checks.sh` exited 0 in 35.0 s wall time (this host was shared with other agents' jobs at the time; see section
+3a for the two heavy optional checks). `run_checks.py`, run the same way in a separate temporary copy, also exited 0
+with the same thirteen steps passing in 33.0 s. No `__pycache__` was left in either copy. In the previous version,
+the same `run_checks.sh` also exited 0 under a fresh virtual environment without numpy, and the four scripts other
+than `wordc_proof_check.py` passed under macOS `/usr/bin/python3` 3.9.6; those two runs were not repeated for this
+version.
 
 The plain midband run prints 14 rows, each with `CERTIFIED ... audit=(True, 'ok') replay=True`. `reversal_orbit.py`
 also prints `R1 failures m=9..200: []` and `word_C length failures 0 beta failures [[6, 1, [4, 3]], ..., [60, 1,
@@ -156,12 +189,12 @@ reduced words has not been independently checked (section 6).
 
 ## 3. Repository checks
 
-From the repository root at `719ad17`, the tree this version was built on (this package changes nothing outside
+From the repository root at `1d588a1`, the tree this version was built on (this package changes nothing outside
 its folder):
 
 | command | observed |
 |---|---|
-| `python -m unittest discover -s tests -p 'test_*.py' -v` | `Ran 617 tests in 63.348s` / `OK (skipped=4)` |
+| `python -m unittest discover -s tests -p 'test_*.py' -v` | `Ran 618 tests in 96.141s` / `OK (skipped=4)` |
 | `python -m compileall -q src tests` | no output, exit 0 |
 | `python -m src.lrx.cli smoke` | one JSON line ending `"passed": true, "visible_states": 12}`, exit 0 |
 
@@ -169,9 +202,12 @@ The scripts under `autoresearch/bound-m-260925/checks/` are the repository origi
 `reversal_midband_search/mb.py`, the files of `checks/` here are byte-identical to them. `WORDC-PROOF.md`,
 `WORDR1-PROOF.md` and `REVERSAL-CARRY.md` are copies of the notes in `autoresearch/bound-m-260925/`, `negcert/` of
 `autoresearch/bound-m-260925/negcert/`, `checks-lemma1/` of `autoresearch/checks-lemma1/`, and the two LEMMA notes
-of `autoresearch/LEMMA1-GENERAL-M-260926.md` and `autoresearch/LEMMA34-GENERAL-M-260926.md`. Each was compared
-byte for byte with `git show HEAD:<path>` at `f163e74`, which does not differ from `719ad17` in these files. Inside the repository they also run as
-`PYTHONPATH=. python autoresearch/bound-m-260925/checks/<script>.py`.
+of `autoresearch/LEMMA1-GENERAL-M-260926.md` and `autoresearch/LEMMA34-GENERAL-M-260926.md`. The four files added
+in this version (`REVERSAL-K3.md`, `REVERSAL-INTERIOR.md`, `MIDBAND-LOWERBOUND.md`, `MIDBAND-M12-14.md`,
+`MIDBAND-TREES-M12.md` — five notes — and the new scripts and certificates under `checks/`, `negcert/`,
+`negcert/fast/` and `negcert/tree/`) are copies of the same-named files under `autoresearch/bound-m-260925/`. Every
+copy, old and new, was compared byte for byte with `git show HEAD:<path>` at `1d588a1` and found identical. Inside
+the repository they also run as `PYTHONPATH=. python autoresearch/bound-m-260925/checks/<script>.py`.
 
 `checks/reversal_words.py` is the builder of REVERSAL-WORDS.md. It needs tables (4..11, 2) and numpy, imports
 `src.lrx.table_bfs` and refuses to overwrite its JSON. It is not one of the re-checks that the runners run and is not covered by
@@ -179,14 +215,16 @@ byte for byte with `git show HEAD:<path>` at `f163e74`, which does not differ fr
 
 ## 3a. Optional checks, not run by the runners
 
-These three need either the repository with its tables or several minutes. They were run for this version, with
-the observed last lines below. Everything they check is finite.
+These need either the repository with its tables, a local C build, or several minutes to tens of minutes. They were
+run for this version, with the observed last lines below. Everything they check is finite.
 
 | command | needs | observed last line | time |
 |---|---|---|---|
 | `python autoresearch/checks-lemma1/lemma1_tables_check.py` | repository root; tables (9,1)..(9,6), (10,2), (10,3); bound-campaign finalist rows | `RESULT: PASS (0 violations)` | 2.3 s |
 | `python autoresearch/checks-lemma1/lemma34_tables_check.py` | same tables; imports `lemma1_tables_check.py` | `RESULT: PASS (0 violations)` | 12.7 s |
 | `PYTHONPATH=vendor python negcert/validate_small.py` | no tables (BFS built in memory); vendored `lrx_m` | `VALIDATED` | 432 s (7.2 min, run beside other jobs) |
+| `python -I negcert/negcert_general.py negcert/negcert-m11-05.json` | stdlib only, no repository imports, no tables; exhaustive in-memory A* over the m=11 abstraction table (14.4M vectors) | `VERIFIED` | 3741 s (62.3 min; 2176 s table build, 1565 s bounded search, 2.1 GB max RSS, 6.3 GB peak footprint; documented reference was 743 s on an idle host, this host had other jobs running) |
+| `negcert/fast/build.sh` then `python -I negcert/fast/fast_check.py negcert/fast/negcert-m12-06.json` | a C compiler (`cc`, no other dependency) to build `lrxfast` locally; the C oracle then holds the m=12 abstraction table (67.3M vectors) in memory, and must run alone (about 5.3 GB) | `VERIFIED` | 207.9 s (team lead's isolated run, clean rebuild, 2026-09-26; see note below) |
 
 The two table checks locate the repository root two folders above their own and read the tables under
 `datasets/generated/`, so they run from the repository; the copies in `checks-lemma1/` are byte-identical to the
@@ -202,6 +240,38 @@ and the tables against each other. They are not an independent test of the lemma
 `validate_small.py` compares the negative checker with brute force priced by the vendored `lrx_m.Profile` at
 m = 3..6. It was run from a package copy outside the repository with `PYTHONPATH=vendor` and exited 0; all 21
 cases printed `ok`.
+
+**`negcert/negcert_general.py negcert/negcert-m11-05.json`, run with `python -I` from a package copy outside the
+repository.** Observed (host shared with other jobs at the time, load average 7-9; the table build alone took
+2176.3 s against a documented 473-483 s on an idle host):
+
+```
+statement: m=11 state=[0, 11, 10, 9, 8, 7, 0, 6, 5, 4, 3, 2, 1]  min over accepted sorting words of 5*B + 13*beta_0 + 0*beta_1 >= 497
+pattern table [[11, 10, 9], [8, 7, 6], [5, 4, 3], [2, 1]]: 14414400 abstract vectors, 86486400 nodes, 172233600 edges, consistent; max h 453; bound at start 431 (2176.3 s)
+  ... (23 progress lines, 1M to 23M expansions) ...
+bounded A* (prune f >= 497): no sorting word below 497; 23907926 expansions, 23907926 stored (1564.5 s)
+witness LXLXRXRXLXLXLXRXRXRXRRRRRXRXLXLXRXRXLLLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX: B=71 beta=[12, 3] F=511 ok
+witness RXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRX: B=84 beta=[7, 10] F=511 ok
+witness LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX: B=64 beta=[15, 0] F=515 ok
+root mixture needs Bbar < T+1 = 76 and betabar_j <= s = 9, so 5 Bbar + 13 betabar_0 + 0 betabar_1 < 497; every word, hence every mixture, has >= 497: NO ROOT-LEAF CERTIFICATE
+implied lower bound on the root LP value min{Bbar : betabar_j <= s}: (497 - 9*13)/5 = 76 (T+1 = 76)
+total 3740.9 s
+VERIFIED
+exit 0
+```
+
+The expansion count (23,907,926) and the exact minimum (497) match `MIDBAND-LOWERBOUND.md` and the C-port
+cross-check of `negcert/fast/README.md` exactly. `/usr/bin/time -l` reported 2,102,231,040 bytes maximum resident
+set size and 6,305,166,784 bytes peak memory footprint, 3770.98 s real time.
+
+**`negcert/fast/build.sh` then `python -I negcert/fast/fast_check.py negcert/fast/negcert-m12-06.json`.** This
+run needs the full 67.3M-vector m=12 table (about 5.3 GB) and must run alone; an attempt on this shared host,
+concurrent with another agent's 5 GB oracle run, was thrashing (host load 10-11, the process's own CPU share fell
+to about 24%) and was killed by pid after 29 CPU-minutes without finishing cleanly. The cited result is the team
+lead's isolated run instead: clean rebuild of `lrxfast` from `lrxfast.c` with `build.sh`, then
+`python -I fast_check.py negcert-m12-06.json` printed `VERIFIED`, total 207.9 s, on 2026-09-26, run alone. This
+matches the 152-280 s and 5.3-5.35 GB figures already recorded for this certificate in `MIDBAND-M12-14.md` and
+`negcert/fast/README.md`.
 
 ## 4. Tables (gitignored under datasets/generated/ in the repository, not shipped)
 

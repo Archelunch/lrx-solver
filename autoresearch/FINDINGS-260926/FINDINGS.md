@@ -51,6 +51,12 @@ computations. It makes no priority claim. **The general conjecture E_r(n) <= T_m
   написаны, но не проверены человеком.
 - **Просьбы к группе.** Подтвердить лемму 1 и (7)/(8) при общем m; подсказать четвёртую форму слова для средней
   полосы; оценить осуществимость таблицы (12,2); назвать исключения пакета m=8 (290 и 65+36,888).
+- **Точная колонная генерация (сессия 33).** Точный оракул по всем словам сертифицирует корневой лист при m=10
+  {0,5} и m=11 {0,6} (V < T+1) и точно опровергает его при m=11 {0,5} и (сессия 34) m=12 {0,5}, {0,6} (V = T+1);
+  прежние оценки "избытка базы" по ограниченным пулам генераторов (сессии 23, 26) не были точными нижними границами.
+- **Отрицания при m=12 и дерево для m=11 {0,5} (сессии 34-35).** Оба корня m=12 {0,5} и {0,6} опровергнуты точным
+  C-оракулом (negcert/fast/); обе семьи m=12 остаются BOUNDARY с одним открытым листом на границе lhs=1. m=11 {0,5}
+  сертифицирован целиком деревом из 4 листьев.
 
 ## Conventions
 
@@ -558,6 +564,16 @@ Ten of the 14 are certified. Among the m = 11 misses, mask 145 is certified. Mas
 - **Exact optima at m = 10.** The exact root and (2,1) optima are unknown, because the pricing hit the 1.5M-node cap.
 - **Higher k.** The misses 130, 7300, 1056 and 2456 also bind on the base.
 
+**Correction (Session 33, `MIDBAND-LOWERBOUND.md` section 4).** The "root base excess" figures reported above from
+Session 23 (e.g. 74/15 at mask 130, 37838/6993 at mask 7300, the excess-2 and excess-9/2 misses at m = 11) and the
+"minimum base excess 16, 16, 30, 46, 64, 84 at g = m/2, m = 14..24" of `REVERSAL-CARRY.md` (Session 26) are seed-LP
+values over the stored generator pools (word_S, word_K, word_M, word_C, shortest words), **not exact lower bounds**
+on the root LP. The exact exhaustive oracle of `MIDBAND-LOWERBOUND.md` finds that the true root excess V - T is
+often much smaller, or zero: at m = 10 {0,5} the pool gave 9/5 but V - T is exactly 1/2 (certifiable); at m = 11
+{0,6} the pool gave 4/3 but V - T is exactly -1 (certifiable); the optimal words carry both zeros near slope s, a
+shape none of the stored generators produces. Read every restricted-pool "excess" figure in this file and in
+`REVERSAL-CARRY.md` as an upper bound on the true root LP excess only, not as evidence that the base binds.
+
 ## (c) word_C's closed forms: proof in WORDC-PROOF.md, with the earlier sketch as an outline
 
 A full proof of the closed forms now exists in `WORDC-PROOF.md`. Its theorem covers every m >= 3 and 1 <= a <= m-2:
@@ -698,6 +714,12 @@ campaigns. A third campaign, using the tree contract with a $15 cap, is prepared
     m = 9..12.
 12. **Conjecture (triple LP exact).** For every m >= 4 the correlation LP (5)-(6) has optimum epsilon = 0. Proved
     exactly for m = 4..9; float evidence to m = 18.
+13. **Conjecture (even centre certifiable from m = 10), REFUTED (Session 34).** `MIDBAND-LOWERBOUND.md` conjecture 2
+    claimed every root leaf in the band is certifiable for even m >= 10. `MIDBAND-M12-14.md` finds m = 12 {0,6}
+    has exact root LP value V = T+1 = 89: NO ROOT-LEAF CERTIFICATE, by the C oracle (`negcert-m12-06.json`).
+14. **Conjecture (no base barrier away from the odd centre), REFUTED (Session 34).** `MIDBAND-LOWERBOUND.md`
+    conjecture 3 claimed V - T <= 1/2 for m >= 10, g != (m-1)/2. Both m = 12 {0,5} and {0,6} have V - T = 1
+    exactly, by the C oracle (`negcert-m12-05.json`, `negcert-m12-06.json`).
 
 ## (f) Requests to the group
 
@@ -815,6 +837,9 @@ conjecture E_r(n) <= T_m(n) for all m >= 8 remains open.
 | No root-leaf certificate for m = 9 {0,4}: min of B + 3 beta_0 over all accepted sorting words is 75, while a root mixture needs < 74 (Session 29) | `negcert/NEGCERT.md`; completeness argument in the docstring of `negcert/negcert_check.py` | `negcert/negcert_check.py negcert/negcert-m9-04.json`: VERIFIED, about 16 s, stdlib only, no tables; `negcert/validate_small.py`: 21 of 21 brute-force cases at m = 3..6 agree | exact negative, portable checker, VERIFIED |
 | word_G(m, g) certifies (m..1){0,g} in the outer band (Session 28) | none; `WORDR1-PROOF.md` section 11 says what a proof needs | `checks/wordg_formula_check.py`: m = 9..80, 1,600 rows, all 28 rule-row hypotheses and C2, C4, C6, C7 hold with 0 exceptions; the coarse C1, C3, C5 fail by design; out of sample at m = 81..120 the 26 nonempty hypotheses hold | conditional: 28 hypotheses, 0 exceptions, unproved |
 | word_M(m, g, side) certifies contiguous runs at both ends of the middle band, m = 14..60 (Session 26) | none; `REVERSAL-CARRY.md` | `checks/reversal_carry.py`: 59 stored certificates; 160 closed-form rows by evaluator and audit at m <= 40; 207 by replay and criterion (7) at m = 41..60; no problems | conditional: rule read off data, unproved |
+| k = 3 class survey: two-core certificates for all C(m+1,3) three-zero masks of m..1 at m = 9..11 (455 rows), plus the word_W closed form on the corner sub-band {0, g1, g2} (Session 31) | none; `REVERSAL-K3.md` | `checks/reversal_k3.py`: 455 stored certificates re-checked (evaluator, audit, replay), 50 misses recorded; word_W rows 122 by evaluator+audit+replay (m <= 24), 728 by replay+criterion (7) (m = 25..40) | conditional certificates unproved beyond the checked range; word_W band is a rule read off data, unproved |
+| Interior masks (every zero of m..1 in gaps 1..m-1): k = 2, 3 all certified at the root over the two-core pool at every surveyed m (m = 9..13 for k=2, 9..12 for k=3); k = 4 has slope-bound misses at m = 9, 10 (Session 32) | none; `REVERSAL-INTERIOR.md` | `checks/reversal_interior.py`: 837 stored certified rows re-checked, 14 misses, completeness of every (k,m) cell verified | conditional: Conjecture I1 (k=2,3) holds on every checked cell; Conjecture I2 (k>=4 slope bound) has counterexamples, both unproved in general |
+| Exact column generation over the exhaustive root-leaf LP: m = 10 {0,5} and m = 11 {0,6} root-certified (V < T+1); m = 11 {0,5}, m = 12 {0,5} and m = 12 {0,6} root-refuted exactly (V = T+1), the m = 12 pair by the C oracle only; m = 11 {0,5} is certified overall by a 4-leaf tree; m = 12 {0,5} and {0,6} stay BOUNDARY (family-level), each with one open leaf at lhs 1 (Sessions 33-35) | `MIDBAND-LOWERBOUND.md`, `MIDBAND-M12-14.md`, `MIDBAND-TREES-M12.md`; the C port and its validation in `negcert/fast/README.md` | `negcert/negcert_general.py` (m <= 11) and `negcert/fast/fast_check.py` (m = 12, C-backed) print VERIFIED for each certificate; `negcert/midband_positive_check.py` re-checks the two positives; `checks/midband_trees.py` re-checks the m = 11 {0,5} tree and the two m = 12 BOUNDARY families | exact negatives (m = 11 {0,5}, m = 12 {0,5}/{0,6}) and exact positives (m = 10 {0,5}, m = 11 {0,6}), all conditional only on Lemma 1 and criterion (7)/(8); m = 12 families remain BOUNDARY, not CERTIFIED |
 
 **What the two chains say.** Combining the word_C proof with the general-m Lemma 1, (5) and (7) gives a written
 proof with no conditional step of the bound for every block length of (m..1){0,m}, every m >= 9. The word_R1 proof

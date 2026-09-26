@@ -1,4 +1,4 @@
-"""Run the nine re-checks of this findings package with the vendored modules only (stdlib, no numpy, no tables).
+"""Run the thirteen re-checks of this findings package with the vendored modules only (stdlib, no numpy, no tables).
 
     python run_checks.py
 
@@ -10,7 +10,11 @@ Same steps as run_checks.sh, for systems without a POSIX shell. PYTHONPATH is re
 5. checks/wordg_formula_check.py tests the 28 word_G rule-row hypotheses and C1-C7 at m=9..80 (C1, C3, C5 fail by design)
 6. checks/reversal_carry.py      re-checks the 59 stored carry-across certificates and the word_M closed form to m=60
 7. negcert/negcert_check.py      portable negative certificate for m=9 {0,4}; run with -I (stdlib only, about 16 s)
-8-9. checks/reversal_m13.py and checks/reversal_orbit.py rebuild their JSON on a temporary copy of checks/ (both
+8. checks/reversal_k3.py         re-checks the 455 stored k=3 class-survey certificates and the word_W closed form
+9. checks/reversal_interior.py   re-checks the interior-mask root certificates and cell completeness
+10. checks/midband_trees.py      re-checks the middle-band tree certificates (without --refutations)
+11. negcert/midband_positive_check.py  re-checks the positive root certificates from column generation
+12-13. checks/reversal_m13.py and checks/reversal_orbit.py rebuild their JSON on a temporary copy of checks/ (both
    refuse to overwrite), then the rebuilt JSON is compared with the stored JSON, ignoring only 'seconds'.
 Exit status 0 only if every step passes.
 """
@@ -50,6 +54,10 @@ def main():
     ok &= run(PKG / 'checks' / 'reversal_carry.py', PKG, 2, 'problems: none')
     ok &= run(Path('negcert') / 'negcert_check.py', PKG, 3, 'VERIFIED', str(Path('negcert') / 'negcert-m9-04.json'),
               flags=('-I',))
+    ok &= run(PKG / 'checks' / 'reversal_k3.py', PKG, 3, 'problems: none')
+    ok &= run(PKG / 'checks' / 'reversal_interior.py', PKG, 3, 'problems: none')
+    ok &= run(PKG / 'checks' / 'midband_trees.py', PKG, 1, 'ALL OK')
+    ok &= run(PKG / 'negcert' / 'midband_positive_check.py', PKG, 1, 'problems: none')
     with tempfile.TemporaryDirectory() as w:
         work = Path(w) / 'a' / 'b' / 'checks'
         shutil.copytree(PKG / 'checks', work)
@@ -83,6 +91,13 @@ expected last lines (timings vary):
   root mixture needs Bbar < T+1 = 53 and betabar_0 <= s = 7, ...: NO ROOT-LEAF CERTIFICATE
   total 16.5 s
   VERIFIED
+  word_W rows: 122 by evaluator+audit+replay (m <= 24), 728 by replay+criterion (7) (m = 25..40)
+  stored certified rows re-checked: 455; misses stored: 50
+  problems: none wall 1.9
+  stored certified rows re-checked: 837; misses stored: 14
+  problems: none wall 2.1
+  ALL OK
+  problems: none
   closed forms m=9..200 failures: []
   wrote a/b/checks/reversal-m13-words.json 2.2 s
   wrote a/b/checks/reversal-orbit-words.json 2.4 s

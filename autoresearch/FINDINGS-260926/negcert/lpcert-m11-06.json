@@ -1,0 +1,93 @@
+{
+ "family": "reversal (11..1) with zeros in gaps {0,6}, unit base, root LP value",
+ "m": 11,
+ "labels": [
+  11,
+  10,
+  9,
+  8,
+  7,
+  6,
+  5,
+  4,
+  3,
+  2,
+  1
+ ],
+ "mask": 65,
+ "base": [
+  0,
+  11,
+  10,
+  9,
+  8,
+  7,
+  6,
+  0,
+  5,
+  4,
+  3,
+  2,
+  1
+ ],
+ "T": 75,
+ "s": 9,
+ "weights": [
+  1,
+  2,
+  0
+ ],
+ "lambda": [
+  "2",
+  "0"
+ ],
+ "claim_min": 92,
+ "exact": true,
+ "kind": "root",
+ "refutes": false,
+ "lp_value": "74",
+ "abstractions": [
+  [
+   [
+    11,
+    10,
+    9
+   ],
+   [
+    8,
+    7,
+    6
+   ],
+   [
+    5,
+    4,
+    3
+   ],
+   [
+    2,
+    1
+   ]
+  ]
+ ],
+ "witnesses": [
+  {
+   "word": "RXLXRXRXRXLXLXLXLLLXLXLXLLXLXRRXLXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLXLLXLX",
+   "B": 76,
+   "beta": [
+    8,
+    10
+   ],
+   "F": 92
+  },
+  {
+   "word": "RXRXRRXLXLXLXLLLXLXLXLXLLXRXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLLXLXLXRX",
+   "B": 72,
+   "beta": [
+    10,
+    4
+   ],
+   "F": 92
+  }
+ ],
+ "consequence": "every accepted sorting word has B + 2 beta_0 >= 92, so every root mixture with betabar_0 <= 9 has Bbar >= 92 - 18 = 74; a pool mixture attains 74 < 76 = T+1: root LP value exactly 74, root leaf CERTIFIED by the mixture"
+}

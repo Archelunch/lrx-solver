@@ -1,0 +1,99 @@
+{
+ "family": "reversal (10..1) with zeros in gaps {0,5}, unit base, root LP value",
+ "m": 10,
+ "labels": [
+  10,
+  9,
+  8,
+  7,
+  6,
+  5,
+  4,
+  3,
+  2,
+  1
+ ],
+ "mask": 33,
+ "base": [
+  0,
+  10,
+  9,
+  8,
+  7,
+  6,
+  0,
+  5,
+  4,
+  3,
+  2,
+  1
+ ],
+ "T": 63,
+ "s": 8,
+ "weights": [
+  4,
+  11,
+  1
+ ],
+ "lambda": [
+  "11/4",
+  "1/4"
+ ],
+ "claim_min": 350,
+ "exact": true,
+ "kind": "root",
+ "refutes": false,
+ "lp_value": "127/2",
+ "abstractions": [
+  [
+   [
+    10,
+    9,
+    8
+   ],
+   [
+    7,
+    6,
+    5
+   ],
+   [
+    4,
+    3,
+    2
+   ],
+   [
+    1
+   ]
+  ]
+ ],
+ "witnesses": [
+  {
+   "word": "RXLLLLXLXLLXLXRRXLXRRXRXLXLXRXRXRXLXLXLXLXLLLXLXLXLLXLXLXLXLXLXLLLXLX",
+   "B": 69,
+   "beta": [
+    6,
+    8
+   ],
+   "F": 350
+  },
+  {
+   "word": "RXLXRXRXRXLXLXLXLLLXLXLLXLXRRXLXRRXRXLXLXRXRXRXLXLXLXLXLLXLLXLX",
+   "B": 63,
+   "beta": [
+    8,
+    10
+   ],
+   "F": 350
+  },
+  {
+   "word": "RXRXRRXLXLXLXLLLXLXLXLLXRXRRXRXLXLXRXRXRXLXLXLXLXLLLXLXLXRX",
+   "B": 59,
+   "beta": [
+    10,
+    4
+   ],
+   "F": 350
+  }
+ ],
+ "consequence": "every accepted sorting word has 4B + 11 beta_0 + beta_1 >= 350, so every root mixture with betabar_j <= 8 has Bbar >= (350 - 8*12)/4 = 127/2; a pool mixture attains 127/2 < 64 = T+1, so the root LP value is exactly 127/2 and the root leaf is CERTIFIED (by the mixture), not refuted"
+}

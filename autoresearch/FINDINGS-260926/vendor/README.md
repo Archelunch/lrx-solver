@@ -16,6 +16,21 @@ already listed here (plus `checks/reversal_orbit.py`, `reversal_k2.py` and `reve
 `negcert/negcert_check.py` loads nothing from the repository. No file was added. Nothing here is modified; the only edited file in the package is
 `checks/reversal_midband_search/mb.py`, whose table root is now a parameter.
 
+The four checks added in version 4 (`checks/reversal_k3.py`, `checks/reversal_interior.py`, `checks/midband_trees.py`,
+`negcert/midband_positive_check.py`) were traced the same way, from a copy outside the repository with
+`PYTHONPATH` unset except as each runner sets it. `reversal_k3.py`, `reversal_interior.py` and
+`midband_positive_check.py` import only `integrations.lrx_m`, `integrations.bound3_audit`,
+`integrations.bound3_evaluator` and `integrations.bound_task`, all already listed here; `midband_trees.py` also
+imports `integrations.bound3_task` (already vendored) and additionally inserts the real repository root
+(`Path(__file__).resolve().parents[2]`) at the front of `sys.path` before importing `integrations`, unchanged from
+the repository original. Inside this package that path does not contain an `integrations` package (it resolves to
+whatever sits two levels above the package root), so the import falls through to the vendored copy on
+`PYTHONPATH`; this was confirmed by running it from a temporary copy outside the repository with `PYTHONPATH` set
+to this folder. `negcert/negcert_general.py`, vendored under `../negcert/`, and `negcert/fast/` and `negcert/tree/`
+import nothing from the repository at all (stdlib and each other only); their C oracles (`lrxfast.c`,
+`lrxtree.c`) are compiled locally by `build.sh` and depend on no repository file. No new file was added here for
+version 4.
+
 Use: `PYTHONPATH=<package>/vendor python checks/<script>.py`, or `run_checks.sh` / `run_checks.py` at the package
 root. sha256 over file bytes.
 

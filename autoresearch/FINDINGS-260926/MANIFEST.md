@@ -1,24 +1,29 @@
-# Manifest, autoresearch/FINDINGS-260926 (2026-09-26, version 3)
+# Manifest, autoresearch/FINDINGS-260926 (2026-09-26, version 4)
 
 Package committed at `f99d129`, the commit FINDINGS.md and VERIFY.md also name. sha256 computed over file bytes.
-Total files: 65, not counting this manifest. Total size: 2117509 bytes, not counting this manifest.
+Total files: 99, not counting this manifest. Total size: 3618678 bytes, not counting this manifest.
 
 | file | bytes | description | sha256 |
 |---|---|---|---|
 | `BEST-C2-CONSTRUCTION.md` | 14206 | What the campaign-2 evolved finalists changed relative to the seed | bf8ebfb224022dead25138804368c8c08617f1fe4f774d2fa1faa09c40056fdd |
 | `CLAIMS-SESSIONS-10-23.md` | 29031 | Verbatim excerpt of research/claims.md, Sessions 10 to 23 | 116c6f7071737b69abe917424fd2c9a3c6e9c89e632a96b8c06518c04615c916 |
-| `FINDINGS.md` | 57137 | Main findings report (RU summary, exact results, conditional certificates with generator source, proof sketch, engine results, conjectures, requests, verification, proof status after the review) | efdccd177e3253b0f229ac21479fcf8b76bde4297bed82c26ba277cd71f01734 |
+| `FINDINGS.md` | 61815 | Main findings report (RU summary, exact results, conditional certificates with generator source, proof sketch, engine results, conjectures, requests, verification, proof status after the review) | 430284d88c24e5e1824c7c676b42e47655e10888d3e1966e9fca15dbc7287cde |
 | `LEMMA1-GENERAL-M-260926.md` | 27871 | Audit of Lemma 1, (4)-(6), Lemma 2 and criteria (7)/(8) at general m, with general-m proofs and table checks (Session 27; model-written, not yet human-reviewed) | a951b1dc4c6dbd9a7b44d1b856a6b6a4468657f68fd8c355e0f1933d1d73ab33 |
 | `LEMMA34-GENERAL-M-260926.md` | 34042 | Audit of Lemma 3, formula (11), Lemma 4 and the section 7 resource formula at general m, with proofs and table checks (Session 30; model-written, not yet human-reviewed) | b16eb1177cfc9491e751721f2fca186ce226bd5f6769c8914794eacb150bf733 |
+| `MIDBAND-LOWERBOUND.md` | 23471 | Exact root-leaf LP by an exhaustive oracle, m=5..11; m=10 {0,5} and m=11 {0,6} certifiable, m=7..9 centre and m=11 {0,5} refuted (Session 32) | be82fe93a5391bd61460c986722ff51882c8d020055df3c4b28fb469711fe03f |
+| `MIDBAND-M12-14.md` | 11256 | Middle band at m=12..14 with the C oracle; m=12 {0,5} and {0,6} root-refuted exactly, refuting two of MIDBAND-LOWERBOUND.md's conjectures (Session 33) | 73fa1f932aaf3ea6c50ad0e986bcf8ae6afeaa18d94b8a228a520364e15eddee |
+| `MIDBAND-TREES-M12.md` | 10943 | Middle-band tree certificates: m=11 {0,5} certified by a 4-leaf tree; m=12 {0,5} and {0,6} families BOUNDARY, one open leaf each at lhs 1 (Session 34) | dd14b49f4e9a68c167a7bebca31e32a5bae066ae3126cdbf3d2c4b8d94c0365c |
 | `REPORT-FOR-AGENTS-260926.md` | 13537 | Status report for collaborating agents (2026-09-26) | b403983786367802511e11a4540927c8242e3916f8a601a0d5e239c68ad16784 |
 | `REVERSAL-CARRY.md` | 10560 | Carry-across words for the middle band; word_K generator and word_M closed form on the band ends, m = 14..60 (Session 26) | fd746d3f74e5c37a62aeced22c063bf5757096bd57f4e6ed53e800b722ed352b |
+| `REVERSAL-INTERIOR.md` | 10286 | Interior masks of the reversal (every zero in gaps 1..m-1): k=2,3 root certificates and the k=4 slope-bound counterexamples (Session 33) | 9c34e499f557a41d94872658c7087c5c7d96e43cc965425bc4517ae620b4ff6b |
 | `REVERSAL-K2.md` | 11713 | word_G closed form for the outer band of k=2 masks; root survey to m=13 | bc1225978e69081727338d57d44155c99a8bc86611765a9e1cc6c4424b62c574 |
+| `REVERSAL-K3.md` | 13092 | k=3 class survey: two-core certificates for all C(m+1,3) masks at m=9..11, and the word_W closed form on the corner sub-band {0,g1,g2} (Session 33) | 88bdb3ec5ad3754fdc57a860a56345c57556954e1d0a4480edb91710d288deea |
 | `REVERSAL-M13.md` | 12744 | Two-core word_C: closed-form certificate of (m..1){0,m} at m=9..40 | 23ea45be60591bc647291efecb324363ae7012811551c574dd2e1b0011086fcd |
 | `REVERSAL-MIDBAND.md` | 12602 | Middle band mined from exact tables; exact negative for m=9 {0,4}; word_S | 77a5b280133bdb558bbac169469fe0f99e03039bfc15fe07f1029cbb8ddfef64 |
 | `REVERSAL-OBSTACLE.md` | 11426 | Why the reversal orbit blocked the engines; addenda on the (11,2) table | d6c9651fd79c22065e9f8f73a62ccd9e632b8b5ce703ca7e6f9034812dac5fb2 |
 | `REVERSAL-ORBIT.md` | 21758 | Insertion-core generator, word_R1, 111 certified families, proof sketch of word_C | 412d9aaf9f65c6d985d1c67b8fd0a8c0c0e1ebff49baecca2b0dc36ac02fab54 |
 | `REVERSAL-WORDS.md` | 15963 | Shortest words for (0,m..1,0) at m=8..11; generators word_E/A/B; certificates to m=12 | b159a4eedd280df4be6b310d5f61efa062735bdcff53a49b3dd277fa32b03080 |
-| `VERIFY.md` | 14710 | Offline verification recipe with observed outputs and table hashes | b00fcd00330fec828ea51de16728c2d47053869360f27f18d247e2fa19ea8395 |
+| `VERIFY.md` | 20139 | Offline verification recipe with observed outputs and table hashes | a69d1832e529d6da46054d57409d8978e9a6e1be84aebd870153810a93b67970 |
 | `WORDC-PROOF.md` | 27980 | Proof of the word_C length and Lemma 1 slope formulas, all m >= 3, both parities (model-written, not yet human-reviewed) | b844bead4eaf8ac8caa0f9e00992b66e30f7c14070b2be38a8b5262368e544a1 |
 | `WORDR1-PROOF.md` | 38521 | Proof of the word_R1 length and Lemma 1 slope formulas, all m >= 9, the four residues mod 4; section 11 on what word_G needs (model-written, not yet human-reviewed) | 5a566de930cdf9042f28762565e439e6a7ccd1611edc151d7e068101e3820dea |
 | `bound-c1-finalists-REPORT.md` | 1068 | Bound campaign 1 finalize report (holdout m=11) | 7149dabebd7dca954489cca8d9eb1bc6ea84536cb622e05a28044ad4b71edb48 |
@@ -26,14 +31,27 @@ Total files: 65, not counting this manifest. Total size: 2117509 bytes, not coun
 | `checks-lemma1/lemma1_tables_check.py` | 12451 | Table check of Lemma 1, (4)-(6) and criterion (7) at m = 9, 10; runs from the repository, needs tables (9,1)..(9,6), (10,2), (10,3) | 617769d5ad6015a8343692fea1052145f9bd44dccc85014405a11cabf39aa852 |
 | `checks-lemma1/lemma34_tables_check.py` | 25359 | Table check of Lemma 3, (11), Lemma 4 and the resource formula at m = 9, 10; runs from the repository, needs the same tables | 84c60b95fe6ba811ded2ef4735f37451176cb065066dc0a0900f39cc7e9351ec |
 | `checks/m11-r2-reversal-words.json` | 684 | A shortest 74-letter word for (0,11,...,1,0) | a2ea038fbebc7f4f3fe17c41a141adefe7f4791010171c89ee5400b54bcdb686 |
+| `checks/midband-trees-m12.json` | 22608 | Stored middle-band tree certificate for m=11 {0,5} and the two m=12 BOUNDARY families with their C-oracle leaf refutations | 37bf1db6b6f989bbbd3f21f8d8bebc5982783fa44a20aa0c7ffeecd332e7448f |
+| `checks/midband_trees.py` | 5850 | Re-checks the middle-band tree certificates and BOUNDARY families of midband-trees-m12.json; --refutations re-runs the C oracle negatives | c4c2c27862e8fe62538aa39ae2ef523e521a848efd3e80c17da1dfcbd6dc6c3e |
 | `checks/reversal-carry-words.json` | 53330 | The 59 stored carry-across certificates and the word_M closed-form coverage, read by reversal_carry.py | e5afc84b3f85a9c83afeb8a497ef4ed5b427deea2b44e1001abe051006cca7d4 |
+| `checks/reversal-interior-words.json` | 351330 | Stored interior-mask certificates (k=2 m=9..13, k=3 m=9..12, k=4 m=9,10) and misses, read by reversal_interior.py | e26d796f6a66b26f430e97871d9578a327974d2cf35945023ec06691ab3940d9 |
 | `checks/reversal-k2-words.json` | 668734 | word_G rows at m=9..80 plus the 150 stored survey and tree certificates | 7ae8b587aff84b6e4a6c0162632db3149e1c19e041465c3c1263e8576bf626e9 |
+| `checks/reversal-k3-words.json` | 602254 | Stored k=3 class-survey certificates (m=9..11) and word_W closed-form rows to m=40, read by reversal_k3.py | a6a11ed520e26298424f1942eb2998d73509168e285ab3ceedf9d10dd48f1d1a |
 | `checks/reversal-m13-words.json` | 76657 | word_C certificates at m=9..40 and closed-form replay to m=200 | 48e41d713493879664a486e17196a0199616c3a8c11a71ef5486a025ab610901 |
 | `checks/reversal-midband-words.json` | 65670 | Middle-band certificates, word_S parameters, exact distances and the dual certificate | 811234bfc3c067906958c62f83d2f1d4ef00bad3855c9fa2d357e11b6952a324 |
 | `checks/reversal-orbit-words.json` | 145058 | The 111 stored certificates, word_R1 rows and word_C closed-form checks | 88be9d8943f7f03ad5e8deb3f28427ca1a2ad29108b8687d82f710132b113059 |
 | `checks/reversal-words-m8-11.json` | 258004 | All shortest words at m=4..11, generator words, rotation distances and radius states | 083d94d0acf28e83a810122a8f0a3f9408c584d7e4ab9c93190c18a243c67e4e |
 | `checks/reversal_carry.py` | 10369 | Re-checks the stored carry-across certificates and the word_M closed form to m = 60; writes nothing | 7cb30dfc94c7f2a1589b3f6e5de6cffc40fdd18f7d3bbad801eed18ac0c61f64 |
+| `checks/reversal_interior.py` | 7473 | Re-checks the interior-mask root certificates (k=2,3,4) over the two-core pool and cell completeness; writes nothing unless --build | 6b9cc00278c64fb02379546ab091f1fa8c530b13ecf39b1b4099ba0b27dd497c |
 | `checks/reversal_k2.py` | 12320 | word_G rules; re-checks 390 word_G rows and 150 stored rows | 274f994ee898494bdf09ee4d34387444ec204c973e727a4aa3a67399638d7488 |
+| `checks/reversal_k3.py` | 13694 | core_word3 generator and word_W; re-checks 455 stored k=3 class-survey certificates and the word_W closed form; writes nothing unless --build | 1154be254836066374669ea3d795824bff6946a1529b9674bc354309215667eb |
+| `checks/reversal_k3_search/misses-orig-m9.jsonl` | 7414 | Follow-up search on m=9 root-survey misses with (origin, word) params (search output, unchanged), read by reversal_k3.py --build | 764783e91087fb0ca62f66a34a71ca166e048f94c03d45b981cab1022a5dd8d9 |
+| `checks/reversal_k3_search/misses-orig-m9b.jsonl` | 7141 | Second follow-up search on m=9 root-survey misses (search output, unchanged), read by reversal_k3.py --build | bbda88bcaec42d6aaeafcd66a6671542b20f90020930081d479ab81a69ef31ad |
+| `checks/reversal_k3_search/misses-tree-b.jsonl` | 11089 | Second tree-search follow-up on root-survey misses (search output, unchanged), read by reversal_k3.py --build | 1243769c364d92b85131a73b5434e996f703a187f9179f74344d36f39465954c |
+| `checks/reversal_k3_search/misses-tree.jsonl` | 14120 | Tree-search follow-up on root-survey misses (search output, unchanged), read by reversal_k3.py --build | d69b0b973edaf1a63e66c0434cc4a5cd5fac8c0f27f44d0796d1da352f825b0c |
+| `checks/reversal_k3_search/survey-m10.jsonl` | 83700 | Root survey over the two-core pool for every three-zero mask at m=10 (search output, unchanged), read by reversal_k3.py --build | e5a2078f968382b2a5dd745b040f84c4afe3dc14221f20958ed6e27ec33bacac |
+| `checks/reversal_k3_search/survey-m11.jsonl` | 108028 | Root survey over the two-core pool for every three-zero mask at m=11 (search output, unchanged), read by reversal_k3.py --build | fe6aaf965965f9c9aba7da6aff1521674b442c4b35e33c43690e8df727dcf040 |
+| `checks/reversal_k3_search/survey-m9.jsonl` | 61481 | Root survey over the two-core pool for every three-zero mask at m=9 (search output, unchanged), read by reversal_k3.py --build | 550302ad9b7403a87b62f0e9f9df799465d4f2b67acdd0d864028a1ec8eff636 |
 | `checks/reversal_m13.py` | 7991 | word_C generator; rebuilds and scores reversal-m13-words.json | 24f4eede0ab857aaa6a2cb0869d028829963974ef18387228a518239c9a17f3f |
 | `checks/reversal_midband.py` | 7948 | word_S; re-checks 14 certificates and the m=9 {0,4} negative | 7159c30f1ac93eb5c697ebe8ab23dd3a64256e579b52999e314505b08a4bcffd |
 | `checks/reversal_midband_search/mb.py` | 14639 | Exact A* oracle that reversal_midband.py --tables imports; table root from --root, LRX_ROOT, the package tables/ dir or the repository datasets/generated (the repository original hard-codes it) | 5a6bac61c2154e224fb333563a051662488fa64f0e625f721dc05a3d12ad8aae |
@@ -45,12 +63,28 @@ Total files: 65, not counting this manifest. Total size: 2117509 bytes, not coun
 | `checks/wordg_formula_check.py` | 10045 | Tests the 28 word_G rule-row hypotheses and C1-C7 at m = 9..80 (C1, C3, C5 fail by design); writes nothing | 603ced176a2730d480e4fda3d167cd3085c02ff76a735dc469147af2411a8992 |
 | `checks/wordr1_proof_check.py` | 14497 | Mechanical check of every claim of WORDR1-PROOF.md against literal word_R1 at m = 9..60; writes nothing | 0d9abd5aae8c9501d14ea98cca59e2a35514ee9d9a0ea036a119f5d5ebe44511 |
 | `negcert/NEGCERT.md` | 10301 | Portable negative certificate for m = 9 {0,4}: statement, completeness argument, runs, brute-force validation (Session 29) | 5f6c2aab46eb069bd5894cc36dd2221940d2ce7a80ea5aea83a75ce293d19845 |
+| `negcert/fast/README.md` | 7340 | The C port: model, encoding, validation against the Python reference, and timings (Session 33) | c7ba5fbdc2ae20f5d21e5997d1b5078964f6eb90b98a670394612dc4a4a1d06b |
+| `negcert/fast/build.sh` | 286 | Builds negcert/fast/lrxfast with the system compiler; no dependencies | ce00c6a4809fd26714239e0001829e26ba707d1b2087001e40f552702eba0bbb |
+| `negcert/fast/fast_check.py` | 4915 | C-backed certificate checker for the negcert_general.py JSON format, table build/verify and bounded A* delegated to lrxfast | 04a0c10ed94f3bc77ee522b753e393e07591df05f2b8177ca08a73a31b4ed872 |
+| `negcert/fast/fastoracle.py` | 4532 | Python driver for lrxfast: encodes the family, runs the C binary, re-prices every returned word with negcert_general.price | 6a6931d8ae43e1f1da2613a4809c605e1ff0b92f7f6c9ac8c4a2a1869952c9d5 |
+| `negcert/fast/lrxfast.c` | 29916 | C port of negcert_general.py's exact oracle (same model, abstraction and proof); build.sh compiles it to lrxfast | cee54e4883072e908b133e709f625a7911bed649a23b44c05b77d16e1266bc31 |
+| `negcert/fast/negcert-m12-05.json` | 1546 | Exact negative certificate (C oracle): m=12 {0,5} root leaf, min F_W = 119 = T+1+3s, no root-leaf certificate | 85bbd621c5350d7216e5b5e8b2d4b93a028298e0fc861f0b5530a4728fcdd7ea |
+| `negcert/fast/negcert-m12-06.json` | 1675 | Exact negative certificate (C oracle): m=12 {0,6} root leaf, min F_W = 109 = T+1+2s, no root-leaf certificate | 31807da17f141cbd68e9381bb4e1bf9bb26cf0d9e3ecbe4610594a8fd33764cb |
+| `negcert/lpcert-m10-05.json` | 1323 | Exact positive certificate: m=10 {0,5} root leaf, F_W minimum below T+1 | ab0c0d96ee9609ebc55111cae40bed73f84073e9ad0c0fa95d0b85ab9de9f0de |
+| `negcert/lpcert-m11-06.json` | 1145 | Exact positive certificate: m=11 {0,6} root leaf, F_W minimum below T+1 | 7e13b917c721edb47bb405e3a070bd3a6505665d211f088862cbb2ea7bda34fc |
+| `negcert/midband-certified.json` | 1059 | The two positive root certificates (m=10 {0,5}, m=11 {0,6}) found by exact-oracle column generation, read by midband_positive_check.py | 1799b5716a700e250824ce78d34429d69d45151ab07a566e2cd8decbe249c227 |
+| `negcert/midband_positive_check.py` | 1858 | Re-checks the positive root certificates of midband-certified.json (score_output, audit_claim, replay, mixture_criterion) | d1942849b8f1ef080e83ab79058a515118be05d71c96133d1a1ebbd8cfcd05d0 |
+| `negcert/negcert-m11-05.json` | 1452 | Exact negative certificate: m=11 {0,5} root leaf, min F_W = 497 over all accepted sorting words, no root-leaf certificate | abd088e54c2c44324e5fdf53ee9851e58aab0482bc58bc889695a7880923bf69 |
 | `negcert/negcert-m9-04.json` | 939 | The certificate: family, claimed minimum 75 of B + 3 beta_0, abstraction, two witness words | 680a1e5fba9285d7376dc6c06cc9788d1ff63201f3b0b8669dc0b9744e184b4f |
 | `negcert/negcert_check.py` | 25888 | Stdlib-only exact checker of the certificate, no repository imports, no tables; completeness argument in its docstring; prints VERIFIED | 402eb81b6487fda27cdd1995af0632c730f0f216925940fe8d14ab51575f9481 |
+| `negcert/negcert_general.py` | 28869 | Portable exact lower-bound checker for Lemma 1 pricing functionals at general (m,g) with up to two multipliers; stdlib only, no repository imports | 5e703d2faf99d6e9a7edff1d65a7262dea25055e8fc03e57e957c56699e178e4 |
+| `negcert/tree/build.sh` | 130 | Builds negcert/tree/lrxtree with the system compiler; no dependencies | e39565a866b4859fc6eb9718731fb7ed6cf45f8032599d7564cf519f8dcee6d5 |
+| `negcert/tree/lrxtree.c` | 31673 | lrxfast.c generalized to refined origins (tree leaves, r>=2 zeros); build.sh compiles it to lrxtree | 068b6acaf8c1a16ac66d3d0e97cc8c4f1df680667870d03f72c78714203d9701 |
+| `negcert/tree/treeoracle.py` | 4576 | Python driver for lrxtree; used by checks/midband_trees.py --refutations to re-run the leaf refutations | d86ef2bbb896b7df5a8511857cb5b9985f032ddfe78bab85adfe1fb8d21b0dbf |
 | `negcert/validate_small.py` | 5610 | Brute-force validation of negcert_check.py against lrx_m.Profile at m = 3..6, 21 cases (about 7 min, no tables) | d9760bc67a19681a6ef149181e68ee6624f54f6d480fa4c05e22f64eb12d7c7b |
-| `run_checks.py` | 4925 | Same as run_checks.sh, for Windows | fb2b20120f5ae0ce976969fa3577b6c20dceb7f25734afe76d064c65c8675cfd |
-| `run_checks.sh` | 3853 | Runs the nine re-checks with vendor/ only (POSIX shell); prints the expected last lines | de901c990993ea1d72dc3202f13a60118bc08a564329fac07f3b338091dece2b |
-| `vendor/README.md` | 4728 | Origin path, bytes and sha256 of every vendored file, and how the closure was found | 1190117a261656cd82524720ce41245e94fe51b170c3b2b6c020027e91bb5869 |
+| `run_checks.py` | 5956 | Same as run_checks.sh, for Windows | f90af361a8b457b5633a331869424c68cf046e2cb2b081a05612a76dee45891d |
+| `run_checks.sh` | 4747 | Runs the nine re-checks with vendor/ only (POSIX shell); prints the expected last lines | 1516924b76cc39634deda3605a011e5df446e1eefb23380a8f3c0e7ba1a9719a |
+| `vendor/README.md` | 6140 | Origin path, bytes and sha256 of every vendored file, and how the closure was found | 21af17e22bc3b656725ad45b84590810a76369cd714a6d9c3b4760e2d3694db4 |
 | `vendor/autoresearch/verify-m8-260924/checker/lrxm8.py` | 18217 | Vendored byte-identical copy of `autoresearch/verify-m8-260924/checker/lrxm8.py` (see vendor/README.md) | 193d522eaf7dd1ebedbf1c9edb8fe9504a7ace0ca10645ecba21bf2d5e9924ba |
 | `vendor/integrations/__init__.py` | 0 | Vendored byte-identical copy of `integrations/__init__.py` (see vendor/README.md) | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 |
 | `vendor/integrations/bound3_audit.py` | 7340 | Vendored byte-identical copy of `integrations/bound3_audit.py` (see vendor/README.md) | 72f1de7661ec382da9e545d895a52e3afbc848615cb0a55950cc19cc47dad50f |

@@ -1,5 +1,5 @@
 #!/bin/sh
-# Run the nine re-checks of this findings package with the vendored modules only (stdlib, no numpy, no tables).
+# Run the thirteen re-checks of this findings package with the vendored modules only (stdlib, no numpy, no tables).
 #   sh run_checks.sh            (python3 is used; set PYTHON=... to override)
 # Same steps as run_checks.py. PYTHONPATH is replaced by <package>/vendor. Exit status 0 only if every step passes.
 set -u
@@ -34,7 +34,16 @@ step "$PKG" 3 'n=1600 exceptions=0' checks/wordg_formula_check.py
 step "$PKG" 2 'problems: none' checks/reversal_carry.py
 step "$PKG" 3 'VERIFIED' -I negcert/negcert_check.py negcert/negcert-m9-04.json
 
-# 8-9. Rebuild the two generator JSON files on a copy (both scripts refuse to overwrite) and compare.
+# 8-11. Four more fast, table-free re-checks added in this version: the k=3 class survey and word_W closed form
+# (REVERSAL-K3.md), the interior masks (REVERSAL-INTERIOR.md), the middle-band tree certificates
+# (MIDBAND-TREES-M12.md, without --refutations) and the positive root certificates from column generation
+# (MIDBAND-LOWERBOUND.md). None of these write a file.
+step "$PKG" 3 'problems: none' checks/reversal_k3.py
+step "$PKG" 3 'problems: none' checks/reversal_interior.py
+step "$PKG" 1 'ALL OK' checks/midband_trees.py
+step "$PKG" 1 'problems: none' negcert/midband_positive_check.py
+
+# 12-13. Rebuild the two generator JSON files on a copy (both scripts refuse to overwrite) and compare.
 W=$(mktemp -d)
 mkdir -p "$W/a/b"
 cp -R "$PKG/checks" "$W/a/b/"
@@ -74,6 +83,13 @@ expected last lines (timings vary):
   root mixture needs Bbar < T+1 = 53 and betabar_0 <= s = 7, ...: NO ROOT-LEAF CERTIFICATE
   total 16.5 s
   VERIFIED
+  word_W rows: 122 by evaluator+audit+replay (m <= 24), 728 by replay+criterion (7) (m = 25..40)
+  stored certified rows re-checked: 455; misses stored: 50
+  problems: none wall 1.9
+  stored certified rows re-checked: 837; misses stored: 14
+  problems: none wall 2.1
+  ALL OK
+  problems: none
   closed forms m=9..200 failures: []
   wrote a/b/checks/reversal-m13-words.json 2.2 s
   wrote a/b/checks/reversal-orbit-words.json 2.4 s
