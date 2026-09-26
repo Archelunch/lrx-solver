@@ -1,8 +1,9 @@
 # LRX Lab: findings for the research group, 2026-09-26
 
-Repository `lrx-lab`, commit `defc5c6` on `main` (package committed after it). This package collects what the repository has computed and
-re-checked in Sessions 10 to 23 of `research/claims.md`. Every number below is quoted from a note in this folder,
-from `CLAIMS-SESSIONS-10-23.md`, or from a re-run recorded in `VERIFY.md`.
+Repository `lrx-lab`, package committed at `PINNED_COMMIT` on `main`. FINDINGS.md, VERIFY.md and MANIFEST.md refer to
+that one commit. This package collects what the repository has computed and re-checked in Sessions 10 to 23 of
+`research/claims.md`. Section (h) summarizes the external review of Session 24. Every number below is quoted from a note
+in this folder, from `CLAIMS-SESSIONS-10-23.md`, from a re-run recorded in `VERIFY.md`, or from the review.
 
 **Attribution.** Lemma 1 (with refinement), the cost formulas (4)-(6), criteria (7) and (8), the reverse trees, the
 full m=8 theorem, the correlation certificate criterion and the outer-layer note are the research group's. This
@@ -14,18 +15,29 @@ computations. It makes no priority claim. **The general conjecture E_r(n) <= T_m
 - **Точные результаты (без условий).** Полные BFS-таблицы дают радиус = T_m(n) для всех вычисленных (m,r) с m >= 8,
   кроме (9,6): радиус 79 < T = 80 (26 состояний на 79, ни одного на 80). Для (m,2) при m = 8..11 радиус равен T и
   достигается ровно двумя состояниями. Реверс с двумя внешними нулями (0,m,...,1,0) лежит ровно на T-1 при m = 4..11.
-  Число кратчайших слов: 108, 132, 1104, 1296 при m = 8..11.
+  Число кратчайших слов: 108, 132, 1104, 1296 при m = 8..11. Радиусы, число экстремальных состояний и расстояния T-1
+  ещё не подтверждены независимо вне репозитория (таблицы не приложены).
 - **Репликации.** Полный пакет группы для m=8 воспроизведён двумя путями (их конвейер и наш независимый чекер).
   Оценка C <= 4K + 2H группы воспроизведена для m = 4..16; оптимум LP равен ровно 0 на всех проверенных m.
 - **Первое точное отрицание.** Для m=9 с нулями в зазорах {0,4} сертификата с одним корневым листом не существует
   (точный A*-оракул: B + 3 beta_0 >= 75, тогда как нужно < 74). Дерево из двух листьев эту семью сертифицирует.
-- **Условные результаты** (при лемме 1 и критериях (7)/(8) группы с общим m). Три замкнутые формулы: word_C
+  Отрицание ещё не подтверждено независимо вне репозитория (полнота оракула независимо не проверена).
+- **Условные результаты** (при лемме 1 и критериях (7)/(8) группы с общим m). Три замкнутые формулы (для word_C формулы длины и наклонов теперь доказаны в WORDC-PROOF.md, доказательство написано моделью и механически проверено при m = 9..40, человеком пока не проверено): word_C
   сертифицирует (m..1){0,m}, word_R1 сертифицирует (m..1){1,m}, word_G сертифицирует (m..1){0,g} во внешней полосе.
+  Для нечётного m word_C — одно слово длины T-1 с наклонами (m-2, m-3). Для чётного m word_C — **смесь двух слов**
+  с весами 1/2 и 1/2: слово длины T-1 с наклонами (m-1, m-2) и слово длины T+1 с наклонами (m-3, m-4); в среднем
+  база T и наклоны (m-2, m-3). Это не одно слово длины T-1 с нужными наклонами: первое слово само по себе нарушает
+  ограничение на первый наклон.
   Всё проверено оценщиком и независимым аудитом при m = 9..40 и воспроизведением слов до m = 200 (word_G до 80).
   Все маски k=2 реверса при m=9 сертифицированы. Средняя полоса floor(m/4) < g < m - floor(m/4) остаётся открытой;
   везде связывает база, а не наклоны.
 - **Поисковый фреймворк.** Эволюционные конструкции переносятся на невиданные m=11 и m=12 (кампания 2: AdaEvolve
-  84.7% против 59.6% у контроля). Это расширение покрытия, а не новое математическое понимание.
+  84.7% против 59.6% у контроля и 80.0% у сильного seed). Лучший финалист AdaEvolve-s2 даёт 148/165 при m=12;
+  сам seed даёт 129/165, так что прирост относительно seed — 19 семейств, а 53 — относительно ручного контроля
+  (95/165). Это свидетельство полезности поиска, а не превосходства одного оптимизатора; это расширение покрытия,
+  а не новое математическое понимание.
+- **Внешний review (сессия 24).** Два рецензента группы независимо перепроверили пакет своим stdlib-чекером;
+  четыре поправки приняты и внесены (раздел (h)).
 - **Просьбы к группе.** Подтвердить лемму 1 и (7)/(8) при общем m; подсказать четвёртую форму слова для средней
   полосы; оценить осуществимость таблицы (12,2); назвать исключения пакета m=8 (290 и 65+36,888).
 
@@ -65,6 +77,9 @@ The r = 1 rows lie outside the conjecture, which needs r >= 2; they are listed b
 m = 8 the registry radii are (4,2) 12, (5,2) 19, (6,2) 25, (5,3) 21, (4,4) 17, (7,2) 33, (7,3) 38 and (6,4) 33.
 (5,2) and (4,4) exceed T by 1; neither is in the conjectured range.
 
+**Status of the radii, including (9,6) below:** not yet independently confirmed outside this repository (tables not
+shipped; oracle completeness not independently checked).
+
 **The (9,6) strict gap.** The radius is 79 against T_9(15) = 80. There are 26 states at 79 and, by explicit scan,
 none at 80. An independent checker confirmed the sha256, the layer sums, triangle consistency on 20,000 x 3 samples
 and literal replay (`autoresearch/outer-layer-260925/INDEPENDENT-CHECK.md`). This is the first computed case with
@@ -74,6 +89,8 @@ are at 73.
 **The (m,2) radius and its extremal states.** For m = 8, 9, 10, 11 the radius of (m,2) equals T and is attained by
 exactly two states, (0,0,m,...,1) and its rotation (2,1,0,0,m,...,3). The numbers of states at radius-1 are 13, 7,
 10 and 8. At m = 11 the distances of the 13 rotations of (0,11,...,1,0) are 74,73,72,71,71,71,72,73,74,74,75,74,75.
+**Status of the two-extremal-state counts:** not yet independently confirmed outside this repository (tables not
+shipped; oracle completeness not independently checked).
 
 **Unit distances T-1 and shortest-word counts.** The state u_m = (0,m,...,1,0), the unit base of (m..1){0,m}, has
 distance exactly T_m(m+2) - 1 for m = 4..11. All shortest words were enumerated on the geodesic DAG:
@@ -86,7 +103,9 @@ distance exactly T_m(m+2) - 1 for m = 4..11. All shortest words were enumerated 
 
 Every shortest word at a given m has floor((m+1)^2/4) - 1 swaps, and every one is same-sign. The minimum Lemma 1
 slope over shortest words is (7,6) at m = 8, 9 and (9,8) at m = 10, 11. At m = 11, 192 shortest words have slopes
-within s = 9. The middle-band unit bases (m..1){0,g} at m = 9, 10, 11 lie 7 to 11 below T.
+within s = 9. The middle-band unit bases (m..1){0,g} at m = 9, 10, 11 lie 7 to 11 below T. **Status of the T-1
+distances and shortest-word counts:** not yet independently confirmed outside this repository (tables not shipped); a
+shipped word certifies an upper bound only.
 
 **m=8 replication (Session 10).** The group's package `lrx_m8_complete_verification` was replicated twice. Their
 pipeline on our machine passed 30 stages in 1009.6 s with 0 remaining families. Our stdlib checker, written from
@@ -120,7 +139,10 @@ combines three bounds: the table distance; the lift bound B + z beta_j >= d(base
 tables (9,3) to (9,6); and a pending-segment bound. It expanded 8760 nodes. The tree with leaves u0 = 1 and u0 >= 2
 at origin (2,1) certifies the family, with exact leaf optimum 4/5. **Caveat:** exactness rests on the oracle's
 completeness over reduced words. The oracle is scratch code, validated against brute force on 25 small cases at
-m = 5, 6 only. The negative is stated for Lemma 1's pricing.
+m = 5, 6 only. The negative is stated for Lemma 1's pricing. **Status of the single-leaf negative:** not yet
+independently confirmed outside this repository (tables not shipped; oracle completeness not independently checked).
+The shipped check without tables re-runs only the witness word, an upper bound on the minimum; the refutation needs
+the lower bound over all words.
 
 **Outer layer (Session 13).** Against the group's outer-layer note: at m=9, r = 1..5, the class of states whose every
 single-label deletion lies in the outer layer holds 93.7 to 95.7 % of all states, by full enumeration. Every class
@@ -144,6 +166,8 @@ Every leaf word was also replayed literally to the root.
 - **Odd m:** one word, a = (m-3)/2, of length T - 1 and slopes (m-2, m-3).
 - **Even m:** two words with weights 1/2 each, giving base T and slopes (m-2, m-3). They are a = (m-2)/2, of length
   T - 1 and slopes (m-1, m-2), and a = (m-4)/2, of length T + 1 and slopes (m-3, m-4).
+- **For even m the certificate is this mixture of two words, not a single word of length T - 1 with the required
+  slopes.** The T - 1 word alone has first slope m - 1 > s = m - 2 and fails criterion (7) by itself.
 - **Closed forms,** by replay only for m = 9..200: len - T = 2(a - (m-2)/2)^2 - 1 - (m mod 2)/2 for 1 <= a <= m-2.
   The slopes are (2a+1, 2a), except a = 1 with m even, which gives (4,3). The length formula fails only at
   a = 2 floor(m/2).
@@ -511,9 +535,17 @@ Ten of the 14 are certified. Among the m = 11 misses, mask 145 is certified. Mas
 - **Exact optima at m = 10.** The exact root and (2,1) optima are unknown, because the pricing hit the 1.5M-node cap.
 - **Higher k.** The misses 130, 7300, 1056 and 2456 also bind on the base.
 
-## (c) Hand-proof sketch for word_C's closed forms (a sketch, not a proof)
+## (c) word_C's closed forms: proof in WORDC-PROOF.md, with the earlier sketch as an outline
 
-Copied from `REVERSAL-ORBIT.md` section 4 with light edits.
+A full proof of the closed forms now exists in `WORDC-PROOF.md`. Its theorem covers every m >= 3 and 1 <= a <= m-2:
+word_C(m, a) sorts the unit base, its length is T + 2(a - (m-2)/2)^2 - 1 - (m mod 2)/2, its base equals its length,
+and its slopes are (2a+1, 2a), except (4,3) for a = 1 with m even. The corollary for m >= 9 gives the certificate
+words of section (b): one word for odd m, and the two-word mixture with weights 1/2 for even m. Every intermediate
+claim was mechanically checked by `checks/wordc_proof_check.py` against the literal execution of word_C at
+m = 9..40 (720 pairs (m, a), 0 mismatches; `VERIFY.md` section 1). The proof was written by a model and has not yet
+been reviewed by a human mathematician. It does not cover Lemma 1 and criterion (7) themselves, which remain the
+group's statements applied with m as a parameter. The sketch below, copied from `REVERSAL-ORBIT.md` section 4 with
+light edits, is kept as an outline of that proof.
 
 **Assumptions.** The executor is `lrx_m`, as above. word_C is exactly the code in section (b), including the tie
 rule of `goto`, which goes L when both directions are equally long. Lemma 1 is taken as `lrx_m.Profile` implements
@@ -586,6 +618,13 @@ was gemini-3.8-flash throughout.
 | 1 (Session 15) | 303 families, m = 9, 10 | 468 families, including all 165 at m = 11 | At m=11: EvoX 129/165 and GEPA 125/165, worst gap 4; sweep+LP control 98/165, gap 7. AdaEvolve 100 and sequential 109, with invalid outputs off-distribution. 168 calls, $3.45 |
 | 2 (Session 16) | m = 9, 10; validation on the campaign-1 m=11 holdout | 165 fresh m=12 and 60 fresh m=11 families | Mean holdout over 3 seeds: AdaEvolve 84.7 % (SD 4.4), EvoX 83.1 % (0.8), GEPA 80.3 % (0.5), sequential 76.4 % (6.9); seed 80.0 %; control 59.6 %. Best finalist AdaEvolve-s2: 148/165 at m=12, 54/60 at m=11. 360 calls, about $7 |
 
+**Strong-seed baseline.** The campaign-2 seed is the campaign-1 EvoX finalist. By itself it scores 129/165 at m = 12
+(80.0 % of the holdout). AdaEvolve-s2's 148/165 is therefore a gain of 19 families over the seed. The comparison
+148 vs 95 is against the hand-written sweep+LP control, a gain of 53. With m = 11 included, the reviewers' reconciliation
+gives 202/225 for AdaEvolve-s2, 180/225 for the seed and 134/225 for the control. As the external reviewers put it,
+this is evidence that the search is useful, not that one optimizer is superior: three seeds per method, selection of
+the best run and different timeouts do not support a ranking of the methods.
+
 The independent audit found 0 disagreements in both campaigns. All campaign-2 finalists are deterministic under
 PYTHONHASHSEED=0 and contain no m-specific literals. GEPA returned the seed unchanged in two of three seeds.
 
@@ -616,8 +655,10 @@ campaigns. A third campaign, using the tree contract with a $15 cap, is prepared
 2. **Conjecture ((m,2) radius).** The (m,2) radius is T_m for all m >= 8, attained by exactly two states. Exact for
    m = 8..11.
 3. **Conjecture (swap count).** Every shortest word for u_m has floor((m+1)^2/4) - 1 swaps. Exact for m = 4..11.
-4. **Conjecture (word_C).** word_C certifies (m..1){0,m} for all m >= 9. This follows from the two closed forms,
-   which hold by replay for m = 9..200 and by the sketch in section (c).
+4. **word_C (no longer a conjecture about the formulas).** The length and slope formulas are proved in
+   WORDC-PROOF.md for all m >= 3 and 1 <= a <= m-2 (model-written, mechanically checked at m = 9..40, not yet
+   reviewed by a human mathematician). That word_C's mixture certifies (m..1){0,m} for all m >= 9 therefore
+   depends only on Lemma 1 and criterion (7) at general m.
 5. **Conjecture (word_R1).** word_R1 certifies (m..1){1,m} for all m >= 9.
 6. **Conjecture (word_G).** word_G certifies (m..1){0,g} for all m >= 9, wherever its rule is defined.
 7. **Conjecture (interior masks).** Every two-zero mask of the reversal with both zeros in gaps 1..m-1 has a root
@@ -646,9 +687,12 @@ campaigns. A third campaign, using the tree contract with a $15 cap, is prepared
 4. **The m=8 exception names.** The 290 two-zero and 65 + 36,888 three-zero fewer-block exceptions appear only as
    counts. A list would close the last unreplicated part of the m=8 package.
 
-## (g) Verifying everything offline in this repository
+## (g) Verifying everything offline
 
-`VERIFY.md` has the full recipe. In short, run these from the repository root with Python 3.12:
+`VERIFY.md` has the full recipe. The package is self-contained for its five re-checks, including the mechanical
+check of the word_C proof. From the package root, `sh run_checks.sh` (or `python run_checks.py`) runs them with the
+byte-identical copies in `vendor/` only, without the repository, tables or numpy, and prints the expected last lines. Inside the repository, run these from the
+repository root with Python 3.12:
 
 ```
 python -m unittest discover -s tests -p 'test_*.py' -v
@@ -682,3 +726,40 @@ With 4 workers, the (10,2) build took 409 s and the (11,2) build 3.2 h. The sha2
 
     (10,2) 3f9ad500d390e7e264a26f9bcbdba13c2bd90ca500352e8d4cd4d9ae6ea4563b
     (11,2) 1c3f4915f4bea4e856d2eaed66f1c58caa4c7f43d896ae25e63475bc83192325
+
+## (h) External review (Session 24)
+
+Two reviewers of the research group (AutoMathLab, review request 2900) checked the previous version of this package
+(`lrx-findings-260926.zip`, sha256 `04be4d4a8302765b5136c0cbd269ec0e0c91cce6994bee0051873bd008735491`) and the
+repository at `defc5c6`. They used their own stdlib executor and checker, no repository modules, no BFS tables and no
+API calls. Their report is theirs; the summary below is this repository's reading of it (`research/claims.md`,
+Session 24).
+
+**Confirmed by them:**
+- 393 of 393 words replay literally to (1..m,0,0): the 390 word_G unit-block words at m = 9..40 and the three m = 11
+  words of lengths 74, 75 and 75;
+- 665 stored rows, 852 word executions and 675 exact leaf inequalities, re-derived from segments with their own
+  Lemma 1 bookkeeping (counts of records with repeats, not of unique families);
+- coverage of unique k = 2 reversal masks, 45/45 at m = 9 and 74/78 at m = 12;
+- the campaign-2 finalist table, 148/165 against control 95/165, as a reconciliation of the report, not a re-run.
+
+**Not confirmed by them:** shortestness of words; the exact radii of (10,2), (11,2) and (9,6) and the
+two-extremal-state count (tables not shipped); the single-leaf negative for m = 9 {0,4}, which needs a portable
+exhaustive oracle with proven completeness or a compact lower-bound certificate; the campaigns themselves.
+
+**Accepted corrections, applied in this version:**
+1. For even m, word_C is a mixture of two words, T - 1 with slopes (m-1, m-2) and T + 1 with slopes (m-3, m-4),
+   weights 1/2 each, not one word of length T - 1 with the required slopes. Summary and section (b) now say so.
+2. The engine gain is stated against the strong seed (129/165 at m = 12): AdaEvolve-s2 adds 19 families, and 53 is
+   the gain over the hand control. Section (d) now says so.
+3. One commit is pinned: FINDINGS.md had `defc5c6` and VERIFY.md `6e56ddf`. All three documents now name
+   `PINNED_COMMIT`.
+4. The package was not self-contained: the check scripts imported `integrations/*.py` from the repository, and
+   `mb.py` hard-coded an absolute path. `vendor/` now holds the import closure, `run_checks.sh` and `run_checks.py`
+   run the re-checks from the package alone, and the table root of `mb.py` is a parameter.
+
+The reviewers also stressed, and this package keeps saying, that every certificate for all block lengths and general
+m stays conditional on Lemma 1 and criteria (7)/(8), and that finite checks of the formulas do not replace a proof.
+Their suggested next steps are adopted: close the inductive invariants of word_C for both parities, bind the general-m
+Lemma 1 and (7)/(8) separately, keep "optimizer proposes, data-only checker verifies", and measure engine gains
+against the strong seed at equal budget with several repetitions and a new frozen holdout.

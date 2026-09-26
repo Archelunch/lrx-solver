@@ -3,28 +3,54 @@ import hashlib
 import heapq
 import json
 import mmap
+import os
 import sys
 from fractions import Fraction as Fr
 from math import lcm
 from pathlib import Path
 
-ROOT = Path('/Users/pavluhin/Documents/Projects/lrx-lab')
-sys.path.insert(0, str(ROOT))
+HERE = Path(__file__).resolve().parent
+PKG = HERE.parents[1]                      # the findings package (checks/reversal_midband_search -> package root)
+sys.path.append(str(PKG / 'vendor'))       # vendored integrations/ and src/lrx/; an existing PYTHONPATH wins
+
+
+def _root():
+    """Table root: --root DIR, else env LRX_ROOT, else the package's tables/ dir, else the first parent directory
+    holding datasets/generated (the repository). A root that contains datasets/generated is searched there."""
+    root = None
+    if '--root' in sys.argv[:-1]:
+        root = sys.argv[sys.argv.index('--root') + 1]
+    root = root or os.environ.get('LRX_ROOT')
+    if root:
+        return Path(root).expanduser().resolve()
+    if (PKG / 'tables').is_dir():
+        return PKG / 'tables'
+    for d in HERE.parents:
+        if (d / 'datasets' / 'generated').is_dir():
+            return d
+    return PKG / 'tables'
+
+
+ROOT = _root()
+BASE = ROOT / 'datasets' / 'generated' if (ROOT / 'datasets' / 'generated').is_dir() else ROOT
 from integrations import lrx_m as C  # noqa: E402
 from src.lrx.table_bfs import Ranker  # noqa: E402
 
 ZID = C.ZID
-DIRS = ['datasets/generated', 'datasets/generated/outer-layer-260925', 'datasets/generated/sort-m9-260925',
-        'datasets/generated/m10-r2-260926', 'datasets/generated/m11-260925']
+DIRS = ['.', 'outer-layer-260925', 'sort-m9-260925', 'm10-r2-260926', 'm11-260925']
 _T = {}
 
 
 def table_path(m, r):
     for d in DIRS:
-        p = ROOT / d / ('dist_m%d_r%d.bin' % (m, r))
+        p = BASE / d / ('dist_m%d_r%d.bin' % (m, r))
         if p.exists():
             return p
     return None
+
+
+if not any(table_path(9, r) for r in range(2, 7)):
+    print('mb.py: no dist_m9_r*.bin under %s; pass --root DIR or set LRX_ROOT' % BASE, file=sys.stderr)
 
 
 class Tab:
@@ -43,7 +69,7 @@ class Tab:
             assert h.hexdigest() == self.meta['table_sha256'], 'hash mismatch'
         self.rk = Ranker(m, r)
         self.m, self.r, self.n = m, r, m + r
-        self.path = str(p.relative_to(ROOT))
+        self.path = str(p.relative_to(BASE)) if p.is_relative_to(BASE) else str(p)
         self.w = self.rk.weights
 
     def d(self, v):
