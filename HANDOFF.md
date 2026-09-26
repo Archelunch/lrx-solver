@@ -45,8 +45,13 @@ certifies at the root, k=4 wide masks are the first slope-bound misses.
 Exact column generation with the negcert oracle (Session 33) certified
 m = 10 {0,5} and m = 11 {0,6} at the root and refuted m = 11 {0,5}
 exactly; the earlier pool-based "base excess" figures are not lower
-bounds. Campaign 3 launched 2026-09-26 13:29 local (approved hash
-ebac59b3..., first-prompt guard matched, about $0.03 per call). Next: human review of the four written proofs
+bounds. A C port of the oracle (Session 34) refuted both m = 12
+middle-band roots exactly (root LP value T+1), so trees are required
+there; oracle-priced tree column generation is in progress. Campaign 3
+launched 2026-09-26 13:29 local (approved hash ebac59b3..., guard
+matched, about $0.03 per call); seed 1 done ($4.04), kill check CONTINUE
+(AdaEvolve 159 vs seed 157 on validation); seeds 2-3 await re-approval of
+hash ca4ee0f0... after two robustness fixes (KILL-CHECK-S1-NOTE.md). Next: human review of the four written proofs
 (LEMMA1 4.1, LEMMA34 4.3, WORDC Lemma E, WORDR1 Lemma P); column
 generation on every remaining miss (each ends in a certificate or an
 exact refutation); campaign 3 on the tree contract awaits approval. Campaign 3 is prepared offline in
