@@ -834,7 +834,7 @@ no problems); searches in `checks/reversal_midband_search/`.
 ## Session 24: external independent review of the findings package (2026-09-26)
 
 Two reviewers of the research group (AutoMathLab, review request 2900;
-files in `downloads/lrx-solver-review-2900/`, gitignored: REVIEW.md,
+files in `downloads/lrx-solver-review-2900/`, kept untracked: REVIEW.md,
 independent_check.py, receipts) checked `lrx-findings-260926.zip` (sha256
 `04be4d4a...`) and the repository at `defc5c6`, with their own stdlib
 executor and checker, no repository modules, no BFS tables, no API.
