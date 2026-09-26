@@ -1,0 +1,95 @@
+12:06:25 [controller] AdaEvolve: Running 30 iterations across 2 islands
+12:07:45 [controller] Iteration 1: Program 0b416c98 (parent: 7adb9925) completed in 79.95s (llm: 79.94s, eval: 0.01s)
+12:07:45 [runner] Checkpoint 1: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:08:36 [controller] Iteration 2: Program e4a2b84f (parent: 7adb9925) completed in 51.47s (llm: 16.11s, eval: 35.37s)
+12:08:36 [runner] Checkpoint 2: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:09:20 [controller] Iteration 3: Program b426900e (parent: af4bd059) completed in 43.66s (llm: 11.20s, eval: 32.46s)
+12:09:20 [runner] Checkpoint 3: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:10:04 [controller] Iteration 4: Program 3233e412 (parent: af4bd059) completed in 43.77s (llm: 11.77s, eval: 32.00s)
+12:10:04 [runner] Checkpoint 4: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:10:43 [controller] Iteration 5: Program 5de5f1cc (parent: af4bd059) completed in 39.04s (llm: 20.24s, eval: 18.81s)
+12:10:43 [runner] Checkpoint 5: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:10:57 [controller] Iteration 6: Program 8cf10183 (parent: 7adb9925) completed in 14.67s (llm: 14.63s, eval: 0.03s)
+12:10:57 [runner] Checkpoint 6: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:12:07 [controller] Iteration 7: Program c172432c (parent: 7adb9925) completed in 69.98s (llm: 30.84s, eval: 39.14s)
+12:12:07 [runner] Checkpoint 7: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:12:53 [controller] Iteration 8: Program b657c177 (parent: af4bd059) completed in 45.30s (llm: 11.95s, eval: 33.35s)
+12:12:53 [runner] Checkpoint 8: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:14:02 [controller] Iteration 9: Program 18752bb9 (parent: 7adb9925) completed in 69.60s (llm: 69.54s, eval: 0.06s)
+12:14:02 [runner] Checkpoint 9: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:15:04 [controller] Iteration 10: Program 5a494c5c (parent: 7adb9925) completed in 50.58s (llm: 15.53s, eval: 35.05s)
+12:15:04 [runner] Checkpoint 10: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:16:08 [controller] Iteration 11: Program 9460d8e7 (parent: 7adb9925) completed in 64.02s (llm: 23.13s, eval: 40.89s)
+12:16:08 [runner] Checkpoint 11: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:16:27 [controller] Iteration 12: Program c854677a (parent: 7adb9925) completed in 19.25s (llm: 18.86s, eval: 0.38s)
+12:16:27 [runner] Checkpoint 12: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:17:21 [controller] Iteration 13: Program 02e571aa (parent: 7adb9925) completed in 53.29s (llm: 20.56s, eval: 32.73s)
+12:17:21 [runner] Checkpoint 13: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:18:24 [controller] Iteration 14: Program 5c5baa6b (parent: 7adb9925) completed in 63.59s (llm: 19.89s, eval: 43.70s)
+12:18:24 [runner] Checkpoint 14: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:18:46 [controller] Iteration 15: Program e03107cd (parent: 7adb9925) completed in 21.73s (llm: 21.19s, eval: 0.55s)
+12:18:46 [runner] Checkpoint 15: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:19:17 [controller] Iteration 16: Program 3a9460d7 (parent: 7adb9925) completed in 24.42s (llm: 23.75s, eval: 0.67s)
+12:19:17 [runner] Checkpoint 16: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:20:29 [controller] Iteration 17: Program bb42c80f (parent: 7adb9925) completed in 70.23s (llm: 14.44s, eval: 55.79s)
+12:20:29 [runner] Checkpoint 17: best=combined_score=173.4449, screen_certified=26.0000, screen_valid=30.0000, screen_max_gap=1.4375, full_certified=283.0000
+12:22:20 [controller] Iteration 18: Program c534622a (parent: 7adb9925) completed in 110.46s (llm: 27.54s, eval: 82.91s)
+12:22:20 [controller] New best solution found at iteration 18
+12:22:20 [runner] Checkpoint 18: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:22:36 [controller] Iteration 19: Program a80f2bd2 (parent: c534622a) completed in 15.41s (llm: 14.77s, eval: 0.64s)
+12:22:36 [runner] Checkpoint 19: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:23:38 [controller] Iteration 20: Program baefe93e (parent: c534622a) completed in 60.74s (llm: 11.60s, eval: 49.14s)
+12:23:38 [runner] Checkpoint 20: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:24:31 [controller] Iteration 21: Program 35749e1f (parent: c534622a) completed in 52.79s (llm: 8.76s, eval: 44.02s)
+12:24:31 [runner] Checkpoint 21: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:25:31 [controller] Iteration 22: Program 2ac8e4f1 (parent: c534622a) completed in 52.65s (llm: 9.71s, eval: 42.94s)
+12:25:31 [runner] Checkpoint 22: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:26:26 [controller] Iteration 23: Program fb0c744e (parent: c534622a) completed in 53.53s (llm: 7.15s, eval: 46.38s)
+12:26:26 [runner] Checkpoint 23: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:26:42 [controller] Iteration 24: Program ec70be32 (parent: c534622a) completed in 14.82s (llm: 6.15s, eval: 8.66s)
+12:26:42 [runner] Checkpoint 24: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:27:41 [controller] Iteration 25: Program 71c6e6cd (parent: c534622a) completed in 58.29s (llm: 9.43s, eval: 48.85s)
+12:27:41 [runner] Checkpoint 25: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:28:43 [controller] Iteration 26: Program 1ed6eace (parent: c534622a) completed in 60.30s (llm: 8.64s, eval: 51.65s)
+12:28:43 [runner] Checkpoint 26: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:29:03 [controller] Iteration 27: Program 9257f4d4 (parent: c534622a) completed in 18.78s (llm: 6.98s, eval: 11.80s)
+12:29:03 [runner] Checkpoint 27: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:29:04 WARNING [generator] Paradigm generation failed (attempt 1/3): Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:05 WARNING [generator] Paradigm generation failed (attempt 2/3): Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:07 WARNING [generator] Paradigm generation failed (attempt 3/3): Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:07 ERROR [generator] Paradigm generation failed after 3 attempts: Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:07 WARNING [controller] Failed to generate paradigms
+12:29:08 WARNING [controller] Iteration 28: All 3 attempts failed: LLM error: Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:08 WARNING [generator] Paradigm generation failed (attempt 1/3): Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:09 WARNING [generator] Paradigm generation failed (attempt 2/3): Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:11 WARNING [generator] Paradigm generation failed (attempt 3/3): Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:11 ERROR [generator] Paradigm generation failed after 3 attempts: Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:11 WARNING [controller] Failed to generate paradigms
+12:29:11 WARNING [controller] Iteration 29: All 3 attempts failed: LLM error: Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:11 WARNING [generator] Paradigm generation failed (attempt 1/3): Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:12 WARNING [generator] Paradigm generation failed (attempt 2/3): Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:14 WARNING [generator] Paradigm generation failed (attempt 3/3): Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:14 ERROR [generator] Paradigm generation failed after 3 attempts: Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:14 WARNING [controller] Failed to generate paradigms
+12:29:14 WARNING [controller] Iteration 30: All 3 attempts failed: LLM error: Error code: 429 - {'error': {'message': 'shared upstream request cap reached', 'type': 'budget_exhausted'}}
+12:29:17 [controller] AdaEvolve completed
+12:29:17 [runner] Checkpoint 30: best=combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000
+12:30:11 [runner] Test evaluation for best program: combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=287.0000
+12:30:11 [runner] Discovery completed. Best: combined_score=176.7844, screen_certified=27.0000, screen_valid=30.0000, screen_max_gap=1.0000, full_certified=282.0000, test_combined_score=176.7844, test_screen_certified=27.0000, test_screen_valid=30.0000, test_screen_max_gap=1.0000, test_full_certified=287.0000
+Using search algorithm: adaevolve
+
+Discovery complete!
+Best program metrics:
+  combined_score: 176.7844
+  screen_certified: 27.0000
+  screen_valid: 30.0000
+  screen_max_gap: 1.0000
+  full_certified: 282.0000
+  test_combined_score: 176.7844
+  test_screen_certified: 27.0000
+  test_screen_valid: 30.0000
+  test_screen_max_gap: 1.0000
+  test_full_certified: 287.0000
+
+Latest checkpoint: /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/output/sky/checkpoints/checkpoint_30
+To resume: --checkpoint /Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/output/sky/checkpoints/checkpoint_30

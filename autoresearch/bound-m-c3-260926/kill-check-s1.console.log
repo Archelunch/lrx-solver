@@ -1,0 +1,48 @@
+{
+ "seed_validation_certified": 111,
+ "first_proposals": 15,
+ "arms": {
+  "gepa": {
+   "run": "autoresearch/bound-m-c3-260926/live-gepa-s1-260926-132928",
+   "status": "COMPLETE",
+   "accepted_in_window": 0,
+   "best": null,
+   "beats_seed": false
+  },
+  "sequential": {
+   "run": "autoresearch/bound-m-c3-260926/live-sequential-s1-260926-134455",
+   "status": "COMPLETE",
+   "accepted_in_window": 9,
+   "best": {
+    "candidate_hash": "16b162ab095bc81354bf38f1483ea9d1b1cc8ba5d81a1e68e00320d0dd7b1448",
+    "certified": 157,
+    "max_W": "4"
+   },
+   "beats_seed": true
+  },
+  "adaevolve": {
+   "run": "autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624",
+   "status": "COMPLETE",
+   "accepted_in_window": 11,
+   "best": {
+    "candidate_hash": "6932e11b5e9c8f681a95b5bde94bd4931327b261c97a9aea31d8991044478d72",
+    "certified": 159,
+    "max_W": "4"
+   },
+   "beats_seed": true
+  },
+  "evox": {
+   "run": "autoresearch/bound-m-c3-260926/live-evox-s1-260926-143011",
+   "status": "COMPLETE",
+   "accepted_in_window": 5,
+   "best": {
+    "candidate_hash": "5b7a186793e5c13a42a71f9e05713a2fdd7ce6d1bc8c4383c2d089808de5fb21",
+    "certified": 157,
+    "max_W": "4"
+   },
+   "beats_seed": true
+  }
+ },
+ "stop": false
+}
+kill-check exit 0

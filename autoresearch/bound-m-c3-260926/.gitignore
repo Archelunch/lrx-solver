@@ -2,3 +2,8 @@ first-prompt-capture/
 finalists/*-arms/
 eval-cache/
 __pycache__/
+live-*/output/
+live-*/verified/
+live-*/stage/
+eval-cache/
+*.receipts/

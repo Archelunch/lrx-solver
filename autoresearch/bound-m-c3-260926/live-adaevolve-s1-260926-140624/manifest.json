@@ -1,0 +1,3646 @@
+{
+  "engine": "adaevolve",
+  "seed": 1,
+  "task": "bound-m-c3-260926",
+  "upstream": "skydiscover==0.2.0@0d932b690670a7e544388ad362e9876c8bd256a0",
+  "trusted_status": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "frozen_manifest": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-260925/frozen/manifest.json",
+  "frozen_manifest_sha256": "e65a06f52db9038597560ef93c1bd9d48babe15965b69326512ceb2fa0ac4c2e",
+  "development_sha256": "88567c75d13af24bca6c9cbdd5fa96bd665e4d0f5589a856a8a4382ff344908e",
+  "seed_sha256": "6c780864eaedf453366f370411602bc9679dbfe592fefbeff844b6691fc844d5",
+  "c2_manifest_sha256": "c0388ae6e98a0655836f29c256ae4eef7230cdd970b9b628f648dabfce48169a",
+  "seed_full": {
+    "combined_score": 183.73514098524856,
+    "certified": 283,
+    "valid": 303,
+    "families": 303,
+    "max_W": "15/7",
+    "per_m_certified": {
+      "9": 138,
+      "10": 145
+    },
+    "per_m": {
+      "9": {
+        "certified": 138,
+        "families": 153,
+        "pct": 90.19607843137256,
+        "boundary": 1,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "15/7",
+        "W_complete": true,
+        "G": "76344281/988033200",
+        "per_k": {
+          "2": [
+            10,
+            17
+          ],
+          "3": [
+            15,
+            17
+          ],
+          "4": [
+            15,
+            17
+          ],
+          "5": [
+            16,
+            17
+          ],
+          "6": [
+            16,
+            17
+          ],
+          "7": [
+            15,
+            17
+          ],
+          "8": [
+            17,
+            17
+          ],
+          "9": [
+            17,
+            17
+          ],
+          "10": [
+            17,
+            17
+          ]
+        }
+      },
+      "10": {
+        "certified": 145,
+        "families": 150,
+        "pct": 96.66666666666667,
+        "boundary": 1,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "23/16",
+        "W_complete": true,
+        "G": "4073311/196783200",
+        "per_k": {
+          "2": [
+            12,
+            15
+          ],
+          "3": [
+            15,
+            15
+          ],
+          "4": [
+            15,
+            15
+          ],
+          "5": [
+            14,
+            15
+          ],
+          "6": [
+            15,
+            15
+          ],
+          "7": [
+            14,
+            15
+          ],
+          "8": [
+            15,
+            15
+          ],
+          "9": [
+            15,
+            15
+          ],
+          "10": [
+            15,
+            15
+          ],
+          "11": [
+            15,
+            15
+          ]
+        }
+      }
+    },
+    "trees": 23,
+    "cache_key": "379d3f7b625f00770b31cd11a6e5354b3dcf39ba5e467d80b9db930259771e58"
+  },
+  "broker_url": "http://127.0.0.1:8895/v1",
+  "model": "gemini-3.8-flash",
+  "iterations": 30,
+  "max_tokens": 16384,
+  "reasoning_effort": "low",
+  "max_evals": 50,
+  "wall_seconds": 21600,
+  "verifier_url": "http://127.0.0.1:60045/evaluate",
+  "command": [
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/stage/sky-config.yaml",
+    "--search",
+    "adaevolve",
+    "--iterations",
+    "30",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/worker.sb",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/.venv-official/bin/python",
+    "-m",
+    "skydiscover",
+    "optimize",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/stage/initial_program.py",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/stage/evaluator.py",
+    "--config",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/stage/sky-config.yaml",
+    "--search",
+    "adaevolve",
+    "--iterations",
+    "30",
+    "--output",
+    "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/output/sky",
+    "--log-level",
+    "INFO"
+  ],
+  "sandbox_profile": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624/worker.sb",
+  "run_dir": "/Users/pavluhin/Documents/Projects/lrx-lab/autoresearch/bound-m-c3-260926/live-adaevolve-s1-260926-140624",
+  "sky_random_seed": 1,
+  "gepa_seed": null,
+  "evox_strategy_evolution": null,
+  "returncode": 0,
+  "engine_seconds": 1427.2699538329616,
+  "mechanism_evidence": {
+    "configured_iterations": 30,
+    "observed_iterations": 30,
+    "successful_generation_iterations": 27,
+    "ucb_island_visits": [
+      16,
+      14
+    ],
+    "ucb_min_visits": 3,
+    "ucb_min_visits_reached": true,
+    "migration_interval": 15,
+    "migration_opportunity": true,
+    "paradigm_window": 10,
+    "paradigms_tried": 6
+  },
+  "first_solution_prompt_check": {
+    "actual_sha256": "f6e0102e244899047d69d956e5be1f72833555c0066169d32fa094cdbce32ce4",
+    "matches": true
+  },
+  "status": "COMPLETE",
+  "candidate_evaluations": {
+    "requests": 31,
+    "full_evaluations": 24,
+    "failures": 0,
+    "best_screen": {
+      "score": 176.784358974359,
+      "certified": 27,
+      "source_sha256": "b08b4388fb523bd323d0b555da8d1c29b4d8806661691d0aee7b3eb7c5f1ef01"
+    },
+    "best_full": {
+      "score": 187.0119121737523,
+      "certified": 287,
+      "per_m": {
+        "9": 141,
+        "10": 146
+      },
+      "max_W": "13/7",
+      "source_sha256": "99e23009a42042e7e48fa98e274678548c68d7650ecf0f8a8260b65c3a012fbf"
+    },
+    "screen_ids": [
+      "m9-mask132-labels765432198",
+      "m9-mask656-labels432198765",
+      "m9-mask801-labels432198765",
+      "m9-mask185-labels654321987",
+      "m9-mask571-labels982674315",
+      "m9-mask471-labels391865427",
+      "m9-mask1011-labels765432198",
+      "m9-mask895-labels987654321",
+      "m9-mask1023-labels875643219",
+      "m9-mask545-labels654321987",
+      "m9-mask591-labels654321987",
+      "m9-mask1023-labels654321987",
+      "m9-mask1014-labels432198756",
+      "m9-mask856-labels654321987",
+      "m9-mask112-labels543219876",
+      "m10-mask528-labels9.8.7.6.5.4.2.3.1.10",
+      "m10-mask1184-labels1.2.3.4.5.6.7.8.9.10",
+      "m10-mask579-labels7.6.5.4.3.1.2.10.9.8",
+      "m10-mask1053-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask791-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask1623-labels7.9.10.8.5.4.1.2.6.3",
+      "m10-mask1851-labels1.10.9.8.7.6.5.4.3.2",
+      "m10-mask1917-labels10.6.8.2.7.3.9.4.1.5",
+      "m10-mask1983-labels9.7.6.5.4.3.2.1.10.8",
+      "m10-mask2047-labels5.6.10.8.4.7.1.2.3.9",
+      "m10-mask1870-labels5.4.3.2.1.9.10.8.7.6",
+      "m10-mask536-labels6.4.3.2.1.10.9.8.7.5",
+      "m10-mask2029-labels5.4.3.2.1.10.9.8.7.6",
+      "m10-mask1025-labels10.9.8.7.6.5.4.3.2.1",
+      "m10-mask1796-labels8.7.6.5.3.4.2.1.10.9"
+    ],
+    "families": 303
+  },
+  "evaluation_trace": [
+    {
+      "scope": "screen",
+      "candidate_hash": "6c780864eaedf453366f370411602bc9679dbfe592fefbeff844b6691fc844d5",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 183.73514098524856,
+        "certified": 283,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 145
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 145,
+            "families": 150,
+            "pct": 96.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "4073311/196783200",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 23,
+        "cache_key": "379d3f7b625f00770b31cd11a6e5354b3dcf39ba5e467d80b9db930259771e58"
+      },
+      "ordinal": 1,
+      "packet_sha256": "25330273abb02e5253937630670ce88ce776dd7147eea04f1da021577f4d985a"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6c780864eaedf453366f370411602bc9679dbfe592fefbeff844b6691fc844d5",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 183.73514098524856,
+        "certified": 283,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 145
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 145,
+            "families": 150,
+            "pct": 96.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "4073311/196783200",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 23,
+        "cache_key": "379d3f7b625f00770b31cd11a6e5354b3dcf39ba5e467d80b9db930259771e58"
+      },
+      "ordinal": 2,
+      "packet_sha256": "25330273abb02e5253937630670ce88ce776dd7147eea04f1da021577f4d985a"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "0684e231f0dd5783c4c15a31da571b5529afa16d422a619f0bd19156ae7708de",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "ordinal": 3,
+      "packet_sha256": "ca6491ea1a74d2b0b92a72d1348438231f3503ccf21da9be2f04483a715fe467"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "aa6b92d371b6512b6276b7f28877a634ea499103f7f282633da007627832e13b",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 184.0684759923207,
+        "certified": 284,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "7457/362400",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 24,
+        "cache_key": "7f5e8e060a1e957311c979d3c3ebbed7b57695a21c068cea0d467cd2f562ed2e"
+      },
+      "ordinal": 4,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "56ec5780f1cc5b075c5ed6d800ec35f65fa05159ccc18cb4027ddaa195c12d12",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 184.0684759923207,
+        "certified": 284,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "7457/362400",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 24,
+        "cache_key": "afeeb282bd4564becc0e3b0df86f0bf6a9536c23ea31b0fe83a01eefb12065cb"
+      },
+      "ordinal": 5,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "60d6fac91b15b4b718c4e58cef09c44c337c34ca4d4dc5de5d4aad2036b798ee",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 184.0684759923207,
+        "certified": 284,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "7457/362400",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 24,
+        "cache_key": "6543f0087e04c6077374f5e580b4543b540bfb50961f1fd71756d5a35971ba03"
+      },
+      "ordinal": 6,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "f663dcdccd71539ee72871d52fe129f2ed2b3efbb04540bb0d520d71cb9fcce9",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 183.73514098524856,
+        "certified": 283,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 145
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 145,
+            "families": 150,
+            "pct": 96.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "4073311/196783200",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 23,
+        "cache_key": "d92df51e3801c871bcced3d6267ec84569a8c6b859b6c6b882f87e70eb20e1a7"
+      },
+      "ordinal": 7,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "aa6b92d371b6512b6276b7f28877a634ea499103f7f282633da007627832e13b",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 184.0684759923207,
+        "certified": 284,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "7457/362400",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 24,
+        "cache_key": "7f5e8e060a1e957311c979d3c3ebbed7b57695a21c068cea0d467cd2f562ed2e"
+      },
+      "ordinal": 8,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "f130ce5bbbbbd5bd8dc9ab5bb6c1e4794ef298ab5628d329f90b8800dbb4734d",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 184.0684759923207,
+        "certified": 284,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "7457/362400",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 24,
+        "cache_key": "08ef9858a22a3dc0ba9b6f44daf912ed16c6307e9b6e53cdba9a03f321101b5c"
+      },
+      "ordinal": 9,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "9219db734c40eecb1d5e852a38e696765cd75431634d51c33ad79ea359205681",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 184.0684759923207,
+        "certified": 284,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "7457/362400",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 24,
+        "cache_key": "0d62dd0994284f5d1c3536bec49c9e19bde999947722508a756bdc213949afaf"
+      },
+      "ordinal": 10,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "f130ce5bbbbbd5bd8dc9ab5bb6c1e4794ef298ab5628d329f90b8800dbb4734d",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 184.0684759923207,
+        "certified": 284,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "7457/362400",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 24,
+        "cache_key": "08ef9858a22a3dc0ba9b6f44daf912ed16c6307e9b6e53cdba9a03f321101b5c"
+      },
+      "ordinal": 11,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "126dca716a53c51fd6abd9eaf59ae6427622fc8a5e2fe952601612c5e31d9343",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 183.73514098524856,
+        "certified": 283,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 145
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 145,
+            "families": 150,
+            "pct": 96.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "4073311/196783200",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 23,
+        "cache_key": "da436595fe951f37ede374b87ff9bfe8a902da6041e96a1b65842b4d7a0a7165"
+      },
+      "ordinal": 12,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "b8d2db672a31bd83faecea78d259da0da936c85b97b21abe42a2f3e3028e5013",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 184.0684759923207,
+        "certified": 284,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "7457/362400",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 24,
+        "cache_key": "7feecaf3bf7be50e9e336377996c0c09b1d397c097df1e99bb1d57ca3c474c40"
+      },
+      "ordinal": 13,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "db398e6a72c830852b54b4c6cc065dede14f3f8ae66f0fb06715c1b9b8e5bd55",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "ordinal": 14,
+      "packet_sha256": "daf6c16321d518b48dcbd1a244ac64abd95408d9fe731082e3ff4d77a1b00ba2"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6932e11b5e9c8f681a95b5bde94bd4931327b261c97a9aea31d8991044478d72",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 183.73514098524856,
+        "certified": 283,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 145
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 145,
+            "families": 150,
+            "pct": 96.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "4073311/196783200",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 23,
+        "cache_key": "d36a4d3a3cd860b76f6bf121ec9dc5d40afc8ac6eb8d710115fdef2e76048477"
+      },
+      "ordinal": 15,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "1de9cd2cc17447efc8640abc25c3d215576dbcddddfdba392520688023fcbeb1",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 184.0684759923207,
+        "certified": 284,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "7457/362400",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 24,
+        "cache_key": "84814a93340aa79eba4a590f5be197cd0bf04503fa8fb01382e3c6ce1e5b7291"
+      },
+      "ordinal": 16,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "cd37916572bf433d2a1a1cb148e57fa033af5c11a419978f1354cd00576f9408",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "ordinal": 17,
+      "packet_sha256": "daf6c16321d518b48dcbd1a244ac64abd95408d9fe731082e3ff4d77a1b00ba2"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "8e6baf1b5c1ad6da9441a7ad36cdbfab25d8df2b2ea28591b154b768e65ec116",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "ordinal": 18,
+      "packet_sha256": "daf6c16321d518b48dcbd1a244ac64abd95408d9fe731082e3ff4d77a1b00ba2"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "a7921ee68877032a4422c78ef5953045778784fe7263af39357329e0cf751aa8",
+      "combined_score": 173.4448939089806,
+      "certified": 26,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 183.73514098524856,
+        "certified": 283,
+        "valid": 303,
+        "families": 303,
+        "max_W": "15/7",
+        "per_m_certified": {
+          "9": 138,
+          "10": 145
+        },
+        "per_m": {
+          "9": {
+            "certified": 138,
+            "families": 153,
+            "pct": 90.19607843137256,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "15/7",
+            "W_complete": true,
+            "G": "76344281/988033200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                15,
+                17
+              ],
+              "4": [
+                15,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 145,
+            "families": 150,
+            "pct": 96.66666666666667,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "23/16",
+            "W_complete": true,
+            "G": "4073311/196783200",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                14,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 23,
+        "cache_key": "df0abb6e4a0df5a2e2dc864604acc403fcff619fdc833c617ad650bb9b8cd6cf"
+      },
+      "ordinal": 19,
+      "packet_sha256": "9f1f66fb23a988bc253a0a1d7e11f331e1a7e91660dfac70630cf8dbb3119a93"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "b08b4388fb523bd323d0b555da8d1c29b4d8806661691d0aee7b3eb7c5f1ef01",
+      "combined_score": 176.784358974359,
+      "certified": 27,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 185.3227912050059,
+        "certified": 282,
+        "valid": 295,
+        "families": 303,
+        "max_W": "4000",
+        "per_m_certified": {
+          "9": 141,
+          "10": 141
+        },
+        "per_m": {
+          "9": {
+            "certified": 141,
+            "families": 153,
+            "pct": 92.15686274509804,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 3,
+            "timeouts": 3,
+            "W": "4000",
+            "W_complete": false,
+            "G": "331283/6930000",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                16,
+                17
+              ],
+              "4": [
+                17,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 141,
+            "families": 150,
+            "pct": 94.0,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 5,
+            "timeouts": 5,
+            "W": "4000",
+            "W_complete": false,
+            "G": "31/1885",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                10,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 14,
+        "cache_key": "dd23c788a67b9d191c209d14a070ced3dae601de0629102365431e824c408d1c"
+      },
+      "ordinal": 20,
+      "packet_sha256": "20a0e0811ec24b7934cff08f6cacc8a3c93e924643c1d2a8d425ef82c29f7021"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "a2d310e5387d8a643905fc1bce549966df908c3177cd89063e85407411938238",
+      "combined_score": 1.4996250937265684e-05,
+      "certified": 0,
+      "valid": 0,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "ordinal": 21,
+      "packet_sha256": "3287c83c6226dbde5f783e0de2258c5108ed1b36f1d42417d28da2f3d514aa51"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "99e23009a42042e7e48fa98e274678548c68d7650ecf0f8a8260b65c3a012fbf",
+      "combined_score": 176.784358974359,
+      "certified": 27,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 187.0119121737523,
+        "certified": 287,
+        "valid": 303,
+        "families": 303,
+        "max_W": "13/7",
+        "per_m_certified": {
+          "9": 141,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 141,
+            "families": 153,
+            "pct": 92.15686274509804,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "13/7",
+            "W_complete": true,
+            "G": "54755131/968398200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                16,
+                17
+              ],
+              "4": [
+                17,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "1",
+            "W_complete": true,
+            "G": "31/1950",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 14,
+        "cache_key": "42dab566f460ce50d7bf10bfea06faeafab09d3dcdc65ded92c18bc39bc78578"
+      },
+      "ordinal": 22,
+      "packet_sha256": "fc27b37415328a55ae4c4532a0041713a340f741bc1e15af17207f0b6c29604e"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "f00cc54ffe368fffeb7b8ccca97fd8f210692b244bcc112d17bcbe3a4ef724a0",
+      "combined_score": 176.784358974359,
+      "certified": 27,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 186.03149974102573,
+        "certified": 286,
+        "valid": 303,
+        "families": 303,
+        "max_W": "13/7",
+        "per_m_certified": {
+          "9": 140,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 140,
+            "families": 153,
+            "pct": 91.50326797385621,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "13/7",
+            "W_complete": true,
+            "G": "168484993/2905194600",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                16,
+                17
+              ],
+              "4": [
+                16,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "1",
+            "W_complete": true,
+            "G": "31/1950",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 13,
+        "cache_key": "b72e4d896e6cedbbd546c371f787ecf762d8b25b0b431a874a380afd16a68d7f"
+      },
+      "ordinal": 23,
+      "packet_sha256": "fc27b37415328a55ae4c4532a0041713a340f741bc1e15af17207f0b6c29604e"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "f63490bae4693fc01ff1359edb364d4ca81dd60ac19651cbb09f1732133b8f72",
+      "combined_score": 176.784358974359,
+      "certified": 27,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 187.0119121737523,
+        "certified": 287,
+        "valid": 303,
+        "families": 303,
+        "max_W": "13/7",
+        "per_m_certified": {
+          "9": 141,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 141,
+            "families": 153,
+            "pct": 92.15686274509804,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "13/7",
+            "W_complete": true,
+            "G": "54755131/968398200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                16,
+                17
+              ],
+              "4": [
+                17,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "1",
+            "W_complete": true,
+            "G": "31/1950",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 14,
+        "cache_key": "cba01a4484c081637e6829fcf8bc3dcac54c11f46a782067f3e746028099e781"
+      },
+      "ordinal": 24,
+      "packet_sha256": "fc27b37415328a55ae4c4532a0041713a340f741bc1e15af17207f0b6c29604e"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "00c7cc0710577d299a5e911345a2b03da095341f6dde9eea95bd804981dacbb8",
+      "combined_score": 176.784358974359,
+      "certified": 27,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 187.0119121737523,
+        "certified": 287,
+        "valid": 303,
+        "families": 303,
+        "max_W": "13/7",
+        "per_m_certified": {
+          "9": 141,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 141,
+            "families": 153,
+            "pct": 92.15686274509804,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "13/7",
+            "W_complete": true,
+            "G": "54755131/968398200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                16,
+                17
+              ],
+              "4": [
+                17,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "1",
+            "W_complete": true,
+            "G": "31/1950",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 14,
+        "cache_key": "8476aee840b5694a2cdbd9628101e7493626aaae0abc194996390893c5409c25"
+      },
+      "ordinal": 25,
+      "packet_sha256": "fc27b37415328a55ae4c4532a0041713a340f741bc1e15af17207f0b6c29604e"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "2724b1be07e2da7bdc90708da193d629a789e38f17bbc9fd25680e877d477f55",
+      "combined_score": 126.74039473464967,
+      "certified": 20,
+      "valid": 23,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "ordinal": 26,
+      "packet_sha256": "817164a1887491e27572d6f0babf4bf43ecd57d3c713d85c103da420b9a4e65c"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "6363de84fc9a99a11377a6be8b4def0551339a3d4b46f8e860832c9da2b3d848",
+      "combined_score": 176.784358974359,
+      "certified": 27,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 187.0119121737523,
+        "certified": 287,
+        "valid": 303,
+        "families": 303,
+        "max_W": "13/7",
+        "per_m_certified": {
+          "9": 141,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 141,
+            "families": 153,
+            "pct": 92.15686274509804,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "13/7",
+            "W_complete": true,
+            "G": "54755131/968398200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                16,
+                17
+              ],
+              "4": [
+                17,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "1",
+            "W_complete": true,
+            "G": "31/1950",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 14,
+        "cache_key": "b18d496d81f3bb03be093887c4520472de7239fccc2f653b821da485d90bd8c3"
+      },
+      "ordinal": 27,
+      "packet_sha256": "fc27b37415328a55ae4c4532a0041713a340f741bc1e15af17207f0b6c29604e"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "b7c2e5677c9f561ea8353771a20c9b933869e9c43dbe847495e57f0d51225399",
+      "combined_score": 176.784358974359,
+      "certified": 27,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": false,
+      "full": {
+        "combined_score": 187.0119121737523,
+        "certified": 287,
+        "valid": 303,
+        "families": 303,
+        "max_W": "13/7",
+        "per_m_certified": {
+          "9": 141,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 141,
+            "families": 153,
+            "pct": 92.15686274509804,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "13/7",
+            "W_complete": true,
+            "G": "54755131/968398200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                16,
+                17
+              ],
+              "4": [
+                17,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "1",
+            "W_complete": true,
+            "G": "31/1950",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 14,
+        "cache_key": "0ab644e3dcf46a8876114d183b737597cd654b75ed24f645905724ede64d22f7"
+      },
+      "ordinal": 28,
+      "packet_sha256": "fc27b37415328a55ae4c4532a0041713a340f741bc1e15af17207f0b6c29604e"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "ad58a2a92ef7f62fc2be0a3da11b54a9ab2d996a98ffb77ec47d962fd5274923",
+      "combined_score": 136.74252696678502,
+      "certified": 21,
+      "valid": 24,
+      "families": 30,
+      "cache_hit": false,
+      "full": null,
+      "ordinal": 29,
+      "packet_sha256": "9732369bd79a5e1e83beb06c5a524f7e5b15405ba18dc57ab2a6b1b91004f5a6"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "b08b4388fb523bd323d0b555da8d1c29b4d8806661691d0aee7b3eb7c5f1ef01",
+      "combined_score": 176.784358974359,
+      "certified": 27,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 187.0119121737523,
+        "certified": 287,
+        "valid": 303,
+        "families": 303,
+        "max_W": "13/7",
+        "per_m_certified": {
+          "9": 141,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 141,
+            "families": 153,
+            "pct": 92.15686274509804,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "13/7",
+            "W_complete": true,
+            "G": "54755131/968398200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                16,
+                17
+              ],
+              "4": [
+                17,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "1",
+            "W_complete": true,
+            "G": "31/1950",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 14,
+        "cache_key": "dd23c788a67b9d191c209d14a070ced3dae601de0629102365431e824c408d1c"
+      },
+      "ordinal": 30,
+      "packet_sha256": "fc27b37415328a55ae4c4532a0041713a340f741bc1e15af17207f0b6c29604e"
+    },
+    {
+      "scope": "screen",
+      "candidate_hash": "b08b4388fb523bd323d0b555da8d1c29b4d8806661691d0aee7b3eb7c5f1ef01",
+      "combined_score": 176.784358974359,
+      "certified": 27,
+      "valid": 30,
+      "families": 30,
+      "cache_hit": true,
+      "full": {
+        "combined_score": 187.0119121737523,
+        "certified": 287,
+        "valid": 303,
+        "families": 303,
+        "max_W": "13/7",
+        "per_m_certified": {
+          "9": 141,
+          "10": 146
+        },
+        "per_m": {
+          "9": {
+            "certified": 141,
+            "families": 153,
+            "pct": 92.15686274509804,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "13/7",
+            "W_complete": true,
+            "G": "54755131/968398200",
+            "per_k": {
+              "2": [
+                10,
+                17
+              ],
+              "3": [
+                16,
+                17
+              ],
+              "4": [
+                17,
+                17
+              ],
+              "5": [
+                16,
+                17
+              ],
+              "6": [
+                16,
+                17
+              ],
+              "7": [
+                15,
+                17
+              ],
+              "8": [
+                17,
+                17
+              ],
+              "9": [
+                17,
+                17
+              ],
+              "10": [
+                17,
+                17
+              ]
+            }
+          },
+          "10": {
+            "certified": 146,
+            "families": 150,
+            "pct": 97.33333333333333,
+            "boundary": 1,
+            "invalid": 0,
+            "incomplete": 0,
+            "timeouts": 0,
+            "W": "1",
+            "W_complete": true,
+            "G": "31/1950",
+            "per_k": {
+              "2": [
+                12,
+                15
+              ],
+              "3": [
+                15,
+                15
+              ],
+              "4": [
+                15,
+                15
+              ],
+              "5": [
+                14,
+                15
+              ],
+              "6": [
+                15,
+                15
+              ],
+              "7": [
+                15,
+                15
+              ],
+              "8": [
+                15,
+                15
+              ],
+              "9": [
+                15,
+                15
+              ],
+              "10": [
+                15,
+                15
+              ],
+              "11": [
+                15,
+                15
+              ]
+            }
+          }
+        },
+        "trees": 14,
+        "cache_key": "dd23c788a67b9d191c209d14a070ced3dae601de0629102365431e824c408d1c"
+      },
+      "ordinal": 31,
+      "packet_sha256": "fc27b37415328a55ae4c4532a0041713a340f741bc1e15af17207f0b6c29604e"
+    }
+  ],
+  "proposal_hashes": [
+    "0684e231f0dd5783c4c15a31da571b5529afa16d422a619f0bd19156ae7708de",
+    "aa6b92d371b6512b6276b7f28877a634ea499103f7f282633da007627832e13b",
+    "56ec5780f1cc5b075c5ed6d800ec35f65fa05159ccc18cb4027ddaa195c12d12",
+    "60d6fac91b15b4b718c4e58cef09c44c337c34ca4d4dc5de5d4aad2036b798ee",
+    "f663dcdccd71539ee72871d52fe129f2ed2b3efbb04540bb0d520d71cb9fcce9",
+    "f130ce5bbbbbd5bd8dc9ab5bb6c1e4794ef298ab5628d329f90b8800dbb4734d",
+    "9219db734c40eecb1d5e852a38e696765cd75431634d51c33ad79ea359205681",
+    "126dca716a53c51fd6abd9eaf59ae6427622fc8a5e2fe952601612c5e31d9343",
+    "b8d2db672a31bd83faecea78d259da0da936c85b97b21abe42a2f3e3028e5013",
+    "db398e6a72c830852b54b4c6cc065dede14f3f8ae66f0fb06715c1b9b8e5bd55",
+    "6932e11b5e9c8f681a95b5bde94bd4931327b261c97a9aea31d8991044478d72",
+    "1de9cd2cc17447efc8640abc25c3d215576dbcddddfdba392520688023fcbeb1",
+    "cd37916572bf433d2a1a1cb148e57fa033af5c11a419978f1354cd00576f9408",
+    "8e6baf1b5c1ad6da9441a7ad36cdbfab25d8df2b2ea28591b154b768e65ec116",
+    "a7921ee68877032a4422c78ef5953045778784fe7263af39357329e0cf751aa8",
+    "b08b4388fb523bd323d0b555da8d1c29b4d8806661691d0aee7b3eb7c5f1ef01",
+    "a2d310e5387d8a643905fc1bce549966df908c3177cd89063e85407411938238",
+    "99e23009a42042e7e48fa98e274678548c68d7650ecf0f8a8260b65c3a012fbf",
+    "f00cc54ffe368fffeb7b8ccca97fd8f210692b244bcc112d17bcbe3a4ef724a0",
+    "f63490bae4693fc01ff1359edb364d4ca81dd60ac19651cbb09f1732133b8f72",
+    "00c7cc0710577d299a5e911345a2b03da095341f6dde9eea95bd804981dacbb8",
+    "2724b1be07e2da7bdc90708da193d629a789e38f17bbc9fd25680e877d477f55",
+    "6363de84fc9a99a11377a6be8b4def0551339a3d4b46f8e860832c9da2b3d848",
+    "b7c2e5677c9f561ea8353771a20c9b933869e9c43dbe847495e57f0d51225399",
+    "ad58a2a92ef7f62fc2be0a3da11b54a9ab2d996a98ffb77ec47d962fd5274923"
+  ],
+  "screen_valid_proposal_hashes": [
+    "aa6b92d371b6512b6276b7f28877a634ea499103f7f282633da007627832e13b",
+    "56ec5780f1cc5b075c5ed6d800ec35f65fa05159ccc18cb4027ddaa195c12d12",
+    "60d6fac91b15b4b718c4e58cef09c44c337c34ca4d4dc5de5d4aad2036b798ee",
+    "f663dcdccd71539ee72871d52fe129f2ed2b3efbb04540bb0d520d71cb9fcce9",
+    "f130ce5bbbbbd5bd8dc9ab5bb6c1e4794ef298ab5628d329f90b8800dbb4734d",
+    "9219db734c40eecb1d5e852a38e696765cd75431634d51c33ad79ea359205681",
+    "126dca716a53c51fd6abd9eaf59ae6427622fc8a5e2fe952601612c5e31d9343",
+    "b8d2db672a31bd83faecea78d259da0da936c85b97b21abe42a2f3e3028e5013",
+    "6932e11b5e9c8f681a95b5bde94bd4931327b261c97a9aea31d8991044478d72",
+    "1de9cd2cc17447efc8640abc25c3d215576dbcddddfdba392520688023fcbeb1",
+    "a7921ee68877032a4422c78ef5953045778784fe7263af39357329e0cf751aa8",
+    "b08b4388fb523bd323d0b555da8d1c29b4d8806661691d0aee7b3eb7c5f1ef01",
+    "99e23009a42042e7e48fa98e274678548c68d7650ecf0f8a8260b65c3a012fbf",
+    "f00cc54ffe368fffeb7b8ccca97fd8f210692b244bcc112d17bcbe3a4ef724a0",
+    "f63490bae4693fc01ff1359edb364d4ca81dd60ac19651cbb09f1732133b8f72",
+    "00c7cc0710577d299a5e911345a2b03da095341f6dde9eea95bd804981dacbb8",
+    "6363de84fc9a99a11377a6be8b4def0551339a3d4b46f8e860832c9da2b3d848",
+    "b7c2e5677c9f561ea8353771a20c9b933869e9c43dbe847495e57f0d51225399"
+  ],
+  "verified_best_hash": "b08b4388fb523bd323d0b555da8d1c29b4d8806661691d0aee7b3eb7c5f1ef01",
+  "verified_best_full": {
+    "combined_score": 187.0119121737523,
+    "certified": 287,
+    "valid": 303,
+    "families": 303,
+    "max_W": "13/7",
+    "per_m_certified": {
+      "9": 141,
+      "10": 146
+    },
+    "per_m": {
+      "9": {
+        "certified": 141,
+        "families": 153,
+        "pct": 92.15686274509804,
+        "boundary": 1,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "13/7",
+        "W_complete": true,
+        "G": "54755131/968398200",
+        "per_k": {
+          "2": [
+            10,
+            17
+          ],
+          "3": [
+            16,
+            17
+          ],
+          "4": [
+            17,
+            17
+          ],
+          "5": [
+            16,
+            17
+          ],
+          "6": [
+            16,
+            17
+          ],
+          "7": [
+            15,
+            17
+          ],
+          "8": [
+            17,
+            17
+          ],
+          "9": [
+            17,
+            17
+          ],
+          "10": [
+            17,
+            17
+          ]
+        }
+      },
+      "10": {
+        "certified": 146,
+        "families": 150,
+        "pct": 97.33333333333333,
+        "boundary": 1,
+        "invalid": 0,
+        "incomplete": 0,
+        "timeouts": 0,
+        "W": "1",
+        "W_complete": true,
+        "G": "31/1950",
+        "per_k": {
+          "2": [
+            12,
+            15
+          ],
+          "3": [
+            15,
+            15
+          ],
+          "4": [
+            15,
+            15
+          ],
+          "5": [
+            14,
+            15
+          ],
+          "6": [
+            15,
+            15
+          ],
+          "7": [
+            15,
+            15
+          ],
+          "8": [
+            15,
+            15
+          ],
+          "9": [
+            15,
+            15
+          ],
+          "10": [
+            15,
+            15
+          ],
+          "11": [
+            15,
+            15
+          ]
+        }
+      }
+    },
+    "trees": 14,
+    "cache_key": "dd23c788a67b9d191c209d14a070ced3dae601de0629102365431e824c408d1c"
+  },
+  "verified_best_screen_score": 176.784358974359,
+  "trusted_status_after": {
+    "ok": true,
+    "changed": [],
+    "missing_from_lock": []
+  },
+  "research_status": "MORE_CERTIFIED",
+  "approved_payload_sha256": "ebac59b347867592b9b2c48a88f6d1c7498197655eb3878d78cd4b54bd6a7ff0",
+  "ledger": "autoresearch/bound-m-c3-260926/broker-ledger-bound-c3.adaevolve-s1.json",
+  "contacts_allowed": 30,
+  "usd_allowed": 13.056177
+}

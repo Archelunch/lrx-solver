@@ -1215,3 +1215,31 @@ m = 9 {0,4} tree with origin (2,1), lhs 4/5).
 - Origin (1,1) on both open m = 12 leaves is refuted by the stored root
   certificates alone; origin (4,1) and deeper is out of reach at m = 12
   (n would exceed the 16-cell packing).
+
+## Session 36: wide tree oracle; both m = 12 middle-band families certified by trees (2026-09-26)
+
+Note `autoresearch/bound-m-260925/MIDBAND-TREES-M12-V2.md`; oracle
+`negcert/tree/lrxtree_wide.c` (5-bit cells, n <= 20; identical minima and
+expansion counts to `lrxtree.c` on all 17 large and 220 small cases;
+binary not committed, build with `build_wide.sh`); trees in
+`checks/midband-trees-m12-v2.json` (v1 file untouched); re-check
+`checks/midband_trees.py --data checks/midband-trees-m12-v2.json`
+(orchestrator re-ran: ALL OK).
+
+- m = 12 {0,5}: CERTIFIED, 6 leaves, lhs (-11, -3, -1, -3, -1, -3),
+  evaluator, audit and replay. m = 12 {0,6}: CERTIFIED, 5 leaves, lhs
+  (-12, -4, -3, -1, -2). m = 11 {0,5}: unchanged. So d(v) <= T_12(n) for
+  every (0^u0, 12..8, 0^u1, 7..1) and (0^u0, 12..7, 0^u1, 6..1), u0, u1 >= 1,
+  conditional on Lemma 1 with refinement and criterion (8) at m = 12.
+- How the open leaves closed: each open stripe leaf split at one point;
+  the tail at origin (3,1) is certified by a stored word with slope
+  beta_0 = 8 < 10 ((111, (8,15)) and (109, (8,13)), lhs -1); the single
+  point states were sorted by suffix re-optimisation with the wide oracle
+  from intermediate states of known words: (0^4, 12..8, 0, 7..1) in 115
+  against T = 118 (v1 best 119) and (0^3, 12..7, 0, 6..1) in 105 against
+  T = 108 (v1 best 109). Both are upper bounds by replay, 3 below T; the
+  v1 reading "search limit, not evidence against the conjecture" was
+  right.
+- Worker stopped by the orchestrator after the note was written (session
+  wind-down); its last run, an m = 11 recount, was killed and is not
+  recorded.

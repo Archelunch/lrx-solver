@@ -1,0 +1,1153 @@
+{
+ "about": "Middle-band trees v2 (MIDBAND-TREES-M12-V2.md): v1 with the open m = 12 leaves split at one point; re-check with checks/midband_trees_v2.py",
+ "families": [
+  {
+   "family": "m11-mask33-labels11.10.9.8.7.6.5.4.3.2.1",
+   "m": 11,
+   "gaps": [
+    0,
+    5
+   ],
+   "labels": [
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "mask": 33,
+   "status": "CERTIFIED",
+   "lhs": [
+    "-11",
+    "-7",
+    "1/2",
+    "2/3"
+   ],
+   "leaves": [
+    {
+     "leaf": 0,
+     "box": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       "inf"
+      ]
+     ],
+     "origins": [
+      1,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 75,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-11",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "XLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXRRXRXRXRXRXLXLXLXLXRXRXRXLXLXRXRR",
+       "weight": "1",
+       "base": 64,
+       "beta": [
+        15,
+        0
+       ],
+       "cost_at_l": "64"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 1,
+     "box": [
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 84,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-7",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+       "weight": "1",
+       "base": 77,
+       "beta": [
+        13,
+        2
+       ],
+       "cost_at_l": "77"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 2,
+     "box": [
+      [
+       3,
+       "inf"
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      3,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 93,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "1/2",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLLXLXLXRRRXLXLXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLXLLXLXLXLX",
+       "weight": "3/4",
+       "base": 95,
+       "beta": [
+        8,
+        13
+       ],
+       "cost_at_l": "95"
+      },
+      {
+       "index": 1,
+       "word": "LLXLXRXRXLXLLXLXRRXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRXRRXLXLXLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXR",
+       "weight": "1/4",
+       "base": 89,
+       "beta": [
+        12,
+        3
+       ],
+       "cost_at_l": "89"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 3,
+     "box": [
+      [
+       2,
+       "inf"
+      ],
+      [
+       2,
+       "inf"
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 93,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "2/3",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "RXLXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXLXRRXLXLLXRX",
+       "weight": "2/3",
+       "base": 91,
+       "beta": [
+        7,
+        10
+       ],
+       "cost_at_l": "101"
+      },
+      {
+       "index": 1,
+       "word": "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+       "weight": "1/3",
+       "base": 77,
+       "beta": [
+        13,
+        2
+       ],
+       "cost_at_l": "79"
+      }
+     ],
+     "given_weights_pass": true
+    }
+   ],
+   "output": {
+    "tree": {
+     "j": 0,
+     "t": 1,
+     "le": {
+      "words": [
+       "XLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXRRXRXRXRXRXLXLXLXLXRXRXRXLXLXRXRR"
+      ],
+      "origins": [
+       1,
+       1
+      ],
+      "picks": [
+       0,
+       0
+      ],
+      "weights": [
+       "1"
+      ]
+     },
+     "ge": {
+      "j": 1,
+      "t": 1,
+      "le": {
+       "j": 0,
+       "t": 2,
+       "le": {
+        "words": [
+         "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX"
+        ],
+        "origins": [
+         2,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ],
+        "weights": [
+         "1"
+        ]
+       },
+       "ge": {
+        "words": [
+         "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLLXLXLXRRRXLXLXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLXLLXLXLXLX",
+         "LLXLXRXRXLXLLXLXRRXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRXRRXLXLXLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXR"
+        ],
+        "origins": [
+         3,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ],
+        "weights": [
+         "3/4",
+         "1/4"
+        ]
+       }
+      },
+      "ge": {
+       "words": [
+        "RXLXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXLXRRXLXLLXRX",
+        "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX"
+       ],
+       "origins": [
+        2,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "weights": [
+        "2/3",
+        "1/3"
+       ]
+      }
+     }
+    },
+    "note": "m=11 zeros in gaps {0,5}: tree certificate, leaves priced by the exact oracle negcert/tree/lrxtree.c"
+   }
+  },
+  {
+   "family": "m12-mask33-labels12.11.10.9.8.7.6.5.4.3.2.1",
+   "m": 12,
+   "gaps": [
+    0,
+    5
+   ],
+   "labels": [
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "mask": 33,
+   "status": "CERTIFIED",
+   "lhs": [
+    "-11",
+    "-3",
+    "-1",
+    "-3",
+    "-1",
+    "-3"
+   ],
+   "leaves": [
+    {
+     "leaf": 0,
+     "box": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       "inf"
+      ]
+     ],
+     "origins": [
+      1,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 88,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-11",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLXLLLXLXLXLXLXLXRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR",
+       "weight": "1",
+       "base": 77,
+       "beta": [
+        16,
+        1
+       ],
+       "cost_at_l": "77"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 1,
+     "box": [
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 98,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-3",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+       "weight": "1",
+       "base": 95,
+       "beta": [
+        12,
+        3
+       ],
+       "cost_at_l": "95"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 2,
+     "box": [
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      3,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 108,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-1",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "LLXRXRXLLLXRXRXLLLXRXRXRXRXLXLLLLXRXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+       "weight": "1",
+       "base": 107,
+       "beta": [
+        12,
+        3
+       ],
+       "cost_at_l": "107"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 3,
+     "box": [
+      [
+       4,
+       4
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      4,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 118,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-3",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "LLLXLXLXLXLXRRXRXRXRXRXLLXLXRXLLXRXRXRXLXLXLLXRXRXRXRXRXRXLXLXLXLXLLLLLLXLXLXLXLXLXRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR",
+       "weight": "1",
+       "base": 115,
+       "beta": [
+        16,
+        1
+       ],
+       "cost_at_l": "115"
+      }
+     ],
+     "given_weights_pass": null
+    },
+    {
+     "leaf": 4,
+     "box": [
+      [
+       5,
+       "inf"
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      3,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 128,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-1",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "RXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRRRRXRRXRXRXLXLXLXLXLXLXLXRXRXRXRXRXRXLXLXLXLXLXRRXRXRXLXLXLXRXRXRXRRRXRXL",
+       "weight": "1",
+       "base": 111,
+       "beta": [
+        8,
+        15
+       ],
+       "cost_at_l": "127"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 5,
+     "box": [
+      [
+       2,
+       "inf"
+      ],
+      [
+       2,
+       "inf"
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 108,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-3",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+       "weight": "1/2",
+       "base": 95,
+       "beta": [
+        12,
+        3
+       ],
+       "cost_at_l": "98"
+      },
+      {
+       "index": 1,
+       "word": "LXRXLLXRXRXRRRXRRXRXRXRRXRXRRXRXRXRXRRXRXRXRXRXRXRXRXLXLXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRR",
+       "weight": "1/2",
+       "base": 105,
+       "beta": [
+        8,
+        7
+       ],
+       "cost_at_l": "112"
+      }
+     ],
+     "given_weights_pass": true
+    }
+   ],
+   "output": {
+    "tree": {
+     "j": 0,
+     "t": 1,
+     "le": {
+      "words": [
+       "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLXLLLXLXLXLXLXLXRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR"
+      ],
+      "origins": [
+       1,
+       1
+      ],
+      "picks": [
+       0,
+       0
+      ],
+      "weights": [
+       "1"
+      ]
+     },
+     "ge": {
+      "j": 1,
+      "t": 1,
+      "le": {
+       "j": 0,
+       "t": 3,
+       "le": {
+        "j": 0,
+        "t": 2,
+        "le": {
+         "words": [
+          "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR"
+         ],
+         "origins": [
+          2,
+          1
+         ],
+         "picks": [
+          0,
+          0
+         ],
+         "weights": [
+          "1"
+         ]
+        },
+        "ge": {
+         "words": [
+          "LLXRXRXLLLXRXRXLLLXRXRXRXRXLXLLLLXRXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR"
+         ],
+         "origins": [
+          3,
+          1
+         ],
+         "picks": [
+          0,
+          0
+         ],
+         "weights": [
+          "1"
+         ]
+        }
+       },
+       "ge": {
+        "j": 0,
+        "t": 4,
+        "le": {
+         "words": [
+          "LLLXLXLXLXLXRRXRXRXRXRXLLXLXRXLLXRXRXRXLXLXLLXRXRXRXRXRXRXLXLXLXLXLLLLLLXLXLXLXLXLXRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR"
+         ],
+         "origins": [
+          4,
+          1
+         ],
+         "picks": [
+          0,
+          0
+         ]
+        },
+        "ge": {
+         "words": [
+          "RXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRRRRXRRXRXRXLXLXLXLXLXLXLXRXRXRXRXRXRXLXLXLXLXLXRRXRXRXLXLXLXRXRXRXRRRXRXL"
+         ],
+         "origins": [
+          3,
+          1
+         ],
+         "picks": [
+          0,
+          0
+         ],
+         "weights": [
+          "1"
+         ]
+        }
+       }
+      },
+      "ge": {
+       "words": [
+        "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+        "LXRXLLXRXRXRRRXRRXRXRXRRXRXRRXRXRXRXRRXRXRXRXRXRXRXRXLXLXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRR"
+       ],
+       "origins": [
+        2,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "weights": [
+        "1/2",
+        "1/2"
+       ]
+      }
+     }
+    },
+    "note": "v1 tree with the open leaf split at u0 = 4 (point leaf and a tail at origin (3,1))"
+   }
+  },
+  {
+   "family": "m12-mask65-labels12.11.10.9.8.7.6.5.4.3.2.1",
+   "m": 12,
+   "gaps": [
+    0,
+    6
+   ],
+   "labels": [
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "mask": 65,
+   "status": "CERTIFIED",
+   "lhs": [
+    "-12",
+    "-4",
+    "-3",
+    "-1",
+    "-2"
+   ],
+   "leaves": [
+    {
+     "leaf": 0,
+     "box": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       "inf"
+      ]
+     ],
+     "origins": [
+      1,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 88,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-12",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "XLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR",
+       "weight": "1",
+       "base": 76,
+       "beta": [
+        18,
+        0
+       ],
+       "cost_at_l": "76"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 1,
+     "box": [
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 98,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-4",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "LXRXLLXRXLLXRXLLXRXLLXRXRRXRXLXLXRXRXRXLXLXLXLLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+       "weight": "1",
+       "base": 94,
+       "beta": [
+        16,
+        2
+       ],
+       "cost_at_l": "94"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 2,
+     "box": [
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      3,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 108,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-3",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "RXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRRRRXRXRXRXLXLXLXLXLXLXRRRXRXRXLXLXLXLXRRXRXLXLXRX",
+       "weight": "1",
+       "base": 105,
+       "beta": [
+        14,
+        3
+       ],
+       "cost_at_l": "105"
+      }
+     ],
+     "given_weights_pass": null
+    },
+    {
+     "leaf": 3,
+     "box": [
+      [
+       4,
+       "inf"
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      3,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 118,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-1",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLXLLXLXLXRRRXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLXLLXLXLXLX",
+       "weight": "1",
+       "base": 109,
+       "beta": [
+        8,
+        13
+       ],
+       "cost_at_l": "117"
+      }
+     ],
+     "given_weights_pass": true
+    },
+    {
+     "leaf": 4,
+     "box": [
+      [
+       2,
+       "inf"
+      ],
+      [
+       2,
+       "inf"
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 108,
+     "status": "CERTIFIED",
+     "gap": "0",
+     "lhs": "-2",
+     "slope_excess": "0",
+     "support": [
+      {
+       "index": 0,
+       "word": "RXLXRRXLXRRRXLXLXLXLXLLLXLXLXLXLLXLXRRXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLLXLXLXLXRX",
+       "weight": "1",
+       "base": 99,
+       "beta": [
+        10,
+        7
+       ],
+       "cost_at_l": "106"
+      }
+     ],
+     "given_weights_pass": true
+    }
+   ],
+   "output": {
+    "tree": {
+     "j": 0,
+     "t": 1,
+     "le": {
+      "words": [
+       "XLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR"
+      ],
+      "origins": [
+       1,
+       1
+      ],
+      "picks": [
+       0,
+       0
+      ],
+      "weights": [
+       "1"
+      ]
+     },
+     "ge": {
+      "j": 1,
+      "t": 1,
+      "le": {
+       "j": 0,
+       "t": 2,
+       "le": {
+        "words": [
+         "LXRXLLXRXLLXRXLLXRXLLXRXRRXRXLXLXRXRXRXLXLXLXLLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX"
+        ],
+        "origins": [
+         2,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ],
+        "weights": [
+         "1"
+        ]
+       },
+       "ge": {
+        "j": 0,
+        "t": 3,
+        "le": {
+         "words": [
+          "RXLXLXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRRRRXRXRXRXLXLXLXLXLXLXRRRXRXRXLXLXLXLXRRXRXLXLXRX"
+         ],
+         "origins": [
+          3,
+          1
+         ],
+         "picks": [
+          0,
+          0
+         ]
+        },
+        "ge": {
+         "words": [
+          "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLXLLXLXLXRRRXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLXLLXLXLXLX"
+         ],
+         "origins": [
+          3,
+          1
+         ],
+         "picks": [
+          0,
+          0
+         ],
+         "weights": [
+          "1"
+         ]
+        }
+       }
+      },
+      "ge": {
+       "words": [
+        "RXLXRRXLXRRRXLXLXLXLXLLLXLXLXLXLLXLXRRXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLLXLXLXLXRX"
+       ],
+       "origins": [
+        2,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "weights": [
+        "1"
+       ]
+      }
+     }
+    },
+    "note": "v1 tree with the open leaf split at u0 = 3 (point leaf and a tail at origin (3,1))"
+   }
+  }
+ ],
+ "refutations": [
+  {
+   "family": "11 {0,5}",
+   "m": 11,
+   "g": 5,
+   "origin": [
+    2,
+    1
+   ],
+   "picks": [
+    0,
+    0
+   ],
+   "box": [
+    [
+     2,
+     "inf"
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "lambda": [
+    "2",
+    "0"
+   ],
+   "W": [
+    1,
+    2,
+    0
+   ],
+   "K": 103,
+   "classes": [
+    [
+     [
+      11,
+      10,
+      9
+     ],
+     [
+      8,
+      7,
+      6
+     ],
+     [
+      5,
+      4,
+      3
+     ],
+     [
+      2,
+      1
+     ]
+    ]
+   ],
+   "expanded": "52824541",
+   "source": "runs/leaf-m11-g5-o21-p00-R-2inf_11-195149.json",
+   "statement": "every accepted sorting word of the refined base (origin [2, 1], picks [0, 0]) has B + 2 beta_0 >= 103 = T(l)+1+lambda.s: no certificate for this leaf with this origin and these picks"
+  },
+  {
+   "family": "11 {0,5}",
+   "m": 11,
+   "g": 5,
+   "origin": [
+    2,
+    1
+   ],
+   "picks": [
+    1,
+    0
+   ],
+   "box": [
+    [
+     2,
+     "inf"
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "lambda": [
+    "2",
+    "0"
+   ],
+   "W": [
+    1,
+    2,
+    0
+   ],
+   "K": 103,
+   "classes": [
+    [
+     [
+      11,
+      10,
+      9
+     ],
+     [
+      8,
+      7,
+      6
+     ],
+     [
+      5,
+      4,
+      3
+     ],
+     [
+      2,
+      1
+     ]
+    ]
+   ],
+   "expanded": "52487139",
+   "source": "runs/leaf-m11-g5-o21-p10-A-191111.json",
+   "statement": "every accepted sorting word of the refined base (origin [2, 1], picks [1, 0]) has B + 2 beta_0 >= 103 = T(l)+1+lambda.s: no certificate for this leaf with this origin and these picks"
+  }
+ ]
+}
