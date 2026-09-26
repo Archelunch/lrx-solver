@@ -830,3 +830,42 @@ no problems); searches in `checks/reversal_midband_search/`.
   m = 14..16. Base binds in every miss. Exact root and (2,1) optima at
   m = 10 unknown (1.5M-node cap); m = 9 origins (1,2), (2,2) hit the cap;
   picks first-atom only.
+
+## Session 24: external independent review of the findings package (2026-09-26)
+
+Two reviewers of the research group (AutoMathLab, review request 2900;
+files in `downloads/lrx-solver-review-2900/`, gitignored: REVIEW.md,
+independent_check.py, receipts) checked `lrx-findings-260926.zip` (sha256
+`04be4d4a...`) and the repository at `defc5c6`, with their own stdlib
+executor and checker, no repository modules, no BFS tables, no API.
+
+Confirmed by them: 393/393 words replay to (1..m,0,0) (the 390 word_G
+unit-block words at m = 9..40 and the three m = 11 words of lengths 74, 75,
+75); 665 stored rows, 852 word executions and 675 exact leaf inequalities
+re-derived from segments with their own Lemma 1 bookkeeping; coverage of
+unique k=2 reversal masks 45/45 at m = 9 and 74/78 at m = 12; the
+campaign-2 finalist table (148/165 vs control 95/165).
+
+Not confirmed by them, correctly: shortestness of words (needs tables);
+the exact radii of (10,2), (11,2), (9,6) and the two-extremal-state count
+(tables not shipped); the single-leaf negative for m = 9 {0,4} (the
+shipped check only re-runs a witness; a refutation needs a portable
+exhaustive oracle with proven completeness or a compact lower-bound
+certificate); the campaigns themselves.
+
+Their corrections, accepted: (1) for even m, word_C is a mixture of two
+words (T-1 with slopes (m-1, m-2) and T+1 with (m-3, m-4), weights 1/2),
+not one word of length T-1 with the required slopes; the summary must say
+so. (2) The engine gain must be stated against the strong seed (129/165 at
+m = 12), so AdaEvolve-s2 adds 19 families, not 53. (3) FINDINGS.md pinned
+`defc5c6` and VERIFY.md `6e56ddf`; one commit must be pinned. (4) The zip
+is not self-contained: the check scripts import `integrations/*.py`, and
+`mb.py` hard-codes an absolute path. (5) Every certificate for all block
+lengths and general m stays conditional on Lemma 1 and criteria (7)/(8);
+finite checks of the formulas do not replace a proof.
+
+Their suggested next step, adopted: close the inductive invariants of
+word_C for both parities and bind the general-m Lemma 1 / (7)/(8)
+separately; keep the architecture "optimizer proposes, data-only checker
+verifies"; measure engine gains against the strong seed at equal budget
+with several repetitions and a frozen new holdout.
