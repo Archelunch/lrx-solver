@@ -895,3 +895,37 @@ not covered: Lemma 1 itself, criterion (7), that the mixture certifies
 (Lemma 1 + criterion (7) applied to these numbers), a = m-1, m, and
 minimality. So the certificate of (m..1){0,m} for all m >= 9 is now
 conditional only on the group's Lemma 1 and criterion (7) at general m.
+
+## Session 26: middle band at m >= 14, word_M closed form on the band ends (2026-09-26)
+
+Note `autoresearch/bound-m-260925/REVERSAL-CARRY.md`; words in
+`checks/reversal-carry-words.json`; re-check `checks/reversal_carry.py`
+(orchestrator re-ran: 59 stored rows CERTIFIED, audit ok, replay ok, 160
+closed-form rows scored by evaluator + audit at m <= 40, 207 by replay +
+criterion (7) at m = 41..60, no problems); searches in
+`checks/reversal_carry_search/`.
+
+- The literal carry-across variant does not reach 2 per crossing: traces
+  show a zero crossed from one side only costs 3 in slope whether the zero
+  walks or the labels are carried, since the cursor must cross it again.
+  What reaches 2 per crossing is a word_C-style zero core at the gap-0
+  zero carrying labels from both sides; the gap-g zero is then crossed from
+  one side at 3. New generator word_K (two cores, one cut per core, side
+  lo or hi); closed form word_M(m, g, side) with parameters by m mod 4.
+- word_M certifies (m..1){0,g} at the root on contiguous runs at both ends
+  of the middle band at every m = 14..60: 1/7 of the band at m = 14, 6/11
+  at m = 24, 12/29 at m = 60; along each run B-T and beta_g rise by 3 per
+  step in g. Rule read off data, not proved. At m = 14..24 the 59
+  certificates are 44 word_M rows plus 13 word_K root mixtures; m = 14..16
+  had none before.
+- Newly certified open leaves: m = 11 {0,4} (root; also certified by the
+  Session 21 tree) and m = 13 {0,5} (root). Still not found: m = 10 {0,5}
+  (best leaf value 2 at u0 = 3, exactly 1 at u0 = 4), m = 11 {0,5}, {0,6},
+  m = 12 {0,5}, {0,6}, m = 13 {0,6}, {0,7}.
+- The middle of the band is not certified; the base binds with slopes
+  feasible everywhere. Minimum base excess at g = m/2: 16, 16, 30, 46, 64,
+  84 at even m = 14..24. Boundary cases with gap 0 and base excess 1:
+  m = 16 {0,10}, 19 {0,8}, 23 {0,14}, 24 {0,10}. Trees at m = 14 {0,8},
+  {0,9} not found (binding strip u1 = 1, u0 >= 3, leaf values 3..4); no
+  trees at m = 15..24. The 3-per-crossing claim is a model backed by
+  traces, not an impossibility proof.

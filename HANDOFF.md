@@ -28,9 +28,12 @@ covers the outer band of k=2 masks (min(g, m-g) <= m/4) at m = 9..80; the
 middle band g near m/2 has no closed form yet and every miss binds on the
 base. Mining the tables (REVERSAL-MIDBAND.md, Session 23) closed every k=2 mask
 at m = 9, gave the first exact negative for a root leaf (m = 9 {0,4}: a
-tree is necessary), and a per-(m,g) generator word_S to m = 13. Next: the
-carry-across variant of word_S (2 per crossing) for m >= 14, the m = 10
-{0,5} leaves u0 = 3, 4, the k=3 class, and the hand proof. Campaign 3 is prepared offline in
+tree is necessary), and a per-(m,g) generator word_S to m = 13. word_M/word_K (REVERSAL-CARRY.md, Session 26)
+certify the band ends at m = 14..60; the band middle (g near m/2) binds on
+the base with excess growing like m^2/8. WORDC-PROOF.md (Session 25)
+proves the word_C formulas; an external review (Session 24) confirmed the
+stored certificates independently. Next: Lemma 1 at general m (audit in
+progress), word_R1 proof, a portable negative certificate, the k=3 class. Campaign 3 is prepared offline in
 `autoresearch/bound-m-c3-260926/` (REPORT-prep.md): tree-contract driver
 `bound_c3.py`, finalize, m-uniform refined-origin seed (dev 283/303,
 validation 157/165, vs 260 and 151 for AdaEvolve-s2 as one leaf), 12 captured
