@@ -929,3 +929,43 @@ criterion (7) at m = 41..60, no problems); searches in
   {0,9} not found (binding strip u1 = 1, u0 >= 3, leaf values 3..4); no
   trees at m = 15..24. The 3-per-crossing claim is a model backed by
   traces, not an impossibility proof.
+
+## Session 27: Lemma 1, (4)-(6), criteria (7) and (8) at general m (2026-09-26)
+
+`autoresearch/LEMMA1-GENERAL-M-260926.md` (about 4,600 words) audits the
+group's manuscript `lrx_multiset_m8_complete.tex` step by step and writes
+general-m proofs. Verdicts: Lemma 1 m-independent as written (the only 8
+is the root, notational; the manuscript proof is a sketch, the note gives
+a full macro-by-macro induction valid for m >= 2); (4)/(5) m-independent
+(triangle inequality gives F_W(z) <= B + sum beta_j z_j for every word;
+same-sign is needed only for equality); refinement (6) and Lemma 2
+m-independent (integer budget only); criterion (7) m-independent with a
+one-line averaging argument the manuscript omits even at m = 8, using only
+that T_m is an integer and T_m(m+r) - T_m(m+r') = (m-2)(r-r'); criterion
+(8) m-independent after replacing 6 by m-2, proof written. Every real use
+of m = 8 is in the finite part (8!(2^9-1) families, resource search,
+tables, four-block data). `lrx_m.py` matches the general-m statements;
+its m=8 defaults are stricter at m' > 8, so conservative.
+
+Table checks (`autoresearch/checks-lemma1/lemma1_tables_check.py`,
+orchestrator re-ran, PASS): 380 (family, word) pairs (300 at m = 9, 60
+at m = 10, 80 refined bases) over tables (9,1)..(9,6), (10,2), (10,3),
+3,806 exact points, 0 violations of d <= F <= affine bound; criterion (7)
+at m = 9 on 146 root-certified families, 1,637 block-length vectors, 0
+violations of d(v(u)) <= T_9(n); manuscript section 8 example reproduced.
+Caveat: d <= F follows from "the lift sorts", so the tables cross-check
+executor, pricing and tables rather than prove the lemma.
+
+LEMMA14 note: refutes lemma (14) of the separate connected-proof
+manuscript (pi = [0,2,4,1,5,3], 41 > 36); the m=8 manuscript says that
+lemma is not used. Not audited yet: Lemmas 3, 4 and formula (11)
+(transfer, projection); certificates using them at m >= 9 stay conditional.
+
+Consequence, stated with care: combining Session 25 (word_C formulas,
+proved) with this session (Lemma 1, (5), (7) at general m, proved), the
+chain "for every m >= 9 and all u0, u1 >= 1, d((0^u0, m, ..., 1, 0^u1)) <=
+T_m(m + u0 + u1)" is now a complete written proof with no conditional
+step, for the odd-m single word and the even-m 1/2-1/2 mixture. Both
+proofs were written by models and mechanically checked; neither has been
+reviewed by a human mathematician. Until that review, the repository
+records it as "proof written, unreviewed", not as a theorem.

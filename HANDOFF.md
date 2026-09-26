@@ -32,8 +32,11 @@ tree is necessary), and a per-(m,g) generator word_S to m = 13. word_M/word_K (R
 certify the band ends at m = 14..60; the band middle (g near m/2) binds on
 the base with excess growing like m^2/8. WORDC-PROOF.md (Session 25)
 proves the word_C formulas; an external review (Session 24) confirmed the
-stored certificates independently. Next: Lemma 1 at general m (audit in
-progress), word_R1 proof, a portable negative certificate, the k=3 class. Campaign 3 is prepared offline in
+stored certificates independently. LEMMA1-GENERAL-M-260926.md (Session 27)
+proves Lemma 1, (4)-(6), (7), (8) at general m, so the (m..1){0,m} bound
+for all m >= 9 is now a complete written proof chain (model-written,
+unreviewed). Next: human review of the two proofs, Lemmas 3/4/(11) audit,
+word_R1 proof, a portable negative certificate, the k=3 class. Campaign 3 is prepared offline in
 `autoresearch/bound-m-c3-260926/` (REPORT-prep.md): tree-contract driver
 `bound_c3.py`, finalize, m-uniform refined-origin seed (dev 283/303,
 validation 157/165, vs 260 and 151 for AdaEvolve-s2 as one leaf), 12 captured
