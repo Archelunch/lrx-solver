@@ -35,8 +35,12 @@ proves the word_C formulas; an external review (Session 24) confirmed the
 stored certificates independently. LEMMA1-GENERAL-M-260926.md (Session 27)
 proves Lemma 1, (4)-(6), (7), (8) at general m, so the (m..1){0,m} bound
 for all m >= 9 is now a complete written proof chain (model-written,
-unreviewed). Next: human review of the two proofs, Lemmas 3/4/(11) audit,
-word_R1 proof, a portable negative certificate, the k=3 class. Campaign 3 is prepared offline in
+unreviewed). WORDR1-PROOF.md (Session 28) and LEMMA34-GENERAL-M (Session 30) extend
+this: (m..1){1,m} is a second complete chain; no m >= 9 certificate uses
+Lemmas 3/4/(11). negcert/ (Session 29) is a portable, table-free checker
+proving no root-leaf certificate for m = 9 {0,4}. Next: human review of
+the four written proofs (LEMMA1 4.1, LEMMA34 4.3, WORDC Lemma E, WORDR1
+Lemma P), package v3, middle-band lower bounds, the k=3 class. Campaign 3 is prepared offline in
 `autoresearch/bound-m-c3-260926/` (REPORT-prep.md): tree-contract driver
 `bound_c3.py`, finalize, m-uniform refined-origin seed (dev 283/303,
 validation 157/165, vs 260 and 151 for AdaEvolve-s2 as one leaf), 12 captured
