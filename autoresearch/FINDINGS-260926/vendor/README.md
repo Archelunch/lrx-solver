@@ -3,13 +3,17 @@
 Plain byte-identical copies of the repository files that `checks/reversal_k2.py`, `checks/reversal_midband.py`,
 `checks/reversal_m13.py`, `checks/reversal_orbit.py` and `checks/reversal_midband_search/mb.py` import. The paths
 below are both the origin path in the repository and the path under this folder. Each copy was checked
-byte-identical to `git show 9c1cf30:<path>` when the package was built; the package is committed at `8e6b8df`,
-which does not change these origin files. The layout mirrors the repository because `integrations/lift_audit.py` locates the m=8 checker at
+byte-identical to `git show 9c1cf30:<path>` when the package was built; the package is committed at `PINNED_COMMIT`,
+which does not change these origin files. All 19 were compared again with `git show f163e74:<path>` for version 3
+and are unchanged. The layout mirrors the repository because `integrations/lift_audit.py` locates the m=8 checker at
 `../autoresearch/verify-m8-260924/checker/lrxm8.py` relative to its own folder.
 
 The closure was found by running each script from a copy outside the repository with `PYTHONPATH` set to this
 folder only and listing every loaded module that came from the repository. numpy is never imported on these paths,
-including `reversal_midband.py --tables`. Nothing here is modified; the only edited file in the package is
+including `reversal_midband.py --tables`. The checks added in version 3 were traced the same way:
+`checks/wordr1_proof_check.py`, `checks/wordg_formula_check.py` and `checks/reversal_carry.py` load only files
+already listed here (plus `checks/reversal_orbit.py`, `reversal_k2.py` and `reversal_m13.py` of the package), and
+`negcert/negcert_check.py` loads nothing from the repository. No file was added. Nothing here is modified; the only edited file in the package is
 `checks/reversal_midband_search/mb.py`, whose table root is now a parameter.
 
 Use: `PYTHONPATH=<package>/vendor python checks/<script>.py`, or `run_checks.sh` / `run_checks.py` at the package

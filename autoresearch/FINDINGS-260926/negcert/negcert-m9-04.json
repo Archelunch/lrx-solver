@@ -1,0 +1,20 @@
+{
+  "family": "reversal (9..1) with zeros in gaps {0,4}, unit base, root leaf",
+  "m": 9,
+  "labels": [9, 8, 7, 6, 5, 4, 3, 2, 1],
+  "mask": 17,
+  "base": [0, 9, 8, 7, 6, 0, 5, 4, 3, 2, 1],
+  "T": 52,
+  "s": 7,
+  "lam": 3,
+  "claim_min": 75,
+  "abstractions": [[[9, 8], [7, 6], [5, 4], [3, 2, 1]]],
+  "witnesses": [
+    {"word": "RXLLLLXLLXLXRRXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXLXRRXLX", "B": 54, "beta": [7, 7],
+     "source": "REVERSAL-MIDBAND.md (exact A* oracle mb.py)"},
+    {"word": "XLXLXRRXLXRXRRRXRXRXRRXLXLXLXLXLXRRXRXLXLXRXRXRX", "B": 48, "beta": [9, 3],
+     "source": "negcert_check.py A* (first optimal word popped)"}
+  ],
+  "consequence": "every accepted sorting word has B + 3 beta_0 >= 75 >= T + 1 + 3 s = 74, so no mixture satisfies Bbar < 53 and betabar_0 <= 7: no root-leaf certificate for m = 9 {0,4}",
+  "assumed": "only the Lemma 1 bookkeeping definitions (integrations/lrx_m.Profile, transcribed in profile_cost)"
+}

@@ -1,8 +1,9 @@
 # LRX Lab: findings for the research group, 2026-09-26
 
-Repository `lrx-lab`, package committed at `8e6b8df` on `main`. FINDINGS.md, VERIFY.md and MANIFEST.md refer to
+Repository `lrx-lab`, package committed at `PINNED_COMMIT` on `main`. FINDINGS.md, VERIFY.md and MANIFEST.md refer to
 that one commit. This package collects what the repository has computed and re-checked in Sessions 10 to 23 of
-`research/claims.md`. Section (h) summarizes the external review of Session 24. Every number below is quoted from a note
+`research/claims.md`. Section (h) summarizes the external review of Session 24, and section (i) gives the proof status after it
+(Sessions 25 to 30). Every number below is quoted from a note
 in this folder, from `CLAIMS-SESSIONS-10-23.md`, from a re-run recorded in `VERIFY.md`, or from the review.
 
 **Attribution.** Lemma 1 (with refinement), the cost formulas (4)-(6), criteria (7) and (8), the reverse trees, the
@@ -38,6 +39,16 @@ computations. It makes no priority claim. **The general conjecture E_r(n) <= T_m
   а не новое математическое понимание.
 - **Внешний review (сессия 24).** Два рецензента группы независимо перепроверили пакет своим stdlib-чекером;
   четыре поправки приняты и внесены (раздел (h)).
+- **Цепочки доказательств (сессии 25-30).** Для (m..1){0,m} и (m..1){1,m} при всех m >= 9 и всех длинах блоков
+  теперь есть полные письменные цепочки: формулы word_C и word_R1 плюс лемма 1 и (7) при общем m. Доказательства
+  написаны моделью, механически проверены на конечных m и человеком пока не проверены. word_G и word_M не доказаны
+  (раздел (i)).
+- **Отрицательный сертификат.** Для m=9 {0,4} есть переносимый stdlib-чекер без таблиц и без модулей репозитория
+  с письменным доказательством полноты: точный минимум B + 3 beta_0 по всем словам равен 75, результат VERIFIED
+  (около 16 с). Рецензенты его ещё не перезапускали.
+- **Аудит леммы 1.** Пошаговый аудит рукописи группы не нашёл зависимости от m=8 в лемме 1, (4)-(6), лемме 2,
+  (7), (8), лемме 3, (11) и лемме 4; все места с m=8 относятся к конечной части. Доказательства при общем m
+  написаны, но не проверены человеком.
 - **Просьбы к группе.** Подтвердить лемму 1 и (7)/(8) при общем m; подсказать четвёртую форму слова для средней
   полосы; оценить осуществимость таблицы (12,2); назвать исключения пакета m=8 (290 и 65+36,888).
 
@@ -143,6 +154,18 @@ m = 5, 6 only. The negative is stated for Lemma 1's pricing. **Status of the sin
 independently confirmed outside this repository (tables not shipped; oracle completeness not independently checked).
 The shipped check without tables re-runs only the witness word, an upper bound on the minimum; the refutation needs
 the lower bound over all words.
+
+**Portable checker for this negative (Session 29).** The m=9 {0,4} negative now has a portable checker,
+`negcert/negcert_check.py` with the certificate `negcert/negcert-m9-04.json` (`negcert/NEGCERT.md`). It uses the
+stdlib only, imports nothing from the repository and reads no tables, so it does check the lower bound over all
+words. Its docstring gives a written completeness argument. It shows that dropping LR, RL and XX never raises the
+cost, and that a 7-context segment accounting is exact for Lemma 1's B and beta. It then builds an in-memory
+abstraction table, verifies its consistency on every node, and runs A*; no Lemma 1 lift bound is used. It finds the
+exact minimum of B + 3 beta_0 over all accepted sorting words of (0,9,8,7,6,0,5,4,3,2,1) to be 75, and prints
+VERIFIED in about 16 s (`VERIFY.md` section 1). A second optimal word has B = 48 and slopes (9,3). `validate_small.py`
+agrees with brute force priced by `lrx_m.Profile` in all 21 cases at m = 3..6. Assumed only: Profile is the group's
+Lemma 1 bookkeeping, and words that swap two zeros are excluded, as Profile excludes them. The checker was run and
+validated by its author and re-run by the orchestrator; the reviewers have not yet re-run it.
 
 **Outer layer (Session 13).** Against the group's outer-layer note: at m=9, r = 1..5, the class of states whose every
 single-label deletion lies in the outer layer holds 93.7 to 95.7 % of all states, by full enumeration. Every class
@@ -659,7 +682,9 @@ campaigns. A third campaign, using the tree contract with a $15 cap, is prepared
    WORDC-PROOF.md for all m >= 3 and 1 <= a <= m-2 (model-written, mechanically checked at m = 9..40, not yet
    reviewed by a human mathematician). That word_C's mixture certifies (m..1){0,m} for all m >= 9 therefore
    depends only on Lemma 1 and criterion (7) at general m.
-5. **Conjecture (word_R1).** word_R1 certifies (m..1){1,m} for all m >= 9.
+5. **word_R1 (no longer a conjecture about the formulas).** Proved in WORDR1-PROOF.md for all m >= 9
+   (model-written, mechanically checked at m = 9..200, not yet reviewed by a human mathematician); the
+   certificate of (m..1){1,m} for all m >= 9 depends only on Lemma 1 and criterion (7) at general m.
 6. **Conjecture (word_G).** word_G certifies (m..1){0,g} for all m >= 9, wherever its rule is defined.
 7. **Conjecture (interior masks).** Every two-zero mask of the reversal with both zeros in gaps 1..m-1 has a root
    certificate among two-core words. Checked at m = 9..12.
@@ -676,8 +701,16 @@ campaigns. A third campaign, using the tree contract with a $15 cap, is prepared
 
 ## (f) Requests to the group
 
-1. **Lemma 1 and criteria (7)/(8) at general m.** Every certificate in section (b) is conditional on them. Is the
-   group's proof m-independent, or is there a counterexample, say at m = 11?
+1. **Review of the written general-m proofs.** Every certificate in section (b) was stated as conditional on Lemma 1
+   and criteria (7)/(8) at general m. The step-by-step audit of the group's manuscript (`LEMMA1-GENERAL-M-260926.md`,
+   `LEMMA34-GENERAL-M-260926.md`) found no dependence on m = 8 in Lemma 1, (4)-(6), Lemma 2, (7), (8), Lemma 3, (11)
+   or Lemma 4; every real use of m = 8 is in the finite part. The general-m proofs are written there, but by a model.
+   We ask the group to review them, and the word proofs of section (i), starting with the steps the auditors flagged:
+   - `LEMMA1-GENERAL-M-260926.md` section 4.1, the macro-by-macro induction for Lemma 1;
+   - `LEMMA34-GENERAL-M-260926.md` section 4.3 items 2-3: the cut is not crossed after lifting, and the insertion
+     form of stretched ranks;
+   - `WORDC-PROOF.md` Lemma E, the segment enumeration and the cz accounting;
+   - `WORDR1-PROOF.md` Lemma P: core_word never makes a partial carry for word_R1.
 2. **A fourth word shape for the middle band.** The E, A, B and two-core shapes fail there because they load the
    gap-0 zero. The split-merge shape word_S works to m = 13, but it walks the gap-0 zero at 3 per crossing. A block-2
    core that carries the small labels across that zero at 2 per crossing, as word_C does, has not been written. Does
@@ -689,8 +722,8 @@ campaigns. A third campaign, using the tree contract with a $15 cap, is prepared
 
 ## (g) Verifying everything offline
 
-`VERIFY.md` has the full recipe. The package is self-contained for its five re-checks, including the mechanical
-check of the word_C proof. From the package root, `sh run_checks.sh` (or `python run_checks.py`) runs them with the
+`VERIFY.md` has the full recipe. The package is self-contained for its nine re-checks, including the mechanical
+checks of the word_C and word_R1 proofs and the portable negative certificate. From the package root, `sh run_checks.sh` (or `python run_checks.py`) runs them with the
 byte-identical copies in `vendor/` only, without the repository, tables or numpy, and prints the expected last lines. Inside the repository, run these from the
 repository root with Python 3.12:
 
@@ -753,7 +786,7 @@ exhaustive oracle with proven completeness or a compact lower-bound certificate;
 2. The engine gain is stated against the strong seed (129/165 at m = 12): AdaEvolve-s2 adds 19 families, and 53 is
    the gain over the hand control. Section (d) now says so.
 3. One commit is pinned: FINDINGS.md had `defc5c6` and VERIFY.md `6e56ddf`. All three documents now name
-   `8e6b8df`.
+   `PINNED_COMMIT`.
 4. The package was not self-contained: the check scripts imported `integrations/*.py` from the repository, and
    `mb.py` hard-coded an absolute path. `vendor/` now holds the import closure, `run_checks.sh` and `run_checks.py`
    run the re-checks from the package alone, and the table root of `mb.py` is a parameter.
@@ -763,3 +796,44 @@ m stays conditional on Lemma 1 and criteria (7)/(8), and that finite checks of t
 Their suggested next steps are adopted: close the inductive invariants of word_C for both parities, bind the general-m
 Lemma 1 and (7)/(8) separately, keep "optimizer proposes, data-only checker verifies", and measure engine gains
 against the strong seed at equal budget with several repetitions and a new frozen holdout.
+
+## (i) Proof status after the review
+
+Sessions 25 to 30 answer the reviewers' request to close the inductive invariants of word_C and to bind Lemma 1
+and (7)/(8) at general m separately. All proofs below were written by models and checked mechanically on finite
+ranges. **None has been reviewed by a human mathematician.** Finite checks validate finite cases only. The general
+conjecture E_r(n) <= T_m(n) for all m >= 8 remains open.
+
+| statement | proof file | mechanical check | status |
+|---|---|---|---|
+| word_C(m, a) sorts the unit base of (m..1){0,m}; length T + 2(a - (m-2)/2)^2 - 1 - (m mod 2)/2 = B; slopes (2a+1, 2a), (4,3) for a = 1 with m even; all m >= 3, 1 <= a <= m-2 (Session 25) | `WORDC-PROOF.md` | `checks/wordc_proof_check.py`: m = 9..40, 720 pairs, 0 mismatches, corollary failures 0 | proof written, unreviewed |
+| word_R1(m) sorts the unit base of (m..1){1,m} with B = length; for m = 4u + rho: rho = 0 gives T-2, (m-4, m-2); rho = 1 gives T-2, (m-5, m-3); rho = 2 gives T, (m-6, m-4); rho = 3 gives T-2, (m-5, m-3); all m >= 9 (Session 28) | `WORDR1-PROOF.md` | `checks/wordr1_proof_check.py`: m = 9..60, 0 mismatches over Lemmas P, A-E, theorem, corollary (the author also ran m = 9..200, 0) | proof written, unreviewed |
+| Lemma 1, (4), (5), refinement (6), Lemma 2, criteria (7) and (8) at general m (Session 27) | `LEMMA1-GENERAL-M-260926.md` | `checks-lemma1/lemma1_tables_check.py` (needs tables): 380 (family, word) pairs, 3,806 exact points, 0 violations; (7) at m = 9 on 146 families and 1,637 block-length vectors, 0 violations | proof written, unreviewed |
+| Lemma 3 with (9), (10), formula (11), Lemma 4, section 7 resource formula at general m (Session 30) | `LEMMA34-GENERAL-M-260926.md` | `checks-lemma1/lemma34_tables_check.py` (needs tables): transfer 540 instances, 4,555 points, 90,923 comparator steps; projection 472 instances, 3,766 points; resource formula 980 zero atoms; 0 violations | proof written, unreviewed; no m >= 9 certificate here uses them |
+| (m..1){0,m}: for every m >= 9 and all u0, u1 >= 1, d((0^u0, m, ..., 1, 0^u1)) <= T_m(m + u0 + u1); odd m by one word, even m by the 1/2-1/2 mixture | `WORDC-PROOF.md` + `LEMMA1-GENERAL-M-260926.md` | the two checks above | complete written proof, model-written, unreviewed |
+| (m..1){1,m}: the same bound for every m >= 9 and every block-length vector | `WORDR1-PROOF.md` + `LEMMA1-GENERAL-M-260926.md` | the two checks above | complete written proof, model-written, unreviewed |
+| No root-leaf certificate for m = 9 {0,4}: min of B + 3 beta_0 over all accepted sorting words is 75, while a root mixture needs < 74 (Session 29) | `negcert/NEGCERT.md`; completeness argument in the docstring of `negcert/negcert_check.py` | `negcert/negcert_check.py negcert/negcert-m9-04.json`: VERIFIED, about 16 s, stdlib only, no tables; `negcert/validate_small.py`: 21 of 21 brute-force cases at m = 3..6 agree | exact negative, portable checker, VERIFIED |
+| word_G(m, g) certifies (m..1){0,g} in the outer band (Session 28) | none; `WORDR1-PROOF.md` section 11 says what a proof needs | `checks/wordg_formula_check.py`: m = 9..80, 1,600 rows, all 28 rule-row hypotheses and C2, C4, C6, C7 hold with 0 exceptions; the coarse C1, C3, C5 fail by design; out of sample at m = 81..120 the 26 nonempty hypotheses hold | conditional: 28 hypotheses, 0 exceptions, unproved |
+| word_M(m, g, side) certifies contiguous runs at both ends of the middle band, m = 14..60 (Session 26) | none; `REVERSAL-CARRY.md` | `checks/reversal_carry.py`: 59 stored certificates; 160 closed-form rows by evaluator and audit at m <= 40; 207 by replay and criterion (7) at m = 41..60; no problems | conditional: rule read off data, unproved |
+
+**What the two chains say.** Combining the word_C proof with the general-m Lemma 1, (5) and (7) gives a written
+proof with no conditional step of the bound for every block length of (m..1){0,m}, every m >= 9. The word_R1 proof
+does the same for (m..1){1,m}. The repository records both as "proof written, unreviewed", not as theorems, until a
+human mathematician has reviewed them.
+
+**What the Lemma 1 audit found.** The only 8 in Lemma 1 is the root, which is notational. The manuscript proof of
+Lemma 1 is a sketch; the note gives a full induction valid for m >= 2. The upper bound (5) holds for every word by the
+triangle inequality; same-sign is needed only for equality. Criterion (7) follows by a one-line averaging argument that
+the manuscript omits even at m = 8. Criterion (8) holds after replacing 6 by m-2. `lrx_m.py` matches the general-m
+statements, and its m=8 defaults are stricter at m > 8, so they are conservative. Sections 5 and 6 of the manuscript
+contain no m-dependent constant. No m >= 9 certificate in this repository uses Lemma 3, Lemma 4 or (11); they
+matter for the m = 8 package, whose uses now have written proofs.
+
+**Steps most worth a human reader's attention**, as flagged by the auditors: `LEMMA1-GENERAL-M-260926.md` section 4.1
+(the induction), `LEMMA34-GENERAL-M-260926.md` section 4.3 items 2-3, `WORDC-PROOF.md` Lemma E, and `WORDR1-PROOF.md`
+Lemma P.
+
+**What is still not proved.** word_G and word_M are finite-range rules read off data. A proof of word_G needs a
+partial-carry version of the sweep lemma, since 1,509 of 1,600 words have a partial core-1 carry. The middle of the
+band stays open, apart from the families listed in section (b) and `REVERSAL-CARRY.md`. The radii, extremal
+counts and T-1 distances of section (a) still rest on tables that are not shipped.

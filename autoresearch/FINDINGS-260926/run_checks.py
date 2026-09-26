@@ -1,4 +1,4 @@
-"""Run the five re-checks of this findings package with the vendored modules only (stdlib, no numpy, no tables).
+"""Run the nine re-checks of this findings package with the vendored modules only (stdlib, no numpy, no tables).
 
     python run_checks.py
 
@@ -6,7 +6,11 @@ Same steps as run_checks.sh, for systems without a POSIX shell. PYTHONPATH is re
 1. checks/reversal_k2.py         re-checks 390 word_G rows and 150 stored rows
 2. checks/reversal_midband.py    re-checks 14 middle-band certificates and the m=9 {0,4} witness (no tables)
 3. checks/wordc_proof_check.py   checks every claim of WORDC-PROOF.md against literal word_C at m=9..40 (720 pairs)
-4. checks/reversal_m13.py and checks/reversal_orbit.py rebuild their JSON on a temporary copy of checks/ (both
+4. checks/wordr1_proof_check.py  checks every claim of WORDR1-PROOF.md against literal word_R1 at m=9..60
+5. checks/wordg_formula_check.py tests the 28 word_G rule-row hypotheses and C1-C7 at m=9..80 (C1, C3, C5 fail by design)
+6. checks/reversal_carry.py      re-checks the 59 stored carry-across certificates and the word_M closed form to m=60
+7. negcert/negcert_check.py      portable negative certificate for m=9 {0,4}; run with -I (stdlib only, about 16 s)
+8-9. checks/reversal_m13.py and checks/reversal_orbit.py rebuild their JSON on a temporary copy of checks/ (both
    refuse to overwrite), then the rebuilt JSON is compared with the stored JSON, ignoring only 'seconds'.
 Exit status 0 only if every step passes.
 """
@@ -23,10 +27,11 @@ ENV = dict(os.environ, PYTHONPATH=str(PKG / 'vendor'), PYTHONDONTWRITEBYTECODE='
 REBUILT = ['reversal-m13-words.json', 'reversal-orbit-words.json']
 
 
-def run(script, cwd, tail, need):
+def run(script, cwd, tail, need, *args, flags=()):
     """Run one script with the vendored PYTHONPATH; pass if exit 0 and `need` is in its last output line."""
-    print('$ python %s' % script, flush=True)
-    p = subprocess.run([sys.executable, str(script)], cwd=cwd, env=ENV, capture_output=True, text=True)
+    print('$ python %s' % ' '.join([*flags, str(script), *args]), flush=True)
+    p = subprocess.run([sys.executable, *flags, str(script), *args], cwd=cwd, env=ENV, capture_output=True,
+                       text=True)
     out = (p.stdout + p.stderr).rstrip().splitlines()
     for line in out[-tail:]:
         print('  ' + line)
@@ -40,6 +45,11 @@ def main():
     ok = run(PKG / 'checks' / 'reversal_k2.py', PKG, 1, 'problems: none')
     ok &= run(PKG / 'checks' / 'reversal_midband.py', PKG, 2, 'problems: none')
     ok &= run(PKG / 'checks' / 'wordc_proof_check.py', PKG, 3, 'corollary failures: 0 []')
+    ok &= run(PKG / 'checks' / 'wordr1_proof_check.py', PKG, 2, 'mismatches (Lemmas P, A-E, theorem, corollary): 0')
+    ok &= run(PKG / 'checks' / 'wordg_formula_check.py', PKG, 3, 'n=1600 exceptions=0')
+    ok &= run(PKG / 'checks' / 'reversal_carry.py', PKG, 2, 'problems: none')
+    ok &= run(Path('negcert') / 'negcert_check.py', PKG, 3, 'VERIFIED', str(Path('negcert') / 'negcert-m9-04.json'),
+              flags=('-I',))
     with tempfile.TemporaryDirectory() as w:
         work = Path(w) / 'a' / 'b' / 'checks'
         shutil.copytree(PKG / 'checks', work)
@@ -63,6 +73,16 @@ expected last lines (timings vary):
   m = 9..40, pairs (m, a) with 1 <= a <= m-2: 720
   mismatches (Lemmas A-E, theorem): 0
   corollary failures: 0 []
+  m = 9..60: 52 values of m
+  mismatches (Lemmas P, A-E, theorem, corollary): 0
+  C5 beta_0 = m-2 on every row  n=1600 exceptions=107 [...]   (coarse on purpose; C1, C3, C5 are expected to fail)
+  C6 B = length (Lemma 1 base equals the word length)  n=1600 exceptions=0
+  C7 B <= T and beta_0, beta_1 <= m-2 (criterion (7) numbers, weight 1)  n=1600 exceptions=0
+  closed form: 160 rows scored by evaluator + audit (m <= 40), 207 rows by replay + criterion (7)
+  problems: none
+  root mixture needs Bbar < T+1 = 53 and betabar_0 <= s = 7, ...: NO ROOT-LEAF CERTIFICATE
+  total 16.5 s
+  VERIFIED
   closed forms m=9..200 failures: []
   wrote a/b/checks/reversal-m13-words.json 2.2 s
   wrote a/b/checks/reversal-orbit-words.json 2.4 s
