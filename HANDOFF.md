@@ -20,8 +20,11 @@ word_A/word_B/word_E certify the family (m..1){0,m} at m = 9..12 and fail
 from m = 13 (REVERSAL-WORDS.md, Session 19); the two-core word_C(m, a)
 then certifies it at every m = 9..40 with closed-form length T-1 and slopes
 (m-2, m-3), audit agreeing (REVERSAL-M13.md, Session 20): first m-uniform
-closed-form certificate family here. Next: extend two-core words to the
-rest of the reversal orbit and write the hand proof of the closed forms. Campaign 3 is prepared offline in
+closed-form certificate family here. Extending to the orbit (REVERSAL-ORBIT.md,
+Session 21): a second closed form word_R1 for gaps {1,m} at m = 9..40, 111
+families certified and re-verified, 10 of the 14 m=12 all-arm misses now
+certified; the remaining misses bind on the base. Next: closed forms in the
+gap parameter for all k=2 masks, the k=3 class, and the hand proof. Campaign 3 is prepared offline in
 `autoresearch/bound-m-c3-260926/` (REPORT-prep.md): tree-contract driver
 `bound_c3.py`, finalize, m-uniform refined-origin seed (dev 283/303,
 validation 157/165, vs 260 and 151 for AdaEvolve-s2 as one leaf), 12 captured

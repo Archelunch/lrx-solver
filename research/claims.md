@@ -708,3 +708,45 @@ repository. Scope and conditionality: one family only; conditional on the
 group's Lemma 1 and criterion (7) at general m; evaluator and audit ran to
 m = 40, replay only beyond. Conjecture: the certificate holds for all
 m >= 9 (a hand proof needs only the two closed forms above).
+
+## Session 21: reversal orbit, 111 certified families and a second closed form (2026-09-26)
+
+Note `autoresearch/bound-m-260925/REVERSAL-ORBIT.md`; words, trees and
+search scripts in `checks/reversal_orbit.py`, `checks/reversal-orbit-words.json`,
+`checks/reversal_orbit_search/`. Generic insertion-core generator
+core_word(state, t, cores, fin) (two cores grown by partial carries, zeros
+tied), full enumeration, Pareto front on (base, slopes), then the exact
+leaf LP at the root or in a memoized tree search (depth <= 3, thresholds
+<= 5, refined origins). The orchestrator re-ran every stored row through
+bound-eval-3, the independent audit and literal replay: 111/111 agree.
+
+- Second closed form: word_R1(m) = core_word(state, (m-3)//4, [(0, m//2,
+  'l'), (m//2+1, None, 'r' if m%4==1 else 'l')], 'R') certifies the
+  reversal with zeros in gaps {1,m} (the mask-4098 type, gap 3 in every
+  campaign-2 arm) with one word of length T-2 (T when m = 2 mod 4) and
+  slopes <= m-2; CERTIFIED and audited at m = 9..40 (orchestrator re-ran
+  all 32), replay and criterion (7) to m = 200 (worker).
+- Reversal with zeros in gaps {0,4}: CERTIFIED at m = 10..16 (two-leaf
+  trees at m = 10, 11; root leaf at m = 12..16); not at m = 9.
+- All two-zero masks of the reversal: m = 9 42/45, m = 10 53/55 certified.
+  Misses: m = 9 {0,4}, {0,5}, {5,9}; m = 10 {0,5}, {0,6}. The m = 11..16
+  survey was not run.
+- Of the 14 m = 12 families every campaign-2 arm missed: 10 CERTIFIED
+  (masks 4097, 4098, 2064, 4113, 1060 by a two-leaf tree, 1089, 4370,
+  5252, 165, 4592); 130 (near_rev) and 7300 not certified; 6309 and 3534
+  not completed (CPU). Of the m = 11 misses: 145 CERTIFIED; 1056 and 2456
+  not; 3685 not completed.
+- Every miss binds on the base, not the slopes: slopes <= m-2 are feasible
+  at the root and the minimum base excess over T is 7/3, 4, 1 (m = 9),
+  17/4, 4 (m = 10), 74/15 (mask 130), about 5.41 (7300), 2 (1056), 9/2
+  (2456). The trees tried did not close them.
+- Hand-proof sketch (REVERSAL-ORBIT.md section 4, labelled a sketch) of
+  the word_C closed forms: len = (a^2+3a-1) + ((r-1)^2+r-2) + W0 +
+  floor(a/2) with r = m-a and W0 = r/2+1 (r even), (r+3)/2 (a, r odd),
+  (r+1)/2 (a even, r odd), giving len - T = 2(a-(m-2)/2)^2 - 1 - (m mod 2)/2
+  for 1 <= a <= m-2; slopes (2a+1, 2a) from 2 per zero per carried label
+  with cursor-crossing terms cancelling inside sweeps (exception a = 1, m
+  even: (4,3)). Numerically checked m = 5..60.
+
+Per-m rows other than word_C and word_R1 are search outputs, not formulas.
+Conditional on the group's Lemma 1 and criteria (7)/(8) at general m.
