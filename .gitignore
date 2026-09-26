@@ -8,7 +8,8 @@ dist/
 .pytest_cache/
 .ruff_cache/
 .env
-.claude/
+.claude/*
+!.claude/skills/
 .DS_Store
 runs/
 datasets/generated/
