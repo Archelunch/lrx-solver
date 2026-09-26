@@ -665,7 +665,7 @@ def kill_check(camp=CAMP, seed=1, first=15, jobs=8) -> dict:
             res = B3.evaluate(src, fams, jobs=jobs, cache_dir=ROOT / cc["eval_cache"])
             if best is None or res["certified"] > best["certified"]:
                 best = {"candidate_hash": h, "certified": res["certified"], "max_W": res["max_W"]}
-        out["arms"][arm] = {"run": str(runs[-1].parent.relative_to(ROOT)), "status": m.get("status"),
+        out["arms"][arm] = {"run": str(runs[-1].parent.resolve().relative_to(ROOT.resolve())), "status": m.get("status"),
                             "accepted_in_window": sum(h in accepted for h in distinct), "best": best,
                             "beats_seed": bool(best and best["certified"] > seed_val)}
     out["stop"] = not any(a.get("beats_seed") for a in out["arms"].values())
