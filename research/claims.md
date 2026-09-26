@@ -1105,3 +1105,44 @@ two-core pool, unit origins, no trees. Interior mask: all zeros in gaps
   at 3 per label crossed, base slack -3 to -21 lets the LP balance
   slopes); I2, at k >= 4 evenly spread masks have no root certificate in
   this pool (cheap support words have slope sums at or above k(m-2)).
+
+## Session 33: exact column generation on the middle band; correction of earlier "base excess" figures (2026-09-26)
+
+Note `autoresearch/bound-m-260925/MIDBAND-LOWERBOUND.md`; code and
+certificates under `negcert/` (`negcert_general.py`: two weighted zeros,
+integer multipliers, proves a lower bound by pruning at the claimed value;
+selftest passes, matches `lrx_m.Profile` on 1,100 words, reproduces the
+m = 9 {0,4} value 75, rejects a false claim). The exact oracle used as the
+pricing step of column generation settles each instance as a certificate
+or an exact refutation.
+
+- m = 10 {0,5}: CERTIFIED at the root, lhs 1/2 (three oracle words with
+  weights 1/4, 1/2, 1/4: Bbar = 127/2, slopes (8,8); exact root LP value
+  127/2). m = 11 {0,6}: CERTIFIED at the root, lhs -1 (two words, 1/2
+  each: Bbar = 74, slopes (9,7); exact LP 74). Orchestrator re-ran
+  `midband_positive_check.py`: evaluator CERTIFIED, audit ok, replay ok.
+- m = 11 {0,5}: NO ROOT-LEAF CERTIFICATE. Every accepted sorting word has
+  5B + 13 beta_0 >= 497, exactly the refutation threshold (exact minimum
+  bracketed in [497, 511]). First exact root impossibility above m = 9.
+  Orchestrator re-ran from an isolated copy with `python -I`: VERIFIED in
+  723 s. The LP-value certificates for the two positives also verify in
+  isolation (136 s, 577 s).
+- Out of reach in pure Python: m = 12 {0,5}, {0,6}, m = 13 {0,6}, {0,7},
+  m = 14 {0,7}, {0,8}, {0,9} (best m = 12 {0,6}: 277 of the 307 needed
+  after 25M expansions, 17 min, 8.4 GB; the m = 12 abstraction would need
+  about 67M vectors).
+- Exact root LP for every gap at m = 5..10: root impossible at m = 7
+  {0,3}, 8 {0,4}, 9 {0,4} and (m = 11) {0,5}; certifiable everywhere else
+  computed. Proved for all m: the two gap zeros' slopes sum to at least
+  2 min(g, m-g), which never binds in the band. Conjectures (data only):
+  for odd m the gap (m-1)/2 root is impossible (m = 7, 9, 11);
+  even-centre roots are certifiable from m = 10; away from the odd centre
+  the root LP excess is at most 1/2.
+
+Correction to Sessions 23 and 26: the "minimum base excess" figures there
+(e.g. 9/5 at m = 10 {0,5}, 4/3 at m = 11 {0,6}, and 16..84 at even
+m = 14..24) are excesses over the restricted generator pools, not exact
+lower bounds; the exact values at m = 10 {0,5} and m = 11 {0,6} are 1/2
+and -1 (certified). "The base binds in the middle band" is therefore a
+statement about the pools, not about the families; the exact status of
+the band at m >= 12 is open.

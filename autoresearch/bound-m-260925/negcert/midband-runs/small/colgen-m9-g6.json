@@ -1,0 +1,178 @@
+{
+ "m": 9,
+ "g": 6,
+ "T": 52,
+ "s": 7,
+ "mode": "exact",
+ "classes": [
+  [
+   [
+    9,
+    8,
+    7
+   ],
+   [
+    6,
+    5,
+    4
+   ],
+   [
+    3,
+    2,
+    1
+   ]
+  ]
+ ],
+ "pool": [
+  [
+   45,
+   12,
+   2
+  ],
+  [
+   51,
+   6,
+   6
+  ],
+  [
+   45,
+   10,
+   0
+  ],
+  [
+   48,
+   7,
+   1
+  ]
+ ],
+ "words": [
+  "LLXLXLXRRXLXRXRXLXLXLXLLXLXLXLXLXRXRXRXLXLXRX",
+  "RXLXRXRXRRXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLLXLLXLX",
+  "LXLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXRRXRXRXLXLXRX",
+  "RXRRXLXLXLLLXLXLXLXRRXRXLXLXRXRXRXLXLXLXLXLLLXLX"
+ ],
+ "oracle_calls": [
+  {
+   "lambda": [
+    "0",
+    "0"
+   ],
+   "W": [
+    1,
+    0,
+    0
+   ],
+   "K": null,
+   "start_bound": 34,
+   "table_s": 0.8,
+   "F": 45,
+   "word": "LLXLXLXRRXLXRXRXLXLXLXLLXLXLXLXLXRXRXRXLXLXRX",
+   "expansions": 431646,
+   "stored": 691805,
+   "search_s": 1.4,
+   "B": 45,
+   "beta": [
+    12,
+    2
+   ]
+  },
+  {
+   "lambda": [
+    "3",
+    "0"
+   ],
+   "W": [
+    1,
+    3,
+    0
+   ],
+   "K": null,
+   "start_bound": 58,
+   "table_s": 3.9,
+   "F": 69,
+   "word": "RXLXRXRXRRXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLLXLLXLX",
+   "expansions": 447671,
+   "stored": 698183,
+   "search_s": 2.0,
+   "B": 51,
+   "beta": [
+    6,
+    6
+   ]
+  },
+  {
+   "lambda": [
+    "0",
+    "3"
+   ],
+   "W": [
+    1,
+    0,
+    3
+   ],
+   "K": null,
+   "start_bound": 34,
+   "table_s": 4.4,
+   "F": 45,
+   "word": "LXLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXRRXRXRXLXLXRX",
+   "expansions": 123192,
+   "stored": 193120,
+   "search_s": 0.4,
+   "B": 45,
+   "beta": [
+    10,
+    0
+   ]
+  },
+  {
+   "lambda": [
+    "3/2",
+    "0"
+   ],
+   "W": [
+    2,
+    3,
+    0
+   ],
+   "K": 120,
+   "start_bound": 95,
+   "table_s": 4.5,
+   "F": 117,
+   "word": "RXRRXLXLXLLLXLXLXLXRRXRXLXLXRXRXRXLXLXLXLXLLLXLX",
+   "expansions": 345917,
+   "stored": 391826,
+   "search_s": 1.3,
+   "B": 48,
+   "beta": [
+    7,
+    1
+   ]
+  },
+  {
+   "lambda": [
+    "1",
+    "0"
+   ],
+   "W": [
+    1,
+    1,
+    0
+   ],
+   "K": 55,
+   "start_bound": 44,
+   "table_s": 4.7,
+   "F": null,
+   "word": null,
+   "expansions": 306288,
+   "stored": 306288,
+   "search_s": 1.1
+  }
+ ],
+ "verdict": [
+  "EXACT LP",
+  "48",
+  "certifiable",
+  "1",
+  "0"
+ ]
+}

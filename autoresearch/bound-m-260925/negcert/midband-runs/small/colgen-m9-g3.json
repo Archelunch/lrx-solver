@@ -1,0 +1,196 @@
+{
+ "m": 9,
+ "g": 3,
+ "T": 52,
+ "s": 7,
+ "mode": "exact",
+ "classes": [
+  [
+   [
+    9,
+    8,
+    7
+   ],
+   [
+    6,
+    5,
+    4
+   ],
+   [
+    3,
+    2,
+    1
+   ]
+  ]
+ ],
+ "pool": [
+  [
+   45,
+   9,
+   0
+  ],
+  [
+   86,
+   0,
+   9
+  ],
+  [
+   57,
+   5,
+   4
+  ]
+ ],
+ "words": [
+  "XLXLXRRXLXRXRRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+  "RRRRRXRXRRXRXRXLXLXLXLXLXLXLXLXRRXRXRXRXRXRXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXLXRXRXRXRX",
+  "XRRRRXRXRXRRXRRXRXRRRXRXRXRXRXLXLXLXLXLXRRXRXLXLXRXRXRXRX"
+ ],
+ "oracle_calls": [
+  {
+   "lambda": [
+    "0",
+    "0"
+   ],
+   "W": [
+    1,
+    0,
+    0
+   ],
+   "K": null,
+   "start_bound": 33,
+   "table_s": 0.5,
+   "F": 45,
+   "word": "XLXLXRRXLXRXRRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+   "expansions": 555416,
+   "stored": 857483,
+   "search_s": 1.5,
+   "B": 45,
+   "beta": [
+    9,
+    0
+   ]
+  },
+  {
+   "lambda": [
+    "3",
+    "0"
+   ],
+   "W": [
+    1,
+    3,
+    0
+   ],
+   "K": null,
+   "start_bound": 61,
+   "table_s": 3.2,
+   "F": 72,
+   "word": "XLXLXRRXLXRXRRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+   "expansions": 801434,
+   "stored": 1256160,
+   "search_s": 2.2,
+   "B": 45,
+   "beta": [
+    9,
+    0
+   ]
+  },
+  {
+   "lambda": [
+    "0",
+    "3"
+   ],
+   "W": [
+    1,
+    0,
+    3
+   ],
+   "K": null,
+   "start_bound": 34,
+   "table_s": 3.3,
+   "F": 45,
+   "word": "XLXLXRRXLXRXRRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+   "expansions": 157574,
+   "stored": 239847,
+   "search_s": 0.3,
+   "B": 45,
+   "beta": [
+    9,
+    0
+   ]
+  },
+  {
+   "lambda": [
+    "12",
+    "0"
+   ],
+   "W": [
+    1,
+    12,
+    0
+   ],
+   "K": 153,
+   "start_bound": 75,
+   "table_s": 3.3,
+   "F": 86,
+   "word": "RRRRRXRXRRXRXRXLXLXLXLXLXLXLXLXRRXRXRXRXRXRXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXLXRXRXRXRX",
+   "expansions": 3700414,
+   "stored": 5545508,
+   "search_s": 12.7,
+   "B": 86,
+   "beta": [
+    0,
+    9
+   ]
+  },
+  {
+   "lambda": [
+    "41/9",
+    "0"
+   ],
+   "W": [
+    9,
+    41,
+    0
+   ],
+   "K": 774,
+   "start_bound": 619,
+   "table_s": 3.3,
+   "F": 718,
+   "word": "XRRRRXRXRXRRXRRXRXRRRXRXRXRXRXLXLXLXLXLXRRXRXLXLXRXRXRXRX",
+   "expansions": 952829,
+   "stored": 1496047,
+   "search_s": 2.9,
+   "B": 57,
+   "beta": [
+    5,
+    4
+   ]
+  },
+  {
+   "lambda": [
+    "3",
+    "0"
+   ],
+   "W": [
+    1,
+    3,
+    0
+   ],
+   "K": 72,
+   "start_bound": 61,
+   "table_s": 3.3,
+   "F": null,
+   "word": null,
+   "expansions": 519116,
+   "stored": 519116,
+   "search_s": 1.2
+  }
+ ],
+ "verdict": [
+  "EXACT LP",
+  "51",
+  "certifiable",
+  "3",
+  "0"
+ ]
+}

@@ -42,8 +42,11 @@ proving no root-leaf certificate for m = 9 {0,4}. Package v3 (pinned f99d129) sh
 it self-contained. k=3 class surveyed (Session 31: 455 certificates,
 word_W band); interior masks (Session 32): every k=2, 3 interior mask
 certifies at the root, k=4 wide masks are the first slope-bound misses.
-Exact column generation with the negcert oracle (in progress) certified
-m = 10 {0,5} at the root. Next: human review of the four written proofs
+Exact column generation with the negcert oracle (Session 33) certified
+m = 10 {0,5} and m = 11 {0,6} at the root and refuted m = 11 {0,5}
+exactly; the earlier pool-based "base excess" figures are not lower
+bounds. Campaign 3 launched 2026-09-26 13:29 local (approved hash
+ebac59b3..., first-prompt guard matched, about $0.03 per call). Next: human review of the four written proofs
 (LEMMA1 4.1, LEMMA34 4.3, WORDC Lemma E, WORDR1 Lemma P); column
 generation on every remaining miss (each ends in a certificate or an
 exact refutation); campaign 3 on the tree contract awaits approval. Campaign 3 is prepared offline in

@@ -1,0 +1,147 @@
+{
+ "m": 11,
+ "g": 5,
+ "T": 75,
+ "s": 9,
+ "mode": "refute",
+ "classes": [
+  [
+   [
+    11,
+    10,
+    9,
+    8
+   ],
+   [
+    7,
+    6,
+    5,
+    4
+   ],
+   [
+    3,
+    2,
+    1
+   ]
+  ]
+ ],
+ "pool": [
+  [
+   64,
+   15,
+   0
+  ],
+  [
+   71,
+   12,
+   3
+  ],
+  [
+   77,
+   10,
+   7
+  ],
+  [
+   78,
+   11,
+   6
+  ],
+  [
+   80,
+   9,
+   6
+  ],
+  [
+   84,
+   7,
+   10
+  ],
+  [
+   85,
+   8,
+   9
+  ]
+ ],
+ "words": [
+  "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+  "LXLXRXRXLXLXLXRXRXRXRRRRRXRXLXLXRXRXLLLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX",
+  "RXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRX",
+  "RXLLLLXLXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRRRRXLXRXLLXRXRXLLLXRXRX",
+  "LXRXLXLXRXRXRRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX",
+  "RXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRX",
+  "RRXLXRXRXLXLXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRRR"
+ ],
+ "oracle_calls": [
+  {
+   "lambda": [
+    "13/5",
+    "0"
+   ],
+   "W": [
+    5,
+    13,
+    0
+   ],
+   "K": 497,
+   "weighted_astar": 3.0,
+   "expansions": 3000000,
+   "F": null,
+   "search_s": 9.0,
+   "word": null
+  },
+  {
+   "lambda": [
+    "13/5",
+    "0"
+   ],
+   "W": [
+    5,
+    13,
+    0
+   ],
+   "K": 497,
+   "weighted_astar": 2.0,
+   "expansions": 3000000,
+   "F": null,
+   "search_s": 10.3,
+   "word": null
+  },
+  {
+   "lambda": [
+    "13/5",
+    "0"
+   ],
+   "W": [
+    5,
+    13,
+    0
+   ],
+   "K": 497,
+   "weighted_astar": 1.5,
+   "expansions": 3000000,
+   "F": null,
+   "search_s": 11.8,
+   "word": null
+  },
+  {
+   "lambda": [
+    "13/5",
+    "0"
+   ],
+   "W": [
+    5,
+    13,
+    0
+   ],
+   "K": 497,
+   "start_bound": 394,
+   "table_s": 35.8,
+   "F": "INCOMPLETE",
+   "search_s": 54.6
+  }
+ ],
+ "verdict": [
+  "INCOMPLETE (node cap)",
+  "(Fraction(394, 5), Fraction(13, 5), Fraction(0, 1))"
+ ]
+}

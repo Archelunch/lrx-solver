@@ -1,0 +1,118 @@
+{
+ "m": 11,
+ "g": 5,
+ "T": 75,
+ "s": 9,
+ "mode": "refute",
+ "classes": [
+  [
+   [
+    11,
+    10,
+    9
+   ],
+   [
+    8,
+    7,
+    6
+   ],
+   [
+    5,
+    4,
+    3
+   ],
+   [
+    2,
+    1
+   ]
+  ]
+ ],
+ "pool": [
+  [
+   64,
+   15,
+   0
+  ],
+  [
+   71,
+   12,
+   3
+  ],
+  [
+   77,
+   10,
+   7
+  ],
+  [
+   78,
+   11,
+   6
+  ],
+  [
+   80,
+   9,
+   6
+  ],
+  [
+   84,
+   7,
+   10
+  ],
+  [
+   85,
+   8,
+   9
+  ]
+ ],
+ "words": [
+  "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+  "LXLXRXRXLXLXLXRXRXRXRRRRRXRXLXLXRXRXLLLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX",
+  "RXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRX",
+  "RXLLLLXLXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRRRRXLXRXLLXRXRXLLLXRXRX",
+  "LXRXLXLXRXRXRRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRXRRXLXLXLXLXLXLXLXRXRXRXRXRXRX",
+  "RXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRX",
+  "RRXLXRXRXLXLXLLLLLXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRRR"
+ ],
+ "oracle_calls": [
+  {
+   "lambda": [
+    "13/5",
+    "0"
+   ],
+   "W": [
+    5,
+    13,
+    0
+   ],
+   "K": 497,
+   "start_bound": 431,
+   "table_s": 477.3,
+   "F": null,
+   "word": null,
+   "expansions": 23907926,
+   "stored": 23907926,
+   "search_s": 229.1
+  },
+  {
+   "lambda": [
+    "13/5",
+    "0"
+   ],
+   "W": [
+    5,
+    13,
+    0
+   ],
+   "K": null,
+   "start_bound": 431,
+   "table_s": 382.7,
+   "F": "INCOMPLETE",
+   "search_s": 435.9
+  }
+ ],
+ "verdict": [
+  "REFUTED",
+  "13/5",
+  "0"
+ ]
+}

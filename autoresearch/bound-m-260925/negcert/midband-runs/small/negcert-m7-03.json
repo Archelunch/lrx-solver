@@ -1,0 +1,86 @@
+{
+ "family": "reversal (7..1) with zeros in gaps {0,3}, unit base, root leaf",
+ "m": 7,
+ "labels": [
+  7,
+  6,
+  5,
+  4,
+  3,
+  2,
+  1
+ ],
+ "mask": 9,
+ "base": [
+  0,
+  7,
+  6,
+  5,
+  0,
+  4,
+  3,
+  2,
+  1
+ ],
+ "T": 33,
+ "s": 5,
+ "weights": [
+  1,
+  3,
+  0
+ ],
+ "lambda": [
+  "3",
+  "0"
+ ],
+ "claim_min": 49,
+ "exact": true,
+ "refutation_threshold": 49,
+ "kind": "root",
+ "abstractions": [
+  [
+   [
+    7,
+    6,
+    5
+   ],
+   [
+    4,
+    3,
+    2
+   ],
+   [
+    1
+   ]
+  ]
+ ],
+ "witnesses": [
+  {
+   "word": "XLXRXRRRXRXRRXLXLXLXLXRRXLXRXRX",
+   "B": 31,
+   "beta": [
+    6,
+    3
+   ],
+   "F": 49
+  },
+  {
+   "word": "XRRRRXRRXRXLXLXLXLXLXRRXRXRXLXLXLXRXRXRX",
+   "B": 40,
+   "beta": [
+    3,
+    6
+   ],
+   "F": 49
+  },
+  {
+   "word": "XLXLXRRXLXRXRRRXRXLXLXRXRX",
+   "B": 26,
+   "beta": [
+    9,
+    0
+   ],
+   "F": 53
+  }
+ ]
+}

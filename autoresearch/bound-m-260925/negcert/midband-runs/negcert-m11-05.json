@@ -1,0 +1,100 @@
+{
+ "family": "reversal (11..1) with zeros in gaps {0,5}, unit base, root leaf",
+ "m": 11,
+ "labels": [
+  11,
+  10,
+  9,
+  8,
+  7,
+  6,
+  5,
+  4,
+  3,
+  2,
+  1
+ ],
+ "mask": 33,
+ "base": [
+  0,
+  11,
+  10,
+  9,
+  8,
+  7,
+  0,
+  6,
+  5,
+  4,
+  3,
+  2,
+  1
+ ],
+ "T": 75,
+ "s": 9,
+ "weights": [
+  5,
+  13,
+  0
+ ],
+ "lambda": [
+  "13/5",
+  "0"
+ ],
+ "claim_min": 497,
+ "exact": false,
+ "refutation_threshold": 497,
+ "kind": "root",
+ "abstractions": [
+  [
+   [
+    11,
+    10,
+    9
+   ],
+   [
+    8,
+    7,
+    6
+   ],
+   [
+    5,
+    4,
+    3
+   ],
+   [
+    2,
+    1
+   ]
+  ]
+ ],
+ "witnesses": [
+  {
+   "word": "LXLXRXRXLXLXLXRXRXRXRRRRRXRXLXLXRXRXLLLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX",
+   "B": 71,
+   "beta": [
+    12,
+    3
+   ],
+   "F": 511
+  },
+  {
+   "word": "RXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRX",
+   "B": 84,
+   "beta": [
+    7,
+    10
+   ],
+   "F": 511
+  },
+  {
+   "word": "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRXRXLXLXRXRXRXLXLXLXLXRXRXRXRX",
+   "B": 64,
+   "beta": [
+    15,
+    0
+   ],
+   "F": 515
+  }
+ ]
+}

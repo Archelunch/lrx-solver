@@ -1,0 +1,39 @@
+{
+ "semantics": "positive root certificates found by exact-oracle column generation (MIDBAND-LOWERBOUND.md); conditional on Lemma 1 and criteria (7)/(8) at general m",
+ "certified": [
+  {
+   "m": 10,
+   "g": 5,
+   "words": [
+    "RXLLLLXLXLLXLXRRXLXRRXRXLXLXRXRXRXLXLXLXLXLLLXLXLXLLXLXLXLXLXLXLLLXLX",
+    "RXLXRXRXRXLXLXLXLLLXLXLLXLXRRXLXRRXRXLXLXRXRXRXLXLXLXLXLLXLLXLX",
+    "RXRXRRXLXLXLXLLLXLXLXLLXRXRRXRXLXLXRXRXRXLXLXLXLXLLLXLXLXRX"
+   ],
+   "weights": [
+    "1/4",
+    "1/2",
+    "1/4"
+   ],
+   "Bbar": "127/2",
+   "T": 63,
+   "lhs": "1/2",
+   "note": "root LP optimum: exact by lpcert-m10-05.json (4B + 11 beta_0 + beta_1 >= 350 for every word)"
+  },
+  {
+   "m": 11,
+   "g": 6,
+   "words": [
+    "RXLXRXRXRXLXLXLXLLLXLXLXLLXLXRRXLXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLXLLXLX",
+    "RXRXRRXLXLXLXLLLXLXLXLXLLXRXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLLXLXLXRX"
+   ],
+   "weights": [
+    "1/2",
+    "1/2"
+   ],
+   "Bbar": "74",
+   "T": 75,
+   "lhs": "-1",
+   "note": "root LP optimum: exact by lpcert-m11-06.json (B + 2 beta_0 >= 92 for every word)"
+  }
+ ]
+}

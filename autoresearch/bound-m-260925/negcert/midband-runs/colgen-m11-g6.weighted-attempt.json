@@ -1,0 +1,165 @@
+{
+ "m": 11,
+ "g": 6,
+ "T": 75,
+ "s": 9,
+ "mode": "refute",
+ "classes": [
+  [
+   [
+    11,
+    10,
+    9,
+    8
+   ],
+   [
+    7,
+    6,
+    5,
+    4
+   ],
+   [
+    3,
+    2,
+    1
+   ]
+  ]
+ ],
+ "pool": [
+  [
+   64,
+   16,
+   0
+  ],
+  [
+   69,
+   15,
+   3
+  ],
+  [
+   71,
+   13,
+   1
+  ],
+  [
+   72,
+   12,
+   6
+  ],
+  [
+   74,
+   10,
+   4
+  ],
+  [
+   74,
+   14,
+   0
+  ],
+  [
+   75,
+   11,
+   3
+  ],
+  [
+   81,
+   7,
+   7
+  ],
+  [
+   82,
+   8,
+   6
+  ],
+  [
+   85,
+   9,
+   5
+  ]
+ ],
+ "words": [
+  "LLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRXRRXRXLXLXRXRXRXLXLXLXLXRXRXRX",
+  "LLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRRRRRXLXRXLLXRXRXRRXLXLXLXLXLXRXRXRXRX",
+  "RXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRXRXLLLLXRXRXRX",
+  "LXLXRXRXLXLXLXRXRXRXRRRRRXLXRXRRXLXLXLXLXRXRXRXRRXLXLXLXLXLXLXRXRXRXRXRX",
+  "RXLLLLXLXRXLLXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLLXLXRXLLXRXRXLLLXRXRX",
+  "RXLLLXLXRXLLXRXRXRXLXLXLXLXRXRXRXRXRRRRRRXLXRXLLXRXRXLLLXRXRXRXLLLLXRXRXRX",
+  "RXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRRRRXLXRXLLXRXRXLLLXRXRX",
+  "RXLLLLLXLXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXRXLLXRX",
+  "RXLLLLXLXRXLLXRXRXRXLXLXLXLLXRXRXRXRXRXRXLXLXLXLXLXLLXRXRXRXRXRXRXRXRRRRXLXRXLLXRX",
+  "RXLLLLXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRRRRRRXRXRXRXRXRXRXRXRRRRXLXRXLLXRX"
+ ],
+ "oracle_calls": [
+  {
+   "lambda": [
+    "7/3",
+    "0"
+   ],
+   "W": [
+    3,
+    7,
+    0
+   ],
+   "K": 291,
+   "weighted_astar": 3.0,
+   "expansions": 3000000,
+   "F": null,
+   "search_s": 8.2,
+   "word": null
+  },
+  {
+   "lambda": [
+    "7/3",
+    "0"
+   ],
+   "W": [
+    3,
+    7,
+    0
+   ],
+   "K": 291,
+   "weighted_astar": 2.0,
+   "expansions": 3000000,
+   "F": null,
+   "search_s": 9.0,
+   "word": null
+  },
+  {
+   "lambda": [
+    "7/3",
+    "0"
+   ],
+   "W": [
+    3,
+    7,
+    0
+   ],
+   "K": 291,
+   "weighted_astar": 1.5,
+   "expansions": 3000000,
+   "F": null,
+   "search_s": 11.0,
+   "word": null
+  },
+  {
+   "lambda": [
+    "7/3",
+    "0"
+   ],
+   "W": [
+    3,
+    7,
+    0
+   ],
+   "K": 291,
+   "start_bound": 235,
+   "table_s": 35.1,
+   "F": "INCOMPLETE",
+   "search_s": 115.6
+  }
+ ],
+ "verdict": [
+  "INCOMPLETE (node cap)",
+  "(Fraction(229, 3), Fraction(7, 3), Fraction(0, 1))"
+ ]
+}

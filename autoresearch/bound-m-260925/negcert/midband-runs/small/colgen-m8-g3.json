@@ -1,0 +1,147 @@
+{
+ "m": 8,
+ "g": 3,
+ "T": 42,
+ "s": 6,
+ "mode": "exact",
+ "classes": [
+  [
+   [
+    8,
+    7,
+    6
+   ],
+   [
+    5,
+    4,
+    3
+   ],
+   [
+    2,
+    1
+   ]
+  ]
+ ],
+ "pool": [
+  [
+   35,
+   10,
+   1
+  ],
+  [
+   41,
+   6,
+   3
+  ],
+  [
+   35,
+   9,
+   0
+  ]
+ ],
+ "words": [
+  "LXLXRXRXLXLXLLLXLXLXLXRRXRXLXLXRXRX",
+  "XLXRXRRRXRXRXRRXLXLXLXLXLXRRXRXLXLXRXRXRX",
+  "XLXLXRRXLXRXRRRXRXRXLXLXLXRRXLXRXRX"
+ ],
+ "oracle_calls": [
+  {
+   "lambda": [
+    "0",
+    "0"
+   ],
+   "W": [
+    1,
+    0,
+    0
+   ],
+   "K": null,
+   "start_bound": 24,
+   "table_s": 0.1,
+   "F": 35,
+   "word": "LXLXRXRXLXLXLLLXLXLXLXRRXRXLXLXRXRX",
+   "expansions": 77480,
+   "stored": 118369,
+   "search_s": 0.2,
+   "B": 35,
+   "beta": [
+    10,
+    1
+   ]
+  },
+  {
+   "lambda": [
+    "3",
+    "0"
+   ],
+   "W": [
+    1,
+    3,
+    0
+   ],
+   "K": null,
+   "start_bound": 50,
+   "table_s": 0.8,
+   "F": 59,
+   "word": "XLXRXRRRXRXRXRRXLXLXLXLXLXRRXRXLXLXRXRXRX",
+   "expansions": 76853,
+   "stored": 128303,
+   "search_s": 0.2,
+   "B": 41,
+   "beta": [
+    6,
+    3
+   ]
+  },
+  {
+   "lambda": [
+    "0",
+    "3"
+   ],
+   "W": [
+    1,
+    0,
+    3
+   ],
+   "K": null,
+   "start_bound": 24,
+   "table_s": 0.9,
+   "F": 35,
+   "word": "XLXLXRRXLXRXRRRXRXRXLXLXLXRRXLXRXRX",
+   "expansions": 34154,
+   "stored": 52477,
+   "search_s": 0.1,
+   "B": 35,
+   "beta": [
+    9,
+    0
+   ]
+  },
+  {
+   "lambda": [
+    "2",
+    "0"
+   ],
+   "W": [
+    1,
+    2,
+    0
+   ],
+   "K": 53,
+   "start_bound": 42,
+   "table_s": 0.8,
+   "F": null,
+   "word": null,
+   "expansions": 48480,
+   "stored": 48480,
+   "search_s": 0.1
+  }
+ ],
+ "verdict": [
+  "EXACT LP",
+  "41",
+  "certifiable",
+  "2",
+  "0"
+ ]
+}

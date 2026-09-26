@@ -1,0 +1,157 @@
+{
+ "m": 10,
+ "g": 1,
+ "T": 63,
+ "s": 8,
+ "mode": "exact",
+ "classes": [
+  [
+   [
+    10,
+    9,
+    8
+   ],
+   [
+    7,
+    6,
+    5
+   ],
+   [
+    4,
+    3,
+    2
+   ],
+   [
+    1
+   ]
+  ]
+ ],
+ "pool": [
+  [
+   60,
+   9,
+   6
+  ],
+  [
+   62,
+   7,
+   4
+  ],
+  [
+   60,
+   10,
+   7
+  ],
+  [
+   64,
+   6,
+   5
+  ]
+ ],
+ "words": [
+  "XRXLXLXLXRXRXRXRXLXLXLXLXLLLLXRXLXLXRXRXRXLXLXLXLXRXRXRXRXRR",
+  "XRXLXLXLXRXRXRXRRRRRXLXRXRXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXR",
+  "XLLXRXRXRXLXLXLXLLLXLXLXLXRRXRXLXLXRXRXRXLXLXLXLXLLXLXLXLXLX",
+  "RXLXLXRRXRRRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLLXLXLXLX"
+ ],
+ "oracle_calls": [
+  {
+   "lambda": [
+    "0",
+    "0"
+   ],
+   "W": [
+    1,
+    0,
+    0
+   ],
+   "K": null,
+   "start_bound": 49,
+   "table_s": 8.3,
+   "F": 60,
+   "word": "XLLXRXRXRXLXLXLXLLLXLXLXLXRRXRXLXLXRXRXRXLXLXLXLXLLXLXLXLXLX",
+   "expansions": 6225422,
+   "stored": 9934427,
+   "search_s": 32.6,
+   "B": 60,
+   "beta": [
+    10,
+    7
+   ]
+  },
+  {
+   "lambda": [
+    "3",
+    "0"
+   ],
+   "W": [
+    1,
+    3,
+    0
+   ],
+   "K": null,
+   "start_bound": 71,
+   "table_s": 48.9,
+   "F": 82,
+   "word": "RXLXLXRRXRRRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLLXLXLXLX",
+   "expansions": 1768295,
+   "stored": 2898119,
+   "search_s": 7.1,
+   "B": 64,
+   "beta": [
+    6,
+    5
+   ]
+  },
+  {
+   "lambda": [
+    "0",
+    "3"
+   ],
+   "W": [
+    1,
+    0,
+    3
+   ],
+   "K": null,
+   "start_bound": 65,
+   "table_s": 53.7,
+   "F": 74,
+   "word": "XRXLXLXLLLXLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLXLXLXLX",
+   "expansions": 1382896,
+   "stored": 2262407,
+   "search_s": 11.4,
+   "B": 62,
+   "beta": [
+    7,
+    4
+   ]
+  },
+  {
+   "lambda": [
+    "1",
+    "0"
+   ],
+   "W": [
+    1,
+    1,
+    0
+   ],
+   "K": 69,
+   "start_bound": 59,
+   "table_s": 91.3,
+   "F": null,
+   "word": null,
+   "expansions": 1909452,
+   "stored": 1909452,
+   "search_s": 14.2
+  }
+ ],
+ "verdict": [
+  "EXACT LP",
+  "61",
+  "certifiable",
+  "1",
+  "0"
+ ]
+}
