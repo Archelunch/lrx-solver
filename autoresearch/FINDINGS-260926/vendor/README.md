@@ -3,7 +3,7 @@
 Plain byte-identical copies of the repository files that `checks/reversal_k2.py`, `checks/reversal_midband.py`,
 `checks/reversal_m13.py`, `checks/reversal_orbit.py` and `checks/reversal_midband_search/mb.py` import. The paths
 below are both the origin path in the repository and the path under this folder. Each copy was checked
-byte-identical to `git show 9c1cf30:<path>` when the package was built; the package is committed at `PINNED_COMMIT`,
+byte-identical to `git show 9c1cf30:<path>` when the package was built; the package is committed at `f99d129`,
 which does not change these origin files. All 19 were compared again with `git show f163e74:<path>` for version 3
 and are unchanged. The layout mirrors the repository because `integrations/lift_audit.py` locates the m=8 checker at
 `../autoresearch/verify-m8-260924/checker/lrxm8.py` relative to its own folder.

@@ -1,13 +1,13 @@
 # Manifest, autoresearch/FINDINGS-260926 (2026-09-26, version 3)
 
-Package committed at `PINNED_COMMIT`, the commit FINDINGS.md and VERIFY.md also name. sha256 computed over file bytes.
+Package committed at `f99d129`, the commit FINDINGS.md and VERIFY.md also name. sha256 computed over file bytes.
 Total files: 65, not counting this manifest. Total size: 2117509 bytes, not counting this manifest.
 
 | file | bytes | description | sha256 |
 |---|---|---|---|
 | `BEST-C2-CONSTRUCTION.md` | 14206 | What the campaign-2 evolved finalists changed relative to the seed | bf8ebfb224022dead25138804368c8c08617f1fe4f774d2fa1faa09c40056fdd |
 | `CLAIMS-SESSIONS-10-23.md` | 29031 | Verbatim excerpt of research/claims.md, Sessions 10 to 23 | 116c6f7071737b69abe917424fd2c9a3c6e9c89e632a96b8c06518c04615c916 |
-| `FINDINGS.md` | 56919 | Main findings report (RU summary, exact results, conditional certificates with generator source, proof sketch, engine results, conjectures, requests, verification, proof status after the review) | 2080ffa9b7845d0cf153c5bc4ce45526fd12d8da6ef112f1d4419a07a9442733 |
+| `FINDINGS.md` | 57137 | Main findings report (RU summary, exact results, conditional certificates with generator source, proof sketch, engine results, conjectures, requests, verification, proof status after the review) | efdccd177e3253b0f229ac21479fcf8b76bde4297bed82c26ba277cd71f01734 |
 | `LEMMA1-GENERAL-M-260926.md` | 27871 | Audit of Lemma 1, (4)-(6), Lemma 2 and criteria (7)/(8) at general m, with general-m proofs and table checks (Session 27; model-written, not yet human-reviewed) | a951b1dc4c6dbd9a7b44d1b856a6b6a4468657f68fd8c355e0f1933d1d73ab33 |
 | `LEMMA34-GENERAL-M-260926.md` | 34042 | Audit of Lemma 3, formula (11), Lemma 4 and the section 7 resource formula at general m, with proofs and table checks (Session 30; model-written, not yet human-reviewed) | b16eb1177cfc9491e751721f2fca186ce226bd5f6769c8914794eacb150bf733 |
 | `REPORT-FOR-AGENTS-260926.md` | 13537 | Status report for collaborating agents (2026-09-26) | b403983786367802511e11a4540927c8242e3916f8a601a0d5e239c68ad16784 |
@@ -18,7 +18,7 @@ Total files: 65, not counting this manifest. Total size: 2117509 bytes, not coun
 | `REVERSAL-OBSTACLE.md` | 11426 | Why the reversal orbit blocked the engines; addenda on the (11,2) table | d6c9651fd79c22065e9f8f73a62ccd9e632b8b5ce703ca7e6f9034812dac5fb2 |
 | `REVERSAL-ORBIT.md` | 21758 | Insertion-core generator, word_R1, 111 certified families, proof sketch of word_C | 412d9aaf9f65c6d985d1c67b8fd0a8c0c0e1ebff49baecca2b0dc36ac02fab54 |
 | `REVERSAL-WORDS.md` | 15963 | Shortest words for (0,m..1,0) at m=8..11; generators word_E/A/B; certificates to m=12 | b159a4eedd280df4be6b310d5f61efa062735bdcff53a49b3dd277fa32b03080 |
-| `VERIFY.md` | 14722 | Offline verification recipe with observed outputs and table hashes | 60a9e522cefe48e2f0c4fbccaca65d7388bc5a34bafcb6661a0bff83180888ef |
+| `VERIFY.md` | 14710 | Offline verification recipe with observed outputs and table hashes | b00fcd00330fec828ea51de16728c2d47053869360f27f18d247e2fa19ea8395 |
 | `WORDC-PROOF.md` | 27980 | Proof of the word_C length and Lemma 1 slope formulas, all m >= 3, both parities (model-written, not yet human-reviewed) | b844bead4eaf8ac8caa0f9e00992b66e30f7c14070b2be38a8b5262368e544a1 |
 | `WORDR1-PROOF.md` | 38521 | Proof of the word_R1 length and Lemma 1 slope formulas, all m >= 9, the four residues mod 4; section 11 on what word_G needs (model-written, not yet human-reviewed) | 5a566de930cdf9042f28762565e439e6a7ccd1611edc151d7e068101e3820dea |
 | `bound-c1-finalists-REPORT.md` | 1068 | Bound campaign 1 finalize report (holdout m=11) | 7149dabebd7dca954489cca8d9eb1bc6ea84536cb622e05a28044ad4b71edb48 |
@@ -50,7 +50,7 @@ Total files: 65, not counting this manifest. Total size: 2117509 bytes, not coun
 | `negcert/validate_small.py` | 5610 | Brute-force validation of negcert_check.py against lrx_m.Profile at m = 3..6, 21 cases (about 7 min, no tables) | d9760bc67a19681a6ef149181e68ee6624f54f6d480fa4c05e22f64eb12d7c7b |
 | `run_checks.py` | 4925 | Same as run_checks.sh, for Windows | fb2b20120f5ae0ce976969fa3577b6c20dceb7f25734afe76d064c65c8675cfd |
 | `run_checks.sh` | 3853 | Runs the nine re-checks with vendor/ only (POSIX shell); prints the expected last lines | de901c990993ea1d72dc3202f13a60118bc08a564329fac07f3b338091dece2b |
-| `vendor/README.md` | 4734 | Origin path, bytes and sha256 of every vendored file, and how the closure was found | d50928e6991270d6e93054d3cf1afc3da73e1b4971c10d24f7b76726b21b3bf6 |
+| `vendor/README.md` | 4728 | Origin path, bytes and sha256 of every vendored file, and how the closure was found | 1190117a261656cd82524720ce41245e94fe51b170c3b2b6c020027e91bb5869 |
 | `vendor/autoresearch/verify-m8-260924/checker/lrxm8.py` | 18217 | Vendored byte-identical copy of `autoresearch/verify-m8-260924/checker/lrxm8.py` (see vendor/README.md) | 193d522eaf7dd1ebedbf1c9edb8fe9504a7ace0ca10645ecba21bf2d5e9924ba |
 | `vendor/integrations/__init__.py` | 0 | Vendored byte-identical copy of `integrations/__init__.py` (see vendor/README.md) | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 |
 | `vendor/integrations/bound3_audit.py` | 7340 | Vendored byte-identical copy of `integrations/bound3_audit.py` (see vendor/README.md) | 72f1de7661ec382da9e545d895a52e3afbc848615cb0a55950cc19cc47dad50f |

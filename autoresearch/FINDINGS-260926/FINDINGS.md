@@ -1,6 +1,6 @@
 # LRX Lab: findings for the research group, 2026-09-26
 
-Repository `lrx-lab`, package committed at `PINNED_COMMIT` on `main`. FINDINGS.md, VERIFY.md and MANIFEST.md refer to
+Repository `lrx-lab`, package committed at `f99d129` on `main`. FINDINGS.md, VERIFY.md and MANIFEST.md refer to
 that one commit. This package collects what the repository has computed and re-checked in Sessions 10 to 23 of
 `research/claims.md`. Section (h) summarizes the external review of Session 24, and section (i) gives the proof status after it
 (Sessions 25 to 30). Every number below is quoted from a note
@@ -786,7 +786,7 @@ exhaustive oracle with proven completeness or a compact lower-bound certificate;
 2. The engine gain is stated against the strong seed (129/165 at m = 12): AdaEvolve-s2 adds 19 families, and 53 is
    the gain over the hand control. Section (d) now says so.
 3. One commit is pinned: FINDINGS.md had `defc5c6` and VERIFY.md `6e56ddf`. All three documents now name
-   `PINNED_COMMIT`.
+   `f99d129`.
 4. The package was not self-contained: the check scripts imported `integrations/*.py` from the repository, and
    `mb.py` hard-coded an absolute path. `vendor/` now holds the import closure, `run_checks.sh` and `run_checks.py`
    run the re-checks from the package alone, and the table root of `mb.py` is a parameter.
