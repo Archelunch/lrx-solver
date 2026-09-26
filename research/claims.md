@@ -823,8 +823,10 @@ no problems); searches in `checks/reversal_midband_search/`.
   crossing (beta_0 = 3b-2); the carry-across variant at 2 per crossing, as
   in word_C, was not written.
 - Not certified: m = 10 {0,5} (leaves u0 in [1,2] and u0 >= 5 pass, u0 =
-  3, 4 fail with every word tried; no (10,4) table); m = 11 {0,4},{0,5},
-  {0,6}; m = 12 {0,5},{0,6}; m = 13 {0,5},{0,6},{0,7}; the whole band at
+  3, 4 fail with every word tried; no (10,4) table); m = 11 {0,5}, {0,6}
+  (m = 11 {0,4} is listed as a miss in REVERSAL-MIDBAND.md, whose search
+  was root-only; it is CERTIFIED by the two-leaf tree of Session 21, mask
+  17, audit ok, re-run 2026-09-26); m = 12 {0,5},{0,6}; m = 13 {0,5},{0,6},{0,7}; the whole band at
   m = 14..16. Base binds in every miss. Exact root and (2,1) optima at
   m = 10 unknown (1.5M-node cap); m = 9 origins (1,2), (2,2) hit the cap;
   picks first-atom only.
