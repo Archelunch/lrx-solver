@@ -101,3 +101,10 @@ Per run: `bash autoresearch/bound-m-c3-260926/run-one-c3.sh <arm> <seed>`
     python -m unittest discover -s tests -p 'test_*.py'   # Ran 612 tests, OK (skipped=4)
     python -m compileall -q src tests integrations        # exit 0
     python -m src.lrx.cli smoke                           # passed: true
+
+## Addendum (2026-09-26, after Session 19)
+
+Hand generators word_A, word_B, word_E (`../bound-m-260925/REVERSAL-WORDS.md`)
+certify the family (m..1){0,m} at m = 9..12 and fail from m = 13. At finalize
+they are an extra post-hoc control on the {0,m} families only, not part of
+the pre-registered success rule; the campaign payload and hash are unchanged.

@@ -642,3 +642,38 @@ limit of the word generators, not an obstruction: a unit-corner word of
 length T-1 exists. The rotations of that state have distances
 74,73,72,71,71,71,72,73,74,74,75,74,75. Family 5.4.3.2.1.11..6 {5,10} has
 unit distance 64. The conjecture E_2(13) <= T_11(13) holds with equality.
+
+## Session 19: reversal with two outer zeros, shortest words at m=8..11 and certificates to m=12 (2026-09-26)
+
+Note `autoresearch/bound-m-260925/REVERSAL-WORDS.md`, script and words in
+`checks/`. Exact (10,2) table built (409 s, low-memory builder, sha256
+equal to an in-memory rebuild). Tables (8,2), (9,2), (10,2), (11,2) all
+checked (histogram, no unreached, 20,000-sample triangle and predecessor).
+
+Computed: the unit state (0,m,...,1,0) has distance exactly T_m(m+2) - 1 for
+m = 4..11 (41, 51, 62, 74 at m = 8..11); numbers of shortest words 108,
+132, 1104, 1296; every shortest word has floor((m+1)^2/4) - 1 swaps. The
+radius of (m,2) equals T_m for m = 8..11 and is attained by exactly two
+states, (0,0,m,...,1) and (2,1,0,0,m,...,3). Three stdlib generators of
+words as pure functions of m: word_E(m) reproduces a shortest word at
+m = 8..11 and sorts the state with T-1 letters for every m = 8..200 by
+literal replay (upper bound only); word_A(m) (length T-1+floor((m-10)^2/2),
+slopes (9,8) for all m) and word_B(m) (length T-1+floor((m-8)^2/2), slopes
+(7,6); the W_m word of REVERSAL-OBSTACLE.md).
+
+Certified, conditional on the group's Lemma 1 and criterion (7) at general
+m, evaluator bound-eval-3 and the independent lrxm8-based audit agreeing
+(orchestrator re-ran both): family (m..1){0,m} for all block lengths at
+m = 9 (word_B), m = 10 (word_A and word_B with weights 1/2, 1/2), m = 11
+(word_A alone, 74 letters, slopes (9,8)), m = 12 (word_A and word_E with
+weights 6/7, 1/7). Not certified at m = 13..16 (gap 6/5 at m = 13, growing):
+word_A's base overshoots T by about (m-10)^2/2 while every shortest word
+has slope about 3m/2 > m-2, so no shortest word or mixture of shortest
+words certifies at m >= 10. At m = 11 the stored lexicographically least
+shortest word has slopes (15,14) and does not certify; word_A does.
+
+Conjectures only: d((0,m,...,1,0)) = T_m(m+2) - 1 for all m; the (m,2)
+radius equals T_m with exactly two extremal states for all m >= 8. What a
+proof for this family needs from m = 13 on: an m-uniform word (or mixture)
+with base <= T and slopes <= m-2 at once, which none of the three
+generators provides.
