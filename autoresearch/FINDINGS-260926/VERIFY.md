@@ -1,8 +1,8 @@
 # Offline verification recipe
 
 No network, no provider calls, no generated code. This package is committed in the repository `lrx-lab` at commit
-`f99d129`; FINDINGS.md, MANIFEST.md and this file all refer to that commit. Observed on 2026-09-26, macOS,
-Python 3.12.8, on the working tree at `1d588a1` plus this package's changes, which `f99d129` commits.
+`8eaf639`; FINDINGS.md, MANIFEST.md and this file all refer to that commit. Observed on 2026-09-26, macOS,
+Python 3.12.8, on the working tree at `1d588a1` plus this package's changes, which `8eaf639` commits.
 
 ## 1. Self-contained re-checks (no repository, no tables, no numpy)
 
