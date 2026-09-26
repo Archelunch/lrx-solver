@@ -995,3 +995,28 @@ j-2: 1-r, (m-2, m-3-r)), C6 (B = length), C7 (B <= T, slopes <= m-2) hold
 with 0 exceptions; the deliberately coarse C1, C3, C5 fail (35, 54, 107).
 Out of sample at m = 81..120 (2,010 rows) the 26 nonempty hypotheses hold
 with 0 exceptions.
+
+## Session 29: portable negative certificate for m = 9 {0,4} (2026-09-26)
+
+`autoresearch/bound-m-260925/negcert/`: `negcert_check.py` (stdlib only,
+imports nothing from the repository, reads no tables), the certificate
+`negcert-m9-04.json`, `validate_small.py`, `NEGCERT.md`. Route B of the
+brief: an exhaustive oracle with a written completeness argument (in the
+checker's docstring: dropping LR, RL and XX never raises the cost; a
+7-context segment accounting is exact for Lemma 1's B and beta), an
+in-memory abstraction table whose consistency is verified on every node,
+then A*; no Lemma 1 lift bound used.
+
+Result: the exact minimum of B + 3 beta_0 over all accepted sorting words
+of (0,9,8,7,6,0,5,4,3,2,1) is 75; a root mixture needs Bbar + 3 betabar_0
+< 74 (Bbar < 53, betabar_0 <= 7), so NO ROOT-LEAF CERTIFICATE exists for
+(9..1){0,4}; the tree of Session 23 remains the certificate. A second
+optimal word (B = 48, slopes (9,3)) was found besides the (54, (7,7))
+witness. Orchestrator re-ran the checker from an isolated copy with
+`python -I`: VERIFIED in 15.6 s; `validate_small.py` agrees with brute
+force priced by `lrx_m.Profile` in all 21 cases at m = 3..6 (all-words
+check of the reduction step): VALIDATED. A second abstraction gives 75; a
+false claim of 76 fails. Assumed only: Profile is the group's Lemma 1
+bookkeeping; words swapping two zeros are excluded as Profile excludes
+them. This answers the reviewers' request (Session 24) for a portable
+oracle with proven completeness.
