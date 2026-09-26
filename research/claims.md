@@ -1020,3 +1020,32 @@ false claim of 76 fails. Assumed only: Profile is the group's Lemma 1
 bookkeeping; words swapping two zeros are excluded as Profile excludes
 them. This answers the reviewers' request (Session 24) for a portable
 oracle with proven completeness.
+
+## Session 30: Lemma 3, formula (11), Lemma 4, section 7 at general m (2026-09-26)
+
+`autoresearch/LEMMA34-GENERAL-M-260926.md` continues Session 27. Sections
+5 and 6 of the manuscript contain no 8, 6, 30, 31 or 8!. Lemma 3 with (9),
+(10): m-free, proof written out (adding that comparators never swap two
+zeros and that the end state is exactly the root). Formula (11): m-free;
+the manuscript's stretching paragraph is a sketch, the note fills three
+steps (A_j = sigma_j(Q) from #X = inv(Q); lifting never crosses the cut;
+stretching preserves (9)); (11) is exact for same-signed words, an upper
+bound otherwise. Lemma 4: m-free, manuscript proof complete; the
+commutation claim proved after normalising rotation runs. Section 7
+resource formula beta_j = 3A_j + B_j - 2F_j and increment table: m-free,
+thresholds 30+6k and 6 become T_m(m+k) and m-2; the enumerations are m=8
+data. Table checks (`autoresearch/checks-lemma1/lemma34_tables_check.py`,
+orchestrator re-ran, PASS): transfer 540 instances, 4,555 stretched
+points, 90,923 comparator steps, 0 violations; projected reference then
+transfer 60 instances, 724 points, 0; projection 472 instances, 3,766
+child points, 0; resource formula 320 words, 980 zero atoms, 0; negative
+control: all 540 inputs violating (9) fail to sort.
+
+Correction to Session 27: no m >= 9 certificate in this repository uses
+Lemma 3, Lemma 4 or (11) (the lift task builds literal m=8 parent words
+that Profile re-prices; bound campaigns, trees and the reversal
+certificates are literal words priced by Profile and decided by (7)/(8)),
+so the sentence "certificates using them at m >= 9 stay conditional"
+refers to an empty set. The m = 8 uses (Sessions 8, 9, 10) now have
+complete written proofs, marked proof written, unreviewed. Step most
+worth a human reader's attention: note section 4.3 items 2-3.
