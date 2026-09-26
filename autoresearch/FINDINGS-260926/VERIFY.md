@@ -1,8 +1,8 @@
 # Offline verification recipe
 
 No network, no provider calls, no generated code. This package is committed in the repository `lrx-lab` at commit
-`PINNED_COMMIT`; FINDINGS.md, MANIFEST.md and this file all refer to that commit. Observed on 2026-09-26, macOS,
-Python 3.12.8, on the working tree at `9c1cf30` plus this package's changes, which `PINNED_COMMIT` commits.
+`8e6b8df`; FINDINGS.md, MANIFEST.md and this file all refer to that commit. Observed on 2026-09-26, macOS,
+Python 3.12.8, on the working tree at `9c1cf30` plus this package's changes, which `8e6b8df` commits.
 
 ## 1. Self-contained re-checks (no repository, no tables, no numpy)
 
@@ -106,7 +106,7 @@ reduced words has not been independently checked (section 6).
 
 ## 3. Repository checks
 
-From the repository root at `PINNED_COMMIT`:
+From the repository root at `8e6b8df`:
 
 | command | observed |
 |---|---|

@@ -1,13 +1,13 @@
 # Manifest, autoresearch/FINDINGS-260926 (2026-09-26)
 
-Package committed at `PINNED_COMMIT`, the commit FINDINGS.md and VERIFY.md also name. sha256 computed over file bytes.
+Package committed at `8e6b8df`, the commit FINDINGS.md and VERIFY.md also name. sha256 computed over file bytes.
 Total files: 51, not counting this manifest.
 
 | file | bytes | description | sha256 |
 |---|---|---|---|
 | `BEST-C2-CONSTRUCTION.md` | 14206 | What the campaign-2 evolved finalists changed relative to the seed | bf8ebfb224022dead25138804368c8c08617f1fe4f774d2fa1faa09c40056fdd |
 | `CLAIMS-SESSIONS-10-23.md` | 29031 | Verbatim excerpt of research/claims.md, Sessions 10 to 23 | 116c6f7071737b69abe917424fd2c9a3c6e9c89e632a96b8c06518c04615c916 |
-| `FINDINGS.md` | 47330 | Main findings report (RU summary, exact results, conditional certificates with generator source, proof sketch, engine results, conjectures, requests, verification) | 831a9c4e7a79135289ff5f687dbff0d4e097e76adb808a01d698e3b4e359be4d |
+| `FINDINGS.md` | 47799 | Main findings report (RU summary, exact results, conditional certificates with generator source, proof sketch, engine results, conjectures, requests, verification) | 3e3e0c57cc08d6b0d4827c0452f4f1d13cb0d551ea8cd129fc45aab9d0a11f44 |
 | `REPORT-FOR-AGENTS-260926.md` | 13537 | Status report for collaborating agents (2026-09-26) | b403983786367802511e11a4540927c8242e3916f8a601a0d5e239c68ad16784 |
 | `REVERSAL-K2.md` | 11713 | word_G closed form for the outer band of k=2 masks; root survey to m=13 | bc1225978e69081727338d57d44155c99a8bc86611765a9e1cc6c4424b62c574 |
 | `REVERSAL-M13.md` | 12744 | Two-core word_C: closed-form certificate of (m..1){0,m} at m=9..40 | 23ea45be60591bc647291efecb324363ae7012811551c574dd2e1b0011086fcd |
@@ -15,7 +15,7 @@ Total files: 51, not counting this manifest.
 | `REVERSAL-OBSTACLE.md` | 11426 | Why the reversal orbit blocked the engines; addenda on the (11,2) table | d6c9651fd79c22065e9f8f73a62ccd9e632b8b5ce703ca7e6f9034812dac5fb2 |
 | `REVERSAL-ORBIT.md` | 21758 | Insertion-core generator, word_R1, 111 certified families, proof sketch of word_C | 412d9aaf9f65c6d985d1c67b8fd0a8c0c0e1ebff49baecca2b0dc36ac02fab54 |
 | `REVERSAL-WORDS.md` | 15963 | Shortest words for (0,m..1,0) at m=8..11; generators word_E/A/B; certificates to m=12 | b159a4eedd280df4be6b310d5f61efa062735bdcff53a49b3dd277fa32b03080 |
-| `VERIFY.md` | 8678 | Offline verification recipe with observed outputs and table hashes | 31cc9d27f5da85683fab69211c80f8e70b1775b312cc1511e8c509120a86097d |
+| `VERIFY.md` | 8660 | Offline verification recipe with observed outputs and table hashes | 3d6139315e5322f378ab910f919fe1ceb31ddfb78a95d62e357a80f5a49a516f |
 | `WORDC-PROOF.md` | 27980 | Proof of the word_C length and Lemma 1 slope formulas, all m >= 3, both parities (model-written, not yet human-reviewed) | b844bead4eaf8ac8caa0f9e00992b66e30f7c14070b2be38a8b5262368e544a1 |
 | `bound-c1-finalists-REPORT.md` | 1068 | Bound campaign 1 finalize report (holdout m=11) | 7149dabebd7dca954489cca8d9eb1bc6ea84536cb622e05a28044ad4b71edb48 |
 | `bound-c2-finalists-REPORT.md` | 3003 | Bound campaign 2 finalize report (holdout m=12, three seeds) | 0a74d2be61a5a3089ec9e449ed88bac4179d39a00715d61e1518b8d543831bfd |
@@ -36,7 +36,7 @@ Total files: 51, not counting this manifest.
 | `checks/wordc_proof_check.py` | 11742 | Mechanical check of every claim of WORDC-PROOF.md against literal word_C at m = 9..40; writes nothing | 6b418051659344ddb0f8288777efc4aeddea782c65a7a67eeb015813a27ce5af |
 | `run_checks.py` | 3350 | Same as run_checks.sh, for Windows | 7cad13e4d07729950b3d38ab37e600f2b8426edc00daf45386d9e0936762e492 |
 | `run_checks.sh` | 2645 | Runs the five re-checks with vendor/ only (POSIX shell); prints the expected last lines | 153d0ac1a798e81a994e82435b08606aef3d601ac3ae64edce00cfc3268c7987 |
-| `vendor/README.md` | 4281 | Origin path, bytes and sha256 of every vendored file, and how the closure was found | 30e81f86dde959677f25fb4bcb56000e181083515a5a46ecc0c38793c4edcd4f |
+| `vendor/README.md` | 4275 | Origin path, bytes and sha256 of every vendored file, and how the closure was found | b531e123bf9ab8c91c994934e2d87ad599cd7799f4872c1b73fb7c690f4858ad |
 | `vendor/autoresearch/verify-m8-260924/checker/lrxm8.py` | 18217 | Vendored byte-identical copy of `autoresearch/verify-m8-260924/checker/lrxm8.py` (see vendor/README.md) | 193d522eaf7dd1ebedbf1c9edb8fe9504a7ace0ca10645ecba21bf2d5e9924ba |
 | `vendor/integrations/__init__.py` | 0 | Vendored byte-identical copy of `integrations/__init__.py` (see vendor/README.md) | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 |
 | `vendor/integrations/bound3_audit.py` | 7340 | Vendored byte-identical copy of `integrations/bound3_audit.py` (see vendor/README.md) | 72f1de7661ec382da9e545d895a52e3afbc848615cb0a55950cc19cc47dad50f |
