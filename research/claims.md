@@ -750,3 +750,37 @@ bound-eval-3, the independent audit and literal replay: 111/111 agree.
 
 Per-m rows other than word_C and word_R1 are search outputs, not formulas.
 Conditional on the group's Lemma 1 and criteria (7)/(8) at general m.
+
+## Session 22: k=2 reversal masks, closed form word_G for the outer band (2026-09-26)
+
+Note `autoresearch/bound-m-260925/REVERSAL-K2.md`; words in
+`checks/reversal-k2-words.json`, re-check script `checks/reversal_k2.py`
+(evaluator, audit and replay on every row; orchestrator re-ran it: 390
+word_G rows and 150 stored rows, no problems), searches in
+`checks/reversal_k2_search/`.
+
+- Closed form word_G(m, g), one two-core word with cut, seeds, sweep count
+  and sides fixed by m mod 4 and by min(g, m-g), certifies the reversal
+  (m..1) with zeros in gaps {0, g} whenever g <= floor(m/4) or m-g <=
+  floor(m/4): 390 certificates at m = 9..40 (evaluator + audit + replay),
+  1210 more at m = 41..80 by replay and criterion (7). Length between T-11
+  and T, slopes <= m-2. The rules were read off the data, not derived.
+- Middle band floor(m/4) < g < m - floor(m/4): no closed form; at
+  m = 9..13 a root LP over the whole two-core pool fails where min(g, m-g)
+  >= about m/2 - 2, always with slopes feasible and the base binding (the
+  cheap words put nearly all slope on the gap-0 zero).
+- Survey at the root, all k=2 masks: m = 11 59/66, m = 12 72/78, m = 13
+  18/25 (only masks with a zero in gap 0 or 13 run). Every miss has one
+  zero in gap 0 or gap m and the other near m/2; every mask with both
+  zeros in gaps 1..m-1 certified at m = 11, 12.
+- Misses: m = 9 {5,9} newly CERTIFIED by a 5-leaf tree. Still not found
+  (trees to depth 4, thresholds 6, up to 11 origins): m = 9 {0,4} (base
+  excess 9/4), {0,5} (4); m = 10 {0,5} (17/4), {0,6} (4); m = 12 mask 130
+  (74/15); m = 11 mask 1056 (2). Not run: three-core words, rotated-cut
+  sweeps, higher-k masks 7300, 2456, 6309, 3534, 3685, trees on the survey
+  misses, m = 14.
+
+Since the table-fed tree control (Session 17) certifies m = 9 {0,4} from
+BFS words with origins (3,1) and (5,1), that miss is a word-generation
+limit; the next step is to mine the (9,2), (10,2), (11,2) tables for the
+structure of shortest refined-origin words in the middle band.

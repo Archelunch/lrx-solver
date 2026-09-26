@@ -1,0 +1,8 @@
+9 544 CERTIFIED [True, 'ok'] 5 cpu 32.2
+9 17 NOT_FOUND None None cpu 58.4
+9 33 NOT_FOUND None None cpu 60.7
+10 65 NOT_FOUND None None cpu 96.0
+10 33 NOT_FOUND None None cpu 98.4
+python3 trees.py  trees-a.jsonl 5  343.39s user 2.52s system 344% cpu 1:40.36 total
+
+[exited with code 0]
