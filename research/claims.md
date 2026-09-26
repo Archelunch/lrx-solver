@@ -869,3 +869,29 @@ word_C for both parities and bind the general-m Lemma 1 / (7)/(8)
 separately; keep the architecture "optimizer proposes, data-only checker
 verifies"; measure engine gains against the strong seed at equal budget
 with several repetitions and a frozen new holdout.
+
+## Session 25: proof of the word_C length and slope formulas (2026-09-26)
+
+`autoresearch/bound-m-260925/WORDC-PROOF.md` (about 5,900 words) proves,
+for all m >= 3 and 1 <= a <= m-2, that word_C(m, a) sorts (0,m,...,1,0) to
+(1..m,0,0), has length T_m(m+2) + 2(a-(m-2)/2)^2 - 1 - (m mod 2)/2 with
+B = length (every segment unidirectional), and Lemma 1 slopes (2a+1, 2a)
+except a = 1 with m even, where they are (4,3). Structure: sweep lemma
+(two inductions, mod n), Lemma A (core 1, cyclic wrap explicit), Lemma B
+(core 2, both parities of r and a, the values of start and right), Lemma C
+(the walks W0 and Wf in five written-out cases), Lemma D (letter count),
+Lemma E (segment enumeration and the cz accounting: the only surviving
+terms are the first X and, in the a = 1, m even tie, W0). Corollary for
+m >= 9: odd m, a = (m-3)/2 gives (T-1, (m-2, m-3)); even m, a = (m-2)/2 and
+(m-4)/2 give (T-1, (m-1, m-2)) and (T+1, (m-3, m-4)), so the 1/2-1/2
+mixture has Bbar = T and betabar = (m-2, m-3).
+
+Mechanical check `checks/wordc_proof_check.py` (orchestrator re-ran):
+every intermediate claim of Lemmas A-E and the theorem against the actual
+execution, m = 9..40, 720 pairs, 0 mismatches; corollary failures 0; two
+deliberate mutations caught (45 and 12 mismatches). Written by an Opus
+worker; not yet reviewed by a human mathematician. Section 8 lists what is
+not covered: Lemma 1 itself, criterion (7), that the mixture certifies
+(Lemma 1 + criterion (7) applied to these numbers), a = m-1, m, and
+minimality. So the certificate of (m..1){0,m} for all m >= 9 is now
+conditional only on the group's Lemma 1 and criterion (7) at general m.
