@@ -16,9 +16,12 @@ families at m=12, 0 lost; all arms miss the same 14, worst the plain
 reversal with two zeros at gap 5). Broker retries transient 5xx/429 in-slot
 (4 mock tests). Suite 604 OK. The exact (11,2) table is done (radius 75 = T;
 reversal with two outer zeros at 74, claims Session 18). Hand generators
-word_A/word_B/word_E certify the family (m..1){0,m} at m = 9..12 (audit
-agrees) and fail from m = 13, where base and slope bind together
-(REVERSAL-WORDS.md, claims Session 19). Campaign 3 is prepared offline in
+word_A/word_B/word_E certify the family (m..1){0,m} at m = 9..12 and fail
+from m = 13 (REVERSAL-WORDS.md, Session 19); the two-core word_C(m, a)
+then certifies it at every m = 9..40 with closed-form length T-1 and slopes
+(m-2, m-3), audit agreeing (REVERSAL-M13.md, Session 20): first m-uniform
+closed-form certificate family here. Next: extend two-core words to the
+rest of the reversal orbit and write the hand proof of the closed forms. Campaign 3 is prepared offline in
 `autoresearch/bound-m-c3-260926/` (REPORT-prep.md): tree-contract driver
 `bound_c3.py`, finalize, m-uniform refined-origin seed (dev 283/303,
 validation 157/165, vs 260 and 151 for AdaEvolve-s2 as one leaf), 12 captured

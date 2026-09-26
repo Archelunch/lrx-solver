@@ -677,3 +677,34 @@ radius equals T_m with exactly two extremal states for all m >= 8. What a
 proof for this family needs from m = 13 on: an m-uniform word (or mixture)
 with base <= T and slopes <= m-2 at once, which none of the three
 generators provides.
+
+## Session 20: m-uniform certificate for the reversal with two outer zeros, m = 9..40 (2026-09-26)
+
+Note `autoresearch/bound-m-260925/REVERSAL-M13.md`, generator and words in
+`checks/reversal_m13.py`, `checks/reversal-m13-words.json`. The "two-core"
+word word_C(m, a), a pure stdlib function of (m, a): core 1 grows a zigzag
+around the zero block carrying a labels across it (a label carried through
+the zeros inside a sweep costs exactly 2 per zero, so the Lemma 1 slopes
+are (2a+1, 2a)); core 2 is an in-place zigzag on the other m-a labels; a
+final R walk ends the word. Closed forms verified by replay for m = 9..200
+(worker) and m = 9..120 (orchestrator): length - T = 2(a-(m-2)/2)^2 - 1 -
+(m mod 2)/2 for every a except a = 2 floor(m/2).
+
+Certificate of the family (m..1){0,m} for all block lengths, root leaf,
+unit origins, no tree: odd m, one word with a = (m-3)/2, length T-1, slopes
+(m-2, m-3); even m, weights 1/2, 1/2 on a = (m-2)/2 (length T-1, slopes
+(m-1, m-2)) and a = (m-4)/2 (length T+1, slopes (m-3, m-4)), averaging to
+base T and slopes (m-2, m-3). CERTIFIED by bound-eval-3 and the independent
+lrxm8-based audit at every m = 9..40 (worker 32 rows; orchestrator re-ran
+all 32 with replay to the root), and by lrx_m.mixture_criterion. The LP
+over the whole family a = 0..m at m = 9..20 selects exactly this support.
+At m = 9..11 the T-1 words are members of the enumerated shortest sets.
+Why the earlier generators failed: word_E carries zeros through labels at
+cost 3 per crossing (slope about 3m/2); word_A lets only 4 labels cross
+(base overshoot (m-10)^2/2).
+
+This is the first m-uniform, closed-form certificate family in this
+repository. Scope and conditionality: one family only; conditional on the
+group's Lemma 1 and criterion (7) at general m; evaluator and audit ran to
+m = 40, replay only beyond. Conjecture: the certificate holds for all
+m >= 9 (a hand proof needs only the two closed forms above).

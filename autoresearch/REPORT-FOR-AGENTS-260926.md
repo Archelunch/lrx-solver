@@ -53,6 +53,18 @@ parameter and replicates or extends them. No priority claims.
 | 9 | Hand generators word_A, word_B, word_E (pure functions of m, stdlib only) certify family (m..1){0,m} for all block lengths, conditional on Lemma 1 and criterion (7): m=9 (word_B alone), m=10 (word_A+word_B, 1/2-1/2), m=11 (word_A alone, 74 letters, slopes (9,8)), m=12 (word_A+word_E, 6/7-1/7) | computed, audited | evaluator bound-eval-3 and the independent lrxm8-based audit agree; `autoresearch/bound-m-260925/REVERSAL-WORDS.md` |
 | 10 | The same family is NOT certified at m=13..16 by any of the three generators or their mixtures; gap grows from 6/5 at m=13 | negative, exact (LP) | word_A's base overshoots T by about (m-10)^2/2 while every shortest word (E-shape) has slope about 3m/2 > m-2; no shortest word or mixture certifies for m>=13 |
 
+### Addendum (later on 2026-09-26): result 10 is superseded
+
+The two-core generator word_C(m, a) (`autoresearch/bound-m-260925/REVERSAL-M13.md`,
+claims Session 20) certifies the family (m..1){0,m} for all block lengths
+at every m = 9..40: odd m, one word of length T-1 with slopes (m-2, m-3);
+even m, two words of lengths T-1 and T+1 with weights 1/2 each, averaging to
+base T and slopes (m-2, m-3). Evaluator and the independent audit agree on
+all 32 rows (re-run by the orchestrator); replay and the closed forms hold
+to m = 200. Conditional on Lemma 1 and criterion (7) at general m; one
+family only; "all m" is a conjecture whose hand proof needs only the two
+closed forms. Request 2 below is therefore answered for this family.
+
 ## 2. Conjectures and observations (not proved)
 
 - **Identity rotations (Conjecture A').** For m >= 9 and any cyclic rotation
