@@ -38,9 +38,15 @@ for all m >= 9 is now a complete written proof chain (model-written,
 unreviewed). WORDR1-PROOF.md (Session 28) and LEMMA34-GENERAL-M (Session 30) extend
 this: (m..1){1,m} is a second complete chain; no m >= 9 certificate uses
 Lemmas 3/4/(11). negcert/ (Session 29) is a portable, table-free checker
-proving no root-leaf certificate for m = 9 {0,4}. Next: human review of
-the four written proofs (LEMMA1 4.1, LEMMA34 4.3, WORDC Lemma E, WORDR1
-Lemma P), package v3, middle-band lower bounds, the k=3 class. Campaign 3 is prepared offline in
+proving no root-leaf certificate for m = 9 {0,4}. Package v3 (pinned f99d129) ships all of
+it self-contained. k=3 class surveyed (Session 31: 455 certificates,
+word_W band); interior masks (Session 32): every k=2, 3 interior mask
+certifies at the root, k=4 wide masks are the first slope-bound misses.
+Exact column generation with the negcert oracle (in progress) certified
+m = 10 {0,5} at the root. Next: human review of the four written proofs
+(LEMMA1 4.1, LEMMA34 4.3, WORDC Lemma E, WORDR1 Lemma P); column
+generation on every remaining miss (each ends in a certificate or an
+exact refutation); campaign 3 on the tree contract awaits approval. Campaign 3 is prepared offline in
 `autoresearch/bound-m-c3-260926/` (REPORT-prep.md): tree-contract driver
 `bound_c3.py`, finalize, m-uniform refined-origin seed (dev 283/303,
 validation 157/165, vs 260 and 151 for AdaEvolve-s2 as one leaf), 12 captured
