@@ -13,3 +13,4 @@ dist/
 .DS_Store
 runs/
 datasets/generated/
+lrx-findings-*.zip
