@@ -1146,3 +1146,41 @@ lower bounds; the exact values at m = 10 {0,5} and m = 11 {0,6} are 1/2
 and -1 (certified). "The base binds in the middle band" is therefore a
 statement about the pools, not about the families; the exact status of
 the band at m >= 12 is open.
+
+## Session 34: C port of the exact oracle; both m = 12 middle-band roots refuted (2026-09-26)
+
+`autoresearch/bound-m-260925/negcert/fast/` (lrxfast.c, one file built with
+the system cc, no new dependencies; Python drivers stdlib only;
+`negcert_general.py` unchanged as the reference), note
+`MIDBAND-M12-14.md`. Same model, abstraction and completeness argument as
+Session 33; the table is verified after the build on every abstract node
+and letter; a capped run certifies min F >= p for the frontier bucket p.
+Validation: reproduces m = 9 {0,4} = 75 and m = 11 {0,5} >= 497 with the
+identical 23,907,926 expansions (59 s instead of 743 s), m = 11 {0,6} with
+the identical 9,477,482, m = 10 {0,5} = 350, and 48 small cases against
+raw Dijkstra.
+
+- m = 12 {0,5}: NO ROOT-LEAF CERTIFICATE. Every accepted sorting word has
+  B + 3 beta_0 >= 119 = (T+1) + 3s; the root LP value is V = 89 = T+1
+  exactly, attained by the 1/2-1/2 mixture of (83, (12,3)) and (95,
+  (8,15)). 197,072,746 expansions.
+- m = 12 {0,6}: NO ROOT-LEAF CERTIFICATE. Every word has B + 2 beta_0 >=
+  109; V = 89 = T+1 exactly, attained by the single word (89, (10,7)).
+  198,380,011 expansions. Orchestrator rebuilt the checker from source in
+  an isolated copy and re-verified with `python -I fast_check.py`: VERIFIED
+  in 208 s; raising either claim by 1 makes it FAIL (worker).
+- Both refute the Session 33 conjectures "even-centre roots certifiable
+  from m = 10" and "root LP excess at most 1/2 away from the odd centre":
+  both m = 12 gaps sit at V - T = 1, the boundary.
+- m = 13 {0,6}, {0,7} and m = 14 {0,7}, {0,8}, {0,9}: INCOMPLETE at the
+  memory cap (110-150M nodes, about 5 GB) with certified intervals for V:
+  [97, 326/3], [96, 317/3], [678/7, 865/7], [96, 121], [93, 118] against
+  T+1 = 103 (m = 13) and 118 (m = 14); all five open, no positive
+  certificate found.
+- Pure-Python verification of the m = 12 certificates is infeasible (67M
+  vector table, about 197M nodes); the C checker is cross-checked against
+  Python on every m <= 11 instance with exact expansion counts.
+
+Consequence: for the middle band at m = 12 the certificate must be a tree
+(refined origins), as at m = 9 {0,4}; root certificates are exactly at the
+boundary there.
