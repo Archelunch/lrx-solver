@@ -1,0 +1,221 @@
+11 7 [0, 1, 2] CERTIFIED [True, 'ok'] -7 0 3.5
+11 1027 [0, 1, 10] CERTIFIED [True, 'ok'] -5 0 3.5
+11 67 [0, 1, 6] ROOT_FAIL None 3 0 3.6
+11 35 [0, 1, 5] CERTIFIED [True, 'ok'] 1/2 0 3.6
+11 19 [0, 1, 4] CERTIFIED [True, 'ok'] -9/5 0 3.6
+11 11 [0, 1, 3] CERTIFIED [True, 'ok'] -6 0 3.6
+11 2051 [0, 1, 11] CERTIFIED [True, 'ok'] -4 0 3.6
+11 131 [0, 1, 7] ROOT_FAIL None 3 0 3.6
+11 515 [0, 1, 9] CERTIFIED [True, 'ok'] -4 0 3.6
+11 259 [0, 1, 8] CERTIFIED [True, 'ok'] -3 0 3.7
+11 13 [0, 2, 3] CERTIFIED [True, 'ok'] -9 0 3.8
+11 37 [0, 2, 5] CERTIFIED [True, 'ok'] -1 0 3.7
+11 261 [0, 2, 8] ROOT_FAIL None 39/16 0 3.7
+11 21 [0, 2, 4] CERTIFIED [True, 'ok'] -3 0 3.7
+11 1029 [0, 2, 10] CERTIFIED [True, 'ok'] -5 0 3.6
+11 69 [0, 2, 6] CERTIFIED [True, 'ok'] 0 0 3.7
+11 517 [0, 2, 9] CERTIFIED [True, 'ok'] -5 0 3.7
+11 133 [0, 2, 7] ROOT_FAIL None 67/20 0 3.8
+11 25 [0, 3, 4] CERTIFIED [True, 'ok'] -5 0 3.7
+11 2053 [0, 2, 11] CERTIFIED [True, 'ok'] -5 0 3.7
+11 137 [0, 3, 7] ROOT_FAIL None 2 0 3.6
+11 49 [0, 4, 5] ROOT_FAIL None 1 0 3.6
+11 145 [0, 4, 7] ROOT_FAIL None 9/2 0 3.6
+11 81 [0, 4, 6] ROOT_FAIL None 3 0 3.6
+11 1033 [0, 3, 10] CERTIFIED [True, 'ok'] -3 0 3.6
+11 73 [0, 3, 6] CERTIFIED [True, 'ok'] -3 0 3.6
+11 265 [0, 3, 8] ROOT_FAIL None 2 0 3.6
+11 2057 [0, 3, 11] CERTIFIED [True, 'ok'] -6 0 3.7
+11 41 [0, 3, 5] CERTIFIED [True, 'ok'] -4 0 3.7
+11 521 [0, 3, 9] ROOT_FAIL None 13/5 0 3.8
+11 273 [0, 4, 8] ROOT_FAIL None 1 0 3.7
+11 529 [0, 4, 9] ROOT_FAIL None 17/7 0 3.7
+11 2065 [0, 4, 11] CERTIFIED [True, 'ok'] -3/5 0 3.7
+11 1041 [0, 4, 10] CERTIFIED [True, 'ok'] 2/3 0 3.6
+11 97 [0, 5, 6] ROOT_FAIL None 5 0 3.8
+11 289 [0, 5, 8] CERTIFIED [True, 'ok'] -5/7 0 3.8
+11 161 [0, 5, 7] ROOT_FAIL None 10/3 0 3.8
+11 545 [0, 5, 9] ROOT_FAIL None 2 0 3.8
+11 1057 [0, 5, 10] ROOT_FAIL None 3/2 0 3.8
+11 2081 [0, 5, 11] ROOT_FAIL None 2 0 3.7
+11 193 [0, 6, 7] ROOT_FAIL None 5/3 0 3.7
+11 321 [0, 6, 8] CERTIFIED [True, 'ok'] -3/2 0 3.7
+11 577 [0, 6, 9] ROOT_FAIL None 1 0 3.7
+11 1089 [0, 6, 10] ROOT_FAIL None 4 0 3.8
+11 2113 [0, 6, 11] ROOT_FAIL None 3 0 3.7
+11 385 [0, 7, 8] CERTIFIED [True, 'ok'] -13/3 0 3.7
+11 641 [0, 7, 9] CERTIFIED [True, 'ok'] -2 0 3.8
+11 1153 [0, 7, 10] ROOT_FAIL None 1 0 3.7
+11 2177 [0, 7, 11] ROOT_FAIL None 3 0 3.7
+11 769 [0, 8, 9] CERTIFIED [True, 'ok'] -7 0 3.7
+11 1281 [0, 8, 10] CERTIFIED [True, 'ok'] -4 0 3.8
+11 2305 [0, 8, 11] CERTIFIED [True, 'ok'] -3 0 3.9
+11 1537 [0, 9, 10] CERTIFIED [True, 'ok'] -5 0 3.9
+11 2561 [0, 9, 11] CERTIFIED [True, 'ok'] -2 0 3.9
+11 3073 [0, 10, 11] CERTIFIED [True, 'ok'] -3 0 3.9
+11 14 [1, 2, 3] CERTIFIED [True, 'ok'] -12 0 3.8
+11 38 [1, 2, 5] CERTIFIED [True, 'ok'] -42/5 0 3.8
+11 22 [1, 2, 4] CERTIFIED [True, 'ok'] -13 0 3.9
+11 70 [1, 2, 6] CERTIFIED [True, 'ok'] -7 0 3.9
+11 134 [1, 2, 7] CERTIFIED [True, 'ok'] -4 0 3.8
+11 262 [1, 2, 8] CERTIFIED [True, 'ok'] -4 0 3.8
+11 518 [1, 2, 9] CERTIFIED [True, 'ok'] -6 0 3.9
+11 2054 [1, 2, 11] CERTIFIED [True, 'ok'] -6 0 3.8
+11 1030 [1, 2, 10] CERTIFIED [True, 'ok'] -7 0 3.9
+11 26 [1, 3, 4] CERTIFIED [True, 'ok'] -16 0 3.8
+11 42 [1, 3, 5] CERTIFIED [True, 'ok'] -10 0 3.9
+11 74 [1, 3, 6] CERTIFIED [True, 'ok'] -8 0 3.9
+11 138 [1, 3, 7] CERTIFIED [True, 'ok'] -11/2 0 3.9
+11 266 [1, 3, 8] CERTIFIED [True, 'ok'] -4/3 0 3.9
+11 522 [1, 3, 9] CERTIFIED [True, 'ok'] -7 0 3.9
+11 1034 [1, 3, 10] CERTIFIED [True, 'ok'] -10 0 4.0
+11 50 [1, 4, 5] CERTIFIED [True, 'ok'] -14 0 3.9
+11 2058 [1, 3, 11] CERTIFIED [True, 'ok'] -8 0 4.0
+11 82 [1, 4, 6] CERTIFIED [True, 'ok'] -13 0 3.9
+11 146 [1, 4, 7] CERTIFIED [True, 'ok'] -10 0 3.8
+11 274 [1, 4, 8] CERTIFIED [True, 'ok'] -9/2 0 3.9
+11 530 [1, 4, 9] CERTIFIED [True, 'ok'] -23/25 0 3.9
+11 1042 [1, 4, 10] CERTIFIED [True, 'ok'] -9/2 0 4.0
+11 2066 [1, 4, 11] CERTIFIED [True, 'ok'] -22/5 0 3.9
+11 98 [1, 5, 6] CERTIFIED [True, 'ok'] -8 0 3.9
+11 162 [1, 5, 7] CERTIFIED [True, 'ok'] -5 0 3.9
+11 290 [1, 5, 8] CERTIFIED [True, 'ok'] -7/4 0 4.0
+11 546 [1, 5, 9] CERTIFIED [True, 'ok'] -1 0 4.0
+11 2082 [1, 5, 11] CERTIFIED [True, 'ok'] -1 0 3.9
+11 1058 [1, 5, 10] CERTIFIED [True, 'ok'] -10/3 0 4.0
+11 194 [1, 6, 7] CERTIFIED [True, 'ok'] -4 0 3.9
+11 578 [1, 6, 9] CERTIFIED [True, 'ok'] 0 0 4.0
+11 322 [1, 6, 8] CERTIFIED [True, 'ok'] -1 0 4.0
+11 1090 [1, 6, 10] CERTIFIED [True, 'ok'] -2 0 3.9
+11 2114 [1, 6, 11] CERTIFIED [True, 'ok'] 0 0 4.0
+11 386 [1, 7, 8] CERTIFIED [True, 'ok'] -7/2 0 3.9
+11 642 [1, 7, 9] CERTIFIED [True, 'ok'] -1 0 3.9
+11 770 [1, 8, 9] CERTIFIED [True, 'ok'] -8 0 3.8
+11 2178 [1, 7, 11] ROOT_FAIL None 11/4 0 4.0
+11 1154 [1, 7, 10] CERTIFIED [True, 'ok'] -2/7 0 3.9
+11 1282 [1, 8, 10] CERTIFIED [True, 'ok'] -5 0 3.9
+11 2306 [1, 8, 11] CERTIFIED [True, 'ok'] 0 0 3.9
+11 1538 [1, 9, 10] CERTIFIED [True, 'ok'] -6 0 4.0
+11 2562 [1, 9, 11] CERTIFIED [True, 'ok'] -3 0 4.0
+11 3074 [1, 10, 11] CERTIFIED [True, 'ok'] -4 0 4.0
+11 28 [2, 3, 4] CERTIFIED [True, 'ok'] -17 0 4.1
+11 44 [2, 3, 5] CERTIFIED [True, 'ok'] -16 0 4.1
+11 268 [2, 3, 8] CERTIFIED [True, 'ok'] -7 0 4.0
+11 76 [2, 3, 6] CERTIFIED [True, 'ok'] -11 0 4.1
+11 524 [2, 3, 9] CERTIFIED [True, 'ok'] -17/2 0 4.2
+11 140 [2, 3, 7] CERTIFIED [True, 'ok'] -10 0 4.2
+11 1036 [2, 3, 10] CERTIFIED [True, 'ok'] -13 0 4.1
+11 2060 [2, 3, 11] CERTIFIED [True, 'ok'] -11 0 4.1
+11 52 [2, 4, 5] CERTIFIED [True, 'ok'] -19 0 4.1
+11 84 [2, 4, 6] CERTIFIED [True, 'ok'] -14 0 4.1
+11 148 [2, 4, 7] CERTIFIED [True, 'ok'] -13 0 4.1
+11 532 [2, 4, 9] CERTIFIED [True, 'ok'] -9/2 0 4.0
+11 276 [2, 4, 8] CERTIFIED [True, 'ok'] -10 0 4.2
+11 1044 [2, 4, 10] CERTIFIED [True, 'ok'] -6 0 4.2
+11 2068 [2, 4, 11] CERTIFIED [True, 'ok'] -19/3 0 4.2
+11 100 [2, 5, 6] CERTIFIED [True, 'ok'] -17 0 4.1
+11 164 [2, 5, 7] CERTIFIED [True, 'ok'] -16 0 4.0
+11 292 [2, 5, 8] CERTIFIED [True, 'ok'] -13 0 4.1
+11 548 [2, 5, 9] CERTIFIED [True, 'ok'] -28/5 0 4.0
+11 1060 [2, 5, 10] CERTIFIED [True, 'ok'] -33/7 0 4.1
+11 2084 [2, 5, 11] CERTIFIED [True, 'ok'] -4 0 3.6
+11 196 [2, 6, 7] CERTIFIED [True, 'ok'] -11 0 3.7
+11 324 [2, 6, 8] CERTIFIED [True, 'ok'] -10 0 3.7
+11 580 [2, 6, 9] CERTIFIED [True, 'ok'] -26/5 0 3.7
+11 1092 [2, 6, 10] CERTIFIED [True, 'ok'] -22/5 0 3.7
+11 388 [2, 7, 8] CERTIFIED [True, 'ok'] -7 0 3.6
+11 2116 [2, 6, 11] CERTIFIED [True, 'ok'] -3 0 3.8
+11 644 [2, 7, 9] CERTIFIED [True, 'ok'] -19/5 0 3.6
+11 1156 [2, 7, 10] CERTIFIED [True, 'ok'] -17/5 0 3.7
+11 2180 [2, 7, 11] CERTIFIED [True, 'ok'] 0 0 3.7
+11 772 [2, 8, 9] CERTIFIED [True, 'ok'] -11/2 0 3.7
+11 1284 [2, 8, 10] CERTIFIED [True, 'ok'] -6 0 3.7
+11 2308 [2, 8, 11] ROOT_FAIL None 11/7 0 3.6
+11 1540 [2, 9, 10] CERTIFIED [True, 'ok'] -7 0 3.6
+11 2564 [2, 9, 11] CERTIFIED [True, 'ok'] -4 0 3.7
+11 3076 [2, 10, 11] CERTIFIED [True, 'ok'] -5 0 3.7
+11 56 [3, 4, 5] CERTIFIED [True, 'ok'] -22 0 3.7
+11 88 [3, 4, 6] CERTIFIED [True, 'ok'] -17 0 3.7
+11 152 [3, 4, 7] CERTIFIED [True, 'ok'] -14 0 3.6
+11 280 [3, 4, 8] CERTIFIED [True, 'ok'] -23/2 0 3.7
+11 536 [3, 4, 9] CERTIFIED [True, 'ok'] -8 0 3.7
+11 1048 [3, 4, 10] CERTIFIED [True, 'ok'] -9 0 3.7
+11 168 [3, 5, 7] CERTIFIED [True, 'ok'] -19 0 3.6
+11 2072 [3, 4, 11] CERTIFIED [True, 'ok'] -28/3 0 3.8
+11 104 [3, 5, 6] CERTIFIED [True, 'ok'] -20 0 3.7
+11 296 [3, 5, 8] CERTIFIED [True, 'ok'] -16 0 3.7
+11 552 [3, 5, 9] CERTIFIED [True, 'ok'] -21/2 0 3.7
+11 1064 [3, 5, 10] CERTIFIED [True, 'ok'] -20/3 0 3.8
+11 2088 [3, 5, 11] CERTIFIED [True, 'ok'] -20/3 0 3.7
+11 200 [3, 6, 7] CERTIFIED [True, 'ok'] -18 0 3.8
+11 328 [3, 6, 8] CERTIFIED [True, 'ok'] -15 0 3.8
+11 584 [3, 6, 9] CERTIFIED [True, 'ok'] -14 0 3.8
+11 1096 [3, 6, 10] CERTIFIED [True, 'ok'] -20/3 0 3.8
+11 2120 [3, 6, 11] CERTIFIED [True, 'ok'] -16/3 0 3.8
+11 392 [3, 7, 8] CERTIFIED [True, 'ok'] -12 0 3.8
+11 648 [3, 7, 9] CERTIFIED [True, 'ok'] -9 0 3.9
+11 1160 [3, 7, 10] CERTIFIED [True, 'ok'] -34/5 0 3.9
+11 776 [3, 8, 9] CERTIFIED [True, 'ok'] -8 0 3.8
+11 2184 [3, 7, 11] CERTIFIED [True, 'ok'] -19/8 0 3.9
+11 1288 [3, 8, 10] CERTIFIED [True, 'ok'] -19/4 0 3.8
+11 2312 [3, 8, 11] CERTIFIED [True, 'ok'] -1/4 0 3.8
+11 1544 [3, 9, 10] CERTIFIED [True, 'ok'] -5 0 3.8
+11 2568 [3, 9, 11] CERTIFIED [True, 'ok'] 1/2 0 3.8
+11 3080 [3, 10, 11] CERTIFIED [True, 'ok'] -5 0 3.8
+11 176 [4, 5, 7] CERTIFIED [True, 'ok'] -20 0 3.7
+11 112 [4, 5, 6] CERTIFIED [True, 'ok'] -21 0 3.9
+11 304 [4, 5, 8] CERTIFIED [True, 'ok'] -17 0 3.8
+11 1072 [4, 5, 10] CERTIFIED [True, 'ok'] -11/2 0 3.7
+11 560 [4, 5, 9] CERTIFIED [True, 'ok'] -12 0 3.9
+11 2096 [4, 5, 11] CERTIFIED [True, 'ok'] -14/3 0 3.8
+11 208 [4, 6, 7] CERTIFIED [True, 'ok'] -21 0 3.9
+11 592 [4, 6, 9] CERTIFIED [True, 'ok'] -17 0 3.8
+11 1104 [4, 6, 10] CERTIFIED [True, 'ok'] -22/3 0 3.8
+11 336 [4, 6, 8] CERTIFIED [True, 'ok'] -18 0 4.0
+11 2128 [4, 6, 11] CERTIFIED [True, 'ok'] -9/4 0 3.9
+11 400 [4, 7, 8] CERTIFIED [True, 'ok'] -15 0 3.9
+11 656 [4, 7, 9] CERTIFIED [True, 'ok'] -12 0 3.9
+11 1168 [4, 7, 10] CERTIFIED [True, 'ok'] -11 0 3.8
+11 2192 [4, 7, 11] CERTIFIED [True, 'ok'] 1/3 0 4.0
+11 784 [4, 8, 9] CERTIFIED [True, 'ok'] -11 0 3.9
+11 1296 [4, 8, 10] CERTIFIED [True, 'ok'] -8 0 3.8
+11 1552 [4, 9, 10] CERTIFIED [True, 'ok'] -17/3 0 3.8
+11 2320 [4, 8, 11] CERTIFIED [True, 'ok'] -1 0 3.9
+11 2576 [4, 9, 11] CERTIFIED [True, 'ok'] -4/9 0 3.9
+11 3088 [4, 10, 11] CERTIFIED [True, 'ok'] -1 0 3.8
+11 352 [5, 6, 8] CERTIFIED [True, 'ok'] -19 0 3.7
+11 224 [5, 6, 7] CERTIFIED [True, 'ok'] -22 0 3.9
+11 608 [5, 6, 9] CERTIFIED [True, 'ok'] -18 0 3.8
+11 1120 [5, 6, 10] CERTIFIED [True, 'ok'] -29/3 0 3.7
+11 2144 [5, 6, 11] ROOT_FAIL None 29/17 0 3.8
+11 416 [5, 7, 8] CERTIFIED [True, 'ok'] -16 0 3.8
+11 672 [5, 7, 9] CERTIFIED [True, 'ok'] -99/7 0 4.0
+11 1184 [5, 7, 10] CERTIFIED [True, 'ok'] -86/7 0 3.9
+11 2208 [5, 7, 11] CERTIFIED [True, 'ok'] 1/3 0 4.0
+11 800 [5, 8, 9] CERTIFIED [True, 'ok'] -12 0 3.9
+11 1312 [5, 8, 10] CERTIFIED [True, 'ok'] -19/2 0 4.0
+11 1568 [5, 9, 10] CERTIFIED [True, 'ok'] -58/7 0 4.0
+11 2336 [5, 8, 11] CERTIFIED [True, 'ok'] -2 0 4.0
+11 2592 [5, 9, 11] CERTIFIED [True, 'ok'] -1 0 3.9
+11 3104 [5, 10, 11] CERTIFIED [True, 'ok'] 0 0 4.0
+11 448 [6, 7, 8] CERTIFIED [True, 'ok'] -21 0 3.9
+11 704 [6, 7, 9] CERTIFIED [True, 'ok'] -18 0 3.9
+11 1216 [6, 7, 10] CERTIFIED [True, 'ok'] -43/3 0 4.0
+11 832 [6, 8, 9] CERTIFIED [True, 'ok'] -17 0 3.8
+11 2240 [6, 7, 11] CERTIFIED [True, 'ok'] -2/3 0 4.0
+11 1344 [6, 8, 10] CERTIFIED [True, 'ok'] -23/2 0 4.0
+11 1600 [6, 9, 10] CERTIFIED [True, 'ok'] -31/3 0 3.9
+11 2368 [6, 8, 11] CERTIFIED [True, 'ok'] -3 0 4.0
+11 2624 [6, 9, 11] CERTIFIED [True, 'ok'] -2 0 4.0
+11 3136 [6, 10, 11] ROOT_FAIL None 1 0 4.0
+11 896 [7, 8, 9] CERTIFIED [True, 'ok'] -18 0 3.9
+11 1408 [7, 8, 10] CERTIFIED [True, 'ok'] -17 0 3.9
+11 2432 [7, 8, 11] CERTIFIED [True, 'ok'] -16/3 0 3.9
+11 1664 [7, 9, 10] CERTIFIED [True, 'ok'] -14 0 4.0
+11 2688 [7, 9, 11] CERTIFIED [True, 'ok'] -13/3 0 3.9
+11 1792 [8, 9, 10] CERTIFIED [True, 'ok'] -11 0 3.8
+11 3200 [7, 10, 11] CERTIFIED [True, 'ok'] -2 0 3.9
+11 3328 [8, 10, 11] CERTIFIED [True, 'ok'] -5 0 3.8
+11 2816 [8, 9, 11] CERTIFIED [True, 'ok'] -8 0 3.8
+11 3584 [9, 10, 11] CERTIFIED [True, 'ok'] -5 0 3.8
+wall 143.7

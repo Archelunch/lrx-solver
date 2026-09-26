@@ -1049,3 +1049,32 @@ so the sentence "certificates using them at m >= 9 stay conditional"
 refers to an empty set. The m = 8 uses (Sessions 8, 9, 10) now have
 complete written proofs, marked proof written, unreviewed. Step most
 worth a human reader's attention: note section 4.3 items 2-3.
+
+## Session 31: k=3 reversal class, word_W closed form (2026-09-26)
+
+Note `autoresearch/bound-m-260925/REVERSAL-K3.md`; words
+`checks/reversal-k3-words.json`; re-check `checks/reversal_k3.py`
+(orchestrator re-ran: 455 stored certified rows and 50 misses, word_W 122
+rows by evaluator + audit + replay at m <= 24 and 728 by replay +
+criterion (7) at m = 25..40, no problems); searches in
+`checks/reversal_k3_search/`. First survey of the reversal m..1 with three
+zero blocks, all C(m+1,3) masks up to rotation.
+
+| m | masks | certified | root | trees |
+|---|---|---|---|---|
+| 9 | 120 | 112 | 106 | 6 |
+| 10 | 165 | 148 | 147 | 1 |
+| 11 | 220 | 195 | 193 | 2 |
+
+The 50 misses all bind on the base (slope excess 0 at the root; minimum
+base excess 1 to 11/2, seven exactly 1); every miss has a zero in gap 0 or
+gap m; every mask with all three zeros in gaps 1..m-1 certifies at the
+root (the k=2 pattern again). Closed form word_W(m, g1, g2) for masks
+{0, g1, g2}: two-core word, cut (m-3)//4 + dt, core 1 on the gap-0 zero
+with m//2 + dk sweeps, core 2 at the complement middle, parameters
+(dt, dk, d1, d2) by m mod 4: (0,1,l,r), (0,0,r,l), (1,0,l,l), (-1,1,r,r);
+band (j = m//4, r2 = m - g2): m = 0 mod 4: 2 <= g1 <= j-1, r2 <= j-1;
+1: 3 <= g1 <= j-1, r2 <= j-1; 2: 2 <= g1 <= j-1, r2 <= j; 3: 3 <= g1 <= j,
+r2 <= j-1. Rule read off data, unproved. Not done: the m = 12 survey
+(only 3 word_W rows), refined-origin trees on the m = 10, 11 misses,
+three-core pools (a 3-mask diagnostic certified nothing).
