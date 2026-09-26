@@ -1184,3 +1184,34 @@ raw Dijkstra.
 Consequence: for the middle band at m = 12 the certificate must be a tree
 (refined origins), as at m = 9 {0,4}; root certificates are exactly at the
 boundary there.
+
+## Session 35: oracle-priced tree certificates; m = 11 {0,5} certified by a 4-leaf tree (2026-09-26)
+
+Note `autoresearch/bound-m-260925/MIDBAND-TREES-M12.md`; trees in
+`checks/midband-trees-m12.json`; re-check `checks/midband_trees.py`
+(orchestrator re-ran: ALL OK); oracle with refined origins in
+`negcert/tree/lrxtree.c` (`lrxfast.c` unchanged; 220 small cross-checks
+against raw Dijkstra, the Python A* and the Profile price; reproduces the
+m = 9 {0,4} tree with origin (2,1), lhs 4/5).
+
+- m = 11 {0,5}, root-refuted in Session 33, is CERTIFIED by a 4-leaf
+  tree: u0 = 1 (lhs -11); u0 = 2, u1 = 1 at origin (2,1) (-7); u0 >= 3,
+  u1 = 1 at origin (3,1) (1/2, needing a new oracle word (89, (12,3)));
+  u0 >= 2, u1 >= 2 at origin (2,1) (2/3). Evaluator CERTIFIED, audit
+  agrees, all six leaf words replay on their refined bases. Exact leaf
+  refutation on the way: on the stripe u0 >= 2, u1 = 1 with origin (2,1)
+  every word has B + 2 beta_0 >= 103 for picks (0,0) and (1,0), re-run
+  with identical expansion counts.
+- m = 12 {0,5}: BOUNDARY, 4 of 5 leaves certified (u0 = 1: -11; u0 >= 2,
+  u1 >= 2 at (2,1): -3; points u0 = 2, 3 with u1 = 1: -3, -1); open leaf
+  u0 >= 4, u1 = 1 at origin (3,1), lhs exactly 1: a certificate needs a
+  word with B + beta_0 <= 118 and every word found gives 119; capped exact
+  search proves only min F >= 105.
+- m = 12 {0,6}: BOUNDARY, 3 of 4 leaves certified (u0 = 1: -12; u0 >= 2,
+  u1 >= 2: -2; point u0 = 2: -4); open leaf u0 >= 3, u1 = 1, lhs 1: even
+  the point (0^3, 12..7, 0, 6..1) has no word of length <= 108 found (best
+  109 = T+1); exact search proves only >= 92. A search limit, not evidence
+  against the conjecture.
+- Origin (1,1) on both open m = 12 leaves is refuted by the stored root
+  certificates alone; origin (4,1) and deeper is out of reach at m = 12
+  (n would exceed the 16-cell packing).

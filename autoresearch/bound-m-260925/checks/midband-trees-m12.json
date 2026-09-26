@@ -1,0 +1,1374 @@
+{
+ "about": "Middle-band tree certificates and leaf refutations (MIDBAND-TREES-M12.md); re-check with checks/midband_trees.py",
+ "families": [
+  {
+   "family": "m11-mask33-labels11.10.9.8.7.6.5.4.3.2.1",
+   "m": 11,
+   "gaps": [
+    0,
+    5
+   ],
+   "labels": [
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "mask": 33,
+   "status": "CERTIFIED",
+   "lhs": [
+    "-11",
+    "-7",
+    "1/2",
+    "2/3"
+   ],
+   "leaves": [
+    {
+     "box": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       "inf"
+      ]
+     ],
+     "origins": [
+      1,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 75,
+     "lhs": "-11",
+     "support": [
+      {
+       "word": "XLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXRRXRXRXRXRXLXLXLXLXRXRXRXLXLXRXRR",
+       "weight": "1",
+       "base": 64,
+       "beta": [
+        15,
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 84,
+     "lhs": "-7",
+     "support": [
+      {
+       "word": "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+       "weight": "1",
+       "base": 77,
+       "beta": [
+        13,
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       3,
+       "inf"
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      3,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 93,
+     "lhs": "1/2",
+     "support": [
+      {
+       "word": "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLLXLXLXRRRXLXLXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLXLLXLXLXLX",
+       "weight": "3/4",
+       "base": 95,
+       "beta": [
+        8,
+        13
+       ]
+      },
+      {
+       "word": "LLXLXRXRXLXLLXLXRRXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRXRRXLXLXLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXR",
+       "weight": "1/4",
+       "base": 89,
+       "beta": [
+        12,
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       2,
+       "inf"
+      ],
+      [
+       2,
+       "inf"
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 93,
+     "lhs": "2/3",
+     "support": [
+      {
+       "word": "RXLXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXLXRRXLXLLXRX",
+       "weight": "2/3",
+       "base": 91,
+       "beta": [
+        7,
+        10
+       ]
+      },
+      {
+       "word": "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+       "weight": "1/3",
+       "base": 77,
+       "beta": [
+        13,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "output": {
+    "tree": {
+     "j": 0,
+     "t": 1,
+     "le": {
+      "words": [
+       "XLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXRRXRXRXRXRXLXLXLXLXRXRXRXLXLXRXRR"
+      ],
+      "origins": [
+       1,
+       1
+      ],
+      "picks": [
+       0,
+       0
+      ],
+      "weights": [
+       "1"
+      ]
+     },
+     "ge": {
+      "j": 1,
+      "t": 1,
+      "le": {
+       "j": 0,
+       "t": 2,
+       "le": {
+        "words": [
+         "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX"
+        ],
+        "origins": [
+         2,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ],
+        "weights": [
+         "1"
+        ]
+       },
+       "ge": {
+        "words": [
+         "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLLXLXLXRRRXLXLXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLXLLXLXLXLX",
+         "LLXLXRXRXLXLLXLXRRXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRXRRXLXLXLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXR"
+        ],
+        "origins": [
+         3,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ],
+        "weights": [
+         "3/4",
+         "1/4"
+        ]
+       }
+      },
+      "ge": {
+       "words": [
+        "RXLXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXLXRRXLXLLXRX",
+        "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX"
+       ],
+       "origins": [
+        2,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "weights": [
+        "2/3",
+        "1/3"
+       ]
+      }
+     }
+    },
+    "note": "m=11 zeros in gaps {0,5}: tree certificate, leaves priced by the exact oracle negcert/tree/lrxtree.c"
+   },
+   "tree_with_points": {
+    "j": 0,
+    "t": 1,
+    "le": {
+     "words": [
+      "XLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXRRXRXRXRXRXLXLXLXLXRXRXRXLXLXRXRR"
+     ],
+     "origins": [
+      1,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "points": [
+      [
+       64,
+       [
+        15,
+        0
+       ]
+      ]
+     ],
+     "source": "runs/leaf-m11-g5-o11-p00-t1-184848.json",
+     "weights": [
+      "1"
+     ]
+    },
+    "ge": {
+     "j": 1,
+     "t": 1,
+     "le": {
+      "j": 0,
+      "t": 2,
+      "le": {
+       "words": [
+        "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX"
+       ],
+       "origins": [
+        2,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "points": [
+        [
+         77,
+         [
+          13,
+          2
+         ]
+        ]
+       ],
+       "source": "runs/leaf-m11-g5-o21-p00-P-192020.json",
+       "weights": [
+        "1"
+       ]
+      },
+      "ge": {
+       "words": [
+        "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLLXLXLXRRRXLXLXRRXRXRXLXLXLXRRXLXRXRXRXLXLXLXLXLXLLXLLXLXLXLX",
+        "LLXLXRXRXLXLLXLXRRXLXRRXRXRXLXLXLXRXRXRXRRXRXRXRXRXRRXLXLXLXLXLXLXRRXRXRXLXLXLXRRXLXRXRXR"
+       ],
+       "origins": [
+        3,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "points": [
+        [
+         95,
+         [
+          8,
+          13
+         ]
+        ],
+        [
+         89,
+         [
+          12,
+          3
+         ]
+        ]
+       ],
+       "source": "runs/leaf-m11-g5-o31-p00-S2-192012.json",
+       "weights": [
+        "3/4",
+        "1/4"
+       ]
+      }
+     },
+     "ge": {
+      "words": [
+       "RXLXLLLLLXLLXRXRXRXLXLXLLXRXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRXRXLXLXLXLXLXLXLLLXLXLXRRXLXLLXRX",
+       "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX"
+      ],
+      "origins": [
+       2,
+       1
+      ],
+      "picks": [
+       0,
+       0
+      ],
+      "points": [
+       [
+        91,
+        [
+         7,
+         10
+        ]
+       ],
+       [
+        77,
+        [
+         13,
+         2
+        ]
+       ]
+      ],
+      "source": "runs/leaf-m11-g5-o21-p00-A-190911.json",
+      "weights": [
+       "2/3",
+       "1/3"
+      ]
+     }
+    }
+   },
+   "audit": true
+  },
+  {
+   "family": "m12-mask33-labels12.11.10.9.8.7.6.5.4.3.2.1",
+   "m": 12,
+   "gaps": [
+    0,
+    5
+   ],
+   "labels": [
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "mask": 33,
+   "status": "BOUNDARY",
+   "lhs": [
+    "-11",
+    "-3",
+    "-1",
+    "1",
+    "-3"
+   ],
+   "leaves": [
+    {
+     "box": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       "inf"
+      ]
+     ],
+     "origins": [
+      1,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 88,
+     "lhs": "-11",
+     "support": [
+      {
+       "word": "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLXLLLXLXLXLXLXLXRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR",
+       "weight": "1",
+       "base": 77,
+       "beta": [
+        16,
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 98,
+     "lhs": "-3",
+     "support": [
+      {
+       "word": "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+       "weight": "1",
+       "base": 95,
+       "beta": [
+        12,
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      3,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 108,
+     "lhs": "-1",
+     "support": [
+      {
+       "word": "LLXRXRXLLLXRXRXLLLXRXRXRXRXLXLLLLXRXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+       "weight": "1",
+       "base": 107,
+       "beta": [
+        12,
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       4,
+       "inf"
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      3,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 118,
+     "lhs": "1",
+     "support": [
+      {
+       "word": "LLXRXRXLLLXRXRXLLLXRXRXRXRXLXLLLLXRXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+       "weight": "5/12",
+       "base": 107,
+       "beta": [
+        12,
+        3
+       ]
+      },
+      {
+       "word": "RXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRRRRXRRXRXRXLXLXLXLXLXLXLXRXRXRXRXRXRXLXLXLXLXLXRRXRXRXLXLXLXRXRXRXRRRXRXL",
+       "weight": "7/12",
+       "base": 111,
+       "beta": [
+        8,
+        15
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       2,
+       "inf"
+      ],
+      [
+       2,
+       "inf"
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 108,
+     "lhs": "-3",
+     "support": [
+      {
+       "word": "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+       "weight": "1/2",
+       "base": 95,
+       "beta": [
+        12,
+        3
+       ]
+      },
+      {
+       "word": "LXRXLLXRXRXRRRXRRXRXRXRRXRXRRXRXRXRXRRXRXRXRXRXRXRXRXLXLXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRR",
+       "weight": "1/2",
+       "base": 105,
+       "beta": [
+        8,
+        7
+       ]
+      }
+     ]
+    }
+   ],
+   "output": {
+    "tree": {
+     "j": 0,
+     "t": 1,
+     "le": {
+      "words": [
+       "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLXLLLXLXLXLXLXLXRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR"
+      ],
+      "origins": [
+       1,
+       1
+      ],
+      "picks": [
+       0,
+       0
+      ],
+      "weights": [
+       "1"
+      ]
+     },
+     "ge": {
+      "j": 1,
+      "t": 1,
+      "le": {
+       "j": 0,
+       "t": 3,
+       "le": {
+        "j": 0,
+        "t": 2,
+        "le": {
+         "words": [
+          "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR"
+         ],
+         "origins": [
+          2,
+          1
+         ],
+         "picks": [
+          0,
+          0
+         ],
+         "weights": [
+          "1"
+         ]
+        },
+        "ge": {
+         "words": [
+          "LLXRXRXLLLXRXRXLLLXRXRXRXRXLXLLLLXRXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR"
+         ],
+         "origins": [
+          3,
+          1
+         ],
+         "picks": [
+          0,
+          0
+         ],
+         "weights": [
+          "1"
+         ]
+        }
+       },
+       "ge": {
+        "words": [
+         "LLXRXRXLLLXRXRXLLLXRXRXRXRXLXLLLLXRXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+         "RXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRRRRXRRXRXRXLXLXLXLXLXLXLXRXRXRXRXRXRXLXLXLXLXLXRRXRXRXLXLXLXRXRXRXRRRXRXL"
+        ],
+        "origins": [
+         3,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ]
+       }
+      },
+      "ge": {
+       "words": [
+        "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+        "LXRXLLXRXRXRRRXRRXRXRXRRXRXRRXRXRXRXRRXRXRXRXRXRXRXRXLXLXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRR"
+       ],
+       "origins": [
+        2,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "weights": [
+        "1/2",
+        "1/2"
+       ]
+      }
+     }
+    },
+    "note": "m=12 zeros in gaps {0,5}: tree certificate, leaves priced by the exact oracle negcert/tree/lrxtree.c"
+   },
+   "tree_with_points": {
+    "j": 0,
+    "t": 1,
+    "le": {
+     "words": [
+      "LXLXLXLXRRXRXLXLXRXRXRXLXLXLXLXLLLXLXLXLXLXLXRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR"
+     ],
+     "origins": [
+      1,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "points": [
+      [
+       77,
+       [
+        16,
+        1
+       ]
+      ]
+     ],
+     "source": "runs/leaf-m12-g5-o11-p00-t1-183646.json",
+     "weights": [
+      "1"
+     ]
+    },
+    "ge": {
+     "j": 1,
+     "t": 1,
+     "le": {
+      "j": 0,
+      "t": 3,
+      "le": {
+       "j": 0,
+       "t": 2,
+       "le": {
+        "words": [
+         "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR"
+        ],
+        "origins": [
+         2,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ],
+        "points": [
+         [
+          95,
+          [
+           12,
+           3
+          ]
+         ]
+        ],
+        "source": "runs/leaf-m12-g5-o21-p00-P-194224.json",
+        "weights": [
+         "1"
+        ]
+       },
+       "ge": {
+        "words": [
+         "LLXRXRXLLLXRXRXLLLXRXRXRXRXLXLLLLXRXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR"
+        ],
+        "origins": [
+         3,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ],
+        "points": [
+         [
+          107,
+          [
+           12,
+           3
+          ]
+         ]
+        ],
+        "source": "runs/leaf-m12-g5-o31-p00-P-194224.json",
+        "weights": [
+         "1"
+        ]
+       }
+      },
+      "ge": {
+       "words": [
+        "LLXRXRXLLLXRXRXLLLXRXRXRXRXLXLLLLXRXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+        "RXLXLXLXRXRXRXRXLXLXLXLXLXRXRXRXRXRXRRRRRXRRXRXRXLXLXLXLXLXLXLXRXRXRXRXRXRXLXLXLXLXLXRRXRXRXLXLXLXRXRXRXRRRXRXL"
+       ],
+       "origins": [
+        3,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "points": [
+        [
+         107,
+         [
+          12,
+          3
+         ]
+        ],
+        [
+         111,
+         [
+          8,
+          15
+         ]
+        ]
+       ],
+       "source": "runs/leaf-m12-g5-o31-p00-pool-194753.json",
+       "open": true
+      }
+     },
+     "ge": {
+      "words": [
+       "LXRXLLXRXLLXRXRXRXLXLLLXRXRXRXRXRRXRXRXRXRXRXRRXLXLXLXLXLXRXRXLXLLXRXRXRXRXLXLXLXLLXRXRXRXRXRXR",
+       "LXRXLLXRXRXRRRXRRXRXRXRRXRXRRXRXRXRXRRXRXRXRXRXRXRXRXLXLXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLLXRXRXRXRXRXRR"
+      ],
+      "origins": [
+       2,
+       1
+      ],
+      "picks": [
+       0,
+       0
+      ],
+      "points": [
+       [
+        95,
+        [
+         12,
+         3
+        ]
+       ],
+       [
+        105,
+        [
+         8,
+         7
+        ]
+       ]
+      ],
+      "source": "runs/leaf-m12-g5-o21-p00-B-191323.json",
+      "weights": [
+       "1/2",
+       "1/2"
+      ]
+     }
+    }
+   },
+   "audit": null
+  },
+  {
+   "family": "m12-mask65-labels12.11.10.9.8.7.6.5.4.3.2.1",
+   "m": 12,
+   "gaps": [
+    0,
+    6
+   ],
+   "labels": [
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "mask": 65,
+   "status": "BOUNDARY",
+   "lhs": [
+    "-12",
+    "-4",
+    "1",
+    "-2"
+   ],
+   "leaves": [
+    {
+     "box": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       "inf"
+      ]
+     ],
+     "origins": [
+      1,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 88,
+     "lhs": "-12",
+     "support": [
+      {
+       "word": "XLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR",
+       "weight": "1",
+       "base": 76,
+       "beta": [
+        18,
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 98,
+     "lhs": "-4",
+     "support": [
+      {
+       "word": "LXRXLLXRXLLXRXLLXRXLLXRXRRXRXLXLXRXRXRXLXLXLXLLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX",
+       "weight": "1",
+       "base": 94,
+       "beta": [
+        16,
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       3,
+       "inf"
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "origins": [
+      3,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 108,
+     "lhs": "1",
+     "support": [
+      {
+       "word": "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLXLLXLXLXRRRXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLXLLXLXLXLX",
+       "weight": "7/10",
+       "base": 109,
+       "beta": [
+        8,
+        13
+       ]
+      },
+      {
+       "word": "RXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRRRXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLLLXLXLXLXLXLXLXRRXRXLXLXRXRX",
+       "weight": "3/10",
+       "base": 109,
+       "beta": [
+        14,
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "box": [
+      [
+       2,
+       "inf"
+      ],
+      [
+       2,
+       "inf"
+      ]
+     ],
+     "origins": [
+      2,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "T": 108,
+     "lhs": "-2",
+     "support": [
+      {
+       "word": "RXLXRRXLXRRRXLXLXLXLXLLLXLXLXLXLLXLXRRXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLLXLXLXLXRX",
+       "weight": "1",
+       "base": 99,
+       "beta": [
+        10,
+        7
+       ]
+      }
+     ]
+    }
+   ],
+   "output": {
+    "tree": {
+     "j": 0,
+     "t": 1,
+     "le": {
+      "words": [
+       "XLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR"
+      ],
+      "origins": [
+       1,
+       1
+      ],
+      "picks": [
+       0,
+       0
+      ],
+      "weights": [
+       "1"
+      ]
+     },
+     "ge": {
+      "j": 1,
+      "t": 1,
+      "le": {
+       "j": 0,
+       "t": 2,
+       "le": {
+        "words": [
+         "LXRXLLXRXLLXRXLLXRXLLXRXRRXRXLXLXRXRXRXLXLXLXLLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX"
+        ],
+        "origins": [
+         2,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ],
+        "weights": [
+         "1"
+        ]
+       },
+       "ge": {
+        "words": [
+         "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLXLLXLXLXRRRXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLXLLXLXLXLX",
+         "RXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRRRXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLLLXLXLXLXLXLXLXRRXRXLXLXRXRX"
+        ],
+        "origins": [
+         3,
+         1
+        ],
+        "picks": [
+         0,
+         0
+        ]
+       }
+      },
+      "ge": {
+       "words": [
+        "RXLXRRXLXRRRXLXLXLXLXLLLXLXLXLXLLXLXRRXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLLXLXLXLXRX"
+       ],
+       "origins": [
+        2,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "weights": [
+        "1"
+       ]
+      }
+     }
+    },
+    "note": "m=12 zeros in gaps {0,6}: tree certificate, leaves priced by the exact oracle negcert/tree/lrxtree.c"
+   },
+   "tree_with_points": {
+    "j": 0,
+    "t": 1,
+    "le": {
+     "words": [
+      "XLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRRXRXRXRXRXLXLXLXLXRRXRXLXLXRXRXR"
+     ],
+     "origins": [
+      1,
+      1
+     ],
+     "picks": [
+      0,
+      0
+     ],
+     "points": [
+      [
+       76,
+       [
+        18,
+        0
+       ]
+      ]
+     ],
+     "source": "runs/leaf-m12-g6-o11-p00-t1-194216.json",
+     "weights": [
+      "1"
+     ]
+    },
+    "ge": {
+     "j": 1,
+     "t": 1,
+     "le": {
+      "j": 0,
+      "t": 2,
+      "le": {
+       "words": [
+        "LXRXLLXRXLLXRXLLXRXLLXRXRRXRXLXLXRXRXRXLXLXLXLLLLXLXLXLXLXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRX"
+       ],
+       "origins": [
+        2,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "points": [
+        [
+         94,
+         [
+          16,
+          2
+         ]
+        ]
+       ],
+       "source": "runs/leaf-m12-g6-o21-p00-P-194224.json",
+       "weights": [
+        "1"
+       ]
+      },
+      "ge": {
+       "words": [
+        "RXLXLXLXRXRXRXRXRXLXLXLXLXLXLLLXLXLXLLXLXLXRRRXLXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLXLLXLXLXLX",
+        "RXLXLXRRRXLXLXRRRXLXLXRRRXLXLXRRRRRXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLLLXLXLXLXLXLXLXRRXRXLXLXRXRX"
+       ],
+       "origins": [
+        3,
+        1
+       ],
+       "picks": [
+        0,
+        0
+       ],
+       "points": [
+        [
+         109,
+         [
+          8,
+          13
+         ]
+        ],
+        [
+         109,
+         [
+          14,
+          3
+         ]
+        ]
+       ],
+       "source": "runs/leaf-m12-g6-o31-p00-pool-194329.json",
+       "open": true
+      }
+     },
+     "ge": {
+      "words": [
+       "RXLXRRXLXRRRXLXLXLXLXLLLXLXLXLXLLXLXRRXLXRRXRXRXRXLXLXLXLXRRXRXLXLXRXRXRXRXLXLXLXLXLXLXLLLXLXLXLXRX"
+      ],
+      "origins": [
+       2,
+       1
+      ],
+      "picks": [
+       0,
+       0
+      ],
+      "points": [
+       [
+        99,
+        [
+         10,
+         7
+        ]
+       ]
+      ],
+      "source": "runs/leaf-m12-g6-o21-p00-B-191318.json",
+      "weights": [
+       "1"
+      ]
+     }
+    }
+   },
+   "audit": null
+  }
+ ],
+ "refutations": [
+  {
+   "family": "11 {0,5}",
+   "m": 11,
+   "g": 5,
+   "origin": [
+    2,
+    1
+   ],
+   "picks": [
+    0,
+    0
+   ],
+   "box": [
+    [
+     2,
+     "inf"
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "lambda": [
+    "2",
+    "0"
+   ],
+   "W": [
+    1,
+    2,
+    0
+   ],
+   "K": 103,
+   "classes": [
+    [
+     [
+      11,
+      10,
+      9
+     ],
+     [
+      8,
+      7,
+      6
+     ],
+     [
+      5,
+      4,
+      3
+     ],
+     [
+      2,
+      1
+     ]
+    ]
+   ],
+   "expanded": "52824541",
+   "source": "runs/leaf-m11-g5-o21-p00-R-2inf_11-195149.json",
+   "statement": "every accepted sorting word of the refined base (origin [2, 1], picks [0, 0]) has B + 2 beta_0 >= 103 = T(l)+1+lambda.s: no certificate for this leaf with this origin and these picks"
+  },
+  {
+   "family": "11 {0,5}",
+   "m": 11,
+   "g": 5,
+   "origin": [
+    2,
+    1
+   ],
+   "picks": [
+    1,
+    0
+   ],
+   "box": [
+    [
+     2,
+     "inf"
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "lambda": [
+    "2",
+    "0"
+   ],
+   "W": [
+    1,
+    2,
+    0
+   ],
+   "K": 103,
+   "classes": [
+    [
+     [
+      11,
+      10,
+      9
+     ],
+     [
+      8,
+      7,
+      6
+     ],
+     [
+      5,
+      4,
+      3
+     ],
+     [
+      2,
+      1
+     ]
+    ]
+   ],
+   "expanded": "52487139",
+   "source": "runs/leaf-m11-g5-o21-p10-A-191111.json",
+   "statement": "every accepted sorting word of the refined base (origin [2, 1], picks [1, 0]) has B + 2 beta_0 >= 103 = T(l)+1+lambda.s: no certificate for this leaf with this origin and these picks"
+  }
+ ]
+}

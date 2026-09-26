@@ -47,7 +47,9 @@ m = 10 {0,5} and m = 11 {0,6} at the root and refuted m = 11 {0,5}
 exactly; the earlier pool-based "base excess" figures are not lower
 bounds. A C port of the oracle (Session 34) refuted both m = 12
 middle-band roots exactly (root LP value T+1), so trees are required
-there; oracle-priced tree column generation is in progress. Campaign 3
+there; oracle-priced tree column generation (Session 35) certified m = 11
+{0,5} with a 4-leaf tree and left both m = 12 families BOUNDARY with one
+open leaf each at lhs exactly 1. Campaign 3
 launched 2026-09-26 13:29 local (approved hash ebac59b3..., guard
 matched, about $0.03 per call); seed 1 done ($4.04), kill check CONTINUE
 (AdaEvolve 159 vs seed 157 on validation); seeds 2-3 await re-approval of
