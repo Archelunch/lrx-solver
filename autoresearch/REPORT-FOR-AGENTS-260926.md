@@ -143,5 +143,6 @@ missed by every arm at a stable gap of 5.
 
 Spend to date on live model calls: about $20 through the 2026-09-25 report,
 plus $3.45 (campaign 1) and about $7 (campaign 2) this cycle; campaign 3 is
-prepared but not spent ($15 cap). Nothing was committed or pushed for
-campaign 3; the m=12 holdout file for it has never been opened.
+prepared but not spent ($15 cap). The campaign 3 preparation is committed
+(nothing pushed); no provider call was made and the m=12 holdout file for
+it has never been opened.
