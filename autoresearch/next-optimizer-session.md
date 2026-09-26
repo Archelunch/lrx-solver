@@ -1,27 +1,35 @@
-# Next LRX optimizer session: proof-oriented search
+# Next session (written 2026-09-26 evening)
 
-**Objective.** Demonstrate that native GEPA, AdaEvolve, or EvoX can make an attributable contribution to an exact LRX proof. The ambition is the open radius conjecture; a successful next session may instead produce a new independently checked infinite-family certificate or reusable lemma. Do not equate finite coverage, a promising score, or optimizer activity with that proof.
+Read HANDOFF.md top section, research/claims.md Sessions 24-36, and
+autoresearch/SESSION-REPORT-260926.md first.
 
-## Starting evidence and boundary
+Ordered next steps:
+1. Human review of the four flagged proof steps (LEMMA1-GENERAL-M 4.1,
+   LEMMA34-GENERAL-M 4.3 items 2-3, WORDC-PROOF Lemma E, WORDR1-PROOF
+   Lemma P). Until then every "proved" line stays "proof written,
+   unreviewed". Send lrx-findings-260926-v4.zip to the group.
+2. Campaign 3 seeds 2-3: get "approve <hash>" for the current
+   `python -m integrations.bound_c3 approval-hash --campaign-dir
+   autoresearch/bound-m-c3-260926` (ca4ee0f0... at hand-off), then
+   `bash autoresearch/bound-m-c3-260926/run-one-c3.sh <arm> <seed>` for
+   seeds 2, 3 (8 runs, about $8), then
+   `python -m integrations.bound_c3_finalize finalize --run-dir
+   autoresearch/bound-m-c3-260926`. Run with the machine otherwise idle
+   (Session 35 caveat: oracle load caused evaluation timeouts). Record in
+   claims as Session 37 with the seed-relative gain.
+3. Middle band m = 13, 14 with the C oracle on a bigger machine (needs
+   about 12-16 GB for the abstraction tables), or extend lrxtree_wide
+   with a coarser abstraction. Target: the odd-centre conjecture (root
+   impossible for {0,(m-1)/2}) at m = 13, and tree closures.
+4. Prove word_G from the 28 hypotheses in WORDR1-PROOF.md section 11
+   (needs a partial-carry sweep lemma). Then word_M, word_W.
+5. Generalise: a lower-bound lemma on label crossings of a cut zero (2
+   per crossing for carries, 3 for walks) would turn the refutations into
+   theorems for whole bands.
+6. Engines: only launch on a task where the seed is strong and the
+   holdout is unseen m; measure against the seed, not the naive control.
 
-Read `research/problem.md`, `research/claims.md`, `ROADMAP.md`, `autoresearch/loop-260924-protocol/CONTINUATION.md`, and `publication/lrx-2026-09-24-certificates/REPORT.md`. The public package proves two named family results: a six-block family for every positive length vector and a five-block family when its first zero block has length at least two. Full `m=8` and the general conjecture remain open. Historical native paid arms did not improve the 14/16 seed; the later 15/16 deterministic all-cuts control was post-hoc. In the focused continuation, live GEPA accepted no proposal because the completed response exceeded broker reservation. Offline receipt extraction and exact audit did yield one fresh six-block certificate. This shows useful model discovery, not a live native GEPA win or an engine ranking. The 16-case one-shot confirmation was consumed and must never become proposer or development feedback.
-
-The current hard development case is `k5-mask302-order15713`. The 123-profile finite pool has optimum weighted base `1223/20 = 61 + 3/20` under slopes at most six, so the uniform all-positive-length criterion is still missed. Its tight dual has multipliers `(0,11/5,1/2,19/20,3/4)` and intercept `1751/20`. A new direct profile with `B + μ·β < 1751/20` is necessary to improve this *pool's* optimum; it is not sufficient to certify the family. A successful exact mixture needs base `<61` with every slope `<=6`, or a separately proved argument beyond one uniform mixture. Keep the conditional `a>=2` result distinct from the missing `a=1` case.
-
-## One bounded experiment, then adapt
-
-1. **Preflight without provider calls.** Start from the published `main` branch. Verify the trusted lock, source commit, frozen development hashes, exact evaluator, sandbox, archive lineage, and ledger. Reconcile the conservative `$0.9204712` charged against the prior `$5` session cap and the estimated `$16.6923578` remaining from the older `$50` allocation; unknown provider billing on timed-out requests remains unknown. Set the *new* cap and request ceiling before launch. Previous user approval covered the reviewed Grok payload and isolated generated-code execution; check the actual new payload and scope against that receipt before reuse. Preserve all existing run files and the publication package.
-2. **Fix transport as a narrow prerequisite.** The response with 43,919 reasoning tokens took 533.977 seconds and exceeded the reservation. Estimate an allowance from observed usage that fits the selected cap, check whether the provider offers an enforceable reasoning/total-token limit before claiming a hard cap, set a realistic wall timeout, and stream durable partial and terminal receipts. A broker fail-stop prevents further requests after an overrun; it cannot undo the cost of a response already produced. A recovered complete response may be evaluated offline with that label; never count it as a live accepted proposal. Preflight proposal schema and bounded output before costly evaluation. Report invalid and truncated candidates as attempted failures; do not silently repair their output into valid candidates.
-3. **Freeze a small matched pilot.** Use the same seed, development cases, fixed catalog, model, reasoning setting, allowed candidate surface, total upstream attempts, dollar ceiling, verifier calls, and wall limit for sequential refinement and the selected native optimizer arm. Budget for final exact audit. If the remaining cap supports only one native arm, choose GEPA first because its offline graded selection and receipt recovery expose a concrete improvement path; rotate to AdaEvolve/EvoX only after productive proposals exist. Do not force three full arms or repeated seeds into a tiny budget. Freeze a new untouched structural holdout's membership and hashes **before** live search, excluding all earlier development and consumed confirmation cases. Evaluate it only once, after finalist source hashes are frozen; never send its outcomes to model, archive retrieval, or engine state.
-4. **Make feedback mathematical.** Accept a candidate into the durable archive only after strict isolated execution, sorting-word replay, direct profile recomputation, and exact rational mixture evaluation. Store source hash, parent, diff, selected archive IDs, raw word and zero-block traces, case hashes, evaluator version, and failure reason. Retain distinct nondominated or negative-dual-cost profiles even when family coverage ties; deduplicate repeated sources and profiles. Give proposers a compact development-only packet: active dual, two or three complementary support profiles, current best gap, and a specific failed construction. Reward exact new family certificates first, then LP gap reduction, negative reduced cost, profile diversity, and valid coverage. Label all secondary scores as search signals.
-5. **Test mechanisms, not names.** GEPA hypothesis: reflective proposal selection retains complementary words across development families; log parent, reflection, candidate selection, and graded improvement. AdaEvolve hypothesis: separate islands for distinct word constructors prevent collapse to near-identical cuts; log island assignment, migration, diversity, and whether a useful profile survives. EvoX hypothesis: strategy changes redirect search after measured stalls; log proposed diff, validation, adoption, subsequent candidate distribution, and gain. A mock smoke or a strategy proposal alone does not count as mechanism success. First gate: one valid native proposal, actual selection/allocation/adoption, and a second proposal responding to that state. Then continue a bounded multi-step evolution, measuring whether the mechanism changes search outcomes. Keep engine edits small and tied to observed failures. Delegate implementation to a `gpt-6-sol` agent; the root orchestrates frozen protocol, evaluator trust, and final claim audit.
-
-## Evaluation and stop rules
-
-Use cached staged evaluation only when cache keys include source/content hash, case hash, baseline/catalog hash, evaluator version, and scoring contract. First run a cheap validity and unit-word screen; spend full exact LP and nonunit expansion checks on promising distinct profiles; perform final whole-development evaluation on each finalist. Cache hits save time but do not erase actual attempted calls from denominators. `NO_CERTIFICATE` is not infeasibility. Resource caps produce `INCOMPLETE`, never infinity.
-
-Report attempts, valid distinct proposals, invalid/timeouts/over-reservations, selected candidates, native selection or island/strategy traces, exact certificates and LP gaps, wall time, verifier CPU, model tokens/calls, and conservative/accounted dollars. Success has three separate levels: **operational** (valid evolving candidates and observable native mechanism), **mathematical** (new exact family certificate or lemma), **comparative** (attributable gain over matched sequential and deterministic controls). If pilot data are sparse, stop and report an underpowered pilot. After finalist source hashes are frozen, use the fresh holdout once; independently replay every claimed new word, rational mixture, and literal nonunit expansion. A general LRX claim requires a complete proof over all states, not a coverage extrapolation.
-
-## Safe first commands
-
-From repository root: `git status --short --branch`; `python tools/orchestrator.py trusted`; `python publication/lrx-2026-09-24-certificates/verify.py`. Then inspect broker ledgers and frozen manifests read-only. Do not start model calls from historical launch scripts: they contain old caps and old payloads. No Linear issue, PR, or MLflow run exists for this handoff.
+Rules unchanged: never push or call a provider without explicit human
+approval; first prompt and hash shown before launch; holdout one-shot;
+claims wording (computed / replicated / certified conditional / proof
+written unreviewed / conjecture / negative).

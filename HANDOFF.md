@@ -2,6 +2,58 @@
 
 General conjecture and full m=8 remain open. README and repository summaries stay English.
 
+## Latest iteration: proof program day (2026-09-26, Sessions 17-36)
+
+State at hand-off (commit after f85acde; nothing pushed by the agent; all
+workers and background processes stopped).
+
+Proved, model-written, mechanically checked, NOT human-reviewed:
+- word_C length and slope formulas (WORDC-PROOF.md, Session 25) and word_R1
+  (WORDR1-PROOF.md, Session 28).
+- Lemma 1, (4)-(6), criteria (7), (8), Lemma 3, formula (11), Lemma 4 at
+  general m (LEMMA1-GENERAL-M-260926.md, LEMMA34-GENERAL-M-260926.md,
+  Sessions 27, 30; 21,896 exact table points, 0 violations).
+- Consequence: d((0^a, m..1, 0^b)) <= T_m(n) and the same with zeros in
+  gaps {1, m}, for all m >= 9 and all a, b >= 1: complete written chains.
+  Review requested from the group for LEMMA1 4.1, LEMMA34 4.3 items 2-3,
+  WORDC Lemma E, WORDR1 Lemma P.
+
+Exact, unconditional: (10,2), (11,2) tables (radius = T, two extremal
+states); (9,6) radius 79 < 80; portable table-free refutations of root
+certificates for m = 9 {0,4}, 11 {0,5}, 12 {0,5}, 12 {0,6} (negcert/,
+negcert/fast/; the m = 12 pair by the C checker only).
+
+Certified (conditional on Lemma 1 / (7)/(8) at general m, which is now
+written up): word_G outer band to m = 80; word_M band ends m = 14..60;
+word_W k=3 band to m = 40; all k=2 masks at m = 9, 54/55 at 10, 61/66 at
+11, 74/78 at 12 plus the tree closures m = 11 {0,5}, m = 12 {0,5}, {0,6}
+(Sessions 35, 36); k=3: 455 at m = 9..11; interior masks: every k=2, 3
+mask at the root (837); campaign-2 finalist 148/165 at m = 12.
+
+Tools that now matter: exact oracle as column-generation pricing
+(negcert_general.py; lrxfast.c 12x faster; lrxtree.c / lrxtree_wide.c
+with refined origins, n <= 20). Each instance ends CERTIFIED or exactly
+refuted. Pool-based "base excess" numbers from Sessions 23, 26 are not
+lower bounds (Session 33 correction).
+
+Campaign 3 (autoresearch/bound-m-c3-260926/, tree contract, $15 cap):
+seed 1 done ($4.04): AdaEvolve 287 vs seed 283 on development, validation
+AdaEvolve 159 vs seed 157, kill check CONTINUE (KILL-CHECK-S1-NOTE.md:
+the seed's in-run 111 was a load artefact). Seeds 2-3 not launched: two
+robustness fixes (evaluator kill path, kill-check path resolution)
+changed the approval hash; current hash ca4ee0f0... needs a human
+"approve". Finalize (bound_c3_finalize.py) not run; holdout untouched.
+
+Packages: lrx-findings-260926-v4.zip (pinned 8eaf639, 13 standalone
+checks). Group review (Session 24) confirmed stored certificates and asked
+for what Sessions 25-30 delivered. Shareable page
+https://claude.ai/artifact/JhdGW4ey2UsJWDtGwDccK2 (through Session 30).
+
+Open: middle band m = 13, 14 (oracle out of memory here; intervals in
+MIDBAND-M12-14.md); word_G / word_W / word_M unproved; k=4 interior
+slope-bound misses; general conjecture. See
+autoresearch/next-optimizer-session.md for the ordered next steps.
+
 ## Latest iteration: tree certificates, construction note, broker retry (2026-09-26)
 
 Offline. bound-eval-3 (`integrations/bound3_*.py`, `tests/test_search_bound3.py`,
