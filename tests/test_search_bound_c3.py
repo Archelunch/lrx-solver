@@ -40,7 +40,10 @@ class Configs(unittest.TestCase):
         self.assertEqual(c3.pool(bc), 360)
         self.assertEqual(sum(cc['engines'][a]['max_requests'] for a in c3.ARMS) * len(cc['seeds']), 360)
         self.assertIn('broker-ledger-bound-c3', bc['ledger'])
-        self.assertFalse((CAMP / 'payload-approved.sha256').exists())
+        approved = CAMP / 'payload-approved.sha256'
+        if approved.exists():  # the human approved on 2026-09-26; the file must match the payload hash
+            from integrations import bound_c3 as C3
+            self.assertEqual(approved.read_text().split()[0], C3.approval_hash(CAMP))
 
     def test_sky_knobs_carry_the_tree_system_prompt(self):
         cc, bc = c3.campaign(CAMP)

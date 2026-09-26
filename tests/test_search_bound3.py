@@ -181,3 +181,16 @@ class Sandbox(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class KillGroup(unittest.TestCase):
+    def test_kill_group_swallows_eperm_and_esrch(self):
+        from integrations import bound3_evaluator as B3
+
+        class Proc:
+            pid = 1  # signalling pid 1's group raises EPERM for a normal user
+
+            def kill(self):
+                raise ProcessLookupError
+
+        B3._kill_group(Proc())  # must not raise

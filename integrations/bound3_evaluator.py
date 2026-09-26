@@ -72,6 +72,16 @@ def evaluator_hash():
 
 
 # ------------------------------------------------------------- sandbox run (bound_evaluator.run_batch, new worker)
+
+def _kill_group(proc):
+    """Kill the worker's process group; never raise. Under Seatbelt the group can hold a member the
+    caller may not signal (EPERM), and the group may already be gone (ESRCH)."""
+    for fn in (lambda: os.killpg(proc.pid, signal.SIGKILL), proc.kill):
+        try:
+            fn()
+        except (ProcessLookupError, PermissionError, OSError):
+            pass
+
 def run_batch(source, families, per_family=E.PER_FAMILY_CPU, require_os_sandbox=True,
               per_family_wall=E.PER_FAMILY_WALL):
     wall = per_family_wall * len(families) + E.IMPORT_CPU * 5 + 5.0
@@ -101,10 +111,7 @@ def run_batch(source, families, per_family=E.PER_FAMILY_CPU, require_os_sandbox=
             try:
                 killed, cpu = E._reap(proc, wall)
             finally:
-                try:
-                    os.killpg(proc.pid, signal.SIGKILL)
-                except ProcessLookupError:
-                    pass
+                _kill_group(proc)
         meta = {'seconds': time.monotonic() - start, 'cpu_seconds': cpu, 'isolation': isolation}
         log = (scratch / 'stderr').read_bytes()[:4096].decode('utf-8', 'replace')
         if 'sandbox_apply: Operation not permitted' in log:
