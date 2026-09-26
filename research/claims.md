@@ -784,3 +784,47 @@ Since the table-fed tree control (Session 17) certifies m = 9 {0,4} from
 BFS words with origins (3,1) and (5,1), that miss is a word-generation
 limit; the next step is to mine the (9,2), (10,2), (11,2) tables for the
 structure of shortest refined-origin words in the middle band.
+
+## Session 23: middle band mined from exact tables; first exact negative for a root leaf (2026-09-26)
+
+Note `autoresearch/bound-m-260925/REVERSAL-MIDBAND.md`; data
+`checks/reversal-midband-words.json`; re-check `checks/reversal_midband.py`
+(orchestrator re-ran with `--tables`: 14 certificates CERTIFIED, audit ok,
+replay ok, word_S re-derived letter by letter, exact negative reproduced,
+no problems); searches in `checks/reversal_midband_search/`.
+
+- Exact negative (computed; the first for a root leaf): for m = 9, zeros
+  in gaps {0,4}, every sorting word of the unit base has B + 3 beta_0 >= 75
+  (exact A* over all reduced words with Lemma 1 bookkeeping, heuristic from
+  the stretched-zero tables (9,3)..(9,6), matched against brute force on 25
+  small cases at m = 5, 6; 8760 nodes), while a certifying root mixture
+  needs < 74. The exact optimum of the criterion (8) left side over all
+  words is 2; witness word B = 54, slopes (7,7). No root-leaf certificate
+  exists for that family; the tree with leaves u0 = 1 and u0 >= 2 (origin
+  (2,1), exact optimum 4/5) certifies it. Table distances alone never
+  refute a leaf (every distance is <= T(u)); the refutation needs the
+  base-slope trade-off. Caveat: exactness rests on the oracle's
+  completeness over reduced words.
+- New m = 9 certificates: {0,5} at the root (length T-1, slopes (7,4)),
+  {0,4} by the two-leaf tree, {0,3} and {0,6} at the root; so every k=2
+  mask of the m = 9 reversal is now certified (with Sessions 21, 22).
+- Exact data: unit distances of all band masks at m = 9, 10, 11 lie 7..11
+  below T; every shortest word loads beta_0 = 9..16 on the gap-0 zero and
+  nearly nothing on the other; along u1 the distance does not grow, along
+  u0 it grows by 10 per zero at m = 9 {0,4} against 7 allowed; the state
+  (0^4, 9..6, 0, 5..1) is at distance exactly T.
+- Structure: certifying middle-band words split the crossings between
+  the two zeros, i.e. two independent one-zero reversals on disjoint
+  blocks; the two-core pool always loaded the gap-0 zero. Generator
+  word_S(m, g, b, ds, schedule, fin) (schedules rr(lr)*, chosen per
+  (m, g), so not a closed form) certifies at the root: m = 9 {0,5},{0,6};
+  10 {0,6},{0,7}; 11 {0,7},{0,8}; 12 {0,7},{0,8}; 13 {0,8},{0,9}; nothing
+  at m = 14..16 (gaps 1/10, 1, 2) because it walks the zero at 3 per
+  crossing (beta_0 = 3b-2); the carry-across variant at 2 per crossing, as
+  in word_C, was not written.
+- Not certified: m = 10 {0,5} (leaves u0 in [1,2] and u0 >= 5 pass, u0 =
+  3, 4 fail with every word tried; no (10,4) table); m = 11 {0,4},{0,5},
+  {0,6}; m = 12 {0,5},{0,6}; m = 13 {0,5},{0,6},{0,7}; the whole band at
+  m = 14..16. Base binds in every miss. Exact root and (2,1) optima at
+  m = 10 unknown (1.5M-node cap); m = 9 origins (1,2), (2,2) hit the cap;
+  picks first-atom only.

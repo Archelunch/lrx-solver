@@ -1,0 +1,4 @@
+  seed front 14
+  it 0 pool=14 value=7/3 lam=['5/2', '1/6'] F=71 LB=1/3 nodes=1413993 word B=48 beta=[9, 3]
+  it 1 pool=15 value=2 lam=['3', '0'] F=75 LB=2 nodes=8760 word B=54 beta=[7, 7]
+RESULT 9 4 (1, 1) wid -1 d 43 T 52 value 2 LB 2 lam ['3', '0'] cpu 30.8

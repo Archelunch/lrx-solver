@@ -1,0 +1,5 @@
+  seed front 16
+  it 0 pool=16 value=2 lam=['2', '0'] F=73 LB=0 nodes=295 word B=55 beta=[9, 3]
+  it 1 pool=17 value=4/3 lam=['8/3', '0'] F=233/3 LB=0 nodes=2619 word B=67 beta=[4, 10]
+  it 2 pool=18 value=4/5 lam=['12/5', '0'] F=383/5 LB=4/5 nodes=2873 word B=67 beta=[4, 10]
+RESULT 9 4 (2, 1) wid -1 d 53 T 59 value 4/5 LB 4/5 lam ['12/5', '0'] cpu 3.0

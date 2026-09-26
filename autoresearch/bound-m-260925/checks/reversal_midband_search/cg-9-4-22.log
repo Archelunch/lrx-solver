@@ -1,0 +1,11 @@
+  seed front 14
+Traceback (most recent call last):
+  File "/private/tmp/claude-502/-Users-pavluhin-Documents-Projects-lrx-lab/963a3e98-bd38-4e90-ab10-89151e23a5b4/scratchpad/mb/cg.py", line 13, in <module>
+    res = column_generation(st, picks, s, T, {} if wid < 0 else {0: wid}, tb, pool, log=lambda *a: print(*a, flush=True), maxnodes=int(__import__("os").environ.get("MAXN","12000000")))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-502/-Users-pavluhin-Documents-Projects-lrx-lab/963a3e98-bd38-4e90-ab10-89151e23a5b4/scratchpad/mb/mb.py", line 324, in column_generation
+    cost, word, nodes = astar(state, picks, wB, wb, tb, maxnodes=maxnodes)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-502/-Users-pavluhin-Documents-Projects-lrx-lab/963a3e98-bd38-4e90-ab10-89151e23a5b4/scratchpad/mb/mb.py", line 225, in astar
+    raise RuntimeError('node limit')
+RuntimeError: node limit

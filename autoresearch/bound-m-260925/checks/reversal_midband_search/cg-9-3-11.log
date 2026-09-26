@@ -1,0 +1,4 @@
+  seed front 13
+  it 0 pool=13 value=-1/5 lam=['17/5', '0'] F=74 LB=-9/5 nodes=1072 word B=57 beta=[5, 4]
+  it 1 pool=14 value=-1 lam=['3', '0'] F=72 LB=-1 nodes=2162 word B=48 beta=[8, 1]
+RESULT 9 3 (1, 1) wid -1 d 45 T 52 value -1 LB -1 lam ['3', '0'] cpu 2.0

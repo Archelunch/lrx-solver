@@ -1,0 +1,3 @@
+  seed front 24
+  it 0 pool=24 value=17/4 lam=['13/4', '0']: pricing hit the node limit; stopping (not exact)
+RESULT 10 5 (1, 1) wid -1 d 53 T 63 value 17/4 LB None lam ['13/4', '0'] cpu 32.9
