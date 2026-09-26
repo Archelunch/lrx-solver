@@ -1078,3 +1078,30 @@ band (j = m//4, r2 = m - g2): m = 0 mod 4: 2 <= g1 <= j-1, r2 <= j-1;
 r2 <= j-1. Rule read off data, unproved. Not done: the m = 12 survey
 (only 3 word_W rows), refined-origin trees on the m = 10, 11 misses,
 three-core pools (a 3-mask diagnostic certified nothing).
+
+## Session 32: interior masks of the reversal, k = 2, 3, 4 (2026-09-26)
+
+Note `autoresearch/bound-m-260925/REVERSAL-INTERIOR.md`; words
+`checks/reversal-interior-words.json`; re-check `checks/reversal_interior.py`
+(orchestrator re-ran: 837 certified rows, 14 misses, no problems);
+searches in `checks/reversal_interior_search/`. Root leaf over the
+two-core pool, unit origins, no trees. Interior mask: all zeros in gaps
+1..m-1.
+
+- k = 2: 28/28, 36/36, 45/45, 55/55, 66/66 at m = 9..13 (m = 13 new).
+- k = 3: 56/56, 84/84, 120/120, 165/165 at m = 9..12 (m = 12 new).
+- k = 4: 64/70 at m = 9, 118/126 at m = 10 (new). The 14 misses are wide
+  masks (first zero in gap 1 or 2, last in gap >= m-2); five bind on the
+  slopes, the first slope-bound misses seen at any k (m = 9 {1,2,5,7}
+  excess 1/6, {1,3,6,8} 1/2, {2,4,7,8} 1/6; m = 10 {1,3,6,9} 49/538,
+  {1,4,7,9} 53/626); nine bind on the base (m = 9 {1,2,6,8} excess 1).
+- Not run: k = 4 at m = 11, k = 3 at m = 13.
+- No closed form: many interior masks have no certifying single word
+  (k = 2: 37 of 105 at m = 16; k = 3: 93 of 165 at m = 12); no parameter
+  tuple in word_G coordinates covers more than about 30 % of masks at any
+  m, and the best tuple changes with m.
+- Conjectures (evidence, not proof): I1, every interior mask at k = 2 or 3
+  has a root certificate (cheap words merge one zero into its neighbour
+  at 3 per label crossed, base slack -3 to -21 lets the LP balance
+  slopes); I2, at k >= 4 evenly spread masks have no root certificate in
+  this pool (cheap support words have slope sums at or above k(m-2)).
